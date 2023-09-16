@@ -1,0 +1,62 @@
+@use "./vars" as *;
+
+.navigation {
+  padding: 2rem 2rem 0 2rem;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 10;
+
+  @media screen and (max-width: 600px) {
+    button {
+      display: none;
+    }
+
+    .nav-items {
+      flex: 1;
+    }
+  }
+}
+
+.nav-items {
+  padding: 0.6rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: $color--white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 60px;
+
+  &__item {
+    > a {
+      color: $color--blue-grey-1;
+      transition: color 0.3s ease-in-out;
+
+      font-weight: 500;
+      font-size: clamp(1rem, 3vw, 1.25rem);
+
+      &:hover {
+        color: $color--blue-blue-grey-2;
+      }
+    }
+
+    &:first-child,
+    &:last-child {
+      margin: 0 1.2rem;
+    }
+  }
+}
+
+.active-menu {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.15);
+  > a {
+    color: $color--blue-blue-grey-2 !important;
+  }
+}

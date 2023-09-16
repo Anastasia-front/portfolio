@@ -1,0 +1,88 @@
+@use "vars" as *;
+@use "./mixins" as *;
+
+.skills-section {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  color: $color--blue-grey-2;
+
+  &__title {
+    position: relative;
+    padding-bottom: 3rem;
+
+    font-weight: 500;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+
+      height: 1rem;
+      width: 100%;
+
+      background: $color--orange-4;
+    }
+  }
+
+  &__list {
+    margin-bottom: 10rem;
+  }
+}
+
+.skills-item {
+  position: relative;
+  padding: 4rem 3rem;
+
+  @include flex(row, initial, center);
+  gap: 2rem;
+
+  @media screen and (max-width: 1045px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__title {
+    flex: 0 0 35%;
+    align-self: flex-start;
+
+    font-weight: 500;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+
+    @include flex(row, initial, center);
+
+    @media screen and (max-width: 1045px) {
+      flex-direction: column;
+    }
+
+    span:first-child {
+      margin-right: 1rem;
+      padding-top: 0.88rem;
+      flex: 0 0 10%;
+      align-self: flex-start;
+
+      font-size: 1.2rem;
+      color: $color--blue-grey-1;
+    }
+  }
+
+  &__description {
+    flex: 0 0 65%;
+
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    line-height: 1.6;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+
+    height: 3px;
+    width: 100%;
+
+    background: linear-gradient(to right, $color--orange-4, #6366f1);
+  }
+}

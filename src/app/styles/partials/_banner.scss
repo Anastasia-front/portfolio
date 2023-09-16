@@ -1,0 +1,39 @@
+@use "./vars" as *;
+@use "./mixins" as *;
+
+.banner {
+  margin-top: 1.5rem;
+  padding: 2rem;
+
+  border-radius: 1.5rem;
+
+  &__text {
+    font-size: clamp(1.5rem, 3vw, 3.5rem);
+    margin-bottom: 1.5rem;
+  }
+}
+
+.contact-banner {
+  margin-top: 1.5rem;
+  padding: 2rem;
+  min-height: 15rem;
+
+  @include flex(column, center, center);
+
+  gap: 1rem;
+
+  border-radius: 1.5rem;
+
+  &__logo img {
+    filter: drop-shadow(1px 4px 7px rgba(0, 0, 0, 0.2));
+  }
+
+  &__links {
+    @include flex(row, center, center);
+    gap: 3rem;
+
+    a {
+      color: $color--white;
+    }
+  }
+}

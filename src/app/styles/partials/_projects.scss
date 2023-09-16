@@ -1,0 +1,218 @@
+@use "vars" as *;
+@use "./mixins" as *;
+
+.projects {
+  margin-top: 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-gap: $pad--sm-2;
+  grid-auto-flow: dense;
+
+  @media screen and (max-width: 945px) {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    border-radius: $pad--sm;
+    cursor: pointer;
+    background-color: $color--white;
+
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
+
+    img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+
+      border-top-left-radius: $pad--sm;
+      border-top-right-radius: $pad--sm;
+
+      @media screen and (max-width: 945px) {
+        height: auto;
+      }
+    }
+
+    &__title {
+      padding: $pad--sm-2;
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      font-weight: 400;
+
+      background: linear-gradient(to right, #171a38, #a855f7);
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:first-child {
+      grid-column: span 2;
+
+      display: flex;
+      gap: $pad--sm-2;
+
+      @media screen and (max-width: 945px) {
+        grid-column: initial;
+        flex-direction: column;
+      }
+
+      .project__image {
+        flex: 0 0 50%;
+
+        > img {
+          border-top-left-radius: $pad--sm;
+          border-bottom-left-radius: $pad--sm;
+          border-top-right-radius: 0;
+
+          height: 100%;
+
+          @media screen and (max-width: 945px) {
+            height: auto;
+          }
+        }
+      }
+
+      .project__title {
+        padding-left: 0;
+
+        @media screen and (max-width: 945px) {
+          padding-left: $pad--sm-2;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      grid-column: span 2;
+      grid-row: span 2;
+
+      @media screen and (max-width: 945px) {
+        grid-column: initial;
+        grid-row: initial;
+      }
+
+      .project__image {
+        > img {
+          height: 100%;
+          @media screen and (max-width: 945px) {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.project-page {
+  padding-top: 15rem;
+  color: $color--blue-grey-2;
+
+  p {
+    line-height: 1.6;
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    font-weight: 500;
+  }
+
+  &__header {
+    @include flex(column, center, center);
+
+    &__profile {
+      margin-top: 2rem;
+      margin-bottom: 8rem;
+
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .logo {
+        width: 4rem;
+        height: 4rem;
+
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
+        border: 2px solid #fafafc;
+
+        img {
+          padding: 0.4rem;
+        }
+      }
+    }
+
+    &__date {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &__image {
+      padding-left: 2rem;
+      right: 0;
+
+      > img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center top;
+      }
+    }
+  }
+
+  &__title {
+    padding: 0 8rem;
+    max-width: 1200px;
+
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    margin-bottom: $pad--sm-2;
+  }
+
+  &__content {
+    padding: 10rem 18rem;
+
+    @media screen and (max-width: 1405px) {
+      padding: 8rem;
+    }
+
+    @media screen and (max-width: 910px) {
+      padding: 3rem;
+    }
+
+    &__introduction {
+      font-weight: 500;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      line-height: 1.4;
+
+      padding: 0 8rem 4rem 8rem;
+    }
+
+    &__outro {
+      margin: 0 8rem;
+      @media screen and (max-width: 910px) {
+        margin: 0 2rem;
+      }
+    }
+
+    &__intro-image {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      object-position: center top;
+
+      padding-bottom: 4rem;
+    }
+
+    &__list li {
+      padding: 1rem 0;
+
+      list-style: decimal;
+      margin: 0 12rem;
+
+      @media screen and (max-width: 910px) {
+        margin: 0 4rem;
+      }
+      p:first-child {
+        padding-bottom: 1rem;
+
+        font-weight: 600;
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
+      }
+    }
+  }
+}
