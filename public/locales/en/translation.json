@@ -1,0 +1,39 @@
+{
+  "logo": {
+    "alt": "Logo"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contacts": "Contacts"
+  },
+  "btn": {
+    "contacts": "Contact me"
+  },
+  "home": {
+    "title": "Home",
+    "description": "Some general information"
+  },
+  "about": {
+    "title": "About me",
+    "description": "Some information about me"
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "About my skills"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Some information about my projects"
+  },
+  "project": {
+    "title": "Project",
+    "description": "Some information about my project"
+  },
+  "contacts": {
+    "title": "Contact me",
+    "description": "Contact information"
+  }
+}
