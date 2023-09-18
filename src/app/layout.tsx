@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+
+import { Progressbar } from "./components/Progressbar";
+
 import { Theme } from "./constants/types";
+
 import { ThemeContext } from "./context/themeContext";
-import "./styles/main.scss";
+
 import { getLocaleStorageItem } from "./utils/getLocaleStorageItem";
+
+import "./styles/main.scss";
 
 import { useState } from "react";
 
@@ -31,6 +37,7 @@ export default function RootLayout({
       </Head>
       <body className={inter.className}>
         <ThemeContext.Provider value={{ theme, setTheme }}>
+          <Progressbar />
           {children}
         </ThemeContext.Provider>
       </body>
