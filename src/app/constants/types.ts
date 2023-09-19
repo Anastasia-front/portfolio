@@ -1,4 +1,5 @@
 export type Img = { [key: string]: string };
+
 export type Theme = "dark" | "light";
 
 export interface Icons {

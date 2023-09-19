@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 
 interface ButtonProps {
@@ -11,7 +12,7 @@ interface ButtonProps {
   hover?: string;
 }
 
-function Button({
+export function Button({
   text,
   onClick,
   bg,
@@ -45,5 +46,3 @@ function Button({
     </motion.button>
   );
 }
-
-export default Button;

@@ -1,6 +1,8 @@
 "use client";
-import { projects } from "@/app/utils/projects";
+
 import Image from "next/image";
+
+import { projects } from "../../constants/projects";
 
 interface Params {
   params: {

@@ -6,11 +6,11 @@ import React from "react";
 
 import { motion } from "framer-motion";
 
-import Button from "./Button";
+import { menuItems } from "../../constants/menuItems";
+import { useGlobalContext } from "../../context/globalContext";
+import { navVariants } from "../../utils/animation";
 
-import { useGlobalContext } from "../context/globalContext";
-import { navVariants } from "../utils/animation";
-import { menuItems } from "../utils/menuItems";
+import { Button } from "../Button/Button";
 
 export function Navigation() {
   const [activeMenu, setActiveMenu] = React.useState(0);
