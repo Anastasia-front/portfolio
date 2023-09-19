@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 
+import { Navigation } from "./components/Navigation";
 import { Progressbar } from "./components/Progressbar";
 
 import { Theme } from "./constants/types";
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeContext.Provider value={{ theme, setTheme }}>
           <Progressbar />
+          <Navigation />
           {children}
         </ThemeContext.Provider>
       </body>
