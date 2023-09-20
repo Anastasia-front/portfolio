@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
-import project1 from "../../public/projects/project1.png";
-import project2 from "../../public/projects/project2.png";
-import project3 from "../../public/projects/project3.png";
+import project1 from "../../public/images/projects/project1.png";
+import project2 from "../../public/images/projects/project2.png";
+import project3 from "../../public/images/projects/project3.png";
 
 interface Project {
   title?: string;

@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -13,6 +15,7 @@ import { navVariants } from "../../utils/animation";
 import { Button } from "../Button/Button";
 
 export function Navigation() {
+  const t = useTranslations("nav");
   const [activeMenu, setActiveMenu] = React.useState(0);
 
   const context = useGlobalContext();
@@ -50,7 +53,7 @@ export function Navigation() {
                 setActiveMenu(index);
               }}
             >
-              <Link href={item.url}>{item.title}</Link>
+              <Link href={item.url}>{t(`${item.title}`)}</Link>
             </li>
           );
         })}

@@ -42,7 +42,7 @@
       font-size: clamp(1rem, 3vw, 1.25rem);
 
       &:hover {
-        color: $color--blue-blue-grey-2;
+        color: $color--blue-grey-2;
       }
     }
 
@@ -57,6 +57,6 @@
   transition: all 0.2s ease-in-out;
   transform: scale(1.15);
   > a {
-    color: $color--blue-blue-grey-2 !important;
+    color: $color--blue-grey-2;
   }
 }
