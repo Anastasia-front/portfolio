@@ -6,7 +6,7 @@
 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  grid-gap: $pad--sm-2;
+  grid-gap: var(--pad--sm-2);
   grid-auto-flow: dense;
 
   @media screen and (max-width: 945px) {
@@ -14,9 +14,9 @@
   }
 
   .project {
-    border-radius: $pad--sm;
+    border-radius: var(--pad--sm);
     cursor: pointer;
-    background-color: $color--white;
+    background-color: var(--color--white);
 
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
 
@@ -25,8 +25,8 @@
       height: 260px;
       object-fit: cover;
 
-      border-top-left-radius: $pad--sm;
-      border-top-right-radius: $pad--sm;
+      border-top-left-radius: var(--pad--sm);
+      border-top-right-radius: var(--pad--sm);
 
       @media screen and (max-width: 945px) {
         height: auto;
@@ -34,7 +34,7 @@
     }
 
     &__title {
-      padding: $pad--sm-2;
+      padding: var(--pad--sm-2);
       font-size: clamp(1.5rem, 2vw, 2rem);
       font-weight: 400;
 
@@ -46,7 +46,7 @@
       grid-column: span 2;
 
       display: flex;
-      gap: $pad--sm-2;
+      gap: var(--pad--sm-2);
 
       @media screen and (max-width: 945px) {
         grid-column: initial;
@@ -57,8 +57,8 @@
         flex: 0 0 50%;
 
         > img {
-          border-top-left-radius: $pad--sm;
-          border-bottom-left-radius: $pad--sm;
+          border-top-left-radius: var(--pad--sm);
+          border-bottom-left-radius: var(--pad--sm);
           border-top-right-radius: 0;
 
           height: 100%;
@@ -73,7 +73,7 @@
         padding-left: 0;
 
         @media screen and (max-width: 945px) {
-          padding-left: $pad--sm-2;
+          padding-left: var(--pad--sm-2);
         }
       }
     }
@@ -101,7 +101,7 @@
 
 .project-page {
   padding-top: 15rem;
-  color: $color--blue-grey-2;
+  color: var(--color--blue-grey-2);
 
   p {
     line-height: 1.6;
@@ -160,7 +160,7 @@
 
     font-weight: 600;
     font-size: clamp(2rem, 5vw, 4.5rem);
-    margin-bottom: $pad--sm-2;
+    margin-bottom: var(--pad--sm-2);
   }
 
   &__content {

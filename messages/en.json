@@ -1,18 +1,26 @@
 {
-  "Index": { "title": "About me", "description": "Some information about me" },
   "logo": {
     "alt": "Logo"
   },
-  "nav": [
-    { "home": "Home" },
-    { "about": "About" },
-    { "skills": "Skills" },
-    { "projects": "Projects" },
-    { "contacts": "Contacts" }
-  ],
-
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contacts": "Contacts"
+  },
   "btn": {
     "contacts": "Contact me"
+  },
+  "switcher": {
+    "theme": {
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "lang": {
+      "en": "English",
+      "uk": "Ukrainian"
+    }
   },
   "home": {
     "title": "Home",

@@ -29,20 +29,20 @@
   align-items: center;
   gap: 2rem;
 
-  background-color: $color--white;
+  background-color: var(--color--white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 60px;
 
   &__item {
     > a {
-      color: $color--blue-grey-1;
+      color: var(--color--blue-grey-1);
       transition: color 0.3s ease-in-out;
 
       font-weight: 500;
       font-size: clamp(1rem, 3vw, 1.25rem);
 
       &:hover {
-        color: $color--blue-grey-2;
+        color: var(--color--blue-grey-2);
       }
     }
 
@@ -57,6 +57,6 @@
   transition: all 0.2s ease-in-out;
   transform: scale(1.15);
   > a {
-    color: $color--blue-grey-2;
+    color: var(--color--blue-grey-2);
   }
 }

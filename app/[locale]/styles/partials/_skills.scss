@@ -4,7 +4,7 @@
 .skills-section {
   margin-top: 4rem;
   margin-bottom: 2rem;
-  color: $color--blue-grey-2;
+  color: var(--color--blue-grey-2);
 
   &__title {
     position: relative;
@@ -22,7 +22,7 @@
       height: 1rem;
       width: 100%;
 
-      background: $color--orange-4;
+      background: var(--color--orange-4);
     }
   }
 
@@ -63,7 +63,7 @@
       align-self: flex-start;
 
       font-size: 1.2rem;
-      color: $color--blue-grey-1;
+      color: var(--color--blue-grey-1);
     }
   }
 
@@ -83,6 +83,6 @@
     height: 3px;
     width: 100%;
 
-    background: linear-gradient(to right, $color--orange-4, #6366f1);
+    background: linear-gradient(to right, var(--color--orange-4), #6366f1);
   }
 }

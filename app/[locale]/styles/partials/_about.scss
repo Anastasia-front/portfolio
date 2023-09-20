@@ -53,7 +53,7 @@
     p {
       font-size: clamp(1rem, 4vw, 1.25rem);
       font-weight: 500;
-      color: $color--light-blue-1;
+      color: var(--color--light-blue-1);
       filter: drop-shadow(1px 3px 0px rgba(0, 0, 0, 0.05));
     }
 
@@ -71,7 +71,7 @@
         font-size: 1.3rem;
         color: #fff;
 
-        border: 2px solid $color--white;
+        border: 2px solid var(--color--white);
         border-radius: 50%;
         transition: all 0.2s ease-in-out;
         opacity: 0.7;
@@ -86,16 +86,16 @@
 
         &:nth-child(2) {
           &:hover {
-            color: $color--orange-4;
-            border-color: $color--orange-4;
+            color: var(--color--orange-4);
+            border-color: var(--color--orange-4);
             opacity: 1;
           }
         }
 
         &:nth-child(3) {
           &:hover {
-            color: $color--light-blue-4;
-            border-color: $color--light-blue-4;
+            color: var(--color--light-blue-4);
+            border-color: var(--color--light-blue-4);
             opacity: 1;
           }
         }
