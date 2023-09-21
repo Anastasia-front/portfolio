@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "file-loader": "^6.2.0",
     "framer-motion": "^10.16.4",
     "next": "13.4.19",
     "next-intl": "^3.0.0-beta.18",
     "postcss": "8.4.29",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "@types/node": "20.5.0",

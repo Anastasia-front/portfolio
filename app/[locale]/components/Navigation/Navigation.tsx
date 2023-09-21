@@ -14,7 +14,7 @@ export function Navigation() {
   const [activeMenu, setActiveMenu] = React.useState(0);
 
   return (
-    <ul className="nav-items">
+    <ul className="container-items">
       <Image
         src="/images/logo.png"
         alt="logo"
@@ -32,7 +32,7 @@ export function Navigation() {
         return (
           <li
             key={item.id}
-            className={`nav-items__item ${
+            className={`container-items__item ${
               activeMenu === index && "active-menu"
             }`}
             onClick={() => {

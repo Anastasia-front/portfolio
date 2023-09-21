@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useGlobalContext } from "../../context/globalContext";
 import { navVariants } from "../../utils/animation";
 
-import { Button } from "../Buttons/Button";
+import { ButtonText } from "../Buttons/ButtonText/ButtonText";
 import { Navigation } from "../Navigation/Navigation";
 import { Switchers } from "../Switchers/Switchers";
 
@@ -22,7 +22,7 @@ export function Header() {
     >
       <Navigation />
       <Switchers />
-      <Button
+      <ButtonText
         text="Contact"
         bg="#A855F7"
         modifier="white"

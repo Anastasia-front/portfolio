@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 
-import { Navigation } from "./components/Navigation/Navigation";
 import { Progressbar } from "./components/Progressbar/Progressbar";
 
 // import { Theme } from "./constants/types";
@@ -19,6 +18,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 import { NextIntlClientProvider, useLocale } from "next-intl";
 import { notFound } from "next/navigation";
+import { Header } from "./components/Header/Header";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -62,7 +62,7 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           {/* <ThemeContext.Provider value={{ theme, setTheme }}> */}
           <Progressbar />
-          <Navigation />
+          <Header />
           {children}
           {/* </ThemeContext.Provider> */}
         </NextIntlClientProvider>

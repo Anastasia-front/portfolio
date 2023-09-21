@@ -12,7 +12,7 @@ interface ButtonProps {
   hover?: string;
 }
 
-export function Button({
+export function ButtonText({
   text,
   onClick,
   bg,

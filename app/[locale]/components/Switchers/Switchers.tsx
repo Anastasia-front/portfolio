@@ -1,9 +1,9 @@
-import { ButtonLanguage } from "../Buttons/ButtonLanguage";
-import { ButtonTheme } from "../Buttons/ButtonTheme";
+import { ButtonLanguage } from "../Buttons/ButtonLanguage/ButtonLanguage";
+import { ButtonTheme } from "../Buttons/ButtonTheme/ButtonTheme";
 
 export function Switchers() {
   return (
-    <ul className="nav-items">
+    <ul className="container-items">
       <li>
         <ButtonTheme />
       </li>
