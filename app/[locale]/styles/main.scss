@@ -15,6 +15,8 @@
 }
 
 body {
+  color: var(--color--black);
+  background-color: var(--color--bg-light);
   font-size: 1.25rem;
   line-height: 1.5;
   overflow-x: hidden;
@@ -31,6 +33,11 @@ body {
     background: linear-gradient(to top, #a855f7 30%, #f178b6 100%);
     border-radius: 1rem;
   }
+}
+
+[data-theme="dark"] body {
+  color: var(--color-white);
+  background-color: var(--color--bg-dark);
 }
 
 .progress-bar {

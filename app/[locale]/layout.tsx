@@ -1,16 +1,8 @@
-// "use client";
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 
 import { Progressbar } from "./components/Progressbar/Progressbar";
-
-// import { Theme } from "./constants/types";
-
-// import { ThemeContext } from "./context/themeContext";
-
-// import { getLocaleStorageItem } from "./utils/getLocaleStorageItem";
 
 import "./styles/main.scss";
 
@@ -19,6 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 import { NextIntlClientProvider, useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { Header } from "./components/Header/Header";
+import { Providers } from "./providers/themeProvider";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -34,10 +27,6 @@ export default async function RootLayout({
     locale: "en" | "uk";
   };
 }) {
-  // const [theme, setTheme] = useState(
-  //   () => getLocaleStorageItem<Theme>("theme") || "dark"
-  // );
-
   const locale = useLocale();
 
   // Validate that the incoming `locale` parameter is a valid locale
@@ -60,11 +49,11 @@ export default async function RootLayout({
       </Head>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {/* <ThemeContext.Provider value={{ theme, setTheme }}> */}
-          <Progressbar />
-          <Header />
-          {children}
-          {/* </ThemeContext.Provider> */}
+          <Providers>
+            <Progressbar />
+            <Header />
+            {children}
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>

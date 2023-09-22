@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 
+import { useTranslations } from "next-intl";
+
 import { useGlobalContext } from "../../context/globalContext";
 import { navVariants } from "../../utils/animation";
 
@@ -10,6 +12,7 @@ import { Navigation } from "../Navigation/Navigation";
 import { Switchers } from "../Switchers/Switchers";
 
 export function Header() {
+  const t = useTranslations("btn");
   const context = useGlobalContext();
   const { handleToggle } = context;
 
@@ -23,8 +26,7 @@ export function Header() {
       <Navigation />
       <Switchers />
       <ButtonText
-        text="Contact"
-        bg="var(--color--orange-4)"
+        text={t("contacts")}
         modifier="white"
         borderRadius="60px"
         padding="1.2rem 2rem"

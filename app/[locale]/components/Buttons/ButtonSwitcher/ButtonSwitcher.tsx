@@ -22,7 +22,12 @@ export const ButtonSwitcher = memo(
           className={className ? `btn-container ${className}` : "btn-container"}
           ref={ref}
         >
-          <button className="button-switcher" type="button" onClick={onClick}>
+          <button
+            className="button-switcher"
+            type="button"
+            onClick={onClick}
+            style={{ transition: "var(--transition)" }}
+          >
             {imgUrl && (
               <Image
                 className="buttonImg"

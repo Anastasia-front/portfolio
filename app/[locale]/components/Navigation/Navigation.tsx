@@ -16,15 +16,17 @@ export function Navigation() {
 
   return (
     <ul className="container-items">
-      <Link href="/">
-        <Image
-          src="/images/logo.png"
-          alt={logo("alt")}
-          width={45}
-          height={45}
-          className="logo"
-        />
-      </Link>
+      <li className="container-items__item">
+        <Link href="/">
+          <Image
+            src="/images/logo.png"
+            alt={logo("alt")}
+            width={45}
+            height={45}
+            className="logo"
+          />
+        </Link>
+      </li>
 
       {menuItems.map((item, index: number) => {
         return (

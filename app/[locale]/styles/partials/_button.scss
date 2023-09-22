@@ -4,9 +4,10 @@
   outline: none;
   border: none;
   font-family: inherit;
-
+  background-color: var(--color--orange-4);
   font-size: clamp(1rem, 3vw, 1.25rem);
   cursor: pointer;
+  transition: var(--transition);
 
   &--light-blue-4 {
     color: var(--color--light-blue-4);
@@ -25,9 +26,17 @@
   }
 }
 
+[data-theme="dark"] .button {
+  background-color: var(--color--light-blue-4);
+}
+
 .btn-container {
   position: relative;
   padding: 3px;
+}
+
+.btn-pad {
+  padding: 0.5rem 0;
 }
 
 .button-switcher {

@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 
-import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 
-// import { ICONS } from "../../../constants/icons";
+import { useTranslations } from "next-intl";
 
 import { ButtonSwitcher } from "../ButtonSwitcher/ButtonSwitcher";
 
@@ -12,7 +12,8 @@ import MoonIcon from "../../../assets/svg/moon.svg";
 import SunIcon from "../../../assets/svg/sun.svg";
 
 export const ButtonTheme = () => {
-  const [theme, setTheme] = useState<string>("light");
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     // Check if window and localStorage are defined (client-side)
@@ -23,15 +24,15 @@ export const ButtonTheme = () => {
         setTheme(storedTheme);
       }
     }
-  }, []);
+  }, [setTheme]);
 
   const t = useTranslations("switcher");
 
   const [icon, setIcon] = useState(() => {
     if (theme === "dark") {
-      return SunIcon;
-    } else {
       return MoonIcon;
+    } else {
+      return SunIcon;
     }
   });
 
@@ -46,6 +47,14 @@ export const ButtonTheme = () => {
       setIcon(SunIcon);
     }
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <ButtonSwitcher

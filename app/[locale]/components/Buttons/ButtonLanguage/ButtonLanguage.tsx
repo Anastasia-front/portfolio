@@ -40,14 +40,14 @@ export const ButtonLanguage = () => {
   });
 
   const clickHandler = () => {
-    if (lang === "uk") {
-      setLang("en");
-      localStorage.setItem("lang", "en");
-      setIcon(IconUS);
-    } else {
+    if (lang === "en") {
       setLang("uk");
       localStorage.setItem("lang", "uk");
       setIcon(IconUA);
+    } else {
+      setLang("en");
+      localStorage.setItem("lang", "en");
+      setIcon(IconUS);
     }
   };
 
