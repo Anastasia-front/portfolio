@@ -1,30 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useTranslations } from "next-intl";
 
-import { ICONS } from "../../../constants/icons";
+// import { ICONS } from "../../../constants/icons";
 
 import { ButtonSwitcher } from "../ButtonSwitcher/ButtonSwitcher";
 
-export const ButtonTheme = () => {
-  const SunIcon = <ICONS.SUN />;
-  const MoonIcon = <ICONS.MOON />;
-  const srcSunIcon = SunIcon.type.src;
-  const srcMoonIcon = MoonIcon.type.src;
+import MoonIcon from "../../../assets/svg/moon.svg";
+import SunIcon from "../../../assets/svg/sun.svg";
 
-  const [theme, setTheme] = useState<string>(
-    () => localStorage.getItem("theme") || "light"
-  );
+export const ButtonTheme = () => {
+  const [theme, setTheme] = useState<string>("light");
+
+  useEffect(() => {
+    // Check if window and localStorage are defined (client-side)
+    if (typeof window !== "undefined" && window.localStorage) {
+      // Access localStorage safely
+      const storedTheme = window.localStorage.getItem("theme");
+      if (storedTheme) {
+        setTheme(storedTheme);
+      }
+    }
+  }, []);
 
   const t = useTranslations("switcher");
 
   const [icon, setIcon] = useState(() => {
     if (theme === "dark") {
-      return srcMoonIcon;
+      return SunIcon;
     } else {
-      return srcSunIcon;
+      return MoonIcon;
     }
   });
 
@@ -32,11 +39,11 @@ export const ButtonTheme = () => {
     if (theme === "light") {
       setTheme("dark");
       localStorage.setItem("theme", "dark");
-      setIcon(srcMoonIcon);
+      setIcon(MoonIcon);
     } else {
       setTheme("light");
       localStorage.setItem("theme", "light");
-      setIcon(srcSunIcon);
+      setIcon(SunIcon);
     }
   };
 

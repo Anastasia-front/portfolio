@@ -19,7 +19,7 @@ export function Navigation() {
       <Link href="/">
         <Image
           src="/images/logo.png"
-          alt={t("alt")}
+          alt={logo("alt")}
           width={45}
           height={45}
           className="logo"
