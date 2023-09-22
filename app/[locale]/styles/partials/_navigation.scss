@@ -30,7 +30,7 @@
   gap: 2rem;
 
   background-color: var(--color--white);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--box-shadow);
   border-radius: 60px;
 
   &__item {
@@ -42,7 +42,7 @@
       font-size: clamp(1rem, 3vw, 1.25rem);
 
       &:hover {
-        color: var(--color--blue-grey-2);
+        color: var(--color--light-blue-3);
       }
     }
 

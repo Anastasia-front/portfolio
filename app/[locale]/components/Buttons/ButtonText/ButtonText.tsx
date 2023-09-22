@@ -25,7 +25,7 @@ export function ButtonText({
     <motion.button
       className={`button button--${modifier}`}
       onClick={onClick}
-      whileHover={hover && { scale: 1.1 }}
+      whileHover={hover && { scale: 1.05 }}
       transition={{
         duration: 0.2,
         ease: [0, 0.71, 0.2, 1.01],

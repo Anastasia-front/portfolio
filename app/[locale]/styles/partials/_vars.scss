@@ -12,7 +12,8 @@
   --color--orange-2: #fca26e;
   --color--orange-3: #f5751d;
   --color--orange-4: #f77532;
-  --color--white: #e7e4de;
+  --color--white: #fbfcf8;
+  --color--light-grey: #e7e4de;
 
   //paddings
   --pad--sm: 1rem;
@@ -21,4 +22,10 @@
   --pad--md-2: 2.5rem;
   --pad--lg: 3rem;
   --pad--lg-2: 3.5rem;
+
+  //transition
+  --transition: all 0.3s ease;
+
+  //box-shadow
+  --box-shadow: rgba(0, 0, 0, 0.1);
 }

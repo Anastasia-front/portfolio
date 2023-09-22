@@ -10,23 +10,21 @@ import { menuItems } from "../../constants/menuItems";
 
 export function Navigation() {
   const t = useTranslations("nav");
+  const logo = useTranslations("logo");
 
   const [activeMenu, setActiveMenu] = React.useState(0);
 
   return (
     <ul className="container-items">
-      <Image
-        src="/images/logo.png"
-        alt="logo"
-        width={45}
-        height={45}
-        style={{
-          objectFit: "contain",
-          backgroundColor: "#f2f6ff",
-          borderRadius: "50%",
-          padding: ".3rem",
-        }}
-      />
+      <Link href="/">
+        <Image
+          src="/images/logo.png"
+          alt={t("alt")}
+          width={45}
+          height={45}
+          className="logo"
+        />
+      </Link>
 
       {menuItems.map((item, index: number) => {
         return (

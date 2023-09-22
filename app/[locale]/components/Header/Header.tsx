@@ -24,7 +24,7 @@ export function Header() {
       <Switchers />
       <ButtonText
         text="Contact"
-        bg="#A855F7"
+        bg="var(--color--orange-4)"
         modifier="white"
         borderRadius="60px"
         padding="1.2rem 2rem"
