@@ -33,9 +33,9 @@ export const ButtonLanguage = () => {
 
   const [icon, setIcon] = useState(() => {
     if (lang === "en") {
-      return IconUA;
-    } else {
       return IconUS;
+    } else {
+      return IconUA;
     }
   });
 
