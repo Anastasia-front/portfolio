@@ -54,6 +54,10 @@ body {
   z-index: 9999;
 }
 
+[data-theme="dark"] .progress-bar {
+  background: linear-gradient(90deg, #68b8c1 30%, #000 40%, #fca26e 100%);
+}
+
 .logo {
   object-fit: contain;
   background-color: var(--box-shadow);
