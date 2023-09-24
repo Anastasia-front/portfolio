@@ -23,63 +23,98 @@
 }
 
 .container-items {
-  padding: 0.1rem;
+  padding: 0.3rem 0.7rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
 
-  background-color: var(--color--white);
-  box-shadow: 0 0 10px var(--box-shadow);
-  border-radius: 60px;
+  &__frame {
+    background-color: var(--color--white);
+    box-shadow: 0 0 10px var(--box-shadow);
+    border-radius: 60px;
+  }
 
   &__item {
     > a {
       color: var(--color--blue-grey-1);
-      transition: color 0.3s ease-in-out;
+      transition: var(--transition);
 
       font-weight: 500;
       font-size: clamp(1rem, 3vw, 1.25rem);
 
       &:hover {
-        color: var(--color--light-blue-3);
+        color: var(--color--light-blue-1);
       }
     }
-
-    &:first-child {
-      padding: 0.5rem 0 0 1.2rem;
-    }
-    &:last-child {
-      padding: 0 1.2rem 0 0;
-    }
   }
-  &__btn {
-    &:first-child {
-      padding-left: 0.5rem;
-    }
-    &:last-child {
-      padding-right: 0.5rem;
+  &__item-color {
+    > a {
+      color: var(--color--white-grey);
+      &:hover {
+        color: var(--color--orange-2);
+      }
     }
   }
 }
-
 [data-theme="dark"] .container-items {
   background-color: var(--color--blue-grey-4);
+  &__bg-color {
+    background: none;
+  }
   &__item {
     > a {
-      color: var(--color--white);
+      color: var(--color--white-grey);
       &:hover {
         color: var(--color--orange-3);
       }
     }
   }
+  &__item-color {
+    > a {
+      color: var(--color--blue-grey-2);
+      &:hover {
+        color: var(--color--light-blue-3);
+      }
+    }
+  }
+}
+
+.banner {
+  > a {
+    color: var(--color--white);
+
+    &:hover {
+      color: var(--color--light-blue-4);
+    }
+  }
+  &:first-child,
+  &:last-child {
+    margin-top: 1.5rem;
+    padding: 2rem;
+  }
 }
 
 .active-menu {
-  transition: all 0.2s ease-in-out;
-  transform: scale(1.15);
+  transition: var(--transition);
+  transform: scale(var(--scale));
   > a {
     color: var(--color--blue-grey-2);
+  }
+  &__banner {
+    > a {
+      color: var(--color--orange-3);
+    }
+  }
+}
+[data-theme="dark"] .active-menu {
+  > a {
+    color: var(--color--white);
+  }
+  &__banner {
+    > a {
+      color: var(--color--light-blue-4);
+    }
   }
 }

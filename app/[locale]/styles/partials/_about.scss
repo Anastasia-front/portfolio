@@ -9,6 +9,12 @@
   width: 100%;
   min-height: 300vh;
 
+  background: linear-gradient(
+    140deg,
+    var(--color--light-blue-1),
+    var(--color--light-blue-4)
+  );
+
   @media screen and (max-width: 800px) {
     min-height: 100vh;
     @include flex(column, center, center);
@@ -23,7 +29,7 @@
     z-index: 50;
     pointer-events: none;
     border-radius: 16px;
-    max-width: 70%;
+    max-width: 80%;
 
     filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
 
@@ -103,11 +109,114 @@
     }
   }
 }
+[data-theme="dark"] .about-header {
+  background: linear-gradient(
+    140deg,
+    var(--color--orange-1),
+    var(--color--orange-4)
+  );
+}
 
 .about-content {
   margin-top: 300vh;
 
   @media screen and (max-width: 800px) {
     margin-top: 100vh;
+  }
+}
+
+.about-section {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  color: var(--color--blue-grey-4);
+
+  &__title {
+    position: relative;
+    padding-bottom: 3rem;
+
+    font-weight: 500;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+
+      height: 0.2rem;
+      width: 100%;
+
+      background: var(--color--light-blue-4);
+    }
+  }
+
+  &__list {
+    margin-bottom: 10rem;
+  }
+}
+[data-theme="dark"] .about-section {
+  color: var(--color--light-blue-1);
+}
+
+.about-item {
+  position: relative;
+  padding: 4rem 3rem;
+
+  @include flex(row, initial, center);
+  gap: 2rem;
+
+  @media screen and (max-width: 1045px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__title {
+    flex: 0 0 35%;
+    align-self: flex-start;
+
+    font-weight: 500;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+
+    @include flex(row, initial, center);
+
+    @media screen and (max-width: 1045px) {
+      flex-direction: column;
+    }
+
+    span:first-child {
+      margin-right: 1rem;
+      padding-top: 0.88rem;
+      flex: 0 0 10%;
+      align-self: flex-start;
+
+      font-size: 1.2rem;
+      color: var(--color--blue-grey-3);
+    }
+  }
+
+  &__description {
+    flex: 0 0 65%;
+
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    line-height: 1.6;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+
+    height: 3px;
+    width: 100%;
+
+    background: linear-gradient(to right, var(--color--light-blue-3), #6366f1);
+  }
+}
+[data-theme="dark"] .about-item {
+  &__title {
+    span:first-child {
+      color: var(--color--blue-grey-2);
+    }
   }
 }

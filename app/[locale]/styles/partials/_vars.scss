@@ -9,13 +9,17 @@
   --color--light-blue-2: #aad0d4;
   --color--light-blue-3: #68b8c1;
   --color--light-blue-4: #2a8a92;
+  --color--blue: #2a5792;
   --color--orange-1: #efbd9d;
   --color--orange-2: #fca26e;
   --color--orange-3: #f5751d;
   --color--orange-4: #f77532;
   --color--white: #fbfcf8;
+  --color--white-grey: #fbfcf8b5;
   --color--black: #151515;
-  --color--light-grey: #e7e4de;
+  --color--light-grey: #b5b3b0;
+  --color--dark-opacity: #15151593;
+  --color--light-opacity: #fffaf593;
 
   //paddings
   --pad--sm: 1rem;
@@ -27,6 +31,7 @@
 
   //transition
   --transition: all 0.3s ease;
+  --scale: 1.07;
 
   //box-shadow
   --box-shadow: rgba(0, 0, 0, 0.1);

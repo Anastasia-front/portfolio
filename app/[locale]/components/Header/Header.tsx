@@ -8,7 +8,7 @@ import { useGlobalContext } from "../../context/globalContext";
 import { navVariants } from "../../utils/animation";
 
 import { ButtonText } from "../Buttons/ButtonText/ButtonText";
-import { Navigation } from "../Navigation/Navigation";
+import { NavigationAndLogo } from "../Navigation/NavigationAndLogo";
 import { Switchers } from "../Switchers/Switchers";
 
 export function Header() {
@@ -23,7 +23,7 @@ export function Header() {
       initial="hidden"
       animate="visible"
     >
-      <Navigation />
+      <NavigationAndLogo />
       <Switchers />
       <ButtonText
         text={t("contacts")}

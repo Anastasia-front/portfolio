@@ -3,7 +3,7 @@ import { ButtonTheme } from "../Buttons/ButtonTheme/ButtonTheme";
 
 export function Switchers() {
   return (
-    <ul className="container-items btn-pad">
+    <ul className="container-items container-items__frame">
       <li className="container-items__btn">
         <ButtonTheme />
       </li>

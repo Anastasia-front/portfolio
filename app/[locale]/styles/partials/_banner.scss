@@ -4,12 +4,27 @@
 .banner {
   margin-top: 1.5rem;
   padding: 2rem;
-
+  background: radial-gradient(
+    80.97% 80.37% at 56.01% 19.03%,
+    var(--color--light-blue-1) 0%,
+    var(--color--light-blue-4) 99.23%
+  );
   border-radius: 1.5rem;
 
   &__text {
     font-size: clamp(1.5rem, 3vw, 3.5rem);
     margin-bottom: 1.5rem;
+    color: var(--color--black);
+  }
+}
+[data-theme="dark"] .banner {
+  background: radial-gradient(
+    80.97% 80.37% at 56.01% 19.03%,
+    var(--color--orange-1) 0%,
+    var(--color--orange-4) 99.23%
+  );
+  &__text {
+    color: var(--color--white);
   }
 }
 
@@ -17,6 +32,11 @@
   margin-top: 1.5rem;
   padding: 2rem;
   min-height: 15rem;
+  background: linear-gradient(
+    90deg,
+    var(--color--orange-1) 60%,
+    var(--color--orange-4) 100%
+  );
 
   @include flex(column, center, center);
 
@@ -36,4 +56,11 @@
       color: var(--color--white);
     }
   }
+}
+[data-theme="dark"] .contact-banner {
+  background: linear-gradient(
+    90deg,
+    var(--color--light-blue-1) 60%,
+    var(--color--light-blue-4) 100%
+  );
 }

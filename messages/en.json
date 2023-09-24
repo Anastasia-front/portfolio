@@ -22,13 +22,57 @@
       "uk": "Ukrainian"
     }
   },
+  "banner": {
+    "contact": "If you are interested in working with me, please send me an email or contact me in any other way convenient for you"
+  },
   "home": {
-    "title": "Home",
-    "description": "Some general information"
+    "title": "Greetings!",
+    "description": "Welcome to my portfolio site"
   },
   "about": {
-    "title": "About me",
-    "description": "Some information about me"
+    "title": "Prysiazhnaia Anastasiia",
+    "description": "I am a full-stack web developer with a passion for building beautiful and functional websites",
+    "features": {
+      "title": "My features",
+      "items": {
+        "first": {
+          "number": "01",
+          "title": "Responsibility",
+          "description": "I was the head of a children's dance studio, founded my own stretching studio, and worked on team projects as a Scrum Master and team lead. I believe this is enough to define my level of organization, proactivity, and responsibility."
+        },
+        "second": {
+          "number": "02",
+          "title": "Hard Work",
+          "description": "I do everything to the fullest extent and take the initiative to do even more. I always conscientiously perform tasks assigned to me."
+        },
+        "third": {
+          "number": "03",
+          "title": "Perseverance",
+          "description": "When faced with difficulties, I don't give up. On the contrary, challenges push me to develop even further."
+        },
+        "forth": {
+          "number": "04",
+          "title": "Punctuality",
+          "description": "I always plan my time and often arrive early for meetings, events, and other commitments. I value both my own time and that of others."
+        },
+        "fifth": {
+          "number": "05",
+          "title": "Communication Skills",
+          "description": "Considering my previous experience of working with a large number of people of different age groups, I have developed strong communication skills, conflict resolution abilities, and the ability to handle various situations."
+        },
+        "sixth": {
+          "number": "06",
+          "title": "Stress Resistance",
+          "description": "Since there is a lot of stress in our lives, I have learned to stay focused and work effectively in stressful situations."
+        },
+        "seventh": {
+          "number": "07",
+          "title": "Positivity",
+          "description": "I am a positive person who always seeks the best in every person and situation."
+        }
+      }
+    },
+    "alt": "About me"
   },
   "skills": {
     "title": "Skills",
