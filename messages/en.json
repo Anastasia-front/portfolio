@@ -33,7 +33,7 @@
     "title": "Prysiazhnaia Anastasiia",
     "description": "I am a full-stack web developer with a passion for building beautiful and functional websites",
     "features": {
-      "title": "My features",
+      "title": "My qualities",
       "items": {
         "first": {
           "number": "01",
@@ -67,7 +67,7 @@
         },
         "seventh": {
           "number": "07",
-          "title": "Positivity",
+          "title": "Kindness",
           "description": "I am a positive person who always seeks the best in every person and situation."
         }
       }
