@@ -24,7 +24,7 @@
 
 .container-items {
   padding: 0.3rem 0.7rem;
-
+  border-radius: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +33,6 @@
   &__frame {
     background-color: var(--color--white);
     box-shadow: 0 0 10px var(--box-shadow);
-    border-radius: 60px;
   }
 
   &__item {
