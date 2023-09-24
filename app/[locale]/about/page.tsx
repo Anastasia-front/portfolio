@@ -1,5 +1,9 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
+import { useTheme } from "next-themes";
+
 import { Abril_Fatface } from "next/font/google";
 
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -32,6 +36,23 @@ export default function AboutPage() {
   ] as const;
   const header = React.useRef(null);
 
+  const { theme, setTheme } = useTheme();
+  const [lang, setLang] = useState<string>("en");
+  useEffect(() => {
+    // Check if window and localStorage are defined (client-side)
+    if (typeof window !== "undefined" && window.localStorage) {
+      // Access localStorage safely
+      const storedTheme = window.localStorage.getItem("theme");
+      if (storedTheme) {
+        setTheme(storedTheme);
+      }
+      const storedLang = window.localStorage.getItem("lang");
+      if (storedLang) {
+        setLang(storedLang);
+      }
+    }
+  }, [setTheme]);
+
   //scroll animations
   const scrollYProgress = useScroll({
     target: header,
@@ -43,11 +64,27 @@ export default function AboutPage() {
   const y = useTransform(scrollYProgress, [0, 0.75, 1], [0, 0, -900]);
   const opacity = useTransform(scrollYProgress, [0, 0.85, 0.95], [1, 1, 0]);
 
+  const img = (() => {
+    if (lang === "en") {
+      if (theme === "light") {
+        return "/about/uk-light.png";
+      } else {
+        return "/about/uk-dark.png";
+      }
+    } else {
+      if (theme === "light") {
+        return "/about/en-light.png";
+      } else {
+        return "/about/en-dark.png";
+      }
+    }
+  })();
+
   return (
     <div className="u-pad-2">
       <motion.header ref={header} className="about-header">
         <motion.img
-          src="/about.png"
+          src={img}
           alt={t("alt")}
           className="about-header__image"
           variants={bannerVariants}
