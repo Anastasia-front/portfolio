@@ -2,14 +2,13 @@
 
 import { useEffect, useState } from "react";
 
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 
-import { useTranslations } from "next-intl";
+import MoonIcon from "@/assets/svg/moon.svg";
+import SunIcon from "@/assets/svg/sun.svg";
 
-import { ButtonSwitcher } from "../ButtonSwitcher/ButtonSwitcher";
-
-import MoonIcon from "../../../assets/svg/moon.svg";
-import SunIcon from "../../../assets/svg/sun.svg";
+import { ButtonSwitcher } from "./ButtonSwitcher";
 
 export const ButtonTheme = () => {
   const [mounted, setMounted] = useState(false);

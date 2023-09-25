@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { projects } from "../../constants/projects";
+import { projects } from "@/constants";
 
 interface Params {
   params: {

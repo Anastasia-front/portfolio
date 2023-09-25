@@ -1,20 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-
 import { Abril_Fatface } from "next/font/google";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useTranslations } from "next-intl";
-import React from "react";
 
-import { AboutItem } from "@/components/AboutItem/AboutItem";
-import { Banner } from "@/components/Banners/Banner";
-import { ContactBanner } from "@/components/Banners/ContactBanner";
+import { bannerVariants, titleVariants } from "@/utils";
 
-import { bannerVariants, titleVariants } from "@/utils/animation";
+import { AboutItem } from "@/components/AboutItem";
+import { Banner, ContactBanner } from "@/components/Banners";
 
 const abril = Abril_Fatface({
   subsets: ["latin"],

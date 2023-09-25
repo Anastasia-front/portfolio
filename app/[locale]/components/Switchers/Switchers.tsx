@@ -1,5 +1,4 @@
-import { ButtonLanguage } from "../Buttons/ButtonLanguage/ButtonLanguage";
-import { ButtonTheme } from "../Buttons/ButtonTheme/ButtonTheme";
+import { ButtonLanguage, ButtonTheme } from "@/components/Buttons";
 
 export function Switchers() {
   return (

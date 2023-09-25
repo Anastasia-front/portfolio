@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 
 import { useTranslations } from "next-intl";
-
-import { useThemeContext } from "../../../context/themeContext";
-
-import IconUA from "../../../assets/svg/ukraine.svg";
-import IconUS from "../../../assets/svg/united-states.svg";
-
-import { ButtonSwitcher } from "../ButtonSwitcher/ButtonSwitcher";
-
 import Link from "next-intl/link";
-import { IThemeContext } from "../../../constants/types";
+
+import IconUA from "@/assets/svg/ukraine.svg";
+import IconUS from "@/assets/svg/united-states.svg";
+
+import { IThemeContext } from "@/constants";
+import { useThemeContext } from "@/context";
+
+import { ButtonSwitcher } from "./ButtonSwitcher";
 
 export const ButtonLanguage = () => {
   //  const ref = useRef<HTMLDivElement>();

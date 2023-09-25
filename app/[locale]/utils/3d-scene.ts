@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 import { Font, FontLoader } from "three/addons/loaders/FontLoader.js";
+
 const container: HTMLElement | null =
   document.getElementById("scene-container");
 

@@ -1,20 +1,40 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 import { useTranslations } from "next-intl";
 
-import { useGlobalContext } from "../../context/globalContext";
-import { navVariants } from "../../utils/animation";
+import { motion } from "framer-motion";
 
-import { ButtonText } from "../Buttons/ButtonText/ButtonText";
-import { NavigationAndLogo } from "../Navigation/NavigationAndLogo";
-import { Switchers } from "../Switchers/Switchers";
+import { useGlobalContext } from "@/context";
+import { useScreenQuery, useScrollLock } from "@/hooks";
+import { navVariants } from "@/utils";
+
+import { ButtonText } from "@/components/Buttons";
+import { NavigationAndLogo } from "@/components/Navigation";
+import { Switchers } from "@/components/Switchers";
 
 export function Header() {
   const t = useTranslations("btn");
   const context = useGlobalContext();
   const { handleToggle } = context;
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { lockScroll, unlockScroll } = useScrollLock();
+  useEffect(() => {
+    if (isMenuOpen) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+  }, [isMenuOpen, lockScroll, unlockScroll]);
+
+  const handleMenuOpen = (newState: boolean): void => {
+    setIsMenuOpen(newState);
+  };
+
+  const { isScreenTabletSm, isScreenTabletXl } = useScreenQuery();
 
   return (
     <motion.nav

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-//context
+
 const GlobalContext = React.createContext({
   toggle: false,
   handleToggle: () => {},

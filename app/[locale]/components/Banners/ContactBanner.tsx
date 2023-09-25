@@ -1,13 +1,12 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-
-import { motion } from "framer-motion";
-
 import Image from "next/image";
 import Link from "next/link";
 
-import { Navigation } from "../Navigation/Navigation";
+import { motion } from "framer-motion";
+
+import { Navigation } from "@/components/Navigation";
 
 interface Props {
   logo?: string;

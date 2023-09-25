@@ -1,11 +1,11 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-
-import Link from "next/link";
 import React from "react";
 
-import { menuItems } from "../../constants/menuItems";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+
+import { menuItems } from "@/constants";
 
 interface Props {
   location?: string;

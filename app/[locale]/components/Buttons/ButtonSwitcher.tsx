@@ -1,6 +1,8 @@
-import Image from "next/image";
 import { ForwardedRef, forwardRef, memo } from "react";
-import { Theme } from "../../../constants/types";
+
+import Image from "next/image";
+
+import { Theme } from "@/constants";
 
 interface ButtonProps {
   imgUrl?: string;

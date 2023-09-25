@@ -1,13 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 import { useTranslations } from "next-intl";
 
-import { useGlobalContext } from "@/context/globalContext";
-import { bannerVariants } from "@/utils/animation";
+import { useGlobalContext } from "@/context";
+import { bannerVariants } from "@/utils";
+import { motion } from "framer-motion";
 
-import { ButtonText } from "../Buttons/ButtonText/ButtonText";
+import { ButtonText } from "@/components/Buttons";
 
 interface Props {
   text: string;

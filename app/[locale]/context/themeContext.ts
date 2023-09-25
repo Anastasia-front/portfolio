@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 
-import { IThemeContext } from "../constants/types";
+import { IThemeContext } from "@/constants";
 
 const defaultThemeContext: IThemeContext = {
   theme: "light",
