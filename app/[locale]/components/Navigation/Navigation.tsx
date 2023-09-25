@@ -11,23 +11,23 @@ interface Props {
   location?: string;
 }
 
-export function Navigation({ location }: Props) {
+export function Navigation({ location = "" }: Props) {
   const t = useTranslations("nav");
 
   const [activeMenu, setActiveMenu] = React.useState(0);
 
   return (
     <ul
-      className={`container-items ${
-        location === "banner" && "container-items__bg-color"
+      className={`navigation-items ${
+        location !== "banner" ? "navigation-items__header" : ""
       }`}
     >
       {menuItems.map((item, index: number) => {
         return (
           <li
             key={item.id}
-            className={`container-items__item ${
-              location === "banner" && "container-items__item-color"
+            className={`navigation-items__item ${
+              location === "banner" && "navigation-items__item-color"
             }  ${activeMenu === index && "active-menu"} 
             ${
               activeMenu === index &&
