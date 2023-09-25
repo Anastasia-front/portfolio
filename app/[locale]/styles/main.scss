@@ -6,6 +6,47 @@
 @use "./partials/skills";
 @use "./partials/projects";
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  transition: var(--transition);
+}
+
+img {
+  display: block;
+  margin: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -66,8 +107,6 @@ body {
 }
 
 .logo {
-  width: 45px;
-  height: 45px;
   transition: var(--transition);
   &__img {
     object-fit: contain;

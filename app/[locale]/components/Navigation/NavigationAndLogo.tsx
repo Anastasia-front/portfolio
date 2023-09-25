@@ -1,13 +1,36 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
+import { useScreenQuery, useScrollLock } from "@/hooks";
+
+import { BurgerMenu } from "@/components/BurgerMenu";
+
 import { Navigation } from "./Navigation";
 
 export function NavigationAndLogo() {
-  const logo = useTranslations("logo");
+  const logo = useTranslations("alt");
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { lockScroll, unlockScroll } = useScrollLock();
+  useEffect(() => {
+    if (isMenuOpen) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+  }, [isMenuOpen, lockScroll, unlockScroll]);
+
+  const handleMenuOpen = (newState: boolean): void => {
+    setIsMenuOpen(newState);
+  };
+
+  const { isScreenTabletSm } = useScreenQuery();
 
   return (
     <div className="container-items container-items__frame">
@@ -15,12 +38,16 @@ export function NavigationAndLogo() {
         <Image
           className="logo__img"
           src="/logo.png"
-          alt={logo("alt")}
+          alt={logo("logo")}
           width={45}
           height={45}
         />
       </Link>
-      <Navigation />
+      {isScreenTabletSm ? (
+        <Navigation />
+      ) : (
+        <BurgerMenu isMenuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen} />
+      )}
     </div>
   );
 }

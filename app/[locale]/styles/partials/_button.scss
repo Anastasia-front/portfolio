@@ -1,12 +1,9 @@
 @use "./vars" as *;
 
 .button {
-  outline: none;
-  border: none;
   font-family: inherit;
   background-color: var(--color--orange-4);
   font-size: clamp(1rem, 3vw, 1.25rem);
-  cursor: pointer;
   transition: var(--transition);
 
   &--light-blue-4 {
@@ -60,4 +57,28 @@
 .icon {
   width: 24px;
   height: 24px;
+}
+
+.buttonIcon {
+  svg {
+    transition: var(--transition);
+    fill: var(--color--dark-burger);
+    &:hover {
+      fill: var(--color--orange-4);
+    }
+  }
+  &__close {
+    z-index: 110;
+    position: absolute;
+    top: 48px;
+    right: 48px;
+  }
+}
+[data-theme="dark"] .buttonIcon {
+  svg {
+    fill: var(--color--light-burger);
+    &:hover {
+      fill: var(--color--light-blue-4);
+    }
+  }
 }

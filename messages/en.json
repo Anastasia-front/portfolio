@@ -1,6 +1,8 @@
 {
-  "logo": {
-    "alt": "Logo"
+  "alt": {
+    "logo": "Logo",
+    "svgTheme": "Theme icon",
+    "svgLang": "Language icon"
   },
   "nav": {
     "home": "Home",

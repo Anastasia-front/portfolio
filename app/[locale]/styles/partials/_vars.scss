@@ -20,6 +20,8 @@
   --color--light-grey: #b5b3b0;
   --color--dark-opacity: #15151593;
   --color--light-opacity: #fffaf593;
+  --color--dark-burger: #9f8575;
+  --color--light-burger: #ffe1c2;
 
   //paddings
   --pad--sm: 1rem;
@@ -35,4 +37,7 @@
 
   //box-shadow
   --box-shadow: rgba(0, 0, 0, 0.1);
+
+  //screen
+  --screen--tablet-sm: 768px;
 }

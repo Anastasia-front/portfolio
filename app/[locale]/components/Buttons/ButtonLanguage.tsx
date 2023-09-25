@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import Link from "next-intl/link";
 
-import IconUA from "@/assets/svg/ukraine.svg";
-import IconUS from "@/assets/svg/united-states.svg";
+import UA from "@/assets/svg/ukraine.svg";
+import US from "@/assets/svg/united-states.svg";
 
 import { IThemeContext } from "@/constants";
 import { useThemeContext } from "@/context";
@@ -14,8 +14,13 @@ import { ButtonSwitcher } from "./ButtonSwitcher";
 export const ButtonLanguage = () => {
   //  const ref = useRef<HTMLDivElement>();
 
-  const { theme }: IThemeContext = useThemeContext();
+  const a = useTranslations("alt");
   const t = useTranslations("switcher");
+
+  const IconUA = <UA />;
+  const IconUS = <US />;
+
+  const { theme }: IThemeContext = useThemeContext();
 
   const [lang, setLang] = useState<string>("en");
 
@@ -53,7 +58,8 @@ export const ButtonLanguage = () => {
   return (
     <Link href="/" locale={lang}>
       <ButtonSwitcher
-        imgUrl={icon}
+        alt={a("svgLang")}
+        icon={icon}
         onClick={clickHandler}
         theme={theme}
         title={lang === "en" ? t("lang.en") : t("lang.uk")}

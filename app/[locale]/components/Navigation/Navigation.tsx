@@ -9,9 +9,10 @@ import { menuItems } from "@/constants";
 
 interface Props {
   location?: string;
+  onClick?: () => void;
 }
 
-export function Navigation({ location = "" }: Props) {
+export function Navigation({ location = "", onClick }: Props) {
   const t = useTranslations("nav");
 
   const [activeMenu, setActiveMenu] = React.useState(0);
@@ -39,7 +40,9 @@ export function Navigation({ location = "" }: Props) {
               setActiveMenu(index);
             }}
           >
-            <Link href={item.url}>{t(`${item.translationKey}`)}</Link>
+            <Link href={item.url} onClick={onClick}>
+              {t(`${item.translationKey}`)}
+            </Link>
           </li>
         );
       })}

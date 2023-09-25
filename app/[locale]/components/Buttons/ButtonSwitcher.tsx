@@ -5,17 +5,27 @@ import Image from "next/image";
 import { Theme } from "@/constants";
 
 interface ButtonProps {
+  icon?: JSX.Element;
   imgUrl?: string;
   className?: string;
   onClick?: () => void;
   theme?: Theme;
   title?: string;
+  alt: string;
 }
 
 export const ButtonSwitcher = memo(
   forwardRef(
     (
-      { imgUrl, className, onClick, theme = "dark", title = "" }: ButtonProps,
+      {
+        imgUrl,
+        className,
+        onClick,
+        icon,
+        theme = "dark",
+        title = "",
+        alt,
+      }: ButtonProps,
       ref: ForwardedRef<HTMLDivElement>
     ) => {
       return (
@@ -36,9 +46,10 @@ export const ButtonSwitcher = memo(
                 src={imgUrl}
                 width={40}
                 height={40}
-                alt="button-image"
+                alt={alt}
               />
             )}
+            {icon && icon}
           </button>
         </div>
       );
