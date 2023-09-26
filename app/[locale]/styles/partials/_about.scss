@@ -1,5 +1,6 @@
 @use "./vars" as *;
 @use "./mixins" as *;
+@use "../mixins" as *;
 
 .about-header {
   position: absolute;
@@ -7,46 +8,47 @@
   left: 0;
 
   width: 100%;
-  min-height: 300vh;
 
   background: linear-gradient(
     140deg,
     var(--color--light-blue-1),
     var(--color--light-blue-4)
   );
+  min-height: 100vh;
 
-  @media screen and (max-width: 800px) {
-    min-height: 100vh;
-    @include flex(column, center, center);
+  @include flex(column, center, center);
+  @include useScreen("tablet-sm") {
+    min-height: 200vh;
   }
 
   > img {
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
+    display: none;
 
-    z-index: 7;
-    pointer-events: none;
-    border-radius: 16px;
-    max-width: 80%;
+    @include useScreen("tablet-sm") {
+      display: block;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
 
-    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+      z-index: 7;
+      pointer-events: none;
+      border-radius: 16px;
+      max-width: 80%;
 
-    @media screen and (max-width: 800px) {
-      display: none;
+      filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
     }
   }
 
   &__content {
-    display: none;
-    padding: 0 3rem;
+    @include flex(column, center, center);
 
-    @media screen and (max-width: 800px) {
-      @include flex(column, center, center);
+    text-align: center;
+    gap: 1.2rem;
 
-      text-align: center;
-      gap: 1.2rem;
+    @include useScreen("tablet-sm") {
+      display: none;
+      padding: 0 3rem;
     }
 
     h1 {
@@ -118,10 +120,9 @@
 }
 
 .about-content {
-  margin-top: 300vh;
-
-  @media screen and (max-width: 800px) {
-    margin-top: 100vh;
+  margin-top: 100vh;
+  @include useScreen("tablet-sm") {
+    margin-top: 200vh;
   }
 }
 
@@ -151,7 +152,7 @@
   }
 
   &__list {
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
   }
 }
 [data-theme="dark"] .about-section {
@@ -162,26 +163,22 @@
   position: relative;
   padding: 4rem 3rem;
 
-  @include flex(row, initial, center);
-  gap: 2rem;
+  @include flex(column, center, flex-start);
 
-  @media screen and (max-width: 1045px) {
-    flex-direction: column;
-    gap: 0.5rem;
+  gap: 0.5rem;
+  @include useScreen("desktop-md") {
+    gap: 2rem;
   }
 
   &__title {
     flex: 0 0 35%;
     align-self: flex-start;
+    gap: 1rem;
 
     font-weight: 500;
     font-size: clamp(2rem, 8vw, 4.5rem);
 
-    @include flex(row, initial, center);
-
-    @media screen and (max-width: 1045px) {
-      flex-direction: column;
-    }
+    @include flex(column, center, flex-start);
 
     span:first-child {
       margin-right: 1rem;
