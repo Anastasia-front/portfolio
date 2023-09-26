@@ -1,0 +1,6 @@
+@mixin useOnClick {
+	&:active {
+		transition: 0s;
+		@content;
+	}
+}

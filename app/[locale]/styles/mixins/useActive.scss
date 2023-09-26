@@ -1,0 +1,8 @@
+@mixin useActive {
+	& {
+		cursor: pointer;
+		pointer-events: none;
+		transition: 0s;
+		@content;
+	}
+}

@@ -1,0 +1,10 @@
+@mixin useDisabled($opacity: 60%) {
+	&:disabled,
+	&.disabled,
+	&[data-disabled='true'] {
+		opacity: $opacity;
+		cursor: not-allowed;
+		pointer-events: none;
+		@content;
+	}
+}

@@ -30,7 +30,7 @@ export function NavigationAndLogo() {
     setIsMenuOpen(newState);
   };
 
-  const { isScreenTabletSm } = useScreenQuery();
+  const { isScreenTabletLg } = useScreenQuery();
 
   return (
     <div className="container-items container-items__frame">
@@ -43,7 +43,7 @@ export function NavigationAndLogo() {
           height={45}
         />
       </Link>
-      {isScreenTabletSm ? (
+      {isScreenTabletLg ? (
         <Navigation />
       ) : (
         <BurgerMenu isMenuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen} />

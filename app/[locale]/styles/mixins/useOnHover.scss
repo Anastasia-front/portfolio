@@ -1,0 +1,11 @@
+@mixin useOnHover {
+	@media (hover: hover) {
+		&:hover {
+			transition: background-color var(--time--2) ease-in-out, color var(--time--2) ease-in-out,
+				border var(--time--2) ease-in-out;
+			cursor: pointer;
+			user-select: none;
+			@content;
+		}
+	}
+}

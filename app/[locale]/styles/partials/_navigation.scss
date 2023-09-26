@@ -1,20 +1,23 @@
+@use "../mixins" as *;
 @use "./vars" as *;
 
 .navigation {
-  padding: 2rem 2rem 0 2rem;
+  padding: 1rem 0.6rem 0 0.6rem;
   position: relative;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
 
   z-index: 10;
 
-  @media screen and (max-width: 600px) {
-    .nav-items {
-      flex: 1;
-    }
+  @include useScreen("mobile-lg") {
+    padding: 1.5rem 2rem 0 2rem;
+  }
+
+  @include useScreen("tablet-sm") {
+    padding: 2rem 2rem 0 2rem;
   }
 }
 

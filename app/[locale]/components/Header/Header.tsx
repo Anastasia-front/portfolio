@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 import { useGlobalContext } from "@/context";
+import { useScreenQuery } from "@/hooks";
 import { navVariants } from "@/utils";
 
 import { ButtonText } from "@/components/Buttons";
@@ -16,6 +17,8 @@ export function Header() {
   const context = useGlobalContext();
   const { handleToggle } = context;
 
+  const { isScreenTabletXl } = useScreenQuery();
+
   return (
     <motion.nav
       className="navigation"
@@ -25,14 +28,16 @@ export function Header() {
     >
       <NavigationAndLogo />
       <Switchers />
-      <ButtonText
-        text={t("contacts")}
-        modifier="white"
-        borderRadius="60px"
-        padding="1.2rem 2rem"
-        hover="true"
-        onClick={handleToggle}
-      />
+      {isScreenTabletXl && (
+        <ButtonText
+          text={t("contacts")}
+          modifier="white"
+          borderRadius="60px"
+          padding="1.2rem 2rem"
+          hover="true"
+          onClick={handleToggle}
+        />
+      )}
     </motion.nav>
   );
 }

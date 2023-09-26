@@ -1,0 +1,43 @@
+$screen--desktop-xl: 1920px; // >1920
+$screen--desktop-lg: 1536px; // >1536
+$screen--desktop-md: 1440px; // >1440
+$screen--desktop-sm: 1366px; // >1366
+
+$screen--tablet-xl: 1280px; // >1280
+$screen--tablet-lg: 1024px; // >1024
+$screen--tablet-md: 960px; // >960
+$screen--tablet-sm: 768px; // >768
+
+$screen--mobile-xl: 540px; // >540
+$screen--mobile-lg: 480px; // >480
+$screen--mobile-md: 360px; // >360
+$screen--mobile-sm: 0px; // >0 — default
+
+$screens-variants: (
+  desktop-xl: $screen--desktop-xl,
+  desktop-lg: $screen--desktop-lg,
+  desktop-md: $screen--desktop-md,
+  desktop-sm: $screen--desktop-sm,
+
+  tablet-xl: $screen--tablet-xl,
+  tablet-lg: $screen--tablet-lg,
+  tablet-md: $screen--tablet-md,
+  tablet-sm: $screen--tablet-sm,
+
+  mobile-xl: $screen--mobile-xl,
+  mobile-lg: $screen--mobile-lg,
+  mobile-md: $screen--mobile-md,
+  mobile-sm: $screen--mobile-sm,
+);
+
+@mixin useScreen($point) {
+  $width: map-get($screens-variants, $point);
+
+  @if $width {
+    @media (min-width: $width) {
+      @content;
+    }
+  } @else {
+    @error "Unknown screen point: '#{$point}'";
+  }
+}
