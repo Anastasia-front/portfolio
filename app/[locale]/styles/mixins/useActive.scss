@@ -1,8 +1,8 @@
 @mixin useActive {
-	& {
-		cursor: pointer;
-		pointer-events: none;
-		transition: 0s;
-		@content;
-	}
+  & {
+    cursor: pointer;
+    pointer-events: none;
+    transition: var(--transition);
+    @content;
+  }
 }

@@ -1,17 +1,20 @@
 @use "./vars" as *;
+@use "../mixins" as *;
 
 .button {
   font-family: inherit;
-  background-color: var(--color--orange-4);
+  background: var(--color--orange-4);
   font-size: clamp(1rem, 3vw, 1.25rem);
-  transition: var(--transition);
+
+  @include useOnHover {
+    background: var(--color--orange-3);
+  }
+  @include useOnClick {
+    background: var(--color--orange-2);
+  }
 
   &--light-blue-4 {
     color: var(--color--light-blue-4);
-
-    &:hover {
-      color: #6366f1;
-    }
   }
 
   &--white {
@@ -23,7 +26,13 @@
   }
 }
 [data-theme="dark"] .button {
-  background-color: var(--color--light-blue-4);
+  background: var(--color--light-blue-4);
+  @include useOnHover {
+    background: var(--color--light-blue-3);
+  }
+  @include useOnClick {
+    background: var(--color--light-blue-2);
+  }
 }
 
 .btn-container {
@@ -43,9 +52,9 @@
   width: 40px;
   height: 40px;
   border: none;
-  background-color: transparent;
-  transition: var(--transition);
-  &:hover {
+  background: transparent;
+
+  @include useOnHover {
     transform: scale(var(--scale));
   }
 }
@@ -61,10 +70,12 @@
 
 .buttonIcon {
   svg {
-    transition: var(--transition);
     fill: var(--color--dark-burger);
-    &:hover {
+    @include useOnHover {
       fill: var(--color--orange-4);
+    }
+    @include useOnClick {
+      fill: var(--color--orange-2);
     }
   }
   &__close {
@@ -77,8 +88,11 @@
 [data-theme="dark"] .buttonIcon {
   svg {
     fill: var(--color--light-burger);
-    &:hover {
+    @include useOnHover {
       fill: var(--color--light-blue-4);
     }
+  }
+  @include useOnClick {
+    fill: var(--color--light-blue-2);
   }
 }

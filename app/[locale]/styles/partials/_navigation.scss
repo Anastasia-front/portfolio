@@ -37,21 +37,26 @@
   &__item {
     > a {
       color: var(--color--blue-grey-1);
-      transition: var(--transition);
 
       font-weight: 500;
       font-size: clamp(1rem, 3vw, 1.25rem);
 
-      &:hover {
+      @include useOnHover {
         color: var(--color--orange-3);
+      }
+      @include useOnClick {
+        color: var(--color--orange-2);
       }
     }
   }
   &__item-color {
     > a {
       color: var(--color--white-grey);
-      &:hover {
+      @include useOnHover {
         color: var(--color--light-blue-1);
+      }
+      @include useOnClick {
+        color: var(--color--light-blue-3);
       }
     }
   }
@@ -61,16 +66,22 @@
   &__item {
     > a {
       color: var(--color--white-grey);
-      &:hover {
+      @include useOnHover {
         color: var(--color--light-blue-3);
+      }
+      @include useOnClick {
+        color: var(--color--light-blue-2);
       }
     }
   }
   &__item-color {
     > a {
       color: var(--color--blue-grey-2);
-      &:hover {
+      @include useOnHover {
         color: var(--color--orange-3);
+      }
+      @include useOnClick {
+        color: var(--color--light-blue-2);
       }
     }
   }
@@ -94,21 +105,26 @@
   &__item {
     > a {
       color: var(--color--blue-grey-1);
-      transition: var(--transition);
 
       font-weight: 500;
       font-size: clamp(1rem, 3vw, 1.25rem);
 
-      &:hover {
+      @include useOnHover {
         color: var(--color--orange-3);
+      }
+      @include useOnClick {
+        color: var(--color--orange-2);
       }
     }
   }
   &__item-color {
     > a {
       color: var(--color--white-grey);
-      &:hover {
+      @include useOnHover {
         color: var(--color--light-blue-1);
+      }
+      @include useOnClick {
+        color: var(--color--light-blue-3);
       }
     }
   }
@@ -117,23 +133,28 @@
   &__item {
     > a {
       color: var(--color--white-grey);
-      &:hover {
+      @include useOnHover {
         color: var(--color--light-blue-3);
+      }
+      @include useOnClick {
+        color: var(--color--light-blue-2);
       }
     }
   }
   &__item-color {
     > a {
       color: var(--color--blue-grey-2);
-      &:hover {
+      @include useOnHover {
         color: var(--color--orange-3);
+      }
+      @include useOnClick {
+        color: var(--color--orange-2);
       }
     }
   }
 }
 
 .active-menu {
-  transition: var(--transition);
   transform: scale(var(--scale));
   > a {
     color: var(--color--light-blue-3);
@@ -166,7 +187,7 @@
   height: 100vh;
   background: var(--color--dark-opacity);
   backdrop-filter: blur(3px);
-  transition: var(--transition);
+
   opacity: 0;
   visibility: hidden;
   &__active {
@@ -185,7 +206,7 @@
   background: var(--color--white);
   opacity: 0;
   transform: translateY(-100%);
-  transition: var(--transition);
+
   &__active {
     opacity: 1;
     transform: translateY(0);

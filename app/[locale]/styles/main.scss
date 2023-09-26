@@ -5,6 +5,7 @@
 @use "./partials/about";
 @use "./partials/skills";
 @use "./partials/projects";
+@use "./mixins" as *;
 
 h1,
 h2,
@@ -27,7 +28,6 @@ a {
   padding: 0;
   text-decoration: none;
   cursor: pointer;
-  transition: var(--transition);
 }
 
 button {
@@ -39,7 +39,6 @@ button {
   outline: none;
   cursor: pointer;
   background: none;
-  transition: var(--transition);
 }
 
 img {
@@ -107,13 +106,12 @@ body {
 }
 
 .logo {
-  transition: var(--transition);
   &__img {
     object-fit: contain;
     border: 1px solid var(--color--blue-grey-2);
     border-radius: 50%;
   }
-  &:hover {
+  @include useOnHover {
     transform: scale(var(--scale));
   }
 }

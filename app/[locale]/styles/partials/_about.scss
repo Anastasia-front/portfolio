@@ -81,30 +81,35 @@
 
         border: 2px solid var(--color--white);
         border-radius: 50%;
-        transition: all 0.2s ease-in-out;
         opacity: 0.7;
 
         &:nth-child(1) {
-          &:hover {
+          @include useOnHover {
             color: #1da1f2;
             border-color: #1da1f2;
             opacity: 1;
           }
+          @include useOnClick {
+          }
         }
 
         &:nth-child(2) {
-          &:hover {
+          @include useOnHover {
             color: var(--color--orange-4);
             border-color: var(--color--orange-4);
             opacity: 1;
           }
+          @include useOnClick {
+          }
         }
 
         &:nth-child(3) {
-          &:hover {
+          @include useOnHover {
             color: var(--color--light-blue-4);
             border-color: var(--color--light-blue-4);
             opacity: 1;
+          }
+          @include useOnClick {
           }
         }
       }
