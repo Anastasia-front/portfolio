@@ -12,13 +12,14 @@ import Burger from "@/assets/svg/burger.svg";
 import Close from "@/assets/svg/close.svg";
 
 import { Navigation } from "../Navigation";
+import { Switchers } from "../Switchers";
 
-interface BurgerMenuProps {
+interface Props {
   isMenuOpen: boolean;
   handleMenuOpen: (newState: boolean) => void;
 }
 
-export function BurgerMenu({ handleMenuOpen, isMenuOpen }: BurgerMenuProps) {
+export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
   const t = useTranslations("alt");
 
   const handleBackdropClick = (e: React.MouseEvent) => {
@@ -57,16 +58,18 @@ export function BurgerMenu({ handleMenuOpen, isMenuOpen }: BurgerMenuProps) {
           >
             <Close width={25} height={25} />
           </button>
-          <div className="column">
+
+          <div className="burgerColumn">
             <Navigation onClick={hideBurger} />
-            <Link href="/" className="logo logo__center">
+            <Switchers className="burgerSwitchers" />
+            <Link href="/" className="logo">
               <Image
                 className="logo__img"
                 priority={true}
                 src={logo}
                 alt={t("logo")}
-                width={isScreenTabletSm ? 50 : 100}
-                height={isScreenTabletSm ? 50 : 100}
+                width={isScreenTabletSm ? 50 : 70}
+                height={isScreenTabletSm ? 50 : 70}
               />
             </Link>
           </div>

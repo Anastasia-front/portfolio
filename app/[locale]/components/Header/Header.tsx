@@ -1,11 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import { useTranslations } from "next-intl";
 
 import { motion } from "framer-motion";
 
 import { useGlobalContext } from "@/context";
-import { useScreenQuery } from "@/hooks";
+import { useScreenQuery, useScrollLock } from "@/hooks";
 import { navVariants } from "@/utils";
 
 import { ButtonText } from "@/components/Buttons";
@@ -17,6 +19,21 @@ export function Header() {
   const context = useGlobalContext();
   const { handleToggle } = context;
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { lockScroll, unlockScroll } = useScrollLock();
+  useEffect(() => {
+    if (isMenuOpen) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+  }, [isMenuOpen, lockScroll, unlockScroll]);
+
+  const handleMenuOpen = (newState: boolean): void => {
+    setIsMenuOpen(newState);
+  };
+
   const { isScreenTabletXl } = useScreenQuery();
 
   return (
@@ -26,8 +43,13 @@ export function Header() {
       initial="hidden"
       animate="visible"
     >
-      <NavigationAndLogo />
-      <Switchers />
+      <NavigationAndLogo
+        isMenuOpen={isMenuOpen}
+        handleMenuOpen={handleMenuOpen}
+      />
+
+      {!isMenuOpen && <Switchers />}
+
       {isScreenTabletXl && (
         <ButtonText
           text={t("contacts")}

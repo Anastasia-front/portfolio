@@ -18,22 +18,18 @@ export function Navigation({ location = "", onClick }: Props) {
   const [activeMenu, setActiveMenu] = React.useState(0);
 
   return (
-    <ul
-      className={`navigation-items ${
-        location !== "banner" ? "navigation-items__header" : ""
-      }`}
-    >
+    <ul className="navigation-items">
       {menuItems.map((item, index: number) => {
         return (
           <li
             key={item.id}
             className={`navigation-items__item ${
-              location === "banner" && "navigation-items__item-color"
-            }  ${activeMenu === index && "active-menu"} 
+              location === "banner" ? "navigation-items__item-color" : ""
+            }  ${activeMenu === index ? "active-menu" : ""} 
             ${
-              activeMenu === index &&
-              location === "banner" &&
-              "active-menu__banner"
+              activeMenu === index && location === "banner"
+                ? "active-menu__banner"
+                : ""
             }
             `}
             onClick={() => {
