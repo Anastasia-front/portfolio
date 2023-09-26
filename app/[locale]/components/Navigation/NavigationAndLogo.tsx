@@ -20,9 +20,13 @@ export function NavigationAndLogo({ handleMenuOpen, isMenuOpen }: Props) {
 
   const { isScreenTabletLg } = useScreenQuery();
 
+  const hideBurger = () => {
+    handleMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="container-items container-items__frame">
-      <Link href="/" className="logo">
+      <Link href="/" className="logo" onClick={hideBurger}>
         <Image
           className="logo__img"
           src="/logo.png"

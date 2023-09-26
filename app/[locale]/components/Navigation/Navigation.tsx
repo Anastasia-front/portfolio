@@ -18,16 +18,28 @@ export function Navigation({ location = "", onClick }: Props) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
+  let lang;
+
+  if (typeof window !== "undefined" && window.localStorage) {
+    // Access localStorage safely
+    const storedLang = window.localStorage.getItem("lang");
+    if (storedLang === "uk") {
+      lang = "uk/";
+    } else {
+      lang = "";
+    }
+  }
+
   useEffect(() => {
     const url = `${pathname}?${searchParams}`;
   }, [pathname, searchParams]);
 
   const routesAndMenus = [
-    { route: "/", menuIndex: 0 },
-    { route: "/about", menuIndex: 1 },
-    { route: "/skills", menuIndex: 2 },
-    { route: "/projects", menuIndex: 3 },
-    { route: "/contacts", menuIndex: 4 },
+    { route: `/${lang}`, menuIndex: 0 },
+    { route: `/${lang}about`, menuIndex: 1 },
+    { route: `/${lang}skills`, menuIndex: 2 },
+    { route: `/${lang}projects`, menuIndex: 3 },
+    { route: `/${lang}contacts`, menuIndex: 4 },
   ];
 
   const activeLink = routesAndMenus.find(
