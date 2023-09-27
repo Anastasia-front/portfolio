@@ -2,8 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 import { menuItems } from "@/constants";
 
@@ -16,35 +15,22 @@ export function Navigation({ location = "", onClick }: Props) {
   const t = useTranslations("nav");
 
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
-  let lang;
-
-  if (typeof window !== "undefined" && window.localStorage) {
-    // Access localStorage safely
-    const storedLang = window.localStorage.getItem("lang");
-    if (storedLang === "uk") {
-      lang = "uk/";
-    } else {
-      lang = "";
-    }
-  }
-
-  useEffect(() => {
-    const url = `${pathname}?${searchParams}`;
-  }, [pathname, searchParams]);
+  const lang = pathname.slice(0, 3);
 
   const routesAndMenus = [
-    { route: `/${lang}`, menuIndex: 0 },
-    { route: `/${lang}about`, menuIndex: 1 },
-    { route: `/${lang}skills`, menuIndex: 2 },
-    { route: `/${lang}projects`, menuIndex: 3 },
-    { route: `/${lang}contacts`, menuIndex: 4 },
+    { route: `${lang}`, menuIndex: 0 },
+    { route: `${lang}/about`, menuIndex: 1 },
+    { route: `${lang}/skills`, menuIndex: 2 },
+    { route: `${lang}/projects`, menuIndex: 3 },
+    { route: `${lang}/contacts`, menuIndex: 4 },
   ];
 
   const activeLink = routesAndMenus.find(
     (routeItem) => routeItem.route === pathname
   );
+
+  console.log(activeLink, routesAndMenus);
 
   return (
     <ul className="navigation-items">
