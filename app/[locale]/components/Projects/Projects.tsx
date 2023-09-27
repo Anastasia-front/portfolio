@@ -18,7 +18,7 @@ export function Projects() {
 
   return (
     <motion.div
-      className="portfolios"
+      className="projects"
       variants={gridVariants}
       initial="hidden"
       animate="visible"

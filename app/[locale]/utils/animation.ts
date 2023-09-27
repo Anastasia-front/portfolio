@@ -19,7 +19,7 @@ export const gridVariants: Variants = {
 
 export const bannerVariants: Variants = {
   offscreen: {
-    y: 300,
+    y: 100,
     opacity: 0,
     scaleY: 0.2,
   },

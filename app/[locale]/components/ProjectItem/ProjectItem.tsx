@@ -14,12 +14,10 @@ export function ProjectItem({ title, image, categories, onClick }: Project) {
 
   const handleHoverStart = () => {
     setIsHover(true);
-    console.log("hover");
   };
 
   const handleHoverEnd = () => {
     setIsHover(false);
-    console.log("hover end");
   };
 
   return (
