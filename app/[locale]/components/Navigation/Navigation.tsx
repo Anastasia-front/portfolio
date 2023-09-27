@@ -37,15 +37,6 @@ export function Navigation({ location = "", onClick }: Props) {
     (routeItem) => routeItem.route === pathname
   );
 
-  console.log(
-    activeLink,
-    lang,
-    pathname,
-    pathname.split("/"),
-    array[1] !== "uk",
-    routesAndMenus
-  );
-
   return (
     <ul className="navigation-items">
       {menuItems.map((item, index: number) => {
