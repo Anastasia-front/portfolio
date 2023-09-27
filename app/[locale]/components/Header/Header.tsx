@@ -6,13 +6,10 @@ import { useTranslations } from "next-intl";
 
 import { motion } from "framer-motion";
 
+import { ButtonText, NavigationAndLogo, Switchers } from "@/components";
 import { useGlobalContext } from "@/context";
 import { useScreenQuery, useScrollLock } from "@/hooks";
 import { navVariants } from "@/utils";
-
-import { ButtonText } from "@/components/Buttons";
-import { NavigationAndLogo } from "@/components/Navigation";
-import { Switchers } from "@/components/Switchers";
 
 export function Header() {
   const t = useTranslations("btn");

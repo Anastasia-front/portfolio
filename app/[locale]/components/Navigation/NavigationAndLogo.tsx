@@ -6,9 +6,7 @@ import Link from "next/link";
 
 import { useScreenQuery } from "@/hooks";
 
-import { BurgerMenu } from "@/components/BurgerMenu";
-
-import { Navigation } from "./Navigation";
+import { BurgerMenu, Navigation } from "@/components";
 
 interface Props {
   isMenuOpen: boolean;

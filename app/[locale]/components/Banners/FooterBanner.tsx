@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-import { Navigation } from "@/components/Navigation";
+import { Navigation } from "@/components";
 
 interface Props {
   logo?: string;
@@ -15,9 +15,9 @@ interface Props {
   links?: string[];
 }
 
-export function ContactBanner({ title, description }: Props) {
-  const logo = useTranslations("logo");
-  const contactBannerVariants = {
+export function FooterBanner({ title, description }: Props) {
+  const logo = useTranslations("alt");
+  const FooterBannerVariants = {
     hidden: {
       opacity: 0,
       scaleY: 0.3,
@@ -42,7 +42,7 @@ export function ContactBanner({ title, description }: Props) {
   return (
     <motion.div
       className="contact-banner"
-      variants={contactBannerVariants}
+      variants={FooterBannerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -56,7 +56,7 @@ export function ContactBanner({ title, description }: Props) {
       <Link href="/" className="logo">
         <Image
           src="/logo.png"
-          alt={logo("alt")}
+          alt={logo("logo")}
           width={45}
           height={45}
           className="logo__img"

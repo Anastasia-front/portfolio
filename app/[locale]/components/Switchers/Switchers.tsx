@@ -1,4 +1,4 @@
-import { ButtonLanguage, ButtonTheme } from "@/components/Buttons";
+import { ButtonLanguage, ButtonTheme } from "@/components";
 
 interface Props {
   className?: string;

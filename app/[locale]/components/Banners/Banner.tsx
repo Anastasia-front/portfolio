@@ -2,11 +2,11 @@
 
 import { useTranslations } from "next-intl";
 
-import { useGlobalContext } from "@/context";
-import { bannerVariants } from "@/utils";
 import { motion } from "framer-motion";
 
-import { ButtonText } from "@/components/Buttons";
+import { ButtonText } from "@/components";
+import { useGlobalContext } from "@/context";
+import { bannerVariants } from "@/utils";
 
 interface Props {
   text: string;

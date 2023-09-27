@@ -4,11 +4,15 @@ import project1 from "@/assets/images/projects/project1.png";
 import project2 from "@/assets/images/projects/project2.png";
 import project3 from "@/assets/images/projects/project3.png";
 
-interface Project {
-  title?: string;
-  introduction?: string;
-  image?: StaticImageData;
+export interface Project {
+  id?: number;
+  url?: string;
+  title: string;
+  image: StaticImageData | string;
+  categories: string[];
   summary?: string;
+  introduction?: string;
+  onClick?: () => void;
   list?: {
     title?: string;
     description?: string;
@@ -23,9 +27,12 @@ interface Project {
 
 export const projects: Project[] = [
   {
+    id: 1,
+    url: "pathname-of-project",
     title: "Title 1",
     introduction: "intro 1",
     image: project1,
+    categories: ["web", "design"],
     list: [
       {
         title: "title 1",
@@ -41,9 +48,12 @@ export const projects: Project[] = [
     summary: "summary",
   },
   {
+    id: 2,
+    url: "pathname-of-project",
     title: "Title 2",
     introduction: "intro 2",
     image: project2,
+    categories: ["web", "design"],
     list: [
       {
         title: "title 2",
@@ -59,9 +69,12 @@ export const projects: Project[] = [
     summary: "summary",
   },
   {
+    id: 3,
+    url: "pathname-of-project",
     title: "Title 3",
     introduction: "intro 3",
     image: project3,
+    categories: ["web", "design"],
     list: [
       {
         title: "title 3",
