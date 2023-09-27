@@ -28,7 +28,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    url: "pathname-of-project",
+    url: "title-1",
     title: "Title 1",
     introduction: "intro 1",
     image: project1,
@@ -49,7 +49,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    url: "pathname-of-project",
+    url: "title-2",
     title: "Title 2",
     introduction: "intro 2",
     image: project2,
@@ -70,7 +70,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    url: "pathname-of-project",
+    url: "title-3",
     title: "Title 3",
     introduction: "intro 3",
     image: project3,
