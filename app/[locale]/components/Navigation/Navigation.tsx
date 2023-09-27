@@ -15,22 +15,36 @@ export function Navigation({ location = "", onClick }: Props) {
   const t = useTranslations("nav");
 
   const pathname = usePathname();
+  const array = pathname.split("/");
 
-  const lang = pathname.slice(0, 3);
+  let lang;
+
+  if (array.length < 3 && array[1] !== "uk") {
+    lang = "";
+  } else {
+    lang = "uk";
+  }
 
   const routesAndMenus = [
-    { route: `${lang}`, menuIndex: 0 },
-    { route: `${lang}/about`, menuIndex: 1 },
-    { route: `${lang}/skills`, menuIndex: 2 },
-    { route: `${lang}/projects`, menuIndex: 3 },
-    { route: `${lang}/contacts`, menuIndex: 4 },
+    { route: `/${lang}`, menuIndex: 0 },
+    { route: `/${lang === "uk" ? lang + "/" : lang}about`, menuIndex: 1 },
+    { route: `/${lang === "uk" ? lang + "/" : lang}skills`, menuIndex: 2 },
+    { route: `/${lang === "uk" ? lang + "/" : lang}projects`, menuIndex: 3 },
+    { route: `/${lang === "uk" ? lang + "/" : lang}contacts`, menuIndex: 4 },
   ];
 
   const activeLink = routesAndMenus.find(
     (routeItem) => routeItem.route === pathname
   );
 
-  console.log(activeLink, routesAndMenus);
+  console.log(
+    activeLink,
+    lang,
+    pathname,
+    pathname.split("/"),
+    array[1] !== "uk",
+    routesAndMenus
+  );
 
   return (
     <ul className="navigation-items">
