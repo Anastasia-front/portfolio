@@ -56,6 +56,7 @@ img {
 }
 
 body {
+  user-select: none;
   color: var(--color--black);
   background-color: var(--color--bg-light);
   font-size: 1.25rem;
@@ -114,6 +115,9 @@ body {
   }
   @include useOnHover {
     transform: scale(var(--scale));
+  }
+  &__footer {
+    padding-bottom: 1rem;
   }
 }
 [data-theme="dark"] .logo {

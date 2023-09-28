@@ -65,7 +65,7 @@ export function Footer({ title, description }: Props) {
         <div className="footer-banner__description">
           <p>{description}</p>
         </div>
-        <Link href="/" className="logo">
+        <Link href="/" className="logo logo__footer">
           <Image
             src="/logo.png"
             alt={logo("logo")}
