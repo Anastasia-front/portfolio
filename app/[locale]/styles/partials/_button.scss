@@ -27,6 +27,10 @@
 }
 [data-theme="dark"] .button {
   background: var(--color--light-blue-4);
+  &--white {
+    color: var(--color--blue-grey-3);
+    font-weight: 500;
+  }
   @include useOnHover {
     background: var(--color--light-blue-3);
   }

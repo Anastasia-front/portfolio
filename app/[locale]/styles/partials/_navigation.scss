@@ -143,12 +143,12 @@
   }
   &__item-color {
     > a {
-      color: var(--color--white-grey);
+      color: var(--color--blue-grey-2);
       @include useOnHover {
         color: var(--color--orange-1);
       }
       @include useOnClick {
-        color: var(--color--orange-2);
+        color: var(--color--orange-3);
       }
     }
   }

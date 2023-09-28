@@ -288,8 +288,15 @@ body {
 }
 [data-theme="dark"] .icons {
   &__block {
+    color: var(--color--black);
+    &-title {
+      color: var(--color--blue-grey-2);
+    }
     &-links {
+      color: var(--color--black);
       a {
+        border: 2px solid var(--color--blue-grey-2);
+        color: var(--color--black);
         @include useOnHover {
           color: var(--color--orange-1);
           border-color: var(--color--orange-1);
@@ -330,5 +337,10 @@ body {
       width: 30%;
       text-align: left;
     }
+  }
+}
+[data-theme="dark"] .footer-contact {
+  &__title {
+    color: var(--color--blue-grey-3);
   }
 }

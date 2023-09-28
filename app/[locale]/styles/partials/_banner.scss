@@ -14,7 +14,7 @@
   &__text {
     font-size: clamp(1.5rem, 3vw, 3.5rem);
     margin-bottom: 1.5rem;
-    color: var(--color--black);
+    color: var(--color--white);
   }
 }
 [data-theme="dark"] .banner {
@@ -24,7 +24,7 @@
     var(--color--orange-4) 99.23%
   );
   &__text {
-    color: var(--color--white);
+    color: var(--color--black);
   }
 }
 
