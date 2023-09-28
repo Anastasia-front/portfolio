@@ -6,6 +6,7 @@
 @use "./partials/skills";
 @use "./partials/projects";
 @use "./mixins" as *;
+@use "./partials/mixins" as *;
 
 h1,
 h2,
@@ -199,4 +200,77 @@ body {
 }
 [data-theme="dark"] .greetings__container {
   background-color: var(--color--dark-opacity);
+}
+
+.icons {
+  padding: 1rem 0 2rem 0;
+
+  @include flex(row, center, center);
+  gap: 1.2rem;
+  flex-wrap: wrap;
+
+  @include useScreen("tablet-xl") {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  a {
+    position: relative;
+    @include flex(row, center, center);
+
+    width: 3rem;
+    height: 3rem;
+
+    font-size: 1.3rem;
+    color: #fff;
+
+    border: 2px solid var(--color--white);
+    border-radius: 50%;
+    opacity: 0.7;
+
+    @include useOnHover {
+      z-index: 10;
+      color: var(--color--light-blue-2);
+      border-color: var(--color--light-blue-2);
+      opacity: 1;
+      text-align: center;
+      @include flex(row, center, center);
+      &::before {
+        width: max-content;
+        position: absolute;
+        content: attr(data-text);
+        top: 55px;
+
+        background: radial-gradient(
+          80.97% 80.37% at 56.01% 19.03%,
+          var(--color--light-blue-1) 0%,
+          var(--color--light-blue-4) 99.23%
+        );
+        padding: 0.5rem;
+        color: var(--color--white);
+        font-size: 12px;
+      }
+    }
+    &:nth-child(-n + 4) {
+      @include useOnHover {
+        &::before {
+          left: -3rem;
+          border-radius: 1rem 0 1rem 1rem;
+        }
+      }
+    }
+    &:nth-child(n + 5) {
+      @include useOnHover {
+        &::before {
+          left: 40px;
+          border-radius: 0 1rem 1rem 1rem;
+        }
+      }
+    }
+    @include useOnClick {
+      color: var(--color--light-blue-4);
+      border-color: var(--color--light-blue-4);
+      opacity: 1;
+    }
+  }
 }

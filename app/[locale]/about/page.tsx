@@ -11,7 +11,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import { bannerVariants, titleVariants } from "@/utils";
 
-import { AboutItem, Banner, FooterBanner } from "@/components";
+import { AboutItem, Banner } from "@/components";
 
 const abril = Abril_Fatface({
   subsets: ["latin"],
@@ -94,17 +94,6 @@ export default function AboutPage() {
             {t("title")}
           </h1>
           <p>{t("description")}</p>
-          {/* <div className="icons">
-            <Link href="https://www.linkedin.com/">
-              <BsLinkedin />
-            </Link>
-            <Link href="https://github.com/Maclinz">
-              <BsGithub />
-            </Link>
-            <Link href="https://www.youtube.com/@TheCodeDealer/featured">
-              <BsYoutube />
-            </Link>
-          </div> */}
         </motion.div>
       </motion.header>
       <div className="about-content">
@@ -131,8 +120,6 @@ export default function AboutPage() {
             ))}
           </ol>
         </section>
-
-        <FooterBanner />
       </div>
     </div>
   );

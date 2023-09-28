@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 
-import { Banner, FooterBanner, Projects } from "@/components";
+import { Banner, Projects } from "@/components";
 
 export default function ProjectsPage() {
   const t = useTranslations("projects");
@@ -13,7 +13,6 @@ export default function ProjectsPage() {
       <p>{t("description")}</p>
       <Projects />
       <Banner text={b("contact")} button />
-      <FooterBanner />
     </div>
   );
 }

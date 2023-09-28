@@ -4,10 +4,8 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import { notFound } from "next/navigation";
 
+import { Footer, Header, ProgressBar } from "@/components";
 import { Providers } from "@/providers";
-
-import { Header } from "@/components/Header";
-import { ProgressBar } from "@/components/ProgressBar";
 
 import "./styles/main.scss";
 
@@ -53,6 +51,7 @@ export default async function RootLayout({
             <ProgressBar />
             <Header />
             {children}
+            <Footer />
           </Providers>
         </NextIntlClientProvider>
       </body>
