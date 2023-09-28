@@ -75,47 +75,85 @@ export function Footer({ title, description }: Props) {
           />
         </Link>
         <Navigation location="banner" />
-        <div className="icons">
-          <Link href="tel:+380666080702" data-text="Call me">
-            <BsFillTelephoneInboundFill />
-          </Link>
-          <Link
-            href="mailto:palitsanastasia3.ap@gmail.com"
-            data-text="Send e-mail"
-          >
-            <BsFillEnvelopeAtFill />
-          </Link>
+        <div className="footer-contact">
+          <p className="footer-contact__title">
+            To contact me, click on the link convenient for you
+          </p>
+          <div className="icons">
+            <div className="icons__block">
+              <p className="icons__block-title">Phone & e-mail</p>
+              <div className="icons__block-links">
+                <Link
+                  target="_blank"
+                  href="tel:+380666080702"
+                  data-text="Call me"
+                >
+                  <BsFillTelephoneInboundFill />
+                </Link>
+                <Link
+                  target="_blank"
+                  href="mailto:palitsanastasia3.ap@gmail.com"
+                  data-text="Send letter"
+                >
+                  <BsFillEnvelopeAtFill />
+                </Link>
+              </div>
+            </div>
 
-          <Link
-            href="https://www.linkedin.com/in/anastasiia-prysiazhnaia/"
-            data-text="Follow me"
-          >
-            <BsLinkedin />
-          </Link>
-          <Link href="https://github.com/Anastasia-front" data-text="See code">
-            <BsGithub />
-          </Link>
-          <Link
-            href="https://www.instagram.com/anastasiia_prysiazhnaia/"
-            data-text="Follow in Instagram"
-          >
-            <BsInstagram />
-          </Link>
-          <Link
-            href="https://t.me/anastasiia_prysiazhnaia"
-            data-text="Chat in Telegram"
-          >
-            <BsTelegram />
-          </Link>
-          <Link href="https://wa.me/380666080702" data-text="Chat in WhatsApp">
-            <BsWhatsapp />
-          </Link>
-          <Link
-            href="viber://chat?number=380666080702"
-            data-text="Chat in Viber"
-          >
-            <BsChatDotsFill />
-          </Link>
+            <div className="icons__block">
+              <p className="icons__block-title">Socials</p>
+              <div className="icons__block-links">
+                <Link
+                  target="_blank"
+                  href="https://github.com/Anastasia-front"
+                  data-text="Follow in GitHub"
+                >
+                  <BsGithub />
+                </Link>
+                <Link
+                  target="_blank"
+                  href="https://www.linkedin.com/in/anastasiia-prysiazhnaia/"
+                  data-text="Follow in LinkedIn"
+                >
+                  <BsLinkedin />
+                </Link>
+                <Link
+                  target="_blank"
+                  href="https://www.instagram.com/anastasiia_prysiazhnaia/"
+                  data-text="Follow in Instagram"
+                >
+                  <BsInstagram />
+                </Link>
+              </div>
+            </div>
+
+            <div className="icons__block">
+              <p className="icons__block-title">Chats</p>
+              <div className="icons__block-links">
+                <Link
+                  target="_blank"
+                  href="https://t.me/anastasiia_prysiazhnaia"
+                  data-text="Chat in Telegram"
+                >
+                  <BsTelegram />
+                </Link>
+                <Link
+                  target="_blank"
+                  href="https://wa.me/380666080702"
+                  data-text="Chat in WhatsApp"
+                >
+                  <BsWhatsapp />
+                </Link>
+                <Link
+                  target="_blank"
+                  href="viber://chat?number=380666080702"
+                  data-text="Chat in Viber"
+                >
+                  <BsChatDotsFill />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </motion.div>
     </footer>

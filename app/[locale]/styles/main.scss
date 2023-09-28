@@ -203,9 +203,8 @@ body {
 }
 
 .icons {
-  padding: 1rem 0 2rem 0;
-
-  @include flex(row, center, center);
+  padding-top: 1rem;
+  @include flex(column, center, center);
   gap: 1.2rem;
   flex-wrap: wrap;
 
@@ -214,63 +213,94 @@ body {
     justify-content: space-between;
   }
 
-  a {
-    position: relative;
+  &__block {
     @include flex(row, center, center);
+    gap: 1.2rem;
+    flex-wrap: wrap;
 
-    width: 3rem;
-    height: 3rem;
-
-    font-size: 1.3rem;
-    color: #fff;
-
-    border: 2px solid var(--color--white);
-    border-radius: 50%;
-    opacity: 0.7;
-
-    @include useOnHover {
-      z-index: 10;
-      color: var(--color--light-blue-2);
-      border-color: var(--color--light-blue-2);
-      opacity: 1;
-      text-align: center;
+    @include useScreen("tablet-xl") {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    &-title {
+      font-size: 1.3rem;
+      color: var(--color--white);
+    }
+    &-links {
       @include flex(row, center, center);
-      &::before {
-        width: max-content;
-        position: absolute;
-        content: attr(data-text);
-        top: 55px;
+      gap: 1.2rem;
+      flex-wrap: wrap;
 
-        background: radial-gradient(
-          80.97% 80.37% at 56.01% 19.03%,
-          var(--color--light-blue-1) 0%,
-          var(--color--light-blue-4) 99.23%
-        );
-        padding: 0.5rem;
+      @include useScreen("tablet-xl") {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+      a {
+        position: relative;
+        @include flex(row, center, center);
+
+        width: 3rem;
+        height: 3rem;
+
+        font-size: 1.3rem;
         color: var(--color--white);
-        font-size: 12px;
-      }
-    }
-    &:nth-child(-n + 4) {
-      @include useOnHover {
-        &::before {
-          left: -3rem;
-          border-radius: 1rem 0 1rem 1rem;
+
+        border: 2px solid var(--color--white);
+        border-radius: 50%;
+        opacity: 0.7;
+
+        @include useOnHover {
+          z-index: 10;
+          color: var(--color--light-blue-2);
+          border-color: var(--color--light-blue-2);
+          opacity: 1;
+          text-align: center;
+          @include flex(row, center, center);
+          &::before {
+            width: max-content;
+            position: absolute;
+            content: attr(data-text);
+            top: 55px;
+            border-radius: 1rem;
+
+            background: radial-gradient(
+              80.97% 80.37% at 56.01% 19.03%,
+              var(--color--light-blue-1) 0%,
+              var(--color--light-blue-4) 99.23%
+            );
+            padding: 0.5rem;
+            color: var(--color--white);
+            font-size: 12px;
+          }
+        }
+        @include useOnClick {
+          color: var(--color--light-blue-4);
+          border-color: var(--color--light-blue-4);
+          opacity: 1;
         }
       }
     }
-    &:nth-child(n + 5) {
-      @include useOnHover {
-        &::before {
-          left: 40px;
-          border-radius: 0 1rem 1rem 1rem;
-        }
-      }
-    }
-    @include useOnClick {
-      color: var(--color--light-blue-4);
-      border-color: var(--color--light-blue-4);
-      opacity: 1;
+  }
+}
+
+.footer-contact {
+  padding: 2rem;
+  @include flex(column, center, center);
+  gap: 1rem;
+
+  @include useScreen("tablet-sm") {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    color: var(--color--white);
+    text-align: center;
+    width: 70%;
+    @include useScreen("tablet-sm") {
+      width: 30%;
+      text-align: left;
     }
   }
 }
