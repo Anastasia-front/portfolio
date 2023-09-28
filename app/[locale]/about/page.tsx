@@ -5,6 +5,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { Abril_Fatface } from "next/font/google";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -21,6 +22,7 @@ const abril = Abril_Fatface({
 export default function AboutPage() {
   const t = useTranslations("about");
   const b = useTranslations("banner");
+  const a = useTranslations("about.achievements");
   const i = useTranslations("about.features.items");
   const keys = [
     "first",
@@ -40,16 +42,32 @@ export default function AboutPage() {
   const img = (() => {
     if (lang === "/uk") {
       if (theme === "light") {
-        return "/about/uk-light.png";
+        return "/images/about/uk-light.png";
       } else {
-        return "/about/uk-dark.png";
+        return "/images/about/uk-dark.png";
       }
     } else {
       if (theme === "light") {
-        return "/about/en-light.png";
+        return "/images/about/en-light.png";
       } else {
-        return "/about/en-dark.png";
+        return "/images/about/en-dark.png";
       }
+    }
+  })();
+
+  const achievement1 = (() => {
+    if (lang === "/uk") {
+      return "/images/achievements/uk-a1.png";
+    } else {
+      return "/images/achievements/en-a1.png";
+    }
+  })();
+
+  const achievement2 = (() => {
+    if (lang === "/uk") {
+      return "/images/achievements/uk-a2.png";
+    } else {
+      return "/images/achievements/en-a2.png";
     }
   })();
 
@@ -119,6 +137,14 @@ export default function AboutPage() {
               />
             ))}
           </ol>
+          <h3>{t("confirm")}</h3>
+          <Image src={achievement1} alt={a("first")} width={300} height={200} />
+          <Image
+            src={achievement2}
+            alt={a("second")}
+            width={300}
+            height={200}
+          />
         </section>
       </div>
     </div>
