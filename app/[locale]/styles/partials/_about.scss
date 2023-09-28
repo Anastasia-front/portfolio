@@ -83,7 +83,6 @@
 
 .about-section {
   margin-top: 4rem;
-  margin-bottom: 2rem;
   color: var(--color--blue-grey-4);
 
   &__title {
@@ -170,5 +169,23 @@
     span:first-child {
       color: var(--color--blue-grey-2);
     }
+  }
+}
+
+.about-achievements {
+  @include flex(column, center, center);
+  padding: 2rem 3rem 0;
+  gap: 2rem;
+
+  &__title {
+    font-size: 2rem;
+    padding: 0 2rem;
+  }
+
+  &__image {
+    pointer-events: none;
+    border-radius: 16px;
+    max-width: 80%;
+    margin: 0 auto;
   }
 }

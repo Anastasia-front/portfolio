@@ -5,7 +5,6 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { Abril_Fatface } from "next/font/google";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -137,14 +136,19 @@ export default function AboutPage() {
               />
             ))}
           </ol>
-          <h3>{t("confirm")}</h3>
-          <Image src={achievement1} alt={a("first")} width={300} height={200} />
-          <Image
-            src={achievement2}
-            alt={a("second")}
-            width={300}
-            height={200}
-          />
+          <div className="about-achievements">
+            <h3 className="about-achievements__title">{t("confirm")}</h3>
+            <motion.img
+              src={achievement1}
+              alt={a("first.title")}
+              className="about-achievements__image"
+            />
+            <motion.img
+              src={achievement2}
+              alt={a("second.title")}
+              className="about-achievements__image"
+            />
+          </div>
         </section>
       </div>
     </div>
