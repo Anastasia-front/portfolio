@@ -286,6 +286,30 @@ body {
     }
   }
 }
+[data-theme="dark"] .icons {
+  &__block {
+    &-links {
+      a {
+        @include useOnHover {
+          color: var(--color--orange-1);
+          border-color: var(--color--orange-1);
+
+          &:before {
+            background: radial-gradient(
+              80.97% 80.37% at 56.01% 19.03%,
+              var(--color--orange-1) 0%,
+              var(--color--orange-4) 99.23%
+            );
+          }
+        }
+      }
+      @include useOnClick {
+        color: var(--color--orange-4);
+        border-color: var(--color--orange-4);
+      }
+    }
+  }
+}
 
 .footer-contact {
   padding: 2rem;
