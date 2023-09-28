@@ -87,6 +87,80 @@
   },
   "contacts": {
     "title": "Звʼязатися зі мною",
-    "description": "Контактна інформація"
+    "description": "Контактна інформація",
+    "footer": {
+      "title": "Щоб зв'язатися зі мною, натисніть на зручне для вас посилання",
+      "icons": {
+        "firstBlock": {
+          "title": "Базові способи звʼязку",
+          "links": {
+            "firstLink": {
+              "title": "Номер телефону",
+              "href": "tel:+380666080702",
+              "dataText": "Зателефонувати",
+              "icon": "BsFillTelephoneInboundFill"
+            },
+            "secondLink": {
+              "title": "Електронна пошта",
+              "href": "mailto:palitsanastasia3.ap@gmail.com",
+              "dataText": "Надіслати лист",
+              "icon": "BsFillEnvelopeAtFill"
+            },
+            "thirdLink": {
+              "title": "Діскорд",
+              "href": "https://discordapp.com/users/871679474188574730/",
+              "dataText": "Перейти у Діскорд",
+              "icon": "BsDiscord"
+            }
+          }
+        },
+        "secondBlock": {
+          "title": "Соціальні мережі",
+          "links": {
+            "firstLink": {
+              "title": "ГітХаб",
+              "href": "https://github.com/Anastasia-front",
+              "dataText": "Відстежувати у ГітХаб",
+              "icon": "BsGithub"
+            },
+            "secondLink": {
+              "title": "ЛінкедІн",
+              "href": "https://www.linkedin.com/in/anastasiia-prysiazhnaia/",
+              "dataText": "Відстежувати у ЛінкедІн",
+              "icon": "BsLinkedin"
+            },
+            "thirdLink": {
+              "title": "Інстаграм",
+              "href": "https://www.instagram.com/anastasiia_prysiazhnaia/",
+              "dataText": "Відстежувати в Інстаграм",
+              "icon": "BsInstagram"
+            }
+          }
+        },
+        "thirdBlock": {
+          "title": "Месенджери",
+          "links": {
+            "firstLink": {
+              "title": "Телеграм",
+              "href": "https://t.me/anastasiia_prysiazhnaia",
+              "dataText": "Написати у Телеграм",
+              "icon": "BsTelegram"
+            },
+            "secondLink": {
+              "title": "ВотсАпп",
+              "href": "https://wa.me/380666080702",
+              "dataText": "Написати у ВотсАпп",
+              "icon": "BsWhatsapp"
+            },
+            "thirdLink": {
+              "title": "Вайбер",
+              "href": "viber://chat?number=380666080702",
+              "dataText": "Написати у Вайбер",
+              "icon": "BsChatDotsFill"
+            }
+          }
+        }
+      }
+    }
   }
 }

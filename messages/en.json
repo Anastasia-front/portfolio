@@ -90,6 +90,80 @@
   },
   "contacts": {
     "title": "Contact me",
-    "description": "Contact information"
+    "description": "Contact information",
+    "footer": {
+      "title": "To contact me, click on the link convenient for you",
+      "icons": {
+        "firstBlock": {
+          "title": "Basic methods of connection",
+          "links": {
+            "firstLink": {
+              "title": "Phone",
+              "href": "tel:+380666080702",
+              "dataText": "Call me",
+              "icon": "BsFillTelephoneInboundFill"
+            },
+            "secondLink": {
+              "title": "Email",
+              "href": "mailto:palitsanastasia3.ap@gmail.com",
+              "dataText": "Send letter",
+              "icon": "BsFillEnvelopeAtFill"
+            },
+            "thirdLink": {
+              "title": "Discord",
+              "href": "https://discordapp.com/users/871679474188574730/",
+              "dataText": "Go to Discord",
+              "icon": "BsDiscord"
+            }
+          }
+        },
+        "secondBlock": {
+          "title": "Social networks",
+          "links": {
+            "firstLink": {
+              "title": "GitHub",
+              "href": "https://github.com/Anastasia-front",
+              "dataText": "Follow in GitHub",
+              "icon": "BsGithub"
+            },
+            "secondLink": {
+              "title": "LinkedIn",
+              "href": "https://www.linkedin.com/in/anastasiia-prysiazhnaia/",
+              "dataText": "Follow in LinkedIn",
+              "icon": "BsLinkedin"
+            },
+            "thirdLink": {
+              "title": "Instagram",
+              "href": "https://www.instagram.com/anastasiia_prysiazhnaia/",
+              "dataText": "Follow in Instagram",
+              "icon": "BsInstagram"
+            }
+          }
+        },
+        "thirdBlock": {
+          "title": "Messengers",
+          "links": {
+            "firstLink": {
+              "title": "Telegram",
+              "href": "https://t.me/anastasiia_prysiazhnaia",
+              "dataText": "Chat in Telegram",
+              "icon": "BsTelegram"
+            },
+            "secondLink": {
+              "title": "WhatsApp",
+              "href": "https://wa.me/380666080702",
+              "dataText": "Chat in WhatsApp",
+              "icon": "BsWhatsapp"
+            },
+            "thirdLink": {
+              "title": "Viber",
+              "href": "viber://chat?number=380666080702",
+              "dataText": "Chat in Viber",
+              "icon": "BsChatDotsFill"
+            }
+          }
+        }
+      }
+    }
   }
 }

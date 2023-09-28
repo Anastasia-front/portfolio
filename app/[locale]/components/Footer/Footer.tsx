@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 
 import {
   BsChatDotsFill,
+  BsDiscord,
   BsFillEnvelopeAtFill,
   BsFillTelephoneInboundFill,
   BsGithub,
@@ -19,6 +20,31 @@ import {
 
 import { Navigation } from "@/components";
 
+function getIconComponent(iconName: string) {
+  switch (iconName) {
+    case "BsChatDotsFill":
+      return <BsChatDotsFill />;
+    case "BsFillEnvelopeAtFill":
+      return <BsFillEnvelopeAtFill />;
+    case "BsFillTelephoneInboundFill":
+      return <BsFillTelephoneInboundFill />;
+    case "BsGithub":
+      return <BsGithub />;
+    case "BsInstagram":
+      return <BsInstagram />;
+    case "BsLinkedin":
+      return <BsLinkedin />;
+    case "BsTelegram":
+      return <BsTelegram />;
+    case "BsWhatsapp":
+      return <BsWhatsapp />;
+    case "BsDiscord":
+      return <BsDiscord />;
+    default:
+      return null;
+  }
+}
+
 interface Props {
   logo?: string;
   title?: string;
@@ -27,7 +53,13 @@ interface Props {
 }
 
 export function Footer({ title, description }: Props) {
-  const logo = useTranslations("alt");
+  const l = useTranslations("alt");
+  const i = useTranslations("contacts.footer");
+  const ic = useTranslations("contacts.footer.icons");
+  //   const icon = useTranslations("contacts.footer.icons.");
+  const firstKeys = ["firstBlock", "secondBlock", "thirdBlock"] as const;
+  const secondKeys = ["firstLink", "secondLink", "thirdLink"] as const;
+
   const FooterVariants = {
     hidden: {
       opacity: 0,
@@ -68,7 +100,7 @@ export function Footer({ title, description }: Props) {
         <Link href="/" className="logo logo__footer">
           <Image
             src="/logo.png"
-            alt={logo("logo")}
+            alt={l("logo")}
             width={45}
             height={45}
             className="logo__img"
@@ -76,11 +108,33 @@ export function Footer({ title, description }: Props) {
         </Link>
         <Navigation location="banner" />
         <div className="footer-contact">
-          <p className="footer-contact__title">
-            To contact me, click on the link convenient for you
-          </p>
-          <div className="icons">
-            <div className="icons__block">
+          <p className="footer-contact__title">{i("title")} </p>
+          <ol className="icons">
+            {firstKeys.map((fk) => (
+              <li key={fk} className="icons__block">
+                <p className="icons__block-title">{ic(`${fk}.title`)}</p>
+
+                <ol className="icons__block-links">
+                  {secondKeys.map((sk) => {
+                    const iconKey = ic(`${fk}.links.${sk}.icon`);
+                    const IconComponent = getIconComponent(iconKey);
+
+                    return (
+                      <li key={sk}>
+                        <Link
+                          target="_blank"
+                          href={ic(`${fk}.links.${sk}.href`)}
+                          data-text={ic(`${fk}.links.${sk}.dataText`)}
+                        >
+                          {IconComponent}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ol>
+              </li>
+            ))}
+            {/* <div className="icons__block">
               <p className="icons__block-title">Phone & e-mail</p>
               <div className="icons__block-links">
                 <Link
@@ -152,8 +206,8 @@ export function Footer({ title, description }: Props) {
                   <BsChatDotsFill />
                 </Link>
               </div>
-            </div>
-          </div>
+            </div> */}
+          </ol>
         </div>
       </motion.div>
     </footer>
