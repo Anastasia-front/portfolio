@@ -11,7 +11,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import { bannerVariants, titleVariants } from "@/utils";
 
-import { AboutItem, Banner } from "@/components";
+import { AboutItem, AchievementBlock, Banner } from "@/components";
 
 const abril = Abril_Fatface({
   subsets: ["latin"],
@@ -21,7 +21,6 @@ const abril = Abril_Fatface({
 export default function AboutPage() {
   const t = useTranslations("about");
   const b = useTranslations("banner");
-  const a = useTranslations("about.achievements");
   const i = useTranslations("about.features.items");
   const keys = [
     "first",
@@ -32,7 +31,6 @@ export default function AboutPage() {
     "sixth",
     "seventh",
   ] as const;
-  const header = React.useRef(null);
 
   const { theme, setTheme } = useTheme();
 
@@ -54,23 +52,8 @@ export default function AboutPage() {
     }
   })();
 
-  const achievement1 = (() => {
-    if (lang === "/uk") {
-      return "/images/achievements/uk-a1.png";
-    } else {
-      return "/images/achievements/en-a1.png";
-    }
-  })();
-
-  const achievement2 = (() => {
-    if (lang === "/uk") {
-      return "/images/achievements/uk-a2.png";
-    } else {
-      return "/images/achievements/en-a2.png";
-    }
-  })();
-
   //scroll animations
+  const header = React.useRef(null);
   const scrollYProgress = useScroll({
     target: header,
     offset: ["start end", "end start"],
@@ -136,19 +119,7 @@ export default function AboutPage() {
               />
             ))}
           </ol>
-          <div className="about-achievements">
-            <h3 className="about-achievements__title">{t("confirm")}</h3>
-            <motion.img
-              src={achievement1}
-              alt={a("first.title")}
-              className="about-achievements__image"
-            />
-            <motion.img
-              src={achievement2}
-              alt={a("second.title")}
-              className="about-achievements__image"
-            />
-          </div>
+          <AchievementBlock />
         </section>
       </div>
     </div>

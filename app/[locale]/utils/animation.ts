@@ -140,6 +140,25 @@ export const titleVariants2: Variants = {
   },
 };
 
+export const titleVariants3: Variants = {
+  offscreen: {
+    y: 100,
+    opacity: 0,
+    scaleY: 0.7,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    scaleY: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.35,
+      duration: 0.7,
+      delay: 0.3,
+    },
+  },
+};
+
 export const headerImgVariants: Variants = {
   hidden: { opacity: 0, scale: 0.3, filter: "blur(10px)" },
   visible: {
@@ -151,6 +170,42 @@ export const headerImgVariants: Variants = {
       stiffness: 200,
       damping: 20,
       delay: 0.5,
+    },
+  },
+};
+
+export const imgVariants: Variants = {
+  offscreen: {
+    x: 300,
+    opacity: 0,
+    scaleY: 0.1,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    scaleY: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.25,
+      duration: 1,
+    },
+  },
+};
+
+export const imgVariants2: Variants = {
+  offscreen: {
+    x: -300,
+    opacity: 0,
+    scaleY: 0.1,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    scaleY: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.25,
+      duration: 1,
     },
   },
 };

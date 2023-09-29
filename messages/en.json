@@ -77,8 +77,21 @@
     "alt": "About me",
     "confirm": "To confirm my studies in the courses and their successful completion, I am attaching a certificate and screens of the progress of my studies from my personal course cabinet",
     "achievements": {
-      "first": { "title": "Fixed achievements" },
-      "second": { "title": "General indicators of study time" }
+      "title": {
+        "first": "Certificate",
+        "second": "Screens of my personal course cabinet"
+      },
+      "alt": {
+        "certificate": {
+          "first": "First page of certificate",
+          "second": "Second page of certificate",
+          "third": "Third page of certificate"
+        },
+        "cabinet": {
+          "first": "Fixed achievements",
+          "second": "General indicators of study time"
+        }
+      }
     }
   },
   "skills": {

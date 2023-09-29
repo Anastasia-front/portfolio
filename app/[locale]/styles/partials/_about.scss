@@ -104,10 +104,6 @@
       background: var(--color--light-blue-4);
     }
   }
-
-  &__list {
-    margin-bottom: 3rem;
-  }
 }
 [data-theme="dark"] .about-section {
   color: var(--color--light-blue-1);
@@ -180,6 +176,17 @@
   &__title {
     font-size: 2rem;
     padding: 0 2rem;
+    text-align: justify;
+    line-height: 3rem;
+    letter-spacing: 0.07rem;
+    padding-bottom: 2rem;
+  }
+
+  &__subtitle {
+    flex: 0 0 35%;
+    align-self: center;
+    font-weight: 400;
+    font-size: clamp(1rem, 8vw, 3.5rem);
   }
 
   &__image {
@@ -187,5 +194,11 @@
     border-radius: 16px;
     max-width: 80%;
     margin: 0 auto;
+    border: 2px solid var(--color--blue-grey-4);
+  }
+}
+[data-theme="dark"] .about-achievements {
+  &__image {
+    border: 2px solid var(--color--light-blue-1);
   }
 }

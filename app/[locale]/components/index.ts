@@ -1,4 +1,5 @@
 export * from "./AboutItem";
+export * from "./AchievementBlock";
 export * from "./Banner";
 export * from "./BurgerMenu";
 export * from "./Buttons";

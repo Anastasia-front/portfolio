@@ -56,7 +56,6 @@ export function Footer({ title, description }: Props) {
   const l = useTranslations("alt");
   const i = useTranslations("contacts.footer");
   const ic = useTranslations("contacts.footer.icons");
-  //   const icon = useTranslations("contacts.footer.icons.");
   const firstKeys = ["firstBlock", "secondBlock", "thirdBlock"] as const;
   const secondKeys = ["firstLink", "secondLink", "thirdLink"] as const;
 
@@ -65,13 +64,13 @@ export function Footer({ title, description }: Props) {
       opacity: 0,
       scaleY: 0.3,
       filter: "blur(10px)",
-      x: -300,
+      y: -300,
     },
     visible: {
       opacity: 1,
       scaleY: 1,
       filter: "blur(0px)",
-      x: 0,
+      y: 0,
 
       transition: {
         type: "spring",
