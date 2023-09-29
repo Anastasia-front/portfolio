@@ -52,14 +52,14 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-size: clamp(2rem, 6vw, 2.5rem);
 
       color: #fff;
       filter: drop-shadow(1px 3px 0px rgba(0, 0, 0, 0.2));
     }
 
     p {
-      font-size: clamp(1rem, 4vw, 1.25rem);
+      font-size: clamp(1rem, 4vw, 0.75rem);
       font-weight: 500;
       color: var(--color--light-blue-1);
       filter: drop-shadow(1px 3px 0px rgba(0, 0, 0, 0.05));
@@ -90,7 +90,7 @@
     padding-bottom: 3rem;
 
     font-weight: 500;
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 5vw, 2rem);
 
     &::after {
       position: absolute;
@@ -126,7 +126,7 @@
     gap: 1rem;
 
     font-weight: 500;
-    font-size: clamp(2rem, 8vw, 4.5rem);
+    font-size: clamp(2rem, 6vw, 2.5rem);
 
     @include flex(column, center, flex-start);
 
@@ -144,7 +144,7 @@
   &__description {
     flex: 0 0 65%;
 
-    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-size: clamp(1.2rem, 4vw, 1rem);
     line-height: 1.6;
   }
 
@@ -174,27 +174,42 @@
   gap: 2rem;
 
   &__title {
-    font-size: 2rem;
+    font-size: clamp(1rem, 4vw, 1.5rem);
     padding: 0 2rem;
     text-align: justify;
-    line-height: 3rem;
+    line-height: 2rem;
     letter-spacing: 0.07rem;
     padding-bottom: 2rem;
+    text-align: center;
   }
 
   &__subtitle {
     flex: 0 0 35%;
     align-self: center;
+    text-align: center;
     font-weight: 400;
-    font-size: clamp(1rem, 8vw, 3.5rem);
+    font-size: clamp(1rem, 5vw, 1.5rem);
+  }
+
+  &__slider {
+    width: 100%;
+    height: auto;
   }
 
   &__image {
     pointer-events: none;
     border-radius: 16px;
-    max-width: 80%;
+    width: auto;
+    max-height: 100vh;
+    height: auto;
     margin: 0 auto;
     border: 2px solid var(--color--blue-grey-4);
+    &-progress {
+      height: 80%;
+      max-height: 50vh;
+      max-width: 50vw;
+      width: 100%;
+    }
   }
 }
 [data-theme="dark"] .about-achievements {

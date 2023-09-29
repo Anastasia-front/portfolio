@@ -7,6 +7,7 @@
 @use "./partials/projects";
 @use "./mixins" as *;
 @use "./partials/mixins" as *;
+@use "./partials/swiper" as *;
 
 h1,
 h2,
@@ -59,7 +60,7 @@ body {
   user-select: none;
   color: var(--color--black);
   background-color: var(--color--bg-light);
-  font-size: 1.25rem;
+  font-size: 16px;
   line-height: 1.5;
   overflow-x: hidden;
 
@@ -164,7 +165,7 @@ body {
     }
 
     button:nth-child(n + 2) {
-      font-size: clamp(1.5rem, 3vw, 3rem);
+      font-size: clamp(1.5rem, 3vw, 1rem);
     }
   }
 }
@@ -218,25 +219,23 @@ body {
   }
 
   &__block {
-    @include flex(row, center, center);
+    @include flex(column, center, center);
     gap: 1.2rem;
-    flex-wrap: wrap;
 
     @include useScreen("tablet-xl") {
-      flex-wrap: nowrap;
       justify-content: space-between;
+      flex-direction: row;
     }
     &-title {
-      font-size: 1.3rem;
+      font-size: clamp(1rem, 1vw, 1.5rem);
       color: var(--color--white);
+      text-align: center;
     }
     &-links {
       @include flex(row, center, center);
       gap: 1.2rem;
-      flex-wrap: wrap;
 
       @include useScreen("tablet-xl") {
-        flex-wrap: nowrap;
         justify-content: space-between;
       }
       a {
@@ -329,9 +328,9 @@ body {
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     letter-spacing: 0.1rem;
-    line-height: 3rem;
+    line-height: 2rem;
     color: var(--color--white);
     text-align: center;
     width: 70%;

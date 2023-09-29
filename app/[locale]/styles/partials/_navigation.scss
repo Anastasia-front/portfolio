@@ -39,7 +39,7 @@
       color: var(--color--blue-grey-1);
 
       font-weight: 500;
-      font-size: clamp(1rem, 3vw, 1.25rem);
+      font-size: clamp(1rem, 3vw, 0.75rem);
 
       @include useOnHover {
         color: var(--color--orange-3);
@@ -107,7 +107,7 @@
       color: var(--color--blue-grey-1);
 
       font-weight: 500;
-      font-size: clamp(1rem, 3vw, 1.25rem);
+      font-size: clamp(1rem, 3vw, 0.75rem);
 
       @include useOnHover {
         color: var(--color--orange-3);

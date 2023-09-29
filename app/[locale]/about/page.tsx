@@ -4,7 +4,7 @@ import React from "react";
 
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-import { Abril_Fatface } from "next/font/google";
+import { Libre_Franklin } from "next/font/google";
 import { usePathname } from "next/navigation";
 
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -13,7 +13,7 @@ import { bannerVariants, titleVariants } from "@/utils";
 
 import { AboutItem, AchievementBlock, Banner } from "@/components";
 
-const abril = Abril_Fatface({
+const franklin = Libre_Franklin({
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -90,7 +90,7 @@ export default function AboutPage() {
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h1 className={`about-header__title ${abril.className}`}>
+          <h1 className={`about-header__title ${franklin.className}`}>
             {t("title")}
           </h1>
           <p>{t("description")}</p>

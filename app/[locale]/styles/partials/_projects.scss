@@ -105,7 +105,7 @@
 
   p {
     line-height: 1.6;
-    font-size: clamp(1rem, 4vw, 1.25rem);
+    font-size: clamp(1rem, 4vw, 0.75rem);
     font-weight: 500;
   }
 
@@ -159,7 +159,7 @@
     max-width: 1200px;
 
     font-weight: 600;
-    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-size: (2rem, 5vw, 4.5rem);
     margin-bottom: var(--pad--sm-2);
   }
 
@@ -176,7 +176,7 @@
 
     &__introduction {
       font-weight: 500;
-      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-size: clamp(1.5rem, 4vw, 1.5rem);
       line-height: 1.4;
 
       padding: 0 8rem 4rem 8rem;

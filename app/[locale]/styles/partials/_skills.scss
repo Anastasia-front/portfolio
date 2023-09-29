@@ -11,7 +11,7 @@
     padding-bottom: 3rem;
 
     font-weight: 500;
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 5vw, 2rem);
 
     &::after {
       position: absolute;
@@ -48,7 +48,7 @@
     align-self: flex-start;
 
     font-weight: 500;
-    font-size: clamp(2rem, 8vw, 4.5rem);
+    font-size: clamp(2rem, vw, 2.5rem);
 
     @include flex(row, initial, center);
 
@@ -69,8 +69,7 @@
 
   &__description {
     flex: 0 0 65%;
-
-    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-size: clamp(1.2rem, 4vw, 1rem);
     line-height: 1.6;
   }
 

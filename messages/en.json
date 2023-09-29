@@ -89,7 +89,8 @@
         },
         "cabinet": {
           "first": "Fixed achievements",
-          "second": "General indicators of study time"
+          "second": "General indicators of study time",
+          "third": "Growing achievements"
         }
       }
     }
