@@ -31,7 +31,7 @@ export function ProjectItem({ title, image, categories, onClick }: Project) {
       <Image src={image} alt={title} />
       <div className="hover">
         <motion.div
-          className="hover__projects"
+          className="hover__categories"
           initial="hidden"
           variants={hoverVariants}
           animate={isHover ? "visible" : "hidden"}
