@@ -111,15 +111,31 @@
           "first": "business project",
           "second": "js",
           "third": "Next",
-          "fourth": "Tailwind css"
+          "fourth": "Tailwind css",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project1/cover.png",
+        "image": "/images/projects/project1/cover.png",
         "url": "i-m-consulting",
         "features": {
           "first": "App router",
           "second": "Responsive design",
           "third": "Parallax effect",
-          "fourth": "And more..."
+          "fourth": "And more...",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
         "problem": "Attracting clients",
         "solution": "Creating a website with an attractive interface, easy navigation and promotion of targeted actions",
@@ -130,11 +146,11 @@
         "content": {
           "title": "IMConsulting",
           "description": "Website for business trainer and coach Illy Mushkovsky",
-          "image1": "@/assets/images/projects/project1/snippet1.png",
-          "image2": "@/assets/images/projects/project1/snippet2.png",
-          "image3": "@/assets/images/projects/project1/snippet3.png",
-          "image4": "@/assets/images/projects/project1/snippet4.png",
-          "image5": "@/assets/images/projects/project1/snippet5.png"
+          "image1": "/images/projects/project1/snippet1.png",
+          "image2": "/images/projects/project1/snippet2.png",
+          "image3": "/images/projects/project1/snippet3.png",
+          "image4": "/images/projects/project1/snippet4.png",
+          "image5": "/images/projects/project1/snippet5.png"
         }
       },
       "second": {
@@ -145,9 +161,17 @@
           "first": "social project",
           "second": "ts",
           "third": "Next",
-          "fourth": "scss"
+          "fourth": "scss",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project2/cover.png",
+        "image": "/images/projects/project2/cover.png",
         "url": "4.5.0",
         "features": {
           "first": "Admin panel",
@@ -156,7 +180,12 @@
           "fourth": "Landing website",
           "fifth": "Responsive design",
           "sixth": "Different sliders",
-          "seventh": "And more..."
+          "seventh": "And more...",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
         "problem": "Now during the war in Ukraine there are many organizations that help people - one of them is 4.5.0, which requires a website to work more efficiently",
         "solution": "Our website solves this problem - there is introductory information about the organization, a form for registering for the issuance of humanitarian aid, and also a payment system is connected for those who want to help the organization and make donations",
@@ -167,11 +196,11 @@
         "content": {
           "title": "4.5.0",
           "description": "Website for a public organization '4.5.0'",
-          "image1": "@/assets/images/projects/project2/snippet1.png",
-          "image2": "@/assets/images/projects/project2/snippet2.png",
-          "image3": "@/assets/images/projects/project2/snippet3.png",
-          "image4": "@/assets/images/projects/project2/snippet4.png",
-          "image5": "@/assets/images/projects/project2/snippet5.png"
+          "image1": "/images/projects/project2/snippet1.png",
+          "image2": "/images/projects/project2/snippet2.png",
+          "image3": "/images/projects/project2/snippet3.png",
+          "image4": "/images/projects/project2/snippet4.png",
+          "image5": "/images/projects/project2/snippet5.png"
         }
       },
       "third": {
@@ -181,15 +210,32 @@
         "categories": {
           "first": "ts",
           "second": "Next",
-          "third": "Tailwind css"
+          "third": "Tailwind css",
+          "fourth": "",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project3/cover.png",
+        "image": "/images/projects/project3/cover.png",
         "url": "carp-travel",
         "features": {
           "first": "Possibility to supports many languages",
           "second": "Responsive design",
           "third": "Different sliders",
-          "fourth": "And more..."
+          "fourth": "And more...",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
         "problem": "The company need modern and unique website",
         "solution": "I create a functional one",
@@ -200,11 +246,11 @@
         "content": {
           "title": "Carp Travel",
           "description": "'Carp Travel' adaptive website",
-          "image1": "@/assets/images/projects/project3/snippet1.png",
-          "image2": "@/assets/images/projects/project3/snippet2.png",
-          "image3": "@/assets/images/projects/project3/snippet3.png",
-          "image4": "@/assets/images/projects/project3/snippet4.png",
-          "image5": "@/assets/images/projects/project3/snippet5.png"
+          "image1": "/images/projects/project3/snippet1.png",
+          "image2": "/images/projects/project3/snippet2.png",
+          "image3": "/images/projects/project3/snippet3.png",
+          "image4": "/images/projects/project3/snippet4.png",
+          "image5": "/images/projects/project3/snippet5.png"
         }
       },
       "fourth": {
@@ -215,9 +261,17 @@
           "first": "js",
           "second": "React",
           "third": "Redux",
-          "fourth": "css"
+          "fourth": "css",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project4/cover.png",
+        "image": "/images/projects/project4/cover.png",
         "url": "task-pro",
         "features": {
           "first": "Frontend",
@@ -245,11 +299,11 @@
         "content": {
           "title": "Task Pro",
           "description": "Application-scheduler",
-          "image1": "@/assets/images/projects/project4/snippet1.png",
-          "image2": "@/assets/images/projects/project4/snippet2.png",
-          "image3": "@/assets/images/projects/project4/snippet3.png",
-          "image4": "@/assets/images/projects/project4/snippet4.png",
-          "image5": "@/assets/images/projects/project4/snippet5.png"
+          "image1": "/images/projects/project4/snippet1.png",
+          "image2": "/images/projects/project4/snippet2.png",
+          "image3": "/images/projects/project4/snippet3.png",
+          "image4": "/images/projects/project4/snippet4.png",
+          "image5": "/images/projects/project4/snippet5.png"
         }
       },
       "fifth": {
@@ -261,9 +315,16 @@
           "second": "React Native",
           "third": "Redux",
           "fourth": "Firebase",
-          "fifth": "css"
+          "fifth": "css",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project5/cover.png",
+        "image": "/images/projects/project5/cover.png",
         "url": "photo-app",
         "features": {
           "first": "Create an account",
@@ -274,7 +335,10 @@
           "sixth": "Create post/comment",
           "seventh": "Add/monitor/delete likes",
           "eighth": "Edit user information",
-          "ninth": "And more..."
+          "ninth": "And more...",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
         "problem": "We all love to share our photos with society - you can create a special mobile application for this",
         "solution": "'Photo app' is exactly what is needed for this",
@@ -285,11 +349,11 @@
         "content": {
           "title": "Photo app",
           "description": "An application where you can: - register, enter and exit the application; - change your avatar and nickname; - download and delete your posts or comments on them; - see other users' posts, add comments and likes to them; - open the location where the post was made; - share your cool photos!)",
-          "image1": "@/assets/images/projects/project5/snippet1.png",
-          "image2": "@/assets/images/projects/project5/snippet2.png",
-          "image3": "@/assets/images/projects/project5/snippet3.png",
-          "image4": "@/assets/images/projects/project5/snippet4.png",
-          "image5": "@/assets/images/projects/project5/snippet5.png"
+          "image1": "/images/projects/project5/snippet1.png",
+          "image2": "/images/projects/project5/snippet2.png",
+          "image3": "/images/projects/project5/snippet3.png",
+          "image4": "/images/projects/project5/snippet4.png",
+          "image5": "/images/projects/project5/snippet5.png"
         }
       },
       "sixth": {
@@ -299,18 +363,33 @@
         "categories": {
           "first": "js",
           "second": "scss",
-          "third": "html"
+          "third": "html",
+          "fourth": "",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project6/cover.png",
+        "image": "/images/projects/project6/cover.png",
         "url": "news",
-        "features": [
-          "Advanced search",
-          "Responsive design",
-          "Light/Dark mode",
-          "Pagination",
-          "New York Times Api",
-          "And more..."
-        ],
+        "features": {
+          "first": "Advanced search",
+          "second": "Responsive design",
+          "third": "Light/Dark mode",
+          "fourth": "Pagination",
+          "fifth": "New York Times Api",
+          "sixth": "And more...",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
+        },
         "problem": "Everyone reads the news and needs a convenient website to easily find, track what they read, save and delete articles they like",
         "solution": "The News site is very convenient and has all the necessary functionality",
         "links": {
@@ -320,11 +399,11 @@
         "content": {
           "title": "News",
           "description": "Very convenient 'News' website ",
-          "image1": "@/assets/images/projects/project6/snippet1.png",
-          "image2": "@/assets/images/projects/project6/snippet2.png",
-          "image3": "@/assets/images/projects/project6/snippet3.png",
-          "image4": "@/assets/images/projects/project6/snippet4.png",
-          "image5": "@/assets/images/projects/project6/snippet5.png"
+          "image1": "/images/projects/project6/snippet1.png",
+          "image2": "/images/projects/project6/snippet2.png",
+          "image3": "/images/projects/project6/snippet3.png",
+          "image4": "/images/projects/project6/snippet4.png",
+          "image5": "/images/projects/project6/snippet5.png"
         }
       },
       "seventh": {
@@ -334,16 +413,33 @@
         "categories": {
           "first": "js",
           "second": "React",
-          "third": "styled-components"
+          "third": "styled-components",
+          "fourth": "",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project7/cover.png",
+        "image": "/images/projects/project7/cover.png",
         "url": "cinema-search",
-        "features": [
-          "Responsive design",
-          "Advanced search",
-          "Infinite scroll",
-          "And more..."
-        ],
+        "features": {
+          "first": "Responsive design",
+          "second": "Advanced search",
+          "third": "Infinite scroll",
+          "fourth": "And more...",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
+        },
         "problem": "All people love to watch movies - but it’s also interesting to know what the movie is about, genre, rating, cast. Therefore, there is a need for a convenient website with search and necessary information about films",
         "solution": "The 'Cinema search' application is beautiful, convenient and has detailed information about each movie in the search",
         "links": {
@@ -353,11 +449,11 @@
         "content": {
           "title": "Cinema search",
           "description": "SPA with routing",
-          "image1": "@/assets/images/projects/project7/snippet1.png",
-          "image2": "@/assets/images/projects/project7/snippet2.png",
-          "image3": "@/assets/images/projects/project7/snippet3.png",
-          "image4": "@/assets/images/projects/project7/snippet4.png",
-          "image5": "@/assets/images/projects/project7/snippet5.png"
+          "image1": "/images/projects/project7/snippet1.png",
+          "image2": "/images/projects/project7/snippet2.png",
+          "image3": "/images/projects/project7/snippet3.png",
+          "image4": "/images/projects/project7/snippet4.png",
+          "image5": "/images/projects/project7/snippet5.png"
         }
       },
       "eighth": {
@@ -368,11 +464,32 @@
           "first": "js",
           "second": "scss",
           "third": "html",
-          "fourth": "parcel"
+          "fourth": "parcel",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project8/cover.png",
+        "image": "/images/projects/project8/cover.png",
         "url": "ice-cream",
-        "features": ["Responsive design", "And more..."],
+        "features": {
+          "first": "Responsive design",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
+        },
         "problem": "A company producing and selling ice cream needed a beautiful information website and its products",
         "solution": "A team of novice student developers from the course took on the implementation of an adaptive website, which they successfully completed",
         "links": {
@@ -382,11 +499,11 @@
         "content": {
           "title": "IceCream",
           "description": "IceCream website",
-          "image1": "@/assets/images/projects/project8/snippet1.png",
-          "image2": "@/assets/images/projects/project8/snippet2.png",
-          "image3": "@/assets/images/projects/project8/snippet3.png",
-          "image4": "@/assets/images/projects/project8/snippet4.png",
-          "image5": "@/assets/images/projects/project8/snippet5.png"
+          "image1": "/images/projects/project8/snippet1.png",
+          "image2": "/images/projects/project8/snippet2.png",
+          "image3": "/images/projects/project8/snippet3.png",
+          "image4": "/images/projects/project8/snippet4.png",
+          "image5": "/images/projects/project8/snippet5.png"
         }
       },
       "ninth": {
@@ -398,11 +515,31 @@
           "second": "React",
           "third": "scss",
           "fourth": "html",
-          "fifth": "parcel"
+          "fifth": "parcel",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project9/cover.png",
+        "image": "/images/projects/project9/cover.png",
         "url": "website-for-instagram",
-        "features": ["Responsive design", "Parallax effect", "And more..."],
+        "features": {
+          "first": "Responsive design",
+          "second": "Parallax effect",
+          "third": "And more...",
+          "fourth": "",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
+        },
         "problem": "I needed a site where all my links to social networking pages and the necessary resources for contacting me were collected",
         "solution": "I have created a corresponding website",
         "links": {
@@ -412,11 +549,11 @@
         "content": {
           "title": "Website for Instagram",
           "description": "IceCream website",
-          "image1": "@/assets/images/projects/project9/snippet1.png",
-          "image2": "@/assets/images/projects/project9/snippet2.png",
-          "image3": "@/assets/images/projects/project9/snippet3.png",
-          "image4": "@/assets/images/projects/project9/snippet4.png",
-          "image5": "@/assets/images/projects/project9/snippet5.png"
+          "image1": "/images/projects/project9/snippet1.png",
+          "image2": "/images/projects/project9/snippet2.png",
+          "image3": "/images/projects/project9/snippet3.png",
+          "image4": "/images/projects/project9/snippet4.png",
+          "image5": "/images/projects/project9/snippet5.png"
         }
       },
       "tenth": {
@@ -427,11 +564,32 @@
           "first": "js",
           "second": "css",
           "third": "scss",
-          "fourth": "html"
+          "fourth": "html",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project10/cover.png",
+        "image": "/images/projects/project10/cover.png",
         "url": "my-blog",
-        "features": ["Responsive design", "And more..."],
+        "features": {
+          "first": "Responsive design",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
+        },
         "problem": "I always wanted to have my own website",
         "solution": "First, before taking the courses, I created my own website for practice",
         "links": {
@@ -441,11 +599,11 @@
         "content": {
           "title": "My blog",
           "description": "This is my own adaptive website where I collected all the information about myself (this project can be considered a portfolio of my starting works)",
-          "image1": "@/assets/images/projects/project10/snippet1.png",
-          "image2": "@/assets/images/projects/project10/snippet2.png",
-          "image3": "@/assets/images/projects/project10/snippet3.png",
-          "image4": "@/assets/images/projects/project10/snippet4.png",
-          "image5": "@/assets/images/projects/project10/snippet5.png"
+          "image1": "/images/projects/project10/snippet1.png",
+          "image2": "/images/projects/project10/snippet2.png",
+          "image3": "/images/projects/project10/snippet3.png",
+          "image4": "/images/projects/project10/snippet4.png",
+          "image5": "/images/projects/project10/snippet5.png"
         }
       },
       "eleventh": {
@@ -456,18 +614,32 @@
           "first": "js",
           "second": "React",
           "third": "mui",
-          "fourth": "styled-components"
+          "fourth": "styled-components",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project11/cover.png",
+        "image": "/images/projects/project11/cover.png",
         "url": "phonebook-app",
-        "features": [
-          "Create an account",
-          "Sign in",
-          "Sign out",
-          "Responsive design",
-          "Add/delete/edit contacts",
-          "And more..."
-        ],
+        "features": {
+          "first": "Create an account",
+          "second": "Sign in",
+          "third": "Sign out",
+          "fourth": "Responsive design",
+          "fifth": "Add/delete/edit contacts",
+          "sixth": "And more...",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
+        },
         "problem": "Everyone needs to store their contacts somewhere - so you need to create a convenient application for this",
         "solution": "PhoneBook App copes well with the task of a phone book like in phones",
         "links": {
@@ -477,27 +649,47 @@
         "content": {
           "title": "PhoneBook App",
           "description": "Contact book application with asynchronous operations and user authorization",
-          "image1": "@/assets/images/projects/project11/snippet1.png",
-          "image2": "@/assets/images/projects/project11/snippet2.png",
-          "image3": "@/assets/images/projects/project11/snippet3.png",
-          "image4": "@/assets/images/projects/project11/snippet4.png",
-          "image5": "@/assets/images/projects/project11/snippet5.png"
+          "image1": "/images/projects/project11/snippet1.png",
+          "image2": "/images/projects/project11/snippet2.png",
+          "image3": "/images/projects/project11/snippet3.png",
+          "image4": "/images/projects/project11/snippet4.png",
+          "image5": "/images/projects/project11/snippet5.png"
         }
       },
       "twelfth": {
         "id": 12,
-        "type": "test",
+        "type": "individual",
         "name": "First test",
         "categories": {
           "first": "js",
           "second": "React",
           "third": "Redux",
           "fourth": "styled-components",
-          "fifth": "html"
+          "fifth": "html",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project12/cover.png",
+        "image": "/images/projects/project12/cover.png",
         "url": "my-blog",
-        "features": ["Responsive design", "And more..."],
+        "features": {
+          "first": "Create tweet cards",
+          "second": "Add interactivity at the click of a button",
+          "third": "Pagination",
+          "fourth": "Routing",
+          "fifth": "Tweet filtering",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
+        },
         "problem": "There was an assignment to do a test from the course in 5 days, but I found out about it late and completed it in 10 hours",
         "solution": "All points from the technical specifications were implemented (including additional ones)",
         "links": {
@@ -507,11 +699,11 @@
         "content": {
           "title": "First test",
           "description": "Create tweet cards and add interactivity at the click of a button + pagination, routing, tweet filtering",
-          "image1": "@/assets/images/projects/project12/snippet1.png",
-          "image2": "@/assets/images/projects/project12/snippet2.png",
-          "image3": "@/assets/images/projects/project12/snippet3.png",
-          "image4": "@/assets/images/projects/project12/snippet4.png",
-          "image5": "@/assets/images/projects/project12/snippet5.png"
+          "image1": "/images/projects/project12/snippet1.png",
+          "image2": "/images/projects/project12/snippet2.png",
+          "image3": "/images/projects/project12/snippet3.png",
+          "image4": "/images/projects/project12/snippet4.png",
+          "image5": "/images/projects/project12/snippet5.png"
         }
       },
       "thirteenth": {
@@ -522,25 +714,46 @@
           "first": "js",
           "second": "Node",
           "third": "Nodemon",
-          "fourth": "Yargs"
+          "fourth": "Yargs",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project13/cover.png",
+        "image": "/images/projects/project13/cover.png",
         "url": "cli",
-        "features": ["Command line interface"],
+        "features": {
+          "first": "Command line interface",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
+        },
         "problem": "There was a need to create CLI",
         "solution": "This is the first homework of backend in courses",
         "links": {
-          "website": null,
+          "website": "",
           "github": "https://github.com/Anastasia-front/first-acquaintance-with-node.js"
         },
         "content": {
           "title": "CLI",
           "description": "CLI (Command line interface) application          ",
-          "image1": "@/assets/images/projects/project13/snippet1.png",
-          "image2": "@/assets/images/projects/project13/snippet2.png",
-          "image3": "@/assets/images/projects/project13/snippet3.png",
-          "image4": "@/assets/images/projects/project13/snippet4.png",
-          "image5": "@/assets/images/projects/project13/snippet5.png"
+          "image1": "/images/projects/project13/snippet1.png",
+          "image2": "/images/projects/project13/snippet2.png",
+          "image3": "/images/projects/project13/snippet3.png",
+          "image4": "/images/projects/project13/snippet4.png",
+          "image5": "/images/projects/project13/snippet5.png"
         }
       },
       "fourteenth": {
@@ -551,11 +764,32 @@
           "first": "js",
           "second": "Node",
           "third": "Mongoose",
-          "fourth": "Express"
+          "fourth": "Express",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
         },
-        "image": "@/assets/images/projects/project14/cover.png",
+        "image": "/images/projects/project14/cover.png",
         "url": "rest-api",
-        "features": ["Contacts backend"],
+        "features": {
+          "first": "Contacts backend",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": "",
+          "seventh": "",
+          "eighth": "",
+          "ninth": "",
+          "tenth": "",
+          "eleventh": "",
+          "twelfth": ""
+        },
         "problem": "There is a need to create a phone book application and you need REST API",
         "solution": "This project fits this need perfectly",
         "links": {
@@ -565,11 +799,11 @@
         "content": {
           "title": "REST API",
           "description": "Backend for a phone book application",
-          "image1": "@/assets/images/projects/project14/snippet1.png",
-          "image2": "@/assets/images/projects/project14/snippet2.png",
-          "image3": "@/assets/images/projects/project14/snippet3.png",
-          "image4": "@/assets/images/projects/project14/snippet4.png",
-          "image5": "@/assets/images/projects/project14/snippet5.png"
+          "image1": "/images/projects/project14/snippet1.png",
+          "image2": "/images/projects/project14/snippet2.png",
+          "image3": "/images/projects/project14/snippet3.png",
+          "image4": "/images/projects/project14/snippet4.png",
+          "image5": "/images/projects/project14/snippet5.png"
         }
       }
     }
@@ -584,22 +818,22 @@
     "footer": {
       "title": "To contact me, click on the link convenient for you",
       "icons": {
-        "firstBlock": {
+        "first": {
           "title": "Basic methods of connection",
           "links": {
-            "firstLink": {
+            "first": {
               "title": "Phone",
               "href": "tel:+380666080702",
               "dataText": "Call me",
               "icon": "BsFillTelephoneInboundFill"
             },
-            "secondLink": {
+            "second": {
               "title": "Email",
               "href": "mailto:palitsanastasia3.ap@gmail.com",
               "dataText": "Send letter",
               "icon": "BsFillEnvelopeAtFill"
             },
-            "thirdLink": {
+            "third": {
               "title": "Discord",
               "href": "https://discordapp.com/users/871679474188574730/",
               "dataText": "Go to Discord",
@@ -607,22 +841,22 @@
             }
           }
         },
-        "secondBlock": {
+        "second": {
           "title": "Social networks",
           "links": {
-            "firstLink": {
+            "first": {
               "title": "GitHub",
               "href": "https://github.com/Anastasia-front",
               "dataText": "Follow in GitHub",
               "icon": "BsGithub"
             },
-            "secondLink": {
+            "second": {
               "title": "LinkedIn",
               "href": "https://www.linkedin.com/in/anastasiia-prysiazhnaia/",
               "dataText": "Follow in LinkedIn",
               "icon": "BsLinkedin"
             },
-            "thirdLink": {
+            "third": {
               "title": "Instagram",
               "href": "https://www.instagram.com/anastasiia_prysiazhnaia/",
               "dataText": "Follow in Instagram",
@@ -630,22 +864,22 @@
             }
           }
         },
-        "thirdBlock": {
+        "third": {
           "title": "Messengers",
           "links": {
-            "firstLink": {
+            "first": {
               "title": "Telegram",
               "href": "https://t.me/anastasiia_prysiazhnaia",
               "dataText": "Chat in Telegram",
               "icon": "BsTelegram"
             },
-            "secondLink": {
+            "second": {
               "title": "WhatsApp",
               "href": "https://wa.me/380666080702",
               "dataText": "Chat in WhatsApp",
               "icon": "BsWhatsapp"
             },
-            "thirdLink": {
+            "third": {
               "title": "Viber",
               "href": "viber://chat?number=380666080702",
               "dataText": "Chat in Viber",

@@ -28,7 +28,7 @@ export function ProjectItem({ title, image, categories, onClick }: Project) {
       onClick={onClick}
       variants={gridItemVariants}
     >
-      <Image src={image} alt={title} />
+      <Image src={image} alt={title} width={200} height={100} />
       <div className="hover">
         <motion.div
           className="hover__categories"
@@ -36,8 +36,10 @@ export function ProjectItem({ title, image, categories, onClick }: Project) {
           variants={hoverVariants}
           animate={isHover ? "visible" : "hidden"}
         >
-          {categories.map((category) => {
-            return <span key={category}>{category}</span>;
+          {categories.map((category, index) => {
+            if (category !== "") {
+              return <span key={index}>{category}</span>;
+            }
           })}
         </motion.div>
         <motion.p

@@ -56,7 +56,7 @@ export function Footer({ title, description }: Props) {
   const l = useTranslations("alt");
   const i = useTranslations("contacts.footer");
   const ic = useTranslations("contacts.footer.icons");
-  const keys = ["firstBlock", "secondBlock", "thirdBlock"] as const;
+  const keys = ["first", "second", "third"] as const;
 
   const FooterVariants = {
     hidden: {
