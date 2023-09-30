@@ -102,20 +102,26 @@
   "projects": {
     "title": "Projects",
     "description": "Some information about my projects",
-    "items": [
-      {
+    "items": {
+      "first": {
         "id": 1,
+        "type": "commercial",
         "name": "IMConsulting",
-        "categories": ["Business project", "js", "Next", "Tailwind css"],
+        "categories": {
+          "first": "business project",
+          "second": "js",
+          "third": "Next",
+          "fourth": "Tailwind css"
+        },
         "image": "@/assets/images/projects/project1/cover.png",
         "url": "i-m-consulting",
-        "features": [
-          "App router",
-          "Responsive design",
-          "Parallax effect",
-          "And more..."
-        ],
-        "problem": "Attracting clients ",
+        "features": {
+          "first": "App router",
+          "second": "Responsive design",
+          "third": "Parallax effect",
+          "fourth": "And more..."
+        },
+        "problem": "Attracting clients",
         "solution": "Creating a website with an attractive interface, easy navigation and promotion of targeted actions",
         "links": {
           "website": "https://im-consulting.vercel.app/",
@@ -131,23 +137,27 @@
           "image5": "@/assets/images/projects/project1/snippet5.png"
         }
       },
-
-      {
+      "second": {
         "id": 2,
+        "type": "commercial",
         "name": "4.5.0",
-        "categories": ["Social project", "ts", "Next", "scss"],
+        "categories": {
+          "first": "social project",
+          "second": "ts",
+          "third": "Next",
+          "fourth": "scss"
+        },
         "image": "@/assets/images/projects/project2/cover.png",
-        "url": " 4.5.0",
-        "features": [
-          "Admin panel",
-          "Sign in",
-          "Sign out",
-          "Landing website",
-          "Responsive design",
-          "Different sliders",
-
-          "And more..."
-        ],
+        "url": "4.5.0",
+        "features": {
+          "first": "Admin panel",
+          "second": "Sign in",
+          "third": "Sign out",
+          "fourth": "Landing website",
+          "fifth": "Responsive design",
+          "sixth": "Different sliders",
+          "seventh": "And more..."
+        },
         "problem": "Now during the war in Ukraine there are many organizations that help people - one of them is 4.5.0, which requires a website to work more efficiently",
         "solution": "Our website solves this problem - there is introductory information about the organization, a form for registering for the issuance of humanitarian aid, and also a payment system is connected for those who want to help the organization and make donations",
         "links": {
@@ -164,18 +174,23 @@
           "image5": "@/assets/images/projects/project2/snippet5.png"
         }
       },
-      {
+      "third": {
         "id": 3,
+        "type": "test",
         "name": "Carp Travel",
-        "categories": ["ts", "Next", "Tailwind css"],
+        "categories": {
+          "first": "ts",
+          "second": "Next",
+          "third": "Tailwind css"
+        },
         "image": "@/assets/images/projects/project3/cover.png",
         "url": "carp-travel",
-        "features": [
-          "Possibility to supports many languages",
-          "Responsive design",
-          "Different sliders",
-          "And more..."
-        ],
+        "features": {
+          "first": "Possibility to supports many languages",
+          "second": "Responsive design",
+          "third": "Different sliders",
+          "fourth": "And more..."
+        },
         "problem": "The company need modern and unique website",
         "solution": "I create a functional one",
         "links": {
@@ -192,26 +207,32 @@
           "image5": "@/assets/images/projects/project3/snippet5.png"
         }
       },
-      {
+      "fourth": {
         "id": 4,
+        "type": "team",
         "name": "Task Pro",
-        "categories": ["js", "React", "Redux", "css"],
+        "categories": {
+          "first": "js",
+          "second": "React",
+          "third": "Redux",
+          "fourth": "css"
+        },
         "image": "@/assets/images/projects/project4/cover.png",
         "url": "task-pro",
-        "features": [
-          "Frontend",
-          "Backend",
-          "Create an account",
-          "Sign in",
-          "Sign out",
-          "Responsive design",
-          "Create boards/columns/tasks",
-          "Edit user/board/column/task information",
-          "Delete user/board/column/task information",
-          "Drag & drop",
-          "Email support ",
-          "And more..."
-        ],
+        "features": {
+          "first": "Frontend",
+          "second": "Backend",
+          "third": "Create an account",
+          "fourth": "Sign in",
+          "fifth": "Sign out",
+          "sixth": "Responsive design",
+          "seventh": "Create boards/columns/tasks",
+          "eighth": "Edit user/board/column/task information",
+          "ninth": "Delete user/board/column/task information",
+          "tenth": "Drag & drop",
+          "eleventh": "Email support ",
+          "twelfth": "And more..."
+        },
         "problem": "People often need to plan their lives in different areas of activity - there is a reason to create an appropriate application that solves this need",
         "solution": "The application 'Task Pro' is just a scheduler",
         "links": {
@@ -231,23 +252,30 @@
           "image5": "@/assets/images/projects/project4/snippet5.png"
         }
       },
-      {
+      "fifth": {
         "id": 5,
+        "type": "individual",
         "name": "Photo app",
-        "categories": ["js", "React Native", "Redux", "Firebase", "css"],
+        "categories": {
+          "first": "js",
+          "second": "React Native",
+          "third": "Redux",
+          "fourth": "Firebase",
+          "fifth": "css"
+        },
         "image": "@/assets/images/projects/project5/cover.png",
         "url": "photo-app",
-        "features": [
-          "Create an account",
-          "Sign in",
-          "Sign out",
-          "Responsive design",
-          "Infinite scroll",
-          "Create post/comment",
-          "Add/monitor/delete likes",
-          "Edit user information",
-          "And more..."
-        ],
+        "features": {
+          "first": "Create an account",
+          "second": "Sign in",
+          "third": "Sign out",
+          "fourth": "Responsive design",
+          "fifth": "Infinite scroll",
+          "sixth": "Create post/comment",
+          "seventh": "Add/monitor/delete likes",
+          "eighth": "Edit user information",
+          "ninth": "And more..."
+        },
         "problem": "We all love to share our photos with society - you can create a special mobile application for this",
         "solution": "'Photo app' is exactly what is needed for this",
         "links": {
@@ -264,10 +292,15 @@
           "image5": "@/assets/images/projects/project5/snippet5.png"
         }
       },
-      {
+      "sixth": {
         "id": 6,
+        "type": "team",
         "name": "News",
-        "categories": ["js", "scss", "html"],
+        "categories": {
+          "first": "js",
+          "second": "scss",
+          "third": "html"
+        },
         "image": "@/assets/images/projects/project6/cover.png",
         "url": "news",
         "features": [
@@ -276,7 +309,6 @@
           "Light/Dark mode",
           "Pagination",
           "New York Times Api",
-
           "And more..."
         ],
         "problem": "Everyone reads the news and needs a convenient website to easily find, track what they read, save and delete articles they like",
@@ -295,17 +327,21 @@
           "image5": "@/assets/images/projects/project6/snippet5.png"
         }
       },
-      {
+      "seventh": {
         "id": 7,
+        "type": "individual",
         "name": "Cinema search",
-        "categories": ["js", "React", "styled-components"],
+        "categories": {
+          "first": "js",
+          "second": "React",
+          "third": "styled-components"
+        },
         "image": "@/assets/images/projects/project7/cover.png",
         "url": "cinema-search",
         "features": [
           "Responsive design",
           "Advanced search",
           "Infinite scroll",
-
           "And more..."
         ],
         "problem": "All people love to watch movies - but it’s also interesting to know what the movie is about, genre, rating, cast. Therefore, there is a need for a convenient website with search and necessary information about films",
@@ -324,10 +360,16 @@
           "image5": "@/assets/images/projects/project7/snippet5.png"
         }
       },
-      {
+      "eighth": {
         "id": 8,
+        "type": "team",
         "name": "IceCream",
-        "categories": ["js", "scss", "html", "parcel"],
+        "categories": {
+          "first": "js",
+          "second": "scss",
+          "third": "html",
+          "fourth": "parcel"
+        },
         "image": "@/assets/images/projects/project8/cover.png",
         "url": "ice-cream",
         "features": ["Responsive design", "And more..."],
@@ -347,10 +389,17 @@
           "image5": "@/assets/images/projects/project8/snippet5.png"
         }
       },
-      {
+      "ninth": {
         "id": 9,
+        "type": "individual",
         "name": "Website for Instagram",
-        "categories": ["ts", "React", "scss", "html", "parcel"],
+        "categories": {
+          "first": "ts",
+          "second": "React",
+          "third": "scss",
+          "fourth": "html",
+          "fifth": "parcel"
+        },
         "image": "@/assets/images/projects/project9/cover.png",
         "url": "website-for-instagram",
         "features": ["Responsive design", "Parallax effect", "And more..."],
@@ -370,10 +419,16 @@
           "image5": "@/assets/images/projects/project9/snippet5.png"
         }
       },
-      {
+      "tenth": {
         "id": 10,
+        "type": "individual",
         "name": "My blog",
-        "categories": ["js", "css", "scss", "html"],
+        "categories": {
+          "first": "js",
+          "second": "css",
+          "third": "scss",
+          "fourth": "html"
+        },
         "image": "@/assets/images/projects/project10/cover.png",
         "url": "my-blog",
         "features": ["Responsive design", "And more..."],
@@ -393,10 +448,16 @@
           "image5": "@/assets/images/projects/project10/snippet5.png"
         }
       },
-      {
+      "eleventh": {
         "id": 11,
+        "type": "individual",
         "name": "PhoneBook App",
-        "categories": ["js", "React", "mui", "styled-components"],
+        "categories": {
+          "first": "js",
+          "second": "React",
+          "third": "mui",
+          "fourth": "styled-components"
+        },
         "image": "@/assets/images/projects/project11/cover.png",
         "url": "phonebook-app",
         "features": [
@@ -423,10 +484,17 @@
           "image5": "@/assets/images/projects/project11/snippet5.png"
         }
       },
-      {
+      "twelfth": {
         "id": 12,
+        "type": "test",
         "name": "First test",
-        "categories": ["js", "React", "Redux", "styled-components", "html"],
+        "categories": {
+          "first": "js",
+          "second": "React",
+          "third": "Redux",
+          "fourth": "styled-components",
+          "fifth": "html"
+        },
         "image": "@/assets/images/projects/project12/cover.png",
         "url": "my-blog",
         "features": ["Responsive design", "And more..."],
@@ -446,10 +514,16 @@
           "image5": "@/assets/images/projects/project12/snippet5.png"
         }
       },
-      {
+      "thirteenth": {
         "id": 13,
+        "type": "backend",
         "name": "CLI",
-        "categories": ["js", "Node", "Nodemon", "Yargs"],
+        "categories": {
+          "first": "js",
+          "second": "Node",
+          "third": "Nodemon",
+          "fourth": "Yargs"
+        },
         "image": "@/assets/images/projects/project13/cover.png",
         "url": "cli",
         "features": ["Command line interface"],
@@ -469,10 +543,16 @@
           "image5": "@/assets/images/projects/project13/snippet5.png"
         }
       },
-      {
+      "fourteenth": {
         "id": 14,
+        "type": "backend",
         "name": "REST API",
-        "categories": ["js", "Node", "Mongoose", "Express"],
+        "categories": {
+          "first": "js",
+          "second": "Node",
+          "third": "Mongoose",
+          "fourth": "Express"
+        },
         "image": "@/assets/images/projects/project14/cover.png",
         "url": "rest-api",
         "features": ["Contacts backend"],
@@ -492,7 +572,7 @@
           "image5": "@/assets/images/projects/project14/snippet5.png"
         }
       }
-    ]
+    }
   },
   "project": {
     "title": "Project",
