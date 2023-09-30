@@ -135,7 +135,7 @@
       {
         "id": 2,
         "name": "4.5.0",
-        "categories": ["Social project", "ts", "Next", "sass"],
+        "categories": ["Social project", "ts", "Next", "scss"],
         "image": "@/assets/images/projects/project2/cover.png",
         "url": " 4.5.0",
         "features": [
@@ -246,7 +246,6 @@
           "Create post/comment",
           "Add/monitor/delete likes",
           "Edit user information",
-
           "And more..."
         ],
         "problem": "We all love to share our photos with society - you can create a special mobile application for this",
@@ -328,7 +327,7 @@
       {
         "id": 8,
         "name": "IceCream",
-        "categories": ["js", "sass", "html", "parcel"],
+        "categories": ["js", "scss", "html", "parcel"],
         "image": "@/assets/images/projects/project8/cover.png",
         "url": "ice-cream",
         "features": ["Responsive design", "And more..."],
@@ -351,7 +350,7 @@
       {
         "id": 9,
         "name": "Website for Instagram",
-        "categories": ["ts", "React", "sass", "html", "parcel"],
+        "categories": ["ts", "React", "scss", "html", "parcel"],
         "image": "@/assets/images/projects/project9/cover.png",
         "url": "website-for-instagram",
         "features": ["Responsive design", "Parallax effect", "And more..."],
@@ -392,6 +391,59 @@
           "image3": "@/assets/images/projects/project10/snippet3.png",
           "image4": "@/assets/images/projects/project10/snippet4.png",
           "image5": "@/assets/images/projects/project10/snippet5.png"
+        }
+      },
+      {
+        "id": 11,
+        "name": "PhoneBook App",
+        "categories": ["js", "React", "mui", "styled-components"],
+        "image": "@/assets/images/projects/project11/cover.png",
+        "url": "phonebook-app",
+        "features": [
+          "Create an account",
+          "Sign in",
+          "Sign out",
+          "Responsive design",
+          "Add/delete/edit contacts",
+          "And more..."
+        ],
+        "problem": "Everyone needs to store their contacts somewhere - so you need to create a convenient application for this",
+        "solution": "PhoneBook App copes well with the task of a phone book like in phones",
+        "links": {
+          "website": "https://github.com/Anastasia-front/phonebook-app",
+          "github": "anastasia-front.github.io/phonebook-app/"
+        },
+        "content": {
+          "title": "PhoneBook App",
+          "description": "Contact book application with asynchronous operations and user authorization",
+          "image1": "@/assets/images/projects/project11/snippet1.png",
+          "image2": "@/assets/images/projects/project11/snippet2.png",
+          "image3": "@/assets/images/projects/project11/snippet3.png",
+          "image4": "@/assets/images/projects/project11/snippet4.png",
+          "image5": "@/assets/images/projects/project11/snippet5.png"
+        }
+      },
+      {
+        "id": 12,
+        "name": "First test",
+        "categories": ["js", "React", "Redux", "styled-components", "html"],
+        "image": "@/assets/images/projects/project12/cover.png",
+        "url": "my-blog",
+        "features": ["Responsive design", "And more..."],
+        "problem": "There was an assignment to do a test from the course in 5 days, but I found out about it late and completed it in 10 hours",
+        "solution": "All points from the technical specifications were implemented (including additional ones)",
+        "links": {
+          "website": "anastasia-front.github.io/first-tech-test/",
+          "github": "https://github.com/Anastasia-front/first-tech-test"
+        },
+        "content": {
+          "title": "First test",
+          "description": "Create tweet cards and add interactivity at the click of a button + pagination, routing, tweet filtering",
+          "image1": "@/assets/images/projects/project12/snippet1.png",
+          "image2": "@/assets/images/projects/project12/snippet2.png",
+          "image3": "@/assets/images/projects/project12/snippet3.png",
+          "image4": "@/assets/images/projects/project12/snippet4.png",
+          "image5": "@/assets/images/projects/project12/snippet5.png"
         }
       }
     ]
