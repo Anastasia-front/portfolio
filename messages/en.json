@@ -195,7 +195,7 @@
       {
         "id": 4,
         "name": "Task Pro",
-        "categories": ["js", "React", "css"],
+        "categories": ["js", "React", "Redux", "css"],
         "image": "@/assets/images/projects/project4/cover.png",
         "url": "task-pro",
         "features": [
@@ -234,7 +234,7 @@
       {
         "id": 5,
         "name": "Photo app",
-        "categories": ["js", "React Native", "Firebase", "css"],
+        "categories": ["js", "React Native", "Redux", "Firebase", "css"],
         "image": "@/assets/images/projects/project5/cover.png",
         "url": "photo-app",
         "features": [
@@ -444,6 +444,52 @@
           "image3": "@/assets/images/projects/project12/snippet3.png",
           "image4": "@/assets/images/projects/project12/snippet4.png",
           "image5": "@/assets/images/projects/project12/snippet5.png"
+        }
+      },
+      {
+        "id": 13,
+        "name": "CLI",
+        "categories": ["js", "Node", "Nodemon", "Yargs"],
+        "image": "@/assets/images/projects/project13/cover.png",
+        "url": "cli",
+        "features": ["Command line interface"],
+        "problem": "There was a need to create CLI",
+        "solution": "This is the first homework of backend in courses",
+        "links": {
+          "website": null,
+          "github": "https://github.com/Anastasia-front/first-acquaintance-with-node.js"
+        },
+        "content": {
+          "title": "CLI",
+          "description": "CLI (Command line interface) application          ",
+          "image1": "@/assets/images/projects/project13/snippet1.png",
+          "image2": "@/assets/images/projects/project13/snippet2.png",
+          "image3": "@/assets/images/projects/project13/snippet3.png",
+          "image4": "@/assets/images/projects/project13/snippet4.png",
+          "image5": "@/assets/images/projects/project13/snippet5.png"
+        }
+      },
+      {
+        "id": 14,
+        "name": "REST API",
+        "categories": ["js", "Node", "Mongoose", "Express"],
+        "image": "@/assets/images/projects/project14/cover.png",
+        "url": "rest-api",
+        "features": ["Contacts backend"],
+        "problem": "There is a need to create a phone book application and you need REST API",
+        "solution": "This project fits this need perfectly",
+        "links": {
+          "website": "contacts-backend-eikd.onrender.com",
+          "github": "https://github.com/Anastasia-front/nodejs-first-rest-api"
+        },
+        "content": {
+          "title": "REST API",
+          "description": "Backend for a phone book application",
+          "image1": "@/assets/images/projects/project14/snippet1.png",
+          "image2": "@/assets/images/projects/project14/snippet2.png",
+          "image3": "@/assets/images/projects/project14/snippet3.png",
+          "image4": "@/assets/images/projects/project14/snippet4.png",
+          "image5": "@/assets/images/projects/project14/snippet5.png"
         }
       }
     ]
