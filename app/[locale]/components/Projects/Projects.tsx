@@ -16,6 +16,21 @@ export function Projects() {
   // memoize portfolio item to prevent re-render
   const MemoizedPortfolioItem = React.memo(ProjectItem);
 
+  const keys = [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth",
+    "seventh",
+    "eighth",
+    "ninth",
+    "tenth",
+    "eleventh",
+    "twelfth",
+  ] as const;
+
   return (
     <motion.div
       className="projects"
