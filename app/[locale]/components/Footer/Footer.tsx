@@ -56,8 +56,7 @@ export function Footer({ title, description }: Props) {
   const l = useTranslations("alt");
   const i = useTranslations("contacts.footer");
   const ic = useTranslations("contacts.footer.icons");
-  const firstKeys = ["firstBlock", "secondBlock", "thirdBlock"] as const;
-  const secondKeys = ["firstLink", "secondLink", "thirdLink"] as const;
+  const keys = ["firstBlock", "secondBlock", "thirdBlock"] as const;
 
   const FooterVariants = {
     hidden: {
@@ -109,21 +108,27 @@ export function Footer({ title, description }: Props) {
         <div className="footer-contact">
           <p className="footer-contact__title">{i("title")} </p>
           <ol className="icons">
-            {firstKeys.map((fk) => (
-              <li key={fk} className="icons__block">
-                <p className="icons__block-title">{ic(`${fk}.title`)}</p>
+            {keys.map((firstBlock) => (
+              <li key={firstBlock} className="icons__block">
+                <p className="icons__block-title">
+                  {ic(`${firstBlock}.title`)}
+                </p>
 
                 <ol className="icons__block-links">
-                  {secondKeys.map((sk) => {
-                    const iconKey = ic(`${fk}.links.${sk}.icon`);
+                  {keys.map((secondBlock) => {
+                    const iconKey = ic(
+                      `${firstBlock}.links.${secondBlock}.icon`
+                    );
                     const IconComponent = getIconComponent(iconKey);
 
                     return (
-                      <li key={sk}>
+                      <li key={secondBlock}>
                         <Link
                           target="_blank"
-                          href={ic(`${fk}.links.${sk}.href`)}
-                          data-text={ic(`${fk}.links.${sk}.dataText`)}
+                          href={ic(`${firstBlock}.links.${secondBlock}.href`)}
+                          data-text={ic(
+                            `${firstBlock}.links.${secondBlock}.dataText`
+                          )}
                         >
                           {IconComponent}
                         </Link>
@@ -133,79 +138,6 @@ export function Footer({ title, description }: Props) {
                 </ol>
               </li>
             ))}
-            {/* <div className="icons__block">
-              <p className="icons__block-title">Phone & e-mail</p>
-              <div className="icons__block-links">
-                <Link
-                  target="_blank"
-                  href="tel:+380666080702"
-                  data-text="Call me"
-                >
-                  <BsFillTelephoneInboundFill />
-                </Link>
-                <Link
-                  target="_blank"
-                  href="mailto:palitsanastasia3.ap@gmail.com"
-                  data-text="Send letter"
-                >
-                  <BsFillEnvelopeAtFill />
-                </Link>
-              </div>
-            </div>
-
-            <div className="icons__block">
-              <p className="icons__block-title">Socials</p>
-              <div className="icons__block-links">
-                <Link
-                  target="_blank"
-                  href="https://github.com/Anastasia-front"
-                  data-text="Follow in GitHub"
-                >
-                  <BsGithub />
-                </Link>
-                <Link
-                  target="_blank"
-                  href="https://www.linkedin.com/in/anastasiia-prysiazhnaia/"
-                  data-text="Follow in LinkedIn"
-                >
-                  <BsLinkedin />
-                </Link>
-                <Link
-                  target="_blank"
-                  href="https://www.instagram.com/anastasiia_prysiazhnaia/"
-                  data-text="Follow in Instagram"
-                >
-                  <BsInstagram />
-                </Link>
-              </div>
-            </div>
-
-            <div className="icons__block">
-              <p className="icons__block-title">Chats</p>
-              <div className="icons__block-links">
-                <Link
-                  target="_blank"
-                  href="https://t.me/anastasiia_prysiazhnaia"
-                  data-text="Chat in Telegram"
-                >
-                  <BsTelegram />
-                </Link>
-                <Link
-                  target="_blank"
-                  href="https://wa.me/380666080702"
-                  data-text="Chat in WhatsApp"
-                >
-                  <BsWhatsapp />
-                </Link>
-                <Link
-                  target="_blank"
-                  href="viber://chat?number=380666080702"
-                  data-text="Chat in Viber"
-                >
-                  <BsChatDotsFill />
-                </Link>
-              </div>
-            </div> */}
           </ol>
         </div>
       </motion.div>
