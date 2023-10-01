@@ -19,6 +19,7 @@ import {
 } from "react-icons/bs";
 
 import { Navigation } from "@/components";
+import { footerKeys } from "@/constants";
 
 function getIconComponent(iconName: string) {
   switch (iconName) {
@@ -56,7 +57,6 @@ export function Footer({ title, description }: Props) {
   const l = useTranslations("alt");
   const i = useTranslations("contacts.footer");
   const ic = useTranslations("contacts.footer.icons");
-  const keys = ["first", "second", "third"] as const;
 
   const FooterVariants = {
     hidden: {
@@ -108,14 +108,14 @@ export function Footer({ title, description }: Props) {
         <div className="footer-contact">
           <p className="footer-contact__title">{i("title")} </p>
           <ol className="icons">
-            {keys.map((firstBlock) => (
+            {footerKeys.map((firstBlock) => (
               <li key={firstBlock} className="icons__block">
                 <p className="icons__block-title">
                   {ic(`${firstBlock}.title`)}
                 </p>
 
                 <ol className="icons__block-links">
-                  {keys.map((secondBlock) => {
+                  {footerKeys.map((secondBlock) => {
                     const iconKey = ic(
                       `${firstBlock}.links.${secondBlock}.icon`
                     );

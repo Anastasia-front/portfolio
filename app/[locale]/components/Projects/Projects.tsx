@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
 import { ProjectItem } from "@/components";
+import { projectsKeys } from "@/constants";
 import { gridVariants } from "@/utils";
 
 export function Projects() {
@@ -18,21 +19,6 @@ export function Projects() {
   // memoize portfolio item to prevent re-render
   const MemoizedPortfolioItem = React.memo(ProjectItem);
 
-  const keys = [
-    "first",
-    "second",
-    "third",
-    "fourth",
-    "fifth",
-    "sixth",
-    "seventh",
-    "eighth",
-    "ninth",
-    "tenth",
-    "eleventh",
-    "twelfth",
-  ] as const;
-
   return (
     <motion.div
       className="projects"
@@ -40,11 +26,11 @@ export function Projects() {
       initial="hidden"
       animate="visible"
     >
-      {keys.map((project, index) => {
+      {projectsKeys.map((project, index) => {
         const url = i(`${project}.url`);
         const array: string[] = [];
 
-        keys.map((categories) => {
+        projectsKeys.map((categories) => {
           const category = i(`${project}.categories.${categories}`);
           array.push(category);
           return array;
