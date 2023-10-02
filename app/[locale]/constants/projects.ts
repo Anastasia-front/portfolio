@@ -15,23 +15,41 @@ import cover7 from "@/assets/images/projects/project7/cover.png";
 import cover8 from "@/assets/images/projects/project8/cover.png";
 import cover9 from "@/assets/images/projects/project9/cover.png";
 
-// import snippet1 from "@/assets/images/projects/project1/cover.png";
-// import cover2 from "@/assets/images/projects/project2/cover.png";
-// import cover3 from "@/assets/images/projects/project3/cover.png";
-// import cover4 from "@/assets/images/projects/project4/cover.png";
-// import cover5 from "@/assets/images/projects/project5/cover.png";
+import firstProjectSnippet1 from "@/assets/images/projects/project1/snippet1.png";
+import firstProjectSnippet2 from "@/assets/images/projects/project1/snippet2.png";
+import firstProjectSnippet3 from "@/assets/images/projects/project1/snippet3.png";
+import firstProjectSnippet4 from "@/assets/images/projects/project1/snippet4.png";
+import firstProjectSnippet5 from "@/assets/images/projects/project1/snippet5.png";
 
-// import cover1 from "@/assets/images/projects/project1/cover.png";
-// import cover2 from "@/assets/images/projects/project2/cover.png";
-// import cover3 from "@/assets/images/projects/project3/cover.png";
-// import cover4 from "@/assets/images/projects/project4/cover.png";
-// import cover5 from "@/assets/images/projects/project5/cover.png";
+import secondProjectSnippet1 from "@/assets/images/projects/project2/snippet1.png";
+import secondProjectSnippet2 from "@/assets/images/projects/project2/snippet2.png";
+import secondProjectSnippet3 from "@/assets/images/projects/project2/snippet3.png";
+import secondProjectSnippet4 from "@/assets/images/projects/project2/snippet4.png";
+import secondProjectSnippet5 from "@/assets/images/projects/project2/snippet5.png";
 
-// import cover1 from "@/assets/images/projects/project1/cover.png";
-// import cover2 from "@/assets/images/projects/project2/cover.png";
-// import cover3 from "@/assets/images/projects/project3/cover.png";
-// import cover4 from "@/assets/images/projects/project4/cover.png";
-// import cover5 from "@/assets/images/projects/project5/cover.png";
+import thirdProjectSnippet1 from "@/assets/images/projects/project3/snippet1.png";
+import thirdProjectSnippet2 from "@/assets/images/projects/project3/snippet2.png";
+import thirdProjectSnippet3 from "@/assets/images/projects/project3/snippet3.png";
+import thirdProjectSnippet4 from "@/assets/images/projects/project3/snippet4.png";
+import thirdProjectSnippet5 from "@/assets/images/projects/project3/snippet5.png";
+
+import fourthProjectSnippet1 from "@/assets/images/projects/project4/snippet1.png";
+import fourthProjectSnippet2 from "@/assets/images/projects/project4/snippet2.png";
+import fourthProjectSnippet3 from "@/assets/images/projects/project4/snippet3.png";
+import fourthProjectSnippet4 from "@/assets/images/projects/project4/snippet4.png";
+import fourthProjectSnippet5 from "@/assets/images/projects/project4/snippet5.png";
+
+import fifthProjectSnippet1 from "@/assets/images/projects/project5/snippet1.png";
+import fifthProjectSnippet2 from "@/assets/images/projects/project5/snippet2.png";
+import fifthProjectSnippet3 from "@/assets/images/projects/project5/snippet3.png";
+import fifthProjectSnippet4 from "@/assets/images/projects/project5/snippet4.png";
+import fifthProjectSnippet5 from "@/assets/images/projects/project5/snippet5.png";
+
+import sixthProjectSnippet1 from "@/assets/images/projects/project6/snippet1.png";
+import sixthProjectSnippet2 from "@/assets/images/projects/project6/snippet2.png";
+import sixthProjectSnippet3 from "@/assets/images/projects/project6/snippet3.png";
+import sixthProjectSnippet4 from "@/assets/images/projects/project6/snippet4.png";
+import sixthProjectSnippet5 from "@/assets/images/projects/project6/snippet5.png";
 
 export interface Project {
   id?: number;
@@ -50,12 +68,7 @@ export interface Project {
     github?: string;
   };
   content?: {
-    title?: string;
     description?: string;
-    description2?: string;
-    description3?: string;
-    description4?: string;
-    description5?: string;
     image1?: StaticImageData;
     image2?: StaticImageData;
     image3?: StaticImageData;
@@ -87,13 +100,12 @@ export const projectsEnglishLang: Project[] = [
       github: "https://github.com/SoftRyzen-internship/IM-CONSULTING",
     },
     content: {
-      title: "IMConsulting",
       description: "Website for business trainer and coach Illy Mushkovsky",
-      // image1: "@/assets/images/projects/project1/snippet1.png",
-      // image2: "@/assets/images/projects/project1/snippet2.png",
-      // image3: "@/assets/images/projects/project1/snippet3.png",
-      // image4: "@/assets/images/projects/project1/snippet4.png",
-      // image5: "@/assets/images/projects/project1/snippet5.png",
+      image1: firstProjectSnippet1,
+      image2: firstProjectSnippet2,
+      image3: firstProjectSnippet3,
+      image4: firstProjectSnippet4,
+      image5: firstProjectSnippet5,
     },
   },
 
@@ -124,13 +136,12 @@ export const projectsEnglishLang: Project[] = [
         "https://github.com/baza-trainee/450-kherson-humanitarian-landing-page",
     },
     content: {
-      title: "4.5.0",
       description: "Website for a public organization '4.5.0'",
-      // image1: "@/assets/images/projects/project2/snippet1.png",
-      // image2: "@/assets/images/projects/project2/snippet2.png",
-      // image3: "@/assets/images/projects/project2/snippet3.png",
-      // image4: "@/assets/images/projects/project2/snippet4.png",
-      // image5: "@/assets/images/projects/project2/snippet5.png",
+      image1: secondProjectSnippet1,
+      image2: secondProjectSnippet2,
+      image3: secondProjectSnippet3,
+      image4: secondProjectSnippet4,
+      image5: secondProjectSnippet5,
     },
   },
   {
@@ -154,13 +165,12 @@ export const projectsEnglishLang: Project[] = [
       github: "https://github.com/Anastasia-front/test-soft-ryzen",
     },
     content: {
-      title: "Carp Travel",
       description: "'Carp Travel' adaptive website",
-      // image1: "@/assets/images/projects/project3/snippet1.png",
-      // image2: "@/assets/images/projects/project3/snippet2.png",
-      // image3: "@/assets/images/projects/project3/snippet3.png",
-      // image4: "@/assets/images/projects/project3/snippet4.png",
-      // image5: "@/assets/images/projects/project3/snippet5.png",
+      image1: thirdProjectSnippet1,
+      image2: thirdProjectSnippet2,
+      image3: thirdProjectSnippet3,
+      image4: thirdProjectSnippet4,
+      image5: thirdProjectSnippet5,
     },
   },
   {
@@ -193,13 +203,12 @@ export const projectsEnglishLang: Project[] = [
       github: "https://github.com/Tkachenko01001/project-REACT_NODE",
     },
     content: {
-      title: "Task Pro",
       description: "Application-scheduler",
-      // image1: "@/assets/images/projects/project4/snippet1.png",
-      // image2: "@/assets/images/projects/project4/snippet2.png",
-      // image3: "@/assets/images/projects/project4/snippet3.png",
-      // image4: "@/assets/images/projects/project4/snippet4.png",
-      // image5: "@/assets/images/projects/project4/snippet5.png",
+      image1: fourthProjectSnippet1,
+      image2: fourthProjectSnippet2,
+      image3: fourthProjectSnippet3,
+      image4: fourthProjectSnippet4,
+      image5: fourthProjectSnippet5,
     },
   },
   {
@@ -231,14 +240,13 @@ export const projectsEnglishLang: Project[] = [
         "https://github.com/Anastasia-front/photo-network_first-react-native-individual-project",
     },
     content: {
-      title: "Photo app",
       description:
         "An application where you can: - register, enter and exit the application; - change your avatar and nickname; - download and delete your posts or comments on them; - see other users' posts, add comments and likes to them; - open the location where the post was made; - share your cool photos!)",
-      // image1: "@/assets/images/projects/project5/snippet1.png",
-      // image2: "@/assets/images/projects/project5/snippet2.png",
-      // image3: "@/assets/images/projects/project5/snippet3.png",
-      // image4: "@/assets/images/projects/project5/snippet4.png",
-      // image5: "@/assets/images/projects/project5/snippet5.png",
+      image1: fifthProjectSnippet1,
+      image2: fifthProjectSnippet2,
+      image3: fifthProjectSnippet3,
+      image4: fifthProjectSnippet4,
+      image5: fifthProjectSnippet5,
     },
   },
   {
@@ -267,13 +275,12 @@ export const projectsEnglishLang: Project[] = [
       github: "https://github.com/Anastasia-front/news-team-project",
     },
     content: {
-      title: "News",
       description: "Very convenient 'News' website ",
-      // image1: "@/assets/images/projects/project6/snippet1.png",
-      // image2: "@/assets/images/projects/project6/snippet2.png",
-      // image3: "@/assets/images/projects/project6/snippet3.png",
-      // image4: "@/assets/images/projects/project6/snippet4.png",
-      // image5: "@/assets/images/projects/project6/snippet5.png",
+      image1: sixthProjectSnippet1,
+      image2: sixthProjectSnippet2,
+      image3: sixthProjectSnippet3,
+      image4: sixthProjectSnippet4,
+      image5: sixthProjectSnippet5,
     },
   },
   {
@@ -299,7 +306,6 @@ export const projectsEnglishLang: Project[] = [
       github: "https://github.com/Anastasia-front/movie-app",
     },
     content: {
-      title: "Cinema search",
       description: "SPA with routing",
       // image1: "@/assets/images/projects/project7/snippet1.png",
       // image2: "@/assets/images/projects/project7/snippet2.png",
@@ -326,7 +332,6 @@ export const projectsEnglishLang: Project[] = [
       github: "https://github.com/Anastasia-front/team-project-icecream",
     },
     content: {
-      title: "IceCream",
       description: "IceCream website",
       // image1: "@/assets/images/projects/project8/snippet1.png",
       // image2: "@/assets/images/projects/project8/snippet2.png",
@@ -352,7 +357,6 @@ export const projectsEnglishLang: Project[] = [
       github: "https://github.com/Anastasia-front/instagram-link",
     },
     content: {
-      title: "Website for Instagram",
       description: "IceCream website",
       // image1: "@/assets/images/projects/project9/snippet1.png",
       // image2: "@/assets/images/projects/project9/snippet2.png",
@@ -378,7 +382,6 @@ export const projectsEnglishLang: Project[] = [
       github: "https://github.com/Anastasia-front/My-blog",
     },
     content: {
-      title: "My blog",
       description:
         "This is my own adaptive website where I collected all the information about myself (this project can be considered a portfolio of my starting works)",
       // image1: "@/assets/images/projects/project10/snippet1.png",
@@ -413,7 +416,6 @@ export const projectsEnglishLang: Project[] = [
       github: "https://github.com/Anastasia-front/phonebook-app",
     },
     content: {
-      title: "PhoneBook App",
       description:
         "Contact book application with asynchronous operations and user authorization",
       // image1: "@/assets/images/projects/project11/snippet1.png",
@@ -441,7 +443,6 @@ export const projectsEnglishLang: Project[] = [
       github: "https://github.com/Anastasia-front/first-tech-test",
     },
     content: {
-      title: "First test",
       description:
         "Create tweet cards and add interactivity at the click of a button + pagination, routing, tweet filtering",
       // image1: "@/assets/images/projects/project12/snippet1.png",
@@ -468,7 +469,6 @@ export const projectsEnglishLang: Project[] = [
         "https://github.com/Anastasia-front/first-acquaintance-with-node.js",
     },
     content: {
-      title: "CLI",
       description: "CLI (Command line interface) application",
       // image1: "@/assets/images/projects/project13/snippet1.png",
       // image2: "@/assets/images/projects/project13/snippet2.png",
@@ -494,7 +494,6 @@ export const projectsEnglishLang: Project[] = [
       github: "https://github.com/Anastasia-front/nodejs-first-rest-api",
     },
     content: {
-      title: "REST API",
       description: "Backend for a phone book application",
       // image1: "@/assets/images/projects/project14/snippet1.png",
       // image2: "@/assets/images/projects/project14/snippet2.png",
@@ -528,8 +527,12 @@ export const projectsUkrainianLang: Project[] = [
       github: "https://github.com/SoftRyzen-internship/IM-CONSULTING",
     },
     content: {
-      title: "IMConsulting",
       description: "Сайт для бізнес-тренера та коуча Іллі Мушковського",
+      image1: firstProjectSnippet1,
+      image2: firstProjectSnippet2,
+      image3: firstProjectSnippet3,
+      image4: firstProjectSnippet4,
+      image5: firstProjectSnippet5,
     },
   },
   {
@@ -559,8 +562,12 @@ export const projectsUkrainianLang: Project[] = [
         "https://github.com/baza-trainee/450-kherson-humanitarian-landing-page",
     },
     content: {
-      title: "4.5.0",
       description: "Веб-сайт громадської організації '4.5.0'",
+      image1: secondProjectSnippet1,
+      image2: secondProjectSnippet2,
+      image3: secondProjectSnippet3,
+      image4: secondProjectSnippet4,
+      image5: secondProjectSnippet5,
     },
   },
   {
@@ -584,8 +591,12 @@ export const projectsUkrainianLang: Project[] = [
       github: "https://github.com/Anastasia-front/test-soft-ryzen",
     },
     content: {
-      title: "Carp Travel",
       description: "Адаптивний веб-сайт 'Carp Travel'",
+      image1: thirdProjectSnippet1,
+      image2: thirdProjectSnippet2,
+      image3: thirdProjectSnippet3,
+      image4: thirdProjectSnippet4,
+      image5: thirdProjectSnippet5,
     },
   },
   {
@@ -618,8 +629,12 @@ export const projectsUkrainianLang: Project[] = [
       github: "https://github.com/Tkachenko01001/project-REACT_NODE",
     },
     content: {
-      title: "Task Pro",
       description: "Додаток-планувальник",
+      image1: fourthProjectSnippet1,
+      image2: fourthProjectSnippet2,
+      image3: fourthProjectSnippet3,
+      image4: fourthProjectSnippet4,
+      image5: fourthProjectSnippet5,
     },
   },
   {
@@ -651,9 +666,13 @@ export const projectsUkrainianLang: Project[] = [
         "https://github.com/Anastasia-front/photo-network_first-react-native-individual-project",
     },
     content: {
-      title: "Photo app",
       description:
         "Додаток, де можна: - зареєструватися, увійти та вийти з додатку; - змінити свій аватар та нікнейм; - завантажити та видалити свої дописи чи коментарі до них; - переглянути дописи інших користувачів, додавати коментарі та лайки до них; - відкрити місце, де був зроблений пост; - поділитися своїми класними фотографіями :)",
+      image1: fifthProjectSnippet1,
+      image2: fifthProjectSnippet2,
+      image3: fifthProjectSnippet3,
+      image4: fifthProjectSnippet4,
+      image5: fifthProjectSnippet5,
     },
   },
   {
@@ -681,8 +700,12 @@ export const projectsUkrainianLang: Project[] = [
       github: "https://github.com/Anastasia-front/news-team-project",
     },
     content: {
-      title: "News",
       description: "Дуже зручний веб-сайт 'News'",
+      image1: sixthProjectSnippet1,
+      image2: sixthProjectSnippet2,
+      image3: sixthProjectSnippet3,
+      image4: sixthProjectSnippet4,
+      image5: sixthProjectSnippet5,
     },
   },
   {
@@ -708,7 +731,6 @@ export const projectsUkrainianLang: Project[] = [
       github: "https://github.com/Anastasia-front/movie-app",
     },
     content: {
-      title: "Cinema search",
       description: "Односторінковий додаток з можливістю маршрутизації",
     },
   },
@@ -730,7 +752,6 @@ export const projectsUkrainianLang: Project[] = [
       github: "https://github.com/Anastasia-front/team-project-icecream",
     },
     content: {
-      title: "IceCream",
       description: "Веб-сайт для компанії, яка виготовляє та продає морозиво",
     },
   },
@@ -751,7 +772,6 @@ export const projectsUkrainianLang: Project[] = [
       github: "https://github.com/Anastasia-front/instagram-link",
     },
     content: {
-      title: "Сайт для Instagram",
       description: "Веб-сайт для посилань та зв'язку зі мною",
     },
   },
@@ -772,7 +792,6 @@ export const projectsUkrainianLang: Project[] = [
       github: "https://github.com/Anastasia-front/My-blog",
     },
     content: {
-      title: "Мій блог",
       description:
         "Це мій власний адаптивний веб-сайт, де я зібрала всю інформацію про себе (цей проект можна вважати портфоліо моїх початкових робіт)",
     },
@@ -802,7 +821,6 @@ export const projectsUkrainianLang: Project[] = [
       github: "https://github.com/Anastasia-front/phonebook-app",
     },
     content: {
-      title: "Додаток 'Телефонна книга'",
       description: "Сайт з асинхронними операціями та авторизацією користувача",
     },
   },
@@ -824,7 +842,6 @@ export const projectsUkrainianLang: Project[] = [
       github: "https://github.com/Anastasia-front/first-tech-test",
     },
     content: {
-      title: "Перший тест",
       description:
         "Створення карток твітів та додання інтерактивності за допомогою кнопок + пагінація, маршрутизація, фільтрація твітів",
     },
@@ -846,7 +863,6 @@ export const projectsUkrainianLang: Project[] = [
         "https://github.com/Anastasia-front/first-acquaintance-with-node.js",
     },
     content: {
-      title: "CLI",
       description: "Додаток інтерфейсу командного рядка (CLI)",
     },
   },
@@ -866,7 +882,6 @@ export const projectsUkrainianLang: Project[] = [
       github: "https://github.com/Anastasia-front/nodejs-first-rest-api",
     },
     content: {
-      title: "REST API",
       description: "Backend для додатка телефонної книги",
     },
   },
