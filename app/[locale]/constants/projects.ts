@@ -51,6 +51,54 @@ import sixthProjectSnippet3 from "@/assets/images/projects/project6/snippet3.png
 import sixthProjectSnippet4 from "@/assets/images/projects/project6/snippet4.png";
 import sixthProjectSnippet5 from "@/assets/images/projects/project6/snippet5.png";
 
+import seventhProjectSnippet1 from "@/assets/images/projects/project7/snippet1.png";
+import seventhProjectSnippet2 from "@/assets/images/projects/project7/snippet2.png";
+import seventhProjectSnippet3 from "@/assets/images/projects/project7/snippet3.png";
+import seventhProjectSnippet4 from "@/assets/images/projects/project7/snippet4.png";
+import seventhProjectSnippet5 from "@/assets/images/projects/project7/snippet5.png";
+
+import eighthProjectSnippet1 from "@/assets/images/projects/project8/snippet1.png";
+import eighthProjectSnippet2 from "@/assets/images/projects/project8/snippet2.png";
+import eighthProjectSnippet3 from "@/assets/images/projects/project8/snippet3.png";
+import eighthProjectSnippet4 from "@/assets/images/projects/project8/snippet4.png";
+import eighthProjectSnippet5 from "@/assets/images/projects/project8/snippet5.png";
+
+import ninthProjectSnippet1 from "@/assets/images/projects/project9/snippet1.png";
+import ninthProjectSnippet2 from "@/assets/images/projects/project9/snippet2.png";
+import ninthProjectSnippet3 from "@/assets/images/projects/project9/snippet3.png";
+import ninthProjectSnippet4 from "@/assets/images/projects/project9/snippet4.png";
+import ninthProjectSnippet5 from "@/assets/images/projects/project9/snippet5.png";
+
+import tenthProjectSnippet1 from "@/assets/images/projects/project10/snippet1.png";
+import tenthProjectSnippet2 from "@/assets/images/projects/project10/snippet2.png";
+import tenthProjectSnippet3 from "@/assets/images/projects/project10/snippet3.png";
+import tenthProjectSnippet4 from "@/assets/images/projects/project10/snippet4.png";
+import tenthProjectSnippet5 from "@/assets/images/projects/project10/snippet5.png";
+
+import eleventhProjectSnippet1 from "@/assets/images/projects/project11/snippet1.png";
+import eleventhProjectSnippet2 from "@/assets/images/projects/project11/snippet2.png";
+import eleventhProjectSnippet3 from "@/assets/images/projects/project11/snippet3.png";
+import eleventhProjectSnippet4 from "@/assets/images/projects/project11/snippet4.png";
+import eleventhProjectSnippet5 from "@/assets/images/projects/project11/snippet5.png";
+
+import twelfthProjectSnippet1 from "@/assets/images/projects/project12/snippet1.png";
+import twelfthProjectSnippet2 from "@/assets/images/projects/project12/snippet2.png";
+import twelfthProjectSnippet3 from "@/assets/images/projects/project12/snippet3.png";
+import twelfthProjectSnippet4 from "@/assets/images/projects/project12/snippet4.png";
+import twelfthProjectSnippet5 from "@/assets/images/projects/project12/snippet5.png";
+
+import thirteenthProjectSnippet1 from "@/assets/images/projects/project13/snippet1.png";
+import thirteenthProjectSnippet2 from "@/assets/images/projects/project13/snippet2.png";
+import thirteenthProjectSnippet3 from "@/assets/images/projects/project13/snippet3.png";
+import thirteenthProjectSnippet4 from "@/assets/images/projects/project13/snippet4.png";
+import thirteenthProjectSnippet5 from "@/assets/images/projects/project13/snippet5.png";
+
+import fourteenthProjectSnippet1 from "@/assets/images/projects/project14/snippet1.png";
+import fourteenthProjectSnippet2 from "@/assets/images/projects/project14/snippet2.png";
+import fourteenthProjectSnippet3 from "@/assets/images/projects/project14/snippet3.png";
+import fourteenthProjectSnippet4 from "@/assets/images/projects/project14/snippet4.png";
+import fourteenthProjectSnippet5 from "@/assets/images/projects/project14/snippet5.png";
+
 export interface Project {
   id?: number;
   development: "backend" | "frontend";
@@ -307,11 +355,11 @@ export const projectsEnglishLang: Project[] = [
     },
     content: {
       description: "SPA with routing",
-      // image1: "@/assets/images/projects/project7/snippet1.png",
-      // image2: "@/assets/images/projects/project7/snippet2.png",
-      // image3: "@/assets/images/projects/project7/snippet3.png",
-      // image4: "@/assets/images/projects/project7/snippet4.png",
-      // image5: "@/assets/images/projects/project7/snippet5.png",
+      image1: seventhProjectSnippet1,
+      image2: seventhProjectSnippet2,
+      image3: seventhProjectSnippet3,
+      image4: seventhProjectSnippet4,
+      image5: seventhProjectSnippet5,
     },
   },
   {
@@ -333,11 +381,11 @@ export const projectsEnglishLang: Project[] = [
     },
     content: {
       description: "IceCream website",
-      // image1: "@/assets/images/projects/project8/snippet1.png",
-      // image2: "@/assets/images/projects/project8/snippet2.png",
-      // image3: "@/assets/images/projects/project8/snippet3.png",
-      // image4: "@/assets/images/projects/project8/snippet4.png",
-      // image5: "@/assets/images/projects/project8/snippet5.png",
+      image1: eighthProjectSnippet1,
+      image2: eighthProjectSnippet2,
+      image3: eighthProjectSnippet3,
+      image4: eighthProjectSnippet4,
+      image5: eighthProjectSnippet5,
     },
   },
   {
@@ -358,11 +406,11 @@ export const projectsEnglishLang: Project[] = [
     },
     content: {
       description: "IceCream website",
-      // image1: "@/assets/images/projects/project9/snippet1.png",
-      // image2: "@/assets/images/projects/project9/snippet2.png",
-      // image3: "@/assets/images/projects/project9/snippet3.png",
-      // image4: "@/assets/images/projects/project9/snippet4.png",
-      // image5: "@/assets/images/projects/project9/snippet5.png",
+      image1: ninthProjectSnippet1,
+      image2: ninthProjectSnippet2,
+      image3: ninthProjectSnippet3,
+      image4: ninthProjectSnippet4,
+      image5: ninthProjectSnippet5,
     },
   },
   {
@@ -384,11 +432,11 @@ export const projectsEnglishLang: Project[] = [
     content: {
       description:
         "This is my own adaptive website where I collected all the information about myself (this project can be considered a portfolio of my starting works)",
-      // image1: "@/assets/images/projects/project10/snippet1.png",
-      // image2: "@/assets/images/projects/project10/snippet2.png",
-      // image3: "@/assets/images/projects/project10/snippet3.png",
-      // image4: "@/assets/images/projects/project10/snippet4.png",
-      // image5: "@/assets/images/projects/project10/snippet5.png",
+      image1: tenthProjectSnippet1,
+      image2: tenthProjectSnippet2,
+      image3: tenthProjectSnippet3,
+      image4: tenthProjectSnippet4,
+      image5: tenthProjectSnippet5,
     },
   },
   {
@@ -418,11 +466,11 @@ export const projectsEnglishLang: Project[] = [
     content: {
       description:
         "Contact book application with asynchronous operations and user authorization",
-      // image1: "@/assets/images/projects/project11/snippet1.png",
-      // image2: "@/assets/images/projects/project11/snippet2.png",
-      // image3: "@/assets/images/projects/project11/snippet3.png",
-      // image4: "@/assets/images/projects/project11/snippet4.png",
-      // image5: "@/assets/images/projects/project11/snippet5.png",
+      image1: eleventhProjectSnippet1,
+      image2: eleventhProjectSnippet2,
+      image3: eleventhProjectSnippet3,
+      image4: eleventhProjectSnippet4,
+      image5: eleventhProjectSnippet5,
     },
   },
   {
@@ -445,11 +493,11 @@ export const projectsEnglishLang: Project[] = [
     content: {
       description:
         "Create tweet cards and add interactivity at the click of a button + pagination, routing, tweet filtering",
-      // image1: "@/assets/images/projects/project12/snippet1.png",
-      // image2: "@/assets/images/projects/project12/snippet2.png",
-      // image3: "@/assets/images/projects/project12/snippet3.png",
-      // image4: "@/assets/images/projects/project12/snippet4.png",
-      // image5: "@/assets/images/projects/project12/snippet5.png",
+      image1: twelfthProjectSnippet1,
+      image2: twelfthProjectSnippet2,
+      image3: twelfthProjectSnippet3,
+      image4: twelfthProjectSnippet4,
+      image5: twelfthProjectSnippet5,
     },
   },
   {
@@ -470,11 +518,11 @@ export const projectsEnglishLang: Project[] = [
     },
     content: {
       description: "CLI (Command line interface) application",
-      // image1: "@/assets/images/projects/project13/snippet1.png",
-      // image2: "@/assets/images/projects/project13/snippet2.png",
-      // image3: "@/assets/images/projects/project13/snippet3.png",
-      // image4: "@/assets/images/projects/project13/snippet4.png",
-      // image5: "@/assets/images/projects/project13/snippet5.png",
+      image1: thirteenthProjectSnippet1,
+      image2: thirteenthProjectSnippet2,
+      image3: thirteenthProjectSnippet3,
+      image4: thirteenthProjectSnippet4,
+      image5: thirteenthProjectSnippet5,
     },
   },
   {
@@ -495,11 +543,11 @@ export const projectsEnglishLang: Project[] = [
     },
     content: {
       description: "Backend for a phone book application",
-      // image1: "@/assets/images/projects/project14/snippet1.png",
-      // image2: "@/assets/images/projects/project14/snippet2.png",
-      // image3: "@/assets/images/projects/project14/snippet3.png",
-      // image4: "@/assets/images/projects/project14/snippet4.png",
-      // image5: "@/assets/images/projects/project14/snippet5.png",
+      image1: fourteenthProjectSnippet1,
+      image2: fourteenthProjectSnippet2,
+      image3: fourteenthProjectSnippet3,
+      image4: fourteenthProjectSnippet4,
+      image5: fourteenthProjectSnippet5,
     },
   },
 ];
@@ -732,6 +780,11 @@ export const projectsUkrainianLang: Project[] = [
     },
     content: {
       description: "Односторінковий додаток з можливістю маршрутизації",
+      image1: seventhProjectSnippet1,
+      image2: seventhProjectSnippet2,
+      image3: seventhProjectSnippet3,
+      image4: seventhProjectSnippet4,
+      image5: seventhProjectSnippet5,
     },
   },
   {
@@ -753,6 +806,11 @@ export const projectsUkrainianLang: Project[] = [
     },
     content: {
       description: "Веб-сайт для компанії, яка виготовляє та продає морозиво",
+      image1: eighthProjectSnippet1,
+      image2: eighthProjectSnippet2,
+      image3: eighthProjectSnippet3,
+      image4: eighthProjectSnippet4,
+      image5: eighthProjectSnippet5,
     },
   },
   {
@@ -773,6 +831,11 @@ export const projectsUkrainianLang: Project[] = [
     },
     content: {
       description: "Веб-сайт для посилань та зв'язку зі мною",
+      image1: ninthProjectSnippet1,
+      image2: ninthProjectSnippet2,
+      image3: ninthProjectSnippet3,
+      image4: ninthProjectSnippet4,
+      image5: ninthProjectSnippet5,
     },
   },
   {
@@ -794,6 +857,11 @@ export const projectsUkrainianLang: Project[] = [
     content: {
       description:
         "Це мій власний адаптивний веб-сайт, де я зібрала всю інформацію про себе (цей проект можна вважати портфоліо моїх початкових робіт)",
+      image1: tenthProjectSnippet1,
+      image2: tenthProjectSnippet2,
+      image3: tenthProjectSnippet3,
+      image4: tenthProjectSnippet4,
+      image5: tenthProjectSnippet5,
     },
   },
   {
@@ -807,7 +875,7 @@ export const projectsUkrainianLang: Project[] = [
     features: [
       "Створення облікового запису",
       "Вхід",
-      "ВИхід",
+      "Вихід",
       "Адаптивний дизайн",
       "Додати/видалити/змінити контакти",
       "Та багато іншого...",
@@ -822,6 +890,11 @@ export const projectsUkrainianLang: Project[] = [
     },
     content: {
       description: "Сайт з асинхронними операціями та авторизацією користувача",
+      image1: eleventhProjectSnippet1,
+      image2: eleventhProjectSnippet2,
+      image3: eleventhProjectSnippet3,
+      image4: eleventhProjectSnippet4,
+      image5: eleventhProjectSnippet5,
     },
   },
   {
@@ -844,6 +917,11 @@ export const projectsUkrainianLang: Project[] = [
     content: {
       description:
         "Створення карток твітів та додання інтерактивності за допомогою кнопок + пагінація, маршрутизація, фільтрація твітів",
+      image1: twelfthProjectSnippet1,
+      image2: twelfthProjectSnippet2,
+      image3: twelfthProjectSnippet3,
+      image4: twelfthProjectSnippet4,
+      image5: twelfthProjectSnippet5,
     },
   },
   {
@@ -864,6 +942,11 @@ export const projectsUkrainianLang: Project[] = [
     },
     content: {
       description: "Додаток інтерфейсу командного рядка (CLI)",
+      image1: thirteenthProjectSnippet1,
+      image2: thirteenthProjectSnippet2,
+      image3: thirteenthProjectSnippet3,
+      image4: thirteenthProjectSnippet4,
+      image5: thirteenthProjectSnippet5,
     },
   },
   {
@@ -883,6 +966,11 @@ export const projectsUkrainianLang: Project[] = [
     },
     content: {
       description: "Backend для додатка телефонної книги",
+      image1: fourteenthProjectSnippet1,
+      image2: fourteenthProjectSnippet2,
+      image3: fourteenthProjectSnippet3,
+      image4: fourteenthProjectSnippet4,
+      image5: fourteenthProjectSnippet5,
     },
   },
 ];
