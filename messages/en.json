@@ -820,7 +820,8 @@
       "problem": "Problem",
       "solution": "Solution",
       "links": "Project links"
-    }
+    },
+    "links": { "github": "GitHub repository", "website": "WebSite page" }
   },
   "project": {
     "title": "Project",

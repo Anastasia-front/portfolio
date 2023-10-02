@@ -25,6 +25,7 @@ const rubik = Rubik({
 export default function Page({ params }: Params) {
   const i = useTranslations("alt.projects");
   const h = useTranslations("projects.headers");
+  const l = useTranslations("projects.links");
 
   const pathname = usePathname();
   const lang = pathname.slice(0, 3);
@@ -126,12 +127,12 @@ export default function Page({ params }: Params) {
               <h4>{h("links")}</h4>
               {links.github && (
                 <Link href={links.github} target="_blank">
-                  Github Repo
+                  {l("github")}
                 </Link>
               )}
               {links.website && (
                 <Link href={links.website} target="_blank">
-                  Web Site
+                  {l("website")}
                 </Link>
               )}
             </div>
