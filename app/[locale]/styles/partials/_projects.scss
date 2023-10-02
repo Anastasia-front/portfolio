@@ -24,7 +24,7 @@
 
     border-radius: var(--pad--sm);
 
-    @media screen and (max-width: 945px) {
+    @include useScreen("tablet-md") {
       height: auto;
     }
   }
@@ -81,6 +81,7 @@
   }
 
   .banner {
+    overflow-x: hidden;
     position: absolute;
     left: 1.5rem;
     bottom: 1rem;
@@ -107,43 +108,51 @@
     }
 
     &__categories {
-      @include flex(row, center, center);
-      gap: 1rem;
+      display: none;
 
-      span {
-        padding: 0.3rem 0.8rem;
-        border-radius: 30px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      @include useScreen("tablet-sm") {
+        @include flex(row, center, center);
+        gap: 1rem;
 
-        font-size: 0.9rem;
-        color: var(--color--white);
-        background-color: var(--color--grey-opacity);
+        span {
+          padding: 0.3rem 0.8rem;
+          border-radius: 30px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+          font-size: 0.9rem;
+          color: var(--color--white);
+          background-color: var(--color--grey-opacity);
+        }
       }
     }
   }
 
   &__content {
     &__intro {
-      padding: 6rem 20rem;
+      padding: 4rem 2rem;
+
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+
       gap: 3rem;
 
       font-weight: 500;
       font-size: clamp(1.2rem, 5vw, 1.5rem);
 
-      transition: all 0.2s ease-in-out;
+      transition: var(--transition);
 
-      @media screen and (max-width: 1465px) {
+      @include useScreen("tablet-sm") {
+        padding: 4rem;
+      }
+
+      @include useScreen("tablet-sm") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include useScreen("tablet-lg") {
         padding: 6rem 10rem;
       }
-
-      @media screen and (max-width: 1014px) {
-        padding: 4rem 6rem;
-      }
-
-      @media screen and (max-width: 867px) {
-        grid-template-columns: repeat(1, 1fr);
+      @include useScreen("desktop-md") {
+        padding: 6rem 20rem;
       }
 
       .features li {
@@ -189,12 +198,12 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(610px, 1fr));
       grid-gap: 3rem;
+      margin-top: 0;
 
-      margin-top: 6rem;
       border-radius: 0.5rem;
 
-      @media screen and (max-width: 867px) {
-        margin-top: 0;
+      @include useScreen("tablet-md") {
+        margin-top: 6rem;
       }
 
       > img {
@@ -205,14 +214,14 @@
       }
 
       &--fullscreen {
-        margin-top: 5rem;
-        padding-bottom: 5rem;
+        margin-top: 3rem;
+        padding-bottom: 3rem;
 
         padding-left: 2rem;
 
-        @media screen and (max-width: 867px) {
-          margin-top: 3rem;
-          padding-bottom: 3rem;
+        @include useScreen("tablet-md") {
+          margin-top: 5rem;
+          padding-bottom: 5rem;
         }
 
         > img {
@@ -280,28 +289,27 @@
     border-top-left-radius: var(--pad--sm);
     border-bottom-left-radius: var(--pad--sm);
     border-top-right-radius: 0;
+    height: auto;
 
-    height: 100%;
-
-    @media screen and (max-width: 945px) {
-      height: auto;
+    @include useScreen("tablet-md") {
+      height: 100%;
     }
   }
 }
 
 .project__title {
-  padding-left: 0;
+  padding-left: var(--pad--sm-2);
 
-  @media screen and (max-width: 945px) {
-    padding-left: var(--pad--sm-2);
+  @include useScreen("tablet-md") {
+    padding-left: 0;
   }
 }
 
 .project__image {
   > img {
-    height: 100%;
-    @media screen and (max-width: 945px) {
-      height: auto;
+    height: auto;
+    @include useScreen("tablet-md") {
+      height: 100%;
     }
   }
 }
@@ -371,14 +379,14 @@
   }
 
   &__content {
-    padding: 10rem 18rem;
+    padding: 3rem;
 
-    @media screen and (max-width: 1405px) {
-      padding: 8rem;
+    @include useScreen("tablet-md") {
+      padding: 10rem 18rem;
     }
 
-    @media screen and (max-width: 910px) {
-      padding: 3rem;
+    @include useScreen("desktop-md") {
+      padding: 8rem;
     }
 
     &__introduction {
@@ -390,9 +398,9 @@
     }
 
     &__outro {
-      margin: 0 8rem;
-      @media screen and (max-width: 910px) {
-        margin: 0 2rem;
+      margin: 0 2rem;
+      @include useScreen("tablet-md") {
+        margin: 0 8rem;
       }
     }
 
@@ -409,10 +417,10 @@
       padding: 1rem 0;
 
       list-style: decimal;
-      margin: 0 12rem;
+      margin: 0 4rem;
 
-      @media screen and (max-width: 910px) {
-        margin: 0 4rem;
+      @include useScreen("tablet-md") {
+        margin: 0 12rem;
       }
       p:first-child {
         padding-bottom: 1rem;
