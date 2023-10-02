@@ -2,7 +2,15 @@
   "alt": {
     "logo": "Логотип",
     "svgTheme": "Іконка теми",
-    "svgLang": "Іконка мови"
+    "svgLang": "Іконка мови",
+    "projects": {
+      "cover": "Фонове зображення проєкту",
+      "first": "Перший знімок екрану проєкту",
+      "second": "Другий знімок екрану проєкту",
+      "third": "Третій знімок екрану проєкту",
+      "fourth": "Четвертий знімок екрану проєкту",
+      "fifth": "Пʼятий знімок екрану проєкту"
+    }
   },
   "nav": {
     "home": "Головна",
@@ -103,7 +111,13 @@
   },
   "projects": {
     "title": "Проєкти",
-    "description": "Інформація про проєкти"
+    "description": "Інформація про проєкти",
+    "headers": {
+      "features": "Особоливості",
+      "problem": "Проблема",
+      "solution": "Рішення",
+      "links": "Посилання проєкту"
+    }
   },
   "contacts": {
     "title": "Звʼязатися зі мною",
@@ -111,22 +125,22 @@
     "footer": {
       "title": "Щоб зв'язатися зі мною, натисніть на зручне для вас посилання",
       "icons": {
-        "firstBlock": {
+        "first": {
           "title": "Базові способи звʼязку",
           "links": {
-            "firstLink": {
+            "first": {
               "title": "Номер телефону",
               "href": "tel:+380666080702",
               "dataText": "Зателефонувати",
               "icon": "BsFillTelephoneInboundFill"
             },
-            "secondLink": {
+            "second": {
               "title": "Електронна пошта",
               "href": "mailto:palitsanastasia3.ap@gmail.com",
               "dataText": "Надіслати лист",
               "icon": "BsFillEnvelopeAtFill"
             },
-            "thirdLink": {
+            "third": {
               "title": "Діскорд",
               "href": "https://discordapp.com/users/871679474188574730/",
               "dataText": "Перейти у Діскорд",
@@ -134,22 +148,22 @@
             }
           }
         },
-        "secondBlock": {
+        "second": {
           "title": "Соціальні мережі",
           "links": {
-            "firstLink": {
+            "first": {
               "title": "ГітХаб",
               "href": "https://github.com/Anastasia-front",
               "dataText": "Відстежувати у ГітХаб",
               "icon": "BsGithub"
             },
-            "secondLink": {
+            "second": {
               "title": "ЛінкедІн",
               "href": "https://www.linkedin.com/in/anastasiia-prysiazhnaia/",
               "dataText": "Відстежувати у ЛінкедІн",
               "icon": "BsLinkedin"
             },
-            "thirdLink": {
+            "third": {
               "title": "Інстаграм",
               "href": "https://www.instagram.com/anastasiia_prysiazhnaia/",
               "dataText": "Відстежувати в Інстаграм",
@@ -157,22 +171,22 @@
             }
           }
         },
-        "thirdBlock": {
+        "third": {
           "title": "Месенджери",
           "links": {
-            "firstLink": {
+            "first": {
               "title": "Телеграм",
               "href": "https://t.me/anastasiia_prysiazhnaia",
               "dataText": "Написати у Телеграм",
               "icon": "BsTelegram"
             },
-            "secondLink": {
+            "second": {
               "title": "ВотсАпп",
               "href": "https://wa.me/380666080702",
               "dataText": "Написати у ВотсАпп",
               "icon": "BsWhatsapp"
             },
-            "thirdLink": {
+            "third": {
               "title": "Вайбер",
               "href": "viber://chat?number=380666080702",
               "dataText": "Написати у Вайбер",

@@ -2,7 +2,15 @@
   "alt": {
     "logo": "Logo",
     "svgTheme": "Theme icon",
-    "svgLang": "Language icon"
+    "svgLang": "Language icon",
+    "projects": {
+      "cover": "Background image of project",
+      "first": "First screenshot of project",
+      "second": "Second screenshot of project",
+      "third": "Third screenshot of project",
+      "fourth": "Fourth screenshot of project",
+      "fifth": "Fifth screenshot of project"
+    }
   },
   "nav": {
     "home": "Home",
@@ -806,6 +814,12 @@
           "image5": "/images/projects/project14/snippet5.png"
         }
       }
+    },
+    "headers": {
+      "features": "Features",
+      "problem": "Problem",
+      "solution": "Solution",
+      "links": "Project links"
     }
   },
   "project": {

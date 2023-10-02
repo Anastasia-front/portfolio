@@ -504,3 +504,370 @@ export const projectsEnglishLang: Project[] = [
     },
   },
 ];
+
+export const projectsUkrainianLang: Project[] = [
+  {
+    id: 1,
+    development: "frontend",
+    type: "commercial",
+    name: "IMConsulting",
+    categories: ["Бізнес-проект", "js", "Next", "Tailwind css"],
+    image: cover1,
+    url: "i-m-consulting",
+    features: [
+      "Роутер додатку",
+      "Адаптивний дизайн",
+      "Паралакс-ефект",
+      "І багато іншого...",
+    ],
+    problem: "Привертання клієнтів",
+    solution:
+      "Створення веб-сайту з привабливим інтерфейсом, зручною навігацією та долючення користувачів до цільових дій",
+    links: {
+      website: "https://im-consulting.vercel.app/",
+      github: "https://github.com/SoftRyzen-internship/IM-CONSULTING",
+    },
+    content: {
+      title: "IMConsulting",
+      description: "Сайт для бізнес-тренера та коуча Іллі Мушковського",
+    },
+  },
+  {
+    id: 2,
+    development: "frontend",
+    type: "commercial",
+    name: "4.5.0",
+    categories: ["Соціальний проект", "ts", "Next", "scss"],
+    image: cover2,
+    url: "4-5-0",
+    features: [
+      "Панель адміністратора",
+      "Вхід",
+      "Вихід",
+      "Лендінг",
+      "Адаптивний дизайн",
+      "Різні слайдери",
+      "І багато іншого...",
+    ],
+    problem:
+      "Під час війни в Україні існує багато організацій, які допомагають людям - одна з них - 4.5.0, яка потребує веб-сайту для більш ефективної роботи",
+    solution:
+      "Наш веб-сайт вирішує цю проблему - є повна інформація про організацію, форма для реєстрації на отримання гуманітарної допомоги, а також підключено платіжну систему для тих, хто хоче допомогти організації та здійснювати пожертви",
+    links: {
+      website: "https://450-kherson-humanitarian-landing-page.vercel.app",
+      github:
+        "https://github.com/baza-trainee/450-kherson-humanitarian-landing-page",
+    },
+    content: {
+      title: "4.5.0",
+      description: "Веб-сайт громадської організації '4.5.0'",
+    },
+  },
+  {
+    id: 3,
+    development: "frontend",
+    type: "test",
+    name: "Carp Travel",
+    categories: ["ts", "Next", "Tailwind css"],
+    image: cover3,
+    url: "carp-travel",
+    features: [
+      "Модлива підтримка багатьох мов",
+      "Адаптивний дизайн",
+      "Різні слайдери",
+      "Та багато іншого...",
+    ],
+    problem: "Компанія потребує сучасного та унікального веб-сайту",
+    solution: "Я створила функціональний веб-сайт",
+    links: {
+      website: "https://test-soft-ryzen.vercel.app/",
+      github: "https://github.com/Anastasia-front/test-soft-ryzen",
+    },
+    content: {
+      title: "Carp Travel",
+      description: "Адаптивний веб-сайт 'Carp Travel'",
+    },
+  },
+  {
+    id: 4,
+    development: "frontend",
+    type: "team",
+    name: "Task Pro",
+    categories: ["js", "React", "Redux", "css"],
+    image: cover4,
+    url: "task-pro",
+    features: [
+      "Frontend",
+      "Backend",
+      "Створення облікового запису",
+      "Вхід",
+      "Вихід",
+      "Адаптивний дизайн",
+      "Створення дошок/стовпців/завдань",
+      "Редагування інформації користувача/дошки/стовпця/завдання",
+      "Видалення інформації користувача/дошки/стовпця/завдання",
+      "Drag & drop",
+      "Підтримка електронної пошти",
+      "Та багато іншого...",
+    ],
+    problem:
+      "Люди часто потребують планувати своє життя в різних сферах діяльності - є причина створити відповідний застосунок, який вирішить цю потребу",
+    solution: "Додаток 'Task Pro' - це власне і є планувальник",
+    links: {
+      website: "https://tkachenko01001.github.io/project-REACT_NODE/",
+      github: "https://github.com/Tkachenko01001/project-REACT_NODE",
+    },
+    content: {
+      title: "Task Pro",
+      description: "Додаток-планувальник",
+    },
+  },
+  {
+    id: 5,
+    development: "frontend",
+    type: "individual",
+    name: "Photo app",
+    categories: ["js", "React Native", "Redux", "Firebase", "css"],
+    image: cover5,
+    url: "photo-app",
+    features: [
+      "Створення облікового запису",
+      "Вхід",
+      "Вихід",
+      "Адаптивний дизайн",
+      "Нескінченна прокрутка",
+      "Створення повідомлення/коментаря",
+      "Додавання/видалення лайків",
+      "Редагування інформації користувача",
+      "Та багато іншого...",
+    ],
+    problem:
+      "Ми всі любимо ділитися своїми фотографіями з громадськістю - можна створити спеціальний мобільний додаток для цього",
+    solution: "'Photo app' - саме те, що потрібно",
+    links: {
+      website:
+        "https://expo.dev/@nastia0109/EXAMPLE?serviceType=classic&distribution=expo-go&release-channel=expamle-app",
+      github:
+        "https://github.com/Anastasia-front/photo-network_first-react-native-individual-project",
+    },
+    content: {
+      title: "Photo app",
+      description:
+        "Додаток, де можна: - зареєструватися, увійти та вийти з додатку; - змінити свій аватар та нікнейм; - завантажити та видалити свої дописи чи коментарі до них; - переглянути дописи інших користувачів, додавати коментарі та лайки до них; - відкрити місце, де був зроблений пост; - поділитися своїми класними фотографіями :)",
+    },
+  },
+  {
+    id: 6,
+    development: "frontend",
+    type: "team",
+    name: "News",
+    categories: ["js", "scss", "html"],
+    image: cover6,
+    url: "news",
+    features: [
+      "Розширений пошук",
+      "Адаптивний дизайн",
+      "Світлий/темний режим",
+      "Пагінація",
+      "API New York Times",
+      "Та багато іншого...",
+    ],
+    problem:
+      "Кожен читає новини і потребує зручного веб-сайту для легкості пошуку, відстеження того, що прочитано, збереження та видалення статей, які подобаються",
+    solution:
+      "'News' - це дуже зручний веб-сайт з усією необхідною функціональністю",
+    links: {
+      website: "https://anastasia-front.github.io/news-team-project/",
+      github: "https://github.com/Anastasia-front/news-team-project",
+    },
+    content: {
+      title: "News",
+      description: "Дуже зручний веб-сайт 'News'",
+    },
+  },
+  {
+    id: 7,
+    development: "frontend",
+    type: "individual",
+    name: "Cinema search",
+    categories: ["js", "React", "styled-components"],
+    image: cover7,
+    url: "cinema-search",
+    features: [
+      "Адаптивний дизайн",
+      "Розширений пошук",
+      "Нескінченна прокрутка",
+      "Та багато іншого...",
+    ],
+    problem:
+      "Усі люди люблять дивитися фільми, а також цікаво знати, що за фільм, його сюжет, жанр, рейтинг та акторський склад. Тому потрібен зручний веб-сайт з можливістю пошуку та необхідною інформацією про фільми",
+    solution:
+      "Додаток 'Cinema search' гарний, зручний та містить повну інформацію про кожний фільм у пошуку",
+    links: {
+      website: "https://anastasia-front.github.io/movie-app/",
+      github: "https://github.com/Anastasia-front/movie-app",
+    },
+    content: {
+      title: "Cinema search",
+      description: "Односторінковий додаток з можливістю маршрутизації",
+    },
+  },
+  {
+    id: 8,
+    development: "frontend",
+    type: "team",
+    name: "IceCream",
+    categories: ["js", "scss", "html", "parcel"],
+    image: cover8,
+    url: "ice-cream",
+    features: ["Адаптивний дизайн", "Та багато іншого..."],
+    problem:
+      "Компанія, яка виробляє та продає морозиво, потребувала гарного інформаційного веб-сайту для своїх продуктів",
+    solution:
+      "Команда початківців студентів взяла на себе реалізацію адаптивного веб-сайту, яку успішно завершила",
+    links: {
+      website: "https://margomarm.github.io/team-project-icecream/",
+      github: "https://github.com/Anastasia-front/team-project-icecream",
+    },
+    content: {
+      title: "IceCream",
+      description: "Веб-сайт для компанії, яка виготовляє та продає морозиво",
+    },
+  },
+  {
+    id: 9,
+    development: "frontend",
+    type: "individual",
+    name: "Сайт для Instagram",
+    categories: ["ts", "React", "scss", "html", "parcel"],
+    image: cover9,
+    url: "website-for-instagram",
+    features: ["Адаптивний дизайн", "Паралакс ефект", "Та багато іншого..."],
+    problem:
+      "Мені знадобився сайт, де були б зібрані всі мої посилання на сторінки в соціальних мережах та необхідні ресурси для зв'язку зі мною",
+    solution: "Я створила відповідний веб-сайт",
+    links: {
+      website: "https://instagram-header-link.netlify.app/",
+      github: "https://github.com/Anastasia-front/instagram-link",
+    },
+    content: {
+      title: "Сайт для Instagram",
+      description: "Веб-сайт для посилань та зв'язку зі мною",
+    },
+  },
+  {
+    id: 10,
+    development: "frontend",
+    type: "individual",
+    name: "Мій блог",
+    categories: ["js", "css", "scss", "html"],
+    image: cover10,
+    url: "my-blog",
+    features: ["Адаптивний дизайн", "Та багато іншого..."],
+    problem: "Я завжди хотіла мати свій власний веб-сайт",
+    solution:
+      "Спочатку, перш ніж почати курси, я створила власний веб-сайт для практики",
+    links: {
+      website: "https://Anastasia-front.github.io/My-blog/",
+      github: "https://github.com/Anastasia-front/My-blog",
+    },
+    content: {
+      title: "Мій блог",
+      description:
+        "Це мій власний адаптивний веб-сайт, де я зібрала всю інформацію про себе (цей проект можна вважати портфоліо моїх початкових робіт)",
+    },
+  },
+  {
+    id: 11,
+    development: "frontend",
+    type: "individual",
+    name: "Додаток 'Телефонна книга'",
+    categories: ["js", "React", "mui", "styled-components"],
+    image: cover11,
+    url: "phonebook-app",
+    features: [
+      "Створення облікового запису",
+      "Вхід",
+      "ВИхід",
+      "Адаптивний дизайн",
+      "Додати/видалити/змінити контакти",
+      "Та багато іншого...",
+    ],
+    problem:
+      "Кожному потрібно десь зберігати свої контакти - отже, потрібно створити зручний додаток для цього",
+    solution:
+      "Додаток 'Телефонна книга' добре справляється з завданням телефонної книги, яка є в телефонах",
+    links: {
+      website: "https://anastasia-front.github.io/phonebook-app/",
+      github: "https://github.com/Anastasia-front/phonebook-app",
+    },
+    content: {
+      title: "Додаток 'Телефонна книга'",
+      description: "Сайт з асинхронними операціями та авторизацією користувача",
+    },
+  },
+  {
+    id: 12,
+    development: "frontend",
+    type: "test",
+    name: "Перший тест",
+    categories: ["js", "React", "Redux", "styled-components", "html"],
+    image: cover12,
+    url: "first-test",
+    features: ["Адаптивний дизайн", "Та багато іншого..."],
+    problem:
+      "Було завдання зробити тест на курсах протягом 5 днів, але я дізналася про нього пізно і виконала його за 10 годин",
+    solution:
+      "Всі пункти технічних завдань були реалізовані (включаючи додаткові)",
+    links: {
+      website: "https://anastasia-front.github.io/first-tech-test/",
+      github: "https://github.com/Anastasia-front/first-tech-test",
+    },
+    content: {
+      title: "Перший тест",
+      description:
+        "Створення карток твітів та додання інтерактивності за допомогою кнопок + пагінація, маршрутизація, фільтрація твітів",
+    },
+  },
+  {
+    id: 13,
+    development: "backend",
+    type: "individual",
+    name: "CLI",
+    categories: ["js", "Node", "Nodemon", "Yargs"],
+    image: cover13,
+    url: "cli",
+    features: ["Інтерфейс командного рядка"],
+    problem: "Була потреба створити інтерфейс командного рядка",
+    solution: "Це перша домашня робота з backend на курсах",
+    links: {
+      website: "",
+      github:
+        "https://github.com/Anastasia-front/first-acquaintance-with-node.js",
+    },
+    content: {
+      title: "CLI",
+      description: "Додаток інтерфейсу командного рядка (CLI)",
+    },
+  },
+  {
+    id: 14,
+    development: "backend",
+    type: "individual",
+    name: "REST API",
+    categories: ["js", "Node", "Mongoose", "Express"],
+    image: cover14,
+    url: "rest-api",
+    features: ["Backend для телефонної книги"],
+    problem: "Є потреба створити додаток телефонної книги - потрібно REST API",
+    solution: "Цей проект ідеально підходить для цієї потреби",
+    links: {
+      website: "https://contacts-backend-eikd.onrender.com",
+      github: "https://github.com/Anastasia-front/nodejs-first-rest-api",
+    },
+    content: {
+      title: "REST API",
+      description: "Backend для додатка телефонної книги",
+    },
+  },
+];

@@ -1,22 +1,42 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+import { Rubik } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
 
 import { headerImgVariants, overlayVariants, titleVariants2 } from "@/utils";
 
-import { projectsEnglishLang } from "@/constants";
+import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
 
 interface Params {
   params: {
     projectName: string;
   };
 }
+const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
-function page({ params }: Params) {
-  const project = projectsEnglishLang.find((project) => {
+export default function Page({ params }: Params) {
+  const i = useTranslations("alt.projects");
+  const h = useTranslations("projects.headers");
+
+  const pathname = usePathname();
+  const lang = pathname.slice(0, 3);
+  const projectLang = (() => {
+    if (lang === "/uk") {
+      return projectsUkrainianLang;
+    } else {
+      return projectsEnglishLang;
+    }
+  })();
+
+  const project = projectLang.find((project) => {
     return project.url === params.projectName;
   });
 
@@ -42,6 +62,7 @@ function page({ params }: Params) {
           variants={headerImgVariants}
           initial="hidden"
           animate="visible"
+          alt={i("cover")}
         />
         <motion.div
           className="overlay"
@@ -56,8 +77,8 @@ function page({ params }: Params) {
           animate="onscreen"
         >
           <div className="banner__header">
-            <h1 className="banner__title">{name}</h1>
-            <div className="banner__categories">
+            <h1 className={`banner__title ${rubik.className}`}>{name}</h1>
+            <div className={`banner__categories ${rubik.className}`}>
               {categories?.map((category: any, index: number) => {
                 return (
                   <span key={index} className="banner__category">
@@ -67,14 +88,14 @@ function page({ params }: Params) {
               })}
             </div>
           </div>
-          <p className="banner__text">{description}</p>
+          <p className={`banner__text ${rubik.className}`}>{description}</p>
         </motion.div>
       </div>
       <div className="project__content">
         <div className="project__content__intro">
           {features && (
             <ul className="features">
-              <h4>Features</h4>
+              <h4>{h("features")}</h4>
               {features?.map((feature: any, i: number) => {
                 return <li key={i}>{feature}</li>;
               })}
@@ -90,19 +111,19 @@ function page({ params }: Params) {
                     marginBottom: "2rem",
                   }}
                 >
-                  <h4>Problem</h4>
+                  <h4>{h("problem")}</h4>
                   <p>{problem}</p>
                 </div>
               )}
 
-              <h4>Solution</h4>
+              <h4>{h("solution")}</h4>
               <p>{solution}</p>
             </div>
           )}
 
           {links && (
             <div className="links">
-              <h4>Project Links</h4>
+              <h4>{h("links")}</h4>
               {links.github && (
                 <Link href={links.github} target="_blank">
                   Github Repo
@@ -117,16 +138,15 @@ function page({ params }: Params) {
           )}
         </div>
         <div className="horizontal-images u-pad-2">
-          {image2 && <Image src={image2} alt="" />}
-          {image3 && <Image src={image3} alt="" />}
+          {image1 && <Image src={image1} alt={i("first")} />}
+          {image2 && <Image src={image2} alt={i("second")} />}
         </div>
         <div className="horizontal-images--fullscreen">
-          {image1 && <Image src={image1} alt="" />}
-          {image4 && <Image src={image4} alt="" />}
+          {image3 && <Image src={image3} alt={i("third")} />}
+          {image4 && <Image src={image4} alt={i("fourth")} />}
+          {image5 && <Image src={image5} alt={i("fifth")} />}
         </div>
       </div>
     </section>
   );
 }
-
-export default page;

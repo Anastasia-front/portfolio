@@ -2,16 +2,26 @@
 
 import React from "react";
 
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import { motion } from "framer-motion";
 
 import { ProjectItem } from "@/components";
-import { projectsEnglishLang } from "@/constants";
+import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
 import { gridVariants } from "@/utils";
 
 export function Projects() {
   const router = useRouter();
+
+  const pathname = usePathname();
+  const lang = pathname.slice(0, 3);
+  const projectLang = (() => {
+    if (lang === "/uk") {
+      return projectsUkrainianLang;
+    } else {
+      return projectsEnglishLang;
+    }
+  })();
 
   // memoize portfolio item to prevent re-render
   const MemoizedPortfolioItem = React.memo(ProjectItem);
@@ -23,7 +33,7 @@ export function Projects() {
       initial="hidden"
       animate="visible"
     >
-      {projectsEnglishLang.map((project) => {
+      {projectLang.map((project) => {
         return (
           <MemoizedPortfolioItem
             key={project.id}
