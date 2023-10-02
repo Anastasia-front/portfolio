@@ -2,18 +2,15 @@
 
 import React from "react";
 
-import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 
 import { motion } from "framer-motion";
 
 import { ProjectItem } from "@/components";
-import { projectsKeys } from "@/constants";
+import { projectsEnglishLang } from "@/constants";
 import { gridVariants } from "@/utils";
 
 export function Projects() {
-  const i = useTranslations("projects.items");
-
   const router = useRouter();
 
   // memoize portfolio item to prevent re-render
@@ -26,25 +23,16 @@ export function Projects() {
       initial="hidden"
       animate="visible"
     >
-      {projectsKeys.map((project, index) => {
-        const url = i(`${project}.url`);
-        const array: string[] = [];
-
-        projectsKeys.map((categories) => {
-          const category = i(`${project}.categories.${categories}`);
-          array.push(category);
-          return array;
-        });
-
+      {projectsEnglishLang.map((project) => {
         return (
           <MemoizedPortfolioItem
-            key={index}
-            title={i(`${project}.name`)}
-            image={i(`${project}.image`)}
-            url={url}
-            categories={array}
+            key={project.id}
+            name={project.name}
+            image={project.image}
+            url={project.url}
+            categories={project.categories}
             onClick={() => {
-              router.push(`/project/${url}`);
+              router.push(`/project/${project.url}`);
             }}
           />
         );

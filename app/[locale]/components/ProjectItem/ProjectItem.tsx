@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { Project } from "@/constants";
 import { gridItemVariants, hoverVariants, hoverVariants2 } from "@/utils";
 
-export function ProjectItem({ title, image, categories, onClick }: Project) {
+export function ProjectItem({ name, image, categories, onClick }: Project) {
   const [isHover, setIsHover] = useState(false);
 
   const handleHoverStart = () => {
@@ -28,7 +28,7 @@ export function ProjectItem({ title, image, categories, onClick }: Project) {
       onClick={onClick}
       variants={gridItemVariants}
     >
-      <Image src={image} alt={title} width={200} height={100} />
+      <Image src={image} alt={name} width={200} height={100} />
       <div className="hover">
         <motion.div
           className="hover__categories"
@@ -48,7 +48,7 @@ export function ProjectItem({ title, image, categories, onClick }: Project) {
           variants={hoverVariants2}
           animate={isHover ? "visible" : "hidden"}
         >
-          {title}
+          {name}
         </motion.p>
       </div>
     </motion.div>
