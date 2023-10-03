@@ -61,7 +61,7 @@ export default function AboutPage() {
 
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.3, 1.2]);
   const x = useTransform(scrollYProgress, [0, 0.8, 1], [0, 0, -2400]);
-  const y = useTransform(scrollYProgress, [0, 0.75, 1], [0, 0, -900]);
+  const y = useTransform(scrollYProgress, [0, 0.75, 1], [0, 0, -700]);
   const opacity = useTransform(scrollYProgress, [0, 0.85, 0.95], [1, 1, 0]);
 
   return (
@@ -100,15 +100,15 @@ export default function AboutPage() {
         <Banner text={b("contact")} button />
 
         <section className="about-section">
-          <motion.h2
+          <motion.h1
             className="about-section__title"
             variants={titleVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
           >
             {t("features.title")}
-          </motion.h2>
+          </motion.h1>
           <ol className="about-section__list">
             {keys.map((key) => (
               <AboutItem

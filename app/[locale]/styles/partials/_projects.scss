@@ -11,7 +11,6 @@
 }
 
 .project {
-  padding-top: 1rem;
   border-radius: var(--pad--sm);
   color: var(--color--white);
   background-color: var(--color--white);
@@ -49,7 +48,7 @@
 
   &__header {
     position: relative;
-    height: 85vh;
+    height: 88vh;
 
     .bg-image {
       position: absolute;
@@ -58,8 +57,11 @@
 
       width: 100%;
       height: auto;
+      max-height: 80vh;
 
       object-fit: cover;
+
+      border-radius: 1.5rem;
     }
 
     .overlay {
@@ -68,7 +70,7 @@
       left: 0;
 
       width: 100%;
-      height: 90%;
+      height: 80vh;
 
       background: linear-gradient(
         to bottom,
@@ -76,7 +78,7 @@
         rgba(0, 0, 0, 0.9)
       );
 
-      pointer-events: none;
+      border-radius: 1.5rem;
     }
   }
 
@@ -89,7 +91,7 @@
     width: calc(100% - 3rem);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 
-    z-index: 10;
+    z-index: 9;
 
     &__header {
       display: flex;
@@ -124,7 +126,7 @@
   }
 
   &__content {
-    &__intro {
+    &__text {
       padding: 0 2rem;
 
       display: grid;
@@ -201,6 +203,13 @@
       }
     }
 
+    &__screenshots {
+      img {
+        border: 1px solid var(--color--light-blue-3);
+        max-height: 90vh;
+      }
+    }
+
     .horizontal-images {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -220,7 +229,8 @@
         border-radius: 0.5rem;
       }
 
-      &--fullscreen {
+      &__fullscreen {
+        @include flex(column, center, center);
         padding: 2rem;
 
         > img {
@@ -249,7 +259,7 @@
   }
 
   &__content {
-    &__intro {
+    &__text {
       h4 {
         color: var(--color--orange-3);
       }
@@ -273,6 +283,11 @@
             color: var(--color--light-blue-1);
           }
         }
+      }
+    }
+    &__screenshots {
+      img {
+        border: 1px solid var(--color--orange-3);
       }
     }
   }
@@ -425,6 +440,8 @@
 }
 
 .hover {
+  color: var(--color--black);
+
   width: calc(100% - 2rem);
   height: calc(100% - 2rem);
 
@@ -448,6 +465,7 @@
     span {
       padding: 0.3rem 0.8rem;
       background-color: var(--color--white);
+
       border-radius: 30px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }

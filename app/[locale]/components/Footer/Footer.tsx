@@ -89,12 +89,11 @@ export function Footer({ title, description }: Props) {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <div className="footer-banner__title">
-          <h1>{title}</h1>
-        </div>
-        <div className="footer-banner__description">
-          <p>{description}</p>
-        </div>
+        {title && <h1 className="footer-banner__title">{title}</h1>}
+        {description && (
+          <p className="footer-banner__description"> {description}</p>
+        )}
+
         <Link href="/" className="logo logo__footer">
           <Image
             src="/logo.png"

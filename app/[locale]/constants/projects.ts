@@ -150,10 +150,10 @@ export const projectsEnglishLang: Project[] = [
     content: {
       description: "Website for business trainer and coach Illy Mushkovsky",
       image1: firstProjectSnippet1,
-      image2: firstProjectSnippet2,
+      image2: firstProjectSnippet5,
       image3: firstProjectSnippet3,
       image4: firstProjectSnippet4,
-      image5: firstProjectSnippet5,
+      image5: firstProjectSnippet2,
     },
   },
 
@@ -577,10 +577,10 @@ export const projectsUkrainianLang: Project[] = [
     content: {
       description: "Сайт для бізнес-тренера та коуча Іллі Мушковського",
       image1: firstProjectSnippet1,
-      image2: firstProjectSnippet2,
+      image2: firstProjectSnippet5,
       image3: firstProjectSnippet3,
       image4: firstProjectSnippet4,
-      image5: firstProjectSnippet5,
+      image5: firstProjectSnippet2,
     },
   },
   {

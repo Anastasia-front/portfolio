@@ -32,12 +32,15 @@ h3 {
 }
 h4 {
   font-size: clamp(1rem, 1vw, 1.35rem);
+  font-weight: normal;
 }
 h5 {
   font-size: clamp(0.95rem, 1vw, 1rem);
+  font-weight: normal;
 }
 h6 {
   font-size: clamp(0.8rem, 1vw, 0.75rem);
+  font-weight: normal;
 }
 
 p,
@@ -45,7 +48,7 @@ li {
   font-size: clamp(0.7rem, 1vw, 0.2rem);
 }
 span {
-  font-size: clamp(0.4rem, 1vw, 0.2rem);
+  font-size: clamp(0.6rem, 1vw, 0.2rem);
 }
 
 li {
@@ -156,48 +159,6 @@ body {
   }
 }
 
-// .menu {
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   height: 20rem;
-//   width: 40rem;
-
-//   z-index: 10000;
-
-//   box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
-//   border-top-left-radius: 2rem;
-//   border-bottom-left-radius: 2rem;
-//   border-bottom-right-radius: 2rem;
-
-//   background: radial-gradient(80% 80% at 56% 19%, #fca26e 0%, #68b8c1 99%);
-
-//   @media screen and (max-width: 900px) {
-//     width: 30rem;
-//     height: 15rem;
-//   }
-
-//   .buttons {
-//     padding: 1.5rem 2rem;
-
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     gap: 1.5rem;
-
-//     @media screen and (max-width: 900px) {
-//       gap: 0.6rem;
-//     }
-
-//     button:first-child {
-//       align-self: flex-end;
-//     }
-
-//     button:nth-child(n + 2) {
-//       font-size: clamp(1.5rem, 1vw, 1rem);
-//     }
-//   }
-// }
 //utilities
 .u-pad-2 {
   padding: 2rem;
@@ -286,7 +247,7 @@ body {
             width: max-content;
             position: absolute;
             content: attr(data-text);
-            top: 55px;
+            top: 35px;
             border-radius: 1rem;
 
             background: radial-gradient(
@@ -296,7 +257,7 @@ body {
             );
             padding: 0.5rem;
             color: var(--color--white);
-            font-size: 12px;
+            font-size: 10px;
           }
         }
         @include useOnClick {

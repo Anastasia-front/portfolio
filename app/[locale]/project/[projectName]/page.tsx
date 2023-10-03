@@ -94,11 +94,11 @@ export default function Page({ params }: Params) {
         </motion.div>
       </div>
       <div className="project__content">
-        <div className="project__content__intro">
+        <div className="project__content__text">
           {features && (
             <div>
               <h4>{h("features")}</h4>
-              <ul>
+              <ul className="features">
                 {features?.map((feature: any, i: number) => {
                   return <li key={i}>{feature}</li>;
                 })}
@@ -148,14 +148,17 @@ export default function Page({ params }: Params) {
             <p>{p("below")}</p>
           </div>
         </div>
-        <div className="horizontal-images u-pad-2">
-          {image1 && <Image src={image1} alt={i("first")} />}
-          {image2 && <Image src={image2} alt={i("second")} />}
-        </div>
-        <div className="horizontal-images--fullscreen">
-          {image3 && <Image src={image3} alt={i("third")} />}
-          {image4 && <Image src={image4} alt={i("fourth")} />}
-          {image5 && <Image src={image5} alt={i("fifth")} />}
+
+        <div className="project__content__screenshots">
+          <div className="horizontal-images u-pad-2">
+            {image1 && <Image src={image1} alt={i("first")} />}
+            {image2 && <Image src={image2} alt={i("second")} />}
+          </div>
+          <div className="horizontal-images__fullscreen">
+            {image3 && <Image src={image3} alt={i("third")} />}
+            {image4 && <Image src={image4} alt={i("fourth")} />}
+            {image5 && <Image src={image5} alt={i("fifth")} />}
+          </div>
         </div>
       </div>
     </section>

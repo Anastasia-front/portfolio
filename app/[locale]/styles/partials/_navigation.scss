@@ -3,7 +3,7 @@
 @use "./vars" as *;
 
 .navigation {
-  padding: 1rem 0.6rem 0 0.6rem;
+  padding: 1rem 0.6rem 0.5rem 0.6rem;
   position: relative;
 
   display: flex;
@@ -14,20 +14,17 @@
   z-index: 10;
 
   @include useScreen("mobile-lg") {
-    padding: 1.5rem 2rem 0 2rem;
+    padding: 1.5rem 2rem 0.5rem 2rem;
   }
 
   @include useScreen("tablet-sm") {
-    padding: 2rem 2rem 0 2rem;
+    padding: 2rem 2rem 0.5rem 2rem;
   }
 }
 
 .container-items {
   padding: 0.3rem 0.6rem;
   border-radius: 60px;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
   @include flex(row, space-between, center);
   gap: 1rem;
 

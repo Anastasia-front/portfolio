@@ -18,7 +18,7 @@
 
   @include flex(column, center, center);
   @include useScreen("tablet-sm") {
-    min-height: 200vh;
+    min-height: 150vh;
   }
 
   > img {
@@ -74,7 +74,7 @@
 .about-content {
   margin-top: 100vh;
   @include useScreen("tablet-sm") {
-    margin-top: 200vh;
+    margin-top: 150vh;
   }
 }
 
@@ -107,7 +107,7 @@
 
 .about-item {
   position: relative;
-  padding: 4rem 3rem;
+  padding: 2rem 1rem;
 
   @include flex(column, center, flex-start);
 

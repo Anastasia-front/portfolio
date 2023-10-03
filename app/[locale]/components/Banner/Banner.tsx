@@ -24,12 +24,12 @@ export function Banner({ text, button }: Props) {
       whileInView="onscreen"
       viewport={{ once: true, amount: 1 }}
     >
-      <p className="banner__text">{text}</p>
+      <h3 className="banner__text">{text}</h3>
       {button && (
         <ButtonText
           modifier="white"
           text={t("contacts")}
-          padding="1.2rem 2rem"
+          padding="0.5rem 1rem"
           hover="true"
           onClick={context.handleToggle}
         />

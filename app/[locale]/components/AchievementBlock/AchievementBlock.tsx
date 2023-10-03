@@ -88,7 +88,7 @@ export function AchievementBlock() {
         whileInView="onscreen"
         viewport={{ once: false, amount: 0.2 }}
       >
-        <Progress />{" "}
+        <Progress />
       </motion.div>
     </motion.div>
   );

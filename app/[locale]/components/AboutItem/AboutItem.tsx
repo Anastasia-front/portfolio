@@ -34,9 +34,9 @@ export function AboutItem({ number, title, description }: Props) {
     >
       <div className="about-item__title">
         <span className="about-item__number">{number}</span>
-        <span className="about-item__text">{title}</span>
+        <h2 className="about-item__text">{title}</h2>
       </div>
-      <p className="about-item__description">{description}</p>
+      <h5 className="about-item__description">{description}</h5>
     </motion.li>
   );
 }

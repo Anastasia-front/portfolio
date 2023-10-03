@@ -2,9 +2,11 @@
 @use "./mixins" as *;
 
 .banner {
+  @include flex(column, flex-start, flex-start);
+
   color: var(--color--white);
   margin-top: 1.5rem;
-  padding: 1rem;
+  padding: 2rem 3rem;
   background: radial-gradient(
     80.97% 80.37% at 56.01% 19.03%,
     var(--color--light-blue-1) 0%,
@@ -13,8 +15,10 @@
   border-radius: 1.5rem;
 
   &__text {
-    margin-bottom: 1.5rem;
     color: var(--color--white);
+  }
+  button {
+    align-self: flex-end;
   }
 }
 [data-theme="dark"] .banner {
@@ -31,7 +35,7 @@
 
 .footer-banner {
   margin-top: 1.5rem;
-  padding: 2rem;
+  padding: 2.5rem;
   min-height: 15rem;
   background: radial-gradient(
     80.97% 80.37% at 56.01% 19.03%,
