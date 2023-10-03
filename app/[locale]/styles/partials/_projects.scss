@@ -11,6 +11,7 @@
 }
 
 .project {
+  padding-top: 1rem;
   border-radius: var(--pad--sm);
   color: var(--color--white);
   background-color: var(--color--white);
@@ -100,7 +101,7 @@
     }
 
     &__text {
-      margin-top: 1.5rem;
+      margin: 0.5rem 0;
     }
 
     &__categories {
@@ -238,8 +239,6 @@
 [data-theme="dark"] .project {
   color: var(--color--black);
   background-color: var(--color--black);
-
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
 
   .banner {
     &__categories {

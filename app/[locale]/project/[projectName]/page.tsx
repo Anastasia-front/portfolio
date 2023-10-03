@@ -90,7 +90,7 @@ export default function Page({ params }: Params) {
               })}
             </div>
           </div>
-          <p className={`banner__text ${rubik.className}`}>{description}</p>
+          <h5 className={`banner__text ${rubik.className}`}>{description}</h5>
         </motion.div>
       </div>
       <div className="project__content">
