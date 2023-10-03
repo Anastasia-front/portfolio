@@ -26,6 +26,7 @@ export default function Page({ params }: Params) {
   const i = useTranslations("alt.projects");
   const h = useTranslations("projects.headers");
   const l = useTranslations("projects.links");
+  const p = useTranslations("projects");
 
   const pathname = usePathname();
   const lang = pathname.slice(0, 3);
@@ -95,48 +96,57 @@ export default function Page({ params }: Params) {
       <div className="project__content">
         <div className="project__content__intro">
           {features && (
-            <ul className="features">
+            <div>
               <h4>{h("features")}</h4>
-              {features?.map((feature: any, i: number) => {
-                return <li key={i}>{feature}</li>;
-              })}
-            </ul>
-          )}
-
-          {solution && (
-            <div className="solution">
-              {problem && (
-                <div
-                  className="problem"
-                  style={{
-                    marginBottom: "2rem",
-                  }}
-                >
-                  <h4>{h("problem")}</h4>
-                  <p>{problem}</p>
-                </div>
-              )}
-
-              <h4>{h("solution")}</h4>
-              <p>{solution}</p>
+              <ul>
+                {features?.map((feature: any, i: number) => {
+                  return <li key={i}>{feature}</li>;
+                })}
+              </ul>
             </div>
           )}
+
+          <div className="project__content__intro-solution">
+            {problem && (
+              <div>
+                <h4>{h("problem")}</h4>
+                <p>{problem}</p>
+              </div>
+            )}
+            {solution && (
+              <div>
+                <h4>{h("solution")}</h4>
+                <p>{solution}</p>
+              </div>
+            )}
+          </div>
 
           {links && (
             <div className="links">
               <h4>{h("links")}</h4>
-              {links.github && (
-                <Link href={links.github} target="_blank">
-                  {l("github")}
-                </Link>
-              )}
-              {links.website && (
-                <Link href={links.website} target="_blank">
-                  {l("website")}
-                </Link>
-              )}
+              <ul>
+                <li>
+                  {links.github && (
+                    <Link href={links.github} target="_blank">
+                      {l("github")}
+                    </Link>
+                  )}
+                </li>
+                <li>
+                  {links.website && (
+                    <Link href={links.website} target="_blank">
+                      {l("website")}
+                    </Link>
+                  )}
+                </li>
+              </ul>
             </div>
           )}
+
+          <div>
+            <h4>{h("screenshots")}</h4>
+            <p>{p("below")}</p>
+          </div>
         </div>
         <div className="horizontal-images u-pad-2">
           {image1 && <Image src={image1} alt={i("first")} />}

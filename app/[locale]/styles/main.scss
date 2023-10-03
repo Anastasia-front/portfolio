@@ -21,11 +21,39 @@ ul {
   padding: 0;
 }
 
+h1 {
+  font-size: clamp(1.5rem, 1vw, 2.75rem);
+}
+h2 {
+  font-size: clamp(1.3rem, 1vw, 1.75rem);
+}
+h3 {
+  font-size: clamp(1.2rem, 1vw, 1.55rem);
+}
+h4 {
+  font-size: clamp(1rem, 1vw, 1.35rem);
+}
+h5 {
+  font-size: clamp(0.95rem, 1vw, 1rem);
+}
+h6 {
+  font-size: clamp(0.8rem, 1vw, 0.75rem);
+}
+
+p,
+li {
+  font-size: clamp(0.7rem, 1vw, 0.2rem);
+}
+span {
+  font-size: clamp(0.4rem, 1vw, 0.2rem);
+}
+
 li {
   list-style: none;
 }
 
 a {
+  font-size: clamp(0.7rem, 1vw, 0.2rem);
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -33,6 +61,7 @@ a {
 }
 
 button {
+  font-size: clamp(1rem, 1vw, 0.35rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,7 +140,7 @@ body {
 .logo {
   &__img {
     object-fit: contain;
-    border: 1px solid var(--color--blue-grey-2);
+    border: 1px solid var(--color--dark-burger);
     border-radius: 50%;
   }
   @include useOnHover {
@@ -123,52 +152,52 @@ body {
 }
 [data-theme="dark"] .logo {
   &__img {
-    border: 1px solid var(--color--orange-2);
+    border: 1px solid var(--color--light-burger);
   }
 }
 
-.menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 20rem;
-  width: 40rem;
+// .menu {
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   height: 20rem;
+//   width: 40rem;
 
-  z-index: 10000;
+//   z-index: 10000;
 
-  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+//   box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
+//   border-top-left-radius: 2rem;
+//   border-bottom-left-radius: 2rem;
+//   border-bottom-right-radius: 2rem;
 
-  background: radial-gradient(80% 80% at 56% 19%, #fca26e 0%, #68b8c1 99%);
+//   background: radial-gradient(80% 80% at 56% 19%, #fca26e 0%, #68b8c1 99%);
 
-  @media screen and (max-width: 900px) {
-    width: 30rem;
-    height: 15rem;
-  }
+//   @media screen and (max-width: 900px) {
+//     width: 30rem;
+//     height: 15rem;
+//   }
 
-  .buttons {
-    padding: 1.5rem 2rem;
+//   .buttons {
+//     padding: 1.5rem 2rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     gap: 1.5rem;
 
-    @media screen and (max-width: 900px) {
-      gap: 0.6rem;
-    }
+//     @media screen and (max-width: 900px) {
+//       gap: 0.6rem;
+//     }
 
-    button:first-child {
-      align-self: flex-end;
-    }
+//     button:first-child {
+//       align-self: flex-end;
+//     }
 
-    button:nth-child(n + 2) {
-      font-size: clamp(1.5rem, 3vw, 1rem);
-    }
-  }
-}
+//     button:nth-child(n + 2) {
+//       font-size: clamp(1.5rem, 1vw, 1rem);
+//     }
+//   }
+// }
 //utilities
 .u-pad-2 {
   padding: 2rem;
@@ -219,15 +248,10 @@ body {
   }
 
   &__block {
-    @include flex(column, center, center);
+    @include flex(row, center, center);
     gap: 1.2rem;
 
-    @include useScreen("tablet-xl") {
-      justify-content: space-between;
-      flex-direction: row;
-    }
     &-title {
-      font-size: clamp(1rem, 1vw, 1.5rem);
       color: var(--color--white);
       text-align: center;
     }
@@ -242,10 +266,9 @@ body {
         position: relative;
         @include flex(row, center, center);
 
-        width: 3rem;
-        height: 3rem;
+        width: 30px;
+        height: 30px;
 
-        font-size: 1.3rem;
         color: var(--color--white);
 
         border: 2px solid var(--color--white);
@@ -318,7 +341,6 @@ body {
 }
 
 .footer-contact {
-  padding: 2rem;
   @include flex(column, center, center);
   gap: 1rem;
 
@@ -328,7 +350,6 @@ body {
   }
 
   &__title {
-    font-size: clamp(1rem, 2vw, 1.5rem);
     letter-spacing: 0.1rem;
     line-height: 2rem;
     color: var(--color--white);

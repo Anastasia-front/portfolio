@@ -39,7 +39,7 @@ export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
   return (
     <>
       <button type="button" className="buttonIcon" onClick={hideBurger}>
-        <Burger width={30} height={30} />
+        <Burger width={20} height={20} />
       </button>
 
       <div

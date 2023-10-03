@@ -28,7 +28,7 @@ export function ProjectItem({ name, image, categories, onClick }: Project) {
       onClick={onClick}
       variants={gridItemVariants}
     >
-      <Image src={image} alt={name} width={200} height={100} />
+      <Image src={image} alt={name} width={300} height={100} />
       <div className="hover">
         <motion.div
           className="hover__categories"

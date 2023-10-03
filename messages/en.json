@@ -819,9 +819,11 @@
       "features": "Features",
       "problem": "Problem",
       "solution": "Solution",
-      "links": "Project links"
+      "links": "Project links",
+      "screenshots": "Screenshots"
     },
-    "links": { "github": "GitHub repository", "website": "WebSite page" }
+    "links": { "github": "GitHub repository", "website": "WebSite page" },
+    "below": "Below you can see what the project looks like so as not to click on the link"
   },
   "project": {
     "title": "Project",

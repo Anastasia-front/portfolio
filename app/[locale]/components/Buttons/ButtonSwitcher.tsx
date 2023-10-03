@@ -44,8 +44,8 @@ export const ButtonSwitcher = memo(
               <Image
                 className="buttonImg"
                 src={imgUrl}
-                width={40}
-                height={40}
+                width={20}
+                height={20}
                 alt={alt}
               />
             )}

@@ -31,7 +31,6 @@
 
   &__title {
     padding: var(--pad--sm-2);
-    font-size: clamp(1.5rem, 2vw, 2rem);
     font-weight: 400;
 
     background: linear-gradient(
@@ -49,7 +48,7 @@
 
   &__header {
     position: relative;
-    height: 100vh;
+    height: 85vh;
 
     .bg-image {
       position: absolute;
@@ -57,7 +56,7 @@
       left: 0;
 
       width: 100%;
-      height: 100%;
+      height: auto;
 
       object-fit: cover;
     }
@@ -68,7 +67,7 @@
       left: 0;
 
       width: 100%;
-      height: 100%;
+      height: 90%;
 
       background: linear-gradient(
         to bottom,
@@ -84,7 +83,7 @@
     overflow-x: hidden;
     position: absolute;
     left: 1.5rem;
-    bottom: 1rem;
+    bottom: 5rem;
 
     width: calc(100% - 3rem);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
@@ -92,19 +91,16 @@
     z-index: 10;
 
     &__header {
-      padding-bottom: var(--pad--sm);
       display: flex;
       align-items: center;
       gap: 3rem;
     }
     &__title {
-      font-size: clamp(2.5rem, 2vw, 2rem);
       font-weight: 400;
     }
 
     &__text {
       margin-top: 1.5rem;
-      font-size: clamp(0.8rem, 3vw, 2rem);
     }
 
     &__categories {
@@ -119,7 +115,6 @@
           border-radius: 30px;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
-          font-size: 0.9rem;
           color: var(--color--white);
           background-color: var(--color--grey-opacity);
         }
@@ -129,7 +124,7 @@
 
   &__content {
     &__intro {
-      padding: 4rem 2rem;
+      padding: 0 2rem;
 
       display: grid;
       grid-template-columns: repeat(1, 1fr);
@@ -137,12 +132,11 @@
       gap: 3rem;
 
       font-weight: 500;
-      font-size: clamp(1.2rem, 5vw, 1.5rem);
 
       transition: var(--transition);
 
       @include useScreen("tablet-sm") {
-        padding: 4rem;
+        padding: 0 4rem;
       }
 
       @include useScreen("tablet-sm") {
@@ -156,54 +150,66 @@
       }
 
       .features li {
-        font-size: clamp(1.2rem, 3vw, 1.5rem);
         list-style: square;
         margin-left: 1rem;
       }
 
       h4 {
         margin-bottom: 1rem;
-        font-size: clamp(1.5rem, 5vw, 2.6rem);
         font-weight: 500;
 
         color: var(--color--light-blue-3);
       }
 
       li,
-      p {
+      p,
+      a {
         color: var(--color--orange-2);
       }
 
       .links {
-        display: flex;
-        flex-direction: column;
+        li {
+          padding-bottom: 1rem;
+        }
 
         a {
-          color: var(--color--orange-2);
-          text-decoration: underline;
-
-          transition: all 0.2s ease-in-out;
-
+          padding-bottom: 0.4rem;
+          position: relative;
+          transition: var(--transition);
           @include useOnHover {
             color: var(--color--orange-3);
           }
           @include useOnClick {
             color: var(--color--orange-4);
           }
+          &::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: var(--color--orange-2);
+          }
         }
+      }
+
+      &-solution {
+        @include flex(column, flex-start, flex-start);
+        gap: 1rem;
       }
     }
 
     .horizontal-images {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(610px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
       grid-gap: 3rem;
       margin-top: 0;
 
       border-radius: 0.5rem;
 
       @include useScreen("tablet-md") {
-        margin-top: 6rem;
+        margin-top: 1rem;
       }
 
       > img {
@@ -214,22 +220,15 @@
       }
 
       &--fullscreen {
-        margin-top: 3rem;
-        padding-bottom: 3rem;
-
-        padding-left: 2rem;
-
-        @include useScreen("tablet-md") {
-          margin-top: 5rem;
-          padding-bottom: 5rem;
-        }
+        padding: 2rem;
 
         > img {
-          width: 100%;
+          max-width: 100%;
+          width: auto;
           height: auto;
           object-fit: cover;
           &:not(:first-child) {
-            margin-top: -1rem;
+            margin-top: 1rem;
           }
         }
       }
@@ -257,24 +256,22 @@
       }
 
       li,
-      p {
+      p,
+      a {
         color: var(--color--light-blue-3);
       }
 
       .links {
-        display: flex;
-        flex-direction: column;
-
         a {
-          color: var(--color--light-blue-2);
-
-          transition: var(--transition);
+          &::after {
+            background-color: var(--color--light-blue-2);
+          }
 
           @include useOnHover {
-            color: var(--color--light-blue-3);
+            color: var(--color--light-blue-4);
           }
           @include useOnClick {
-            color: var(--color--light-blue-4);
+            color: var(--color--light-blue-1);
           }
         }
       }
@@ -320,7 +317,6 @@
 
   p {
     line-height: 1.6;
-    font-size: clamp(1rem, 4vw, 0.75rem);
     font-weight: 500;
   }
 
@@ -374,7 +370,6 @@
     max-width: 1200px;
 
     font-weight: 600;
-    font-size: (2rem, 5vw, 4.5rem);
     margin-bottom: var(--pad--sm-2);
   }
 
@@ -391,7 +386,6 @@
 
     &__introduction {
       font-weight: 500;
-      font-size: clamp(1.5rem, 4vw, 1.5rem);
       line-height: 1.4;
 
       padding: 0 8rem 4rem 8rem;
@@ -426,7 +420,6 @@
         padding-bottom: 1rem;
 
         font-weight: 600;
-        font-size: clamp(1.2rem, 4vw, 1.5rem);
       }
     }
   }
@@ -453,8 +446,6 @@
     align-items: center;
     gap: 0.5rem;
 
-    font-size: 0.9rem;
-
     span {
       padding: 0.3rem 0.8rem;
       background-color: var(--color--white);
@@ -465,7 +456,6 @@
 
   &__title {
     padding: 0.5rem 0.8rem;
-    font-size: 1rem;
     font-weight: 500;
 
     background-color: var(--color--white);
