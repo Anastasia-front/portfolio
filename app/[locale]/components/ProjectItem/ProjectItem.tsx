@@ -21,7 +21,7 @@ export function ProjectItem({ name, image, categories, onClick }: Project) {
   };
 
   return (
-    <motion.div
+    <motion.li
       className="project"
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
@@ -51,6 +51,6 @@ export function ProjectItem({ name, image, categories, onClick }: Project) {
           {name}
         </motion.p>
       </div>
-    </motion.div>
+    </motion.li>
   );
 }

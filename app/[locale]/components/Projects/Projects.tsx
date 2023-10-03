@@ -27,7 +27,7 @@ export function Projects() {
   const MemoizedPortfolioItem = React.memo(ProjectItem);
 
   return (
-    <motion.div
+    <motion.ul
       className="projects"
       variants={gridVariants}
       initial="hidden"
@@ -47,6 +47,6 @@ export function Projects() {
           />
         );
       })}
-    </motion.div>
+    </motion.ul>
   );
 }

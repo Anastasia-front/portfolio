@@ -14,3 +14,12 @@ export const projectsKeys = [
 ] as const;
 
 export const footerKeys = ["first", "second", "third"] as const;
+
+export const dropTypesKeys = ["first", "second"] as const;
+
+export const dropCategoriesKeys = [
+  "first",
+  "second",
+  "third",
+  "fourth",
+] as const;

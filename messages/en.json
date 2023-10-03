@@ -32,6 +32,16 @@
       "uk": "Ukrainian"
     }
   },
+  "dropdown": {
+    "title": "Filters",
+    "type": { "first": "backend", "second": "frontend" },
+    "categories": {
+      "first": "commercial",
+      "second": "individual",
+      "third": "test",
+      "fourth": "team"
+    }
+  },
   "banner": {
     "contact": "If you are interested in working with me, please send me an email or contact me in any other way convenient for you"
   },
@@ -109,7 +119,7 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "Some information about my projects",
+    "description": "All my projects are collected here. They can be sorted by category for convenience",
     "items": {
       "first": {
         "id": 1,

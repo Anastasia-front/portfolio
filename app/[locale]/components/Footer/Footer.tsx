@@ -106,14 +106,14 @@ export function Footer({ title, description }: Props) {
         <Navigation location="banner" />
         <div className="footer-contact">
           <p className="footer-contact__title">{i("title")} </p>
-          <ol className="icons">
+          <ul className="icons">
             {footerKeys.map((firstBlock) => (
               <li key={firstBlock} className="icons__block">
                 <p className="icons__block-title">
                   {ic(`${firstBlock}.title`)}
                 </p>
 
-                <ol className="icons__block-links">
+                <ul className="icons__block-links">
                   {footerKeys.map((secondBlock) => {
                     const iconKey = ic(
                       `${firstBlock}.links.${secondBlock}.icon`
@@ -134,10 +134,10 @@ export function Footer({ title, description }: Props) {
                       </li>
                     );
                   })}
-                </ol>
+                </ul>
               </li>
             ))}
-          </ol>
+          </ul>
         </div>
       </motion.div>
     </footer>
