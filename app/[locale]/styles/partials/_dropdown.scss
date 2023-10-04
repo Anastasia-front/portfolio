@@ -1,43 +1,83 @@
-.dropdown-container {
-  position: relative;
-  display: inline-block;
+@use "./mixins" as *;
 
-  .dropdown-content {
+.dropdown {
+  &__button {
+    @include flex(row, center, center);
+    gap: 0.3rem;
+  }
+
+  &__list {
+    @include flex(column, flex-start, flex-start);
+    gap: 0.7rem;
+  }
+
+  &__item {
+    button {
+      &:hover {
+        color: var(--color--white);
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__content {
     border-radius: var(--pad-sm-2);
-    padding: 1rem 1rem 1rem 0.5rem;
+    padding: 1rem 1rem 0.5rem 0.5rem;
     position: absolute;
     top: 120%;
     left: 0;
-    background-color: var(--color--dark-opacity);
+    background-color: var(--color--orange-2);
     z-index: 1;
-
-    button:hover .nested-dropdown-content {
-      display: block;
-    }
   }
 
-  .nested-dropdown-container {
-    position: relative;
+  &-nested {
+    &__container {
+      padding: 0.11rem;
+      position: relative;
+      &:hover + div,
+      &:hover + .dropdown-nested__content {
+        display: block;
+      }
+    }
 
-    .nested-dropdown-content {
+    &__list {
+      padding: 1rem 1rem 0.5rem 0.5rem;
+      background-color: var(--color--light-blue-3);
+    }
+
+    &__content {
+      padding-right: 2rem;
       display: none;
       position: absolute;
-      top: 0;
-      left: 100%;
-      background-color: var(--color--dark-opacity);
+      top: 50px;
+      right: 80%;
       z-index: 1;
+      &:hover {
+        display: block;
+      }
     }
   }
 }
-[data-theme="dark"] .dropdown-container {
-  .dropdown-content {
-    background-color: var(--color--light-opacity);
-    z-index: 1;
+[data-theme="dark"] .dropdown {
+  &__content {
+    background-color: var(--color--light-blue-3);
   }
 
-  .nested-dropdown-container {
-    .nested-dropdown-content {
-      background-color: var(--color--light-opacity);
+  &__item {
+    button {
+      &:hover {
+        color: var(--color--black);
+      }
+    }
+  }
+
+  &-nested {
+    &__list {
+      background-color: var(--color--orange-2);
     }
   }
 }

@@ -156,7 +156,6 @@ export const projectsEnglishLang: Project[] = [
       image5: firstProjectSnippet2,
     },
   },
-
   {
     id: 2,
     type: "test",

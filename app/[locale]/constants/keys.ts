@@ -1,4 +1,4 @@
-export const projectsKeys = [
+export const twelveKeys = [
   "first",
   "second",
   "third",
@@ -13,13 +13,10 @@ export const projectsKeys = [
   "twelfth",
 ] as const;
 
-export const footerKeys = ["first", "second", "third"] as const;
+export const threeKeys = ["first", "second", "third"] as const;
 
-export const dropTypesKeys = ["first", "second"] as const;
+export const twoKeys = ["first", "second"] as const;
 
-export const dropCategoriesKeys = [
-  "first",
-  "second",
-  "third",
-  "fourth",
-] as const;
+export const twoKeysFromSecond = ["second", "third"] as const;
+
+export const fourKeys = ["first", "second", "third", "fourth"] as const;

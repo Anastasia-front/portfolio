@@ -34,12 +34,16 @@
   },
   "dropdown": {
     "title": "Filters",
-    "type": { "first": "backend", "second": "frontend" },
-    "categories": {
+    "type": { "first": "all", "second": "backend", "third": "frontend" },
+    "categoriesFrontend": {
       "first": "commercial",
       "second": "individual",
       "third": "test",
       "fourth": "team"
+    },
+    "categoriesBackend": {
+      "first": "individual",
+      "second": "team"
     }
   },
   "banner": {

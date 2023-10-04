@@ -10,7 +10,7 @@
   grid-auto-flow: dense;
 
   &__header {
-    @include flex(row, space-between, center);
+    @include flex(row, space-between, flex-start);
     gap: 3rem;
   }
 

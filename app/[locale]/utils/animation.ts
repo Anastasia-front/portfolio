@@ -55,7 +55,7 @@ export const navVariants: Variants = {
 
 export const hoverVariants = {
   hidden: {
-    y: -100,
+    y: -15,
     scaleX: 0.5,
     opacity: 0,
   },
@@ -73,7 +73,7 @@ export const hoverVariants = {
 
 export const hoverVariants2 = {
   hidden: {
-    y: 100,
+    y: 15,
     scaleX: 0.6,
     opacity: 0,
   },
