@@ -106,13 +106,16 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top, #fca26e 30%, #68b8c1 100%);
+    background: linear-gradient(to top, #fca26e 20%, #fcfbfc 50%, #68b8c1 100%);
     border-radius: 1rem;
   }
 }
 [data-theme="dark"] body {
   color: var(--color--white);
   background-color: var(--color--bg-dark);
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, #68b8c1 30%, #fca26e 100%);
+  }
 }
 
 #background-video {
