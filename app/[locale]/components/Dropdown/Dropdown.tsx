@@ -6,7 +6,10 @@ import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 import { useTranslations } from "next-intl";
 import { Rubik } from "next/font/google";
 
-import { threeKeys } from "@/constants";
+import { motion } from "framer-motion";
+
+import { dropdownAllTypes } from "@/constants";
+import { gridVariants } from "@/utils";
 
 import { NestedDropdown } from "./NestedDropdown";
 
@@ -39,19 +42,20 @@ export function Dropdown({ handleTypeChange, handleCategoryChange }) {
     };
   }, []);
 
-  const handleFilterClick = (type: string) => {
+  const handleTypeSelect = (type: string) => {
     setIsOpen(!isOpen);
     handleTypeChange(type);
   };
-
-  // ...
 
   const handleCategorySelect = (selectedCategory) => {
     handleCategoryChange(selectedCategory);
   };
 
   return (
-    <div
+    <motion.div
+      variants={gridVariants}
+      initial="hidden"
+      animate="visible"
       className={`dropdown__container projects__filter ${rubik.className}`}
       ref={dropdownRef}
     >
@@ -62,26 +66,30 @@ export function Dropdown({ handleTypeChange, handleCategoryChange }) {
       {isOpen && (
         <div className="dropdown__content ">
           <ul className="dropdown__list">
-            {threeKeys.map((type, index) => {
-              //   const nestedTypes = ["backend", "frontend"];
-              return (
-                <li key={index} className="dropdown__item">
-                  {t(`${type}`) === "all" ? (
-                    <button onClick={() => handleFilterClick(t(`${type}`))}>
+            {dropdownAllTypes.map((type, index) => {
+              if (t(`${type}`) === "all" || t(`${type}`) === "всі") {
+                return (
+                  <li key={index} className="dropdown__item">
+                    <button onClick={() => handleTypeSelect(t(`${type}`))}>
                       {t(`${type}`)}
                     </button>
-                  ) : (
+                  </li>
+                );
+              } else {
+                return (
+                  <li key={index} className="dropdown__item">
                     <NestedDropdown
-                      onSelect={handleCategorySelect}
-                      type={"frontend"}
+                      onSelectType={handleTypeSelect}
+                      onSelectCategory={handleCategorySelect}
+                      type={t(`${type}`)}
                     />
-                  )}
-                </li>
-              );
+                  </li>
+                );
+              }
             })}
           </ul>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }

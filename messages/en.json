@@ -34,16 +34,18 @@
   },
   "dropdown": {
     "title": "Filters",
-    "type": { "first": "all", "second": "backend", "third": "frontend" },
+    "type": { "all": "all", "backend": "backend", "frontend": "frontend" },
     "categoriesFrontend": {
-      "first": "commercial",
-      "second": "individual",
-      "third": "test",
-      "fourth": "team"
+      "commercial": "commercial",
+      "individual": "individual",
+      "test": "test",
+      "team": "team"
     },
     "categoriesBackend": {
-      "first": "individual",
-      "second": "team"
+      "individual": "individual",
+      "team": "team",
+      "commercial": "",
+      "test": ""
     }
   },
   "banner": {

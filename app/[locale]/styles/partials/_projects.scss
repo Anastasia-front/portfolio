@@ -12,6 +12,8 @@
   &__header {
     @include flex(row, space-between, flex-start);
     gap: 3rem;
+    position: relative;
+    z-index: 10;
   }
 
   &__headings {

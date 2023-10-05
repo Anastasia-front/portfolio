@@ -34,16 +34,18 @@
   },
   "dropdown": {
     "title": "Фільтри",
-    "type": { "first": "всі", "second": "бекенд", "third": "фронтенд" },
+    "type": { "all": "всі", "backend": "бекенд", "frontend": "фронтенд" },
     "categoriesFrontend": {
-      "first": "комерційні",
-      "second": "індивідуальні",
-      "third": "тестові",
-      "fourth": "командні"
+      "commercial": "комерційні",
+      "individual": "індивідуальні",
+      "test": "тестові",
+      "team": "командні"
     },
     "categoriesBackend": {
-      "first": "індивідуальні",
-      "second": "командні"
+      "individual": "індивідуальні",
+      "team": "командні",
+      "commercial": "",
+      "test": ""
     }
   },
   "banner": {

@@ -7,7 +7,7 @@
   }
 
   &__list {
-    @include flex(column, flex-start, flex-start);
+    @include flex(column, center, center);
     gap: 0.7rem;
   }
 
@@ -21,15 +21,14 @@
 
   &__container {
     position: relative;
-    display: inline-block;
   }
 
   &__content {
-    border-radius: var(--pad-sm-2);
+    border-radius: var(--pad--sm);
     padding: 1rem 1rem 0.5rem 0.5rem;
     position: absolute;
-    top: 120%;
-    left: 0;
+    top: 1.5rem;
+    left: -1rem;
     background-color: var(--color--orange-2);
     z-index: 1;
   }
@@ -45,6 +44,7 @@
     }
 
     &__list {
+      border-radius: var(--pad--sm);
       padding: 1rem 1rem 0.5rem 0.5rem;
       background-color: var(--color--light-blue-3);
     }

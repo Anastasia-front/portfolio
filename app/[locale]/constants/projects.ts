@@ -158,8 +158,9 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 2,
-    type: "test",
     development: "frontend",
+    type: "test",
+
     name: "Carp Travel",
     categories: ["ts", "Next", "Tailwind css"],
     image: cover3,
@@ -222,8 +223,9 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 4,
-    type: "individual",
     development: "frontend",
+    type: "individual",
+
     name: "Cinema search",
     categories: ["js", "React", "styled-components"],
     image: cover7,
@@ -253,8 +255,9 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 5,
-    type: "individual",
+
     development: "frontend",
+    type: "individual",
     name: "Photo app",
     categories: ["js", "React Native", "Redux", "Firebase", "css"],
     image: cover5,
@@ -291,8 +294,9 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 6,
-    type: "team",
+
     development: "frontend",
+    type: "team",
     name: "IceCream",
     categories: ["js", "scss", "html", "parcel"],
     image: cover8,
@@ -317,8 +321,9 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 7,
-    type: "team",
+
     development: "frontend",
+    type: "team",
     name: "News",
     categories: ["js", "scss", "html"],
     image: cover6,
@@ -351,8 +356,9 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 8,
-    type: "team",
+
     development: "frontend",
+    type: "team",
     name: "Task Pro",
     categories: ["js", "React", "Redux", "css"],
     image: cover4,
@@ -389,8 +395,9 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 9,
-    type: "individual",
+
     development: "frontend",
+    type: "individual",
     name: "Website for Instagram",
     categories: ["ts", "React", "scss", "html", "parcel"],
     image: cover9,
@@ -414,8 +421,9 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 10,
-    type: "individual",
+
     development: "frontend",
+    type: "individual",
     name: "My blog",
     categories: ["js", "css", "scss", "html"],
     image: cover10,
@@ -440,8 +448,9 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 11,
-    type: "individual",
+
     development: "frontend",
+    type: "individual",
     name: "PhoneBook App",
     categories: ["js", "React", "mui", "styled-components"],
     image: cover11,
@@ -474,8 +483,9 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 12,
-    type: "test",
+
     development: "frontend",
+    type: "test",
     name: "First test",
     categories: ["js", "React", "Redux", "styled-components", "html"],
     image: cover12,

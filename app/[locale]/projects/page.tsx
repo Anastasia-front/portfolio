@@ -1,16 +1,14 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-
-import { motion } from "framer-motion";
 import { useState } from "react";
 
+import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
-import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
+import { motion } from "framer-motion";
 
 import { Banner, Dropdown, Projects } from "@/components";
-
+import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
 import { gridVariants } from "@/utils";
 
 export default function ProjectsPage() {
@@ -27,40 +25,20 @@ export default function ProjectsPage() {
     }
   })();
 
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [selectedType, setSelectedType] = useState("");
-
-  function filterProjects(projects, selectedCategory, selectedType) {
-    if (selectedType) {
-      return projects.filter((project) => {
-        // Проверяем совпадение по полю development и selectedType
-        if (selectedType === "all" || selectedType === "всі") {
-          return projects;
-        } else if (selectedType === "backend" || selectedType === "бекенд") {
-          project.development === "backend";
-        } else {
-          project.type === selectedCategory;
-        }
-      });
-    }
-    return projects;
-  }
-
-  const filteredProjects = filterProjects(
-    projectLang,
-    selectedCategory,
-    selectedType
-  );
-
-  console.log(filteredProjects);
+  const [filteredProjects, setFilteredProjects] = useState(projectLang);
 
   const handleCategoryChange = (category: string) => {
-    setSelectedCategory(category);
+    const filteredProjects = projectLang.filter((project) => {
+      return project.type === category;
+    });
+    setFilteredProjects(filteredProjects);
   };
 
   const handleTypeChange = (type: string) => {
-    setSelectedType(type);
-    console.log(type);
+    const filteredProjects = projectLang.filter((project) => {
+      return type === "all" || type === "всі" || project.development === type;
+    });
+    setFilteredProjects(filteredProjects);
   };
 
   return (
