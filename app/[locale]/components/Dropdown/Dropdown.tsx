@@ -18,19 +18,28 @@ const rubik = Rubik({
   weight: ["400"],
 });
 
-export function Dropdown({ handleTypeChange, handleCategoryChange }) {
+interface Props {
+  handleTypeChange: (type: string) => void;
+  handleCategoryChange: (category: string, type: string) => void;
+}
+
+export function Dropdown({ handleTypeChange, handleCategoryChange }: Props) {
   const i = useTranslations("dropdown");
   const t = useTranslations("dropdown.type");
 
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      "contains" in dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
       setIsOpen(false);
     }
   };
@@ -47,8 +56,8 @@ export function Dropdown({ handleTypeChange, handleCategoryChange }) {
     handleTypeChange(type);
   };
 
-  const handleCategorySelect = (selectedCategory) => {
-    handleCategoryChange(selectedCategory);
+  const handleCategorySelect = (category: string, type: string) => {
+    handleCategoryChange(category, type);
   };
 
   return (

@@ -10,13 +10,11 @@ import { dropdownCategories } from "@/constants";
 
 interface Props {
   type: string;
-  categories?: string[];
   onSelectType: (type: string) => void;
-  onSelectCategory: (category: string) => void;
+  onSelectCategory: (category: string, type: string) => void;
 }
 
 export function NestedDropdown({
-  categories,
   onSelectCategory,
   onSelectType,
   type,
@@ -34,8 +32,8 @@ export function NestedDropdown({
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-  const handleCategoryClick = (selectedCategory: string) => {
-    onSelectCategory(selectedCategory);
+  const handleCategoryClick = (category: string, type: string) => {
+    onSelectCategory(category, type);
   };
 
   const interConst = type === "frontend" ? iF : iB;
@@ -61,7 +59,7 @@ export function NestedDropdown({
                 <li key={index} className="dropdown-nested__item">
                   <button
                     type="button"
-                    onClick={() => handleCategoryClick(category)}
+                    onClick={() => handleCategoryClick(category, t(`${type}`))}
                   >
                     {interConst(`${category}`)}
                   </button>

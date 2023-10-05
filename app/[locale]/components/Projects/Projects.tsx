@@ -7,9 +7,14 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
 import { ProjectItem } from "@/components";
+import { Project } from "@/constants";
 import { gridVariants } from "@/utils";
 
-export function Projects({ projects }) {
+interface ProjectsProps {
+  projects: Project[];
+}
+
+export function Projects({ projects }: ProjectsProps) {
   const router = useRouter();
 
   // memoize portfolio item to prevent re-render
@@ -22,7 +27,7 @@ export function Projects({ projects }) {
       initial="hidden"
       animate="visible"
     >
-      {projects.map((project) => {
+      {projects.map((project: Project) => {
         return (
           <MemoizedPortfolioItem
             key={project.id}

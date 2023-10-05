@@ -101,8 +101,8 @@ import fourteenthProjectSnippet5 from "@/assets/images/projects/project14/snippe
 
 export interface Project {
   id?: number;
-  development: "backend" | "frontend";
-  type: "test" | "commercial" | "individual" | "team";
+  development?: "backend" | "frontend";
+  type?: "test" | "commercial" | "individual" | "team";
   name: string;
   categories: string[];
   image: StaticImageData;

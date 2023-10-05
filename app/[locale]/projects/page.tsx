@@ -27,17 +27,21 @@ export default function ProjectsPage() {
 
   const [filteredProjects, setFilteredProjects] = useState(projectLang);
 
-  const handleCategoryChange = (category: string) => {
-    const filteredProjects = projectLang.filter((project) => {
-      return project.type === category;
-    });
-    setFilteredProjects(filteredProjects);
-  };
-
   const handleTypeChange = (type: string) => {
     const filteredProjects = projectLang.filter((project) => {
       return type === "all" || type === "всі" || project.development === type;
     });
+    setFilteredProjects(filteredProjects);
+  };
+
+  const handleCategoryChange = (category: string, type: string) => {
+    const filteredProjects = projectLang.filter((project) => {
+      const typeMatch =
+        type === "all" || type === "всі" || project.development === type;
+      const categoryMatch = project.type === category;
+      return typeMatch && categoryMatch;
+    });
+
     setFilteredProjects(filteredProjects);
   };
 
