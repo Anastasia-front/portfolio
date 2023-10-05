@@ -5,11 +5,35 @@
   &__button {
     @include flex(row, center, center);
     gap: 0.3rem;
+    background-image: linear-gradient(
+      to right,
+      var(--color--orange-4) 10%,
+      var(--color--orange-2) 40%,
+      var(--color--orange-4) 10%,
+      var(--color--orange-2)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--color--light-blue-3);
     @include useOnHover {
-      color: var(--color--blue-grey-2);
+      color: var(--color--light-blue-2);
+      background-image: linear-gradient(
+        to right,
+        var(--color--orange-2) 10%,
+        var(--color--orange-4) 40%,
+        var(--color--orange-2) 10%,
+        var(--color--orange-4)
+      );
     }
     @include useOnClick {
-      color: var(--color--blue-grey-3);
+      color: var(--color--light-blue-3);
+      background-image: linear-gradient(
+        to right,
+        var(--color--orange-1) 10%,
+        var(--color--orange-2) 40%,
+        var(--color--orange-1) 10%,
+        var(--color--orange-2)
+      );
     }
   }
 
@@ -41,6 +65,10 @@
     left: -1rem;
     background-color: var(--color--orange-2);
     z-index: 1;
+    button {
+      color: var(--color--white);
+      text-transform: uppercase;
+    }
   }
 
   &-nested {
@@ -85,13 +113,33 @@
 }
 [data-theme="dark"] .dropdown {
   &__button {
-    color: var(--color--light-blue-1);
-
+    background-image: linear-gradient(
+      to right,
+      var(--color--light-blue-4) 10%,
+      var(--color--light-blue-2) 40%,
+      var(--color--light-blue-4) 10%,
+      var(--color--light-blue-2)
+    );
+    color: var(--color--orange-3);
     @include useOnHover {
-      color: var(--color--light-blue-3);
+      color: var(--color--orange-2);
+      background-image: linear-gradient(
+        to right,
+        var(--color--light-blue-2) 10%,
+        var(--color--light-blue-4) 40%,
+        var(--color--light-blue-2) 10%,
+        var(--color--light-blue-4)
+      );
     }
     @include useOnClick {
-      color: var(--color--light-blue-4);
+      color: var(--color--orange-3);
+      background-image: linear-gradient(
+        to right,
+        var(--color--light-blue-4) 10%,
+        var(--color--light-blue-2) 40%,
+        var(--color--light-blue-4) 10%,
+        var(--color--light-blue-2)
+      );
     }
   }
 

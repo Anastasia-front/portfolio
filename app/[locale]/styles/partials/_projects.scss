@@ -19,15 +19,61 @@
   &__headings {
     @include flex(column, flex-start, flex-start);
     gap: 0.5rem;
+    h1 {
+      background-image: linear-gradient(
+        to right,
+        var(--color--light-blue-4),
+        var(--color--light-blue-3),
+        var(--color--light-blue-4) 50%,
+        var(--color--light-blue-3),
+        var(--color--light-blue-4)
+      );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h6 {
+      background-image: linear-gradient(
+        to right,
+        var(--color--orange-2),
+        var(--color--orange-4),
+        var(--color--orange-2) 50%,
+        var(--color--orange-4),
+        var(--color--orange-2)
+      );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   &__filter {
+    button {
+      text-transform: uppercase;
+    }
     padding-right: 4rem;
   }
 }
 [data-theme="dark"] .projects {
   &__headings {
-    color: var(--color--light-blue-1);
+    h1 {
+      background-image: linear-gradient(
+        to right,
+        var(--color--orange-2),
+        var(--color--orange-4),
+        var(--color--orange-2) 50%,
+        var(--color--orange-4),
+        var(--color--orange-2)
+      );
+    }
+    h6 {
+      background-image: linear-gradient(
+        to right,
+        var(--color--light-blue-4),
+        var(--color--light-blue-3),
+        var(--color--light-blue-4) 50%,
+        var(--color--light-blue-3),
+        var(--color--light-blue-4)
+      );
+    }
   }
 }
 
