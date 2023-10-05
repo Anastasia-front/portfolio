@@ -125,7 +125,7 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "All my projects are collected here. They can be sorted by category for convenience",
+    "description": "All my projects are collected here. They can be sorted by type or category for convenience",
     "items": {
       "first": {
         "id": 1,
