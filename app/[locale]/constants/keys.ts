@@ -21,9 +21,9 @@ export const twoKeysFromSecond = ["second", "third"] as const;
 
 export const fourKeys = ["first", "second", "third", "fourth"] as const;
 
-export const dropdownAllTypes = ["all", "frontend", "backend"] as const;
+export const dropdownAllTypes = ["all", "backend", "frontend"] as const;
 
-export const dropdownTwoTypes = ["frontend", "backend"] as const;
+export const dropdownTwoTypes = ["backend", "frontend"] as const;
 
 export const dropdownCategories = [
   "commercial",
