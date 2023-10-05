@@ -259,7 +259,7 @@ export const projectsEnglishLang: Project[] = [
     development: "frontend",
     type: "individual",
     name: "Photo app",
-    categories: ["js", "React Native", "Redux", "Firebase", "css"],
+    categories: ["js", "React Native", "Redux", "Firebase"],
     image: cover5,
     url: "photo-app",
     features: [
@@ -692,7 +692,7 @@ export const projectsUkrainianLang: Project[] = [
     development: "frontend",
     type: "individual",
     name: "Photo app",
-    categories: ["js", "React Native", "Redux", "Firebase", "css"],
+    categories: ["js", "React Native", "Redux", "Firebase"],
     image: cover5,
     url: "photo-app",
     features: [

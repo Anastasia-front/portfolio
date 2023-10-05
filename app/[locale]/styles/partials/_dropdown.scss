@@ -1,9 +1,16 @@
 @use "./mixins" as *;
+@use "../mixins/" as *;
 
 .dropdown {
   &__button {
     @include flex(row, center, center);
     gap: 0.3rem;
+    @include useOnHover {
+      color: var(--color--blue-grey-2);
+    }
+    @include useOnClick {
+      color: var(--color--blue-grey-3);
+    }
   }
 
   &__list {
@@ -13,8 +20,11 @@
 
   &__item {
     button {
-      &:hover {
-        color: var(--color--white);
+      @include useOnHover {
+        color: var(--color--light-blue-1);
+      }
+      @include useOnClick {
+        color: var(--color--light-blue-3);
       }
     }
   }
@@ -49,6 +59,17 @@
       background-color: var(--color--light-blue-3);
     }
 
+    &__item {
+      button {
+        @include useOnHover {
+          color: var(--color--orange-1);
+        }
+        @include useOnClick {
+          color: var(--color--orange-2);
+        }
+      }
+    }
+
     &__content {
       padding-right: 2rem;
       display: none;
@@ -63,14 +84,28 @@
   }
 }
 [data-theme="dark"] .dropdown {
+  &__button {
+    color: var(--color--light-blue-1);
+
+    @include useOnHover {
+      color: var(--color--light-blue-3);
+    }
+    @include useOnClick {
+      color: var(--color--light-blue-4);
+    }
+  }
+
   &__content {
     background-color: var(--color--light-blue-3);
   }
 
   &__item {
     button {
-      &:hover {
-        color: var(--color--black);
+      @include useOnHover {
+        color: var(--color--light-burger);
+      }
+      @include useOnClick {
+        color: var(--color--orange-1);
       }
     }
   }
@@ -78,6 +113,17 @@
   &-nested {
     &__list {
       background-color: var(--color--orange-2);
+    }
+
+    &__item {
+      button {
+        @include useOnHover {
+          color: var(--color--light-blue-1);
+        }
+        @include useOnClick {
+          color: var(--color--light-blue-3);
+        }
+      }
     }
   }
 }

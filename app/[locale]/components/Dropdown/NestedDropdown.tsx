@@ -35,26 +35,6 @@ export function NestedDropdown({
     setIsHovered(false);
   };
   const handleCategoryClick = (selectedCategory: string) => {
-    //  let mappedCategory = selectedCategory;
-
-    //  switch (selectedCategory) {
-    //    case "first":
-    //      mappedCategory = "commercial";
-    //      break;
-    //    case "second":
-    //      mappedCategory = "individual";
-    //      break;
-    //    case "third":
-    //      mappedCategory = "test";
-    //      break;
-    //    case "fourth":
-    //      mappedCategory = "team";
-    //      break;
-    //    default:
-    //      mappedCategory = "";
-    //      break;
-    //  }
-
     onSelectCategory(selectedCategory);
   };
 
@@ -77,7 +57,7 @@ export function NestedDropdown({
           {dropdownCategories.map(
             (category, index) =>
               interConst(`${category}`) !== "" && (
-                <li key={index} className="dropdown__item">
+                <li key={index} className="dropdown-nested__item">
                   <button onClick={() => handleCategoryClick(category)}>
                     {interConst(`${category}`)}
                   </button>

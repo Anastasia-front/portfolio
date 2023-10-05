@@ -13,7 +13,7 @@
     @include flex(row, space-between, flex-start);
     gap: 3rem;
     position: relative;
-    z-index: 10;
+    z-index: 9;
   }
 
   &__headings {
@@ -23,6 +23,11 @@
 
   &__filter {
     padding-right: 4rem;
+  }
+}
+[data-theme="dark"] .projects {
+  &__headings {
+    color: var(--color--light-blue-1);
   }
 }
 
