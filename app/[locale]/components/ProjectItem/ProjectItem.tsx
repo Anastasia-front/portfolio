@@ -22,7 +22,7 @@ export function ProjectItem({ name, image, categories, onClick }: Project) {
 
   return (
     <motion.li
-      className="project"
+      className="project project-banner"
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
       onClick={onClick}

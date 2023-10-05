@@ -78,7 +78,14 @@
 }
 
 .project {
-  cursor: pointer;
+  &-banner {
+    cursor: pointer;
+  }
+
+  &-page {
+    border: none;
+  }
+
   border-radius: var(--pad--sm);
   border: 1px solid var(--color--dark-opacity);
   color: var(--color--white);
@@ -316,6 +323,10 @@
   }
 }
 [data-theme="dark"] .project {
+  &-page {
+    border: none;
+  }
+
   border: 1px solid var(--color--light-opacity);
   color: var(--color--black);
   background-color: var(--color--black);
@@ -396,7 +407,7 @@
 }
 
 .project-page {
-  padding-top: 15rem;
+  padding-top: 1rem;
   color: var(--color--white);
 
   p {

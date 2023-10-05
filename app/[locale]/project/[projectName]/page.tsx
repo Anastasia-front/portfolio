@@ -56,7 +56,7 @@ export default function Page({ params }: Params) {
   const { description, image1, image2, image3, image4, image5 } = content || {};
 
   return (
-    <section className="project">
+    <section className="project project-page">
       <div className="project__header">
         <motion.img
           className="bg-image"
