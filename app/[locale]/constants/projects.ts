@@ -160,7 +160,6 @@ export const projectsEnglishLang: Project[] = [
     id: 2,
     development: "frontend",
     type: "test",
-
     name: "Carp Travel",
     categories: ["ts", "Next", "Tailwind css"],
     image: cover3,
@@ -225,7 +224,6 @@ export const projectsEnglishLang: Project[] = [
     id: 4,
     development: "frontend",
     type: "individual",
-
     name: "Cinema search",
     categories: ["js", "React", "styled-components"],
     image: cover7,
@@ -255,7 +253,6 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 5,
-
     development: "frontend",
     type: "individual",
     name: "Photo app",
@@ -294,7 +291,6 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 6,
-
     development: "frontend",
     type: "team",
     name: "IceCream",
@@ -321,7 +317,6 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 7,
-
     development: "frontend",
     type: "team",
     name: "News",
@@ -356,7 +351,6 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 8,
-
     development: "frontend",
     type: "team",
     name: "Task Pro",
@@ -395,11 +389,10 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 9,
-
     development: "frontend",
     type: "individual",
     name: "Website for Instagram",
-    categories: ["ts", "React", "scss", "html", "parcel"],
+    categories: ["ts", "React", "scss", "parcel"],
     image: cover9,
     url: "website-for-instagram",
     features: ["Responsive design", "Parallax effect", "And more..."],
@@ -421,7 +414,6 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 10,
-
     development: "frontend",
     type: "individual",
     name: "My blog",
@@ -448,7 +440,6 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 11,
-
     development: "frontend",
     type: "individual",
     name: "PhoneBook App",
@@ -483,11 +474,10 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 12,
-
     development: "frontend",
     type: "test",
     name: "First test",
-    categories: ["js", "React", "Redux", "styled-components", "html"],
+    categories: ["js", "React", "Redux", "styled-components"],
     image: cover12,
     url: "first-test",
     features: ["Responsive design", "And more..."],
@@ -827,7 +817,7 @@ export const projectsUkrainianLang: Project[] = [
     development: "frontend",
     type: "individual",
     name: "Сайт для Instagram",
-    categories: ["ts", "React", "scss", "html", "parcel"],
+    categories: ["ts", "React", "scss", "parcel"],
     image: cover9,
     url: "website-for-instagram",
     features: ["Адаптивний дизайн", "Паралакс ефект", "Та багато іншого..."],
@@ -911,7 +901,7 @@ export const projectsUkrainianLang: Project[] = [
     development: "frontend",
     type: "test",
     name: "Перший тест",
-    categories: ["js", "React", "Redux", "styled-components", "html"],
+    categories: ["js", "React", "Redux", "styled-components"],
     image: cover12,
     url: "first-test",
     features: ["Адаптивний дизайн", "Та багато іншого..."],
