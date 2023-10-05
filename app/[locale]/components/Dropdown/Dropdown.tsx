@@ -59,7 +59,11 @@ export function Dropdown({ handleTypeChange, handleCategoryChange }) {
       className={`dropdown__container projects__filter ${rubik.className}`}
       ref={dropdownRef}
     >
-      <button className="dropdown__button" onClick={toggleDropdown}>
+      <button
+        type="button"
+        className="dropdown__button"
+        onClick={toggleDropdown}
+      >
         {i("title")}
         {isOpen ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />}
       </button>
@@ -70,7 +74,10 @@ export function Dropdown({ handleTypeChange, handleCategoryChange }) {
               if (t(`${type}`) === "all" || t(`${type}`) === "всі") {
                 return (
                   <li key={index} className="dropdown__item">
-                    <button onClick={() => handleTypeSelect(t(`${type}`))}>
+                    <button
+                      type="button"
+                      onClick={() => handleTypeSelect(t(`${type}`))}
+                    >
                       {t(`${type}`)}
                     </button>
                   </li>

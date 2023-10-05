@@ -43,6 +43,7 @@ export function NestedDropdown({
   return (
     <>
       <button
+        type="button"
         className="dropdown-nested__container"
         onClick={() => onSelectType(type)}
         onMouseEnter={handleMouseEnter}
@@ -58,7 +59,10 @@ export function NestedDropdown({
             (category, index) =>
               interConst(`${category}`) !== "" && (
                 <li key={index} className="dropdown-nested__item">
-                  <button onClick={() => handleCategoryClick(category)}>
+                  <button
+                    type="button"
+                    onClick={() => handleCategoryClick(category)}
+                  >
                     {interConst(`${category}`)}
                   </button>
                 </li>
