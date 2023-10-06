@@ -2,8 +2,8 @@
 @use "./mixins" as *;
 
 .banner {
-  @include flex(column, flex-start, flex-start);
-
+  @include flex(row, space-between, flex-start);
+  gap: 2rem;
   color: var(--color--white);
   margin-top: 1.5rem;
   padding: 2rem 3rem;
@@ -19,6 +19,8 @@
   }
   button {
     align-self: flex-end;
+    min-width: 8rem;
+    width: max-content;
   }
 }
 [data-theme="dark"] .banner {

@@ -29,7 +29,7 @@ export function Banner({ text, button }: Props) {
         <ButtonText
           modifier="white"
           text={t("contacts")}
-          padding="0.5rem 1rem"
+          padding="1.5rem 1rem"
           hover="true"
           onClick={context.handleToggle}
         />
