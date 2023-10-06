@@ -170,9 +170,8 @@
     z-index: 9;
 
     &__header {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
+      @include flex(row, flex-start, center);
+      gap: 1rem;
     }
     &__title {
       font-weight: 400;

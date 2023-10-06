@@ -6,6 +6,7 @@ import cover11 from "@/assets/images/projects/project11/cover.png";
 import cover12 from "@/assets/images/projects/project12/cover.png";
 import cover13 from "@/assets/images/projects/project13/cover.png";
 import cover14 from "@/assets/images/projects/project14/cover.png";
+import cover15 from "@/assets/images/projects/project15/cover.png";
 import cover2 from "@/assets/images/projects/project2/cover.png";
 import cover3 from "@/assets/images/projects/project3/cover.png";
 import cover4 from "@/assets/images/projects/project4/cover.png";
@@ -98,6 +99,12 @@ import fourteenthProjectSnippet2 from "@/assets/images/projects/project14/snippe
 import fourteenthProjectSnippet3 from "@/assets/images/projects/project14/snippet3.png";
 import fourteenthProjectSnippet4 from "@/assets/images/projects/project14/snippet4.png";
 import fourteenthProjectSnippet5 from "@/assets/images/projects/project14/snippet5.png";
+
+import fifteenthProjectSnippet1 from "@/assets/images/projects/project15/snippet1.png";
+import fifteenthProjectSnippet2 from "@/assets/images/projects/project15/snippet2.png";
+import fifteenthProjectSnippet3 from "@/assets/images/projects/project15/snippet3.png";
+import fifteenthProjectSnippet4 from "@/assets/images/projects/project15/snippet4.png";
+import fifteenthProjectSnippet5 from "@/assets/images/projects/project15/snippet5.png";
 
 export interface Project {
   id?: number;
@@ -353,10 +360,10 @@ export const projectsEnglishLang: Project[] = [
     id: 8,
     development: "frontend",
     type: "team",
-    name: "Task Pro",
+    name: "Task Pro (frontend)",
     categories: ["js", "React", "Redux", "css"],
     image: cover4,
-    url: "task-pro",
+    url: "task-pro-frontend",
     features: [
       "Frontend",
       "Backend",
@@ -547,6 +554,47 @@ export const projectsEnglishLang: Project[] = [
       image3: fourteenthProjectSnippet3,
       image4: fourteenthProjectSnippet4,
       image5: fourteenthProjectSnippet5,
+    },
+  },
+  {
+    id: 15,
+    development: "backend",
+    type: "team",
+    name: "Task Pro (backend)",
+    categories: ["js", "Node", "Mongoose", "Express"],
+    image: cover15,
+    url: "task-pro-backend",
+    features: [
+      "cors",
+      "dotenv",
+      "jwt",
+      "mongodb",
+      "mongoose",
+      "rest-api",
+      "nodemon",
+      "joi",
+      "bcrypt",
+      "cloudinary",
+      "multer",
+      "nodemailer",
+      "cross-env",
+      "query-string",
+      "swagger-ui-express",
+    ],
+    problem:
+      "On the final team project at the end of the courses, there were two sub-teams - frontend and backend. I was the team lead of the backend development team and led the general presentation on defense",
+    solution: "Our sub-team perfectly coped with the assigned tasks",
+    links: {
+      website: "https://project-react-node-back.onrender.com",
+      github: "https://github.com/Anastasia-front/project-REACT_NODE_BACK",
+    },
+    content: {
+      description: "Backend for a Task Pro application",
+      image1: fifteenthProjectSnippet1,
+      image2: fifteenthProjectSnippet2,
+      image3: fifteenthProjectSnippet3,
+      image4: fifteenthProjectSnippet4,
+      image5: fifteenthProjectSnippet5,
     },
   },
 ];
@@ -778,10 +826,10 @@ export const projectsUkrainianLang: Project[] = [
     id: 8,
     development: "frontend",
     type: "team",
-    name: "Task Pro",
+    name: "Task Pro (frontend)",
     categories: ["js", "React", "Redux", "css"],
     image: cover4,
-    url: "task-pro",
+    url: "task-pro-frontend",
     features: [
       "Frontend",
       "Backend",
@@ -970,6 +1018,47 @@ export const projectsUkrainianLang: Project[] = [
       image3: fourteenthProjectSnippet3,
       image4: fourteenthProjectSnippet4,
       image5: fourteenthProjectSnippet5,
+    },
+  },
+  {
+    id: 15,
+    development: "backend",
+    type: "team",
+    name: "Task Pro (backend)",
+    categories: ["js", "Node", "Mongoose", "Express"],
+    image: cover15,
+    url: "task-pro-backend",
+    features: [
+      "cors",
+      "dotenv",
+      "jwt",
+      "mongodb",
+      "mongoose",
+      "rest-api",
+      "nodemon",
+      "joi",
+      "bcrypt",
+      "cloudinary",
+      "multer",
+      "nodemailer",
+      "cross-env",
+      "query-string",
+      "swagger-ui-express",
+    ],
+    problem:
+      "На фінальному командному проекті при завершенні курсів було дві підкоманди - по фронтенду й бекенду. Я була тім-лідом команди розробників з бекенду й вела загальну презентацію на захисті",
+    solution: "Наша підкоманда чудово впоралася із поставленими завданнями",
+    links: {
+      website: "https://project-react-node-back.onrender.com",
+      github: "https://github.com/Anastasia-front/project-REACT_NODE_BACK",
+    },
+    content: {
+      description: "Backend for a Task Pro application",
+      image1: fifteenthProjectSnippet1,
+      image2: fifteenthProjectSnippet2,
+      image3: fifteenthProjectSnippet3,
+      image4: fifteenthProjectSnippet4,
+      image5: fifteenthProjectSnippet5,
     },
   },
 ];
