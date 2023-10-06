@@ -97,7 +97,7 @@ export function Dropdown({ handleTypeChange, handleCategoryChange }: Props) {
                     <NestedDropdown
                       onSelectType={handleTypeSelect}
                       onSelectCategory={handleCategorySelect}
-                      type={t(`${type}`)}
+                      type={type}
                     />
                   </li>
                 );
