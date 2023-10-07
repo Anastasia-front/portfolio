@@ -12,4 +12,5 @@ export * from "./Progress";
 export * from "./ProgressBar";
 export * from "./ProjectItem";
 export * from "./Projects";
+export * from "./SkillsItem";
 export * from "./Switchers";

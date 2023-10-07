@@ -221,3 +221,22 @@ export const overlayVariants: Variants = {
     },
   },
 };
+
+export const fadeIn = {
+  hidden: {
+    x: -100,
+    y: 0,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "right",
+      delay: 0.5,
+      duration: 0.75,
+      ease: "easeOut",
+    },
+  },
+};

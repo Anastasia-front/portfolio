@@ -3,4 +3,5 @@ export * from "./keys";
 export * from "./menuItems";
 export * from "./projects";
 export * from "./screens";
+export * from "./skills";
 export * from "./types";
