@@ -66,8 +66,10 @@
   gap: 2rem;
 
   img {
-    width: 100px;
+    max-width: 135px;
+    width: auto;
     height: auto;
+    max-height: 100px;
   }
 
   // &__title {
@@ -122,5 +124,5 @@
       var(--color--orange-4) 97.5%
     );
   }
-  background: var(--color--blue-grey-1);
+  background: var(--color--blue-grey-2);
 }
