@@ -1,7 +1,7 @@
-import js from "@/assets/images/skiils/tech/front/js.png";
-import react from "@/assets/images/skiils/tech/front/react.png";
-import redux from "@/assets/images/skiils/tech/front/redux.png";
-import ts from "@/assets/images/skiils/tech/front/ts.png";
+import js from "@/assets/images/skills/tech/front/js.png";
+import react from "@/assets/images/skills/tech/front/react.png";
+import redux from "@/assets/images/skills/tech/front/redux.png";
+import ts from "@/assets/images/skills/tech/front/ts.png";
 
 export const skills = [
   {
