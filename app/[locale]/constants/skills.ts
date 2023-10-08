@@ -147,19 +147,19 @@ export const skillBlocksUkrainian: SkillBlock[] = [
   },
   {
     id: 2,
-    type: "frontend",
+    type: "backend",
     title: "бекенд",
     className: "bg2",
   },
   {
     id: 3,
-    type: "frontend",
+    type: "styles",
     title: "стилі",
     className: "bg3",
   },
   {
     id: 4,
-    type: "frontend",
+    type: "team work",
     title: "командна робота",
     className: "bg4",
   },
