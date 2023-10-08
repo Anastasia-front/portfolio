@@ -1,36 +1,16 @@
 @use "vars" as *;
 @use "./mixins" as *;
+@use "../mixins" as *;
 
 .skills-section {
   margin-top: 4rem;
   margin-bottom: 2rem;
   color: var(--color--blue-grey-2);
 
-  // &__title {
-  //   position: relative;
-  //   padding-bottom: 3rem;
-
-  //   font-weight: 500;
-
-  //   &::after {
-  //     position: absolute;
-  //     content: "";
-  //     bottom: 0;
-  //     left: 0;
-
-  //     height: 1rem;
-  //     width: 100%;
-
-  //     background: var(--color--orange-4);
-  //   }
-  // }
-
   &__list {
     @include flex(row, center, center);
     flex-wrap: wrap;
     gap: 2rem;
-
-    padding: 3rem 1rem 1rem 1rem;
   }
 }
 
@@ -71,45 +51,6 @@
     height: auto;
     max-height: 100px;
   }
-
-  // &__title {
-  //   flex: 0 0 35%;
-  //   align-self: flex-start;
-
-  //   font-weight: 500;
-
-  //   @include flex(row, initial, center);
-
-  //   @media screen and (max-width: 1045px) {
-  //     flex-direction: column;
-  //   }
-
-  //   span:first-child {
-  //     margin-right: 1rem;
-  //     padding-top: 0.88rem;
-  //     flex: 0 0 10%;
-  //     align-self: flex-start;
-
-  //     color: var(--color--blue-grey-1);
-  //   }
-  // }
-
-  // &__description {
-  //   flex: 0 0 65%;
-  //   line-height: 1.6;
-  // }
-
-  // &::after {
-  //   position: absolute;
-  //   content: "";
-  //   bottom: 0;
-  //   left: 0;
-
-  //   height: 3px;
-  //   width: 100%;
-
-  //   background: linear-gradient(to right, var(--color--orange-4), #6366f1);
-  // }
 }
 [data-theme="dark"] .skills-item {
   &::before {
@@ -125,4 +66,120 @@
     );
   }
   background: var(--color--blue-grey-2);
+}
+
+.skill-blocks {
+  @include flex(column, center, center);
+  gap: 1rem;
+  padding-top: 3rem;
+}
+
+.bg1 {
+  background: url("/images/bg/bg-1.jpg");
+}
+.bg2 {
+  background: url("/images/bg/bg-2.jpg");
+}
+.bg3 {
+  background: url("/images/bg/bg-3.jpg");
+}
+.bg4 {
+  background: url("/images/bg/bg-4.jpg");
+}
+
+.skill-block {
+  border-radius: var(--pad--sm);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 60px;
+  cursor: pointer;
+  transform-origin: center top;
+  transition: transform 0.7s ease-out;
+
+  &__active {
+    transform: scale(1.03);
+    margin-bottom: 1rem;
+  }
+
+  @include useOnHover {
+    box-shadow: inset 3px 6px 6px 6px var(--color--grey-opacity);
+  }
+  @include useOnClick {
+    box-shadow: inset 3px 6px 6px 6px var(--color--light-opacity);
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100px;
+
+    object-fit: cover;
+    border-radius: var(--pad--sm);
+  }
+
+  &__title {
+    padding: 1rem 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color--white);
+  }
+
+  &:nth-child(2n + 1) .skill-block__title {
+    text-shadow: 2px 2px 2px var(--color--light-blue-4);
+    @include useOnHover {
+      color: var(--color--light-blue-3);
+      text-shadow: 2px 2px 2px var(--color--white);
+    }
+  }
+
+  &:nth-child(2n) .skill-block__title {
+    text-shadow: 2px 2px 2px var(--color--orange-4);
+    @include useOnHover {
+      color: var(--color--orange-2);
+      text-shadow: 2px 2px 2px var(--color--white);
+    }
+  }
+
+  &__overlay {
+    padding: 1rem 0;
+    @include flex(column, center, center);
+    gap: 1rem;
+    background: var(--color--grey-opacity);
+    border-radius: var(--pad--sm);
+  }
+}
+[data-theme="dark"] .skill-block {
+  @include useOnHover {
+    box-shadow: inset 3px 6px 6px 6px var(--color--dark-opacity);
+  }
+  @include useOnClick {
+    box-shadow: inset 3px 6px 6px 6px var(--color--grey-opacity);
+  }
+
+  &__title {
+    color: var(--color--white-grey);
+  }
+
+  &:nth-child(2n) .skill-block__title {
+    text-shadow: 2px 2px 2px var(--color--light-blue-4);
+    @include useOnHover {
+      color: var(--color--light-blue-3);
+      text-shadow: 2px 2px 2px var(--color--white);
+    }
+  }
+
+  &:nth-child(2n + 1) .skill-block__title {
+    text-shadow: 2px 2px 2px var(--color--orange-4);
+    @include useOnHover {
+      color: var(--color--orange-2);
+      text-shadow: 2px 2px 2px var(--color--white);
+    }
+  }
+
+  &__overlay {
+    background: var(--color--dark-opacity);
+  }
 }

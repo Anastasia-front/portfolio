@@ -28,6 +28,6 @@ module.exports = withNextIntl({
   },
 
   eslint: {
-    dirs: ["src"], // Only run ESLint on the 'src' directory during production builds (next build)
+    dirs: ["app"], // Only run ESLint on the 'src' directory during production builds (next build)
   },
 });

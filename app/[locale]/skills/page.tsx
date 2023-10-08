@@ -4,12 +4,12 @@ import { useTranslations } from "next-intl";
 
 import { motion } from "framer-motion";
 
-import { SkillsItem } from "@/components";
-import { skills } from "@/constants";
+import { Accordion } from "@/components";
 import { gridVariants } from "@/utils";
 
 export default function SkillsPage() {
   const t = useTranslations("skills");
+
   return (
     <div className="u-pad-2">
       <div className="projects__headings">
@@ -21,11 +21,8 @@ export default function SkillsPage() {
         </motion.h6>
       </div>
 
-      <div className="skills-section__list">
-        {skills.map((skill, index) => (
-          <SkillsItem key={index} {...skill} />
-        ))}
-      </div>
+      <Accordion />
     </div>
+    // Изображение от <a href="https://ru.freepik.com/free-vector/background-realistic-abstract-technology-particle_6938839.htm#query=technology%20background&position=0&from_view=search&track=ais">Freepik</a>
   );
 }
