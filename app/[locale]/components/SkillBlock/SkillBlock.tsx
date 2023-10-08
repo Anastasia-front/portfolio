@@ -1,7 +1,5 @@
 "use client";
 
-import { StaticImageData } from "next/image";
-
 import { motion } from "framer-motion";
 
 import { SkillItem } from "@/components";
@@ -10,7 +8,7 @@ import { fadeIn } from "@/utils";
 
 interface Props {
   id: number;
-  image: StaticImageData;
+  type: "team work" | "backend" | "frontend" | "styles";
   title: string;
   className: string;
   active: number;
@@ -20,11 +18,12 @@ interface Props {
 export function SkillBlock({
   id,
   title,
+  type,
   className,
   active,
   handleClick,
 }: Props) {
-  const skillBlock = skills.filter((skill) => skill.type === title);
+  const skillBlock = skills.filter((skill) => skill.type === type);
 
   const handleToggle = (id: number) => {
     if (id === active) {

@@ -46,9 +46,11 @@
       }
     }
   }
+
   &__item-color {
     > a {
       color: var(--color--white-grey);
+
       @include useOnHover {
         color: var(--color--light-blue-1);
       }
@@ -60,9 +62,11 @@
 }
 [data-theme="dark"] .container-items {
   background: var(--color--blue-grey-4);
+
   &__item {
     > a {
       color: var(--color--white-grey);
+
       @include useOnHover {
         color: var(--color--light-blue-3);
       }
@@ -71,6 +75,7 @@
       }
     }
   }
+
   &__item-color {
     > a {
       color: var(--color--blue-grey-2);
@@ -87,7 +92,6 @@
 .navigation-items {
   padding: 0.3rem 0.7rem;
   border-radius: 60px;
-
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -112,9 +116,11 @@
       }
     }
   }
+
   &__item-color {
     > a {
       color: var(--color--white-grey);
+
       @include useOnHover {
         color: var(--color--light-blue-2);
       }
@@ -128,6 +134,7 @@
   &__item {
     > a {
       color: var(--color--white-grey);
+
       @include useOnHover {
         color: var(--color--light-blue-3);
       }
@@ -139,6 +146,7 @@
   &__item-color {
     > a {
       color: var(--color--blue-grey-2);
+
       @include useOnHover {
         color: var(--color--orange-1);
       }
@@ -154,6 +162,7 @@
   > a {
     color: var(--color--light-blue-3);
   }
+
   &__banner {
     > a {
       color: var(--color--light-blue-1);
@@ -164,6 +173,7 @@
   > a {
     color: var(--color--orange-2);
   }
+
   &__banner {
     > a {
       color: var(--color--orange-2);
@@ -182,9 +192,9 @@
   height: 100vh;
   background: var(--color--dark-opacity);
   backdrop-filter: blur(3px);
-
   opacity: 0;
   visibility: hidden;
+
   &__active {
     opacity: 1;
     visibility: visible;
@@ -200,9 +210,11 @@
   height: 100vh;
   background: var(--color--white);
   opacity: 0;
+  transition: var(--transition);
   transform: translateY(-100%);
 
   &__active {
+    transition: var(--transition);
     opacity: 1;
     transform: translateY(0);
   }
@@ -222,6 +234,7 @@
   padding: 8rem 3rem;
   overflow: auto;
   gap: 4rem;
+
   @include useScreen("mobile-lg") {
     padding: 8rem;
   }

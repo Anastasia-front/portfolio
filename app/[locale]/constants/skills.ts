@@ -104,40 +104,63 @@ export const skills: Skill[] = [
   { type: "team work", title: "atlassian", image: atlassian },
 ];
 
-import bg1 from "@/assets/images/skills/bg/bg-1.jpg";
-import bg2 from "@/assets/images/skills/bg/bg-2.jpg";
-import bg3 from "@/assets/images/skills/bg/bg-3.jpg";
-import bg4 from "@/assets/images/skills/bg/bg-4.jpg";
 interface SkillBlock {
   id: number;
-  image: StaticImageData;
+  type: "team work" | "backend" | "frontend" | "styles";
   title: string;
   className: string;
 }
 
-export const skillBlocks: SkillBlock[] = [
+export const skillBlocksEnglish: SkillBlock[] = [
   {
     id: 1,
-    image: bg1,
+    type: "frontend",
     title: "frontend",
     className: "bg1",
   },
   {
     id: 2,
-    image: bg2,
+    type: "backend",
     title: "backend",
     className: "bg2",
   },
   {
     id: 3,
-    image: bg3,
+    type: "styles",
     title: "styles",
     className: "bg3",
   },
   {
     id: 4,
-    image: bg4,
+    type: "team work",
     title: "team work",
+    className: "bg4",
+  },
+];
+
+export const skillBlocksUkrainian: SkillBlock[] = [
+  {
+    id: 1,
+    type: "frontend",
+    title: "фронтенд",
+    className: "bg1",
+  },
+  {
+    id: 2,
+    type: "frontend",
+    title: "бекенд",
+    className: "bg2",
+  },
+  {
+    id: 3,
+    type: "frontend",
+    title: "стилі",
+    className: "bg3",
+  },
+  {
+    id: 4,
+    type: "frontend",
+    title: "командна робота",
     className: "bg4",
   },
 ];
