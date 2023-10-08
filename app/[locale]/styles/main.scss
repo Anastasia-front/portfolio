@@ -62,6 +62,22 @@ a {
   padding: 0;
   text-decoration: none;
   cursor: pointer;
+  color: var(--color--light-blue-4);
+  @include useOnHover {
+    color: var(--color--light-blue-2);
+  }
+  @include useOnClick {
+    color: var(--color--light-blue-3);
+  }
+}
+[data-theme="dark"] a {
+  color: var(--color--orange-1);
+  @include useOnHover {
+    color: var(--color--orange-2);
+  }
+  @include useOnClick {
+    color: var(--color--orange-3);
+  }
 }
 
 button {
@@ -329,4 +345,9 @@ body {
   &__title {
     color: var(--color--blue-grey-3);
   }
+}
+
+.license {
+  margin-left: auto;
+  padding-top: 2rem;
 }
