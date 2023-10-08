@@ -13,17 +13,28 @@ import react from "@/assets/images/skills/tech/front/react.png";
 import redux from "@/assets/images/skills/tech/front/redux.png";
 import restApiFront from "@/assets/images/skills/tech/front/rest-api.png";
 import ts from "@/assets/images/skills/tech/front/ts.png";
+import vite from "@/assets/images/skills/tech/front/vite.png";
 import webpack from "@/assets/images/skills/tech/front/webpack.png";
 
+import bcrypt from "@/assets/images/skills/tech/back/bcrypt.png";
+import cloudinary from "@/assets/images/skills/tech/back/cloudinary.png";
+import cors from "@/assets/images/skills/tech/back/cors.png";
 import crudBack from "@/assets/images/skills/tech/back/crud.png";
+import dotenv from "@/assets/images/skills/tech/back/dotenv.png";
 import express from "@/assets/images/skills/tech/back/express-js.png";
 import firebase from "@/assets/images/skills/tech/back/firebase.png";
+import joi from "@/assets/images/skills/tech/back/joi.png";
 import jwt from "@/assets/images/skills/tech/back/jwt.png";
 import mongo from "@/assets/images/skills/tech/back/mongo-db.png";
+import mongoose from "@/assets/images/skills/tech/back/mongoose.png";
+import morgan from "@/assets/images/skills/tech/back/morgan.png";
+import multer from "@/assets/images/skills/tech/back/multer.png";
 import node from "@/assets/images/skills/tech/back/node-js.png";
+import nodemailer from "@/assets/images/skills/tech/back/nodemailer.png";
 import postman from "@/assets/images/skills/tech/back/postman.png";
 import restApiBack from "@/assets/images/skills/tech/back/rest-api.png";
 import sendGrid from "@/assets/images/skills/tech/back/send-grid.png";
+import swagger from "@/assets/images/skills/tech/back/swagger.png";
 
 import css from "@/assets/images/skills/tech/styles/css.png";
 import mui from "@/assets/images/skills/tech/styles/mui.png";
@@ -44,40 +55,51 @@ interface Skill {
 export const skills: Skill[] = [
   {
     type: "front",
-    title: "JS",
+    title: "js",
     image: js,
   },
-  { type: "front", title: "TS", image: ts },
-  { type: "front", title: "REACT", image: react },
-  { type: "front", title: "REDUX", image: redux },
-  { type: "front", title: "NEXT", image: next },
-  { type: "front", title: "CRUD FRONTEND", image: crudFront },
-  { type: "front", title: "FIGMA", image: figma },
-  { type: "front", title: "GIT", image: git },
-  { type: "front", title: "GITHUB", image: gitHub },
-  { type: "front", title: "HTML", image: html },
-  { type: "front", title: "PARCEL", image: parcel },
-  { type: "front", title: "REACT NATIVE", image: reactNative },
-  { type: "front", title: "REST-API FRONTEND", image: restApiFront },
-  { type: "front", title: "WEBPACK", image: webpack },
+  { type: "front", title: "ts", image: ts },
+  { type: "front", title: "react", image: react },
+  { type: "front", title: "redux", image: redux },
+  { type: "front", title: "next", image: next },
+  { type: "front", title: "crud frontend", image: crudFront },
+  { type: "front", title: "figma", image: figma },
+  { type: "front", title: "git", image: git },
+  { type: "front", title: "github", image: gitHub },
+  { type: "front", title: "html", image: html },
+  { type: "front", title: "parcel", image: parcel },
+  { type: "front", title: "react native", image: reactNative },
+  { type: "front", title: "rest-api frontend", image: restApiFront },
+  { type: "front", title: "webpack", image: webpack },
+  { type: "front", title: "vite", image: vite },
 
-  { type: "back", title: "CRUD BACKEND", image: crudBack },
-  { type: "back", title: "EXPRESS JS", image: express },
-  { type: "back", title: "FIREBASE", image: firebase },
-  { type: "back", title: "JWT", image: jwt },
-  { type: "back", title: "MONGO DB", image: mongo },
-  { type: "back", title: "NODE JS", image: node },
-  { type: "back", title: "POSTMAN", image: postman },
-  { type: "back", title: "REST-API BACKEND", image: restApiBack },
-  { type: "back", title: "SEND-GRID", image: sendGrid },
+  { type: "back", title: "crud backend", image: crudBack },
+  { type: "back", title: "nodemailer", image: nodemailer },
+  { type: "back", title: "morgan", image: morgan },
+  { type: "back", title: "joi", image: joi },
+  { type: "back", title: "mongoose", image: mongoose },
+  { type: "back", title: "cloudinary", image: cloudinary },
+  { type: "back", title: "express js", image: express },
+  { type: "back", title: "firebase", image: firebase },
+  { type: "back", title: "jwt", image: jwt },
+  { type: "back", title: "mongo db", image: mongo },
+  { type: "back", title: "node js", image: node },
+  { type: "back", title: "postman", image: postman },
+  { type: "back", title: "rest-api backend", image: restApiBack },
+  { type: "back", title: "send-grid", image: sendGrid },
+  { type: "back", title: "bcrypt", image: bcrypt },
+  { type: "back", title: "swagger", image: swagger },
+  { type: "back", title: "multer", image: multer },
+  { type: "back", title: "dotenv", image: dotenv },
+  { type: "back", title: "cors", image: cors },
 
-  { type: "styles", title: "CSS", image: css },
-  { type: "styles", title: "MUI", image: mui },
-  { type: "styles", title: "SASS", image: sass },
-  { type: "styles", title: "TAILWIND", image: tailwind },
+  { type: "styles", title: "css", image: css },
+  { type: "styles", title: "mui", image: mui },
+  { type: "styles", title: "sass", image: sass },
+  { type: "styles", title: "tailwind", image: tailwind },
 
-  { type: "soft", title: "ATLASSIAN", image: atlassian },
-  { type: "soft", title: "JIRA", image: jira },
-  { type: "soft", title: "SCRUM", image: scrum },
-  { type: "soft", title: "TRELLO", image: trello },
+  { type: "soft", title: "atlassian", image: atlassian },
+  { type: "soft", title: "jira", image: jira },
+  { type: "soft", title: "scrum", image: scrum },
+  { type: "soft", title: "trello", image: trello },
 ];
