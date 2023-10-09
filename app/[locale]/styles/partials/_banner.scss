@@ -5,7 +5,7 @@
   @include flex(row, space-between, center);
   margin-top: 1.5rem;
   padding: 2rem;
-  border-radius: 1.5rem;
+  border-radius: var(--border-radius--lg);
   color: var(--color--white);
   background: radial-gradient(
     80.97% 80.37% at 56.01% 19.03%,
@@ -42,7 +42,7 @@
   min-height: 15rem;
   margin-top: 1.5rem;
   padding: 2.5rem;
-  border-radius: 1.5rem 1.5rem 0 0;
+  border-radius: var(--border-radius--lg) var(--border-radius--lg) 0 0;
   background: radial-gradient(
     80.97% 80.37% at 56.01% 19.03%,
     var(--color--orange-4) 0%,

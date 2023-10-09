@@ -31,7 +31,7 @@
 .swiper-slide {
   @include flex(row, center, center);
   width: max-content !important;
-  border-radius: 18px;
+  border-radius: var(--border-radius--sm);
 }
 
 .swiper-slide-skill {

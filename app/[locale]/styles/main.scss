@@ -124,7 +124,7 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: 1rem;
+    border-radius: var(--border-radius--md);
     background: linear-gradient(to top, #fca26e 20%, #fcfbfc 50%, #68b8c1 100%);
   }
 }
@@ -154,7 +154,7 @@ body {
 .logo {
   &__img {
     border: 1px solid var(--color--dark-burger);
-    border-radius: 50%;
+    border-radius: var(--border-radius--rounded);
     object-fit: contain;
   }
 
@@ -202,7 +202,7 @@ body {
     align-items: center;
     width: max-content;
     padding: 2rem;
-    border-radius: 3%;
+    border-radius: var(--border-radius--sm);
     background-color: var(--color--light-opacity);
     gap: 1rem;
   }
@@ -245,7 +245,7 @@ body {
         width: 30px;
         height: 30px;
         border: 2px solid var(--color--white);
-        border-radius: 50%;
+        border-radius: var(--border-radius--rounded);
         color: var(--color--white);
 
         @include useOnHover {
@@ -261,7 +261,7 @@ body {
             top: 35px;
             width: max-content;
             padding: 0.5rem;
-            border-radius: 1rem;
+            border-radius: var(--border-radius--md);
             color: var(--color--white);
             font-size: 10px;
             content: attr(data-text);

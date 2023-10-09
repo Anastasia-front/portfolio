@@ -22,7 +22,7 @@
 .container-items {
   @include flex(row, space-between, center);
   padding: 0.3rem 0.6rem;
-  border-radius: 60px;
+  border-radius: var(--border-radius--lg);
   gap: 1rem;
 
   &__frame {
@@ -92,7 +92,7 @@
   justify-content: center;
   align-items: center;
   padding: 0.3rem 0.7rem;
-  border-radius: 60px;
+  border-radius: var(--border-radius--lg);
   gap: 2rem;
 
   @include useScreen("tablet-xl") {

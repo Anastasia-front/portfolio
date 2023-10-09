@@ -29,7 +29,7 @@
       top: 20%;
       left: 50%;
       max-width: 80%;
-      border-radius: 16px;
+      border-radius: var(--border-radius--sm);
       pointer-events: none;
       filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
       transform: translateX(-50%);
@@ -181,7 +181,7 @@
     max-height: 100vh;
     margin: 0 auto;
     border: 2px solid var(--color--blue-grey-4);
-    border-radius: 16px;
+    border-radius: var(--border-radius--sm);
     pointer-events: none;
 
     &-progress {

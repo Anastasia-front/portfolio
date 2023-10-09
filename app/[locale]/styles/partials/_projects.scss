@@ -134,7 +134,7 @@
       width: 100%;
       height: auto;
       max-height: 80vh;
-      border-radius: 1.5rem;
+      border-radius: var(--border-radius--lg);
       object-fit: cover;
     }
 
@@ -144,7 +144,7 @@
       left: 0;
       width: 100%;
       height: 80vh;
-      border-radius: 1.5rem;
+      border-radius: var(--border-radius--lg);
       background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.3),
@@ -183,7 +183,7 @@
 
         span {
           padding: 0.3rem 0.8rem;
-          border-radius: 30px;
+          border-radius: var(--border-radius--lg);
           color: var(--color--white);
           background-color: var(--color--grey-opacity);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -275,7 +275,7 @@
     .horizontal-images {
       display: grid;
       margin-top: 0;
-      border-radius: 0.5rem;
+      border-radius: var(--border-radius--sm);
       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
       grid-gap: 3rem;
 
@@ -286,7 +286,7 @@
       > img {
         width: 100%;
         height: 100%;
-        border-radius: 0.5rem;
+        border-radius: var(--border-radius--sm);
         object-fit: cover;
       }
 
@@ -416,7 +416,7 @@
         width: 4rem;
         height: 4rem;
         border: 2px solid #fafafc;
-        border-radius: 50%;
+        border-radius: var(--border-radius--rounded);
         background-color: #fff;
         box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
 
@@ -505,7 +505,7 @@
   justify-content: space-between;
   width: calc(100% - 2rem);
   height: calc(100% - 2rem);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius--sm);
   color: var(--color--black);
   transform: translate(-50%, -50%);
 
@@ -517,7 +517,7 @@
 
     span {
       padding: 0.3rem 0.8rem;
-      border-radius: 30px;
+      border-radius: var(--border-radius--md);
       background-color: var(--color--white);
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
@@ -525,7 +525,7 @@
 
   &__title {
     padding: 0.5rem 0.8rem;
-    border-radius: 30px;
+    border-radius: var(--border-radius--lg);
     font-weight: 500;
     background-color: var(--color--white);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
