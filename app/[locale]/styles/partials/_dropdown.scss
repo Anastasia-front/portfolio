@@ -4,7 +4,7 @@
 .dropdown {
   &__button {
     @include flex(row, center, center);
-    gap: 0.3rem;
+    color: var(--color--light-blue-3);
     background-image: linear-gradient(
       to right,
       var(--color--orange-4) 10%,
@@ -13,8 +13,9 @@
       var(--color--orange-2)
     );
     background-clip: text;
+    gap: 0.3rem;
     -webkit-text-fill-color: transparent;
-    color: var(--color--light-blue-3);
+
     @include useOnHover {
       color: var(--color--light-blue-2);
       background-image: linear-gradient(
@@ -58,13 +59,13 @@
   }
 
   &__content {
-    border-radius: var(--pad--sm);
-    padding: 1rem 1rem 0.5rem 0.5rem;
+    z-index: 1;
     position: absolute;
     top: 1.5rem;
     left: -1rem;
+    padding: 1rem 1rem 0.5rem 0.5rem;
+    border-radius: var(--pad--sm);
     background-color: var(--color--orange-2);
-    z-index: 1;
     button {
       color: var(--color--white);
       text-transform: uppercase;
@@ -73,8 +74,8 @@
 
   &-nested {
     &__container {
-      padding: 0.11rem;
       position: relative;
+      padding: 0.11rem;
       &:hover + div,
       &:hover + .dropdown-nested__content {
         display: block;
@@ -82,8 +83,8 @@
     }
 
     &__list {
-      border-radius: var(--pad--sm);
       padding: 1rem 1rem 0.5rem 0.5rem;
+      border-radius: var(--pad--sm);
       background-color: var(--color--light-blue-3);
     }
 
@@ -99,12 +100,12 @@
     }
 
     &__content {
-      padding-right: 2rem;
       display: none;
+      z-index: 1;
       position: absolute;
       top: 50px;
       right: 80%;
-      z-index: 1;
+      padding-right: 2rem;
       &:hover {
         display: block;
       }
@@ -113,6 +114,7 @@
 }
 [data-theme="dark"] .dropdown {
   &__button {
+    color: var(--color--orange-3);
     background-image: linear-gradient(
       to right,
       var(--color--light-blue-4) 10%,
@@ -120,7 +122,7 @@
       var(--color--light-blue-4) 10%,
       var(--color--light-blue-2)
     );
-    color: var(--color--orange-3);
+
     @include useOnHover {
       color: var(--color--orange-2);
       background-image: linear-gradient(

@@ -3,22 +3,23 @@
 @use "../mixins/" as *;
 
 .projects {
-  margin-top: 3rem;
   display: grid;
+  margin-top: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: var(--pad--sm-2);
   grid-auto-flow: dense;
 
   &__header {
     @include flex(row, space-between, flex-start);
-    gap: 3rem;
-    position: relative;
     z-index: 9;
+    position: relative;
+    gap: 3rem;
   }
 
   &__headings {
     @include flex(column, flex-start, flex-start);
     gap: 0.5rem;
+
     h1 {
       background-image: linear-gradient(
         to right,
@@ -31,6 +32,7 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
     h6 {
       background-image: linear-gradient(
         to right,
@@ -46,10 +48,11 @@
   }
 
   &__filter {
+    padding-right: 4rem;
+
     button {
       text-transform: uppercase;
     }
-    padding-right: 4rem;
   }
 }
 [data-theme="dark"] .projects {
@@ -64,6 +67,7 @@
         var(--color--orange-2)
       );
     }
+
     h6 {
       background-image: linear-gradient(
         to right,
@@ -78,6 +82,12 @@
 }
 
 .project {
+  border: 1px solid var(--color--dark-opacity);
+  border-radius: var(--pad--sm);
+  color: var(--color--white);
+  background-color: var(--color--white);
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
+
   &-banner {
     cursor: pointer;
   }
@@ -86,19 +96,11 @@
     border: none;
   }
 
-  border-radius: var(--pad--sm);
-  border: 1px solid var(--color--dark-opacity);
-  color: var(--color--white);
-  background-color: var(--color--white);
-
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
-
   img {
     width: 100%;
     height: 260px;
-    object-fit: cover;
-
     border-radius: var(--pad--sm);
+    object-fit: cover;
 
     @include useScreen("tablet-md") {
       height: auto;
@@ -108,7 +110,6 @@
   &__title {
     padding: var(--pad--sm-2);
     font-weight: 400;
-
     background: linear-gradient(
       to right,
       var(--color--light-blue-2),
@@ -130,44 +131,36 @@
       position: absolute;
       top: 0;
       left: 0;
-
       width: 100%;
       height: auto;
       max-height: 80vh;
-
-      object-fit: cover;
-
       border-radius: 1.5rem;
+      object-fit: cover;
     }
 
     .overlay {
       position: absolute;
       top: 0;
       left: 0;
-
       width: 100%;
       height: 80vh;
-
+      border-radius: 1.5rem;
       background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.9)
       );
-
-      border-radius: 1.5rem;
     }
   }
 
   .banner {
-    overflow-x: hidden;
-    position: absolute;
-    left: 1.5rem;
-    bottom: 5rem;
-
-    width: calc(100% - 3rem);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-
     z-index: 9;
+    position: absolute;
+    bottom: 5rem;
+    left: 1.5rem;
+    width: calc(100% - 3rem);
+    overflow-x: hidden;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 
     &__header {
       @include flex(row, flex-start, center);
@@ -191,10 +184,9 @@
         span {
           padding: 0.3rem 0.8rem;
           border-radius: 30px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
           color: var(--color--white);
           background-color: var(--color--grey-opacity);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
       }
     }
@@ -202,22 +194,15 @@
 
   &__content {
     &__text {
-      padding: 0 2rem;
-
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
-
-      gap: 3rem;
-
+      padding: 0 2rem;
       font-weight: 500;
-
       transition: var(--transition);
+      grid-template-columns: repeat(1, 1fr);
+      gap: 3rem;
 
       @include useScreen("tablet-sm") {
         padding: 0 4rem;
-      }
-
-      @include useScreen("tablet-sm") {
         grid-template-columns: repeat(2, 1fr);
       }
       @include useScreen("tablet-lg") {
@@ -228,15 +213,15 @@
       }
 
       .features li {
-        list-style: square;
         margin-left: 1rem;
+        list-style: square;
       }
 
       h4 {
         margin-bottom: 1rem;
-        font-weight: 500;
-
         color: var(--color--light-blue-3);
+
+        font-weight: 500;
       }
 
       li,
@@ -251,22 +236,24 @@
         }
 
         a {
-          padding-bottom: 0.4rem;
           position: relative;
+          padding-bottom: 0.4rem;
           transition: var(--transition);
+
           @include useOnHover {
             color: var(--color--orange-3);
           }
           @include useOnClick {
             color: var(--color--orange-4);
           }
+
           &::after {
             position: absolute;
             bottom: 0;
             left: 0;
-            content: "";
             width: 100%;
             height: 1px;
+            content: "";
             background-color: var(--color--orange-2);
           }
         }
@@ -280,18 +267,17 @@
 
     &__screenshots {
       img {
-        border: 1px solid var(--color--light-blue-3);
         max-height: 90vh;
+        border: 1px solid var(--color--light-blue-3);
       }
     }
 
     .horizontal-images {
       display: grid;
+      margin-top: 0;
+      border-radius: 0.5rem;
       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
       grid-gap: 3rem;
-      margin-top: 0;
-
-      border-radius: 0.5rem;
 
       @include useScreen("tablet-md") {
         margin-top: 1rem;
@@ -300,8 +286,8 @@
       > img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
         border-radius: 0.5rem;
+        object-fit: cover;
       }
 
       &__fullscreen {
@@ -309,10 +295,11 @@
         padding: 2rem;
 
         > img {
-          max-width: 100%;
           width: auto;
+          max-width: 100%;
           height: auto;
           object-fit: cover;
+
           &:not(:first-child) {
             margin-top: 1rem;
           }
@@ -322,13 +309,13 @@
   }
 }
 [data-theme="dark"] .project {
-  &-page {
-    border: none;
-  }
-
   border: 1px solid var(--color--light-opacity);
   color: var(--color--black);
   background-color: var(--color--black);
+
+  &-page {
+    border: none;
+  }
 
   .banner {
     &__categories {
@@ -377,10 +364,10 @@
   flex: 0 0 50%;
 
   > img {
-    border-top-left-radius: var(--pad--sm);
-    border-bottom-left-radius: var(--pad--sm);
-    border-top-right-radius: 0;
     height: auto;
+    border-top-left-radius: var(--pad--sm);
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--pad--sm);
 
     @include useScreen("tablet-md") {
       height: 100%;
@@ -399,6 +386,7 @@
 .project__image {
   > img {
     height: auto;
+
     @include useScreen("tablet-md") {
       height: 100%;
     }
@@ -410,29 +398,27 @@
   color: var(--color--white);
 
   p {
-    line-height: 1.6;
     font-weight: 500;
+    line-height: 1.6;
   }
 
   &__header {
     @include flex(column, center, center);
 
     &__profile {
-      margin-top: 2rem;
-      margin-bottom: 8rem;
-
       display: flex;
       align-items: center;
+      margin-top: 2rem;
+      margin-bottom: 8rem;
       gap: 1rem;
 
       .logo {
         width: 4rem;
         height: 4rem;
-
-        background-color: #fff;
-        border-radius: 50%;
-        box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
         border: 2px solid #fafafc;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
 
         img {
           padding: 0.4rem;
@@ -447,8 +433,8 @@
     }
 
     &__image {
-      padding-left: 2rem;
       right: 0;
+      padding-left: 2rem;
 
       > img {
         width: 100%;
@@ -460,11 +446,10 @@
   }
 
   &__title {
-    padding: 0 8rem;
     max-width: 1200px;
-
-    font-weight: 600;
     margin-bottom: var(--pad--sm-2);
+    padding: 0 8rem;
+    font-weight: 600;
   }
 
   &__content {
@@ -479,37 +464,29 @@
     }
 
     &__introduction {
-      font-weight: 500;
-      line-height: 1.4;
-
       padding: 0 8rem 4rem 8rem;
-    }
+      font-weight: 500;
 
-    &__outro {
-      margin: 0 2rem;
-      @include useScreen("tablet-md") {
-        margin: 0 8rem;
-      }
+      line-height: 1.4;
     }
 
     &__intro-image {
-      height: auto;
       width: 100%;
+      height: auto;
+      padding-bottom: 4rem;
       object-fit: cover;
       object-position: center top;
-
-      padding-bottom: 4rem;
     }
 
     &__list li {
-      padding: 1rem 0;
-
-      list-style: decimal;
       margin: 0 4rem;
+      padding: 1rem 0;
+      list-style: decimal;
 
       @include useScreen("tablet-md") {
         margin: 0 12rem;
       }
+
       p:first-child {
         padding-bottom: 1rem;
 
@@ -520,43 +497,37 @@
 }
 
 .hover {
-  color: var(--color--black);
-
-  width: calc(100% - 2rem);
-  height: calc(100% - 2rem);
-
+  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
   border-radius: 0.5rem;
+  color: var(--color--black);
+  transform: translate(-50%, -50%);
 
   &__categories {
-    align-self: flex-end;
     display: flex;
     align-items: center;
+    align-self: flex-end;
     gap: 0.5rem;
 
     span {
       padding: 0.3rem 0.8rem;
-      background-color: var(--color--white);
-
       border-radius: 30px;
+      background-color: var(--color--white);
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
   }
 
   &__title {
     padding: 0.5rem 0.8rem;
-    font-weight: 500;
-
-    background-color: var(--color--white);
     border-radius: 30px;
+    font-weight: 500;
+    background-color: var(--color--white);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
 }

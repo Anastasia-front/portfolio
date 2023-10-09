@@ -32,16 +32,16 @@ h3 {
   font-size: clamp(1.2rem, 1vw, 1.55rem);
 }
 h4 {
-  font-size: clamp(1rem, 1vw, 1.35rem);
   font-weight: normal;
+  font-size: clamp(1rem, 1vw, 1.35rem);
 }
 h5 {
-  font-size: clamp(0.95rem, 1vw, 1rem);
   font-weight: normal;
+  font-size: clamp(0.95rem, 1vw, 1rem);
 }
 h6 {
-  font-size: clamp(0.8rem, 1vw, 0.75rem);
   font-weight: normal;
+  font-size: clamp(0.8rem, 1vw, 0.75rem);
 }
 
 p,
@@ -57,12 +57,13 @@ li {
 }
 
 a {
-  font-size: clamp(0.7rem, 1vw, 0.2rem);
   margin: 0;
   padding: 0;
+  color: var(--color--light-blue-4);
+  font-size: clamp(0.7rem, 1vw, 0.2rem);
   text-decoration: none;
   cursor: pointer;
-  color: var(--color--light-blue-4);
+
   @include useOnHover {
     color: var(--color--light-blue-2);
   }
@@ -72,6 +73,7 @@ a {
 }
 [data-theme="dark"] a {
   color: var(--color--orange-1);
+
   @include useOnHover {
     color: var(--color--orange-2);
   }
@@ -81,13 +83,13 @@ a {
 }
 
 button {
-  font-size: clamp(1rem, 1vw, 0.35rem);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
   border: none;
   outline: none;
+  font-size: clamp(1rem, 1vw, 0.35rem);
   cursor: pointer;
   background: none;
 }
@@ -98,20 +100,20 @@ img {
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   list-style: none;
   text-decoration: none;
 }
 
 body {
-  user-select: none;
+  overflow-x: hidden;
   color: var(--color--black);
-  background-color: var(--color--bg-light);
   font-size: 16px;
   line-height: 1.5;
-  overflow-x: hidden;
+  user-select: none;
+  background-color: var(--color--bg-light);
 
   &::-webkit-scrollbar {
     width: 7px;
@@ -122,8 +124,8 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top, #fca26e 20%, #fcfbfc 50%, #68b8c1 100%);
     border-radius: 1rem;
+    background: linear-gradient(to top, #fca26e 20%, #fcfbfc 50%, #68b8c1 100%);
   }
 }
 [data-theme="dark"] body {
@@ -134,27 +136,16 @@ body {
   }
 }
 
-#background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: auto;
-}
-
 .progress-bar {
+  z-index: 9999;
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   width: 100%;
-
   height: 4px;
   background: linear-gradient(90deg, #fca26e 20%, #fcfbfc 50%, #68b8c1 100%);
   transform-origin: 0%;
-
-  z-index: 9999;
 }
 [data-theme="dark"] .progress-bar {
   background: linear-gradient(90deg, #68b8c1 30%, #000 50%, #fca26e 100%);
@@ -162,13 +153,15 @@ body {
 
 .logo {
   &__img {
-    object-fit: contain;
     border: 1px solid var(--color--dark-burger);
     border-radius: 50%;
+    object-fit: contain;
   }
+
   @include useOnHover {
     transform: scale(var(--scale));
   }
+
   &__footer {
     padding-bottom: 1rem;
   }
@@ -196,21 +189,22 @@ body {
 }
 
 .greetings {
-  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 100%;
   padding-top: 10rem;
+
   &__container {
-    padding: 2rem;
-    background-color: var(--color--light-opacity);
-    border-radius: 3%;
-    width: max-content;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     justify-content: center;
     align-items: center;
+    width: max-content;
+    padding: 2rem;
+    border-radius: 3%;
+    background-color: var(--color--light-opacity);
+    gap: 1rem;
   }
 }
 [data-theme="dark"] .greetings__container {
@@ -218,10 +212,10 @@ body {
 }
 
 .icons {
-  padding-top: 1rem;
   @include flex(column, center, center);
-  gap: 1.2rem;
   flex-wrap: wrap;
+  padding-top: 1rem;
+  gap: 1.2rem;
 
   @include useScreen("tablet-xl") {
     flex-wrap: nowrap;
@@ -243,47 +237,46 @@ body {
       @include useScreen("tablet-xl") {
         justify-content: space-between;
       }
-      a {
-        position: relative;
-        @include flex(row, center, center);
 
+      a {
+        @include flex(row, center, center);
+        opacity: 0.7;
+        position: relative;
         width: 30px;
         height: 30px;
-
-        color: var(--color--white);
-
         border: 2px solid var(--color--white);
         border-radius: 50%;
-        opacity: 0.7;
+        color: var(--color--white);
 
         @include useOnHover {
-          z-index: 10;
-          color: var(--color--light-blue-2);
-          border-color: var(--color--light-blue-2);
-          opacity: 1;
-          text-align: center;
           @include flex(row, center, center);
-          &::before {
-            width: max-content;
-            position: absolute;
-            content: attr(data-text);
-            top: 35px;
-            border-radius: 1rem;
+          opacity: 1;
+          z-index: 10;
+          border-color: var(--color--light-blue-2);
+          color: var(--color--light-blue-2);
+          text-align: center;
 
+          &::before {
+            position: absolute;
+            top: 35px;
+            width: max-content;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            color: var(--color--white);
+            font-size: 10px;
+            content: attr(data-text);
             background: radial-gradient(
               80.97% 80.37% at 56.01% 19.03%,
               var(--color--light-blue-1) 0%,
               var(--color--light-blue-4) 99.23%
             );
-            padding: 0.5rem;
-            color: var(--color--white);
-            font-size: 10px;
           }
         }
+
         @include useOnClick {
-          color: var(--color--light-blue-4);
-          border-color: var(--color--light-blue-4);
           opacity: 1;
+          border-color: var(--color--light-blue-4);
+          color: var(--color--light-blue-4);
         }
       }
     }
@@ -292,17 +285,21 @@ body {
 [data-theme="dark"] .icons {
   &__block {
     color: var(--color--black);
+
     &-title {
       color: var(--color--blue-grey-2);
     }
+
     &-links {
       color: var(--color--black);
+
       a {
         border: 2px solid var(--color--blue-grey-2);
         color: var(--color--black);
+
         @include useOnHover {
-          color: var(--color--orange-1);
           border-color: var(--color--orange-1);
+          color: var(--color--orange-1);
 
           &:before {
             background: radial-gradient(
@@ -313,9 +310,10 @@ body {
           }
         }
       }
+
       @include useOnClick {
-        color: var(--color--orange-4);
         border-color: var(--color--orange-4);
+        color: var(--color--orange-4);
       }
     }
   }
@@ -331,11 +329,12 @@ body {
   }
 
   &__title {
-    letter-spacing: 0.1rem;
-    line-height: 2rem;
-    color: var(--color--white);
-    text-align: center;
     width: 70%;
+    color: var(--color--white);
+    line-height: 2rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+
     @include useScreen("tablet-sm") {
       width: 30%;
     }
@@ -348,8 +347,8 @@ body {
 }
 
 .license {
-  color: var(--color--grey);
   align-self: flex-end;
+  color: var(--color--grey);
 }
 [data-theme="dark"] .license {
   color: var(--color--white-grey);

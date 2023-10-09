@@ -30,6 +30,7 @@
     color: var(--color--blue-grey-3);
     font-weight: 500;
   }
+
   @include useOnHover {
     background: var(--color--light-blue-3);
   }
@@ -48,13 +49,13 @@
 }
 
 .button-switcher {
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20px;
   height: 20px;
   border: none;
+  cursor: pointer;
   background: transparent;
 
   @include useOnHover {
@@ -74,6 +75,7 @@
 .buttonIcon {
   svg {
     fill: var(--color--dark-burger);
+
     @include useOnHover {
       fill: var(--color--orange-4);
     }
@@ -81,6 +83,7 @@
       fill: var(--color--orange-2);
     }
   }
+
   &__close {
     z-index: 110;
     position: absolute;
@@ -91,11 +94,12 @@
 [data-theme="dark"] .buttonIcon {
   svg {
     fill: var(--color--light-burger);
+
     @include useOnHover {
       fill: var(--color--light-blue-4);
     }
-  }
-  @include useOnClick {
-    fill: var(--color--light-blue-2);
+    @include useOnClick {
+      fill: var(--color--light-blue-2);
+    }
   }
 }

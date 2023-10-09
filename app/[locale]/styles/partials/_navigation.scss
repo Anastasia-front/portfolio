@@ -3,29 +3,26 @@
 @use "./vars" as *;
 
 .navigation {
-  padding: 1rem 0.6rem 0.5rem 0.6rem;
-  position: relative;
-
   display: flex;
+  z-index: 10;
+  position: relative;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 0.6rem 0.5rem 0.6rem;
   gap: 1.5rem;
-
-  z-index: 10;
 
   @include useScreen("mobile-lg") {
     padding: 1.5rem 2rem 0.5rem 2rem;
   }
-
   @include useScreen("tablet-sm") {
     padding: 2rem 2rem 0.5rem 2rem;
   }
 }
 
 .container-items {
+  @include flex(row, space-between, center);
   padding: 0.3rem 0.6rem;
   border-radius: 60px;
-  @include flex(row, space-between, center);
   gap: 1rem;
 
   &__frame {
@@ -90,13 +87,13 @@
 }
 
 .navigation-items {
-  padding: 0.3rem 0.7rem;
-  border-radius: 60px;
   display: flex;
-  align-items: center;
-  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 60px;
+  gap: 2rem;
 
   @include useScreen("tablet-xl") {
     flex-wrap: nowrap;
@@ -182,6 +179,8 @@
 }
 
 .burgerBackdrop {
+  opacity: 0;
+  visibility: hidden;
   z-index: 99;
   position: fixed;
   top: 0;
@@ -192,8 +191,6 @@
   height: 100vh;
   background: var(--color--dark-opacity);
   backdrop-filter: blur(3px);
-  opacity: 0;
-  visibility: hidden;
 
   &__active {
     opacity: 1;
@@ -202,6 +199,7 @@
 }
 
 .burgerBackground {
+  opacity: 0;
   z-index: 102;
   position: fixed;
   top: 0;
@@ -209,13 +207,12 @@
   width: 50%;
   height: 100vh;
   background: var(--color--white);
-  opacity: 0;
   transition: var(--transition);
   transform: translateY(-100%);
 
   &__active {
-    transition: var(--transition);
     opacity: 1;
+    transition: var(--transition);
     transform: translateY(0);
   }
 }

@@ -1,4 +1,12 @@
 :root {
+  --box-shadow: rgba(0, 0, 0, 0.1);
+
+  --transition: all 0.3s ease;
+
+  --border-radius--sm: 0.5rem;
+  --border-radius--md: 1rem;
+  --border-radius--lg: 1.5rem;
+
   --color--bg-light: #fffaf5;
   --color--bg-dark: #171410;
   --color--blue-grey-1: #797983;
@@ -26,7 +34,6 @@
   --color--dark-burger: #9f8575;
   --color--light-burger: #ffe1c2;
 
-  //paddings
   --pad--sm: 1rem;
   --pad--sm-2: 1.5rem;
   --pad--md: 2rem;
@@ -34,13 +41,5 @@
   --pad--lg: 3rem;
   --pad--lg-2: 3.5rem;
 
-  //transition
-  --transition: all 0.3s ease;
   --scale: 1.07;
-
-  //box-shadow
-  --box-shadow: rgba(0, 0, 0, 0.1);
-
-  //screen
-  --screen--tablet-sm: 768px;
 }
