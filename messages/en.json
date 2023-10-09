@@ -12,7 +12,10 @@
       "fifth": "Fifth screenshot of project"
     }
   },
-  "license": { "text": "Background images are taken from the site" },
+  "license": {
+    "accordion": "Background images are taken from the site",
+    "slider": "Images for the slider are downloaded from the site"
+  },
   "nav": {
     "home": "Home",
     "about": "About",
@@ -122,7 +125,8 @@
   },
   "skills": {
     "title": "My skills",
-    "description": "Below are the various technologies, frameworks and libraries I own. For convenience, they are grouped and implemented using the Accordion component. Each card inside is interactive - interesting interaction!)"
+    "description": "Below are the various technologies, frameworks and libraries I own. For convenience, they are grouped and implemented using the Accordion component. Each card inside is interactive - interesting interaction!)",
+    "slider": "This is how I work and what the workflow looks like from the outside - at least I want it to be like that ;)"
   },
   "projects": {
     "title": "Projects",

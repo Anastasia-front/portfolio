@@ -174,41 +174,41 @@ export const headerImgVariants: Variants = {
   },
 };
 
-export const imgVariants: Variants = {
-  offscreen: {
-    x: 300,
-    opacity: 0,
-    scaleY: 0.1,
-  },
-  onscreen: {
-    x: 0,
-    opacity: 1,
-    scaleY: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.25,
-      duration: 1,
-    },
-  },
-};
+// export const imgVariants: Variants = {
+//   offscreen: {
+//     x: 300,
+//     opacity: 0,
+//     scaleY: 0.1,
+//   },
+//   onscreen: {
+//     x: 0,
+//     opacity: 1,
+//     scaleY: 1,
+//     transition: {
+//       type: "spring",
+//       bounce: 0.25,
+//       duration: 1,
+//     },
+//   },
+// };
 
-export const imgVariants2: Variants = {
-  offscreen: {
-    x: -300,
-    opacity: 0,
-    scaleY: 0.1,
-  },
-  onscreen: {
-    x: 0,
-    opacity: 1,
-    scaleY: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.25,
-      duration: 1,
-    },
-  },
-};
+// export const imgVariants2: Variants = {
+//   offscreen: {
+//     x: -300,
+//     opacity: 0,
+//     scaleY: 0.1,
+//   },
+//   onscreen: {
+//     x: 0,
+//     opacity: 1,
+//     scaleY: 1,
+//     transition: {
+//       type: "spring",
+//       bounce: 0.25,
+//       duration: 1,
+//     },
+//   },
+// };
 
 export const overlayVariants: Variants = {
   hidden: { opacity: 0 },
@@ -240,3 +240,19 @@ export const fadeIn = {
     },
   },
 };
+
+export const imgVariants = (direction: string) => ({
+  offscreen: {
+    x: direction === "left" ? "-100%" : "100%",
+    rotate: 120,
+  },
+  onscreen: {
+    x: 0,
+    rotate: 0,
+    transition: {
+      type: "spring",
+      duration: 1.8,
+      delay: 0.5,
+    },
+  },
+});

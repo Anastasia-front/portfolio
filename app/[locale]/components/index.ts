@@ -15,4 +15,5 @@ export * from "./ProjectItem";
 export * from "./Projects";
 export * from "./SkillBlock";
 export * from "./SkillItem";
+export * from "./SkillSlider";
 export * from "./Switchers";

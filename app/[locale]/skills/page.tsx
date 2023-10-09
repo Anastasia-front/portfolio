@@ -4,12 +4,11 @@ import { useTranslations } from "next-intl";
 
 import { motion } from "framer-motion";
 
-import { Accordion } from "@/components";
-import { gridVariants } from "@/utils";
+import { Accordion, SkillSlider } from "@/components";
+import { gridVariants, imgVariants } from "@/utils";
 
 export default function SkillsPage() {
   const t = useTranslations("skills");
-  const i = useTranslations("license");
 
   return (
     <div className="u-pad-2">
@@ -23,6 +22,9 @@ export default function SkillsPage() {
       </div>
 
       <Accordion />
+      <motion.div variants={imgVariants("left")}>
+        <SkillSlider />
+      </motion.div>
     </div>
   );
 }

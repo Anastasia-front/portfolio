@@ -9,7 +9,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import { SkillBlock } from "@/components";
 import { skillBlocksEnglish, skillBlocksUkrainian } from "@/constants";
-import { imgVariants } from "@/utils";
+import { fadeIn, imgVariants } from "@/utils";
 
 export function Accordion() {
   const i = useTranslations("license");
@@ -22,7 +22,7 @@ export function Accordion() {
     offset: ["start end", "end start"],
   }).scrollYProgress;
 
-  const x = useTransform(scrollYProgress, [0, 0.8, 1], [0, 0, -400]);
+  const x = useTransform(scrollYProgress, [0, 0.8, 1], [0, 0, 400]);
   const y = useTransform(scrollYProgress, [0, 0.75, 1], [0, 0, -100]);
   const opacity = useTransform(scrollYProgress, [0, 0.85, 0.95], [1, 1, 0]);
 
@@ -39,7 +39,7 @@ export function Accordion() {
   return (
     <motion.div
       ref={accordion}
-      variants={imgVariants}
+      variants={imgVariants("right")}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0 }}
@@ -60,11 +60,11 @@ export function Accordion() {
       ))}
       <motion.span
         className="license"
-        variants={imgVariants}
+        variants={fadeIn}
         initial="hidden"
         animate="visible"
       >
-        {i("text")}{" "}
+        {i("accordion")}{" "}
         <a
           target="_blank"
           href="https://ru.freepik.com/free-vector/background-realistic-abstract-technology-particle_6938839.htm#query=technology%20background&position=0&from_view=search&track=ais"
