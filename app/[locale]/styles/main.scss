@@ -348,6 +348,12 @@ body {
 }
 
 .license {
-  margin-left: auto;
-  padding-top: 2rem;
+  color: var(--color--grey);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.3rem;
+}
+[data-theme="dark"] .license {
+  color: var(--color--white-grey);
 }
