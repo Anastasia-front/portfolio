@@ -23,15 +23,6 @@ export default function SkillsPage() {
       </div>
 
       <Accordion />
-      <span className="license">
-        {i("text")}
-        <a
-          target="_blank"
-          href="https://ru.freepik.com/free-vector/background-realistic-abstract-technology-particle_6938839.htm#query=technology%20background&position=0&from_view=search&track=ais"
-        >
-          Freepik
-        </a>
-      </span>
     </div>
   );
 }

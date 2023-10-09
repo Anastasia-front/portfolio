@@ -349,10 +349,7 @@ body {
 
 .license {
   color: var(--color--grey);
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  gap: 0.3rem;
+  align-self: flex-end;
 }
 [data-theme="dark"] .license {
   color: var(--color--white-grey);
