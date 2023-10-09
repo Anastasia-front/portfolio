@@ -18,7 +18,6 @@
 .skills-item {
   @include flex(column, space-evenly, center);
   position: relative;
-  min-height: 150px;
   padding: 1.25rem 1.5rem;
   border-radius: var(--border-radius--lg);
   background: var(--color--white);
