@@ -27,14 +27,14 @@ const defaultOptions = {
 
 export function SkillItem({ title, image }: Props) {
   return (
-    <Tilt
-      options={defaultOptions}
-      className="skills-item"
-      style={{ height: 150, width: 150 }}
-    >
-      <motion.div variants={fadeIn} initial="hidden" animate="visible">
+    <motion.div variants={fadeIn} initial="hidden" animate="visible">
+      <Tilt
+        options={defaultOptions}
+        className="skills-item"
+        style={{ height: 150, width: 150 }}
+      >
         <Image src={image} alt={title} width={200} height={150} />
-      </motion.div>
-    </Tilt>
+      </Tilt>
+    </motion.div>
   );
 }
