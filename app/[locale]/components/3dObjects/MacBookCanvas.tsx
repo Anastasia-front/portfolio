@@ -8,7 +8,7 @@ import { Vector3 } from "three";
 import { MacBook } from ".";
 
 export function MacBookCanvas() {
-  const cameraPosition = new Vector3(2.3, 2, 3.3);
+  const cameraPosition = new Vector3(-0.3, 1.3, 3.7);
   const targetPosition = new Vector3(0, 0, 0);
 
   return (
@@ -21,7 +21,7 @@ export function MacBookCanvas() {
         decay={0}
         intensity={Math.PI}
       />
-      <MacBook position={[0, 0, 0]} />
+      <MacBook position={[0, -0.33, 0]} />
       <OrbitControls target={targetPosition} />
     </Canvas>
   );

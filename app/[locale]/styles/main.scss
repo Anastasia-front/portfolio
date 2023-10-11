@@ -354,8 +354,36 @@ body {
   color: var(--color--white-grey);
 }
 
+.devices {
+  @include flex(column, center, center);
+  padding: 3rem 1rem;
+  box-shadow: inset 0 0 30px 20px var(--color--white-opacity);
+  gap: 1rem;
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__titles {
+    @include flex(row, space-between, center);
+    width: 70vw;
+  }
+
+  &__comment {
+    align-self: self-end;
+  }
+}
+[data-theme="dark"] .devices {
+  box-shadow: inset 0 0 30px 20px var(--color--grey-opacity);
+}
+
 .canvas {
-  width: 90vw !important;
-  height: 80vh !important;
+  width: 50vw !important;
+  height: 70vh !important;
+  margin: 0 auto;
   cursor: grab;
+
+  &__container {
+    @include flex(row, space-between, center);
+  }
 }

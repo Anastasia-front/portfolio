@@ -8,13 +8,12 @@ import { Vector3 } from "three";
 import { Mac } from ".";
 
 export function MacCanvas() {
-  //   const cameraPosition = new Vector3(250, -30, 50);
-  const cameraPosition = new Vector3(120, -30, 30);
+  const cameraPosition = new Vector3(150, 0, -30);
   const targetPosition = new Vector3(0, 0, 0);
 
   return (
     <Canvas className="canvas" camera={{ position: cameraPosition }}>
-      <ambientLight intensity={Math.PI / 1.3} />
+      <ambientLight intensity={Math.PI / 0.7} />
       <spotLight
         position={[0, 0, 0]}
         angle={1}
@@ -22,7 +21,7 @@ export function MacCanvas() {
         decay={0}
         intensity={Math.PI}
       />
-      <Mac position={[0, -70, 0]} />
+      <Mac position={[0, -30, 0]} />
       <OrbitControls target={targetPosition} />
     </Canvas>
   );

@@ -25,8 +25,20 @@ export default function Home() {
 
         {/* <div id="scene-container"></div> */}
       </div>
-      <MacBookCanvas />
-      <MacCanvas />
+      <div className="devices">
+        <h2 className="devices__title">this is tools that i use</h2>
+        <div className="devices__titles">
+          <h3>First</h3>
+          <h3>second</h3>
+        </div>
+        <div className="canvas__container">
+          <MacBookCanvas />
+          <MacCanvas />
+        </div>
+        <p className="devices__comment">
+          to scroll page in this section - use scrollbar
+        </p>
+      </div>
     </>
   );
 }
