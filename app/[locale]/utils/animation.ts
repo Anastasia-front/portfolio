@@ -4,12 +4,10 @@ export const gridVariants: Variants = {
   hidden: {
     opacity: 0,
     scale: 0,
-    filter: "blur(10px)",
   },
   visible: {
     opacity: 1,
     scale: 1,
-    filter: "blur(0px)",
     transition: {
       delayChildren: 0.2,
       staggerChildren: 0.1,
@@ -36,11 +34,11 @@ export const bannerVariants: Variants = {
 };
 
 export const navVariants: Variants = {
-  hidden: { opacity: 0, scaleX: 0, filter: "blur(10px)", y: -200 },
+  hidden: { opacity: 0, scaleX: 0, y: -200 },
   visible: {
     opacity: 1,
     scaleX: 1,
-    filter: "blur(0px)",
+
     y: 0,
 
     transition: {
@@ -90,11 +88,11 @@ export const hoverVariants2 = {
 };
 
 export const gridItemVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.3, filter: "blur(10px)" },
+  hidden: { opacity: 0, scale: 0.3 },
   visible: {
     opacity: 1,
     scale: 1,
-    filter: "blur(0px)",
+
     transition: {
       type: "spring",
       stiffness: 200,
@@ -160,11 +158,10 @@ export const titleVariants3: Variants = {
 };
 
 export const headerImgVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.3, filter: "blur(10px)" },
+  hidden: { opacity: 0, scale: 0.3 },
   visible: {
     opacity: 1,
     scale: 1,
-    filter: "blur(0px)",
     transition: {
       type: "spring",
       stiffness: 200,
@@ -215,7 +212,6 @@ export const overlayVariants: Variants = {
   visible: {
     opacity: 1,
 
-    // filter: "blur(0px)",
     transition: {
       type: "ease",
     },

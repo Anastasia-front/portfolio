@@ -62,13 +62,11 @@ export function Footer({ title, description }: Props) {
     hidden: {
       opacity: 0,
       scaleY: 0.3,
-      filter: "blur(10px)",
       y: -300,
     },
     visible: {
       opacity: 1,
       scaleY: 1,
-      filter: "blur(0px)",
       y: 0,
 
       transition: {

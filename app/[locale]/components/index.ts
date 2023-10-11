@@ -1,3 +1,4 @@
+export * from "./3dObjects";
 export * from "./AboutItem";
 export * from "./Accordion";
 export * from "./AchievementBlock";

@@ -353,3 +353,9 @@ body {
 [data-theme="dark"] .license {
   color: var(--color--white-grey);
 }
+
+.canvas {
+  width: 90vw !important;
+  height: 80vh !important;
+  cursor: grab;
+}
