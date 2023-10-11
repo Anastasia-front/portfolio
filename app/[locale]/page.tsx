@@ -7,6 +7,8 @@ import { MacBookCanvas, MacCanvas } from "./components";
 
 export default function Home() {
   const t = useTranslations("home");
+  const i = useTranslations("home.3d");
+
   return (
     <>
       {/* <video
@@ -26,18 +28,21 @@ export default function Home() {
         {/* <div id="scene-container"></div> */}
       </div>
       <div className="devices">
-        <h2 className="devices__title">this is tools that i use</h2>
+        <h2 className="devices__title">{i("title")}</h2>
+        <span className="devices__hint devices__hint-prompt">
+          {i("prompt")}
+        </span>
         <div className="devices__titles">
-          <h3>First</h3>
-          <h3>second</h3>
+          <h4>{i("macBook")}</h4>
+          <h4>{i("mac")}</h4>
         </div>
+        <span className="devices__hint devices__hint-comment">
+          {i("comment")}
+        </span>
         <div className="canvas__container">
           <MacBookCanvas />
           <MacCanvas />
         </div>
-        <p className="devices__comment">
-          to scroll page in this section - use scrollbar
-        </p>
       </div>
     </>
   );

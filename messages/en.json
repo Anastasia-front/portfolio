@@ -57,7 +57,14 @@
   },
   "home": {
     "title": "Greetings!",
-    "description": "Welcome to my portfolio site"
+    "description": "Welcome to my portfolio site",
+    "3d": {
+      "title": "Below are the «workhorses» that...",
+      "prompt": "* in the block where the cursor with the hand appears, in order to scroll the page, use the scrollbar on the right edge (normal mouse actions will bring objects closer or further away)",
+      "comment": "** below are 3D objects, they are interactive - you can rotate them, enlarge, reduce, view them from all sides and do whatever you want ;)",
+      "macBook": "I'm using now (MacBook Air 13″ М1, 2020)",
+      "mac": "I want to use in the future (iMac 24”)"
+    }
   },
   "about": {
     "title": "Prysiazhnaia Anastasiia",

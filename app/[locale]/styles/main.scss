@@ -356,9 +356,9 @@ body {
 
 .devices {
   @include flex(column, center, center);
-  padding: 3rem 1rem;
+  padding: 4rem;
   box-shadow: inset 0 0 30px 20px var(--color--white-opacity);
-  gap: 1rem;
+  gap: 2rem;
 
   &__title {
     font-weight: 700;
@@ -366,11 +366,28 @@ body {
 
   &__titles {
     @include flex(row, space-between, center);
-    width: 70vw;
+    gap: 12rem;
+
+    h4:first-child {
+      text-align: left;
+    }
+    h4:last-child {
+      text-align: right;
+    }
   }
 
-  &__comment {
-    align-self: self-end;
+  &__hint {
+    width: 35%;
+
+    &-prompt {
+      align-self: end;
+      text-align: left;
+    }
+
+    &-comment {
+      align-self: start;
+      text-align: right;
+    }
   }
 }
 [data-theme="dark"] .devices {
@@ -385,5 +402,17 @@ body {
 
   &__container {
     @include flex(row, space-between, center);
+    width: 125%;
+    padding: 0 4rem;
+    border-top: 1px dotted var(--color--blue-grey-3);
+    border-bottom: 1px dotted var(--color--blue-grey-3);
+    gap: 1rem;
+
+    div:first-child {
+      border-right: 1px dotted var(--color--blue-grey-3);
+    }
+    div:last-child {
+      border-left: 1px dotted var(--color--blue-grey-3);
+    }
   }
 }
