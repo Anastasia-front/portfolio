@@ -22,7 +22,6 @@ export function Certificate() {
   ];
 
   return (
-    //  <div className="overflow-x-clip">
     <Swiper
       effect={"cards"}
       grabCursor={true}
@@ -39,6 +38,5 @@ export function Certificate() {
         </SwiperSlide>
       ))}
     </Swiper>
-    //  </div>
   );
 }

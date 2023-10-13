@@ -8,7 +8,8 @@
 @use "./mixins" as *;
 @use "./partials/mixins" as *;
 @use "./partials/swiper" as *;
-@use "./partials//dropdown" as *;
+@use "./partials/dropdown" as *;
+@use "./partials/home" as *;
 
 h1,
 h2,
@@ -465,5 +466,18 @@ body {
       border-right: 1px dotted var(--color--blue-grey-3);
       border-left: 1px dotted var(--color--blue-grey-3);
     }
+  }
+}
+
+.video {
+  position: fixed;
+  top: 76px;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  max-height: 90vh;
+
+  @include useScreen("mobile-md") {
+    top: 0;
   }
 }
