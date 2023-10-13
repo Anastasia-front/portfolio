@@ -12,7 +12,7 @@ import US from "@/assets/svg/united-states.svg";
 import { ButtonSwitcher } from "./ButtonSwitcher";
 
 export const ButtonLanguage = () => {
-  //  const ref = useRef<HTMLDivElement>();
+  const [isVisible, setIsVisible] = useState(true);
 
   const a = useTranslations("alt");
   const t = useTranslations("switcher");
@@ -33,23 +33,27 @@ export const ButtonLanguage = () => {
   });
 
   const clickHandler = () => {
-    if (pathname === "/uk") {
-      setLang("en");
-      setIcon(IconUS);
-    } else {
-      setLang("uk");
-      setIcon(IconUA);
-    }
+    setIsVisible(false);
+    setTimeout(() => {
+      setIsVisible(true);
+      if (pathname === "/uk") {
+        setLang("en");
+        setIcon(IconUS);
+      } else {
+        setLang("uk");
+        setIcon(IconUA);
+      }
+    }, 300);
   };
 
   return (
     <Link href="/" locale={lang}>
       <ButtonSwitcher
+        className={isVisible ? "visible" : "invisible"}
         alt={a("svgLang")}
         icon={icon}
         onClick={clickHandler}
         title={lang === "en" ? t("lang.en") : t("lang.uk")}
-        // ref={ref}
       />
     </Link>
   );

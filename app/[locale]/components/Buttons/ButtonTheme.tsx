@@ -12,6 +12,7 @@ import { ButtonSwitcher } from "./ButtonSwitcher";
 
 export const ButtonTheme = () => {
   const { theme, setTheme } = useTheme();
+  const [isVisible, setIsVisible] = useState(true);
 
   const a = useTranslations("alt");
   const t = useTranslations("switcher");
@@ -28,17 +29,23 @@ export const ButtonTheme = () => {
   });
 
   const clickHandler = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      setIcon(IconMoon);
-    } else {
-      setTheme("light");
-      setIcon(IconSun);
-    }
+    setIsVisible(false);
+
+    setTimeout(() => {
+      setIsVisible(true);
+      if (theme === "light") {
+        setTheme("dark");
+        setIcon(IconMoon);
+      } else {
+        setTheme("light");
+        setIcon(IconSun);
+      }
+    }, 300);
   };
 
   return (
     <ButtonSwitcher
+      className={isVisible ? "visible" : "invisible"}
       alt={a("svgTheme")}
       icon={icon}
       onClick={clickHandler}

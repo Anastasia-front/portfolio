@@ -243,3 +243,12 @@
 [data-theme="dark"] .burgerSwitchers {
   background: var(--color--blue-grey-3);
 }
+
+.visible {
+  opacity: 1;
+  transition: var(--transition);
+}
+.invisible {
+  opacity: 0;
+  transition: var(--transition);
+}
