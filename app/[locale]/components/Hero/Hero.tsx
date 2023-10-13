@@ -2,9 +2,13 @@ import Image from "next/image";
 
 import hero from "@/assets/images/hero/hero.jpeg";
 
-export function Hero() {
+interface Props {
+  videoHeight: number;
+}
+
+export function Hero({ videoHeight }: Props) {
   return (
-    <section className="home-container">
+    <section className="home-container" style={{ marginTop: videoHeight }}>
       <div className="home-content">
         <span className="home-blur"></span>
         <span className="home-blur"></span>

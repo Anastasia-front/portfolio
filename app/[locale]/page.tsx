@@ -1,40 +1,38 @@
 "use client";
 
+import { useState } from "react";
+
 import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
-import { usePathname } from "next/navigation";
 
-import { ObjectsSection } from "./components";
+import { motion } from "framer-motion";
 
-// import videoSrc from "./video/hero.mp4";
+import { bannerVariants } from "@/utils";
+
+import { Hero, ObjectsSection, Video } from "./components";
 
 export default function Home() {
+  const [videoHeight, setVideoHeight] = useState(0);
+
   const t = useTranslations("home");
 
-  const { theme, setTheme } = useTheme();
-  const pathname = usePathname();
-  const lang = pathname.slice(0, 3);
-  const video = (() => {
-    if (lang === "/uk") {
-      if (theme === "light") {
-        return "/video/hero/uk-light.mp4";
-      } else {
-        return "/video/hero/uk-dark.mp4";
-      }
-    } else {
-      if (theme === "light") {
-        return "/video/hero/en-light.mp4";
-      } else {
-        return "/video/hero/en-dark.mp4";
-      }
-    }
-  })();
+  const handleVideoHeightChange = (height: number) => {
+    setVideoHeight(height);
+  };
 
   return (
     <>
-      <video className="video" autoPlay src={video} />
-
-      <ObjectsSection />
+      <Video onVideoHeightChange={handleVideoHeightChange} />
+      <motion.div
+        variants={bannerVariants}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0 }}
+        className="home-section"
+        style={{ position: "relative", zIndex: 30 }}
+      >
+        <Hero videoHeight={videoHeight} />
+        <ObjectsSection />
+      </motion.div>
     </>
   );
 }

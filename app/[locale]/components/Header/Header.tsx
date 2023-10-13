@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
 
@@ -18,7 +19,12 @@ export function Header() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const pathname = usePathname();
+  const isHeaderFixed = pathname === "/" || pathname === "/uk";
+  const headerClassName = isHeaderFixed ? "fixed-header" : "";
+
   const { lockScroll, unlockScroll } = useScrollLock();
+
   useEffect(() => {
     if (isMenuOpen) {
       lockScroll();
@@ -35,7 +41,7 @@ export function Header() {
 
   return (
     <motion.nav
-      className="navigation"
+      className={`navigation ${headerClassName}`}
       variants={navVariants}
       initial="hidden"
       animate="visible"

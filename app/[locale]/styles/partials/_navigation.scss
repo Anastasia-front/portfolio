@@ -19,6 +19,13 @@
   }
 }
 
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
 .container-items {
   @include flex(row, space-between, center);
   padding: 0.3rem 0.6rem;
