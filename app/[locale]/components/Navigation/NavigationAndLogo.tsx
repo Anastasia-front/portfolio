@@ -16,10 +16,10 @@ interface Props {
 export function NavigationAndLogo({ handleMenuOpen, isMenuOpen }: Props) {
   const logo = useTranslations("alt");
 
-  const { isScreenTabletLg } = useScreenQuery();
+  const { isScreenTabletSm } = useScreenQuery();
 
   const hideBurger = () => {
-    handleMenuOpen(!isMenuOpen);
+    handleMenuOpen(false);
   };
 
   return (
@@ -33,7 +33,7 @@ export function NavigationAndLogo({ handleMenuOpen, isMenuOpen }: Props) {
           height={25}
         />
       </Link>
-      {isScreenTabletLg ? (
+      {isScreenTabletSm ? (
         <Navigation />
       ) : (
         <BurgerMenu isMenuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen} />

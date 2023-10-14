@@ -9,7 +9,7 @@ export function ObjectsSection() {
   const i = useTranslations("home.3d");
 
   return (
-    <section className="devices">
+    <section className="devices" id="tools">
       <div className="devices__hint devices__hint-onHover">
         <p className="devices__subtitle  devices__hint-prompt">
           {i("subtitle")} <BsFillInfoCircleFill />

@@ -27,7 +27,7 @@ export default function Home() {
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0 }}
-        className="home-section"
+        className="hero-section"
         style={{ position: "relative", zIndex: 30 }}
       >
         <Hero videoHeight={videoHeight} />

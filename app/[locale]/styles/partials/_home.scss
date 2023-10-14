@@ -1,79 +1,143 @@
-.home-container {
-  display: grid;
-  position: relative;
-  align-items: center;
-  margin: auto;
-  padding: 5rem 2rem;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
+@use "./mixins" as *;
+@use "../mixins" as *;
 
-.home-section {
-  z-index: 30;
-  position: relative;
-  width: 100vw;
-  margin-left: 1rem;
-  background: var(--color--bg-light);
-}
+.hero {
+  &-container {
+    @include flex(column, center, center);
+    position: relative;
+    padding: 5rem 2rem;
+    gap: 2rem;
 
-.home-blur {
-  z-index: -100;
-  position: absolute;
-  box-shadow: 0 0 1000px 50px #1d4ed8;
-}
+    @include useScreen("tablet-md") {
+      @include flex(row, space-between, center);
+    }
+  }
 
-.home-content h4 {
-  margin-bottom: 1rem;
-  color: #ccc;
-  font-weight: 600;
-  font-size: 1rem;
-}
+  &-section {
+    z-index: 30;
+    position: relative;
+    width: 100vw;
+    background: var(--color--bg-light);
+  }
 
-.home-content h1 {
-  margin-bottom: 1rem;
-  color: #fff;
-  font-weight: 700;
-  font-size: 3rem;
-  line-height: 4rem;
-}
+  &-blur {
+    z-index: -100;
+    position: absolute;
+    box-shadow: 0 0 1000px 50px var(--color--orange-4);
+  }
 
-.home-content h1 span {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #fff;
-}
+  &-content {
+    @include flex(column, space-between, flex-start);
+    width: 100%;
+    gap: 1.5rem;
 
-.home-content p {
-  margin-bottom: 2rem;
-  color: #ccc;
-}
+    h2 {
+      font-weight: 500;
+      font-size: clamp(2.3rem, 1vw, 1.75rem);
+      line-height: 3rem;
+      -webkit-text-fill-color: var(--color--light-blue-2);
+      -webkit-text-stroke: 1px var(--color--light-blue-3);
+    }
 
-.home-image {
-  position: relative;
-}
+    h3 {
+      font-weight: 700;
+      font-size: clamp(2rem, 1vw, 1.75rem);
+      line-height: 3rem;
+      text-transform: uppercase;
+      -webkit-text-fill-color: var(--color--light-blue-3);
+      -webkit-text-stroke: 1px var(--color--light-blue-4);
+    }
 
-.home-image::before {
-  opacity: 0home-2;
-  z-index: -100;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  color: #1d4ed8;
-  font-weight: 400;
-  font-size: 38rem;
-  line-height: 20rem;
-  content: "o";
-  transform: translateX(-50%);
-}
+    h4 {
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px var(--color--blue-grey-2);
+    }
 
-.home-image img {
-  max-width: 600px;
-  margin: auto;
-}
+    p {
+      color: var(--color--orange-2);
+    }
+  }
 
-.home-header {
-  margin-bottom: 1rem;
-  color: #fff;
-  font-weight: 600;
-  font-size: 2.25rem;
-  text-align: center;
+  &-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+
+    img {
+      border-radius: var(--border-radius--sm);
+    }
+
+    &::before {
+      position: absolute;
+      right: -20px;
+      bottom: 20px;
+      width: 3px;
+      height: 200px;
+      content: "";
+      background: var(--color--light-blue-2);
+    }
+    &::after {
+      position: absolute;
+      right: 20px;
+      bottom: -20px;
+      width: 200px;
+      height: 3px;
+      content: "";
+      background: var(--color--orange-2);
+    }
+  }
+
+  &-buttons {
+    @include flex(column, center, flex-start);
+    gap: 1rem;
+    @include useScreen("mobile-xl") {
+      @include flex(row, center, center);
+      gap: 2rem;
+    }
+  }
+}
+[data-theme="dark"] .hero {
+  &-section {
+    background: var(--color--bg-dark);
+  }
+
+  &-blur {
+    box-shadow: 0 0 1000px 50px var(--color--light-blue-3);
+  }
+
+  &-content {
+    h2 {
+      -webkit-text-fill-color: var(--color--orange-2);
+      -webkit-text-stroke: 1px var(--color--orange-3);
+    }
+
+    h3 {
+      -webkit-text-fill-color: var(--color--orange-3);
+      -webkit-text-stroke: 1px var(--color--orange-2);
+    }
+
+    h4 {
+      -webkit-text-stroke: 1px var(--color--blue-grey-1);
+    }
+
+    p {
+      margin-bottom: 2rem;
+      color: var(--color--light-blue-2);
+    }
+  }
+
+  &-image {
+    &::before {
+      background: var(--color--orange-2);
+    }
+    &::after {
+      position: absolute;
+      right: 20px;
+      bottom: -20px;
+      width: 200px;
+      height: 3px;
+      content: "";
+      background: var(--color--light-blue-2);
+    }
+  }
 }

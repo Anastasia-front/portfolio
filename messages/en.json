@@ -24,7 +24,9 @@
     "contacts": "Contacts"
   },
   "btn": {
-    "contacts": "Contact me"
+    "contacts": "Contact me",
+    "hero": "More information",
+    "tools": "My tools"
   },
   "switcher": {
     "theme": {
@@ -58,6 +60,14 @@
   "home": {
     "title": "Greetings!",
     "description": "Welcome to my portfolio site",
+    "hero": {
+      "title": {
+        "name": "Hi, I'm Anastasiia Prysiazhna",
+        "position": "fullstack developer"
+      },
+      "subtitle": "general information",
+      "description": "If you are looking for a hard-working, conscientious and ready for new challenges employee - then I am the person you need. I advanced twice in the courses, because I devoted all my time to studying - I was a scrum master and a team leader on team projects. Even before the completion of the courses, she already participated in commercial projects (one of them social, the other - a start-up), after completion - in another commercial one from the company (you can see all the works on the projects page)"
+    },
     "3d": {
       "title": "Below are the «workhorses»",
       "subtitle": "pay attention to this prompt so that it is clear what and how to do",

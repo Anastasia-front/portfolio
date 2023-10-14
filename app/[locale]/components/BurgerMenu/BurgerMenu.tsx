@@ -43,7 +43,9 @@ export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
       </button>
 
       <div
-        className={`burgerBackdrop ${isMenuOpen && "burgerBackdrop__active"} `}
+        className={`burgerBackdrop ${
+          isMenuOpen ? "burgerBackdrop__active" : ""
+        } `}
         onClick={handleBackdropClick}
       >
         <div

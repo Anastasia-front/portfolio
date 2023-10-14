@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider, useLocale } from "next-intl";
-import { Inter } from "next/font/google";
+import { Oxygen } from "next/font/google";
 import Head from "next/head";
 import { notFound } from "next/navigation";
 
@@ -9,7 +9,7 @@ import { Providers } from "@/providers";
 
 import "./styles/main.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const oxygen = Oxygen({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -45,7 +45,7 @@ export default async function RootLayout({
         <meta property="og:image" content="/" />
         <meta property="og:url" content="/" />
       </Head>
-      <body className={inter.className}>
+      <body className={oxygen.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <ProgressBar />

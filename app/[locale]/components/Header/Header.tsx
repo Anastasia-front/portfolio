@@ -56,7 +56,6 @@ export function Header() {
       {isScreenTabletXl && (
         <ButtonText
           text={t("contacts")}
-          modifier="white"
           borderRadius="60px"
           padding="1.2rem 2rem"
           hover="true"

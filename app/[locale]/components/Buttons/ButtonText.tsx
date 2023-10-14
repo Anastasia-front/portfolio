@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 interface ButtonProps {
   text: string;
   onClick?: () => void;
-  modifier?: string;
   padding?: string;
   borderRadius?: string;
   hover?: string;
@@ -14,14 +13,13 @@ interface ButtonProps {
 export function ButtonText({
   text,
   onClick,
-  modifier = "primary",
   padding,
   borderRadius = "60px",
   hover,
 }: ButtonProps) {
   return (
     <motion.button
-      className={`button button--${modifier}`}
+      className="button"
       onClick={onClick}
       whileHover={hover && { scale: 1.05 }}
       transition={{

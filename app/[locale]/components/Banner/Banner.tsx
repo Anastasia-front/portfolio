@@ -27,7 +27,6 @@ export function Banner({ text, button }: Props) {
       <h3 className="banner__text">{text}</h3>
       {button && (
         <ButtonText
-          modifier="white"
           text={t("contacts")}
           padding="1.5rem 1rem"
           hover="true"
