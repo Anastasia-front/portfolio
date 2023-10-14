@@ -141,3 +141,37 @@
     }
   }
 }
+
+.features {
+  @include flex(row, space-between, center);
+  margin-bottom: 40px;
+
+  &-header {
+    width: 100%;
+  }
+
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &-card {
+    @include flex(column, center, center);
+    flex: 1;
+    min-width: 250px;
+    padding: 30px;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius--sm);
+    background: var(--color--blue-grey-1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+    gap: 30px;
+  }
+
+  &-info {
+    @include flex(column, center, center);
+    gap: 1rem;
+  }
+}

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 import { bannerVariants } from "@/utils";
 
-import { Hero, ObjectsSection, Video } from "./components";
+import { Features, Hero, ObjectsSection, Video } from "./components";
 
 export default function Home() {
   const [videoHeight, setVideoHeight] = useState(0);
@@ -31,6 +31,7 @@ export default function Home() {
         style={{ position: "relative", zIndex: 30 }}
       >
         <Hero videoHeight={videoHeight} />
+        <Features />
         <ObjectsSection />
       </motion.div>
     </>

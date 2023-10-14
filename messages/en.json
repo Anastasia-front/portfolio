@@ -26,7 +26,8 @@
   "btn": {
     "contacts": "Contact me",
     "hero": "More information",
-    "tools": "My tools"
+    "tools": "My tools",
+    "features": "Go to projects"
   },
   "switcher": {
     "theme": {
@@ -67,6 +68,27 @@
       },
       "subtitle": "general information",
       "description": "If you are looking for a hard-working, conscientious and ready for new challenges employee - then I am the person you need. I advanced twice in the courses, because I devoted all my time to studying - I was a scrum master and a team leader on team projects. Even before the completion of the courses, she already participated in commercial projects (one of them social, the other - a start-up), after completion - in another commercial one from the company (you can see all the works on the projects page)"
+    },
+    "features": {
+      "title": "features",
+      "first": {
+        "alt": "devices",
+        "svg": "devices",
+        "title": "Responsive Design",
+        "text": "Explore a diverse collection of my creative endeavors, including web design, JavaScript / TypeScript and mini projects. Each project showcases my creativity, attention to detail, and passion for delivering visually stunning and engaging experiences"
+      },
+      "second": {
+        "svg": "code",
+        "alt": "code",
+        "title": "Code Quality",
+        "text": "Behind the scenes, I pride myself on writing clean, efficient, and maintainable code. Learn more about my coding standards and practices that contribute to the functionality and performance of the projects I undertake"
+      },
+      "third": {
+        "alt": "component",
+        "svg": "component",
+        "title": "Creative Projects",
+        "text": "Dive into my problem-solving skills and logical thinking. Explore how I approach challenges, find innovative solutions, and adapt to emerging technologies. Discover my commitment to continuous learning and improvement, ensuring every project meets high-quality standards and exceeds expectations"
+      }
     },
     "3d": {
       "title": "Below are the «workhorses»",
