@@ -1,6 +1,16 @@
 @use "./mixins" as *;
 @use "../mixins" as *;
 
+.home-content {
+  z-index: 30;
+  position: relative;
+  width: 100vw;
+  background: var(--color--bg-light);
+}
+[data-theme="dark"] .home-content {
+  background: var(--color--bg-dark);
+}
+
 .hero {
   &-container {
     @include flex(column, center, center);
@@ -11,13 +21,6 @@
     @include useScreen("tablet-md") {
       @include flex(row, space-between, center);
     }
-  }
-
-  &-section {
-    z-index: 30;
-    position: relative;
-    width: 100vw;
-    background: var(--color--bg-light);
   }
 
   &-blur {
@@ -97,10 +100,6 @@
   }
 }
 [data-theme="dark"] .hero {
-  &-section {
-    background: var(--color--bg-dark);
-  }
-
   &-blur {
     box-shadow: 0 0 1000px 50px var(--color--light-blue-3);
   }
