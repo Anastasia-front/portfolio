@@ -75,18 +75,21 @@
         "alt": "devices",
         "svg": "devices",
         "title": "Responsive Design",
+        "subtitle": "See projects on different devices",
         "text": "Explore a diverse collection of my creative endeavors, including web design, JavaScript / TypeScript and mini projects. Each project showcases my creativity, attention to detail, and passion for delivering visually stunning and engaging experiences"
       },
       "second": {
         "svg": "code",
         "alt": "code",
         "title": "Code Quality",
+        "subtitle": "Explore the code in the repository",
         "text": "Behind the scenes, I pride myself on writing clean, efficient, and maintainable code. Learn more about my coding standards and practices that contribute to the functionality and performance of the projects I undertake"
       },
       "third": {
         "alt": "component",
         "svg": "component",
         "title": "Creative Projects",
+        "subtitle": "Evaluate the original approach",
         "text": "Dive into my problem-solving skills and logical thinking. Explore how I approach challenges, find innovative solutions, and adapt to emerging technologies. Discover my commitment to continuous learning and improvement, ensuring every project meets high-quality standards and exceeds expectations"
       }
     },

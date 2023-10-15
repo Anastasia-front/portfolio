@@ -6,16 +6,12 @@ import Image from "next/image";
 import { ButtonText } from "@/components";
 import { threeKeys } from "@/constants";
 
-import code from "@/assets/svg/code.svg";
-import component from "@/assets/svg/component.svg";
-import devices from "@/assets/svg/devices.svg";
-
 export function Features() {
   const i = useTranslations("home.features");
   const b = useTranslations("btn");
 
   return (
-    <section id="features">
+    <section className="features container" id="features">
       <div className="features-header">
         <h1>{i("title")}</h1>
         <ButtonText
@@ -25,26 +21,30 @@ export function Features() {
           hover="true"
         />
       </div>
-      <div className="feature-cards">
-        {threeKeys.map((key, index) => {
-          const svgComponent =
-            i(`${key}.svg`) === "code"
-              ? code
-              : i(`${key}.svg`) === "component"
-              ? component
-              : devices;
 
+      <div className="features-cards">
+        {threeKeys.map((key, index) => {
           return (
-            <div key={index} className="features-card">
-              <div className="features-info">
-                <Image
-                  src={svgComponent}
-                  alt={i(`${key}.alt`)}
-                  width={100}
-                  height={100}
-                />
-                <h1>{i(`${key}.title`)}</h1>
-                <p>{i(`${key}.text`)}</p>
+            <div className="features-card" key={index}>
+              <div className="features-card__content">
+                <div
+                  className={`features-card__front features-card__front-${key}`}
+                >
+                  <Image
+                    src={`/svg/${i(`${key}.svg`)}.svg`}
+                    alt={i(`${key}.alt`)}
+                    width={100}
+                    height={100}
+                  />
+                  <h3 className="features-card__title">{i(`${key}.title`)}</h3>
+                  <p className="features-card__subtitle">
+                    {i(`${key}.subtitle`)}
+                  </p>
+                </div>
+
+                <div className="features-card__back">
+                  <p className="features-card__body">{i(`${key}.text`)}</p>
+                </div>
               </div>
             </div>
           );

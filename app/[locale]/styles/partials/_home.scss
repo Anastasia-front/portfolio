@@ -14,8 +14,8 @@
 .hero {
   &-container {
     @include flex(column, center, center);
+    box-shadow: inset 0 10px 10px -10px var(--color--white-opacity);
     position: relative;
-    padding: 5rem 2rem;
     gap: 2rem;
 
     @include useScreen("tablet-md") {
@@ -142,31 +142,118 @@
 }
 
 .features {
-  @include flex(row, space-between, center);
-  margin-bottom: 40px;
+  @include flex(column, center, center);
+  gap: 3rem;
+  box-shadow: inset 0 0 30px 20px var(--color--white-opacity);
 
   &-header {
+    @include flex(row, space-between, center);
     width: 100%;
+
+    h1 {
+      text-transform: uppercase;
+    }
   }
 
   &-cards {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1.2rem;
   }
 
   &-card {
-    @include flex(column, center, center);
-    flex: 1;
-    min-width: 250px;
-    padding: 30px;
-    border: 1px solid transparent;
+    width: 100%;
+    min-width: 200px;
+    max-width: 300px;
     border-radius: var(--border-radius--sm);
-    background: var(--color--blue-grey-1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    transition: all 0.3s ease;
-    gap: 30px;
+
+    &__content {
+      text-align: center;
+      position: relative;
+      padding: 8rem 0;
+      transition: transform 3s;
+      transform-style: preserve-3d;
+
+      &:hover {
+        transform: rotateY(0.5turn);
+      }
+    }
+
+    &__front,
+    &__back {
+      @include flex(column, center, center);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 5em 3em;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
+
+    &__front {
+      background-color: var(--color--light-blue-1);
+      background-size: cover;
+    }
+    &__front-first {
+      background-image: url("/images/cards/1.jpg");
+    }
+    &__front-second {
+      background-image: url("/images/cards/2.jpg");
+    }
+    &__front-third {
+      background-image: url("/images/cards/3.jpg");
+    }
+
+    &__front::before {
+      content: "";
+      position: absolute;
+      --spacer: 1em;
+      top: var(--spacer);
+      bottom: var(--spacer);
+      left: var(--spacer);
+      right: var(--spacer);
+      border: 3px solid currentColor;
+      transform: var(--level-one);
+    }
+
+    &__title {
+      transform: var(--level-three);
+      order: 2;
+      text-transform: uppercase;
+    }
+
+    &__subtitle {
+      transform: var(--level-two);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: var(--fw-bold);
+      opacity: 0.7;
+    }
+
+    &__body {
+      transform: var(--level-two);
+      font-weight: var(fw-normal);
+      line-height: 1.6;
+    }
+
+    &__back {
+      transform: rotateY(0.5turn);
+      background: var(--color--light-blue-1);
+    }
+    // @include flex(column, center, center);
+    // flex: 1;
+    // min-width: 250px;
+    // padding: 30px;
+    // border: 1px solid transparent;
+    // border-radius: var(--border-radius--sm);
+    // background: var(--color--blue-grey-1);
+    // box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    // transition: all 0.3s ease;
+    // gap: 30px;
   }
 
   &-info {

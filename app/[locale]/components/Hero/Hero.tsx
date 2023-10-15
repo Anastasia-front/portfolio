@@ -23,7 +23,10 @@ export function Hero({ videoHeight }: Props) {
   const b = useTranslations("btn");
 
   return (
-    <section className="hero-container" style={{ marginTop: videoHeight }}>
+    <section
+      className="hero-container container"
+      style={{ marginTop: videoHeight }}
+    >
       <div className="hero-content">
         <span className="hero-blur"></span>
         <span className="hero-blur"></span>
