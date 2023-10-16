@@ -31,7 +31,7 @@ export function Hero({ videoHeight }: Props) {
         <span className="hero-blur"></span>
         <span className="hero-blur"></span>
         <h4>{i("subtitle")}</h4>
-        <div>
+        <div className="hero-headings">
           <h2>{t("name")}</h2>
           <h3 className={`${oswald.className}`}>{t("position")}</h3>
         </div>

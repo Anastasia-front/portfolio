@@ -3,13 +3,25 @@
 import { useTranslations } from "next-intl";
 import { BsFillInfoCircleFill, BsFillInfoSquareFill } from "react-icons/bs";
 
+import { ButtonText } from "@/components";
+
 import { MacBookCanvas, MacCanvas } from "./index";
 
 export function ObjectsSection() {
   const i = useTranslations("home.3d");
+  const b = useTranslations("btn");
 
   return (
     <section className="devices" id="tools">
+      <div className="features-header">
+        <ButtonText
+          text={b("devices")}
+          borderRadius="1rem"
+          padding="0.7rem 1.5rem"
+          hover="true"
+        />
+        <h1>{i("heading")}</h1>
+      </div>
       <div className="devices__hint devices__hint-onHover">
         <p className="devices__subtitle  devices__hint-prompt">
           {i("subtitle")} <BsFillInfoCircleFill />

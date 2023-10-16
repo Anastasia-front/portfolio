@@ -27,7 +27,8 @@
     "contacts": "Contact me",
     "hero": "More information",
     "tools": "My tools",
-    "features": "Go to projects"
+    "features": "Go to projects",
+    "devices": "Go to skills"
   },
   "switcher": {
     "theme": {
@@ -103,7 +104,8 @@
       "inFuture": "I want to use in the future",
       "macBook": "(MacBook Air 13″ М1, 2020)",
       "mac": "(iMac 24”)",
-      "summary": "я сподіваюсь, що вам сподобалася ця інтерактивна частина"
+      "summary": "я сподіваюсь, що вам сподобалася ця інтерактивна частина",
+      "heading": "My devices"
     }
   },
   "about": {
