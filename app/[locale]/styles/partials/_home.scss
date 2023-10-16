@@ -120,7 +120,7 @@
     }
 
     h4 {
-      -webkit-text-stroke: 1px var(--color--blue-grey-1);
+      -webkit-text-stroke: 1px var(--color--white-grey);
     }
 
     p {
@@ -257,4 +257,14 @@
 }
 [data-theme="dark"] .features {
   box-shadow: inset 0 0 30px 20px var(--color--grey-opacity);
+
+  &-card {
+    &__content {
+      color: var(--color--grey);
+    }
+
+    &__back {
+      background: var(--color--orange-1);
+    }
+  }
 }

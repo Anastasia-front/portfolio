@@ -130,7 +130,7 @@ body {
   }
 }
 [data-theme="dark"] body {
-  color: var(--color--white);
+  color: var(--color--light-blue-1);
   background-color: var(--color--bg-dark);
   &::-webkit-scrollbar-thumb {
     background: linear-gradient(to top, #68b8c1 30%, #fca26e 100%);
