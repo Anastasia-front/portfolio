@@ -46,7 +46,7 @@ export default function ProjectsPage() {
   };
 
   return (
-    <div className="u-pad-2">
+    <main className="u-pad-2">
       <div className="projects__header">
         <div className="projects__headings">
           <motion.h1 variants={gridVariants} initial="hidden" animate="visible">
@@ -64,6 +64,6 @@ export default function ProjectsPage() {
 
       <Projects projects={filteredProjects} />
       <Banner text={b("contact")} button />
-    </div>
+    </main>
   );
 }

@@ -40,7 +40,7 @@ export function Header() {
   const { isScreenTabletXl } = useScreenQuery();
 
   return (
-    <motion.nav
+    <motion.header
       className={`navigation ${headerClassName}`}
       variants={navVariants}
       initial="hidden"
@@ -62,6 +62,6 @@ export function Header() {
           onClick={handleToggle}
         />
       )}
-    </motion.nav>
+    </motion.header>
   );
 }

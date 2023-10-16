@@ -20,7 +20,12 @@ export default function Home() {
   };
 
   return (
-    <>
+    <motion.main
+      variants={bannerVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+    >
       <Video onVideoHeightChange={handleVideoHeightChange} />
       <motion.div
         variants={bannerVariants}
@@ -33,6 +38,6 @@ export default function Home() {
         <Features />
         <ObjectsSection />
       </motion.div>
-    </>
+    </motion.main>
   );
 }

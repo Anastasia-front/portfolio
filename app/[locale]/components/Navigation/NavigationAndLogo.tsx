@@ -23,7 +23,7 @@ export function NavigationAndLogo({ handleMenuOpen, isMenuOpen }: Props) {
   };
 
   return (
-    <div className="container-items container-items__frame">
+    <nav className="container-items container-items__frame">
       <Link href="/" className="logo" onClick={hideBurger}>
         <Image
           className="logo__img"
@@ -38,6 +38,6 @@ export function NavigationAndLogo({ handleMenuOpen, isMenuOpen }: Props) {
       ) : (
         <BurgerMenu isMenuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen} />
       )}
-    </div>
+    </nav>
   );
 }

@@ -65,7 +65,7 @@ export default function AboutPage() {
   const opacity = useTransform(scrollYProgress, [0, 0.85, 0.95], [1, 1, 0]);
 
   return (
-    <div className="u-pad-2">
+    <main className="u-pad-2">
       <motion.header ref={header} className="about-header">
         <motion.img
           src={img}
@@ -122,6 +122,6 @@ export default function AboutPage() {
           <AchievementBlock />
         </section>
       </div>
-    </div>
+    </main>
   );
 }
