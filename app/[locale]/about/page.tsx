@@ -66,7 +66,7 @@ export default function AboutPage() {
 
   return (
     <main className="u-pad-2">
-      <motion.header ref={header} className="about-header">
+      <motion.div ref={header} className="about-header">
         <motion.img
           src={img}
           alt={t("alt")}
@@ -95,7 +95,7 @@ export default function AboutPage() {
           </h1>
           <p>{t("description")}</p>
         </motion.div>
-      </motion.header>
+      </motion.div>
       <div className="about-content">
         <Banner text={b("contact")} button />
 
