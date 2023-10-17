@@ -2,7 +2,12 @@
 
 import { useTheme } from "next-themes";
 
-import { Environment, Image, useCursor } from "@react-three/drei";
+import {
+  Environment,
+  Image,
+  MeshReflectorMaterial,
+  useCursor,
+} from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { easing } from "maath";
 import { useEffect, useRef, useState } from "react";
@@ -56,61 +61,38 @@ const images = [
 export const Gallery = () => {
   const { theme, setTheme } = useTheme();
 
-  const firstColor =
-    theme === "dark" ? "var(--color--black)" : "var(--color--white)";
-  const secondColor = theme === "dark" ? "var(--color--grey)" : "bisque";
+  const firstColor = theme === "dark" ? "#151515" : "#fbfcf8";
+  const secondColor = theme === "dark" ? "#151515" : "#fbfcf8b5";
+  const thirdColor = theme === "dark" ? "#3f3f3f" : "#5a5a5a5a";
 
   return (
     <Canvas
-      dpr={[1, 1.5]}
+      dpr={[2, 2]}
       camera={{ fov: 70, position: [0, 2, 15] }}
-      style={{ height: "90vh" }}
+      style={{ height: "80vh" }}
     >
       <color attach="background" args={[firstColor]} />
-      <fog attach="fog" args={[firstColor, 0, 15]} />
-      <group position={[0, -0.5, 0]}>
+      <fog attach="fog" args={[thirdColor, 0, 15]} />
+      <group position={[0, -0.3, 0]}>
         <Frames images={images} />
         <mesh rotation={[-Math.PI / 2, 0, 0]}>
           <planeGeometry args={[50, 50]} />
-          {/* <MeshReflectorMaterial
-            blur={[300, 100]}
+          <MeshReflectorMaterial
+            blur={[350, 250]}
             resolution={2048}
-            mixBlur={1}
-            mixStrength={80}
+            mixBlur={1.7}
+            mixStrength={100}
             roughness={1}
-            depthScale={1.2}
-            minDepthThreshold={0.4}
-            maxDepthThreshold={1.4}
-            // color="#050505"
-            metalness={0.5}
-          /> */}
+            depthScale={1}
+            minDepthThreshold={0.7}
+            maxDepthThreshold={1.7}
+            color={secondColor}
+            metalness={0.3}
+          />
         </mesh>
       </group>
       <Environment preset="city" />
     </Canvas>
-    // <Canvas dpr={[1, 1.5]} camera={{ fov: 70, position: [0, 2, 15] }}>
-    //   <color attach="background" args={[firstColor]} />
-    //   <fog attach="fog" args={["transparent"]} />
-    //   <group position={[0, -0.5, 0]}>
-    //     <Frames images={images} />
-    //     <mesh rotation={[-Math.PI / 2, 0, 0]}>
-    //       <planeGeometry args={[50, 50]} />
-    //       <MeshReflectorMaterial
-    //         blur={[300, 100]}
-    //         resolution={2048}
-    //         mixBlur={1}
-    //         mixStrength={80}
-    //         roughness={1}
-    //         depthScale={1.2}
-    //         minDepthThreshold={0.4}
-    //         maxDepthThreshold={1.4}
-    //         color="transparent"
-    //         metalness={0.5}
-    //       />
-    //     </mesh>
-    //   </group>
-    //   <Environment preset="city" />
-    // </Canvas>
   );
 };
 
@@ -196,7 +178,6 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
       >
         <boxGeometry />
         <meshStandardMaterial
-          // color="#151515"
           metalness={0.5}
           roughness={0.5}
           envMapIntensity={2}
@@ -222,57 +203,6 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
           url={url}
         />
       </mesh>
-      {/* <Text
-        maxWidth={0.1}
-        anchorX="left"
-        anchorY="top"
-        position={[0.55, GOLDENRATIO, 0]}
-        fontSize={0.025}
-      >
-        {name.split("-").join(" ")}
-      </Text> */}
     </group>
-    // <group {...props}>
-    //   <mesh
-    //     name={name}
-    //     onPointerOver={(e) => (e.stopPropagation(), hover(true))}
-    //     onPointerOut={() => hover(false)}
-    //     scale={[1, GOLDENRATIO, 0.05]}
-    //     position={[0, GOLDENRATIO / 2, 0]}
-    //   >
-    //     <boxGeometry />
-    //     <meshStandardMaterial
-    //       color="#151515"
-    //       metalness={0.5}
-    //       roughness={0.5}
-    //       envMapIntensity={2}
-    //     />
-    //     <mesh
-    //       ref={frame}
-    //       raycast={() => null}
-    //       scale={[0.9, 0.93, 0.9]}
-    //       position={[0, 0, 0.2]}
-    //     >
-    //       <boxGeometry />
-    //       <meshBasicMaterial toneMapped={false} fog={false} />
-    //     </mesh>
-    //     <Image
-    //       raycast={() => null}
-    //       ref={image}
-    //       position={[0, 0, 0.7]}
-    //       url={url}
-    //       alt="free"
-    //     />
-    //   </mesh>
-    //   <Text
-    //     maxWidth={0.1}
-    //     anchorX="left"
-    //     anchorY="top"
-    //     position={[0.55, GOLDENRATIO, 0]}
-    //     fontSize={0.025}
-    //   >
-    //     {name.split("-").join(" ")}
-    //   </Text>
-    // </group>
   );
 }

@@ -3,9 +3,7 @@
 import { useTranslations } from "next-intl";
 import { BsFillInfoCircleFill, BsFillInfoSquareFill } from "react-icons/bs";
 
-import { ButtonText } from "@/components";
-
-import { MacBookCanvas, MacCanvas } from "./index";
+import { ButtonText, MacBookCanvas, MacCanvas } from "@/components";
 
 export function ObjectsSection() {
   const i = useTranslations("home.3d");
