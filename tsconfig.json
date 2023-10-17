@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/[locale]/providers/themeProvider.tsx"
+    "app/[locale]/providers/themeProvider.tsx",
+    "app/[locale]/components/3dObjects/Gallery.jsx"
   ],
   "exclude": ["node_modules"]
 }

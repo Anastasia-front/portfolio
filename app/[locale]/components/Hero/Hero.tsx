@@ -6,6 +6,8 @@ import Image from "next/image";
 
 import hero from "@/assets/images/hero/hero.jpeg";
 
+import { Gallery } from "../3dObjects/Gallery";
+
 import { ButtonText } from "@/components";
 import { handleClick } from "@/utils";
 
@@ -23,41 +25,44 @@ export function Hero({ videoHeight }: Props) {
   const b = useTranslations("btn");
 
   return (
-    <section
-      className="hero-container container"
-      style={{ marginTop: videoHeight }}
-    >
-      <div className="hero-content">
-        <span className="hero-blur"></span>
-        <span className="hero-blur"></span>
-        <h4>{i("subtitle")}</h4>
-        <div className="hero-headings">
-          <h2>{t("name")}</h2>
-          <h3 className={`${oswald.className}`}>{t("position")}</h3>
-        </div>
+    <>
+      <section
+        className="hero-container container"
+        style={{ marginTop: videoHeight }}
+      >
+        <div className="hero-content">
+          <span className="hero-blur"></span>
+          <span className="hero-blur"></span>
+          <h4>{i("subtitle")}</h4>
+          <div className="hero-headings">
+            <h2>{t("name")}</h2>
+            <h3 className={`${oswald.className}`}>{t("position")}</h3>
+          </div>
 
-        <p>{i("description")}</p>
+          <p>{i("description")}</p>
 
-        <div className="hero-buttons">
-          <ButtonText
-            text={b("hero")}
-            onClick={() => handleClick("features")}
-            borderRadius="1rem"
-            padding="0.7rem 1.5rem"
-            hover="true"
-          />
-          <ButtonText
-            text={b("tools")}
-            onClick={() => handleClick("tools")}
-            borderRadius="1rem"
-            padding="0.7rem 1.5rem"
-            hover="true"
-          />
+          <div className="hero-buttons">
+            <ButtonText
+              text={b("hero")}
+              onClick={() => handleClick("features")}
+              borderRadius="1rem"
+              padding="0.7rem 1.5rem"
+              hover="true"
+            />
+            <ButtonText
+              text={b("tools")}
+              onClick={() => handleClick("tools")}
+              borderRadius="1rem"
+              padding="0.7rem 1.5rem"
+              hover="true"
+            />
+          </div>
         </div>
-      </div>
-      <div className="hero-image">
-        <Image src={hero} alt="sdf" width={300} height={300} />
-      </div>
-    </section>
+        <div className="hero-image">
+          <Image src={hero} alt="sdf" width={300} height={300} />
+        </div>
+      </section>
+      <Gallery />
+    </>
   );
 }
