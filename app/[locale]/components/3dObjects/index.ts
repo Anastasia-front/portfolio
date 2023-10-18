@@ -1,3 +1,5 @@
+export * from "./Gallery";
+export * from "./GallerySection";
 export * from "./Mac";
 export * from "./MacBook";
 export * from "./MacBookCanvas";

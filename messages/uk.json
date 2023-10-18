@@ -28,7 +28,8 @@
     "hero": "Більше інформації",
     "tools": "Мої інструменти",
     "features": "Перейти до проектів",
-    "devices": "Перейти до навичок"
+    "devices": "Перейти до навичок",
+    "gallery": "Перейти сторінки про мене"
   },
   "switcher": {
     "theme": {
@@ -106,7 +107,8 @@
       "mac": "(iMac 24”)",
       "summary": "*** I hope that you enjoyed this interactive part",
       "heading": "Мої пристрої"
-    }
+    },
+    "gallery": "3-д галерея"
   },
   "about": {
     "title": "Присяжна Анастасія",

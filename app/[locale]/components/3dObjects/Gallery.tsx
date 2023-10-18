@@ -15,9 +15,9 @@ import * as THREE from "three";
 import getUuid from "uuid-by-string";
 import { useLocation, useRoute } from "wouter";
 
-const GOLDENRATIO = 1.61803398875;
+const GOLDEN_RATIO = 1.61803398875;
 
-const pexel = (id) => `/images/hero/${id}.jpg`;
+const pexel = (id: number) => `/images/hero/${id}.jpg`;
 const images = [
   // Front
   { position: [0, 0, 1.5], rotation: [0, 0, 0], url: pexel(1) },
@@ -61,8 +61,8 @@ const images = [
 export const Gallery = () => {
   const { theme, setTheme } = useTheme();
 
-  const firstColor = theme === "dark" ? "#151515" : "#fbfcf8";
-  const secondColor = theme === "dark" ? "#151515" : "#fbfcf8b5";
+  const firstColor = theme === "dark" ? "#171410" : "#fbfcf8";
+  const secondColor = theme === "dark" ? "#171410" : "#3f3f3f";
   const thirdColor = theme === "dark" ? "#3f3f3f" : "#5a5a5a5a";
 
   return (
@@ -74,7 +74,7 @@ export const Gallery = () => {
       <color attach="background" args={[firstColor]} />
       <fog attach="fog" args={[thirdColor, 0, 15]} />
       <group position={[0, -0.3, 0]}>
-        <Frames images={images} />
+        <Frames images={images as FrameProps[]} />
         <mesh rotation={[-Math.PI / 2, 0, 0]}>
           <planeGeometry args={[50, 50]} />
           <MeshReflectorMaterial
@@ -88,6 +88,7 @@ export const Gallery = () => {
             maxDepthThreshold={1.7}
             color={secondColor}
             metalness={0.3}
+            mirror={0}
           />
         </mesh>
       </group>
@@ -96,26 +97,41 @@ export const Gallery = () => {
   );
 };
 
+interface FrameProps {
+  position: [number, number, number];
+  rotation: [number, number, number];
+  url: string;
+}
+interface FramesProps {
+  images: FrameProps[];
+  q?: THREE.Quaternion;
+  p?: THREE.Vector3;
+}
+
 function Frames({
   images,
   q = new THREE.Quaternion(),
   p = new THREE.Vector3(),
-}) {
-  const ref = useRef();
-  const clicked = useRef();
+}: FramesProps) {
+  const ref = useRef<THREE.Group | null>(null);
+  const clicked = useRef<THREE.Object3D | null>(null);
   const [, params] = useRoute("/item/:id");
   const [, setLocation] = useLocation();
+
   useEffect(() => {
-    clicked.current = ref.current.getObjectByName(params?.id);
-    if (clicked.current) {
-      clicked.current.parent.updateWorldMatrix(true, true);
-      clicked.current.parent.localToWorld(p.set(0, GOLDENRATIO / 2, 1.25));
-      clicked.current.parent.getWorldQuaternion(q);
-    } else {
-      p.set(0, 0, 5.5);
-      q.identity();
+    if (ref.current) {
+      clicked.current = ref.current.getObjectByName(params?.id);
+      if (clicked.current) {
+        clicked.current?.parent.updateWorldMatrix(true, true);
+        clicked.current.parent.localToWorld(p.set(0, GOLDEN_RATIO / 2, 1.25));
+        clicked.current.parent.getWorldQuaternion(q);
+      } else {
+        p.set(0, 0, 5.5);
+        q.identity();
+      }
     }
   });
+
   useFrame((state, dt) => {
     easing.damp3(state.camera.position, p, 0.4, dt);
     easing.dampQ(state.camera.quaternion, q, 0.4, dt);
@@ -146,7 +162,9 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
   const [rnd] = useState(() => Math.random());
   const name = getUuid(url);
   const isActive = params?.id === name;
+
   useCursor(hovered);
+
   useFrame((state, dt) => {
     image.current.material.zoom =
       2 + Math.sin(rnd * 10000 + state.clock.elapsedTime / 3) / 2;
@@ -167,14 +185,15 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
       dt
     );
   });
+
   return (
     <group {...props}>
       <mesh
         name={name}
         onPointerOver={(e) => (e.stopPropagation(), hover(true))}
         onPointerOut={() => hover(false)}
-        scale={[1, GOLDENRATIO, 0.05]}
-        position={[0, GOLDENRATIO / 2, 0]}
+        scale={[1, GOLDEN_RATIO, 0.05]}
+        position={[0, GOLDEN_RATIO / 2, 0]}
       >
         <boxGeometry />
         <meshStandardMaterial

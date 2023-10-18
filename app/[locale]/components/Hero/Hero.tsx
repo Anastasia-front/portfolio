@@ -6,8 +6,6 @@ import Image from "next/image";
 
 import hero from "@/assets/images/hero/hero.jpg";
 
-import { Gallery } from "../3dObjects/Gallery";
-
 import { ButtonText } from "@/components";
 import { handleClick } from "@/utils";
 
@@ -62,7 +60,6 @@ export function Hero({ videoHeight }: Props) {
           <Image src={hero} alt="sdf" width={300} height={300} />
         </div>
       </section>
-      <Gallery />
     </>
   );
 }

@@ -28,7 +28,8 @@
     "hero": "More information",
     "tools": "My tools",
     "features": "Go to projects",
-    "devices": "Go to skills"
+    "devices": "Go to skills",
+    "gallery": "Go to page about me"
   },
   "switcher": {
     "theme": {
@@ -106,7 +107,8 @@
       "mac": "(iMac 24”)",
       "summary": "я сподіваюсь, що вам сподобалася ця інтерактивна частина",
       "heading": "My devices"
-    }
+    },
+    "gallery": "3-d gallery"
   },
   "about": {
     "title": "Prysiazhnaia Anastasiia",
