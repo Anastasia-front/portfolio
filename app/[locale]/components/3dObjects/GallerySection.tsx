@@ -10,7 +10,7 @@ export function GallerySection() {
 
   return (
     <section className="gallery-section">
-      <div className="features-header container">
+      <div className=" section-header container">
         <h1>{i("gallery")}</h1>
         <ButtonText
           text={b("gallery")}

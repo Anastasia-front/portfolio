@@ -11,7 +11,7 @@ export function ObjectsSection() {
 
   return (
     <section className="devices" id="tools">
-      <div className="features-header">
+      <div className=" section-header">
         <ButtonText
           text={b("devices")}
           borderRadius="1rem"

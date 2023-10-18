@@ -12,7 +12,7 @@ export function Features() {
 
   return (
     <section className="features container" id="features">
-      <div className="features-header">
+      <div className=" section-header">
         <h1>{i("title")}</h1>
         <ButtonText
           text={b("features")}
