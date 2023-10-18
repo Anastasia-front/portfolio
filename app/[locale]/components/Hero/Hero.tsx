@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Oswald } from "next/font/google";
 import Image from "next/image";
 
-import hero from "@/assets/images/hero/hero.jpeg";
+import hero from "@/assets/images/hero/hero.jpg";
 
 import { Gallery } from "../3dObjects/Gallery";
 

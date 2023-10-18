@@ -17,7 +17,7 @@ import { useLocation, useRoute } from "wouter";
 
 const GOLDENRATIO = 1.61803398875;
 
-const pexel = (id) => `/images/hero/${id}.jpeg`;
+const pexel = (id) => `/images/hero/${id}.jpg`;
 const images = [
   // Front
   { position: [0, 0, 1.5], rotation: [0, 0, 0], url: pexel(1) },
