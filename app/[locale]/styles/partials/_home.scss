@@ -193,8 +193,16 @@
 }
 
 .section-header {
-  @include flex(row, space-between, flex-start);
-  width: 50%;
+  @include flex(column, center, center);
+  width: 100%;
+  gap: 1rem;
+
+  @include useScreen("mobile-lg") {
+    @include flex(row, space-between, flex-start);
+  }
+  @include useScreen("tablet-lg") {
+    width: 50%;
+  }
 
   h2 {
     text-transform: uppercase;
@@ -203,7 +211,10 @@
   }
 
   button {
-    margin-top: 2rem;
+    text-align: center;
+    @include useScreen("mobile-lg") {
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -220,10 +231,12 @@
 
   &-cards {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include flex(column, center, center);
     gap: 1.2rem;
+
+    @include useScreen("tablet-lg") {
+      flex-wrap: wrap;
+    }
   }
 
   &-card {
