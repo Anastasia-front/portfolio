@@ -4,9 +4,11 @@ import { useTranslations } from "next-intl";
 import { Oswald } from "next/font/google";
 import Image from "next/image";
 
+import decoration from "@/assets/images/hero/decoration.png";
 import hero from "@/assets/images/hero/hero.jpg";
 
 import { ButtonText } from "@/components";
+import { useScreenQuery } from "@/hooks";
 import { handleClick } from "@/utils";
 
 const oswald = Oswald({
@@ -21,6 +23,8 @@ export function Hero({ videoHeight }: Props) {
   const i = useTranslations("home.hero");
   const t = useTranslations("home.hero.title");
   const b = useTranslations("btn");
+
+  const { isScreenMobileLg } = useScreenQuery();
 
   return (
     <>
@@ -58,7 +62,15 @@ export function Hero({ videoHeight }: Props) {
             </div>
           </div>
           <div className="hero-image">
-            <Image src={hero} alt="sdf" />
+            {isScreenMobileLg && (
+              <Image
+                src={decoration}
+                alt="sdf"
+                className="hero-image__decoration"
+              />
+            )}
+
+            <Image src={hero} alt="sdf" className="hero-image__content" />
           </div>
         </div>
       </section>

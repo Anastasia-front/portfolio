@@ -17,7 +17,7 @@
     position: relative;
     gap: 2rem;
 
-    @include useScreen("tablet-md") {
+    @include useScreen("tablet-sm") {
       @include flex(row, space-between, center);
     }
   }
@@ -34,9 +34,13 @@
   }
 
   &-content {
-    @include flex(column, space-between, flex-start);
+    @include flex(column, space-between, center);
     width: 100%;
     gap: 1.5rem;
+
+    @include useScreen("mobile-xl") {
+      align-items: flex-start;
+    }
 
     h2 {
       font-weight: 500;
@@ -54,6 +58,7 @@
     }
 
     h4 {
+      align-self: flex-start;
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke: 1px var(--color--blue-grey-2);
     }
@@ -69,13 +74,48 @@
   &-image {
     position: relative;
 
-    img {
+    @include useScreen("mobile-lg") {
+      align-self: flex-end;
+    }
+
+    @include useScreen("tablet-sm") {
+      align-self: center;
+    }
+
+    &__content {
+      position: relative;
       border-radius: var(--border-radius--sm);
       width: 200px;
       height: 200px;
+
       @include useScreen("tablet-sm") {
-        width: 400px;
-        height: 400px;
+        width: 250px;
+        height: 250px;
+      }
+
+      @include useScreen("tablet-md") {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    &__decoration {
+      position: absolute;
+      left: -12rem;
+      bottom: -4rem;
+      width: 110%;
+      height: auto;
+      opacity: 0.7;
+
+      @include useScreen("tablet-md") {
+        width: 120%;
+        left: -18rem;
+      }
+
+      @include useScreen("tablet-xl") {
+        width: 130%;
+        left: -22rem;
+        bottom: -6rem;
       }
     }
 
@@ -84,23 +124,31 @@
       right: -20px;
       bottom: 20px;
       width: 3px;
-      height: 200px;
+      height: 150px;
       content: "";
       background: var(--color--light-blue-2);
+
+      @include useScreen("tablet-sm") {
+        height: 200px;
+      }
     }
     &::after {
       position: absolute;
       right: 20px;
       bottom: -20px;
-      width: 200px;
+      width: 150px;
       height: 3px;
       content: "";
       background: var(--color--orange-2);
+
+      @include useScreen("tablet-sm") {
+        width: 200px;
+      }
     }
   }
 
   &-buttons {
-    @include flex(column, center, flex-start);
+    @include flex(column, center, center);
     gap: 1rem;
     @include useScreen("mobile-xl") {
       @include flex(row, center, center);
@@ -139,12 +187,6 @@
       background: var(--color--orange-2);
     }
     &::after {
-      position: absolute;
-      right: 20px;
-      bottom: -20px;
-      width: 200px;
-      height: 3px;
-      content: "";
       background: var(--color--light-blue-2);
     }
   }
