@@ -70,8 +70,8 @@ export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
                 priority={true}
                 src={logo}
                 alt={t("logo")}
-                width={isScreenTabletSm ? 50 : 70}
-                height={isScreenTabletSm ? 50 : 70}
+                width={isScreenTabletSm ? 30 : 50}
+                height={isScreenTabletSm ? 30 : 50}
               />
             </Link>
           </div>

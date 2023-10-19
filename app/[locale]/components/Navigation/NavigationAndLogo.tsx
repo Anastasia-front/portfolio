@@ -29,8 +29,8 @@ export function NavigationAndLogo({ handleMenuOpen, isMenuOpen }: Props) {
           className="logo__img"
           src="/logo.png"
           alt={logo("logo")}
-          width={25}
-          height={25}
+          width={30}
+          height={30}
         />
       </Link>
       {isScreenTabletSm ? (

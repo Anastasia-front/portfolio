@@ -11,7 +11,7 @@ export function GallerySection() {
   return (
     <section className="gallery-section">
       <div className=" section-header container">
-        <h1>{i("gallery")}</h1>
+        <h2>{i("gallery")}</h2>
         <ButtonText
           text={b("gallery")}
           borderRadius="1rem"

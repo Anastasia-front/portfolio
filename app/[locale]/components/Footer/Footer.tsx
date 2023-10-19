@@ -96,8 +96,8 @@ export function Footer({ title, description }: Props) {
           <Image
             src="/logo.png"
             alt={l("logo")}
-            width={25}
-            height={25}
+            width={30}
+            height={30}
             className="logo__img"
           />
         </Link>
