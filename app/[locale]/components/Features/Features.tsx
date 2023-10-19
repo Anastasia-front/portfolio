@@ -5,10 +5,13 @@ import Image from "next/image";
 
 import { ButtonText } from "@/components";
 import { threeKeys } from "@/constants";
+import { useScreenQuery } from "@/hooks";
 
 export function Features() {
   const i = useTranslations("home.features");
   const b = useTranslations("btn");
+
+  const { isScreenTabletSm } = useScreenQuery();
 
   return (
     <section className="container__box-shadow" id="features">
@@ -49,6 +52,15 @@ export function Features() {
                     <p className="features-card__body">{i(`${key}.text`)}</p>
                   </div>
                 </div>
+                {isScreenTabletSm && (
+                  <Image
+                    className="features-card__decoration"
+                    src={`/images/features/decoration/${index}.webp`}
+                    width={300}
+                    height={300}
+                    alt="kf"
+                  />
+                )}
               </div>
             );
           })}
