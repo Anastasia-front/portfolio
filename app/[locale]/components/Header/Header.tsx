@@ -51,17 +51,17 @@ export function Header() {
         handleMenuOpen={handleMenuOpen}
       />
 
-      {!isMenuOpen && <Switchers />}
-
       {isScreenTabletXl && (
         <ButtonText
           text={t("contacts")}
           borderRadius="60px"
-          padding="1.2rem 2rem"
+          padding="0.85rem 1.2rem"
           hover="true"
           onClick={handleToggle}
         />
       )}
+
+      {!isMenuOpen && <Switchers />}
     </motion.header>
   );
 }
