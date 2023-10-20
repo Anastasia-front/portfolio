@@ -10,6 +10,7 @@ import { useScreenQuery } from "@/hooks";
 export function Features() {
   const i = useTranslations("home.features");
   const b = useTranslations("btn");
+  const a = useTranslations("alt.decoration");
 
   const { isScreenTabletSm } = useScreenQuery();
 
@@ -58,7 +59,7 @@ export function Features() {
                     src={`/images/features/decoration/${index}.webp`}
                     width={300}
                     height={300}
-                    alt="kf"
+                    alt={a("features")}
                   />
                 )}
               </div>

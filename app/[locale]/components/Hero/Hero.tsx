@@ -23,6 +23,8 @@ export function Hero({ videoHeight }: Props) {
   const i = useTranslations("home.hero");
   const t = useTranslations("home.hero.title");
   const b = useTranslations("btn");
+  const a = useTranslations("alt.decoration");
+  const h = useTranslations("alt");
 
   const { isScreenMobileLg } = useScreenQuery();
 
@@ -65,12 +67,12 @@ export function Hero({ videoHeight }: Props) {
             {isScreenMobileLg && (
               <Image
                 src={decoration}
-                alt="sdf"
+                alt={a("hero")}
                 className="hero-image__decoration"
               />
             )}
 
-            <Image src={hero} alt="sdf" className="hero-image__content" />
+            <Image src={hero} alt={h("hero")} className="hero-image__content" />
           </div>
         </div>
       </section>

@@ -10,7 +10,12 @@
       "third": "Third screenshot of project",
       "fourth": "Fourth screenshot of project",
       "fifth": "Fifth screenshot of project"
-    }
+    },
+    "decoration": {
+      "hero": "Decoration image in hero section",
+      "features": "Decoration image of card in features section"
+    },
+    "hero": "Content image of hero section"
   },
   "license": {
     "accordion": "Background images are taken from the site",
