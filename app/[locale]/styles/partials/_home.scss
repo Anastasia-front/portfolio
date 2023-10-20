@@ -365,10 +365,15 @@
 .devices {
   @include flex(column, center, center);
   padding: 4rem;
-  gap: 2rem;
+  gap: 4rem;
+
+  @include useScreen("tablet-lg") {
+    gap: 2rem;
+  }
 
   &__title {
     font-weight: 700;
+    text-align: center;
   }
 
   &__subtitle {
@@ -378,8 +383,8 @@
   }
 
   &__titles {
-    @include flex(row, space-between, center);
-    gap: 12rem;
+    @include flex(column, flex-start, flex-start);
+    gap: 2rem;
 
     div:first-child {
       text-align: left;
@@ -387,14 +392,24 @@
     div:last-child {
       text-align: right;
     }
+
+    @include useScreen("tablet-lg") {
+      @include flex(row, space-between, center);
+      gap: 12rem;
+    }
   }
 
   &__hint {
-    @include flex(row, space-between, flex-start);
+    @include flex(column, center, center);
     position: relative;
     align-self: end;
-    width: 20rem;
+    width: 60%;
     gap: 1.5rem;
+
+    @include useScreen("mobile-lg") {
+      @include flex(row, space-between, flex-start);
+      width: 20rem;
+    }
 
     &-prompt {
       align-self: end;
@@ -443,69 +458,84 @@
 }
 
 .canvas {
-  width: 50vw !important;
-  height: 70vh !important;
+  width: 100vw !important;
+  height: 50vh !important;
   margin: 0 auto;
   cursor: grab;
 
+  @include useScreen("tablet-lg") {
+    width: 50vw !important;
+    height: 70vh !important;
+  }
+
   &__container {
-    @include flex(row, space-between, center);
+    @include flex(column, center, center);
     width: 125%;
-    padding: 0 4rem;
+
     border-top: 1px dotted var(--color--light-blue-1);
     border-bottom: 1px dotted var(--color--light-blue-1);
 
     div {
-      border-right: 1px dotted var(--color--light-blue-1);
-      border-left: 1px dotted var(--color--light-blue-1);
+      border-top: 1px dotted var(--color--light-blue-1);
+      border-bottom: 1px dotted var(--color--light-blue-1);
+    }
+
+    @include useScreen("tablet-lg") {
+      @include flex(row, space-between, center);
+      padding: 0 4rem;
+
+      div {
+        border-right: 1px dotted var(--color--light-blue-1);
+        border-left: 1px dotted var(--color--light-blue-1);
+      }
     }
   }
-}
-[data-theme="dark"] .canvas {
-  &__container {
-    border-top: 1px dotted var(--color--blue-grey-3);
-    border-bottom: 1px dotted var(--color--blue-grey-3);
+  [data-theme="dark"] .canvas {
+    &__container {
+      border-top: 1px dotted var(--color--blue-grey-3);
+      border-bottom: 1px dotted var(--color--blue-grey-3);
 
-    div {
-      border-right: 1px dotted var(--color--blue-grey-3);
-      border-left: 1px dotted var(--color--blue-grey-3);
+      div {
+        border-right: 1px dotted var(--color--blue-grey-3);
+        border-left: 1px dotted var(--color--blue-grey-3);
+      }
     }
   }
-}
 
-.video {
-  position: fixed;
-  top: 76px;
-  left: 0;
-  width: 100vw;
-  height: auto;
-  max-height: 90vh;
+  .video {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    max-height: 90vh;
 
-  @include useScreen("mobile-md") {
-    top: 0;
-  }
-}
-
-.gallery {
-  &-section {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: "";
+    @include useScreen("mobile-md") {
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 2rem;
-      background: linear-gradient(
-        to bottom,
-        var(--color--grey-opacity) 40%,
-        transparent 120%
-      );
     }
+  }
 
-    & > div {
-      margin: 0 auto;
+  .gallery {
+    &-section {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2rem;
+        background: linear-gradient(
+          to bottom,
+          var(--color--grey-opacity) 40%,
+          transparent 120%
+        );
+      }
+
+      & > div {
+        margin: 0 auto;
+      }
     }
   }
 }
