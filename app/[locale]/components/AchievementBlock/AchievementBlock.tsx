@@ -37,7 +37,7 @@ export function AchievementBlock() {
 
   return (
     <motion.div
-      className="about-achievements container"
+      className="about-achievements"
       ref={achievementBlock}
       style={{
         y,
