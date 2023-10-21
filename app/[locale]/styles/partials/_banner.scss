@@ -1,8 +1,9 @@
 @use "./vars" as *;
 @use "./mixins" as *;
+@use "../mixins" as *;
 
 .banner {
-  @include flex(row, space-between, center);
+  @include flex(column, center, center);
   margin-top: 1.5rem;
   padding: 2rem;
   border-radius: var(--border-radius--lg);
@@ -13,6 +14,10 @@
     var(--color--light-blue-4) 99.23%
   );
   gap: 2rem;
+
+  @include useScreen("mobile-md") {
+    @include flex(row, space-between, center);
+  }
 
   &__text {
     color: var(--color--white);

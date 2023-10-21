@@ -37,7 +37,7 @@ export function AchievementBlock() {
 
   return (
     <motion.div
-      className="about-achievements"
+      className="about-achievements container"
       ref={achievementBlock}
       style={{
         y,
@@ -45,7 +45,7 @@ export function AchievementBlock() {
         opacity,
       }}
     >
-      <motion.h3
+      <motion.h4
         className={`about-achievements__title ${franklin.className}`}
         variants={titleVariants3}
         initial="offscreen"
@@ -53,8 +53,8 @@ export function AchievementBlock() {
         viewport={{ once: false, amount: 0.2 }}
       >
         {t("confirm")}
-      </motion.h3>
-      <motion.h4
+      </motion.h4>
+      <motion.h5
         className={`about-achievements__subtitle ${source.className}`}
         variants={titleVariants3}
         initial="offscreen"
@@ -62,7 +62,7 @@ export function AchievementBlock() {
         viewport={{ once: false, amount: 0.2 }}
       >
         {a("title.first")}
-      </motion.h4>
+      </motion.h5>
       <motion.div
         className="about-achievements__slider about-achievements__slider-certificate"
         variants={bannerVariants}
@@ -72,7 +72,7 @@ export function AchievementBlock() {
       >
         <Certificate />
       </motion.div>
-      <motion.h4
+      <motion.h5
         className={`about-achievements__subtitle ${source.className}`}
         variants={titleVariants3}
         initial="offscreen"
@@ -80,9 +80,9 @@ export function AchievementBlock() {
         viewport={{ once: false, amount: 0.2 }}
       >
         {a("title.second")}
-      </motion.h4>
+      </motion.h5>
       <motion.div
-        className="about-achievements__slider"
+        className="about-achievements__slider about-achievements__slider-progress"
         variants={bannerVariants}
         initial="offscreen"
         whileInView="onscreen"

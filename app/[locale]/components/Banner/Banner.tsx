@@ -24,7 +24,7 @@ export function Banner({ text, button }: Props) {
       whileInView="onscreen"
       viewport={{ once: true, amount: 1 }}
     >
-      <h3 className="banner__text">{text}</h3>
+      <h4 className="banner__text">{text}</h4>
       {button && (
         <ButtonText
           text={t("contacts")}

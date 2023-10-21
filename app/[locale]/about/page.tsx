@@ -88,18 +88,6 @@ export default function AboutPage() {
             opacity,
           }}
         />
-        {/* <motion.div
-          className="about-header__content"
-          variants={titleVariants}
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <h1 className={`about-header__title ${franklin.className}`}>
-            {t("title")}
-          </h1>
-          <p>{t("description")}</p>
-        </motion.div>*/}
       </motion.div>
       <div className="about-content">
         <Banner text={b("contact")} button />

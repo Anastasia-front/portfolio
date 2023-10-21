@@ -148,11 +148,9 @@
 
 .about-achievements {
   @include flex(column, center, center);
-  padding: 2rem 3rem 0;
   gap: 2rem;
 
   &__title {
-    padding: 0 2rem;
     padding-bottom: 2rem;
     line-height: 2rem;
     text-align: justify;
@@ -168,16 +166,50 @@
   }
 
   &__slider {
-    width: 100%;
     height: auto;
     max-width: 565px;
 
     &-certificate {
-      padding-left: 6rem;
+      width: 100%;
+      @include useScreen("mobile-md") {
+        padding-left: 2rem;
+      }
+      @include useScreen("mobile-xl") {
+        padding-left: 4rem;
+      }
+      @include useScreen("tablet-sm") {
+        padding-left: 6rem;
+      }
+    }
+
+    &-progress {
+      width: 66%;
+      @include useScreen("mobile-md") {
+        width: 60%;
+      }
+      @include useScreen("mobile-lg") {
+        width: 58%;
+      }
+      @include useScreen("mobile-xl") {
+        width: 56%;
+      }
+      @include useScreen("tablet-sm") {
+        width: 60%;
+      }
+      @include useScreen("tablet-md") {
+        width: 58%;
+      }
+      @include useScreen("mobile-lg") {
+        width: 56%;
+      }
+      @include useScreen("mobile-xl") {
+        width: 48%;
+      }
     }
   }
 
   &__image {
+    max-width: 70vw;
     width: auto;
     height: auto;
     max-height: 100vh;
