@@ -243,6 +243,7 @@
     @include flex(row, center, center);
     width: 100%;
     border-radius: var(--border-radius--sm);
+    cursor: pointer;
 
     &:nth-child(2n + 1) {
       flex-direction: row-reverse;
@@ -258,6 +259,13 @@
     &__decoration {
       position: relative;
       z-index: 0;
+      cursor: pointer;
+      transition: transform 2s;
+      transform: var(--level-one);
+
+      &:hover {
+        transform: rotateY(0.5turn);
+      }
     }
 
     &__content {
