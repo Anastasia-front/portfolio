@@ -20,20 +20,16 @@
   }
 
   > img {
-    display: none;
-
-    @include useScreen("tablet-sm") {
-      display: block;
-      z-index: 7;
-      position: fixed;
-      top: 20%;
-      left: 50%;
-      max-width: 80%;
-      border-radius: var(--border-radius--sm);
-      pointer-events: none;
-      filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
-      transform: translateX(-50%);
-    }
+    z-index: 7;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    max-width: 80%;
+    max-height: 50%;
+    border-radius: var(--border-radius--sm);
+    pointer-events: none;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    transform: translateX(-50%);
   }
 
   &__content {

@@ -12,6 +12,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { bannerVariants, titleVariants } from "@/utils";
 
 import { AboutItem, AchievementBlock, Banner } from "@/components";
+import { useScreenQuery } from "@/hooks";
 
 const franklin = Libre_Franklin({
   subsets: ["latin"],
@@ -34,20 +35,24 @@ export default function AboutPage() {
 
   const { theme, setTheme } = useTheme();
 
+  const { isScreenTabletSm } = useScreenQuery();
+
+  const folder = isScreenTabletSm ? "tablet-and-desktop" : "mobile";
+
   const pathname = usePathname();
   const lang = pathname.slice(0, 3);
   const img = (() => {
     if (lang === "/uk") {
       if (theme === "light") {
-        return "/images/about/uk-light.png";
+        return `/images/about/${folder}/uk-light.png`;
       } else {
-        return "/images/about/uk-dark.png";
+        return `/images/about/${folder}/uk-dark.png`;
       }
     } else {
       if (theme === "light") {
-        return "/images/about/en-light.png";
+        return `/images/about/${folder}/en-light.png`;
       } else {
-        return "/images/about/en-dark.png";
+        return `/images/about/${folder}/en-dark.png`;
       }
     }
   })();
@@ -60,8 +65,8 @@ export default function AboutPage() {
   }).scrollYProgress;
 
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.3, 1.2]);
-  const x = useTransform(scrollYProgress, [0, 0.8, 1], [0, 0, -2400]);
-  const y = useTransform(scrollYProgress, [0, 0.75, 1], [0, 0, -700]);
+  const x = useTransform(scrollYProgress, [0, 0.6, 1], [0, 0, -2400]);
+  const y = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0, -300]);
   const opacity = useTransform(scrollYProgress, [0, 0.85, 0.95], [1, 1, 0]);
 
   return (
@@ -83,7 +88,7 @@ export default function AboutPage() {
             opacity,
           }}
         />
-        <motion.div
+        {/* <motion.div
           className="about-header__content"
           variants={titleVariants}
           initial="offscreen"
@@ -94,7 +99,7 @@ export default function AboutPage() {
             {t("title")}
           </h1>
           <p>{t("description")}</p>
-        </motion.div>
+        </motion.div>*/}
       </motion.div>
       <div className="about-content">
         <Banner text={b("contact")} button />
