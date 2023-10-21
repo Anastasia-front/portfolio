@@ -505,9 +505,9 @@
   transform: translate(-50%, -50%);
 
   &__categories {
-    @include flex(row, center, center);
+    @include flex(row, flex-end, center);
     flex-wrap: wrap;
-    align-self: flex-end;
+
     gap: 0.5rem;
 
     span {
@@ -519,6 +519,7 @@
   }
 
   &__title {
+    align-self: flex-start;
     padding: 0.5rem 0.8rem;
     border-radius: var(--border-radius--lg);
     font-weight: 500;
