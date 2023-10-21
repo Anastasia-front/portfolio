@@ -5,7 +5,7 @@
 .projects {
   display: grid;
   margin-top: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-gap: var(--pad--sm-2);
   grid-auto-flow: dense;
 
@@ -99,13 +99,9 @@
 
   img {
     width: 100%;
-    height: 260px;
+    height: 160px;
     border-radius: var(--pad--sm);
     object-fit: cover;
-
-    @include useScreen("tablet-md") {
-      height: auto;
-    }
   }
 
   &__title {
@@ -498,12 +494,10 @@
 }
 
 .hover {
-  display: flex;
+  @include flex(column, space-between, center);
   position: absolute;
   top: 50%;
   left: 50%;
-  flex-direction: column;
-  justify-content: space-between;
   width: calc(100% - 2rem);
   height: calc(100% - 2rem);
   border-radius: var(--border-radius--sm);
@@ -511,8 +505,8 @@
   transform: translate(-50%, -50%);
 
   &__categories {
-    display: flex;
-    align-items: center;
+    @include flex(row, center, center);
+    flex-wrap: wrap;
     align-self: flex-end;
     gap: 0.5rem;
 
