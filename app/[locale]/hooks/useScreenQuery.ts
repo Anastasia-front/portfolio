@@ -128,3 +128,24 @@ export function useScreenQuery(): UseScreenQueryReturn {
 
   return query;
 }
+
+export const useScreenDesktopMd = () => useMediaQuery({ minWidth: 1441 });
+export const useScreenDesktopSm = () =>
+  useMediaQuery({ minWidth: 1367, maxWidth: 1440 });
+
+export const useScreenTabletXl = () =>
+  useMediaQuery({ minWidth: 1281, maxWidth: 1366 });
+export const useScreenTabletLg = () =>
+  useMediaQuery({ minWidth: 1025, maxWidth: 1280 });
+export const useScreenTabletMd = () =>
+  useMediaQuery({ minWidth: 961, maxWidth: 1024 });
+export const useScreenTabletSm = () =>
+  useMediaQuery({ minWidth: 769, maxWidth: 960 });
+
+export const useScreenMobileXl = () =>
+  useMediaQuery({ minWidth: 541, maxWidth: 768 });
+export const useScreenMobileLg = () =>
+  useMediaQuery({ minWidth: 481, maxWidth: 540 });
+export const useScreenMobileMd = () =>
+  useMediaQuery({ minWidth: 361, maxWidth: 480 });
+export const useScreenMobileSm = () => useMediaQuery({ maxWidth: 360 });
