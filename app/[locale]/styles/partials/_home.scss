@@ -206,8 +206,8 @@
 
   h2 {
     text-transform: uppercase;
-    -webkit-text-fill-color: var(--color--orange-1);
-    -webkit-text-stroke: 1px var(--color--orange-4);
+    -webkit-text-fill-color: var(--color--light-blue-3);
+    -webkit-text-stroke: 1px var(--color--light-blue-4);
   }
 
   button {
@@ -217,11 +217,10 @@
     }
   }
 }
-
 [data-theme="dark"] .section-header {
-  h1 {
-    -webkit-text-fill-color: var(--color--light-blue-3);
-    -webkit-text-stroke: 1px var(--color--light-blue-4);
+  h2 {
+    -webkit-text-fill-color: var(--color--orange-1);
+    -webkit-text-stroke: 1px var(--color--orange-4);
   }
 }
 
