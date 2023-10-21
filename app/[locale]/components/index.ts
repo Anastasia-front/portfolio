@@ -12,6 +12,7 @@ export * from "./Footer";
 export * from "./Header";
 export * from "./Hero";
 export * from "./Navigation";
+export * from "./Portal";
 export * from "./Progress";
 export * from "./ProgressBar";
 export * from "./ProjectItem";
