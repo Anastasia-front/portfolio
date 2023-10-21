@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
+import { Portal } from "@/components";
 import { useKeyPress, useScreenQuery } from "@/hooks";
 
 import logo from "../../../../public/logo.png";
@@ -41,42 +42,45 @@ export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
       <button type="button" className="buttonIcon" onClick={hideBurger}>
         <Burger width={20} height={20} />
       </button>
-
-      <div
-        className={`burgerBackdrop ${
-          isMenuOpen ? "burgerBackdrop__active" : ""
-        } `}
-        onClick={handleBackdropClick}
-      >
-        <div
-          className={`burgerBackground ${
-            isMenuOpen && "burgerBackground__active"
-          } `}
-        >
-          <button
-            type="button"
-            className="buttonIcon buttonIcon__close"
-            onClick={hideBurger}
+      <Portal wrapperId="portal">
+        <>
+          <div
+            className={`burgerBackdrop ${
+              isMenuOpen ? "burgerBackdrop__active" : ""
+            } `}
+            onClick={handleBackdropClick}
           >
-            <Close width={25} height={25} />
-          </button>
+            <div
+              className={`burgerBackground ${
+                isMenuOpen && "burgerBackground__active"
+              } `}
+            >
+              <button
+                type="button"
+                className="buttonIcon buttonIcon__close"
+                onClick={hideBurger}
+              >
+                <Close width={25} height={25} />
+              </button>
 
-          <div className="burgerColumn">
-            <Navigation onClick={hideBurger} />
-            <Switchers className="burgerSwitchers" />
-            <Link href="/" className="logo">
-              <Image
-                className="logo__img"
-                priority={true}
-                src={logo}
-                alt={t("logo")}
-                width={isScreenTabletSm ? 30 : 50}
-                height={isScreenTabletSm ? 30 : 50}
-              />
-            </Link>
+              <div className="burgerColumn">
+                <Navigation onClick={hideBurger} />
+                <Switchers className="burgerSwitchers" />
+                <Link href="/" className="logo">
+                  <Image
+                    className="logo__img"
+                    priority={true}
+                    src={logo}
+                    alt={t("logo")}
+                    width={isScreenTabletSm ? 30 : 50}
+                    height={isScreenTabletSm ? 30 : 50}
+                  />
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      </Portal>
     </>
   );
 }
