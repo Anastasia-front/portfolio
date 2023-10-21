@@ -209,9 +209,14 @@
         padding: 6rem 20rem;
       }
 
-      .features li {
-        margin-left: 1rem;
-        list-style: square;
+      &-features {
+        @include flex(column, flex-start, flex-start);
+        gap: 1rem;
+
+        li {
+          margin-left: 1rem;
+          list-style: square;
+        }
       }
 
       h4 {

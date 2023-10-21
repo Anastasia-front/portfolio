@@ -98,7 +98,7 @@ export default function Page({ params }: Params) {
           {features && (
             <div>
               <h4>{h("features")}</h4>
-              <ul className="features">
+              <ul className="project__content__text-features">
                 {features?.map((feature: any, i: number) => {
                   return <li key={i}>{feature}</li>;
                 })}
