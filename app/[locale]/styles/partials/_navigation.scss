@@ -10,14 +10,17 @@
   align-items: center;
   padding: 1rem 0.6rem 0.5rem 0.6rem;
   gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
 
   @include useScreen("mobile-lg") {
     padding: 1.5rem 2rem 0.5rem 2rem;
   }
   @include useScreen("tablet-sm") {
     padding: 2rem 2rem 0.5rem 2rem;
+  }
+  @include useScreen("tablet-xl") {
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 13.5rem;
   }
 }
 
