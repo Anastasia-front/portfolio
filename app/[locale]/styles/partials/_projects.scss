@@ -95,6 +95,7 @@
 
   &-page {
     border: none;
+    margin-top: 1rem;
   }
 
   img {
@@ -212,7 +213,7 @@
 
       &-features {
         @include flex(column, flex-start, flex-start);
-        gap: 1rem;
+        gap: 0.3rem;
 
         li {
           margin-left: 1rem;
