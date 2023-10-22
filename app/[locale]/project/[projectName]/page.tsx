@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import { headerImgVariants, overlayVariants, titleVariants2 } from "@/utils";
 
 import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
+import { useScreenQuery } from "@/hooks";
 
 interface Params {
   params: {
@@ -27,6 +28,8 @@ export default function Page({ params }: Params) {
   const h = useTranslations("projects.headers");
   const l = useTranslations("projects.links");
   const p = useTranslations("projects");
+
+  const { isScreenMobileLg } = useScreenQuery();
 
   const pathname = usePathname();
   const lang = pathname.slice(0, 3);
@@ -56,8 +59,8 @@ export default function Page({ params }: Params) {
   const { description, image1, image2, image3, image4, image5 } = content || {};
 
   return (
-    <section className="project project-page">
-      <div className="project__header">
+    <main className="container project project-page">
+      <section className="project__header">
         <motion.img
           className="bg-image"
           src={image?.src}
@@ -92,8 +95,8 @@ export default function Page({ params }: Params) {
           </div>
           <h5 className={`banner__text ${rubik.className}`}>{description}</h5>
         </motion.div>
-      </div>
-      <div className="project__content">
+      </section>
+      <section className="project__content">
         <div className="project__content__text">
           {features && (
             <div>
@@ -150,17 +153,25 @@ export default function Page({ params }: Params) {
         </div>
 
         <div className="project__content__screenshots">
-          <div className="horizontal-images u-pad-2">
-            {image1 && <Image src={image1} alt={i("first")} />}
-            {image2 && <Image src={image2} alt={i("second")} />}
-          </div>
+          {isScreenMobileLg ? (
+            <div className="horizontal-images u-pad-2">
+              {image1 && <Image src={image1} alt={i("first")} />}
+              {image2 && <Image src={image2} alt={i("second")} />}
+            </div>
+          ) : (
+            <div className="horizontal-images__fullscreen">
+              {image1 && <Image src={image1} alt={i("first")} />}
+              {image2 && <Image src={image2} alt={i("second")} />}
+            </div>
+          )}
+
           <div className="horizontal-images__fullscreen">
             {image3 && <Image src={image3} alt={i("third")} />}
             {image4 && <Image src={image4} alt={i("fourth")} />}
             {image5 && <Image src={image5} alt={i("fifth")} />}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }
