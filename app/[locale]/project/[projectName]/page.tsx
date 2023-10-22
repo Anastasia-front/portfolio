@@ -106,7 +106,7 @@ export default function Page({ params }: Params) {
             </div>
           )}
 
-          <div className="project__content__intro-solution">
+          <div className="project__content__text-solution">
             {problem && (
               <div>
                 <h4>{h("problem")}</h4>
@@ -122,7 +122,7 @@ export default function Page({ params }: Params) {
           </div>
 
           {links && (
-            <div className="links">
+            <div className="project__content__text-links">
               <h4>{h("links")}</h4>
               <ul>
                 <li>

@@ -153,6 +153,7 @@
   .banner {
     z-index: 9;
     position: absolute;
+    flex-direction: column;
     bottom: 5rem;
     left: 1.5rem;
     width: calc(100% - 3rem);
@@ -161,7 +162,7 @@
 
     &__header {
       @include flex(row, flex-start, center);
-      gap: 1rem;
+      gap: 3rem;
     }
     &__title {
       font-weight: 400;
@@ -357,142 +358,6 @@
     &__screenshots {
       img {
         border: 1px solid var(--color--orange-3);
-      }
-    }
-  }
-}
-
-.project__image {
-  flex: 0 0 50%;
-
-  > img {
-    height: auto;
-    border-top-left-radius: var(--pad--sm);
-    border-top-right-radius: 0;
-    border-bottom-left-radius: var(--pad--sm);
-
-    @include useScreen("tablet-md") {
-      height: 100%;
-    }
-  }
-}
-
-.project__title {
-  padding-left: var(--pad--sm-2);
-
-  @include useScreen("tablet-md") {
-    padding-left: 0;
-  }
-}
-
-.project__image {
-  > img {
-    height: auto;
-
-    @include useScreen("tablet-md") {
-      height: 100%;
-    }
-  }
-}
-
-.project-page {
-  margin-top: 1rem;
-  color: var(--color--white);
-
-  p {
-    font-weight: 500;
-    line-height: 1.6;
-  }
-
-  &__header {
-    @include flex(column, center, center);
-
-    &__profile {
-      display: flex;
-      align-items: center;
-      margin-top: 2rem;
-      margin-bottom: 8rem;
-      gap: 1rem;
-
-      .logo {
-        width: 4rem;
-        height: 4rem;
-        border: 2px solid #fafafc;
-        border-radius: var(--border-radius--rounded);
-        background-color: #fff;
-        box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
-
-        img {
-          padding: 0.4rem;
-        }
-      }
-    }
-
-    &__date {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    &__image {
-      right: 0;
-      padding-left: 2rem;
-
-      > img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        object-position: center top;
-      }
-    }
-  }
-
-  &__title {
-    max-width: 1200px;
-    margin-bottom: var(--pad--sm-2);
-    padding: 0 8rem;
-    font-weight: 600;
-  }
-
-  &__content {
-    padding: 3rem;
-
-    @include useScreen("tablet-md") {
-      padding: 10rem 18rem;
-    }
-
-    @include useScreen("desktop-md") {
-      padding: 8rem;
-    }
-
-    &__introduction {
-      padding: 0 8rem 4rem 8rem;
-      font-weight: 500;
-
-      line-height: 1.4;
-    }
-
-    &__intro-image {
-      width: 100%;
-      height: auto;
-      padding-bottom: 4rem;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    &__list li {
-      margin: 0 4rem;
-      padding: 1rem 0;
-      list-style: decimal;
-
-      @include useScreen("tablet-md") {
-        margin: 0 12rem;
-      }
-
-      p:first-child {
-        padding-bottom: 1rem;
-
-        font-weight: 600;
       }
     }
   }
