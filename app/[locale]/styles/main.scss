@@ -212,11 +212,6 @@ footer {
   }
 }
 
-//utilities
-.u-pad-2 {
-  padding: 2rem;
-}
-
 .icons {
   @include flex(column, center, center);
   flex-wrap: wrap;

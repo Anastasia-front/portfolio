@@ -70,7 +70,7 @@ export default function AboutPage() {
   const opacity = useTransform(scrollYProgress, [0, 0.85, 0.95], [1, 1, 0]);
 
   return (
-    <main className="u-pad-2 container">
+    <main className="container">
       <motion.div ref={header} className="about-header">
         <motion.img
           src={img}

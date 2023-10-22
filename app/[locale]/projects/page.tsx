@@ -46,7 +46,7 @@ export default function ProjectsPage() {
   };
 
   return (
-    <main className="u-pad-2 container">
+    <main className="container">
       <div className="projects__header">
         <div className="projects__headings">
           <motion.h1 variants={gridVariants} initial="hidden" animate="visible">
