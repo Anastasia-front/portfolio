@@ -14,7 +14,7 @@
   @include useScreen("mobile-lg") {
     padding: 1.5rem 2rem 0.5rem 2rem;
   }
-  @include useScreen("tablet-sm") {
+  @include useScreen("tablet-lg") {
     padding: 2rem 2rem 0.5rem 2rem;
   }
   @include useScreen("tablet-xl") {
