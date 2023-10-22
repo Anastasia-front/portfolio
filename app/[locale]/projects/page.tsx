@@ -48,7 +48,7 @@ export default function ProjectsPage() {
   return (
     <main className="container">
       <div className="projects__header">
-        <div className="projects__headings">
+        <div className="page-headings">
           <motion.h1 variants={gridVariants} initial="hidden" animate="visible">
             {t("title")}
           </motion.h1>

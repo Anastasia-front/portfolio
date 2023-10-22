@@ -12,7 +12,7 @@ export default function SkillsPage() {
 
   return (
     <main className="container">
-      <div className="projects__headings">
+      <div className="page-headings">
         <motion.h1 variants={gridVariants} initial="hidden" animate="visible">
           {t("title")}
         </motion.h1>
@@ -22,7 +22,10 @@ export default function SkillsPage() {
       </div>
 
       <Accordion />
-      <motion.div variants={imgVariants("left")}>
+      <motion.div
+        variants={imgVariants("left")}
+        className="skills-section__slider"
+      >
         <SkillSlider />
       </motion.div>
     </main>

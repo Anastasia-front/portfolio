@@ -176,6 +176,38 @@ footer {
   }
 }
 
+.page-headings {
+  @include flex(column, flex-start, flex-start);
+  gap: 0.5rem;
+  max-width: 100vw;
+
+  h1 {
+    background-image: linear-gradient(
+      to right,
+      var(--color--light-blue-4),
+      var(--color--light-blue-3),
+      var(--color--light-blue-4) 50%,
+      var(--color--light-blue-3),
+      var(--color--light-blue-4)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h6 {
+    background-image: linear-gradient(
+      to right,
+      var(--color--orange-2),
+      var(--color--orange-4),
+      var(--color--orange-2) 50%,
+      var(--color--orange-4),
+      var(--color--orange-2)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 .progress-bar {
   z-index: 9999;
   position: fixed;
