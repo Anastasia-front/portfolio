@@ -5,7 +5,7 @@
 .banner {
   @include flex(column, center, center);
   margin-top: 1.5rem;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: var(--border-radius--lg);
   color: var(--color--white);
   background: radial-gradient(
@@ -13,10 +13,16 @@
     var(--color--light-blue-1) 0%,
     var(--color--light-blue-4) 99.23%
   );
-  gap: 2rem;
+  gap: 1rem;
 
   @include useScreen("mobile-md") {
     @include flex(row, space-between, center);
+    padding: 1.2rem;
+    gap: 1.2rem;
+  }
+  @include useScreen("tablet-sm") {
+    padding: 2rem;
+    gap: 2rem;
   }
 
   &__text {

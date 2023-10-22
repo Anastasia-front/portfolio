@@ -82,7 +82,7 @@ export default function Page({ params }: Params) {
           animate="onscreen"
         >
           <div className="banner__header">
-            <h1 className={`banner__title ${rubik.className}`}>{name}</h1>
+            <h3 className={`banner__title ${rubik.className}`}>{name}</h3>
             <div className={`banner__categories ${rubik.className}`}>
               {categories?.map((category: any, index: number) => {
                 return (
@@ -154,12 +154,12 @@ export default function Page({ params }: Params) {
 
         <div className="project__content__screenshots">
           {isScreenMobileLg ? (
-            <div className="horizontal-images u-pad-2">
+            <div className="horizontal-images">
               {image1 && <Image src={image1} alt={i("first")} />}
               {image2 && <Image src={image2} alt={i("second")} />}
             </div>
           ) : (
-            <div className="horizontal-images__fullscreen">
+            <div className="horizontal-images__fullscreen horizontal-images__fullscreen-paddings">
               {image1 && <Image src={image1} alt={i("first")} />}
               {image2 && <Image src={image2} alt={i("second")} />}
             </div>
