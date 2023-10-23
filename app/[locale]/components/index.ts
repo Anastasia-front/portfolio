@@ -11,6 +11,7 @@ export * from "./Features";
 export * from "./Footer";
 export * from "./Header";
 export * from "./Hero";
+export * from "./LottiePlayer";
 export * from "./Navigation";
 export * from "./Portal";
 export * from "./Progress";
