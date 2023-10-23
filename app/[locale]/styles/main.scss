@@ -256,8 +256,12 @@ footer {
   }
 
   &__block {
-    @include flex(row, center, center);
+    @include flex(column, center, center);
     gap: 1.2rem;
+
+    @include useScreen("mobile-md") {
+      flex-direction: row;
+    }
 
     &-title {
       color: var(--color--white);

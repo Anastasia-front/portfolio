@@ -58,7 +58,11 @@
     var(--color--orange-4) 0%,
     var(--color--orange-1) 99.23%
   );
-  gap: 1rem;
+  gap: 3rem;
+
+  @include useScreen("mobile-md") {
+    gap: 2rem;
+  }
 
   &__logo img {
     filter: drop-shadow(1px 4px 7px rgba(0, 0, 0, 0.2));
