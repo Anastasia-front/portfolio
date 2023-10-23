@@ -149,6 +149,11 @@
 .about-achievements {
   @include flex(column, center, center);
   gap: 2rem;
+  width: 90vw;
+
+  @include useScreen("tablet-sm") {
+    width: 100%;
+  }
 
   &__title {
     padding-bottom: 2rem;
@@ -183,13 +188,8 @@
     }
 
     &-progress {
-      width: 66%;
-      @include useScreen("mobile-md") {
-        width: 60%;
-      }
-      @include useScreen("mobile-lg") {
-        width: 58%;
-      }
+      width: 58%;
+
       @include useScreen("mobile-xl") {
         width: 56%;
       }
@@ -199,11 +199,11 @@
       @include useScreen("tablet-md") {
         width: 58%;
       }
-      @include useScreen("mobile-lg") {
+      @include useScreen("tablet-lg") {
         width: 56%;
       }
-      @include useScreen("mobile-xl") {
-        width: 48%;
+      @include useScreen("tablet-xl") {
+        width: 52%;
       }
     }
   }
