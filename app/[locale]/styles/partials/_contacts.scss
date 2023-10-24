@@ -5,11 +5,18 @@
   @include flex(row, center, center);
   gap: 1rem;
 
-  @mixin area($bgColor, $borderColor, $boxShadowColor, $placeholderColor) {
+  @mixin area(
+    $bgColor,
+    $borderColor,
+    $boxShadowColor,
+    $outlineColor,
+    $placeholderColor
+  ) {
     border: 0px;
     background-color: $bgColor;
     border-top: 1px solid $borderColor;
     box-shadow: 3px 3px 3px $boxShadowColor;
+    outline-color: $outlineColor;
 
     &::placeholder {
       color: $placeholderColor;
@@ -30,7 +37,8 @@
     @include area(
       var(--color--white),
       var(--color--orange-2),
-      var(--color--white-opacity),
+      var(--color--light-blue-2),
+      var(--color--light-blue-3),
       var(--color--blue-grey-1)
     );
     padding: 10px;
@@ -40,8 +48,9 @@
   &__textfield {
     @include area(
       var(--color--white),
-      var(--color--light-blue-3),
+      var(--color--light-blue-2),
       var(--color--orange-1),
+      var(--color--light-blue-3),
       var(--color--blue-grey-1)
     );
     width: 100%;
@@ -72,7 +81,7 @@
 
     &:hover {
       transform: scale(1.03);
-      color: var(--color--black);
+      color: var(--color--blue-grey-2);
       background: var(--color--light-blue-3);
     }
   }
