@@ -6,6 +6,7 @@
   font-family: inherit;
   text-align: left;
   background: var(--color--orange-4);
+  min-width: 150px;
 
   @include useOnHover {
     background: var(--color--orange-3);
