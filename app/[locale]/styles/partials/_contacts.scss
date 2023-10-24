@@ -1,27 +1,27 @@
 @use "./mixins" as *;
 @use "../mixins" as *;
 
+@mixin area(
+  $bgColor,
+  $borderColor,
+  $boxShadowColor,
+  $outlineColor,
+  $placeholderColor
+) {
+  border: 0px;
+  background-color: $bgColor;
+  border-top: 1px solid $borderColor;
+  box-shadow: 3px 3px 3px $boxShadowColor;
+  outline-color: $outlineColor;
+
+  &::placeholder {
+    color: $placeholderColor;
+  }
+}
+
 .contact {
   @include flex(row, center, center);
   gap: 1rem;
-
-  @mixin area(
-    $bgColor,
-    $borderColor,
-    $boxShadowColor,
-    $outlineColor,
-    $placeholderColor
-  ) {
-    border: 0px;
-    background-color: $bgColor;
-    border-top: 1px solid $borderColor;
-    box-shadow: 3px 3px 3px $boxShadowColor;
-    outline-color: $outlineColor;
-
-    &::placeholder {
-      color: $placeholderColor;
-    }
-  }
 
   &__form {
     @include flex(column, center, center);
@@ -83,6 +83,43 @@
       transform: scale(1.03);
       color: var(--color--blue-grey-2);
       background: var(--color--light-blue-3);
+    }
+  }
+}
+[data-theme="dark"] .contact {
+  &__input {
+    @include area(
+      var(--color--blue-grey-opacity),
+      var(--color--light-blue-2),
+      var(--color--orange-2),
+      var(--color--light-blue-3),
+      var(--color--white-grey)
+    );
+    padding: 10px;
+    width: 250px;
+  }
+
+  &__textfield {
+    @include area(
+      var(--color--blue-grey-opacity),
+      var(--color--orange-2),
+      var(--color--light-blue-2),
+      var(--color--light-blue-3),
+      var(--color--white-grey)
+    );
+  }
+
+  &__submit {
+    background: var(--color--orange-2);
+    color: var(--color--white-grey);
+    font-weight: 400;
+    transition: 250ms;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.03);
+      color: var(--color--white);
+      background: var(--color--orange-3);
     }
   }
 }
