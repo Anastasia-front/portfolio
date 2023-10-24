@@ -9,6 +9,7 @@ export * from "./Certificate";
 export * from "./Dropdown";
 export * from "./Features";
 export * from "./Footer";
+export * from "./Form";
 export * from "./Header";
 export * from "./Hero";
 export * from "./LottiePlayer";
