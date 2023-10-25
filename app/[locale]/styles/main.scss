@@ -182,6 +182,34 @@ footer {
   gap: 0.5rem;
   max-width: 100vw;
 
+  &__small-width {
+    width: 90%;
+
+    @include useScreen("mobile-xl") {
+      width: 80%;
+    }
+    @include useScreen("tablet-sm") {
+      width: 60%;
+    }
+    @media screen and (min-width: 850px) {
+      width: 50%;
+    }
+  }
+
+  &__medium-width {
+    width: 100%;
+
+    @include useScreen("mobile-xl") {
+      width: 90%;
+    }
+    @include useScreen("tablet-sm") {
+      width: 80%;
+    }
+    @media screen and (min-width: 850px) {
+      width: 70%;
+    }
+  }
+
   h1 {
     background-image: linear-gradient(
       to right,
