@@ -1,8 +1,15 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 import { motion } from "framer-motion";
+
+import decor1 from "@/assets/images/contacts/decoration/1.png";
+import {
+  default as decor2,
+  default as decor3,
+} from "@/assets/images/contacts/decoration/2.png";
 
 import { Form, LottiePlayer } from "@/components";
 import { gridVariants } from "@/utils";
@@ -29,6 +36,21 @@ export default function ContactsPage() {
           className="contact__animation"
           loop
           autoplay
+        />
+        <Image
+          className="contact__decoration contact__decoration-first"
+          alt="khgf"
+          src={decor1}
+        />
+        <Image
+          className="contact__decoration contact__decoration-second"
+          alt="khgf"
+          src={decor2}
+        />
+        <Image
+          className="contact__decoration contact__decoration-third"
+          alt="khgf"
+          src={decor3}
         />
       </div>
     </main>

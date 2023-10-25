@@ -91,6 +91,69 @@
     height: auto;
     max-width: 80%;
     min-width: 250px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__decoration {
+    height: auto;
+    position: absolute;
+    z-index: 0;
+    top: 36rem;
+
+    @include useScreen("tablet-sm") {
+      top: 7rem;
+    }
+
+    &-first {
+      display: none;
+
+      @include useScreen("mobile-lg") {
+        display: block;
+        left: 1rem;
+        width: 230px;
+      }
+      @include useScreen("tablet-sm") {
+        left: 30rem;
+      }
+      @include useScreen("tablet-md") {
+        display: none;
+      }
+    }
+
+    &-second {
+      right: 7rem;
+      width: 250px;
+      transform: rotateX(180deg);
+
+      @include useScreen("mobile-lg") {
+        top: 40rem;
+        right: 0;
+        width: 260px;
+      }
+      @include useScreen("tablet-sm") {
+        top: 20rem;
+      }
+      @include useScreen("desktop-md") {
+        right: 14rem;
+        width: 300px;
+      }
+    }
+
+    &-third {
+      right: -1rem;
+      width: 250px;
+      transform: rotateY(180deg);
+
+      @include useScreen("mobile-lg") {
+        right: 1rem;
+        width: 260px;
+      }
+      @include useScreen("desktop-md") {
+        right: 20rem;
+        width: 350px;
+      }
+    }
   }
 
   &__submit {
