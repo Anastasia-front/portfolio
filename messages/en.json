@@ -12,7 +12,8 @@
       "fifth": "Fifth screenshot of project"
     },
     "decoration": {
-      "hero": "Decoration image in hero section",
+      "hero": "Decoration image in hero section of home page",
+      "contacts": "Decoration image of contacts page",
       "features": "Decoration image of card in features section"
     },
     "hero": "Content image of hero section"

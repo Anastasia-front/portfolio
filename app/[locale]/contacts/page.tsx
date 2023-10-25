@@ -16,6 +16,7 @@ import { gridVariants } from "@/utils";
 
 export default function ContactsPage() {
   const t = useTranslations("contacts");
+  const a = useTranslations("alt.decoration");
 
   return (
     <main className="contact-page container">
@@ -39,17 +40,17 @@ export default function ContactsPage() {
         />
         <Image
           className="contact__decoration contact__decoration-first"
-          alt="khgf"
+          alt={a("contacts")}
           src={decor1}
         />
         <Image
           className="contact__decoration contact__decoration-second"
-          alt="khgf"
+          alt={a("contacts")}
           src={decor2}
         />
         <Image
           className="contact__decoration contact__decoration-third"
-          alt="khgf"
+          alt={a("contacts")}
           src={decor3}
         />
       </div>
