@@ -11,7 +11,7 @@ export default function SkillsPage() {
   const t = useTranslations("skills");
 
   return (
-    <main className="container">
+    <main className="skills-page container">
       <div className="page-headings">
         <motion.h1 variants={gridVariants} initial="hidden" animate="visible">
           {t("title")}

@@ -42,9 +42,11 @@ export function SkillBlock({
       onClick={() => handleToggle(id)}
     >
       {active !== id ? (
-        <h3 className="skill-block__title">{title}</h3>
+        <h3 className="skill-block__title skill-block__overlay skill-block__overlay-notActive">
+          {title}
+        </h3>
       ) : (
-        <div className="skill-block__overlay">
+        <div className="skill-block__overlay skill-block__overlay-active">
           <h3 className="skill-block__title">{title}</h3>
           <div className="skills-section__list">
             {skillBlock.map((skill, index) => (
