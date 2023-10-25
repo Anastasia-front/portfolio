@@ -908,8 +908,8 @@
     "description": "Some information about my project"
   },
   "contacts": {
-    "title": "Contact me",
-    "description": "Contact information",
+    "title": "Write to me",
+    "description": "Below is the form for sending me a letter to the post office (indicate your e-mail, subject and the actual text of the message), and below it you will find all available ways to contact me (they are also duplicated in the footer)",
     "footer": {
       "title": "To contact me, click on the link convenient for you",
       "icons": {
