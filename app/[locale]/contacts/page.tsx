@@ -11,7 +11,7 @@ import {
   default as decor3,
 } from "@/assets/images/contacts/decoration/2.png";
 
-import { Form, LottiePlayer } from "@/components";
+import { Contacts, Form, LottiePlayer } from "@/components";
 import { gridVariants } from "@/utils";
 
 export default function ContactsPage() {
@@ -58,6 +58,9 @@ export default function ContactsPage() {
           alt={a("contacts")}
           src={decor3}
         />
+      </div>
+      <div>
+        <Contacts />
       </div>
     </main>
   );

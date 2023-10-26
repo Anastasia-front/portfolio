@@ -6,6 +6,7 @@ export * from "./Banner";
 export * from "./BurgerMenu";
 export * from "./Buttons";
 export * from "./Certificate";
+export * from "./Contacts";
 export * from "./Dropdown";
 export * from "./Features";
 export * from "./Footer";

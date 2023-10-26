@@ -18,7 +18,7 @@
     gap: 2rem;
   }
 
-  &-contact {
+  &-contacts {
     @include flex(column, center, center);
     gap: 1rem;
 
@@ -136,7 +136,7 @@
     var(--color--light-blue-1) 99.23%
   );
 
-  &-contact {
+  &-contacts {
     &__title {
       color: var(--color--blue-grey-3);
     }

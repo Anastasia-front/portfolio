@@ -18,8 +18,7 @@ import {
   BsWhatsapp,
 } from "react-icons/bs";
 
-import { Navigation } from "@/components";
-import { threeKeys } from "@/constants";
+import { Contacts, Navigation } from "@/components";
 
 function getIconComponent(iconName: string) {
   switch (iconName) {
@@ -55,8 +54,6 @@ interface Props {
 
 export function Footer({ title, description }: Props) {
   const l = useTranslations("alt");
-  const i = useTranslations("contacts.footer");
-  const ic = useTranslations("contacts.footer.icons");
 
   const FooterVariants = {
     hidden: {
@@ -100,41 +97,7 @@ export function Footer({ title, description }: Props) {
           />
         </Link>
         <Navigation location="banner" />
-        <div className="footer-contact">
-          <p className="footer-contact__title">{i("title")} </p>
-          <ul className="footer-icons">
-            {threeKeys.map((firstBlock) => (
-              <li key={firstBlock} className="footer-icons__block">
-                <p className="footer-icons__block-title">
-                  {ic(`${firstBlock}.title`)}
-                </p>
-
-                <ul className="footer-icons__block-links">
-                  {threeKeys.map((secondBlock) => {
-                    const iconKey = ic(
-                      `${firstBlock}.links.${secondBlock}.icon`
-                    );
-                    const IconComponent = getIconComponent(iconKey);
-
-                    return (
-                      <li key={secondBlock}>
-                        <Link
-                          target="_blank"
-                          href={ic(`${firstBlock}.links.${secondBlock}.href`)}
-                          data-text={ic(
-                            `${firstBlock}.links.${secondBlock}.dataText`
-                          )}
-                        >
-                          {IconComponent}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Contacts location="footer" />
       </motion.div>
     </footer>
   );
