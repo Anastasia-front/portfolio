@@ -1,16 +1,18 @@
-@use "./partials/vars" as *;
-@use "./partials/navigation";
-@use "./partials/button";
-@use "./partials/banner";
-@use "./partials/about";
-@use "./partials/skills";
-@use "./partials/projects";
 @use "./mixins" as *;
-@use "./partials/mixins" as *;
-@use "./partials/swiper" as *;
-@use "./partials/dropdown" as *;
-@use "./partials/home" as *;
+
+@use "./partials/about" as *;
+@use "./partials/banner" as *;
+@use "./partials/button" as *;
 @use "./partials/contacts" as *;
+@use "./partials/dropdown" as *;
+@use "./partials/footer" as *;
+@use "./partials/home" as *;
+@use "./partials/mixins" as *;
+@use "./partials/navigation";
+@use "./partials/projects";
+@use "./partials/skills";
+@use "./partials/swiper" as *;
+@use "./partials/vars" as *;
 
 h1,
 h2,
@@ -270,145 +272,6 @@ footer {
 [data-theme="dark"] .logo {
   &__img {
     border: 1px solid var(--color--light-burger);
-  }
-}
-
-.icons {
-  @include flex(column, center, center);
-  flex-wrap: wrap;
-  padding-top: 1rem;
-  gap: 1.2rem;
-
-  @include useScreen("tablet-xl") {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-
-  &__block {
-    @include flex(column, center, center);
-    gap: 1.2rem;
-
-    @include useScreen("mobile-md") {
-      flex-direction: row;
-    }
-
-    &-title {
-      color: var(--color--white);
-      text-align: center;
-    }
-    &-links {
-      @include flex(row, center, center);
-      gap: 1.2rem;
-
-      @include useScreen("tablet-xl") {
-        justify-content: space-between;
-      }
-
-      a {
-        @include flex(row, center, center);
-        opacity: 0.7;
-        position: relative;
-        width: 30px;
-        height: 30px;
-        border: 2px solid var(--color--white);
-        border-radius: var(--border-radius--rounded);
-        color: var(--color--white);
-
-        @include useOnHover {
-          @include flex(row, center, center);
-          opacity: 1;
-          z-index: 10;
-          border-color: var(--color--light-blue-2);
-          color: var(--color--light-blue-2);
-          text-align: center;
-
-          &::before {
-            position: absolute;
-            top: 35px;
-            width: max-content;
-            padding: 0.5rem;
-            border-radius: var(--border-radius--md);
-            color: var(--color--white);
-            font-size: 10px;
-            content: attr(data-text);
-            background: radial-gradient(
-              80.97% 80.37% at 56.01% 19.03%,
-              var(--color--light-blue-1) 0%,
-              var(--color--light-blue-4) 99.23%
-            );
-          }
-        }
-
-        @include useOnClick {
-          opacity: 1;
-          border-color: var(--color--light-blue-4);
-          color: var(--color--light-blue-4);
-        }
-      }
-    }
-  }
-}
-[data-theme="dark"] .icons {
-  &__block {
-    color: var(--color--black);
-
-    &-title {
-      color: var(--color--blue-grey-2);
-    }
-
-    &-links {
-      color: var(--color--black);
-
-      a {
-        border: 2px solid var(--color--blue-grey-2);
-        color: var(--color--black);
-
-        @include useOnHover {
-          border-color: var(--color--orange-1);
-          color: var(--color--orange-1);
-
-          &:before {
-            background: radial-gradient(
-              80.97% 80.37% at 56.01% 19.03%,
-              var(--color--orange-1) 0%,
-              var(--color--orange-4) 99.23%
-            );
-          }
-        }
-      }
-
-      @include useOnClick {
-        border-color: var(--color--orange-4);
-        color: var(--color--orange-4);
-      }
-    }
-  }
-}
-
-.footer-contact {
-  @include flex(column, center, center);
-  gap: 1rem;
-
-  @include useScreen("tablet-sm") {
-    flex-direction: row;
-    gap: 3rem;
-  }
-
-  &__title {
-    width: 70%;
-    color: var(--color--white);
-    line-height: 2rem;
-    text-align: center;
-    letter-spacing: 0.1rem;
-
-    @include useScreen("tablet-sm") {
-      width: 30%;
-    }
-  }
-}
-[data-theme="dark"] .footer-contact {
-  &__title {
-    color: var(--color--blue-grey-3);
   }
 }
 

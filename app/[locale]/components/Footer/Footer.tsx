@@ -81,16 +81,14 @@ export function Footer({ title, description }: Props) {
   return (
     <footer>
       <motion.div
-        className="footer-banner"
+        className="footer"
         variants={FooterVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        {title && <h1 className="footer-banner__title">{title}</h1>}
-        {description && (
-          <p className="footer-banner__description"> {description}</p>
-        )}
+        {title && <h1 className="footer__title">{title}</h1>}
+        {description && <p className="footer__description"> {description}</p>}
 
         <Link href="/" className="logo logo__footer">
           <Image
@@ -104,14 +102,14 @@ export function Footer({ title, description }: Props) {
         <Navigation location="banner" />
         <div className="footer-contact">
           <p className="footer-contact__title">{i("title")} </p>
-          <ul className="icons">
+          <ul className="footer-icons">
             {threeKeys.map((firstBlock) => (
-              <li key={firstBlock} className="icons__block">
-                <p className="icons__block-title">
+              <li key={firstBlock} className="footer-icons__block">
+                <p className="footer-icons__block-title">
                   {ic(`${firstBlock}.title`)}
                 </p>
 
-                <ul className="icons__block-links">
+                <ul className="footer-icons__block-links">
                   {threeKeys.map((secondBlock) => {
                     const iconKey = ic(
                       `${firstBlock}.links.${secondBlock}.icon`
