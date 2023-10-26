@@ -63,7 +63,7 @@
 
 .buttonIcon {
   svg {
-    fill: var(--color--dark-burger);
+    fill: var(--color--light-brown);
 
     @include useOnHover {
       fill: var(--color--orange-4);
@@ -82,7 +82,7 @@
 }
 [data-theme="dark"] .buttonIcon {
   svg {
-    fill: var(--color--light-burger);
+    fill: var(--color--peach);
 
     @include useOnHover {
       fill: var(--color--light-blue-4);

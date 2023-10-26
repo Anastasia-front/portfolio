@@ -152,7 +152,7 @@
   &__item {
     button {
       @include useOnHover {
-        color: var(--color--light-burger);
+        color: var(--color--peach);
       }
       @include useOnClick {
         color: var(--color--orange-1);
