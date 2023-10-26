@@ -30,7 +30,7 @@
     align-self: flex-end;
     z-index: -100;
     position: absolute;
-    box-shadow: 0 0 1000px 50px var(--color--orange-4);
+    @include box-shadow-4(var(--color--orange-4));
   }
 
   &-content {
@@ -158,7 +158,7 @@
 }
 [data-theme="dark"] .hero {
   &-blur {
-    box-shadow: 0 0 1000px 50px var(--color--light-blue-5);
+    @include box-shadow-4(var(--color--light-blue-5));
   }
 
   &-content {
@@ -451,7 +451,7 @@
       left: -0.1rem;
       padding: 1rem;
       background: var(--color--light-blue-1);
-      box-shadow: inset 0 0 3px 2px var(--color--grey-opacity);
+      @include box-shadow-2(var(--color--grey-opacity));
     }
   }
 }
@@ -459,7 +459,7 @@
   &__hint {
     &-onHoverVisible {
       background: var(--color--grey);
-      box-shadow: inset 0 0 3px 2px var(--color--grey-opacity);
+      @include box-shadow-2(var(--color--grey-opacity));
     }
   }
 }

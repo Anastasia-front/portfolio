@@ -39,7 +39,7 @@
 
   &__frame {
     background: var(--color--white);
-    box-shadow: 0 0 10px var(--box-shadow);
+    @include box-shadow-5(var(--color--grey-dark));
   }
 
   &__item {

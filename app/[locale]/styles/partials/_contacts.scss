@@ -1,25 +1,6 @@
 @use "./mixins" as *;
 @use "../mixins" as *;
 
-@mixin area(
-  $bgColor,
-  $borderColor,
-  $boxShadowColor,
-  $outlineColor,
-  $placeholderColor
-) {
-  border: 0px;
-  background-color: $bgColor;
-  border-top: 1px solid $borderColor;
-  box-shadow: 3px 3px 3px $boxShadowColor;
-  outline-color: $outlineColor;
-  font-family: Oxygen, "Open Sans", sans-serif;
-
-  &::placeholder {
-    color: $placeholderColor;
-  }
-}
-
 .contact {
   &-page {
     @include flex(column, flex-start, flex-start);

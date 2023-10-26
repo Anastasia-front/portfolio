@@ -108,10 +108,10 @@
     }
 
     @include useOnHover {
-      box-shadow: inset 3px 6px 6px 6px var(--color--grey-opacity);
+      @include box-shadow-7(var(--color--grey-opacity));
     }
     @include useOnClick {
-      box-shadow: inset 3px 6px 6px 6px var(--color--light-opacity);
+      @include box-shadow-7(var(--color--light-opacity));
     }
 
     &__bg {
@@ -171,10 +171,10 @@
 [data-theme="dark"] .skill {
   &-block {
     @include useOnHover {
-      box-shadow: inset 3px 6px 6px 6px var(--color--dark-opacity);
+      @include box-shadow-7(var(--color--dark-opacity));
     }
     @include useOnClick {
-      box-shadow: inset 3px 6px 6px 6px var(--color--grey-opacity);
+      @include box-shadow-7(var(--color--grey-opacity));
     }
 
     &__title {

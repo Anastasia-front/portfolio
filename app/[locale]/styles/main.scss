@@ -170,12 +170,12 @@ footer {
   }
 
   &__box-shadow {
-    box-shadow: inset 0 0 30px 20px var(--color--blue-opacity);
+    @include box-shadow-1(var(--color--blue-opacity));
   }
 }
 [data-theme="dark"] .container {
   &__box-shadow {
-    box-shadow: inset 0 0 30px 20px var(--color--grey-opacity);
+    @include box-shadow-1(var(--color--grey-opacity));
   }
 }
 

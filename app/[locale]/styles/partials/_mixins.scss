@@ -4,3 +4,54 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin area(
+  $bgColor,
+  $borderColor,
+  $boxShadowColor,
+  $outlineColor,
+  $placeholderColor
+) {
+  border: 0px;
+  background-color: $bgColor;
+  border-top: 1px solid $borderColor;
+  box-shadow: 3px 3px 3px $boxShadowColor;
+  outline-color: $outlineColor;
+  font-family: Oxygen, "Open Sans", sans-serif;
+
+  &::placeholder {
+    color: $placeholderColor;
+  }
+}
+
+@mixin box-shadow-1($color) {
+  box-shadow: inset 0 0 30px 20px $color;
+}
+
+@mixin box-shadow-2($color) {
+  box-shadow: inset 0 0 3px 2px $color;
+}
+
+@mixin box-shadow-3($color) {
+  box-shadow: 0 0 15px $color;
+}
+
+@mixin box-shadow-4($color) {
+  box-shadow: 0 0 1000px 50px $color;
+}
+
+@mixin box-shadow-5($color) {
+  box-shadow: 0 0 10px $color;
+}
+
+@mixin box-shadow-6($color) {
+  box-shadow: 0 1px 15px $color;
+}
+
+@mixin box-shadow-7($color) {
+  box-shadow: inset 3px 6px 6px 6px $color;
+}
+
+@mixin box-shadow-7($color) {
+  box-shadow: 0 10px 15px $color;
+}

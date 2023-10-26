@@ -56,7 +56,7 @@
   border-radius: var(--pad--sm);
   color: var(--color--white);
   background-color: var(--color--white);
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
+  @include box-shadow-6(var(--color--overlay));
 
   &-banner {
     cursor: pointer;
@@ -137,7 +137,7 @@
     bottom: 6rem;
     width: 100%;
     overflow-x: hidden;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    @include box-shadow-7(var(--color--bg-grey));
 
     @include useScreen("tablet-sm") {
       bottom: 0;
@@ -173,7 +173,7 @@
         border-radius: var(--border-radius--lg);
         color: var(--color--white);
         background-color: var(--color--grey-opacity);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        @include box-shadow-5(var(--color--bg-grey));
       }
     }
   }
@@ -369,7 +369,7 @@
       padding: 0.3rem 0.8rem;
       border-radius: var(--border-radius--md);
       background-color: var(--color--white);
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      @include box-shadow-3(var(--color--bg-grey));
     }
   }
 
@@ -379,6 +379,6 @@
     border-radius: var(--border-radius--lg);
     font-weight: 500;
     background-color: var(--color--white);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    @include box-shadow-3(var(--color--bg-grey));
   }
 }
