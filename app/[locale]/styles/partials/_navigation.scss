@@ -190,70 +190,78 @@
   }
 }
 
-.burgerBackdrop {
-  opacity: 0;
-  visibility: hidden;
-  z-index: 99;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: var(--color--dark-opacity);
+.burger {
+  &-backdrop {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color--dark-opacity);
 
-  &__active {
-    opacity: 1;
-    visibility: visible;
+    &__active {
+      opacity: 1;
+      visibility: visible;
+    }
   }
-}
 
-.burgerBackground {
-  opacity: 0;
-  z-index: 102;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100vh;
-  background: var(--color--white);
-  transition: var(--transition);
-  transform: translateY(-100%);
-
-  &__active {
-    opacity: 1;
+  &-background {
+    opacity: 0;
+    z-index: 102;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background: var(--color--white);
     transition: var(--transition);
-    transform: translateY(0);
+    transform: translateY(-100%);
+
+    &__active {
+      opacity: 1;
+      transition: var(--transition);
+      transform: translateY(0);
+    }
+  }
+
+  &-column {
+    display: flex;
+    z-index: 103;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 8rem 2rem;
+    overflow: auto;
+    gap: 4rem;
+
+    @include useScreen("mobile-lg") {
+      padding: 8rem 4rem;
+    }
+    @include useScreen("mobile-xl") {
+      padding: 8rem 5rem;
+    }
+  }
+
+  &-switchers {
+    z-index: 110;
+    background: var(--color--white-grey);
   }
 }
-[data-theme="dark"] .burgerBackground {
-  background: var(--color--blue-grey-4);
-}
-
-.burgerColumn {
-  display: flex;
-  z-index: 103;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 8rem 3rem;
-  overflow: auto;
-  gap: 4rem;
-
-  @include useScreen("mobile-lg") {
-    padding: 8rem;
+[data-theme="dark"] .burger {
+  &-background {
+    background: var(--color--blue-grey-4);
   }
-}
 
-.burgerSwitchers {
-  z-index: 110;
-  background: var(--color--white-grey);
-}
-[data-theme="dark"] .burgerSwitchers {
-  background: var(--color--blue-grey-3);
+  &-switchers {
+    background: var(--color--blue-grey-3);
+  }
 }
 
 .visible {

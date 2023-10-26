@@ -45,14 +45,14 @@ export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
       <Portal wrapperId="portal">
         <>
           <div
-            className={`burgerBackdrop ${
-              isMenuOpen ? "burgerBackdrop__active" : ""
+            className={`burger-backdrop ${
+              isMenuOpen ? "burger-backdrop__active" : ""
             } `}
             onClick={handleBackdropClick}
           >
             <div
-              className={`burgerBackground ${
-                isMenuOpen && "burgerBackground__active"
+              className={`burger-background ${
+                isMenuOpen && "burger-background__active"
               } `}
             >
               <button
@@ -63,9 +63,9 @@ export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
                 <Close width={25} height={25} />
               </button>
 
-              <div className="burgerColumn">
+              <div className="burger-column">
                 <Navigation onClick={hideBurger} />
-                <Switchers className="burgerSwitchers" />
+                <Switchers className="burger-switchers" />
                 <Link href="/" className="logo">
                   <Image
                     className="logo__img"
