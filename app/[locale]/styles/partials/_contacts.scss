@@ -206,7 +206,6 @@
     gap: 2rem;
 
     @include useScreen("tablet-sm") {
-      flex-direction: row;
       gap: 3rem;
     }
 
@@ -238,10 +237,6 @@
         content: "";
         background: var(--color--orange-2);
       }
-
-      @include useScreen("tablet-sm") {
-        width: 30%;
-      }
     }
   }
 
@@ -252,7 +247,7 @@
     &__block {
       @include box-shadow-7(var(--color--blue-grey-1));
       @include flex(column, center, center);
-      max-width: 500px;
+      max-width: 600px;
       padding: 1rem;
       gap: 1.2rem;
 
