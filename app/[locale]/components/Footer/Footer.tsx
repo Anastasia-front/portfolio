@@ -6,44 +6,7 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-import {
-  BsChatDotsFill,
-  BsDiscord,
-  BsFillEnvelopeAtFill,
-  BsFillTelephoneInboundFill,
-  BsGithub,
-  BsInstagram,
-  BsLinkedin,
-  BsTelegram,
-  BsWhatsapp,
-} from "react-icons/bs";
-
 import { Contacts, Navigation } from "@/components";
-
-function getIconComponent(iconName: string) {
-  switch (iconName) {
-    case "BsChatDotsFill":
-      return <BsChatDotsFill />;
-    case "BsFillEnvelopeAtFill":
-      return <BsFillEnvelopeAtFill />;
-    case "BsFillTelephoneInboundFill":
-      return <BsFillTelephoneInboundFill />;
-    case "BsGithub":
-      return <BsGithub />;
-    case "BsInstagram":
-      return <BsInstagram />;
-    case "BsLinkedin":
-      return <BsLinkedin />;
-    case "BsTelegram":
-      return <BsTelegram />;
-    case "BsWhatsapp":
-      return <BsWhatsapp />;
-    case "BsDiscord":
-      return <BsDiscord />;
-    default:
-      return null;
-  }
-}
 
 interface Props {
   logo?: string;

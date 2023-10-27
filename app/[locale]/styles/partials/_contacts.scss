@@ -3,7 +3,7 @@
 
 .contact {
   &-page {
-    @include flex(column, flex-start, flex-start);
+    @include flex(column, center, center);
     gap: 2rem;
   }
 
@@ -29,14 +29,14 @@
   &__form {
     @include flex(column, center, center);
     position: relative;
-    gap: 1rem;
     width: 100%;
+    gap: 1rem;
   }
 
   &__inputs {
     @include flex(column, center, center);
-    gap: 1rem;
     width: 100%;
+    gap: 1rem;
 
     @include useScreen("mobile-xl") {
       flex-direction: row;
@@ -51,8 +51,8 @@
       var(--color--light-blue-3),
       var(--color--blue-grey-1)
     );
-    padding: 10px;
     width: 100%;
+    padding: 10px;
   }
 
   &__textfield {
@@ -69,18 +69,18 @@
   }
 
   &__animation {
-    height: auto;
-    max-width: 80%;
-    min-width: 250px;
-    position: relative;
     z-index: 1;
+    position: relative;
+    min-width: 250px;
+    max-width: 80%;
+    height: auto;
   }
 
   &__decoration {
-    height: auto;
-    position: absolute;
     z-index: 0;
+    position: absolute;
     top: 36rem;
+    height: auto;
 
     @include useScreen("tablet-sm") {
       top: 7rem;
@@ -138,20 +138,20 @@
   }
 
   &__submit {
-    border: 0px;
-    border-radius: 5px;
     width: 100%;
     padding: 10px;
-    background: var(--color--light-blue-2);
+    border: 0px;
+    border-radius: 5px;
     color: var(--color--blue-grey-1);
     font-weight: 400;
-    transition: 250ms;
     cursor: pointer;
+    background: var(--color--light-blue-2);
+    transition: 250ms;
 
     &:hover {
-      transform: scale(1.03);
       color: var(--color--blue-grey-2);
       background: var(--color--light-blue-3);
+      transform: scale(1.03);
     }
   }
 }
@@ -177,30 +177,23 @@
   }
 
   &__submit {
-    background: var(--color--orange-2);
     color: var(--color--white-grey);
     font-weight: 400;
-    transition: 250ms;
     cursor: pointer;
+    background: var(--color--orange-2);
+    transition: 250ms;
 
     &:hover {
-      transform: scale(1.03);
       color: var(--color--white);
       background: var(--color--orange-3);
+      transform: scale(1.03);
     }
   }
 }
 
 .info {
   @include flex(column, center, center);
-  position: relative;
-  min-height: 15rem;
-  padding: 2.5rem;
-  background: radial-gradient(
-    80.97% 80.37% at 56.01% 19.03%,
-    var(--color--orange-4) 0%,
-    var(--color--orange-1) 99.23%
-  );
+  color: var(--color--blue-grey-2);
   gap: 3rem;
 
   @include useScreen("mobile-md") {
@@ -209,7 +202,7 @@
 
   &-contacts {
     @include flex(column, center, center);
-    gap: 1rem;
+    gap: 2rem;
 
     @include useScreen("tablet-sm") {
       flex-direction: row;
@@ -217,11 +210,33 @@
     }
 
     &__title {
+      position: relative;
       width: 70%;
-      color: var(--color--white);
+      padding: 1rem 0;
+      font-weight: 500;
       line-height: 2rem;
       text-align: center;
-      letter-spacing: 0.1rem;
+      letter-spacing: 0.07rem;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0.1rem;
+        content: "";
+        background: var(--color--orange-2);
+      }
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.1rem;
+        content: "";
+        background: var(--color--orange-2);
+      }
 
       @include useScreen("tablet-sm") {
         width: 30%;
@@ -229,142 +244,80 @@
     }
   }
 
-  // &-icons {
-  //   @include flex(column, center, center);
-  //   flex-wrap: wrap;
-  //   padding-top: 1rem;
-  //   gap: 1.2rem;
+  &-icons {
+    @include flex(column, center, center);
+    gap: 2.5rem;
 
-  //   @include useScreen("tablet-xl") {
-  //     flex-wrap: nowrap;
-  //     justify-content: space-between;
-  //   }
+    &__block {
+      @include box-shadow-7(var(--color--blue-grey-1));
+      @include flex(column, center, center);
+      max-width: 500px;
+      padding: 1rem;
+      gap: 1.2rem;
 
-  //   &__block {
-  //     @include flex(column, center, center);
-  //     gap: 1.2rem;
+      @include useScreen("mobile-md") {
+        padding: 2rem;
+      }
 
-  //     @include useScreen("mobile-md") {
-  //       flex-direction: row;
-  //     }
+      &-title {
+        color: var(--color--orange-1);
+        font-weight: 900;
+        font-size: clamp(1rem, 1vw, 1.2rem);
+        text-align: center;
+      }
 
-  //     &-title {
-  //       color: var(--color--white);
-  //       text-align: center;
-  //     }
-  //     &-links {
-  //       @include flex(row, center, center);
-  //       gap: 1.2rem;
+      &-links {
+        @include flex(column, center, center);
+        gap: 1rem;
 
-  //       @include useScreen("tablet-xl") {
-  //         justify-content: space-between;
-  //       }
+        li {
+          @include flex(row, space-between, center);
+          width: 100%;
+          border-bottom: 1px dotted var(--color--light-blue-2);
+          gap: 1.5rem;
 
-  //       a {
-  //         @include flex(row, center, center);
-  //         opacity: 0.7;
-  //         position: relative;
-  //         width: 30px;
-  //         height: 30px;
-  //         border: 2px solid var(--color--white);
-  //         border-radius: var(--border-radius--rounded);
-  //         color: var(--color--white);
+          p {
+            font-weight: 500;
+            text-align: left;
+          }
 
-  //         @include useOnHover {
-  //           @include flex(row, center, center);
-  //           opacity: 1;
-  //           z-index: 10;
-  //           border-color: var(--color--light-blue-2);
-  //           color: var(--color--light-blue-2);
-  //           text-align: center;
-
-  //           &::before {
-  //             position: absolute;
-  //             top: 35px;
-  //             width: max-content;
-  //             padding: 0.5rem;
-  //             border-radius: var(--border-radius--md);
-  //             color: var(--color--white);
-  //             font-size: 10px;
-  //             content: attr(data-text);
-  //             background: radial-gradient(
-  //               80.97% 80.37% at 56.01% 19.03%,
-  //               var(--color--light-blue-1) 0%,
-  //               var(--color--light-blue-4) 99.23%
-  //             );
-  //           }
-  //         }
-
-  //         @include useOnClick {
-  //           opacity: 1;
-  //           border-color: var(--color--light-blue-4);
-  //           color: var(--color--light-blue-4);
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-
-  &__logo img {
-    filter: drop-shadow(1px 4px 7px rgba(0, 0, 0, 0.2));
-  }
-
-  &__links {
-    @include flex(row, center, center);
-    gap: 3rem;
-
-    a {
-      color: var(--color--white);
+          svg {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
     }
   }
 }
-[data-theme="dark"] .footer {
-  background: radial-gradient(
-    80.97% 80.37% at 56.01% 19.03%,
-    var(--color--light-blue-4) 0%,
-    var(--color--light-blue-1) 99.23%
-  );
+[data-theme="dark"] .info {
+  color: var(--color--white-grey);
 
   &-contacts {
     &__title {
-      color: var(--color--blue-grey-3);
+      &::before {
+        background: var(--color--light-blue-4);
+      }
+
+      &::after {
+        background: var(--color--light-blue-4);
+      }
     }
   }
 
-  // &-icons {
-  //   &__block {
-  //     color: var(--color--black);
+  &-icons {
+    &__block {
+      @include box-shadow-7(var(--color--blue-grey-2));
 
-  //     &-title {
-  //       color: var(--color--blue-grey-2);
-  //     }
+      &-title {
+        color: var(--color--light-blue-3);
+      }
 
-  //     &-links {
-  //       color: var(--color--black);
-
-  //       a {
-  //         border: 2px solid var(--color--blue-grey-2);
-  //         color: var(--color--black);
-
-  //         @include useOnHover {
-  //           border-color: var(--color--orange-1);
-  //           color: var(--color--orange-1);
-
-  //           &:before {
-  //             background: radial-gradient(
-  //               80.97% 80.37% at 56.01% 19.03%,
-  //               var(--color--orange-1) 0%,
-  //               var(--color--orange-4) 99.23%
-  //             );
-  //           }
-  //         }
-  //       }
-
-  //       @include useOnClick {
-  //         border-color: var(--color--orange-4);
-  //         color: var(--color--orange-4);
-  //       }
-  //     }
-  //   }
-  // }
+      &-links {
+        li {
+          border-bottom: 1px dotted var(--color--light-brown);
+        }
+      }
+    }
+  }
 }

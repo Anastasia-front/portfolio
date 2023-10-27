@@ -51,9 +51,10 @@ export function Contacts({ location }: Props) {
   const ic = useTranslations("contacts.footer.icons");
 
   const className = location === "footer" ? "footer" : "info";
+  const classNameBlock = location === "footer" ? "" : "info";
 
   return (
-    <div className={`${className}-contacts`}>
+    <div className={`${classNameBlock} ${className}-contacts`}>
       <p className={`${className}-contacts__title`}>{i("title")} </p>
       <ul className={`${className}-icons`}>
         {threeKeys.map((firstBlock) => (
@@ -80,20 +81,15 @@ export function Contacts({ location }: Props) {
                         {IconComponent}
                       </Link>
                     ) : (
-                      <div>
-                        <p className={`${className}-icons__block-title`}>
-                          {ic(`${firstBlock}.links.${secondBlock}.info`)}
-                        </p>
+                      <>
+                        <h6>{ic(`${firstBlock}.links.${secondBlock}.info`)}</h6>
                         <Link
                           target="_blank"
                           href={ic(`${firstBlock}.links.${secondBlock}.href`)}
-                          data-text={ic(
-                            `${firstBlock}.links.${secondBlock}.dataText`
-                          )}
                         >
                           {IconComponent}
                         </Link>
-                      </div>
+                      </>
                     )}
                   </li>
                 );
