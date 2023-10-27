@@ -193,6 +193,7 @@
 
 .info {
   @include flex(column, center, center);
+  padding-bottom: 3rem;
   color: var(--color--blue-grey-2);
   gap: 3rem;
 
