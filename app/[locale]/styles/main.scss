@@ -152,9 +152,9 @@ footer {
 }
 
 .container {
-  padding: 2rem 1.2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem 1.2rem;
 
   @include useScreen("mobile-xl") {
     padding: 2.2rem 1.4rem;
@@ -181,8 +181,8 @@ footer {
 
 .page-headings {
   @include flex(column, flex-start, flex-start);
-  gap: 0.5rem;
   max-width: 100vw;
+  gap: 0.5rem;
 
   &__small-width {
     width: 90%;
@@ -281,4 +281,32 @@ footer {
 }
 [data-theme="dark"] .license {
   color: var(--color--white-grey);
+}
+
+.text-red {
+  color: var(--color--red);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  animation: spin 1s linear infinite;
+}
+
+.label {
+  font-weight: 400;
+  font-size: clamp(0.8rem, 1vw, 0.7rem);
+  letter-spacing: 0.02rem;
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
 }

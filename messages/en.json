@@ -910,6 +910,20 @@
   "contacts": {
     "title": "Write to me",
     "description": "Below is the form for sending me a letter to the post office (indicate your e-mail, subject and the actual text of the message), and below it you will find all available ways to contact me (they are also duplicated in the footer)",
+    "form": {
+      "subject": "Subject",
+      "subjectPlaceholder": "Enter subject",
+      "subjectInvalid": "Invalid field",
+      "email": "E-mail",
+      "emailPlaceholder": "Enter e-mail",
+      "emailInvalid": "Invalid email",
+      "message": "Message",
+      "messagePlaceholder": "Enter message",
+      "messageInvalid": "Required field",
+      "sendBtn": "Send",
+      "sendBtnSuccess": "Sent",
+      "sendBtnError": "Error"
+    },
     "footer": {
       "title": "To contact me, click on the link-icon convenient for you",
       "icons": {
