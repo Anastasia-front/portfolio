@@ -7,6 +7,10 @@ import { notFound } from "next/navigation";
 import { Footer, Header, ProgressBar } from "@/components";
 import { Providers } from "@/providers";
 
+import dotenv from "dotenv";
+
+dotenv.config();
+
 import "./styles/main.scss";
 
 const oxygen = Oxygen({ subsets: ["latin"], weight: ["400"] });

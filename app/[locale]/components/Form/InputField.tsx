@@ -1,11 +1,16 @@
-import { FieldValues, UseFormRegister } from "react-hook-form";
+import { FieldErrors, UseFormRegister } from "react-hook-form";
 
+interface FormData {
+  subject: string;
+  email: string;
+  message: string;
+}
 interface Props {
   label: string;
-  type: "text" | "textarea";
-  name: string;
-  register: UseFormRegister<FieldValues>;
-  errors: { [key: string]: { message: string } };
+  type: "text" | "email" | "textarea";
+  name: "email" | "subject" | "message";
+  register: UseFormRegister<FormData>;
+  errors: FieldErrors<FormData>;
   placeholder: string;
 }
 
@@ -20,22 +25,31 @@ export function InputField({
   return (
     <div className="contact__input-block">
       <label htmlFor={name} className="label">
-        {label} *
+        {label}
       </label>
 
       {type === "textarea" ? (
         <textarea
           id={name}
-          {...register(name)}
-          className={`${errors[name] ? "text-red" : ""} contact__textfield`}
+          {...register("message")}
+          className={`${errors.message ? "text-red" : ""} contact__textfield`}
           placeholder={placeholder}
         ></textarea>
+      ) : type === "email" ? (
+        <input
+          id={name}
+          {...register("email")}
+          type={type}
+          className={`${errors.email ? "text-red" : ""} contact__input`}
+          placeholder={placeholder}
+          autoComplete="true"
+        />
       ) : (
         <input
           id={name}
-          {...register(name)}
+          {...register("subject")}
           type={type}
-          className={`${errors[name] ? "text-red" : ""} contact__input`}
+          className={`${errors.subject ? "text-red" : ""} contact__input`}
           placeholder={placeholder}
           autoComplete="true"
         />
@@ -48,7 +62,7 @@ export function InputField({
               : "contact__input-error contact__textfield-error"
           } `}
         >
-          {errors[name].message}
+          {errors[name]?.message}
         </p>
       )}
     </div>

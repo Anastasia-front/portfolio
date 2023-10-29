@@ -4,7 +4,6 @@ export * from "./getButtonClass";
 export * from "./getButtonContent";
 export * from "./getConstantByLanguage";
 export * from "./getLocaleStorageItem";
-export * from "./nodemailer";
 export * from "./scrollToSection";
 export * from "./sendEmail";
 export * from "./sendMessageToTelegram";

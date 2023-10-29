@@ -21,7 +21,8 @@ export function getButtonContent({
   if (formStatus === "success") {
     return (
       <>
-        <SuccessIcon className="icon" /> {sendBtnSuccess}
+        {sendBtnSuccess}
+        <SuccessIcon className="icon" />
       </>
     );
   }
@@ -33,7 +34,8 @@ export function getButtonContent({
   if (formStatus === "error") {
     return (
       <>
-        <ErrorIcon className="icon" /> {sendBtnError}
+        {sendBtnError}
+        <ErrorIcon className="icon" />
       </>
     );
   }

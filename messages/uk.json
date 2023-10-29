@@ -205,7 +205,7 @@
     "form": {
       "subject": "Тема",
       "subjectPlaceholder": "Введіть тему",
-      "sujectInvalid": "Поле не пройшло валідацію",
+      "subjectInvalid": "Поле не пройшло валідацію",
       "email": "E-mail",
       "emailPlaceholder": "Введіть е-mail",
       "emailInvalid": "Невірний email",

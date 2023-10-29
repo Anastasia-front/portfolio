@@ -284,7 +284,10 @@ footer {
 }
 
 .text-red {
-  color: var(--color--red);
+  color: var(--color--red-light);
+}
+[data-theme="dark"] .text-red {
+  color: var(--color--red-dark);
 }
 
 @keyframes spin {
@@ -309,4 +312,23 @@ footer {
 .icon {
   width: 12px;
   height: 12px;
+  fill: currentColor;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-green {
+  background: var(--color--button-green) !important;
+}
+.bg-loading {
+  background: var(--color--button-loading) !important;
+}
+.bg-red {
+  background: var(--color--button-red) !important;
 }

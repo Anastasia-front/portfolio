@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,8 +23,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./app/[locale]/*"]
-    }
+      "@/*": [
+        "./app/[locale]/*"
+      ]
+    },
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "next-env.d.ts",
@@ -30,5 +37,7 @@
     "app/[locale]/providers/themeProvider.tsx",
     "app/[locale]/components/3dObjects/Gallery.tsx"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

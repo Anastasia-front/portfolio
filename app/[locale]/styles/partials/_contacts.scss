@@ -55,8 +55,9 @@
     padding: 10px;
 
     &-block {
-      @include flex(column, center, center);
+      @include flex(column, center, flex-start);
       position: relative;
+      width: 100%;
       gap: 0.3rem;
     }
 
@@ -64,7 +65,7 @@
       position: absolute;
       top: 0.2rem;
       right: 0;
-      color: var(--color--red);
+      color: var(--color--red-light);
     }
   }
 
@@ -79,10 +80,6 @@
     width: 100%;
     height: 200px;
     padding: 10px;
-
-    &-error {
-      top: 2.2rem;
-    }
   }
 
   &__animation {
@@ -96,7 +93,7 @@
   &__decoration {
     z-index: 0;
     position: absolute;
-    top: 36rem;
+    top: 48rem;
     height: auto;
 
     @include useScreen("tablet-sm") {
@@ -106,28 +103,28 @@
     &-first {
       display: none;
 
-      @include useScreen("mobile-lg") {
-        display: block;
-        left: 1rem;
-        width: 230px;
-      }
-      @include useScreen("tablet-sm") {
-        left: 30rem;
-      }
-      @include useScreen("tablet-md") {
-        display: none;
-      }
+      // @include useScreen("mobile-lg") {
+      //   display: block;
+      //   left: 1rem;
+      //   width: 230px;
+      // }
+      // @include useScreen("tablet-sm") {
+      //   left: 30rem;
+      // }
+      // @include useScreen("tablet-md") {
+      //   display: none;
+      // }
     }
 
     &-second {
       right: 7rem;
-      width: 250px;
+      width: 200px;
       transform: rotateX(180deg);
 
       @include useScreen("mobile-lg") {
-        top: 40rem;
-        right: 0;
-        width: 260px;
+        top: 48rem;
+        right: 16rem;
+        width: 250px;
       }
       @include useScreen("tablet-sm") {
         top: 20rem;
@@ -140,12 +137,12 @@
 
     &-third {
       right: -1rem;
-      width: 250px;
+      width: 200px;
       transform: rotateY(180deg);
 
       @include useScreen("mobile-lg") {
         right: 1rem;
-        width: 260px;
+        width: 250px;
       }
       @include useScreen("desktop-md") {
         right: 20rem;
@@ -155,6 +152,7 @@
   }
 
   &__submit {
+    @include flex(row, center, center);
     width: 100%;
     padding: 10px;
     border: 0px;
@@ -164,6 +162,7 @@
     cursor: pointer;
     background: var(--color--light-blue-2);
     transition: 250ms;
+    gap: 1rem;
 
     &:hover {
       color: var(--color--blue-grey-2);
@@ -181,6 +180,10 @@
       var(--color--light-blue-3),
       var(--color--white-grey)
     );
+
+    &-error {
+      color: var(--color--red-dark);
+    }
   }
 
   &__textfield {

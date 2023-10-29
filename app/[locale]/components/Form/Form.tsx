@@ -2,7 +2,7 @@
 
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 
 import { useTranslations } from "next-intl";
@@ -15,20 +15,28 @@ import {
   sendMessageToTelegram,
 } from "@/utils";
 
+type FormStatus = "success" | "error" | null;
+interface FormData {
+  subject: string;
+  email: string;
+  message: string;
+}
+
 export function Form() {
   const t = useTranslations("contacts.form");
 
   const subject = t("subject");
+  const subjectPlaceholder = t("subjectPlaceholder");
   const email = t("email");
   const emailPlaceholder = t("emailPlaceholder");
-  const message = t("subject");
-  const messagePlaceholder = t("subject");
+  const message = t("message");
+  const messagePlaceholder = t("messagePlaceholder");
   const sendBtnError = t("sendBtnError");
   const sendBtnSuccess = t("sendBtnSuccess");
   const sendBtn = t("sendBtn");
 
   const [loading, setLoading] = useState(false);
-  const [formStatus, setFormStatus] = useState(null);
+  const [formStatus, setFormStatus] = useState<FormStatus>(null);
 
   const buttonClasses = getButtonClasses({ formStatus, loading });
   const buttonContent = getButtonContent({
@@ -48,7 +56,7 @@ export function Form() {
     setValue,
     formState: { errors },
     reset,
-  } = useForm({
+  } = useForm<FormData>({
     mode: "onChange",
     resolver: yupResolver(validationSchema),
   });
@@ -57,7 +65,7 @@ export function Form() {
 
   useFormPersist(STORAGE_KEY, {
     watch,
-    storage: typeof window !== "undefined" ? window.localStorage : null,
+    storage: typeof window !== "undefined" ? window.localStorage! : undefined,
     setValue,
   });
 
@@ -71,7 +79,7 @@ export function Form() {
     }
   }, [errors]);
 
-  const onSubmit = async (formData) => {
+  const onSubmit: SubmitHandler<FormData> = async (formData: FormData) => {
     setLoading(true);
     try {
       await sendEmail(formData);
@@ -82,11 +90,6 @@ export function Form() {
       }, 3000);
 
       reset();
-      if (toggleModal) {
-        setTimeout(() => {
-          toggleModal();
-        }, 3100);
-      }
     } catch (error) {
       console.error(error);
       setFormStatus("error");
@@ -117,26 +120,22 @@ export function Form() {
           errors={errors}
           placeholder={subjectPlaceholder}
         />
-        <InputField
-          label={message}
-          type="textarea"
-          name="message"
-          register={register}
-          errors={errors}
-          placeholder={messagePlaceholder}
-        />
       </div>
-      <div className="contact__submit">
-        <button
-          type="submit"
-          className={buttonClasses}
-          disabled={
-            loading || formStatus === "error" || formStatus === "success"
-          }
-        >
-          {buttonContent}
-        </button>
-      </div>
+      <InputField
+        label={message}
+        type="textarea"
+        name="message"
+        register={register}
+        errors={errors}
+        placeholder={messagePlaceholder}
+      />
+      <button
+        type="submit"
+        className={`contact__submit ${buttonClasses}`}
+        disabled={loading || formStatus === "error" || formStatus === "success"}
+      >
+        {buttonContent}
+      </button>
     </form>
   );
 }
