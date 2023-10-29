@@ -6,10 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import decor1 from "@/assets/images/contacts/decoration/1.png";
-import {
-  default as decor2,
-  default as decor3,
-} from "@/assets/images/contacts/decoration/2.png";
+import decor2 from "@/assets/images/contacts/decoration/2.png";
 
 import { Contacts, Form, LottiePlayer } from "@/components";
 import { gridVariants } from "@/utils";
@@ -43,11 +40,7 @@ export default function ContactsPage() {
           loop
           autoplay
         />
-        <Image
-          className="contact__decoration contact__decoration-first"
-          alt={a("contacts")}
-          src={decor1}
-        />
+
         <Image
           className="contact__decoration contact__decoration-second"
           alt={a("contacts")}
@@ -56,10 +49,20 @@ export default function ContactsPage() {
         <Image
           className="contact__decoration contact__decoration-third"
           alt={a("contacts")}
-          src={decor3}
+          src={decor2}
         />
       </div>
-      <div>
+      <div className="relative z-index-1">
+        <Image
+          className="contact__decoration contact__decoration-first"
+          alt={a("contacts")}
+          src={decor1}
+        />
+        <Image
+          className="contact__decoration contact__decoration-zero"
+          alt={a("contacts")}
+          src={decor1}
+        />
         <Contacts />
       </div>
     </main>

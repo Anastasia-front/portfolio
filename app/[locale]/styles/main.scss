@@ -332,3 +332,11 @@ footer {
 .bg-red {
   background: var(--color--button-red) !important;
 }
+
+.relative {
+  position: relative;
+}
+
+.z-index-1 {
+  z-index: 1;
+}

@@ -100,20 +100,44 @@
       top: 7rem;
     }
 
-    &-first {
+    &-zero {
       display: none;
 
-      // @include useScreen("mobile-lg") {
-      //   display: block;
-      //   left: 1rem;
-      //   width: 230px;
-      // }
-      // @include useScreen("tablet-sm") {
-      //   left: 30rem;
-      // }
-      // @include useScreen("tablet-md") {
-      //   display: none;
-      // }
+      @include useScreen("tablet-sm") {
+        display: block;
+        top: 20rem;
+        right: -8rem;
+      }
+      @include useScreen("tablet-md") {
+        right: -12rem;
+      }
+      @include useScreen("tablet-lg") {
+        right: -16rem;
+        transform: rotateY(180deg);
+      }
+      @include useScreen("tablet-xl") {
+        right: -20rem;
+      }
+    }
+
+    &-first {
+      display: none;
+      transform: rotateX(180deg);
+
+      @include useScreen("tablet-sm") {
+        display: block;
+        left: -7rem;
+      }
+      @include useScreen("tablet-md") {
+        left: -10rem;
+      }
+      @include useScreen("tablet-lg") {
+        left: -14rem;
+        transform: rotateY(0deg);
+      }
+      @include useScreen("tablet-xl") {
+        left: -20rem;
+      }
     }
 
     &-second {
@@ -262,6 +286,7 @@
 
   &-icons {
     @include flex(column, center, center);
+    position: relative;
     gap: 2.5rem;
 
     &__block {
@@ -269,6 +294,7 @@
       @include flex(column, center, center);
       max-width: 600px;
       padding: 1rem;
+      background: var(--color--bg-light);
       gap: 1.2rem;
 
       @include useScreen("mobile-md") {
@@ -324,6 +350,7 @@
   &-icons {
     &__block {
       @include box-shadow-7(var(--color--blue-grey-2));
+      background: var(--color--bg-dark);
 
       &-title {
         color: var(--color--light-blue-3);
