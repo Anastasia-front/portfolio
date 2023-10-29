@@ -5,11 +5,10 @@ interface FormData {
 }
 
 import sgMail from "@sendgrid/mail";
-const sendgridApiKey = process.env.SENDGRID_API_KEY;
+const sendgridApiKey = process.env.NEXT_PUBLIC_SENDGRID_API_KEY;
 
 if (!sendgridApiKey) {
-  //   throw new Error("SENDGRID_API_KEY is not set in the environment variables.");
-  console.log("sendgridApiKey not found");
+  throw new Error("SENDGRID_API_KEY is not set in the environment variables.");
 } else {
   sgMail.setApiKey(sendgridApiKey);
 }
