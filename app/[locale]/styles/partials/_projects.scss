@@ -4,7 +4,6 @@
 
 .projects {
   display: grid;
-  margin-top: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-gap: var(--pad--sm-2);
   grid-auto-flow: dense;
@@ -17,7 +16,19 @@
   }
 
   &__filter {
-    padding-right: 4rem;
+    @include flex(column, center, center);
+    gap: 1rem;
+
+    @include useScreen("tablet-sm") {
+      @include flex(row, space-between, center);
+    }
+
+    &-animation {
+      svg {
+        width: 100px !important;
+        height: auto;
+      }
+    }
 
     button {
       text-transform: uppercase;
@@ -63,8 +74,8 @@
   }
 
   &-page {
-    border: none;
     margin-top: 1rem;
+    border: none;
   }
 
   img {
@@ -133,8 +144,8 @@
   .banner {
     z-index: 9;
     position: absolute;
-    flex-direction: column;
     bottom: 6rem;
+    flex-direction: column;
     width: 100%;
     overflow-x: hidden;
     @include box-shadow-7(var(--color--bg-grey));
@@ -165,8 +176,8 @@
 
     &__categories {
       @include flex(row, center, center);
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
 
       span {
         padding: 0.3rem 0.8rem;

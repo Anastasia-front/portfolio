@@ -65,7 +65,7 @@ export function Dropdown({ handleTypeChange, handleCategoryChange }: Props) {
       variants={gridVariants}
       initial="hidden"
       animate="visible"
-      className={`dropdown__container projects__filter ${rubik.className}`}
+      className={`dropdown__container ${rubik.className}`}
       ref={dropdownRef}
     >
       <button

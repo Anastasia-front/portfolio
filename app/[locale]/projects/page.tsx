@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
 
-import { Banner, Dropdown, Projects } from "@/components";
+import { Banner, Dropdown, LottiePlayer, Projects } from "@/components";
 import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
 import { gridVariants } from "@/utils";
 
@@ -56,10 +56,20 @@ export default function ProjectsPage() {
             {t("description")}
           </motion.h6>
         </div>
-        <Dropdown
-          handleCategoryChange={handleCategoryChange}
-          handleTypeChange={handleTypeChange}
-        />
+        <div className="projects__filter">
+          <Dropdown
+            handleCategoryChange={handleCategoryChange}
+            handleTypeChange={handleTypeChange}
+          />
+          <LottiePlayer
+            src="/animation/filter.json"
+            background="transparent"
+            speed={1}
+            className="projects__filter-animation"
+            loop
+            autoplay
+          />
+        </div>
       </div>
 
       <Projects projects={filteredProjects} />

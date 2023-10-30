@@ -42,7 +42,7 @@ export function LottiePlayer({
   return (
     <div
       ref={containerRef}
-      className={`contact__animation ${className}`}
+      className={` ${className}`}
       style={{ background }}
     />
   );
