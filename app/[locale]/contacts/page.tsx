@@ -21,14 +21,14 @@ export default function ContactsPage() {
         <motion.h1 variants={gridVariants} initial="hidden" animate="visible">
           {t("title")}
         </motion.h1>
-        <motion.h6
+        <motion.h5
           variants={gridVariants}
           initial="hidden"
           animate="visible"
           className="page-headings__small-width"
         >
           {t("description")}
-        </motion.h6>
+        </motion.h5>
       </div>
       <div className="contact-block">
         <Form />
