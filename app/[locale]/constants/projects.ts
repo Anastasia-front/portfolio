@@ -7,6 +7,9 @@ import cover12 from "@/assets/images/projects/project12/cover.png";
 import cover13 from "@/assets/images/projects/project13/cover.png";
 import cover14 from "@/assets/images/projects/project14/cover.png";
 import cover15 from "@/assets/images/projects/project15/cover.png";
+import cover16 from "@/assets/images/projects/project16/cover.png";
+import cover17 from "@/assets/images/projects/project17/cover.png";
+import cover18 from "@/assets/images/projects/project18/cover.png";
 import cover2 from "@/assets/images/projects/project2/cover.png";
 import cover3 from "@/assets/images/projects/project3/cover.png";
 import cover4 from "@/assets/images/projects/project4/cover.png";
@@ -105,6 +108,24 @@ import fifteenthProjectSnippet2 from "@/assets/images/projects/project15/snippet
 import fifteenthProjectSnippet3 from "@/assets/images/projects/project15/snippet3.png";
 import fifteenthProjectSnippet4 from "@/assets/images/projects/project15/snippet4.png";
 import fifteenthProjectSnippet5 from "@/assets/images/projects/project15/snippet5.png";
+
+import sixteenthProjectSnippet1 from "@/assets/images/projects/project16/snippet1.png";
+import sixteenthProjectSnippet2 from "@/assets/images/projects/project16/snippet2.png";
+import sixteenthProjectSnippet3 from "@/assets/images/projects/project16/snippet3.png";
+import sixteenthProjectSnippet4 from "@/assets/images/projects/project16/snippet4.png";
+import sixteenthProjectSnippet5 from "@/assets/images/projects/project16/snippet5.png";
+
+import seventeenthProjectSnippet1 from "@/assets/images/projects/project17/snippet1.png";
+import seventeenthProjectSnippet2 from "@/assets/images/projects/project17/snippet2.png";
+import seventeenthProjectSnippet3 from "@/assets/images/projects/project17/snippet3.png";
+import seventeenthProjectSnippet4 from "@/assets/images/projects/project17/snippet4.png";
+import seventeenthProjectSnippet5 from "@/assets/images/projects/project17/snippet5.png";
+
+import eighteenthProjectSnippet1 from "@/assets/images/projects/project18/snippet1.png";
+import eighteenthProjectSnippet2 from "@/assets/images/projects/project18/snippet2.png";
+import eighteenthProjectSnippet3 from "@/assets/images/projects/project18/snippet3.png";
+import eighteenthProjectSnippet4 from "@/assets/images/projects/project18/snippet4.png";
+import eighteenthProjectSnippet5 from "@/assets/images/projects/project18/snippet5.png";
 
 export interface Project {
   id?: number;
@@ -477,6 +498,86 @@ export const projectsEnglishLang: Project[] = [
       image3: eleventhProjectSnippet3,
       image4: eleventhProjectSnippet4,
       image5: eleventhProjectSnippet5,
+    },
+  },
+  {
+    id: 16,
+    development: "frontend",
+    type: "individual",
+    name: "FoodDX",
+    categories: ["html", "css", "scss", "js"],
+    image: cover16,
+    url: "food-dx",
+    features: ["Responsive design", "And much more..."],
+    problem:
+      "Companies that create delicious and aesthetically pleasing food need a website",
+    solution:
+      "I can design and code projects of any complexity based on provided layouts",
+    links: {
+      website: "https://anastasia-front.github.io/Food-website/",
+      github: "https://github.com/Anastasia-front/Food-website",
+    },
+    content: {
+      description:
+        "This website was created in a few days after completing the first block of my studies to reinforce the material learned (I made several changes after the initial commit to improve the work)",
+      image1: sixteenthProjectSnippet1,
+      image2: sixteenthProjectSnippet2,
+      image3: sixteenthProjectSnippet3,
+      image4: sixteenthProjectSnippet4,
+      image5: sixteenthProjectSnippet5,
+    },
+  },
+  {
+    id: 17,
+    development: "frontend",
+    type: "individual",
+    name: "WebStudio",
+    categories: ["html", "css", "scss", "js"],
+    image: cover17,
+    url: "web-studio",
+    features: ["Responsive design", "And much more..."],
+    problem:
+      "The first homework assignment for frontend development courses needed to be completed",
+    solution: "I completed it twice as fast as the deadlines required",
+    links: {
+      website: "https://anastasia-front.github.io/web-studio/",
+      github: "https://github.com/Anastasia-front/web-studio",
+    },
+    content: {
+      description:
+        "I created this website during the first block of my studies (managed it quite well from the beginning)",
+      image1: seventeenthProjectSnippet1,
+      image2: seventeenthProjectSnippet2,
+      image3: seventeenthProjectSnippet3,
+      image4: seventeenthProjectSnippet4,
+      image5: seventeenthProjectSnippet5,
+    },
+  },
+  {
+    id: 18,
+    development: "frontend",
+    type: "individual",
+    name: "GoGreen",
+    categories: ["html", "css", "scss", "js"],
+    image: cover18,
+    url: "go-green",
+    features: ["Responsive design", "And much more..."],
+    problem:
+      "Companies that create delicious and aesthetically pleasing food need a website",
+    solution:
+      "I can design and code projects of any complexity based on provided layouts",
+    links: {
+      website: "https://anastasia-front.github.io/GoGreen/",
+      github: "https://github.com/Anastasia-front/GoGreen",
+    },
+    content: {
+      description:
+        "This website was created in a few days for practice and revision of frontend development after completing the courses",
+      image1: eighteenthProjectSnippet1,
+      image2: eighteenthProjectSnippet2,
+      image3: eighteenthProjectSnippet3,
+      image4: eighteenthProjectSnippet4,
+      image5: eighteenthProjectSnippet5,
     },
   },
   {
@@ -942,6 +1043,83 @@ export const projectsUkrainianLang: Project[] = [
       image3: eleventhProjectSnippet3,
       image4: eleventhProjectSnippet4,
       image5: eleventhProjectSnippet5,
+    },
+  },
+  {
+    id: 16,
+    development: "frontend",
+    type: "individual",
+    name: "FoodDX",
+    categories: ["html", "css", "scss", "js"],
+    image: cover16,
+    url: "food-dx",
+    features: ["Адаптивний дизайн", "Та багато іншого..."],
+    problem:
+      "Компанії з виготовлення смачної та естетично гарної їжі потрібен веб-сайт",
+    solution: "Я могу зверстати з макетом проект будь-якої складності",
+    links: {
+      website: "https://anastasia-front.github.io/Food-website/",
+      github: "https://github.com/Anastasia-front/Food-website",
+    },
+    content: {
+      description:
+        "Це веб-сайт, який я створила через кілька днів після завершення першого блоку навчання, щоб закріпити пройдений матеріал (я багато разів робила усілякі зміни після основного коміту, щоб покращити роботу)",
+      image1: sixteenthProjectSnippet1,
+      image2: sixteenthProjectSnippet2,
+      image3: sixteenthProjectSnippet3,
+      image4: sixteenthProjectSnippet4,
+      image5: sixteenthProjectSnippet5,
+    },
+  },
+  {
+    id: 17,
+    development: "frontend",
+    type: "individual",
+    name: "WebStudio",
+    categories: ["html", "css", "scss", "js"],
+    image: cover17,
+    url: "web-studio",
+    features: ["Адаптивний дизайн", "Та багато іншого..."],
+    problem: "Треба було виконати перше домашнє завдання з верстки на курсах",
+    solution: "Я його зробила у 2 рази швидше, ніж того вимагали дедлайни",
+    links: {
+      website: "https://anastasia-front.github.io/web-studio/",
+      github: "https://github.com/Anastasia-front/web-studio",
+    },
+    content: {
+      description:
+        "Це веб-сайт, я створила на першому блоці навчання (для початку впоралася добре)",
+      image1: seventeenthProjectSnippet1,
+      image2: seventeenthProjectSnippet2,
+      image3: seventeenthProjectSnippet3,
+      image4: seventeenthProjectSnippet4,
+      image5: seventeenthProjectSnippet5,
+    },
+  },
+  {
+    id: 18,
+    development: "frontend",
+    type: "individual",
+    name: "GoGreen",
+    categories: ["html", "css", "scss", "js"],
+    image: cover18,
+    url: "go-green",
+    features: ["Адаптивний дизайн", "Та багато іншого..."],
+    problem:
+      "Компанії з виготовлення смачної та естетично гарної їжі потрібен веб-сайт",
+    solution: "Я могу зверстати з макетом проект будь-якої складності",
+    links: {
+      website: "https://anastasia-front.github.io/GoGreen/",
+      github: "https://github.com/Anastasia-front/GoGreen",
+    },
+    content: {
+      description:
+        "Це веб-сайт, який я створила за декілька днів для згадування та повторення верстки після завершення курсів",
+      image1: eighteenthProjectSnippet1,
+      image2: eighteenthProjectSnippet2,
+      image3: eighteenthProjectSnippet3,
+      image4: eighteenthProjectSnippet4,
+      image5: eighteenthProjectSnippet5,
     },
   },
   {
