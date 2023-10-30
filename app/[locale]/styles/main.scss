@@ -205,10 +205,7 @@ footer {
       width: 90%;
     }
     @include useScreen("tablet-sm") {
-      width: 80%;
-    }
-    @media screen and (min-width: 850px) {
-      width: 70%;
+      width: 100%;
     }
   }
 
