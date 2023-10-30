@@ -33,7 +33,7 @@ export default function ContactsPage() {
       <div className="contact-block">
         <Form />
         <LottiePlayer
-          src="https://assets10.lottiefiles.com/packages/lf20_lstnp9p3.json"
+          src="/animation/email.json"
           background="transparent"
           speed={1}
           className="contact__animation"
