@@ -4,7 +4,8 @@ import { Oxygen } from "next/font/google";
 import Head from "next/head";
 import { notFound } from "next/navigation";
 
-import { Footer, Header, ProgressBar } from "@/components";
+import { Footer, FormPortal, Header, ProgressBar } from "@/components";
+import { GlobalProvider } from "@/context";
 import { Providers } from "@/providers";
 
 import dotenv from "dotenv";
@@ -50,14 +51,17 @@ export default async function RootLayout({
         <meta property="og:url" content="/" />
       </Head>
       <body className={oxygen.className}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Providers>
-            <ProgressBar />
-            <Header />
-            {children}
-            <Footer />
-          </Providers>
-        </NextIntlClientProvider>
+        <GlobalProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Providers>
+              <ProgressBar />
+              <Header />
+              <FormPortal />
+              {children}
+              <Footer />
+            </Providers>
+          </NextIntlClientProvider>
+        </GlobalProvider>
       </body>
     </html>
   );

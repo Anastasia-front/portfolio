@@ -12,6 +12,7 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
 
   const handleToggle = () => {
     setToggle(!toggle);
+    console.log("toggle :", toggle);
   };
 
   return (
