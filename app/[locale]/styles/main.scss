@@ -336,6 +336,117 @@ footer {
   fill: currentColor;
 }
 
+.animated-icon {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background: transparent;
+  place-content: center;
+  > * {
+    transition: 0.4s;
+  }
+
+  @include useOnHover {
+    .icon {
+      background: var(--color--orange-4);
+
+      &::after,
+      &::before {
+        background: var(--color--orange-4);
+      }
+    }
+    @include useOnClick {
+      background: var(--color--orange-2);
+
+      &::after,
+      &::before {
+        background: var(--color--orange-2);
+      }
+    }
+  }
+
+  .icon {
+    position: relative;
+    width: 20px;
+    height: 3px;
+    background: var(--color--light-brown);
+
+    &::after,
+    &::before {
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 3px;
+      content: "";
+      background: var(--color--light-brown);
+      transition: top 0.4s 0.4s, transform 0.4s 0s;
+    }
+    &::after {
+      top: 7px;
+    }
+    &::before {
+      top: -7px;
+    }
+  }
+  &.active {
+    display: grid;
+    place-content: center;
+    .icon {
+      position: relative;
+      background: transparent;
+      transform: rotate(180deg);
+      &::after,
+      &::before {
+        transition: top 0.4s 0s, transform 0.4s 0.4s;
+      }
+      &::after {
+        top: 0;
+        transform: rotate(45deg);
+      }
+      &::before {
+        top: 0%;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+[data-theme="dark"] .animated-icon {
+  .icon {
+    background: var(--color--peach);
+
+    &::after,
+    &::before {
+      background: var(--color--peach);
+    }
+  }
+
+  @include useOnHover {
+    .icon {
+      background: var(--color--light-blue-4);
+
+      &::after,
+      &::before {
+        background: var(--color--light-blue-4);
+      }
+    }
+    @include useOnClick {
+      background: var(--color--light-blue-2);
+
+      &::after,
+      &::before {
+        background: var(--color--light-blue-2);
+      }
+    }
+  }
+
+  &.active {
+    .icon {
+      background: transparent;
+    }
+  }
+}
+
 .cursor-not-allowed {
   cursor: not-allowed;
 }

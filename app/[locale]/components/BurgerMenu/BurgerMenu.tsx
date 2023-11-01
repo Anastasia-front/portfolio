@@ -9,9 +9,6 @@ import { useKeyPress, useScreenQuery } from "@/hooks";
 
 import logo from "../../../../public/logo.png";
 
-import Burger from "@/assets/svg/burger.svg";
-import Close from "@/assets/svg/close.svg";
-
 import { Navigation } from "../Navigation";
 import { Switchers } from "../Switchers";
 
@@ -37,10 +34,16 @@ export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
 
   const { isScreenTabletSm } = useScreenQuery();
 
+  const classNameActive = isMenuOpen ? "active" : "";
+
   return (
     <>
-      <button type="button" className="buttonIcon" onClick={hideBurger}>
-        <Burger width={20} height={20} />
+      <button
+        type="button"
+        className={`buttonIcon animated-icon ${classNameActive}`}
+        onClick={hideBurger}
+      >
+        <div className="icon"></div>
       </button>
       <Portal wrapperId="portal">
         <>
@@ -57,10 +60,10 @@ export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
             >
               <button
                 type="button"
-                className="buttonIcon buttonIcon__close"
+                className={`buttonIcon buttonIcon__close animated-icon ${classNameActive}`}
                 onClick={hideBurger}
               >
-                <Close width={25} height={25} />
+                <div className="icon"></div>
               </button>
 
               <div className="burger-column">
