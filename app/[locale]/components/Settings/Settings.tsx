@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { useTranslations } from "next-intl";
 
-import { ButtonLanguage, ButtonTheme, Navigation, Portal } from "@/components";
+import { Navigation, Portal, Switchers } from "@/components";
 import { useKeyPress } from "@/hooks";
 
 import Gear from "@/assets/svg/gear.svg";
@@ -55,10 +55,7 @@ export function Settings() {
             <div className="settings-background">
               <h3 className="settings-title">{t("settings")}</h3>
               <Navigation />
-              <div className="settings-switchers">
-                <ButtonTheme />
-                <ButtonLanguage />
-              </div>
+              <Switchers className="settings-switchers" />
             </div>
           </div>
         </Portal>
