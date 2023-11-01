@@ -465,21 +465,30 @@ footer {
     z-index: 102;
     position: fixed;
     padding: 0.5rem;
-    top: 30%;
-    right: 7%;
-    width: 50%;
-    height: 40vh;
     border-radius: var(--border-radius--md) var(--border-radius--md) 0%
       var(--border-radius--md);
     overflow: auto;
     background: var(--color--peach);
     gap: 1rem;
+    top: 20%;
+    right: 10%;
+    width: 80%;
+    height: 50vh;
 
-    @include useScreen("tablet-sm") {
-      padding: 1rem;
+    @include useScreen("mobile-lg") {
+      top: 30%;
+      right: 8%;
+      width: 50%;
+      height: 40vh;
     }
-    @include useScreen("desktop-sm") {
-      padding: 2rem;
+    @include useScreen("tablet-sm") {
+      width: 30%;
+    }
+    @include useScreen("tablet-xl") {
+      top: 40%;
+      right: 5%;
+      width: 40%;
+      height: 30vh;
     }
   }
 
