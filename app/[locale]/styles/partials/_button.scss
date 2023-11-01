@@ -2,11 +2,11 @@
 @use "../mixins" as *;
 
 .button {
+  min-width: 200px;
   color: var(--color--white);
   font-family: inherit;
   text-align: left;
   background: var(--color--orange-4);
-  min-width: 150px;
 
   @include useOnHover {
     background: var(--color--orange-3);
@@ -50,6 +50,41 @@
   @include useOnHover {
     transform: scale(var(--scale));
   }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.button-settings {
+  z-index: 100;
+  position: fixed;
+  top: 70%;
+  right: 2%;
+  border-radius: var(--border-radius--rounded);
+  background: var(--color--bg-light);
+
+  svg {
+    width: 30px;
+    height: 30px;
+
+    @include useScreen("tablet-sm") {
+      width: 40px;
+      height: 40px;
+    }
+    @include useScreen("desktop-sm") {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+[data-theme="dark"] .button-settings {
+  background: var(--color--bg-dark);
 }
 
 .buttonImg {

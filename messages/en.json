@@ -35,7 +35,8 @@
     "tools": "My tools",
     "features": "Go to projects",
     "devices": "Go to skills",
-    "gallery": "Go to page about me"
+    "gallery": "Go to page about me",
+    "settings": "Settings"
   },
   "switcher": {
     "theme": {

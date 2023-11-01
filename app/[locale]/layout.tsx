@@ -4,7 +4,13 @@ import { Oxygen } from "next/font/google";
 import Head from "next/head";
 import { notFound } from "next/navigation";
 
-import { Footer, FormPortal, Header, ProgressBar } from "@/components";
+import {
+  Footer,
+  FormPortal,
+  Header,
+  ProgressBar,
+  Settings,
+} from "@/components";
 import { GlobalProvider } from "@/context";
 import { Providers } from "@/providers";
 
@@ -58,6 +64,7 @@ export default async function RootLayout({
               <Header />
               <FormPortal />
               {children}
+              <Settings />
               <Footer />
             </Providers>
           </NextIntlClientProvider>

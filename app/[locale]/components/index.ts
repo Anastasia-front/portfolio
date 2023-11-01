@@ -21,6 +21,7 @@ export * from "./Progress";
 export * from "./ProgressBar";
 export * from "./ProjectItem";
 export * from "./Projects";
+export * from "./Settings";
 export * from "./SkillBlock";
 export * from "./SkillItem";
 export * from "./SkillSlider";

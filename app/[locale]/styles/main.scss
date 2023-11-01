@@ -321,7 +321,7 @@ footer {
 }
 
 .loader {
-  animation: spin 1s linear infinite;
+  animation: spin 3s linear infinite;
 }
 
 .label {
@@ -443,6 +443,87 @@ footer {
   &.active {
     .icon {
       background: transparent;
+    }
+  }
+}
+
+.settings {
+  &-backdrop {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color--grey-opacity);
+  }
+
+  &-background {
+    @include flex(column, center, center);
+    z-index: 102;
+    position: fixed;
+    padding: 0.5rem;
+    top: 30%;
+    right: 7%;
+    width: 50%;
+    height: 40vh;
+    border-radius: var(--border-radius--md) var(--border-radius--md) 0%
+      var(--border-radius--md);
+    overflow: auto;
+    background: var(--color--peach);
+    gap: 1rem;
+
+    @include useScreen("tablet-sm") {
+      padding: 1rem;
+    }
+    @include useScreen("desktop-sm") {
+      padding: 2rem;
+    }
+  }
+
+  &-switchers {
+    @include flex(row, center, center);
+    padding: 0.3rem;
+    border-radius: var(--border-radius--md);
+    background: var(--color--light-opacity);
+    gap: 1rem;
+  }
+
+  &-title {
+    position: relative;
+    padding-bottom: 0.5rem;
+    color: var(--color--orange-2);
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      content: "";
+      background: var(--color--blue-opacity);
+    }
+  }
+}
+[data-theme="dark"] .settings {
+  &-backdrop {
+    background: var(--color--grey-opacity);
+  }
+
+  &-background {
+    background: var(--color--light-brown);
+  }
+
+  &-switchers {
+    background: var(--color--grey-opacity);
+  }
+
+  &-title {
+    color: currentColor;
+    &::after {
+      background: var(--color--orange-1);
     }
   }
 }
