@@ -64,8 +64,8 @@ export default async function RootLayout({
               <Header />
               <FormPortal />
               {children}
-              <Settings />
               <Footer />
+              <Settings />
             </Providers>
           </NextIntlClientProvider>
         </GlobalProvider>

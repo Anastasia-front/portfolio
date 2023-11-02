@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
@@ -13,11 +14,15 @@ import { useScreenQuery, useScrollLock } from "@/hooks";
 import { navVariants } from "@/utils";
 
 export function Header() {
+  const { theme, setTheme } = useTheme();
+
   const t = useTranslations("btn");
+
   const context = useGlobalContext();
   const { handleToggle } = context;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSettingsPortalPresent, setIsSettingsPortalPresent] = useState(false);
 
   const pathname = usePathname();
   const isHeaderFixed = pathname === "/" || pathname === "/uk";
@@ -26,12 +31,19 @@ export function Header() {
   const { lockScroll, unlockScroll } = useScrollLock();
 
   useEffect(() => {
-    if (isMenuOpen) {
+    if (isMenuOpen || isSettingsPortalPresent) {
       lockScroll();
     } else {
       unlockScroll();
     }
-  }, [isMenuOpen, lockScroll, unlockScroll]);
+  }, [isMenuOpen, isSettingsPortalPresent, lockScroll, unlockScroll]);
+
+  useEffect(() => {
+    const settingsPortal = document.getElementById("settings-portal");
+    if (settingsPortal) {
+      setIsSettingsPortalPresent(true);
+    }
+  }, [theme]);
 
   const handleMenuOpen = (newState: boolean): void => {
     setIsMenuOpen(newState);
@@ -61,7 +73,7 @@ export function Header() {
         />
       )}
 
-      {!isMenuOpen && <Switchers />}
+      {!isMenuOpen && <Switchers settings={isSettingsPortalPresent} />}
     </motion.header>
   );
 }

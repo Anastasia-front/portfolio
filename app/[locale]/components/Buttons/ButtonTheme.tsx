@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
@@ -10,7 +10,11 @@ import Sun from "@/assets/svg/sun.svg";
 
 import { ButtonSwitcher } from "./ButtonSwitcher";
 
-export const ButtonTheme = () => {
+interface Props {
+  settings?: boolean;
+}
+
+export const ButtonTheme = ({ settings }: Props) => {
   const { theme, setTheme } = useTheme();
   const [isVisible, setIsVisible] = useState(true);
 
@@ -20,13 +24,15 @@ export const ButtonTheme = () => {
   const IconMoon = <Moon />;
   const IconSun = <Sun />;
 
+  const iconSvg = theme === "dark" ? IconMoon : IconSun;
+
   const [icon, setIcon] = useState(() => {
-    if (theme === "dark") {
-      return IconMoon;
-    } else {
-      return IconSun;
-    }
+    return iconSvg;
   });
+
+  useEffect(() => {
+    setIcon(iconSvg);
+  }, [settings, iconSvg]);
 
   const clickHandler = () => {
     setIsVisible(false);

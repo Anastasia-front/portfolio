@@ -23,7 +23,7 @@ export function Settings() {
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      handleMenuOpen;
+      handleMenuOpen();
     }
   };
 
