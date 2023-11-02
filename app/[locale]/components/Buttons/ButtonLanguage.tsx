@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 import { useTranslations } from "next-intl";
 import Link from "next-intl/link";
@@ -24,13 +24,11 @@ export const ButtonLanguage = () => {
 
   const [lang, setLang] = useState<string>("en");
 
-  const [icon, setIcon] = useState(() => {
-    if (pathname === "/uk") {
-      return IconUA;
-    } else {
-      return IconUS;
-    }
-  });
+  const icon = useMemo(() => {
+    const IconUA = <UA />;
+    const IconUS = <US />;
+    return pathname === "/uk" ? IconUA : IconUS;
+  }, [pathname]);
 
   const clickHandler = () => {
     setIsVisible(false);
@@ -38,10 +36,8 @@ export const ButtonLanguage = () => {
       setIsVisible(true);
       if (pathname === "/uk") {
         setLang("en");
-        setIcon(IconUS);
       } else {
         setLang("uk");
-        setIcon(IconUA);
       }
     }, 300);
   };
