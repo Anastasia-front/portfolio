@@ -17,9 +17,6 @@ export const ButtonLanguage = () => {
   const a = useTranslations("alt");
   const t = useTranslations("switcher");
 
-  const IconUA = <UA />;
-  const IconUS = <US />;
-
   const pathname = usePathname();
 
   const [lang, setLang] = useState<string>("en");
