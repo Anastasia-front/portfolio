@@ -22,7 +22,6 @@ export function Header() {
   const { handleToggle } = context;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSettingsPortalPresent, setIsSettingsPortalPresent] = useState(false);
 
   const pathname = usePathname();
   const isHeaderFixed = pathname === "/" || pathname === "/uk";
@@ -31,19 +30,12 @@ export function Header() {
   const { lockScroll, unlockScroll } = useScrollLock();
 
   useEffect(() => {
-    if (isMenuOpen || isSettingsPortalPresent) {
+    if (isMenuOpen) {
       lockScroll();
     } else {
       unlockScroll();
     }
-  }, [isMenuOpen, isSettingsPortalPresent, lockScroll, unlockScroll]);
-
-  useEffect(() => {
-    const settingsPortal = document.getElementById("settings-portal");
-    if (settingsPortal) {
-      setIsSettingsPortalPresent(true);
-    }
-  }, [theme]);
+  }, [isMenuOpen, lockScroll, unlockScroll]);
 
   const handleMenuOpen = (newState: boolean): void => {
     setIsMenuOpen(newState);
@@ -73,7 +65,7 @@ export function Header() {
         />
       )}
 
-      {!isMenuOpen && <Switchers settings={isSettingsPortalPresent} />}
+      {!isMenuOpen && <Switchers />}
     </motion.header>
   );
 }
