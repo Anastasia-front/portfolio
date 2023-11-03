@@ -119,18 +119,23 @@ function Frames({
   const [, setLocation] = useLocation();
 
   useEffect(() => {
-    if (ref.current) {
-      clicked.current = ref.current.getObjectByName(params?.id);
+    if (ref.current && params?.id) {
+      clicked!.current = ref.current.getObjectByName(params?.id)!;
+
       if (clicked.current) {
-        clicked.current?.parent.updateWorldMatrix(true, true);
-        clicked.current.parent.localToWorld(p.set(0, GOLDEN_RATIO / 2, 1.25));
-        clicked.current.parent.getWorldQuaternion(q);
+        clicked.current.parent?.updateWorldMatrix(true, true);
+        if (clicked.current.parent) {
+          clicked.current.parent.localToWorld(p.set(0, GOLDEN_RATIO / 2, 1.25));
+          clicked.current.parent.getWorldQuaternion(q);
+        } else {
+          p.set(0, 0, 5.5);
+          q.identity();
+        }
       } else {
-        p.set(0, 0, 5.5);
-        q.identity();
+        console.log("error");
       }
     }
-  });
+  }, [params?.id, p, q]);
 
   useFrame((state, dt) => {
     easing.damp3(state.camera.position, p, 0.4, dt);
@@ -154,9 +159,21 @@ function Frames({
   );
 }
 
-function Frame({ url, c = new THREE.Color(), ...props }) {
-  const image = useRef();
-  const frame = useRef();
+interface FrameProps {
+  url: string;
+  c?: THREE.Color;
+}
+
+function Frame({ url, c = new THREE.Color(), ...props }: FrameProps) {
+  const image = useRef<THREE.Mesh<
+    THREE.PlaneGeometry,
+    THREE.ShaderMaterial
+  > | null>(null);
+  const frame = useRef<THREE.Mesh<
+    THREE.BoxGeometry,
+    THREE.MeshBasicMaterial
+  > | null>(null);
+
   const [, params] = useRoute("/item/:id");
   const [hovered, hover] = useState(false);
   const [rnd] = useState(() => Math.random());
@@ -166,24 +183,28 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
   useCursor(hovered);
 
   useFrame((state, dt) => {
-    image.current.material.zoom =
-      2 + Math.sin(rnd * 10000 + state.clock.elapsedTime / 3) / 2;
-    easing.damp3(
-      image.current.scale,
-      [
-        0.85 * (!isActive && hovered ? 0.85 : 1),
-        0.9 * (!isActive && hovered ? 0.905 : 1),
-        1,
-      ],
-      0.1,
-      dt
-    );
-    easing.dampC(
-      frame.current.material.color,
-      hovered ? "orange" : "white",
-      0.1,
-      dt
-    );
+    if (image.current && frame.current) {
+      const shaderMaterial = image.current.material as THREE.ShaderMaterial;
+      shaderMaterial.uniforms.uZoom.value =
+        2 + Math.sin(rnd * 10000 + state.clock.elapsedTime / 3) / 2;
+
+      easing.damp3(
+        image.current.scale,
+        [
+          0.85 * (!isActive && hovered ? 0.85 : 1),
+          0.9 * (!isActive && hovered ? 0.905 : 1),
+          1,
+        ],
+        0.1,
+        dt
+      );
+      easing.dampC(
+        frame.current.material.color,
+        hovered ? "orange" : "white",
+        0.1,
+        dt
+      );
+    }
   });
 
   return (
@@ -215,11 +236,11 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
           />
         </mesh>
         <Image
-          alt="jjj"
-          raycast={() => null}
-          ref={image}
-          position={[0, 0, 0.7]}
-          url={url}
+          {...{
+            position: [0, 0, 0.7],
+            url: url,
+            alt: name,
+          }}
         />
       </mesh>
     </group>
