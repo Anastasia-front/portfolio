@@ -91,37 +91,37 @@ export const Gallery = () => {
   const isMobileMd = useScreenMobileMd();
   const isMobileSm = useScreenMobileSm();
 
-  const getHeight = () => {
-    if (isDesktopMd) {
-      return "80vh";
-    } else if (isDesktopSm) {
-      return "76vh";
-    } else if (isTabletXl) {
-      return "70vh";
-    } else if (isTabletLg) {
-      return "56vh";
-    } else if (isTabletMd) {
-      return "52vh";
-    } else if (isTabletSm) {
-      return "42vh";
-    } else if (isMobileXl) {
-      return "30vh";
-    } else if (isMobileLg) {
-      return "25vh";
-    } else if (isMobileMd) {
-      return "20vh";
-    } else if (isMobileSm) {
-      return "16vh";
-    }
-  };
+  // const getHeight = () => {
+  //   if (isDesktopMd) {
+  //     return "80vh";
+  //   } else if (isDesktopSm) {
+  //     return "76vh";
+  //   } else if (isTabletXl) {
+  //     return "70vh";
+  //   } else if (isTabletLg) {
+  //     return "56vh";
+  //   } else if (isTabletMd) {
+  //     return "52vh";
+  //   } else if (isTabletSm) {
+  //     return "42vh";
+  //   } else if (isMobileXl) {
+  //     return "30vh";
+  //   } else if (isMobileLg) {
+  //     return "25vh";
+  //   } else if (isMobileMd) {
+  //     return "20vh";
+  //   } else if (isMobileSm) {
+  //     return "16vh";
+  //   }
+  // };
 
-  const height = getHeight();
+  // const height = getHeight();
 
   return (
     <Canvas
       dpr={[2, 2]}
       camera={{ fov: 70, position: [0, 2, 15] }}
-      style={{ height: height }}
+      style={{ height: "55vh" }}
     >
       <color attach="background" args={[firstColor]} />
       <fog attach="fog" args={[thirdColor, 0, 15]} />

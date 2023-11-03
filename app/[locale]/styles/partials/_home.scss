@@ -5,6 +5,7 @@
   z-index: 30;
   position: relative;
   width: 100vw;
+  margin-top: -0.5rem;
   background: var(--color--bg-light);
 }
 [data-theme="dark"] .home-content {
@@ -27,9 +28,9 @@
   }
 
   &-blur {
-    align-self: flex-end;
     z-index: -100;
     position: absolute;
+    align-self: flex-end;
     @include box-shadow-4(var(--color--orange-4));
   }
 
@@ -50,9 +51,9 @@
     }
 
     h1 {
-      text-transform: uppercase;
       font-weight: 700;
       line-height: 3rem;
+      text-transform: uppercase;
       -webkit-text-fill-color: var(--color--light-blue-3);
       -webkit-text-stroke: 1px var(--color--light-blue-4);
     }
@@ -84,9 +85,9 @@
 
     &__content {
       position: relative;
-      border-radius: var(--border-radius--sm);
       width: 200px;
       height: 200px;
+      border-radius: var(--border-radius--sm);
 
       @include useScreen("tablet-sm") {
         width: 250px;
@@ -100,22 +101,22 @@
     }
 
     &__decoration {
+      opacity: 0.7;
       position: absolute;
-      left: -12rem;
       bottom: -4rem;
+      left: -12rem;
       width: 110%;
       height: auto;
-      opacity: 0.7;
 
       @include useScreen("tablet-md") {
-        width: 120%;
         left: -18rem;
+        width: 120%;
       }
 
       @include useScreen("tablet-xl") {
-        width: 130%;
-        left: -22rem;
         bottom: -6rem;
+        left: -22rem;
+        width: 130%;
       }
     }
 
@@ -256,8 +257,8 @@
     }
 
     &__decoration {
-      position: relative;
       z-index: 0;
+      position: relative;
       cursor: pointer;
       transition: transform 2s;
       transform: var(--level-one);
@@ -270,12 +271,12 @@
     &__content {
       z-index: 1;
       position: relative;
+      position: relative;
       min-width: 300px;
       max-width: 400px;
       min-height: 270px;
-      text-align: center;
-      position: relative;
       padding: 8rem 0;
+      text-align: center;
       transition: transform 3s;
       transform-style: preserve-3d;
 
@@ -287,12 +288,12 @@
     &__front,
     &__back {
       @include flex(column, center, center);
-      gap: 0.5rem;
       position: absolute;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
+      gap: 0.5rem;
 
       backface-visibility: hidden;
       transform-style: preserve-3d;
@@ -314,41 +315,41 @@
     }
 
     &__front::before {
-      content: "";
       position: absolute;
-      --spacer: 1rem;
       top: var(--spacer);
+      right: var(--spacer);
       bottom: var(--spacer);
       left: var(--spacer);
-      right: var(--spacer);
       border: 3px solid currentColor;
+      content: "";
       transform: var(--level-one);
+      --spacer: 1rem;
     }
 
     &__title {
-      transform: var(--level-three);
       order: 2;
       text-transform: uppercase;
+      transform: var(--level-three);
     }
 
     &__subtitle {
-      transform: var(--level-two);
+      opacity: 0.7;
+      font-weight: var(--fw-bold);
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-weight: var(--fw-bold);
-      opacity: 0.7;
+      transform: var(--level-two);
     }
 
     &__body {
-      transform: var(--level-two);
       font-weight: var(fw-normal);
       line-height: 1.6;
+      transform: var(--level-two);
     }
 
     &__back {
       padding: 1rem;
-      transform: rotateY(0.5turn);
       background: var(--color--light-blue-1);
+      transform: rotateY(0.5turn);
     }
   }
 
@@ -528,11 +529,11 @@
 
       &::before {
         position: absolute;
-        content: "";
         top: 0;
         left: 0;
         width: 100%;
         height: 2rem;
+        content: "";
         background: linear-gradient(
           to bottom,
           var(--color--grey-opacity) 40%,

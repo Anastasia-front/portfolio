@@ -1,15 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 
-interface Props {
-  onVideoHeightChange: (height: number) => void;
-}
-
-export function Video({ onVideoHeightChange }: Props) {
+export function Video() {
   const { theme, setTheme } = useTheme();
 
   const pathname = usePathname();
@@ -33,30 +29,14 @@ export function Video({ onVideoHeightChange }: Props) {
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    const currentVideoRef = videoRef.current;
-
-    const updateVideoHeight = () => {
-      if (currentVideoRef) {
-        const height = currentVideoRef.clientHeight;
-        onVideoHeightChange(height);
-      }
-    };
-
-    if (currentVideoRef) {
-      currentVideoRef.addEventListener("loadedmetadata", updateVideoHeight);
-      updateVideoHeight();
-    }
-
-    return () => {
-      if (currentVideoRef) {
-        currentVideoRef.removeEventListener(
-          "loadedmetadata",
-          updateVideoHeight
-        );
-      }
-    };
-  }, [onVideoHeightChange]);
+  if (videoRef.current) {
+    videoRef.current.style.position = "relative";
+    videoRef.current.style.width = "100%";
+    videoRef.current.style.height = "auto";
+    videoRef.current.style.maxHeight = "90vh";
+    videoRef.current.style.overflow = "hidden";
+    videoRef.current.style.pointerEvents = "auto";
+  }
 
   return <video className="video" autoPlay ref={videoRef} src={video} />;
 }

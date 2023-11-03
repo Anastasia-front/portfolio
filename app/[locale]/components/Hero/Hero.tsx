@@ -15,11 +15,8 @@ const oswald = Oswald({
   subsets: ["latin"],
   weight: ["600"],
 });
-interface Props {
-  videoHeight: number;
-}
 
-export function Hero({ videoHeight }: Props) {
+export function Hero() {
   const i = useTranslations("home.hero");
   const t = useTranslations("home.hero.title");
   const b = useTranslations("btn");
@@ -30,10 +27,7 @@ export function Hero({ videoHeight }: Props) {
 
   return (
     <>
-      <section
-        className="container__box-shadow"
-        style={{ marginTop: videoHeight }}
-      >
+      <section className="container__box-shadow">
         <div className="hero-container container">
           <div className="hero-content">
             <span className="hero-blur"></span>
