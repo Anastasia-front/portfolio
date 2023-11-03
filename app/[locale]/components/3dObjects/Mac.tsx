@@ -16,9 +16,7 @@ export function Mac(props: MacProps) {
 
   useFrame(() => {
     if (ref.current) {
-      ref.current.rotation.x += 0.001 * direction;
-      ref.current.rotation.y += 0.001 * direction;
-      ref.current.rotation.z += 0.001 * direction;
+      ref.current.rotation.y += 0.003 * direction;
     }
   });
 

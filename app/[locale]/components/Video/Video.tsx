@@ -29,14 +29,5 @@ export function Video() {
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  if (videoRef.current) {
-    videoRef.current.style.position = "relative";
-    videoRef.current.style.width = "100%";
-    videoRef.current.style.height = "auto";
-    videoRef.current.style.maxHeight = "90vh";
-    videoRef.current.style.overflow = "hidden";
-    videoRef.current.style.pointerEvents = "auto";
-  }
-
   return <video className="video" autoPlay ref={videoRef} src={video} />;
 }

@@ -15,19 +15,6 @@ import * as THREE from "three";
 import getUuid from "uuid-by-string";
 import { useLocation, useRoute } from "wouter";
 
-import {
-  useScreenDesktopMd,
-  useScreenDesktopSm,
-  useScreenMobileLg,
-  useScreenMobileMd,
-  useScreenMobileSm,
-  useScreenMobileXl,
-  useScreenTabletLg,
-  useScreenTabletMd,
-  useScreenTabletSm,
-  useScreenTabletXl,
-} from "@/hooks";
-
 const GOLDEN_RATIO = 1.61803398875;
 
 const pexel = (id: number) => `/images/hero/${id}.jpg`;
@@ -77,45 +64,6 @@ export const Gallery = () => {
   const firstColor = theme === "dark" ? "#171410" : "#fbfcf8";
   const secondColor = theme === "dark" ? "#171410" : "#3f3f3f";
   const thirdColor = theme === "dark" ? "#3f3f3f" : "#5a5a5a5a";
-
-  const isDesktopMd = useScreenDesktopMd();
-  const isDesktopSm = useScreenDesktopSm();
-
-  const isTabletXl = useScreenTabletXl();
-  const isTabletLg = useScreenTabletLg();
-  const isTabletMd = useScreenTabletMd();
-  const isTabletSm = useScreenTabletSm();
-
-  const isMobileXl = useScreenMobileXl();
-  const isMobileLg = useScreenMobileLg();
-  const isMobileMd = useScreenMobileMd();
-  const isMobileSm = useScreenMobileSm();
-
-  // const getHeight = () => {
-  //   if (isDesktopMd) {
-  //     return "80vh";
-  //   } else if (isDesktopSm) {
-  //     return "76vh";
-  //   } else if (isTabletXl) {
-  //     return "70vh";
-  //   } else if (isTabletLg) {
-  //     return "56vh";
-  //   } else if (isTabletMd) {
-  //     return "52vh";
-  //   } else if (isTabletSm) {
-  //     return "42vh";
-  //   } else if (isMobileXl) {
-  //     return "30vh";
-  //   } else if (isMobileLg) {
-  //     return "25vh";
-  //   } else if (isMobileMd) {
-  //     return "20vh";
-  //   } else if (isMobileSm) {
-  //     return "16vh";
-  //   }
-  // };
-
-  // const height = getHeight();
 
   return (
     <Canvas
