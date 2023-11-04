@@ -19,12 +19,7 @@ export function Features() {
       <div className="features container">
         <div className="section-header">
           <h2>{i("title")}</h2>
-          <ButtonText
-            text={b("features")}
-            borderRadius="1rem"
-            padding="0.7rem 1.5rem"
-            hover="true"
-          />
+          <ButtonText text={b("features")} hover="true" />
         </div>
 
         <div className="features-cards">

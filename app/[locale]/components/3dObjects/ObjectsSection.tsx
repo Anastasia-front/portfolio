@@ -13,12 +13,7 @@ export function ObjectsSection() {
     <section className="container__box-shadow" id="tools">
       <div className="devices container">
         <div className="section-header">
-          <ButtonText
-            text={b("devices")}
-            borderRadius="1rem"
-            padding="0.7rem 1.5rem"
-            hover="true"
-          />
+          <ButtonText text={b("devices")} hover="true" />
           <h2>{i("heading")}</h2>
         </div>
         <div className="devices__hint devices__hint-onHover">

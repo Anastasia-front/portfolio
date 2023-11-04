@@ -5,18 +5,10 @@ import { motion } from "framer-motion";
 interface ButtonProps {
   text: string;
   onClick?: () => void;
-  padding?: string;
-  borderRadius?: string;
   hover?: string;
 }
 
-export function ButtonText({
-  text,
-  onClick,
-  padding,
-  borderRadius = "60px",
-  hover,
-}: ButtonProps) {
+export function ButtonText({ text, onClick, hover }: ButtonProps) {
   return (
     <motion.button
       className="button"
@@ -31,10 +23,6 @@ export function ButtonText({
           stiffness: 100,
           restDelta: 0.001,
         },
-      }}
-      style={{
-        padding: padding || ".8rem 2rem",
-        borderRadius: borderRadius || "1rem",
       }}
     >
       {text}

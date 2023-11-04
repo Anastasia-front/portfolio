@@ -44,15 +44,11 @@ export function Hero() {
               <ButtonText
                 text={b("hero")}
                 onClick={() => handleClick("features")}
-                borderRadius="1rem"
-                padding="0.7rem 1.5rem"
                 hover="true"
               />
               <ButtonText
                 text={b("tools")}
                 onClick={() => handleClick("tools")}
-                borderRadius="1rem"
-                padding="0.7rem 1.5rem"
                 hover="true"
               />
             </div>

@@ -90,7 +90,7 @@ export default function AboutPage() {
         />
       </motion.div>
       <div className="about-content">
-        <Banner text={b("contact")} button />
+        <Banner text={b("contact")} button className="about-content__banner" />
 
         <section className="about-section">
           <motion.h1

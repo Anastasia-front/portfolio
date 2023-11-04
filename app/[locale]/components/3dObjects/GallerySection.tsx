@@ -12,12 +12,7 @@ export function GallerySection() {
     <section className="gallery-section">
       <div className=" section-header container">
         <h2>{i("gallery")}</h2>
-        <ButtonText
-          text={b("gallery")}
-          borderRadius="1rem"
-          padding="0.7rem 1.5rem"
-          hover="true"
-        />
+        <ButtonText text={b("gallery")} hover="true" />
       </div>
 
       <Gallery />

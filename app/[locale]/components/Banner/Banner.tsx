@@ -11,14 +11,15 @@ import { bannerVariants } from "@/utils";
 interface Props {
   text: string;
   button?: boolean;
+  className?: string;
 }
 
-export function Banner({ text, button }: Props) {
+export function Banner({ text, button, className }: Props) {
   const context = useGlobalContext();
   const t = useTranslations("btn");
   return (
     <motion.div
-      className="banner"
+      className={`banner ${className}`}
       variants={bannerVariants}
       initial="offscreen"
       whileInView="onscreen"
@@ -28,7 +29,6 @@ export function Banner({ text, button }: Props) {
       {button && (
         <ButtonText
           text={t("contacts")}
-          padding="1.5rem 1rem"
           hover="true"
           onClick={context.handleToggle}
         />

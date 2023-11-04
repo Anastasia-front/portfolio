@@ -4,9 +4,10 @@
 
 .banner {
   @include flex(column, center, center);
-  margin-top: 1.5rem;
+  width: 70%;
+  margin-top: 1.5rem auto 0 auto;
   padding: 1rem;
-  border-radius: var(--border-radius--lg);
+  border-radius: var(--border-radius--xl);
   color: var(--color--white);
   background: radial-gradient(
     80.97% 80.37% at 56.01% 19.03%,
@@ -16,13 +17,14 @@
   gap: 1rem;
 
   @include useScreen("mobile-md") {
-    @include flex(row, space-between, center);
     padding: 1.2rem;
-    gap: 1.2rem;
   }
   @include useScreen("tablet-sm") {
-    padding: 2rem;
-    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  @include useScreen("tablet-md") {
+    gap: 3rem;
   }
 
   &__text {
@@ -31,8 +33,6 @@
 
   button {
     align-self: flex-end;
-    width: max-content;
-    min-width: 8rem;
   }
 }
 [data-theme="dark"] .banner {

@@ -56,13 +56,7 @@ export function Header() {
       />
 
       {isScreenTabletXl && (
-        <ButtonText
-          text={t("contacts")}
-          borderRadius="60px"
-          padding="0.85rem 1.2rem"
-          hover="true"
-          onClick={handleToggle}
-        />
+        <ButtonText text={t("contacts")} hover="true" onClick={handleToggle} />
       )}
 
       {!isMenuOpen && <Switchers />}

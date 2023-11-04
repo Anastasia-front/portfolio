@@ -163,6 +163,7 @@
 
       @include useScreen("tablet-sm") {
         flex-direction: row;
+        gap: 3rem;
       }
     }
 

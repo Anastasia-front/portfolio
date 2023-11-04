@@ -2,7 +2,9 @@
 @use "../mixins" as *;
 
 .button {
-  min-width: 200px;
+  min-width: 164px;
+  padding: 0.7rem;
+  border-radius: var(--border-radius--lg);
   color: var(--color--white);
   font-family: inherit;
   text-align: left;

@@ -67,7 +67,11 @@
   margin-bottom: 3rem;
 
   @include useScreen("tablet-sm") {
-    margin-top: 150vh;
+    margin-top: 140vh;
+  }
+
+  &__banner {
+    margin-left: 15%;
   }
 }
 
@@ -148,8 +152,8 @@
 
 .about-achievements {
   @include flex(column, center, center);
-  gap: 2rem;
   width: 90vw;
+  gap: 2rem;
 
   @include useScreen("tablet-sm") {
     width: 100%;
@@ -171,8 +175,8 @@
   }
 
   &__slider {
-    height: auto;
     max-width: 565px;
+    height: auto;
 
     &-certificate {
       width: 100%;
@@ -209,8 +213,8 @@
   }
 
   &__image {
-    max-width: 70vw;
     width: auto;
+    max-width: 70vw;
     height: auto;
     max-height: 100vh;
     margin: 0 auto;
