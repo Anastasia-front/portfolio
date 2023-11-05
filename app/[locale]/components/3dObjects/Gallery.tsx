@@ -63,7 +63,7 @@ export const Gallery = () => {
 
   const firstColor = theme === "dark" ? "#171410" : "#fbfcf8";
   const secondColor = theme === "dark" ? "#171410" : "#3f3f3f";
-  const thirdColor = theme === "dark" ? "#3f3f3f" : "#5a5a5a5a";
+  const thirdColor = theme === "dark" ? "#3f3f3f" : "#5a5a5a";
 
   return (
     <Canvas

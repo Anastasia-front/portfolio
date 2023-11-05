@@ -29,6 +29,10 @@
   top: 0;
   left: 0;
   width: 100vw;
+
+  @media screen and (min-width: 1200px) {
+    left: calc((100vw / 2) - 600px);
+  }
 }
 
 .container-items {

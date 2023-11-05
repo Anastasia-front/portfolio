@@ -5,7 +5,7 @@
   z-index: 30;
   position: relative;
   width: 100vw;
-  margin-top: -0.5rem;
+  margin-top: 90vh;
   background: var(--color--bg-light);
 }
 [data-theme="dark"] .home-content {
@@ -512,16 +512,23 @@
 }
 
 .video {
-  position: relative;
+  position: fixed;
   top: 76px;
   left: 0;
-  width: 100%;
-  height: auto;
-  max-height: 90vh;
+  width: auto;
+  height: 90vh;
+  background: var(--color--blue-opacity);
 
   @include useScreen("mobile-md") {
     top: 0;
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 100vw;
+  }
+}
+[data-theme="dark"] .video {
+  background: var(--color--blue-dark);
 }
 
 .gallery {
