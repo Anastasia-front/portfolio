@@ -25,6 +25,11 @@
     "titled": "titled",
     "load": "is loading..."
   },
+  "notFound": {
+    "title": "Not Found",
+    "description": "Could not find requested resource",
+    "link": "Return Home"
+  },
   "license": {
     "accordion": "Background images are taken from the site",
     "slider": "Images for the slider are downloaded from the site"

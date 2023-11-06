@@ -16,15 +16,15 @@ export default function Home() {
   return (
     <motion.main
       variants={bannerVariants}
-      initial="offscreen"
-      whileInView="onscreen"
+      initial="hidden"
+      animate="visible"
       viewport={{ once: true, amount: 0 }}
     >
       <Video />
       <motion.div
         variants={bannerVariants}
-        initial="offscreen"
-        whileInView="onscreen"
+        initial="hidden"
+        animate="visible"
         viewport={{ once: true, amount: 0 }}
         className="home-content"
       >
