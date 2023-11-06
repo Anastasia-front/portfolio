@@ -21,8 +21,8 @@ export function Banner({ text, button, className }: Props) {
     <motion.div
       className={`banner ${className}`}
       variants={bannerVariants}
-      initial="offscreen"
-      whileInView="onscreen"
+      initial="hidden"
+      animate="visible"
       viewport={{ once: true, amount: 1 }}
     >
       <h4 className="banner__text">{text}</h4>

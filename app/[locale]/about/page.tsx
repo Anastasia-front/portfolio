@@ -77,8 +77,8 @@ export default function AboutPage() {
           alt={t("alt")}
           className="about-header__image"
           variants={bannerVariants}
-          initial="offscreen"
-          whileInView="onscreen"
+          initial="hidden"
+          animate="visible"
           viewport={{ once: true, amount: 0 }}
           style={{
             scale,
@@ -95,7 +95,7 @@ export default function AboutPage() {
         <section className="about-section">
           <motion.h1
             className="about-section__title"
-            variants={titleVariants}
+            variants={titleVariants("first")}
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: false, amount: 0.2 }}

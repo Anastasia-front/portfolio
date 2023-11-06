@@ -7,7 +7,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { Project } from "@/constants";
-import { gridItemVariants, hoverVariants, hoverVariants2 } from "@/utils";
+import { gridItemVariants, hoverVariants } from "@/utils";
 
 export function ProjectItem({ name, image, categories, onClick }: Project) {
   const [isHover, setIsHover] = useState(false);
@@ -32,9 +32,9 @@ export function ProjectItem({ name, image, categories, onClick }: Project) {
       <div className="hover">
         <motion.div
           className="hover__categories"
-          initial="hidden"
-          variants={hoverVariants}
-          animate={isHover ? "visible" : "hidden"}
+          variants={hoverVariants("first")}
+          initial="offscreen"
+          whileInView={isHover ? "onscreen" : "offscreen"}
         >
           {categories.map((category, index) => {
             if (category !== "") {
@@ -44,9 +44,9 @@ export function ProjectItem({ name, image, categories, onClick }: Project) {
         </motion.div>
         <motion.p
           className="hover__title"
-          initial="hidden"
-          variants={hoverVariants2}
-          animate={isHover ? "visible" : "hidden"}
+          variants={hoverVariants("second")}
+          initial="offscreen"
+          whileInView={isHover ? "onscreen" : "offscreen"}
         >
           {name}
         </motion.p>

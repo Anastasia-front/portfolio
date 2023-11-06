@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
 
-import { headerImgVariants, overlayVariants, titleVariants2 } from "@/utils";
+import { headerImgVariants, overlayVariants, titleVariants } from "@/utils";
 
 import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
 import { useScreenQuery } from "@/hooks";
@@ -77,7 +77,7 @@ export default function Page({ params }: Params) {
         ></motion.div>
         <motion.div
           className="banner"
-          variants={titleVariants2}
+          variants={titleVariants("second")}
           initial="offscreen"
           animate="onscreen"
         >

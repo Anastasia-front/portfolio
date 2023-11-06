@@ -8,7 +8,7 @@ import { Libre_Franklin, Source_Code_Pro } from "next/font/google";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { Certificate, Progress } from "@/components";
-import { bannerVariants, titleVariants3 } from "@/utils";
+import { bannerVariants, titleVariants } from "@/utils";
 
 const franklin = Libre_Franklin({
   subsets: ["latin"],
@@ -47,7 +47,7 @@ export function AchievementBlock() {
     >
       <motion.h4
         className={`about-achievements__title ${franklin.className}`}
-        variants={titleVariants3}
+        variants={titleVariants("second")}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: false, amount: 0.2 }}
@@ -56,7 +56,7 @@ export function AchievementBlock() {
       </motion.h4>
       <motion.h5
         className={`about-achievements__subtitle ${source.className}`}
-        variants={titleVariants3}
+        variants={titleVariants("second")}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: false, amount: 0.2 }}
@@ -66,15 +66,15 @@ export function AchievementBlock() {
       <motion.div
         className="about-achievements__slider about-achievements__slider-certificate"
         variants={bannerVariants}
-        initial="offscreen"
-        whileInView="onscreen"
+        initial="hidden"
+        animate="visible"
         viewport={{ once: false, amount: 0.2 }}
       >
         <Certificate />
       </motion.div>
       <motion.h5
         className={`about-achievements__subtitle ${source.className}`}
-        variants={titleVariants3}
+        variants={titleVariants("second")}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: false, amount: 0.2 }}
@@ -84,8 +84,8 @@ export function AchievementBlock() {
       <motion.div
         className="about-achievements__slider about-achievements__slider-progress"
         variants={bannerVariants}
-        initial="offscreen"
-        whileInView="onscreen"
+        initial="hidden"
+        animate="visible"
         viewport={{ once: false, amount: 0.2 }}
       >
         <Progress />

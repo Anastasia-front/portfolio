@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 import { Accordion, LottiePlayer, SkillSlider } from "@/components";
-import { gridVariants, imgVariants } from "@/utils";
+import { gridVariants, opacityVariants } from "@/utils";
 
 export default function SkillsPage() {
   const t = useTranslations("skills");
@@ -38,7 +38,7 @@ export default function SkillsPage() {
 
       <Accordion />
       <motion.div
-        variants={imgVariants("left")}
+        variants={opacityVariants("first")}
         className="skills-section__slider"
       >
         <SkillSlider />

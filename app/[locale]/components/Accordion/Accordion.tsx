@@ -1,30 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { SkillBlock } from "@/components";
 import { skillBlocksEnglish, skillBlocksUkrainian } from "@/constants";
-import { fadeIn, imgVariants } from "@/utils";
+import { fadeIn, opacityVariants } from "@/utils";
 
 export function Accordion() {
   const i = useTranslations("license");
 
-  const [active, setActive] = useState(4);
-
-  const accordion = React.useRef(null);
-  const scrollYProgress = useScroll({
-    target: accordion,
-    offset: ["start end", "end start"],
-  }).scrollYProgress;
-
-  const x = useTransform(scrollYProgress, [0, 0.8, 1], [0, 0, 400]);
-  const y = useTransform(scrollYProgress, [0, 0.75, 1], [0, 0, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.85, 0.95], [1, 1, 0]);
+  const [active, setActive] = useState(5);
 
   const pathname = usePathname();
   const lang = pathname.slice(0, 3);
@@ -38,16 +28,10 @@ export function Accordion() {
 
   return (
     <motion.div
-      ref={accordion}
-      variants={imgVariants("right")}
+      variants={opacityVariants("first")}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0 }}
-      style={{
-        x,
-        y,
-        opacity,
-      }}
       className="skill-blocks"
     >
       {skillBlocks.map((block) => (

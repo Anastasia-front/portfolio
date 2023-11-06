@@ -15,24 +15,6 @@ export const gridVariants: Variants = {
   },
 };
 
-export const bannerVariants: Variants = {
-  offscreen: {
-    y: 100,
-    opacity: 0,
-    scaleY: 0.2,
-  },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    scaleY: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.45,
-      duration: 0.8,
-    },
-  },
-};
-
 export const navVariants: Variants = {
   hidden: { opacity: 0, scaleX: 0, y: -200 },
   visible: {
@@ -51,42 +33,6 @@ export const navVariants: Variants = {
   },
 };
 
-export const hoverVariants = {
-  hidden: {
-    y: -15,
-    scaleX: 0.5,
-    opacity: 0,
-  },
-  visible: {
-    y: 0,
-    scaleX: 1,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 200,
-      damping: 10,
-    },
-  },
-};
-
-export const hoverVariants2 = {
-  hidden: {
-    y: 15,
-    scaleX: 0.6,
-    opacity: 0,
-  },
-  visible: {
-    y: 0,
-    scaleX: 1,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 200,
-      damping: 10,
-    },
-  },
-};
-
 export const gridItemVariants: Variants = {
   hidden: { opacity: 0, scale: 0.3 },
   visible: {
@@ -97,62 +43,6 @@ export const gridItemVariants: Variants = {
       type: "spring",
       stiffness: 200,
       damping: 10,
-    },
-  },
-};
-
-export const titleVariants: Variants = {
-  offscreen: {
-    y: 300,
-    opacity: 0,
-    scaleY: 0.5,
-  },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    scaleY: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.45,
-      duration: 0.8,
-    },
-  },
-};
-
-export const titleVariants2: Variants = {
-  offscreen: {
-    y: 300,
-    opacity: 0,
-    scaleY: 0.5,
-  },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    scaleY: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.45,
-      duration: 0.8,
-      delay: 0.2,
-    },
-  },
-};
-
-export const titleVariants3: Variants = {
-  offscreen: {
-    y: 100,
-    opacity: 0,
-    scaleY: 0.7,
-  },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    scaleY: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.35,
-      duration: 0.7,
-      delay: 0.3,
     },
   },
 };
@@ -170,42 +60,6 @@ export const headerImgVariants: Variants = {
     },
   },
 };
-
-// export const imgVariants: Variants = {
-//   offscreen: {
-//     x: 300,
-//     opacity: 0,
-//     scaleY: 0.1,
-//   },
-//   onscreen: {
-//     x: 0,
-//     opacity: 1,
-//     scaleY: 1,
-//     transition: {
-//       type: "spring",
-//       bounce: 0.25,
-//       duration: 1,
-//     },
-//   },
-// };
-
-// export const imgVariants2: Variants = {
-//   offscreen: {
-//     x: -300,
-//     opacity: 0,
-//     scaleY: 0.1,
-//   },
-//   onscreen: {
-//     x: 0,
-//     opacity: 1,
-//     scaleY: 1,
-//     transition: {
-//       type: "spring",
-//       bounce: 0.25,
-//       duration: 1,
-//     },
-//   },
-// };
 
 export const overlayVariants: Variants = {
   hidden: { opacity: 0 },
@@ -237,18 +91,71 @@ export const fadeIn = {
   },
 };
 
-export const imgVariants = (direction: string) => ({
-  offscreen: {
-    x: direction === "left" ? "-100%" : "100%",
-    rotate: 120,
+export const bannerVariants: Variants = {
+  hidden: {
+    y: 100,
+    opacity: 0,
+    scaleY: 0.2,
   },
-  onscreen: {
-    x: 0,
-    rotate: 0,
+  visible: {
+    y: 0,
+    opacity: 1,
+    scaleY: 1,
     transition: {
       type: "spring",
-      duration: 1.8,
-      delay: 0.5,
+      bounce: 0.45,
+      duration: 0.8,
+    },
+  },
+};
+
+export const opacityVariants = (type: "first" | "second") => ({
+  offscreen: {
+    opacity: 0,
+  },
+  onscreen: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: type === "first" ? 1 : 1.8,
+      delay: type === "first" ? 0.3 : 0.5,
+    },
+  },
+});
+
+export const titleVariants = (type: "first" | "second") => ({
+  offscreen: {
+    y: type === "first" ? 300 : 100,
+    opacity: 0,
+    scaleY: type === "first" ? 0.5 : 0.7,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    scaleY: 1,
+    transition: {
+      type: "spring",
+      bounce: type === "first" ? 0.45 : 0.35,
+      duration: type === "first" ? 0.8 : 0.7,
+      delay: type === "first" ? 0 : 0.3,
+    },
+  },
+});
+
+export const hoverVariants = (type: "first" | "second") => ({
+  offscreen: {
+    y: type === "first" ? -15 : 15,
+    scaleX: type === "first" ? 0.5 : 0.6,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    scaleX: 1,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 10,
     },
   },
 });

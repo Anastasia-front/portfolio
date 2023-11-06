@@ -1,15 +1,13 @@
 "use client";
 
-import React from "react";
-
 import { useTranslations } from "next-intl";
 
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
-import { fadeIn, imgVariants } from "@/utils";
+import { fadeIn, opacityVariants } from "@/utils";
 
 // Import Swiper styles
 import "swiper/css";
@@ -41,29 +39,13 @@ export function SkillSlider() {
   const i = useTranslations("license");
   const t = useTranslations("skills");
 
-  const slider = React.useRef(null);
-  const scrollYProgress = useScroll({
-    target: slider,
-    offset: ["start end", "end start"],
-  }).scrollYProgress;
-
-  const x = useTransform(scrollYProgress, [0, 0.8, 1], [0, 0, -400]);
-  const y = useTransform(scrollYProgress, [0, 0.75, 1], [0, 0, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.85, 0.95], [1, 1, 0]);
-
   return (
     <motion.div
-      ref={slider}
-      variants={imgVariants("left")}
+      variants={opacityVariants("second")}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0 }}
       className="swiper-skills"
-      style={{
-        x,
-        y,
-        opacity,
-      }}
     >
       <motion.h4
         className="swiper-title"
