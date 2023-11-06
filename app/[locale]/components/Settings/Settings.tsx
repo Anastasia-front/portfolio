@@ -12,6 +12,7 @@ import Gear from "@/assets/svg/gear.svg";
 export function Settings() {
   const t = useTranslations("btn");
 
+  const [showButton, setShowButton] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [animationClass, setAnimationClass] = useState("");
 
@@ -44,8 +45,29 @@ export function Settings() {
     }
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const footerSection = document.getElementById("footer");
+      if (footerSection) {
+        const footerRect = footerSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const isFooterVisible = footerRect.top > windowHeight;
+
+        setShowButton(window.scrollY > windowHeight && isFooterVisible);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className={`button-settings ${animationClass}`}>
+    <div
+      className={`button-settings ${animationClass} ${!showButton && "hidden"}`}
+    >
       <button type="button" className="buttonIcon" onClick={handleMenuOpen}>
         <Gear />
       </button>

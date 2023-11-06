@@ -39,7 +39,7 @@ export function Footer({ title, description }: Props) {
   };
 
   return (
-    <footer>
+    <footer id="footer">
       <motion.div
         className="footer"
         variants={FooterVariants}
