@@ -18,6 +18,13 @@
     },
     "hero": "Content image of hero section"
   },
+  "loading": {
+    "please": "Please",
+    "wait": "wait",
+    "page": "page",
+    "titled": "titled",
+    "load": "is loading..."
+  },
   "license": {
     "accordion": "Background images are taken from the site",
     "slider": "Images for the slider are downloaded from the site"
@@ -27,6 +34,7 @@
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
+    "project": "Project",
     "contacts": "Contacts"
   },
   "btn": {
