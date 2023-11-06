@@ -1,21 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
 
 import { ButtonText, NavigationAndLogo, Switchers } from "@/components";
 import { useGlobalContext } from "@/context";
-import { useScreenQuery, useScrollLock } from "@/hooks";
+import { useScrollLock } from "@/hooks";
 import { navVariants } from "@/utils";
 
 export function Header() {
-  const { theme, setTheme } = useTheme();
-
   const t = useTranslations("btn");
 
   const context = useGlobalContext();
@@ -41,7 +39,12 @@ export function Header() {
     setIsMenuOpen(newState);
   };
 
-  const { isScreenTabletXl } = useScreenQuery();
+  const isBigMobileLandscape = useMediaQuery({
+    query: `(min-width: 460px) and (max-width: 767px)`,
+  });
+  const isScreenTabletXl = useMediaQuery({
+    query: `(min-width: 920px)`,
+  });
 
   return (
     <motion.header
@@ -55,7 +58,7 @@ export function Header() {
         handleMenuOpen={handleMenuOpen}
       />
 
-      {isScreenTabletXl && (
+      {(isBigMobileLandscape || isScreenTabletXl) && (
         <ButtonText text={t("contacts")} hover="true" onClick={handleToggle} />
       )}
 

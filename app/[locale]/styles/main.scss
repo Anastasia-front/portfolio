@@ -165,6 +165,9 @@ footer {
   @include useScreen("tablet-lg") {
     padding: 2.6rem 1.8rem;
   }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
   @include useScreen("desktop-md") {
     padding: 3rem 2rem;
   }

@@ -3,24 +3,29 @@
 @use "./vars" as *;
 
 .navigation {
-  display: flex;
+  @include flex(row, space-between, center);
   z-index: 10;
   position: relative;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0.6rem 0.5rem 0.6rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.2rem 0;
   gap: 1.5rem;
 
-  @include useScreen("mobile-lg") {
-    padding: 1.5rem 2rem 0.5rem 2rem;
+  @include useScreen("mobile-xl") {
+    padding: 1.2rem 1.4rem 0;
+  }
+  @include useScreen("tablet-sm") {
+    padding: 1.4rem 1.6rem 0;
   }
   @include useScreen("tablet-lg") {
-    padding: 2rem 2rem 0.5rem 2rem;
+    padding: 1.6rem 1.8rem 0;
   }
-  @include useScreen("tablet-xl") {
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 7.5rem;
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+  @include useScreen("desktop-md") {
+    padding: 1.8rem 2rem 0;
   }
 }
 

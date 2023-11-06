@@ -5,7 +5,6 @@
 .skills {
   &-page {
     @include flex(column, center, center);
-    padding-top: 0 !important;
   }
 
   &-section {
