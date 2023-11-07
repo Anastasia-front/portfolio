@@ -513,19 +513,11 @@
 
 .video {
   position: fixed;
-  top: 76px;
+  top: 0;
   left: 0;
-  width: auto;
-  height: 90vh;
+  width: 100%;
+  height: auto;
   background: var(--color--blue-opacity);
-
-  @include useScreen("mobile-md") {
-    top: 0;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 100vw;
-  }
 }
 [data-theme="dark"] .video {
   background: var(--color--blue-dark);

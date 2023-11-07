@@ -7,7 +7,7 @@ import { Libre_Franklin, Source_Code_Pro } from "next/font/google";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import { Certificate, Progress } from "@/components";
+import { Certificate } from "@/components";
 import { bannerVariants, titleVariants } from "@/utils";
 
 const franklin = Libre_Franklin({
@@ -72,7 +72,7 @@ export function AchievementBlock() {
       >
         <Certificate />
       </motion.div>
-      <motion.h5
+      {/* <motion.h5
         className={`about-achievements__subtitle ${source.className}`}
         variants={titleVariants("second")}
         initial="offscreen"
@@ -80,8 +80,8 @@ export function AchievementBlock() {
         viewport={{ once: false, amount: 0.2 }}
       >
         {a("title.second")}
-      </motion.h5>
-      <motion.div
+      </motion.h5> */}
+      {/* <motion.div
         className="about-achievements__slider about-achievements__slider-progress"
         variants={bannerVariants}
         initial="hidden"
@@ -89,7 +89,7 @@ export function AchievementBlock() {
         viewport={{ once: false, amount: 0.2 }}
       >
         <Progress />
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 }

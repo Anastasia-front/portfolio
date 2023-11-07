@@ -14,7 +14,7 @@ interface Props {
   className?: string;
 }
 
-export function Banner({ text, button, className }: Props) {
+export function Banner({ text, button, className = "" }: Props) {
   const context = useGlobalContext();
   const t = useTranslations("btn");
   return (

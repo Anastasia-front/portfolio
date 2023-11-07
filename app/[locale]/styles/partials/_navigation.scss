@@ -114,7 +114,13 @@
   align-items: center;
   padding: 0.3rem 0.7rem;
   border-radius: var(--border-radius--lg);
-  gap: 2rem;
+  gap: 1rem;
+
+  @include useScreen("mobile-lg") {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
 
   @include useScreen("tablet-xl") {
     flex-wrap: nowrap;
