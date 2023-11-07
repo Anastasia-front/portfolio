@@ -6,6 +6,7 @@ interface FormData {
 
 import sgMail from "@sendgrid/mail";
 const sendgridApiKey = process.env.NEXT_PUBLIC_SENDGRID_API_KEY;
+const publicEmail = process.env.NEXT_PUBLIC_EMAIL;
 
 if (!sendgridApiKey) {
   throw new Error("SENDGRID_API_KEY is not set in the environment variables.");
@@ -15,7 +16,7 @@ if (!sendgridApiKey) {
 
 export async function sendEmail(data: FormData) {
   const email = {
-    to: "palitsanastasia3.ap@gmail.com",
+    to: publicEmail,
     from: data.email,
     subject: data.subject,
     text: data.message,
