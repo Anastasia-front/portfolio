@@ -12,7 +12,7 @@ import {
   // ProgressBar,
   Settings,
 } from "@/components";
-import { ProgressBar } from "@/components/ProgressBar";
+import { ProgressBar } from "@/components/ProgressBar/ProgressBar";
 import { GlobalProvider } from "@/context";
 import { Providers } from "@/providers";
 
