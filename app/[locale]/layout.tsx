@@ -9,9 +9,10 @@ import {
   Footer,
   FormPortal,
   Header,
-  ProgressBar,
+  // ProgressBar,
   Settings,
 } from "@/components";
+import { ProgressBar } from "@/components/ProgressBar";
 import { GlobalProvider } from "@/context";
 import { Providers } from "@/providers";
 
