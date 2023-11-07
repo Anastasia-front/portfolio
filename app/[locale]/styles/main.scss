@@ -602,3 +602,9 @@ footer {
 .hidden {
   display: none;
 }
+
+.center {
+  @include flex(column, center, center);
+  padding-top: 45vh;
+  gap: 1rem;
+}

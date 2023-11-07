@@ -30,6 +30,7 @@
     "description": "Could not find requested resource",
     "link": "Return Home"
   },
+  "error": { "boundary": "Something went wrong. We are working on it!" },
   "license": {
     "accordion": "Background images are taken from the site",
     "slider": "Images for the slider are downloaded from the site"

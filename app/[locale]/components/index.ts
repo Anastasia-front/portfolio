@@ -8,6 +8,7 @@ export * from "./Buttons";
 export * from "./Certificate";
 export * from "./Contacts";
 export * from "./Dropdown";
+export * from "./ErrorBoundary";
 export * from "./Features";
 export * from "./Footer";
 export * from "./Form";

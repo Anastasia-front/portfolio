@@ -5,6 +5,7 @@ import Head from "next/head";
 import { notFound } from "next/navigation";
 
 import {
+  ErrorBoundary,
   Footer,
   FormPortal,
   Header,
@@ -59,14 +60,16 @@ export default async function RootLayout({
       <body className={oxygen.className}>
         <GlobalProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <Providers>
-              <ProgressBar />
-              <Header />
-              <FormPortal />
-              {children}
-              <Footer />
-              <Settings />
-            </Providers>
+            <ErrorBoundary>
+              <Providers>
+                <ProgressBar />
+                <Header />
+                <FormPortal />
+                {children}
+                <Footer />
+                <Settings />
+              </Providers>{" "}
+            </ErrorBoundary>
           </NextIntlClientProvider>
         </GlobalProvider>
       </body>
