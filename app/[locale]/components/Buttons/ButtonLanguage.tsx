@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { useTranslations } from "next-intl";
 import Link from "next-intl/link";
@@ -27,14 +27,22 @@ export const ButtonLanguage = () => {
     return pathname === "/uk" ? IconUA : IconUS;
   }, [pathname]);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("lang", "en");
+    }
+  }, []);
+
   const clickHandler = () => {
     setIsVisible(false);
     setTimeout(() => {
       setIsVisible(true);
       if (pathname === "/uk") {
         setLang("en");
+        window.localStorage.setItem("lang", "en");
       } else {
         setLang("uk");
+        window.localStorage.setItem("lang", "uk");
       }
     }, 300);
   };

@@ -1,9 +1,11 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-import { ButtonText } from "@/components";
+import { ButtonLink } from "@/components";
 import { threeKeys } from "@/constants";
 import { useScreenQuery } from "@/hooks";
 
@@ -14,12 +16,30 @@ export function Features() {
 
   const { isScreenTabletSm } = useScreenQuery();
 
+  const [lang, setLang] = useState<"en" | "uk">("en");
+
+  useEffect(() => {
+    let storedLang: "en" | "uk";
+    if (typeof window !== "undefined") {
+      storedLang = window.localStorage.getItem("lang") as "en" | "uk";
+    } else {
+      storedLang = "en";
+    }
+
+    setLang(storedLang);
+  }, []);
+
   return (
     <section className="container__box-shadow" id="features">
       <div className="features container">
         <div className="section-header">
           <h2>{i("title")}</h2>
-          <ButtonText text={b("features")} hover="true" />
+          <ButtonLink
+            text={b("features")}
+            hover="true"
+            href="/projects"
+            lang={lang}
+          />
         </div>
 
         <div className="features-cards">

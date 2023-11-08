@@ -1,19 +1,39 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import { useTranslations } from "next-intl";
 import { BsFillInfoCircleFill, BsFillInfoSquareFill } from "react-icons/bs";
 
-import { ButtonText, MacBookCanvas, MacCanvas } from "@/components";
+import { ButtonLink, MacBookCanvas, MacCanvas } from "@/components";
 
 export function ObjectsSection() {
   const i = useTranslations("home.3d");
   const b = useTranslations("btn");
 
+  const [lang, setLang] = useState<"en" | "uk">("en");
+
+  useEffect(() => {
+    let storedLang: "en" | "uk";
+    if (typeof window !== "undefined") {
+      storedLang = window.localStorage.getItem("lang") as "en" | "uk";
+    } else {
+      storedLang = "en";
+    }
+
+    setLang(storedLang);
+  }, []);
+
   return (
     <section className="container__box-shadow" id="tools">
       <div className="devices container">
         <div className="section-header">
-          <ButtonText text={b("devices")} hover="true" />
+          <ButtonLink
+            text={b("devices")}
+            hover="true"
+            href="/skills"
+            lang={lang}
+          />
           <h2>{i("heading")}</h2>
         </div>
         <div className="devices__hint devices__hint-onHover">

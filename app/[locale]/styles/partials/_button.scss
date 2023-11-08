@@ -10,6 +10,10 @@
   text-align: left;
   background: var(--color--orange-4);
 
+  a {
+    color: var(--color--white);
+  }
+
   @include useOnHover {
     background: var(--color--orange-3);
   }
@@ -21,6 +25,10 @@
   color: var(--color--blue-grey-3);
   font-weight: 500;
   background: var(--color--light-blue-4);
+
+  a {
+    color: var(--color--blue-grey-3);
+  }
 
   @include useOnHover {
     background: var(--color--light-blue-3);
