@@ -418,7 +418,6 @@
   }
 
   &-title {
-    padding-top: 22rem;
     background-image: linear-gradient(
       to right,
       var(--color--light-blue-4),
@@ -429,12 +428,24 @@
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-top: 14rem;
 
     @include useScreen("mobile-lg") {
-      padding-top: 16rem;
+      padding-top: 5rem;
     }
     @include useScreen("tablet-sm") {
-      padding-top: 14rem;
+      padding-top: 6rem;
+    }
+
+    @media screen and (max-height: 350px) {
+      padding-top: 22rem;
+
+      @include useScreen("mobile-lg") {
+        padding-top: 16rem;
+      }
+      @include useScreen("tablet-sm") {
+        padding-top: 14rem;
+      }
     }
   }
 }
