@@ -10,14 +10,14 @@ import { motion } from "framer-motion";
 
 import { ButtonText, NavigationAndLogo, Switchers } from "@/components";
 import { useGlobalContext } from "@/context";
-import { useScreenQuery, useScrollLock } from "@/hooks";
+import { useKeyPress, useScreenQuery, useScrollLock } from "@/hooks";
 import { navVariants } from "@/utils";
 
 export function Header() {
   const t = useTranslations("btn");
 
   const context = useGlobalContext();
-  const { handleToggle } = context;
+  const { handleToggle, handleClose } = context;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -34,6 +34,12 @@ export function Header() {
       unlockScroll();
     }
   }, [isMenuOpen, lockScroll, unlockScroll]);
+
+  useKeyPress("Escape", () => {
+    if (isMenuOpen) {
+      handleClose();
+    }
+  });
 
   const handleMenuOpen = (newState: boolean): void => {
     setIsMenuOpen(newState);

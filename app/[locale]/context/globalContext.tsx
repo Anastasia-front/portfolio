@@ -5,6 +5,7 @@ import React from "react";
 const GlobalContext = React.createContext({
   toggle: false,
   handleToggle: () => {},
+  handleClose: () => {},
 });
 
 export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
@@ -12,11 +13,14 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
 
   const handleToggle = () => {
     setToggle(!toggle);
-    console.log("toggle :", toggle);
+  };
+
+  const handleClose = () => {
+    setToggle(false);
   };
 
   return (
-    <GlobalContext.Provider value={{ toggle, handleToggle }}>
+    <GlobalContext.Provider value={{ toggle, handleToggle, handleClose }}>
       {children}
     </GlobalContext.Provider>
   );

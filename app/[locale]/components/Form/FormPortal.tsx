@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 
 import { Form, Portal } from "@/components";
 import { useGlobalContext } from "@/context";
-import { useScrollLock } from "@/hooks";
+import { useKeyPress, useScrollLock } from "@/hooks";
 
 import Close from "@/assets/svg/close.svg";
 
@@ -14,13 +14,15 @@ export function FormPortal() {
   const t = useTranslations("contacts.form");
 
   const context = useGlobalContext();
-  const { toggle, handleToggle } = context;
+  const { toggle, handleClose } = context;
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      handleToggle();
+      handleClose();
     }
   };
+
+  useKeyPress("Escape", handleClose);
 
   const { lockScroll, unlockScroll } = useScrollLock();
 
@@ -40,7 +42,7 @@ export function FormPortal() {
             <button
               type="button"
               className="button-icon button-icon__close"
-              onClick={handleToggle}
+              onClick={handleClose}
             >
               <Close />
             </button>

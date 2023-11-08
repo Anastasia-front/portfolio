@@ -26,7 +26,11 @@ export function Settings() {
     }
   };
 
-  useKeyPress("Escape", handleMenuOpen);
+  useKeyPress("Escape", () => {
+    if (isMenuOpen) {
+      handleMenuOpen();
+    }
+  });
 
   const { lockScroll, unlockScroll } = useScrollLock();
 
