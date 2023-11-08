@@ -78,6 +78,10 @@ export function Settings() {
     };
   }, []);
 
+  const hideBurger = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div
       className={`button-settings ${animationClass} ${
@@ -92,7 +96,7 @@ export function Settings() {
           <div className="settings-backdrop" onClick={handleBackdropClick}>
             <div className="settings-background">
               <h3 className="settings-title">{t("settings")}</h3>
-              <Navigation />
+              <Navigation onClick={hideBurger} />
               <Switchers className="settings-switchers" />
             </div>
           </div>
