@@ -383,22 +383,42 @@
     @include flex(column, center, center);
     z-index: 102;
     position: relative;
-    width: 50%;
-    height: 80vh;
-    padding: 8rem 2rem;
+    width: 80vw;
+    height: 90vh;
+    padding: 2rem;
     overflow: auto;
+    border-radius: var(--border-radius--lg) 0 0 var(--border-radius--lg);
     background: var(--color--bg-light);
-    gap: 4rem;
+    gap: 2rem;
 
-    @include useScreen("mobile-lg") {
-      padding: 8rem 4rem;
+    @include useScreen("tablet-sm") {
+      padding: 3rem;
     }
-    @include useScreen("mobile-xl") {
-      padding: 8rem 5rem;
+    @include useScreen("desktop-sm") {
+      padding: 5rem;
+    }
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--color--blue-grey-2);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0;
+      background: linear-gradient(
+        to top,
+        #68b8c1 20%,
+        #fcfbfc 50%,
+        #fca26e 100%
+      );
     }
   }
 
   &-title {
+    padding-top: 22rem;
     background-image: linear-gradient(
       to right,
       var(--color--light-blue-4),
@@ -409,6 +429,13 @@
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @include useScreen("mobile-lg") {
+      padding-top: 16rem;
+    }
+    @include useScreen("tablet-sm") {
+      padding-top: 14rem;
+    }
   }
 }
 [data-theme="dark"] .form {
@@ -418,6 +445,10 @@
 
   &-background {
     background: var(--color--grey);
+
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(to top, #fca26e 30%, #68b8c1 100%);
+    }
   }
 
   &-title {

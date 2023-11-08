@@ -1,9 +1,12 @@
 "use client";
 
+import { useEffect } from "react";
+
 import { useTranslations } from "next-intl";
 
 import { Form, Portal } from "@/components";
 import { useGlobalContext } from "@/context";
+import { useScrollLock } from "@/hooks";
 
 import Close from "@/assets/svg/close.svg";
 
@@ -19,6 +22,16 @@ export function FormPortal() {
     }
   };
 
+  const { lockScroll, unlockScroll } = useScrollLock();
+
+  useEffect(() => {
+    if (toggle) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+  }, [toggle, lockScroll, unlockScroll]);
+
   return (
     toggle && (
       <Portal wrapperId="form-portal">
@@ -29,9 +42,9 @@ export function FormPortal() {
               className="button-icon button-icon__close"
               onClick={handleToggle}
             >
-              <Close width={25} height={25} />
+              <Close />
             </button>
-            <h1 className="form-title">{t("title")}</h1>
+            <h3 className="form-title">{t("title")}</h3>
             <Form />
           </div>
         </div>
