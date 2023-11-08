@@ -93,7 +93,7 @@
   &__decoration {
     z-index: 0;
     position: absolute;
-    top: 48rem;
+    top: 50rem;
     height: auto;
 
     @include useScreen("tablet-sm") {
@@ -296,6 +296,7 @@
       padding: 1rem;
       background: var(--color--bg-light);
       gap: 1.2rem;
+      border-radius: var(--border-radius--sm);
 
       @include useScreen("mobile-md") {
         padding: 2rem;
