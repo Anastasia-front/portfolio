@@ -68,7 +68,7 @@ export function Settings() {
     <div
       className={`button-settings ${animationClass} ${!showButton && "hidden"}`}
     >
-      <button type="button" className="buttonIcon" onClick={handleMenuOpen}>
+      <button type="button" className="button-icon" onClick={handleMenuOpen}>
         <Gear />
       </button>
       {isMenuOpen && (

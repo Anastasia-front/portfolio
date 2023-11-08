@@ -7,9 +7,8 @@ import Image from "next/image";
 import decoration from "@/assets/images/hero/decoration.png";
 import hero from "@/assets/images/hero/hero.jpg";
 
-import { ButtonText } from "@/components";
+import { ButtonScroll } from "@/components";
 import { useScreenQuery } from "@/hooks";
-import { handleClick } from "@/utils";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -41,14 +40,16 @@ export function Hero() {
             <p>{i("description")}</p>
 
             <div className="hero-buttons">
-              <ButtonText
+              <ButtonScroll
+                href="features"
                 text={b("hero")}
-                onClick={() => handleClick("features")}
+                // onClick={() => handleClick("features")}
                 hover="true"
               />
-              <ButtonText
+              <ButtonScroll
+                href="tools"
                 text={b("tools")}
-                onClick={() => handleClick("tools")}
+                // onClick={() => handleClick("tools")}
                 hover="true"
               />
             </div>

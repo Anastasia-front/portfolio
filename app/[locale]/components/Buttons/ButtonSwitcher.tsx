@@ -31,7 +31,9 @@ export const ButtonSwitcher = memo(
       return (
         <div
           title={title}
-          className={className ? `btn-container ${className}` : "btn-container"}
+          className={
+            className ? `button-container ${className}` : "button-container"
+          }
           ref={ref}
         >
           <button
@@ -42,7 +44,7 @@ export const ButtonSwitcher = memo(
           >
             {imgUrl && (
               <Image
-                className="buttonImg"
+                className="button-img"
                 src={imgUrl}
                 width={20}
                 height={20}

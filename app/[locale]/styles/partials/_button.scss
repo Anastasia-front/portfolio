@@ -7,7 +7,7 @@
   border-radius: var(--border-radius--lg);
   color: var(--color--white);
   font-family: inherit;
-  text-align: left;
+  text-align: center;
   background: var(--color--orange-4);
 
   a {
@@ -16,9 +16,97 @@
 
   @include useOnHover {
     background: var(--color--orange-3);
+
+    a {
+      color: var(--color--white);
+    }
   }
   @include useOnClick {
     background: var(--color--orange-2);
+
+    a {
+      color: var(--color--white);
+    }
+  }
+
+  &-container {
+    position: relative;
+    padding: 3px;
+  }
+
+  &-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+
+    @include useOnHover {
+      transform: scale(var(--scale));
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-settings {
+    z-index: 100;
+    position: fixed;
+    top: 70%;
+    right: 2%;
+    border-radius: var(--border-radius--rounded);
+    background: var(--color--bg-light);
+
+    svg {
+      width: 30px;
+      height: 30px;
+
+      @include useScreen("tablet-sm") {
+        width: 40px;
+        height: 40px;
+      }
+      @include useScreen("desktop-sm") {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  &-icon {
+    svg {
+      fill: var(--color--light-brown);
+
+      @include useOnHover {
+        fill: var(--color--orange-4);
+      }
+      @include useOnClick {
+        fill: var(--color--orange-2);
+      }
+    }
+
+    &__close {
+      z-index: 110;
+      position: absolute;
+      top: 48px;
+      right: 48px;
+    }
+  }
+
+  &-link {
+    padding: 0.7rem;
+  }
+
+  &-img {
+    width: 100%;
   }
 }
 [data-theme="dark"] .button {
@@ -32,108 +120,33 @@
 
   @include useOnHover {
     background: var(--color--light-blue-3);
+
+    a {
+      color: var(--color--blue-grey-3);
+    }
   }
   @include useOnClick {
     background: var(--color--light-blue-2);
-  }
-}
 
-.btn-container {
-  position: relative;
-  padding: 3px;
-}
-
-.btn-pad {
-  padding: 0.5rem 0;
-}
-
-.button-switcher {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border: none;
-  cursor: pointer;
-  background: transparent;
-
-  @include useOnHover {
-    transform: scale(var(--scale));
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
-
-.button-settings {
-  z-index: 100;
-  position: fixed;
-  top: 70%;
-  right: 2%;
-  border-radius: var(--border-radius--rounded);
-  background: var(--color--bg-light);
-
-  svg {
-    width: 30px;
-    height: 30px;
-
-    @include useScreen("tablet-sm") {
-      width: 40px;
-      height: 40px;
-    }
-    @include useScreen("desktop-sm") {
-      width: 50px;
-      height: 50px;
-    }
-  }
-}
-[data-theme="dark"] .button-settings {
-  background: var(--color--bg-dark);
-}
-
-.buttonImg {
-  width: 100%;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-}
-
-.buttonIcon {
-  svg {
-    fill: var(--color--light-brown);
-
-    @include useOnHover {
-      fill: var(--color--orange-4);
-    }
-    @include useOnClick {
-      fill: var(--color--orange-2);
+    a {
+      color: var(--color--blue-grey-3);
     }
   }
 
-  &__close {
-    z-index: 110;
-    position: absolute;
-    top: 48px;
-    right: 48px;
+  &-settings {
+    background: var(--color--bg-dark);
   }
-}
-[data-theme="dark"] .buttonIcon {
-  svg {
-    fill: var(--color--peach);
 
-    @include useOnHover {
-      fill: var(--color--light-blue-4);
-    }
-    @include useOnClick {
-      fill: var(--color--light-blue-2);
+  &-icon {
+    svg {
+      fill: var(--color--peach);
+
+      @include useOnHover {
+        fill: var(--color--light-blue-4);
+      }
+      @include useOnClick {
+        fill: var(--color--light-blue-2);
+      }
     }
   }
 }

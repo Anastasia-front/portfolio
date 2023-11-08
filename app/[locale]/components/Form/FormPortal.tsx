@@ -26,7 +26,7 @@ export function FormPortal() {
           <div className="form-background">
             <button
               type="button"
-              className="buttonIcon buttonIcon__close"
+              className="button-icon button-icon__close"
               onClick={handleToggle}
             >
               <Close width={25} height={25} />

@@ -40,7 +40,7 @@ export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
     <>
       <button
         type="button"
-        className={`buttonIcon animated-icon ${classNameActive}`}
+        className={`button-icon animated-icon ${classNameActive}`}
         onClick={hideBurger}
       >
         <div className="icon"></div>
@@ -60,7 +60,7 @@ export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
             >
               <button
                 type="button"
-                className={`buttonIcon buttonIcon__close animated-icon ${classNameActive}`}
+                className={`button-icon button-icon__close animated-icon ${classNameActive}`}
                 onClick={hideBurger}
               >
                 <div className="icon"></div>
