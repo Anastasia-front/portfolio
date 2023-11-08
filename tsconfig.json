@@ -18,6 +18,7 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./app/[locale]/*"]
     },
@@ -26,11 +27,9 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "app/[locale]/providers/themeProvider.tsx",
-    "app/[locale]/components/3dObjects/Gallery.tsx"
+    "app/[locale]/**/*.ts",
+    "app/[locale]/**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

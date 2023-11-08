@@ -6,6 +6,7 @@ const withNextIntl = require("next-intl/plugin")(
 module.exports = withNextIntl({
   reactStrictMode: true,
   // webpack5: true,
+  // output: "standalone",
   webpack: (config, { isServer }) => {
     // Add a rule to handle video files
     config.module.rules.push({
@@ -23,7 +24,7 @@ module.exports = withNextIntl({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
     });
-
+    // config.resolve.alias["@/"] = path.join(__dirname, "./app/[locale]/");
     config.resolve.fallback = { fs: false, path: false };
 
     return config;
