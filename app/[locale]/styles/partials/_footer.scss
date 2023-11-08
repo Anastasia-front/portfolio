@@ -4,6 +4,7 @@
 
 .footer {
   @include flex(column, center, center);
+  z-index: 1;
   position: relative;
   min-height: 15rem;
   padding: 2.5rem;
