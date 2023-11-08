@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
 import { Navigation, Portal, Switchers } from "@/components";
-import { useKeyPress } from "@/hooks";
+import { useKeyPress, useScrollLock } from "@/hooks";
 
 import Gear from "@/assets/svg/gear.svg";
 
@@ -20,13 +20,23 @@ export function Settings() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  useKeyPress("Escape", handleMenuOpen);
-
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       handleMenuOpen();
     }
   };
+
+  useKeyPress("Escape", handleMenuOpen);
+
+  const { lockScroll, unlockScroll } = useScrollLock();
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+  }, [isMenuOpen, lockScroll, unlockScroll]);
 
   useEffect(() => {
     if (isMenuOpen) {
