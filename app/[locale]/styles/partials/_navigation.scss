@@ -118,8 +118,6 @@
   gap: 1rem;
 
   @include useScreen("mobile-lg") {
-    flex-wrap: nowrap;
-    justify-content: space-between;
     gap: 2rem;
   }
 

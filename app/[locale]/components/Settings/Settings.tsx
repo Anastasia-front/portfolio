@@ -80,7 +80,9 @@ export function Settings() {
 
   return (
     <div
-      className={`button-settings ${animationClass} ${!showButton && "hidden"}`}
+      className={`button-settings ${animationClass} ${
+        !showButton ? "hidden" : ""
+      }`}
     >
       <button type="button" className="button-icon" onClick={handleMenuOpen}>
         <Gear />

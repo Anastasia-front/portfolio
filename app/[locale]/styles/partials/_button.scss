@@ -66,6 +66,10 @@
     border-radius: var(--border-radius--rounded);
     background: var(--color--bg-light);
 
+    @media screen and (max-height: 450px) {
+      top: 82%;
+    }
+
     svg {
       width: 30px;
       height: 30px;

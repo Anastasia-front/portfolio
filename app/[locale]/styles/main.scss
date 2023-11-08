@@ -491,19 +491,34 @@ footer {
     gap: 1rem;
 
     @include useScreen("mobile-lg") {
-      top: 30%;
+      top: 20%;
       right: 8%;
-      width: 50%;
-      height: 40vh;
+      width: 60%;
+      height: 50vh;
     }
     @include useScreen("tablet-sm") {
-      width: 30%;
+      width: 40%;
     }
     @include useScreen("tablet-xl") {
-      top: 40%;
+      top: 30%;
       right: 5%;
       width: 40%;
-      height: 30vh;
+      height: 40vh;
+    }
+
+    @media screen and (max-height: 450px) {
+      top: 4%;
+      height: 80vh;
+
+      @include useScreen("mobile-lg") {
+        top: 20%;
+        right: 8%;
+        width: 64%;
+        height: 64vh;
+      }
+      @include useScreen("tablet-sm") {
+        // padding-top: 14rem;
+      }
     }
   }
 
