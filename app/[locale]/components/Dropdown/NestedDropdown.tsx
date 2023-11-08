@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useTranslations } from "next-intl";
 
@@ -24,14 +24,47 @@ export function NestedDropdown({
   const t = useTranslations("dropdown.type");
 
   const [isHovered, setIsHovered] = useState(false);
+  const [activeButton, setActiveButton] = useState(false);
+  const [activeType, setActiveType] = useState<string | null>(null);
+
+  const checkDropdownContent = () => {
+    const nestedContents = document.querySelectorAll(
+      ".dropdown-nested__content"
+    );
+    let foundActive = false;
+
+    for (const nestedContent of nestedContents) {
+      if (
+        nestedContent &&
+        window.getComputedStyle(nestedContent).display !== "none"
+      ) {
+        setActiveButton(true);
+        foundActive = true;
+        break;
+      }
+    }
+
+    if (!foundActive) {
+      setActiveButton(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isHovered) {
+      setActiveType(type);
+    }
+  }, [isHovered, type]);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
+    checkDropdownContent();
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
+    checkDropdownContent();
   };
+
   const handleCategoryClick = (category: string, type: string) => {
     onSelectCategory(category, type);
   };
@@ -39,10 +72,12 @@ export function NestedDropdown({
   const interConst = type === "frontend" ? iF : iB;
 
   return (
-    <>
+    <div onMouseLeave={handleMouseLeave}>
       <button
         type="button"
-        className="dropdown-nested__container"
+        className={`dropdown-nested__container ${
+          activeType === type && activeButton ? "active-button" : ""
+        }`}
         onClick={() => onSelectType(type)}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -68,6 +103,6 @@ export function NestedDropdown({
           )}
         </ul>
       </div>
-    </>
+    </div>
   );
 }

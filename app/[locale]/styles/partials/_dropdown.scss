@@ -177,3 +177,10 @@
     }
   }
 }
+
+.active-button {
+  color: var(--color--light-blue-2) !important;
+}
+[data-theme="dark"] .active-button {
+  color: var(--color--orange-2) !important;
+}

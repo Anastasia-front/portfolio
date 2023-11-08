@@ -23,10 +23,6 @@
     padding: 1.5rem;
   }
 
-  @include useScreen("tablet-md") {
-    gap: 3rem;
-  }
-
   &__text {
     color: var(--color--white);
   }

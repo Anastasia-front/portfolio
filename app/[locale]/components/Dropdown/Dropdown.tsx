@@ -28,6 +28,7 @@ export function Dropdown({ handleTypeChange, handleCategoryChange }: Props) {
   const t = useTranslations("dropdown.type");
 
   const [isOpen, setIsOpen] = useState(false);
+
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
