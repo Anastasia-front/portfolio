@@ -5,8 +5,15 @@
   z-index: 30;
   position: relative;
   width: 100vw;
-  margin-top: 90vh;
+  margin-top: 65vh;
   background: var(--color--bg-light);
+
+  @include useScreen("mobile-md") {
+    margin-top: 88vh;
+  }
+  @include useScreen("mobile-lg") {
+    margin-top: 100vh;
+  }
 }
 [data-theme="dark"] .home-content {
   background: var(--color--bg-dark);
@@ -516,8 +523,15 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 65vh;
   background: var(--color--blue-opacity);
+
+  @include useScreen("mobile-md") {
+    height: 88vh;
+  }
+  @include useScreen("mobile-lg") {
+    height: 100vh;
+  }
 }
 [data-theme="dark"] .video {
   background: var(--color--blue-dark);
