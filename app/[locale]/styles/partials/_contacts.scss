@@ -133,6 +133,7 @@
       }
       @include useScreen("tablet-lg") {
         left: -14rem;
+
         transform: rotateY(0deg);
       }
       @include useScreen("tablet-xl") {
@@ -142,12 +143,18 @@
 
     &-second {
       right: 7rem;
+      &.contact__decoration-right {
+        right: calc(7rem + 7px);
+      }
       width: 200px;
       transform: rotateX(180deg);
 
       @include useScreen("mobile-lg") {
         top: 48rem;
         right: 16rem;
+        &.contact__decoration-right {
+          right: calc(16rem + 7px);
+        }
         width: 250px;
       }
       @include useScreen("tablet-sm") {
@@ -155,21 +162,33 @@
       }
       @include useScreen("desktop-md") {
         right: 14rem;
+        &.contact__decoration-right {
+          right: calc(14rem + 7px);
+        }
         width: 300px;
       }
     }
 
     &-third {
       right: -1rem;
+      &.contact__decoration-right {
+        right: calc(-1rem + 7px);
+      }
       width: 200px;
       transform: rotateY(180deg);
 
       @include useScreen("mobile-lg") {
         right: 1rem;
+        &.contact__decoration-right {
+          right: calc(1rem + 7px);
+        }
         width: 250px;
       }
       @include useScreen("desktop-md") {
         right: 20rem;
+        &.contact__decoration-right {
+          right: calc(20rem + 7px);
+        }
         width: 350px;
       }
     }

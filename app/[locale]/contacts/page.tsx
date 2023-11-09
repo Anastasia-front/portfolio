@@ -9,11 +9,15 @@ import decor1 from "@/assets/images/contacts/decoration/1.png";
 import decor2 from "@/assets/images/contacts/decoration/2.png";
 
 import { Contacts, Form, LottiePlayer } from "@/components";
+import { useGlobalContext } from "@/context";
 import { gridVariants } from "@/utils";
 
 export default function ContactsPage() {
   const t = useTranslations("contacts");
   const a = useTranslations("alt.decoration");
+
+  const context = useGlobalContext();
+  const { isSettingsOpen } = context;
 
   return (
     <main className="contact-page container">
@@ -42,12 +46,16 @@ export default function ContactsPage() {
         />
 
         <Image
-          className="contact__decoration contact__decoration-second"
+          className={`contact__decoration ${
+            isSettingsOpen ? "contact__decoration-right" : ""
+          } contact__decoration-second`}
           alt={a("contacts")}
           src={decor2}
         />
         <Image
-          className="contact__decoration contact__decoration-third"
+          className={`contact__decoration ${
+            isSettingsOpen ? "contact__decoration-right" : ""
+          } contact__decoration-third`}
           alt={a("contacts")}
           src={decor2}
         />
