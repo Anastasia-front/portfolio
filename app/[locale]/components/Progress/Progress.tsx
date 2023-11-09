@@ -27,7 +27,7 @@ import ukLightA3 from "@/assets/images/achievements/uk-light-a3.png";
 export function Progress() {
   const a = useTranslations("about.achievements");
 
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const pathname = usePathname();
   const lang = pathname.slice(0, 3);
 
@@ -92,7 +92,6 @@ export function Progress() {
         }}
         pagination={true}
         modules={[EffectCube, Pagination]}
-        className="mySwiper"
       >
         <SwiperSlide>
           <Image

@@ -192,23 +192,7 @@
     }
 
     &-progress {
-      width: 58%;
-
-      @include useScreen("mobile-xl") {
-        width: 56%;
-      }
-      @include useScreen("tablet-sm") {
-        width: 60%;
-      }
-      @include useScreen("tablet-md") {
-        width: 58%;
-      }
-      @include useScreen("tablet-lg") {
-        width: 56%;
-      }
-      @include useScreen("tablet-xl") {
-        width: 52%;
-      }
+      width: 42.5vw;
     }
   }
 
