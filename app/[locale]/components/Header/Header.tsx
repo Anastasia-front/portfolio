@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-// import { useMediaQuery } from "react-responsive";
+import { useEffect } from "react";
 
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
@@ -17,9 +16,7 @@ export function Header() {
   const t = useTranslations("btn");
 
   const context = useGlobalContext();
-  const { handleToggle, handleClose } = context;
-
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { handleFormOpen, isMenuOpen, handleMenuClose } = context;
 
   const pathname = usePathname();
   const isHeaderFixed = pathname === "/" || pathname === "/uk";
@@ -37,20 +34,9 @@ export function Header() {
 
   useKeyPress("Escape", () => {
     if (isMenuOpen) {
-      handleClose();
+      handleMenuClose();
     }
   });
-
-  const handleMenuOpen = (newState: boolean): void => {
-    setIsMenuOpen(newState);
-  };
-
-  // const isBigMobileLandscape = useMediaQuery({
-  //   query: `(min-width: 460px) and (max-width: 767px)`,
-  // });
-  // const isScreenTabletXl = useMediaQuery({
-  //   query: `(min-width: 920px)`,
-  // });
 
   const { isScreenMobileLg } = useScreenQuery();
 
@@ -61,14 +47,14 @@ export function Header() {
       initial="hidden"
       animate="visible"
     >
-      <NavigationAndLogo
-        isMenuOpen={isMenuOpen}
-        handleMenuOpen={handleMenuOpen}
-      />
+      <NavigationAndLogo />
 
-      {/* {(isBigMobileLandscape || isScreenTabletXl) && ( )}*/}
       {isScreenMobileLg && (
-        <ButtonText text={t("contacts")} hover="true" onClick={handleToggle} />
+        <ButtonText
+          text={t("contacts")}
+          hover="true"
+          onClick={handleFormOpen}
+        />
       )}
 
       {!isMenuOpen && <Switchers />}

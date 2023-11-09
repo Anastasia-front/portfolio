@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Portal } from "@/components";
+import { useGlobalContext } from "@/context";
 import { useKeyPress, useScreenQuery } from "@/hooks";
 
 import logo from "../../../../public/logo.png";
@@ -12,22 +13,20 @@ import logo from "../../../../public/logo.png";
 import { Navigation } from "../Navigation";
 import { Switchers } from "../Switchers";
 
-interface Props {
-  isMenuOpen: boolean;
-  handleMenuOpen: (newState: boolean) => void;
-}
-
-export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
+export function BurgerMenu() {
   const t = useTranslations("alt");
+
+  const context = useGlobalContext();
+  const { isMenuOpen, handleMenuOpen, handleMenuClose } = context;
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      handleMenuOpen(false);
+      handleMenuClose();
     }
   };
 
   const hideBurger = () => {
-    handleMenuOpen(!isMenuOpen);
+    handleMenuClose();
   };
 
   useKeyPress("Escape", hideBurger);
@@ -41,7 +40,7 @@ export function BurgerMenu({ handleMenuOpen, isMenuOpen }: Props) {
       <button
         type="button"
         className={`button-icon animated-icon ${classNameActive}`}
-        onClick={hideBurger}
+        onClick={() => handleMenuOpen()}
       >
         <div className="icon"></div>
       </button>

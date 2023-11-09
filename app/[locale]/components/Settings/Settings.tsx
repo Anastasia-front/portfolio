@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
 import { Navigation, Portal, Switchers } from "@/components";
+import { useGlobalContext } from "@/context";
 import { useKeyPress, useScrollLock } from "@/hooks";
 
 import Gear from "@/assets/svg/gear.svg";
@@ -13,51 +14,47 @@ export function Settings() {
   const t = useTranslations("btn");
 
   const [showButton, setShowButton] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [animationClass, setAnimationClass] = useState("");
 
-  const handleMenuOpen = (): void => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const context = useGlobalContext();
+  const { isSettingsOpen, handleSettingsOpen, handleSettingsClose } = context;
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      handleMenuOpen();
+      handleSettingsClose();
     }
   };
 
   useKeyPress("Escape", () => {
-    if (isMenuOpen) {
-      handleMenuOpen();
-    }
+    handleSettingsClose();
   });
 
   const { lockScroll, unlockScroll } = useScrollLock();
 
   useEffect(() => {
-    if (isMenuOpen) {
+    if (isSettingsOpen) {
       lockScroll();
     } else {
       unlockScroll();
     }
-  }, [isMenuOpen, lockScroll, unlockScroll]);
+  }, [isSettingsOpen, lockScroll, unlockScroll]);
 
   useEffect(() => {
-    if (isMenuOpen) {
+    if (isSettingsOpen) {
       setAnimationClass("loader");
       const timer = setTimeout(() => {
         setAnimationClass("");
       }, 800);
       return () => clearTimeout(timer);
     }
-    if (!isMenuOpen) {
+    if (!isSettingsOpen) {
       setAnimationClass("loader");
       const timer = setTimeout(() => {
         setAnimationClass("");
       }, 800);
       return () => clearTimeout(timer);
     }
-  }, [isMenuOpen]);
+  }, [isSettingsOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,25 +75,25 @@ export function Settings() {
     };
   }, []);
 
-  const hideBurger = () => {
-    setIsMenuOpen(false);
-  };
-
   return (
     <div
       className={`button-settings ${animationClass} ${
         !showButton ? "hidden" : ""
-      } ${isMenuOpen ? "button-settings__right" : ""}`}
+      } ${isSettingsOpen ? "button-settings__right" : ""}`}
     >
-      <button type="button" className="button-icon" onClick={handleMenuOpen}>
+      <button
+        type="button"
+        className="button-icon"
+        onClick={handleSettingsOpen}
+      >
         <Gear />
       </button>
-      {isMenuOpen && (
+      {isSettingsOpen && (
         <Portal wrapperId="settings-portal">
           <div className="settings-backdrop" onClick={handleBackdropClick}>
             <div className="settings-background">
               <h3 className="settings-title">{t("settings")}</h3>
-              <Navigation onClick={hideBurger} />
+              <Navigation onClick={() => handleSettingsClose()} />
               <Switchers className="settings-switchers" />
             </div>
           </div>

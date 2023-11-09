@@ -14,35 +14,35 @@ export function FormPortal() {
   const t = useTranslations("contacts.form");
 
   const context = useGlobalContext();
-  const { toggle, handleClose } = context;
+  const { isFormOpen, handleFormClose } = context;
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      handleClose();
+      handleFormClose();
     }
   };
 
-  useKeyPress("Escape", handleClose);
+  useKeyPress("Escape", handleFormClose);
 
   const { lockScroll, unlockScroll } = useScrollLock();
 
   useEffect(() => {
-    if (toggle) {
+    if (isFormOpen) {
       lockScroll();
     } else {
       unlockScroll();
     }
-  }, [toggle, lockScroll, unlockScroll]);
+  }, [isFormOpen, lockScroll, unlockScroll]);
 
   return (
-    toggle && (
+    isFormOpen && (
       <Portal wrapperId="form-portal">
         <div className="form-backdrop" onClick={handleBackdropClick}>
           <div className="form-background">
             <button
               type="button"
               className="button-icon button-icon__close"
-              onClick={handleClose}
+              onClick={handleFormClose}
             >
               <Close />
             </button>

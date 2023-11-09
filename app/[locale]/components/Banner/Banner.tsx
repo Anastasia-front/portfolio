@@ -15,8 +15,11 @@ interface Props {
 }
 
 export function Banner({ text, button, className = "" }: Props) {
-  const context = useGlobalContext();
   const t = useTranslations("btn");
+
+  const context = useGlobalContext();
+  const { handleFormOpen } = context;
+
   return (
     <motion.div
       className={`banner ${className}`}
@@ -30,7 +33,7 @@ export function Banner({ text, button, className = "" }: Props) {
         <ButtonText
           text={t("contacts")}
           hover="true"
-          onClick={context.handleToggle}
+          onClick={handleFormOpen}
         />
       )}
     </motion.div>

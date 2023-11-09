@@ -4,27 +4,21 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
+import { BurgerMenu, Navigation } from "@/components";
+import { useGlobalContext } from "@/context";
 import { useScreenQuery } from "@/hooks";
 
-import { BurgerMenu, Navigation } from "@/components";
-
-interface Props {
-  isMenuOpen: boolean;
-  handleMenuOpen: (newState: boolean) => void;
-}
-
-export function NavigationAndLogo({ handleMenuOpen, isMenuOpen }: Props) {
+export function NavigationAndLogo() {
   const logo = useTranslations("alt");
+
+  const context = useGlobalContext();
+  const { handleMenuClose } = context;
 
   const { isScreenTabletSm } = useScreenQuery();
 
-  const hideBurger = () => {
-    handleMenuOpen(false);
-  };
-
   return (
     <nav className="container-items container-items__frame">
-      <Link href="/" className="logo" onClick={hideBurger}>
+      <Link href="/" className="logo" onClick={() => handleMenuClose()}>
         <Image
           className="logo__img"
           src="/logo.png"
@@ -33,11 +27,7 @@ export function NavigationAndLogo({ handleMenuOpen, isMenuOpen }: Props) {
           height={30}
         />
       </Link>
-      {isScreenTabletSm ? (
-        <Navigation />
-      ) : (
-        <BurgerMenu isMenuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen} />
-      )}
+      {isScreenTabletSm ? <Navigation /> : <BurgerMenu />}
     </nav>
   );
 }

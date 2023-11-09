@@ -1,26 +1,61 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 const GlobalContext = React.createContext({
-  toggle: false,
-  handleToggle: () => {},
-  handleClose: () => {},
+  isMenuOpen: false,
+  handleMenuOpen: () => {},
+  handleMenuClose: () => {},
+  isFormOpen: false,
+  handleFormOpen: () => {},
+  handleFormClose: () => {},
+  isSettingsOpen: false,
+  handleSettingsOpen: () => {},
+  handleSettingsClose: () => {},
 });
 
 export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
-  const [toggle, setToggle] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
-  const handleToggle = () => {
-    setToggle(!toggle);
+  const handleMenuOpen = () => {
+    setIsMenuOpen(true);
   };
 
-  const handleClose = () => {
-    setToggle(false);
+  const handleMenuClose = () => {
+    setIsMenuOpen(false);
   };
 
+  const handleFormOpen = () => {
+    setIsFormOpen(true);
+  };
+
+  const handleFormClose = () => {
+    setIsFormOpen(false);
+  };
+
+  const handleSettingsOpen = () => {
+    setIsSettingsOpen(true);
+  };
+
+  const handleSettingsClose = () => {
+    setIsSettingsOpen(false);
+  };
   return (
-    <GlobalContext.Provider value={{ toggle, handleToggle, handleClose }}>
+    <GlobalContext.Provider
+      value={{
+        isMenuOpen,
+        handleMenuOpen,
+        handleMenuClose,
+        isFormOpen,
+        handleFormOpen,
+        handleFormClose,
+        isSettingsOpen,
+        handleSettingsOpen,
+        handleSettingsClose,
+      }}
+    >
       {children}
     </GlobalContext.Provider>
   );
