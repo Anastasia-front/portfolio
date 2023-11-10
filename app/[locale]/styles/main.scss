@@ -625,7 +625,7 @@ footer {
 
 .center {
   @include flex(column, center, center);
-  padding: 45vh 25vw;
+  padding: 30vh 25vw;
   text-align: center;
   gap: 1rem;
 }
