@@ -1,14 +1,12 @@
 "use client";
 
-import React from "react";
-
 import { useTranslations } from "next-intl";
 import { Libre_Franklin, Source_Code_Pro } from "next/font/google";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { Certificate, Progress } from "@/components";
-import { bannerVariants, titleVariants } from "@/utils";
+import { titleVariants } from "@/utils";
 
 const franklin = Libre_Franklin({
   subsets: ["latin"],
@@ -24,33 +22,14 @@ export function AchievementBlock() {
   const a = useTranslations("about.achievements");
   const t = useTranslations("about");
 
-  const achievementBlock = React.useRef(null);
-
-  const scrollYProgress: any = useScroll({
-    target: achievementBlock,
-    offset: ["start end", "end start"],
-  }).scrollYProgress;
-
-  const y = useTransform(scrollYProgress, [0, 0.3], [10, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.9], [0.9, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
-
   return (
-    <motion.div
-      className="about-achievements"
-      ref={achievementBlock}
-      style={{
-        y,
-        scale,
-        opacity,
-      }}
-    >
+    <motion.div className="about-achievements">
       <motion.h4
         className={`about-achievements__title ${franklin.className}`}
         variants={titleVariants("second")}
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         {t("confirm")}
       </motion.h4>
@@ -59,15 +38,15 @@ export function AchievementBlock() {
         variants={titleVariants("second")}
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         {a("title.first")}
       </motion.h5>
       <motion.div
         className="about-achievements__slider about-achievements__slider-certificate"
-        variants={bannerVariants}
-        initial="hidden"
-        animate="visible"
+        variants={titleVariants("first")}
+        initial="offscreen"
+        whileInView="onscreen"
         viewport={{ once: true, amount: 0.2 }}
       >
         <Certificate />
@@ -83,9 +62,9 @@ export function AchievementBlock() {
       </motion.h5>
       <motion.div
         className="about-achievements__slider about-achievements__slider-progress"
-        variants={bannerVariants}
-        initial="hidden"
-        animate="visible"
+        variants={titleVariants("first")}
+        initial="offscreen"
+        whileInView="onscreen"
         viewport={{ once: true, amount: 0.2 }}
       >
         <Progress />
