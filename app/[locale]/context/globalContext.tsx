@@ -10,8 +10,8 @@ const GlobalContext = React.createContext({
   handleFormOpen: () => {},
   handleFormClose: () => {},
   isSettingsOpen: false,
-  handleSettingsOpen: () => {},
   handleSettingsClose: () => {},
+  handleSettingsToggle: () => {},
 });
 
 export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
@@ -35,12 +35,12 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
     setIsFormOpen(false);
   };
 
-  const handleSettingsOpen = () => {
-    setIsSettingsOpen(true);
-  };
-
   const handleSettingsClose = () => {
     setIsSettingsOpen(false);
+  };
+
+  const handleSettingsToggle = () => {
+    setIsSettingsOpen(!isSettingsOpen);
   };
   return (
     <GlobalContext.Provider
@@ -52,8 +52,8 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
         handleFormOpen,
         handleFormClose,
         isSettingsOpen,
-        handleSettingsOpen,
         handleSettingsClose,
+        handleSettingsToggle,
       }}
     >
       {children}

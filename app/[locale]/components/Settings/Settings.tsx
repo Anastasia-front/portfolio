@@ -17,7 +17,7 @@ export function Settings() {
   const [animationClass, setAnimationClass] = useState("");
 
   const context = useGlobalContext();
-  const { isSettingsOpen, handleSettingsOpen, handleSettingsClose } = context;
+  const { isSettingsOpen, handleSettingsClose, handleSettingsToggle } = context;
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
@@ -84,7 +84,7 @@ export function Settings() {
       <button
         type="button"
         className="button-icon"
-        onClick={handleSettingsOpen}
+        onClick={handleSettingsToggle}
       >
         <Gear />
       </button>
