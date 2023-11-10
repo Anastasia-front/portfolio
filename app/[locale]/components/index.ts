@@ -19,7 +19,7 @@ export * from "./LottiePlayer";
 export * from "./Navigation";
 export * from "./Portal";
 export * from "./Progress";
-export * from "./ProgressBar";
+// export * from "./ProgressBar";
 export * from "./ProjectItem";
 export * from "./Projects";
 export * from "./Settings";
