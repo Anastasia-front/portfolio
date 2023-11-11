@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 
 export function Video() {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   const pathname = usePathname();
   const lang = pathname.slice(0, 3);

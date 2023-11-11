@@ -33,7 +33,7 @@ export default function AboutPage() {
     "seventh",
   ] as const;
 
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   const { isScreenTabletSm } = useScreenQuery();
 

@@ -59,7 +59,7 @@ const images = [
 ];
 
 export const Gallery = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   const firstColor = theme === "dark" ? "#171410" : "#fbfcf8";
   const secondColor = theme === "dark" ? "#171410" : "#3f3f3f";
