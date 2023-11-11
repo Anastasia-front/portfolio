@@ -404,7 +404,7 @@
     z-index: 102;
     position: relative;
     width: 80vw;
-    height: 90vh;
+    height: max-content;
     padding: 2rem;
     overflow: auto;
     border-radius: var(--border-radius--lg) 0 0 var(--border-radius--lg);
@@ -448,25 +448,6 @@
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-top: 14rem;
-
-    @include useScreen("mobile-lg") {
-      padding-top: 5rem;
-    }
-    @include useScreen("tablet-sm") {
-      padding-top: 6rem;
-    }
-
-    @media screen and (max-height: 350px) {
-      padding-top: 22rem;
-
-      @include useScreen("mobile-lg") {
-        padding-top: 16rem;
-      }
-      @include useScreen("tablet-sm") {
-        padding-top: 14rem;
-      }
-    }
   }
 }
 [data-theme="dark"] .form {
