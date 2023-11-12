@@ -5,7 +5,7 @@ import { Canvas } from "@react-three/fiber";
 
 import { Vector3 } from "three";
 
-import { Mac } from ".";
+import { Mac } from "./Mac";
 
 export function MacCanvas() {
   const cameraPosition = new Vector3(150, 0, -30);
