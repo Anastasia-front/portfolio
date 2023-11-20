@@ -8,13 +8,16 @@ interface FormData {
   message: string;
 }
 
-export async function sendMessageToTelegram(text: FormData) {
-  const url = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TELEGRAM_API_KEY}/sendMessage?chat_id=${process.env.NEXT_PUBLIC_TELEGRAM_DIALOGUE_KEY}`;
+const telegramKey = process.env.NEXT_PUBLIC_TELEGRAM_API_KEY;
+const chatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
+
+export async function sendMessageToTelegram(data: FormData) {
+  const url = `https://api.telegram.org/bot${telegramKey}/sendMessage?chat_id=${chatId}`;
 
   try {
     const response = await axios.post(url, {
       parse_mode: "html",
-      text: generateText(text.message),
+      text: generateText(data),
     });
 
     return response.data;

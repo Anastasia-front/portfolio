@@ -1,7 +1,13 @@
-export const generateText = (data: string) => {
-  const string = Object.entries(data).reduce(
-    (str, [key, val]) => (str += `${key}: ${val} \n \n`),
-    ""
-  );
-  return string;
+interface FormData {
+  subject: string;
+  email: string;
+  message: string;
+}
+
+export const generateText = (data: FormData) => {
+  const formattedText = Object.entries(data)
+    .map(([key, value]) => `${key} - ${value}`)
+    .join("\n");
+
+  return formattedText;
 };

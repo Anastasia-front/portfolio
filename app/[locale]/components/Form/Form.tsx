@@ -15,6 +15,9 @@ import {
   sendMessageToTelegram,
 } from "@/utils";
 
+const publicEmail = process.env.NEXT_PUBLIC_EMAIL;
+const randomString = process.env.NEXT_EMAIL_FORM_SUBMIT_RANDOM_STRING;
+
 type FormStatus = "success" | "error" | null;
 interface FormData {
   subject: string;
@@ -102,7 +105,12 @@ export function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="contact__form">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="contact__form"
+      action={`https://formsubmit.co/${publicEmail}`}
+      method="post"
+    >
       <div className="contact__inputs">
         <InputField
           label={email}

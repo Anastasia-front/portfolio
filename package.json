@@ -12,7 +12,6 @@
     "@hookform/resolvers": "^3.3.2",
     "@react-three/drei": "^9.88.0",
     "@react-three/fiber": "^8.15.10",
-    "@sendgrid/mail": "^7.7.0",
     "@svgr/webpack": "^8.1.0",
     "@types/dotenv": "^8.2.0",
     "axios": "^1.6.0",
