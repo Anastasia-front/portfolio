@@ -1,5 +1,6 @@
 @use "./vars" as *;
 @use "../mixins" as *;
+@use "./mixins" as *;
 
 .button {
   min-width: 164px;
@@ -117,6 +118,15 @@
 
   &-img {
     width: 100%;
+  }
+
+  &-withSvg {
+    @include flex(row, center, center);
+    gap: 1rem;
+
+    &__success {
+      margin-top: -0.4rem;
+    }
   }
 }
 [data-theme="dark"] .button {

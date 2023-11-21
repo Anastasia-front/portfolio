@@ -20,10 +20,10 @@ export function getButtonContent({
 }: Props) {
   if (formStatus === "success") {
     return (
-      <>
+      <div className="button-withSvg">
         {sendBtnSuccess}
-        <SuccessIcon className="icon" />
-      </>
+        <SuccessIcon className="icon button-withSvg__success" />
+      </div>
     );
   }
 
@@ -33,10 +33,10 @@ export function getButtonContent({
 
   if (formStatus === "error") {
     return (
-      <>
+      <div className="button-withSvg">
         {sendBtnError}
         <ErrorIcon className="icon" />
-      </>
+      </div>
     );
   }
 

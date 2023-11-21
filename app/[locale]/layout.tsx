@@ -68,7 +68,7 @@ export default async function RootLayout({
                 {children}
                 <Footer />
                 <Settings />
-              </Providers>{" "}
+              </Providers>
             </ErrorBoundary>
           </NextIntlClientProvider>
         </GlobalProvider>
