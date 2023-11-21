@@ -61,7 +61,7 @@ export function AchievementBlock() {
         {a("title.second")}
       </motion.h5>
       <motion.div
-        className="about-achievements__slider about-achievements__slider-progress"
+        className="about-achievements__slider"
         variants={titleVariants("first")}
         initial="offscreen"
         whileInView="onscreen"

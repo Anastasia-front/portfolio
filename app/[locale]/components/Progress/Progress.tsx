@@ -90,21 +90,21 @@ export function Progress() {
         <Image
           src={achievement1}
           alt={a("alt.cabinet.first")}
-          className="about-achievements__image about-achievements__image-progress"
+          className="about-achievements__image"
         />
       </SwiperSlide>
       <SwiperSlide>
         <Image
           src={achievement2}
           alt={a("alt.cabinet.second")}
-          className="about-achievements__image about-achievements__image-progress"
+          className="about-achievements__image"
         />
       </SwiperSlide>
       <SwiperSlide>
         <Image
           src={achievement3}
           alt={a("alt.cabinet.third")}
-          className="about-achievements__image about-achievements__image-progress"
+          className="about-achievements__image"
         />
       </SwiperSlide>
     </Swiper>

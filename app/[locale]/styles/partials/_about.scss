@@ -141,13 +141,6 @@
       border: 2px solid var(--color--blue-grey-4);
       border-radius: var(--border-radius--sm);
       pointer-events: none;
-
-      &-progress {
-        width: 100%;
-        max-width: 50vw;
-        height: 80%;
-        max-height: 50vh;
-      }
     }
   }
 
