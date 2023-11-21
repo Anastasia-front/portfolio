@@ -1,12 +1,10 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-import { Contacts, Navigation } from "@/components";
+import { Contacts, Logo, Navigation } from "@/components";
 
 interface Props {
   logo?: string;
@@ -50,15 +48,7 @@ export function Footer({ title, description }: Props) {
         {title && <h1 className="footer__title">{title}</h1>}
         {description && <p className="footer__description"> {description}</p>}
 
-        <Link href="/" className="logo logo__footer">
-          <Image
-            src="/logo.png"
-            alt={l("logo")}
-            width={30}
-            height={30}
-            className="logo__img"
-          />
-        </Link>
+        <Logo className="logo__footer" />
         <Navigation location="banner" />
         <Contacts location="footer" />
       </motion.div>

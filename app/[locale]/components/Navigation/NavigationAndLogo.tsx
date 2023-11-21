@@ -1,10 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
 
-import { BurgerMenu, Navigation } from "@/components";
+import { BurgerMenu, Logo, Navigation } from "@/components";
 import { useGlobalContext } from "@/context";
 import { useScreenQuery } from "@/hooks";
 
@@ -18,15 +16,7 @@ export function NavigationAndLogo() {
 
   return (
     <nav className="container-items container-items__frame">
-      <Link href="/" className="logo" onClick={() => handleMenuClose()}>
-        <Image
-          className="logo__img"
-          src="/logo.png"
-          alt={logo("logo")}
-          width={30}
-          height={30}
-        />
-      </Link>
+      <Logo onClick={() => handleMenuClose()} />
       {isScreenTabletSm ? <Navigation /> : <BurgerMenu />}
     </nav>
   );
