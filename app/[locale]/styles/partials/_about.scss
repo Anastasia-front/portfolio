@@ -115,7 +115,7 @@
     }
 
     &__slider {
-      max-width: 565px;
+      max-width: 272px;
       height: auto;
 
       &-certificate {
@@ -129,10 +129,6 @@
         @include useScreen("tablet-sm") {
           padding-left: 6rem;
         }
-      }
-
-      &-progress {
-        width: 42.5vw;
       }
     }
 

@@ -9,10 +9,9 @@ import {
   Footer,
   FormPortal,
   Header,
-  // ProgressBar,
+  ProgressBar,
   Settings,
 } from "@/components";
-// import { ProgressBar } from "@/components/ProgressBar/ProgressBar";
 import { GlobalProvider } from "@/context";
 import { Providers } from "@/providers";
 
@@ -63,7 +62,7 @@ export default async function RootLayout({
           <NextIntlClientProvider locale={locale} messages={messages}>
             <ErrorBoundary>
               <Providers>
-                {/* <ProgressBar /> */}
+                <ProgressBar />
                 <Header />
                 <FormPortal />
                 {children}

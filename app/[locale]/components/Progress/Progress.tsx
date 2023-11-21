@@ -6,9 +6,9 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import "swiper/css";
-import "swiper/css/effect-cube";
+import "swiper/css/effect-flip";
 import "swiper/css/pagination";
-import { EffectCube, Pagination } from "swiper/modules";
+import { EffectFlip, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import enDarkA1 from "@/assets/images/achievements/en-dark-a1.png";
@@ -80,41 +80,33 @@ export function Progress() {
   })();
 
   return (
-    <>
-      <Swiper
-        effect={"cube"}
-        grabCursor={true}
-        cubeEffect={{
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        }}
-        pagination={true}
-        modules={[EffectCube, Pagination]}
-      >
-        <SwiperSlide>
-          <Image
-            src={achievement1}
-            alt={a("alt.cabinet.first")}
-            className="about-achievements__image about-achievements__image-progress"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src={achievement2}
-            alt={a("alt.cabinet.second")}
-            className="about-achievements__image about-achievements__image-progress"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src={achievement3}
-            alt={a("alt.cabinet.third")}
-            className="about-achievements__image about-achievements__image-progress"
-          />
-        </SwiperSlide>
-      </Swiper>
-    </>
+    <Swiper
+      effect={"flip"}
+      grabCursor={true}
+      pagination={true}
+      modules={[EffectFlip, Pagination, Navigation]}
+    >
+      <SwiperSlide>
+        <Image
+          src={achievement1}
+          alt={a("alt.cabinet.first")}
+          className="about-achievements__image about-achievements__image-progress"
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image
+          src={achievement2}
+          alt={a("alt.cabinet.second")}
+          className="about-achievements__image about-achievements__image-progress"
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image
+          src={achievement3}
+          alt={a("alt.cabinet.third")}
+          className="about-achievements__image about-achievements__image-progress"
+        />
+      </SwiperSlide>
+    </Swiper>
   );
 }
