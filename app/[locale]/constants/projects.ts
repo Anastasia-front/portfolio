@@ -567,8 +567,8 @@ export const projectsEnglishLang: Project[] = [
     solution:
       "I can design and code projects of any complexity based on provided layouts",
     links: {
-      website: "https://anastasia-front.github.io/GoGreen/",
-      github: "https://github.com/Anastasia-front/GoGreen",
+      website: "https://go-green-website.netlify.app/",
+      github: "https://github.com/Anastasia-front/go-green",
     },
     content: {
       description:
@@ -1109,8 +1109,8 @@ export const projectsUkrainianLang: Project[] = [
       "Компанії з виготовлення смачної та естетично гарної їжі потрібен веб-сайт",
     solution: "Я могу зверстати з макетом проект будь-якої складності",
     links: {
-      website: "https://anastasia-front.github.io/GoGreen/",
-      github: "https://github.com/Anastasia-front/GoGreen",
+      website: "https://go-green-website.netlify.app/",
+      github: "https://github.com/Anastasia-front/go-green",
     },
     content: {
       description:
