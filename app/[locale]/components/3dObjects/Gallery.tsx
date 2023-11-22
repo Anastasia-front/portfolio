@@ -20,41 +20,62 @@ const GOLDEN_RATIO = 1.61803398875;
 const position = (id: number) => `/images/hero/${id}.jpg`;
 const images = [
   // Front
-  { position: [0, 0, 1.5], rotation: [0, 0, 0], url: position(1) },
+  {
+    position: [0, 0, 1.5],
+    rotation: [0, 0, 0],
+    url: position(1),
+    alt: "first image of 3d-gallery",
+  },
   // Back
-  { position: [-0.8, 0, -0.6], rotation: [0, 0, 0], url: position(2) },
-  { position: [0.8, 0, -0.6], rotation: [0, 0, 0], url: position(3) },
+  {
+    position: [-0.8, 0, -0.6],
+    rotation: [0, 0, 0],
+    url: position(2),
+    alt: "second image of 3d-gallery",
+  },
+  {
+    position: [0.8, 0, -0.6],
+    rotation: [0, 0, 0],
+    url: position(3),
+    alt: "third image of 3d-gallery",
+  },
   // Left
   {
     position: [-1.75, 0, 0.25],
     rotation: [0, Math.PI / 2.5, 0],
     url: position(4),
+    alt: "fourth image of 3d-gallery",
   },
   {
     position: [-2.15, 0, 1.5],
     rotation: [0, Math.PI / 2.5, 0],
     url: position(5),
+    alt: "fifth image of 3d-gallery",
   },
   {
     position: [-2, 0, 2.75],
     rotation: [0, Math.PI / 2.5, 0],
     url: position(6),
+    alt: "sixth image of 3d-gallery",
   },
   // Right
   {
     position: [1.75, 0, 0.25],
     rotation: [0, -Math.PI / 2.5, 0],
     url: position(7),
+    alt: "seventh image of 3d-gallery",
   },
   {
     position: [2.15, 0, 1.5],
     rotation: [0, -Math.PI / 2.5, 0],
     url: position(8),
+    alt: "eighth image of 3d-gallery",
   },
   {
     position: [2, 0, 2.75],
     rotation: [0, -Math.PI / 2.5, 0],
     url: position(9),
+    alt: "ninth image of 3d-gallery",
   },
 ];
 
@@ -62,16 +83,13 @@ interface FrameProps {
   position: [number, number, number];
   rotation: [number, number, number];
   url: string;
+  alt: string;
+  c?: THREE.Color;
 }
 interface FramesProps {
   images: FrameProps[];
   q?: THREE.Quaternion;
   p?: THREE.Vector3;
-}
-
-interface FrameProps {
-  url: string;
-  c?: THREE.Color;
 }
 
 const Gallery = () => {
@@ -119,21 +137,33 @@ function Frames({
   p = new THREE.Vector3(),
 }: FramesProps) {
   const ref = useRef<THREE.Group | null>(null);
-  const clicked = useRef<THREE.Object3D | null>(null);
+  const clicked = useRef<THREE.Object3D | null | undefined>(null);
   const [, params] = useRoute("/item/:id");
   const [, setLocation] = useLocation();
 
+  const itemId = (params && params.id) || "";
+
   useEffect(() => {
     if (ref.current) {
-      clicked.current = ref.current.getObjectByName(params?.id);
+      clicked.current = ref.current.getObjectByName(itemId);
       if (clicked.current) {
-        clicked.current?.parent.updateWorldMatrix(true, true);
-        clicked.current.parent.localToWorld(p.set(0, GOLDEN_RATIO / 2, 1.25));
-        clicked.current.parent.getWorldQuaternion(q);
+        clicked.current!.parent!.updateWorldMatrix(true, true);
+
+        const parent = clicked.current.parent ?? null;
+
+        if (parent) {
+          parent.localToWorld(p.set(0, GOLDEN_RATIO / 2, 4));
+          parent.getWorldQuaternion(q);
+        } else {
+          p.set(0, 0, 0);
+          q.identity();
+        }
       } else {
         p.set(0, 0, 5.5);
         q.identity();
       }
+    } else {
+      console.log(ref.current);
     }
   });
 
@@ -159,7 +189,7 @@ function Frames({
   );
 }
 
-function Frame({ url, c = new THREE.Color(), ...props }: FrameProps) {
+function Frame({ url, c = new THREE.Color(), alt = "", ...props }: FrameProps) {
   const image = useRef<THREE.Mesh<
     THREE.PlaneGeometry,
     THREE.ShaderMaterial
@@ -179,8 +209,10 @@ function Frame({ url, c = new THREE.Color(), ...props }: FrameProps) {
 
   useFrame((state, dt) => {
     if (image.current && frame.current) {
-      image.current.material.zoom =
+      const shaderMaterial = image.current.material;
+      shaderMaterial.zoom =
         2 + Math.sin(rnd * 10000 + state.clock.elapsedTime / 3) / 2;
+
       easing.damp3(
         image.current.scale,
         [
