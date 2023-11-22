@@ -6,9 +6,9 @@ import { bannerVariants } from "@/utils";
 
 import {
   Features,
-  // GallerySection,
+  GallerySection,
   Hero,
-  // ObjectsSection,
+  ObjectsSection,
   Video,
 } from "./components";
 
@@ -30,8 +30,8 @@ export default function Home() {
       >
         <Hero />
         <Features />
-        {/* <ObjectsSection />
-        <GallerySection /> */}
+        <ObjectsSection />
+        <GallerySection />
       </motion.div>
     </motion.main>
   );

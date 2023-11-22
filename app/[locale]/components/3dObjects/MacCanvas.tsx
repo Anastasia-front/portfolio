@@ -7,12 +7,12 @@ import { Vector3 } from "three";
 
 import { Mac } from "./Mac";
 
-export function MacCanvas() {
+function MacCanvas() {
   const cameraPosition = new Vector3(150, 0, -30);
   const targetPosition = new Vector3(0, 0, 0);
 
   return (
-    <Canvas className="canvas" camera={{ position: cameraPosition }}>
+    <Canvas id="mac" className="canvas" camera={{ position: cameraPosition }}>
       <ambientLight intensity={Math.PI / 0.7} />
       <spotLight
         position={[0, 0, 0]}
@@ -26,3 +26,5 @@ export function MacCanvas() {
     </Canvas>
   );
 }
+
+export default MacCanvas;

@@ -11,12 +11,12 @@ interface MacProps {
 
 export function Mac(props: MacProps) {
   const gltf = useGLTF("./images/3d/mac/scene.gltf");
-  const ref = useRef<THREE.Object3D>(null);
+  const macRef = useRef<THREE.Object3D>(null);
   const [direction, setDirection] = useState<number>(1);
 
   useFrame(() => {
-    if (ref.current) {
-      ref.current.rotation.y += 0.003 * direction;
+    if (macRef.current) {
+      macRef.current.rotation.y += 0.003 * direction;
     }
   });
 
@@ -24,5 +24,5 @@ export function Mac(props: MacProps) {
     setDirection(-direction);
   }, 3000);
 
-  return <primitive {...props} object={gltf.scene} ref={ref} />;
+  return <primitive {...props} object={gltf.scene} ref={macRef} />;
 }

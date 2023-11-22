@@ -11,12 +11,12 @@ interface MacBookProps {
 
 export function MacBook(props: MacBookProps) {
   const gltf = useGLTF("./images/3d/macBook/scene.gltf");
-  const ref = useRef<THREE.Object3D>(null);
+  const macBookRef = useRef<THREE.Object3D>(null);
   const [direction, setDirection] = useState<number>(-1);
 
   useFrame(() => {
-    if (ref.current) {
-      ref.current.rotation.y += 0.003 * direction;
+    if (macBookRef.current) {
+      macBookRef.current.rotation.y += 0.003 * direction;
     }
   });
 
@@ -24,5 +24,5 @@ export function MacBook(props: MacBookProps) {
     setDirection(-direction);
   }, 3000);
 
-  return <primitive {...props} object={gltf.scene} ref={ref} />;
+  return <primitive {...props} object={gltf.scene} ref={macBookRef} />;
 }

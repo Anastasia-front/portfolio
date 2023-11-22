@@ -3,11 +3,12 @@
 import { useEffect, useMemo, useState } from "react";
 
 import { useTranslations } from "next-intl";
-import Link from "next-intl/link";
 import { usePathname } from "next/navigation";
 
 import UA from "@/assets/svg/ukraine.svg";
 import US from "@/assets/svg/united-states.svg";
+
+import { Link } from "@/utils";
 
 import { ButtonSwitcher } from "./ButtonSwitcher";
 
@@ -19,7 +20,7 @@ export const ButtonLanguage = () => {
 
   const pathname = usePathname();
 
-  const [lang, setLang] = useState<string>("en");
+  const [lang, setLang] = useState<"en" | "uk">("en");
 
   const icon = useMemo(() => {
     const IconUA = <UA />;

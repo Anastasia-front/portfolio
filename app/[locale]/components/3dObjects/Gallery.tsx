@@ -17,48 +17,64 @@ import { useLocation, useRoute } from "wouter";
 
 const GOLDEN_RATIO = 1.61803398875;
 
-const pexel = (id: number) => `/images/hero/${id}.jpg`;
+const position = (id: number) => `/images/hero/${id}.jpg`;
 const images = [
   // Front
-  { position: [0, 0, 1.5], rotation: [0, 0, 0], url: pexel(1) },
+  { position: [0, 0, 1.5], rotation: [0, 0, 0], url: position(1) },
   // Back
-  { position: [-0.8, 0, -0.6], rotation: [0, 0, 0], url: pexel(2) },
-  { position: [0.8, 0, -0.6], rotation: [0, 0, 0], url: pexel(3) },
+  { position: [-0.8, 0, -0.6], rotation: [0, 0, 0], url: position(2) },
+  { position: [0.8, 0, -0.6], rotation: [0, 0, 0], url: position(3) },
   // Left
   {
     position: [-1.75, 0, 0.25],
     rotation: [0, Math.PI / 2.5, 0],
-    url: pexel(4),
+    url: position(4),
   },
   {
     position: [-2.15, 0, 1.5],
     rotation: [0, Math.PI / 2.5, 0],
-    url: pexel(5),
+    url: position(5),
   },
   {
     position: [-2, 0, 2.75],
     rotation: [0, Math.PI / 2.5, 0],
-    url: pexel(6),
+    url: position(6),
   },
   // Right
   {
     position: [1.75, 0, 0.25],
     rotation: [0, -Math.PI / 2.5, 0],
-    url: pexel(7),
+    url: position(7),
   },
   {
     position: [2.15, 0, 1.5],
     rotation: [0, -Math.PI / 2.5, 0],
-    url: pexel(8),
+    url: position(8),
   },
   {
     position: [2, 0, 2.75],
     rotation: [0, -Math.PI / 2.5, 0],
-    url: pexel(9),
+    url: position(9),
   },
 ];
 
-export const Gallery = () => {
+interface FrameProps {
+  position: [number, number, number];
+  rotation: [number, number, number];
+  url: string;
+}
+interface FramesProps {
+  images: FrameProps[];
+  q?: THREE.Quaternion;
+  p?: THREE.Vector3;
+}
+
+interface FrameProps {
+  url: string;
+  c?: THREE.Color;
+}
+
+const Gallery = () => {
   const { theme } = useTheme();
 
   const firstColor = theme === "dark" ? "#171410" : "#fbfcf8";
@@ -97,17 +113,6 @@ export const Gallery = () => {
   );
 };
 
-interface FrameProps {
-  position: [number, number, number];
-  rotation: [number, number, number];
-  url: string;
-}
-interface FramesProps {
-  images: FrameProps[];
-  q?: THREE.Quaternion;
-  p?: THREE.Vector3;
-}
-
 function Frames({
   images,
   q = new THREE.Quaternion(),
@@ -119,23 +124,18 @@ function Frames({
   const [, setLocation] = useLocation();
 
   useEffect(() => {
-    if (ref.current && params?.id) {
-      clicked!.current = ref.current.getObjectByName(params?.id)!;
-
+    if (ref.current) {
+      clicked.current = ref.current.getObjectByName(params?.id);
       if (clicked.current) {
-        clicked.current.parent?.updateWorldMatrix(true, true);
-        if (clicked.current.parent) {
-          clicked.current.parent.localToWorld(p.set(0, GOLDEN_RATIO / 2, 1.25));
-          clicked.current.parent.getWorldQuaternion(q);
-        } else {
-          p.set(0, 0, 5.5);
-          q.identity();
-        }
+        clicked.current?.parent.updateWorldMatrix(true, true);
+        clicked.current.parent.localToWorld(p.set(0, GOLDEN_RATIO / 2, 1.25));
+        clicked.current.parent.getWorldQuaternion(q);
       } else {
-        console.log("error");
+        p.set(0, 0, 5.5);
+        q.identity();
       }
     }
-  }, [params?.id, p, q]);
+  });
 
   useFrame((state, dt) => {
     easing.damp3(state.camera.position, p, 0.4, dt);
@@ -159,11 +159,6 @@ function Frames({
   );
 }
 
-interface FrameProps {
-  url: string;
-  c?: THREE.Color;
-}
-
 function Frame({ url, c = new THREE.Color(), ...props }: FrameProps) {
   const image = useRef<THREE.Mesh<
     THREE.PlaneGeometry,
@@ -184,10 +179,8 @@ function Frame({ url, c = new THREE.Color(), ...props }: FrameProps) {
 
   useFrame((state, dt) => {
     if (image.current && frame.current) {
-      const shaderMaterial = image.current.material as THREE.ShaderMaterial;
-      shaderMaterial.uniforms.uZoom.value =
+      image.current.material.zoom =
         2 + Math.sin(rnd * 10000 + state.clock.elapsedTime / 3) / 2;
-
       easing.damp3(
         image.current.scale,
         [
@@ -236,13 +229,14 @@ function Frame({ url, c = new THREE.Color(), ...props }: FrameProps) {
           />
         </mesh>
         <Image
-          {...{
-            position: [0, 0, 0.7],
-            url: url,
-            alt: name,
-          }}
+          raycast={() => null}
+          ref={image}
+          position={[0, 0, 0.7]}
+          url={url}
         />
       </mesh>
     </group>
   );
 }
+
+export default Gallery;

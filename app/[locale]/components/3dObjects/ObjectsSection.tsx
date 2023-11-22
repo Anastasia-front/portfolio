@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { BsFillInfoCircleFill, BsFillInfoSquareFill } from "react-icons/bs";
 
-import { ButtonLink, MacBookCanvas, MacCanvas } from "@/components";
+import { ButtonLink } from "@/components";
+import { Dynamic } from "./Dynamic";
 
 export function ObjectsSection() {
   const i = useTranslations("home.3d");
@@ -63,8 +64,8 @@ export function ObjectsSection() {
         </div>
 
         <div className="canvas__container">
-          <MacBookCanvas />
-          <MacCanvas />
+          <Dynamic componentName="MacBookCanvas" />
+          <Dynamic componentName="MacCanvas" />
         </div>
         <span className="devices__hint-comment">{i("summary")}</span>
       </div>

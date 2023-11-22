@@ -1,3 +1,4 @@
+export * from "./Dynamic";
 export * from "./Gallery";
 export * from "./GallerySection";
 export * from "./Mac";

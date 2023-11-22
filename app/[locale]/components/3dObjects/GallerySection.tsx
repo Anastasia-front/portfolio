@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 
 import { useTranslations } from "next-intl";
 
-import { ButtonLink, Gallery } from "@/components";
+import { ButtonLink } from "@/components";
+import { Dynamic } from "./Dynamic";
 
 export function GallerySection() {
   const i = useTranslations("home");
@@ -25,7 +26,7 @@ export function GallerySection() {
 
   return (
     <section className="gallery-section">
-      <div className=" section-header container">
+      <div className="section-header container">
         <h2>{i("gallery")}</h2>
         <ButtonLink
           text={b("gallery")}
@@ -34,8 +35,7 @@ export function GallerySection() {
           lang={lang}
         />
       </div>
-
-      <Gallery />
+      <Dynamic componentName="Gallery" />
     </section>
   );
 }
