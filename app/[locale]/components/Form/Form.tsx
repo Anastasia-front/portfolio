@@ -15,8 +15,20 @@ import {
   sendMessageToTelegram,
 } from "@/utils";
 
-const publicEmail = process.env.NEXT_PUBLIC_EMAIL;
-const randomString = process.env.NEXT_EMAIL_FORM_SUBMIT_RANDOM_STRING;
+const publicEmailLocal = process.env.NEXT_PUBLIC_EMAIL_LOCAL;
+const publicEmailVercel = process.env.NEXT_PUBLIC_EMAIL_VERCEL;
+const baseUrlLocal =
+  process.env.NEXT_PUBLIC_BASE_URL_LOCAL || "http://localhost:3000";
+
+let isLocalhost: boolean = false;
+
+if (typeof window !== "undefined") {
+  isLocalhost = window.location.href.includes(baseUrlLocal);
+}
+
+const formAction = isLocalhost
+  ? `https://formsubmit.co/${publicEmailLocal}`
+  : `https://formsubmit.co/${publicEmailVercel}`;
 
 type FormStatus = "success" | "error" | null;
 interface FormData {
@@ -108,7 +120,7 @@ export function Form() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="contact__form"
-      action={`https://formsubmit.co/${publicEmail}`}
+      action={formAction}
       method="post"
     >
       <div className="contact__inputs">
