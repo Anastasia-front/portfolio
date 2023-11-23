@@ -96,6 +96,7 @@
     },
     "features": {
       "title": "features",
+      "subtitle": "each component is interactive, so when you click or hover over it, the element will expand - try and see for yourself",
       "first": {
         "alt": "devices",
         "svg": "devices",
@@ -121,17 +122,18 @@
     "3d": {
       "title": "Below are the «workhorses»",
       "subtitle": "pay attention to this prompt so that it is clear what and how to do",
-      "commentToSubtitle": "when mouse hovering over this text block, other hints will appear",
+      "commentToSubtitle": "when mouse hovering over this text block, other hints will appear (on a device without a mouse, you need to click on this text)",
       "prompt": "* in the block where the cursor with the hand appears, in order to scroll the page, use the scrollbar on the right edge (normal mouse actions will bring objects closer or further away)",
       "comment": "** below are 3D objects, they are interactive - you can rotate them, enlarge, reduce, view them from all sides and do whatever you want ;)",
-      "now": "first device I'm using now",
-      "inFuture": "second - I want to use in the future",
+      "now": "1. first device I'm using now",
+      "inFuture": "2. second - I want to use in the future",
       "macBook": "(MacBook Air 13″ М1, 2020)",
       "mac": "(iMac 24”)",
-      "summary": "я сподіваюсь, що вам сподобалася ця інтерактивна частина",
+      "summary": "*** I hope that you enjoyed this interactive part",
       "heading": "My devices"
     },
-    "gallery": "3-d gallery"
+    "gallery": "3-d gallery",
+    "subtitle": "this is last but not least section of home page thats why I sure that you will like it ^_^"
   },
   "about": {
     "title": "Prysiazhnaia Anastasiia",
