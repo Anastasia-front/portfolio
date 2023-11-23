@@ -1,5 +1,5 @@
 export * from "./Dynamic";
-export * from "./Gallery";
+export * from "./Gallery.jsx";
 export * from "./GallerySection";
 export * from "./Mac";
 export * from "./MacBook";

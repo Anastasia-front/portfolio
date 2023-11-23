@@ -32,6 +32,6 @@
     "app/[locale]/**/*.ts",
     "app/[locale]/**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "app/[locale]/components/3dObjects/Gallery.jsx"  ],
   "exclude": ["node_modules"]
 }

@@ -17,7 +17,7 @@ import { useLocation, useRoute } from "wouter";
 
 const GOLDEN_RATIO = 1.61803398875;
 
-const position = (id: number) => `/images/hero/${id}.jpg`;
+const position = (id) => `/images/hero/${id}.jpg`;
 const images = [
   // Front
   {
@@ -79,19 +79,6 @@ const images = [
   },
 ];
 
-interface FrameProps {
-  position: [number, number, number];
-  rotation: [number, number, number];
-  url: string;
-  alt: string;
-  c?: THREE.Color;
-}
-interface FramesProps {
-  images: FrameProps[];
-  q?: THREE.Quaternion;
-  p?: THREE.Vector3;
-}
-
 const Gallery = () => {
   const { theme } = useTheme();
 
@@ -108,7 +95,7 @@ const Gallery = () => {
       <color attach="background" args={[firstColor]} />
       <fog attach="fog" args={[thirdColor, 0, 15]} />
       <group position={[0, -0.3, 0]}>
-        <Frames images={images as FrameProps[]} />
+        <Frames images={images} />
         <mesh rotation={[-Math.PI / 2, 0, 0]}>
           <planeGeometry args={[50, 50]} />
           <MeshReflectorMaterial
@@ -135,38 +122,22 @@ function Frames({
   images,
   q = new THREE.Quaternion(),
   p = new THREE.Vector3(),
-}: FramesProps) {
-  const ref = useRef<THREE.Group | null>(null);
-  const clicked = useRef<THREE.Object3D | null | undefined>(null);
+}) {
+  const ref = useRef();
+  const clicked = useRef();
   const [, params] = useRoute("/item/:id");
   const [, setLocation] = useLocation();
-
-  const itemId = (params && params.id) || "";
-
   useEffect(() => {
-    if (ref.current) {
-      clicked.current = ref.current.getObjectByName(itemId);
-      if (clicked.current) {
-        clicked.current!.parent!.updateWorldMatrix(true, true);
-
-        const parent = clicked.current.parent ?? null;
-
-        if (parent) {
-          parent.localToWorld(p.set(0, GOLDEN_RATIO / 2, 3.2));
-          parent.getWorldQuaternion(q);
-        } else {
-          p.set(0, 0, 5.5);
-          q.identity();
-        }
-      } else {
-        p.set(0, 0, 5.5);
-        q.identity();
-      }
+    clicked.current = ref.current.getObjectByName(params?.id);
+    if (clicked.current) {
+      clicked.current.parent.updateWorldMatrix(true, true);
+      clicked.current.parent.localToWorld(p.set(0, GOLDEN_RATIO / 2, 1.25));
+      clicked.current.parent.getWorldQuaternion(q);
     } else {
-      console.log(ref.current);
+      p.set(0, 0, 5.5);
+      q.identity();
     }
   });
-
   useFrame((state, dt) => {
     easing.damp3(state.camera.position, p, 0.4, dt);
     easing.dampQ(state.camera.quaternion, q, 0.4, dt);
@@ -189,49 +160,35 @@ function Frames({
   );
 }
 
-function Frame({ url, c = new THREE.Color(), alt = "", ...props }: FrameProps) {
-  const image = useRef<THREE.Mesh<
-    THREE.PlaneGeometry,
-    THREE.ShaderMaterial
-  > | null>(null);
-  const frame = useRef<THREE.Mesh<
-    THREE.BoxGeometry,
-    THREE.MeshBasicMaterial
-  > | null>(null);
-
+function Frame({ url, c = new THREE.Color(), ...props }) {
+  const image = useRef();
+  const frame = useRef();
   const [, params] = useRoute("/item/:id");
   const [hovered, hover] = useState(false);
   const [rnd] = useState(() => Math.random());
   const name = getUuid(url);
   const isActive = params?.id === name;
-
   useCursor(hovered);
-
   useFrame((state, dt) => {
-    if (image.current && frame.current) {
-      const shaderMaterial = image.current.material;
-      shaderMaterial.zoom =
-        2 + Math.sin(rnd * 10000 + state.clock.elapsedTime / 3) / 2;
-
-      easing.damp3(
-        image.current.scale,
-        [
-          0.85 * (!isActive && hovered ? 0.85 : 1),
-          0.9 * (!isActive && hovered ? 0.905 : 1),
-          1,
-        ],
-        0.1,
-        dt
-      );
-      easing.dampC(
-        frame.current.material.color,
-        hovered ? "orange" : "white",
-        0.1,
-        dt
-      );
-    }
+    image.current.material.zoom =
+      2 + Math.sin(rnd * 10000 + state.clock.elapsedTime / 3) / 2;
+    easing.damp3(
+      image.current.scale,
+      [
+        0.85 * (!isActive && hovered ? 0.85 : 1),
+        0.9 * (!isActive && hovered ? 0.905 : 1),
+        1,
+      ],
+      0.1,
+      dt
+    );
+    easing.dampC(
+      frame.current.material.color,
+      hovered ? "orange" : "white",
+      0.1,
+      dt
+    );
   });
-
   return (
     <group {...props}>
       <mesh
@@ -261,6 +218,7 @@ function Frame({ url, c = new THREE.Color(), alt = "", ...props }: FrameProps) {
           />
         </mesh>
         <Image
+          alt={image}
           raycast={() => null}
           ref={image}
           position={[0, 0, 0.7]}
