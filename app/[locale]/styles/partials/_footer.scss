@@ -129,6 +129,29 @@
       color: var(--color--white);
     }
   }
+
+  &__bottom {
+    @include flex(column, center, center);
+    gap: 1rem;
+    color: var(--color--white);
+    position: relative;
+    padding-top: 1rem;
+
+    a {
+      color: var(--color--light-blue-1);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      background-color: var(--color--white);
+      height: 1px;
+      width: 100%;
+    }
+  }
 }
 [data-theme="dark"] .footer {
   background: radial-gradient(
@@ -177,6 +200,18 @@
           color: var(--color--orange-4);
         }
       }
+    }
+  }
+
+  &__bottom {
+    color: var(--color--blue-grey-2);
+
+    a {
+      color: var(--color--blue-grey-3);
+    }
+
+    &::before {
+      background-color: var(--color--blue-grey-2);
     }
   }
 }

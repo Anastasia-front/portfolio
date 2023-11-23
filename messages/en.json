@@ -1,4 +1,5 @@
 {
+  "name": { "first": "Anastasiia", "last": "Prysiazhnaia" },
   "alt": {
     "logo": "Logo",
     "svgTheme": "Theme icon",
@@ -320,5 +321,9 @@
         }
       }
     }
+  },
+  "text": {
+    "first": "developer is",
+    "last": "built with love"
   }
 }

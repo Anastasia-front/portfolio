@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 
 import { motion } from "framer-motion";
 
@@ -14,7 +15,10 @@ interface Props {
 }
 
 export function Footer({ title, description }: Props) {
-  const l = useTranslations("alt");
+  const i = useTranslations("name");
+  const t = useTranslations("text");
+
+  const { theme } = useTheme();
 
   const FooterVariants = {
     hidden: {
@@ -51,6 +55,16 @@ export function Footer({ title, description }: Props) {
         <Logo className="logo__footer" />
         <Navigation location="banner" />
         <Contacts location="footer" />
+
+        <p className="footer__bottom">
+          <span> © {new Date().getFullYear()}</span>
+          <a href="#">
+            {t("first")} {i("first")} {i("last")}
+          </a>
+          <span>
+            {t("last")} {theme === "dark" ? "🧡" : "🩵"}
+          </span>
+        </p>
       </motion.div>
     </footer>
   );
