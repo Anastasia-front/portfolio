@@ -142,17 +142,15 @@
   .banner {
     z-index: 9;
     position: absolute;
-    bottom: 6rem;
+    bottom: 0;
     flex-direction: column;
     width: 100%;
+    max-height: min-content;
     border-radius: var(--border-radius--xl) var(--border-radius--xl)
       var(--border-radius--lg) var(--border-radius--lg);
     overflow-x: hidden;
     @include box-shadow-7(var(--color--bg-grey));
 
-    @include useScreen("tablet-sm") {
-      bottom: 0;
-    }
     @include useScreen("tablet-md") {
       flex-direction: row;
     }
