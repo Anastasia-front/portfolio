@@ -22,8 +22,8 @@
 .hero {
   &-container {
     @include flex(column, center, center);
-    position: relative;
     gap: 2rem;
+    position: relative;
 
     @include useScreen("tablet-sm") {
       @include flex(row, space-between, center);
@@ -43,32 +43,32 @@
 
   &-content {
     @include flex(column, space-between, center);
-    width: 100%;
     gap: 1.5rem;
+    width: 100%;
 
     @include useScreen("mobile-xl") {
       align-items: flex-start;
     }
 
     h2 {
-      font-weight: 500;
-      line-height: 3rem;
       -webkit-text-fill-color: var(--color--light-blue-2);
       -webkit-text-stroke: 1px var(--color--light-blue-3);
+      font-weight: 500;
+      line-height: 3rem;
     }
 
     h1 {
+      -webkit-text-fill-color: var(--color--light-blue-3);
+      -webkit-text-stroke: 1px var(--color--light-blue-4);
       font-weight: 700;
       line-height: 3rem;
       text-transform: uppercase;
-      -webkit-text-fill-color: var(--color--light-blue-3);
-      -webkit-text-stroke: 1px var(--color--light-blue-4);
     }
 
     h4 {
-      align-self: flex-start;
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke: 1px var(--color--blue-grey-2);
+      align-self: flex-start;
     }
 
     p {
@@ -202,20 +202,36 @@
 
 .section-header {
   @include flex(column, center, center);
-  width: 100%;
   gap: 1rem;
+  width: 100%;
 
   @include useScreen("mobile-lg") {
     @include flex(row, space-between, flex-start);
+    width: 90%;
+  }
+  @include useScreen("mobile-xl") {
+    width: 80%;
+  }
+  @include useScreen("tablet-sm") {
+    width: 70%;
+  }
+  @include useScreen("tablet-md") {
+    width: 60%;
   }
   @include useScreen("tablet-lg") {
     width: 50%;
   }
 
+  &__column-reverse {
+    @media screen and (max-width: 479px) {
+      flex-direction: column-reverse;
+    }
+  }
+
   h2 {
-    text-transform: uppercase;
     -webkit-text-fill-color: var(--color--light-blue-3);
     -webkit-text-stroke: 1px var(--color--light-blue-4);
+    text-transform: uppercase;
   }
 
   button {
@@ -237,9 +253,9 @@
   gap: 3rem;
 
   &-cards {
-    width: 100%;
-    @include flex(column, center, center);
     gap: 1.2rem;
+    @include flex(column, center, center);
+    width: 100%;
 
     @include useScreen("tablet-lg") {
       flex-direction: row;
@@ -276,6 +292,7 @@
     }
 
     &__content {
+      transform-style: preserve-3d;
       z-index: 1;
       position: relative;
       position: relative;
@@ -285,7 +302,6 @@
       padding: 8rem 0;
       text-align: center;
       transition: transform 3s;
-      transform-style: preserve-3d;
 
       &:hover {
         transform: rotateY(0.5turn);
@@ -295,15 +311,15 @@
     &__front,
     &__back {
       @include flex(column, center, center);
+      backface-visibility: hidden;
+      gap: 0.5rem;
+      transform-style: preserve-3d;
       position: absolute;
       top: 0;
       right: 0;
+
       bottom: 0;
       left: 0;
-      gap: 0.5rem;
-
-      backface-visibility: hidden;
-      transform-style: preserve-3d;
     }
 
     &__front {
@@ -322,6 +338,7 @@
     }
 
     &__front::before {
+      --spacer: 1rem;
       position: absolute;
       top: var(--spacer);
       right: var(--spacer);
@@ -330,7 +347,6 @@
       border: 3px solid currentColor;
       content: "";
       transform: var(--level-one);
-      --spacer: 1rem;
     }
 
     &__title {
@@ -379,8 +395,8 @@
 
 .devices {
   @include flex(column, center, center);
-  padding: 4rem;
   gap: 4rem;
+  padding: 4rem;
 
   @include useScreen("tablet-lg") {
     gap: 2rem;
@@ -411,63 +427,6 @@
     @include useScreen("tablet-lg") {
       @include flex(row, space-between, center);
       gap: 12rem;
-    }
-  }
-
-  &__hint {
-    @include flex(column, center, center);
-    position: relative;
-    align-self: end;
-    width: 60%;
-    gap: 1.5rem;
-
-    @include useScreen("mobile-lg") {
-      @include flex(row, space-between, flex-start);
-      width: 20rem;
-    }
-
-    &-prompt {
-      align-self: end;
-      text-align: left;
-    }
-
-    &-comment {
-      p {
-        font-size: 1rem;
-      }
-      align-self: start;
-      text-align: right;
-      svg {
-        padding-right: 0.12rem;
-        padding-bottom: 0.12rem;
-      }
-    }
-
-    &-onHover {
-      position: relative;
-      cursor: pointer;
-      &:hover div,
-      &:hover .devices__hint-onHoverVisible {
-        display: block;
-      }
-    }
-
-    &-onHoverVisible {
-      display: none;
-      position: absolute;
-      top: 5rem;
-      left: -0.1rem;
-      padding: 1rem;
-      background: var(--color--light-blue-1);
-      @include box-shadow-2(var(--color--grey-opacity));
-    }
-  }
-}
-[data-theme="dark"] .devices {
-  &__hint {
-    &-onHoverVisible {
-      background: var(--color--grey);
-      @include box-shadow-2(var(--color--grey-opacity));
     }
   }
 }

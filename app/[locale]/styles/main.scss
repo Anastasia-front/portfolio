@@ -188,9 +188,9 @@ main {
 
 .page-headings {
   @include flex(column, flex-start, flex-start);
+  gap: 0.5rem;
   max-width: 100vw;
   padding-bottom: 2rem;
-  gap: 0.5rem;
 
   &__align-center {
     align-items: center;
@@ -223,6 +223,7 @@ main {
 
   h1,
   h2 {
+    -webkit-text-fill-color: transparent;
     background-image: linear-gradient(
       to right,
       var(--color--light-blue-4),
@@ -232,13 +233,13 @@ main {
       var(--color--light-blue-4)
     );
     background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   h3,
   h4,
   h5,
   h6 {
+    -webkit-text-fill-color: transparent;
     background-image: linear-gradient(
       to right,
       var(--color--orange-2),
@@ -248,7 +249,6 @@ main {
       var(--color--orange-2)
     );
     background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 }
 [data-theme="dark"] .page-headings {
@@ -296,9 +296,9 @@ main {
 
 .logo {
   &__img {
+    object-fit: contain;
     border: 1px solid var(--color--light-brown);
     border-radius: var(--border-radius--rounded);
-    object-fit: contain;
   }
 
   @include useOnHover {
@@ -350,18 +350,18 @@ main {
 }
 
 .icon {
+  fill: currentColor;
   width: 12px;
   height: 12px;
-  fill: currentColor;
 }
 
 .animated-icon {
+  place-content: center;
   display: grid;
   width: 20px;
   height: 20px;
   cursor: pointer;
   background: transparent;
-  place-content: center;
   > * {
     transition: 0.4s;
   }
@@ -409,8 +409,8 @@ main {
     }
   }
   &.active {
-    display: grid;
     place-content: center;
+    display: grid;
     .icon {
       position: relative;
       background: transparent;
@@ -481,6 +481,7 @@ main {
 
   &-background {
     @include flex(column, center, center);
+    gap: 1rem;
     z-index: 102;
     position: fixed;
     top: 20%;
@@ -492,7 +493,6 @@ main {
       var(--border-radius--md);
     overflow: auto;
     background: var(--color--peach);
-    gap: 1rem;
 
     @include useScreen("mobile-lg") {
       top: 20%;
@@ -519,9 +519,6 @@ main {
         right: 8%;
         width: 64%;
         height: 64vh;
-      }
-      @include useScreen("tablet-sm") {
-        // padding-top: 14rem;
       }
     }
   }
@@ -569,8 +566,8 @@ main {
 
 .loading {
   @include flex(column, center, center);
-  padding: 3rem 0;
   gap: 1rem;
+  padding: 3rem 0;
 
   h1,
   h2,
@@ -593,9 +590,9 @@ main {
 }
 
 .icon {
+  fill: currentColor;
   width: 12px;
   height: 12px;
-  fill: currentColor;
 }
 
 .cursor-not-allowed {
@@ -630,7 +627,82 @@ main {
 
 .center {
   @include flex(column, center, center);
+  gap: 1rem;
   padding: 30vh 25vw;
   text-align: center;
-  gap: 1rem;
+}
+
+.block-hint {
+  @include flex(column, center, center);
+  gap: 1.5rem;
+  position: relative;
+  align-self: end;
+  width: 60%;
+
+  @include useScreen("mobile-lg") {
+    @include flex(row, space-between, flex-start);
+    width: 20rem;
+  }
+
+  svg {
+    min-width: 16px;
+    min-height: 16px;
+  }
+
+  &__prompt {
+    align-self: end;
+    text-align: left;
+  }
+
+  &__comment {
+    p {
+      font-size: 1rem;
+    }
+    align-self: start;
+    text-align: right;
+    svg {
+      padding-right: 0.12rem;
+      padding-bottom: 0.12rem;
+    }
+  }
+
+  &__onHover {
+    position: relative;
+    cursor: pointer;
+    &:hover div,
+    &:hover .block-hint__onHoverVisible {
+      display: block;
+    }
+  }
+
+  &__onHoverVisible {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    left: -0.1rem;
+    padding: 1rem;
+    background: var(--color--light-blue-1);
+    @include box-shadow-2(var(--color--grey-opacity));
+  }
+
+  &__for-one {
+    @media screen and (max-width: 479px) {
+      align-items: start;
+      gap: 0.5rem;
+    }
+  }
+
+  &__without-margin {
+    margin: 0;
+  }
+
+  &__self-start {
+    align-self: start;
+  }
+}
+[data-theme="dark"] .block-hint {
+  &__onHoverVisible {
+    background: var(--color--grey);
+    @include box-shadow-2(var(--color--grey-opacity));
+  }
 }

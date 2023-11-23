@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { BsInfoCircle } from "react-icons/bs";
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -41,6 +42,9 @@ export function Features() {
             lang={lang}
           />
         </div>
+        <p className="block-hint  block-hint__for-one block-hint__self-start">
+          <BsInfoCircle /> {i("subtitle")}
+        </p>
 
         <div className="features-cards">
           {threeKeys.map((key, index) => {

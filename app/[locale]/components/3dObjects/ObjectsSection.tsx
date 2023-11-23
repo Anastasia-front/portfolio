@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { BsFillInfoCircleFill, BsFillInfoSquareFill } from "react-icons/bs";
 
 import { useTranslations } from "next-intl";
-import { BsFillInfoCircleFill, BsFillInfoSquareFill } from "react-icons/bs";
 
 import { ButtonLink } from "@/components";
 import { Dynamic } from "./Dynamic";
@@ -28,7 +28,7 @@ export function ObjectsSection() {
   return (
     <section className="container__box-shadow" id="tools">
       <div className="devices container">
-        <div className="section-header">
+        <div className="section-header section-header__column-reverse">
           <ButtonLink
             text={b("devices")}
             hover="true"
@@ -37,16 +37,16 @@ export function ObjectsSection() {
           />
           <h2>{i("heading")}</h2>
         </div>
-        <div className="devices__hint devices__hint-onHover">
-          <p className="devices__subtitle  devices__hint-prompt">
+        <div className="block-hint block-hint__onHover">
+          <p className="block-hint__prompt">
             {i("subtitle")} <BsFillInfoCircleFill />
           </p>
-          <p className="devices__hint-comment">
+          <p className="block-hint__comment">
             <BsFillInfoSquareFill /> {i("commentToSubtitle")}
           </p>
-          <div className="devices__hint-onHoverVisible">
-            <span className="devices__hint-prompt">{i("prompt")}</span>{" "}
-            <span className="devices__hint-comment">{i("comment")}</span>
+          <div className="block-hint__onHoverVisible">
+            <span className="block-hint__prompt">{i("prompt")}</span>{" "}
+            <span className="block-hint__comment">{i("comment")}</span>
           </div>
         </div>
 
@@ -58,8 +58,8 @@ export function ObjectsSection() {
             <h3>{i("macBook")}</h3>
           </div>
           <div>
-            <h4>{i("inFuture")}</h4>
             <h3>{i("mac")}</h3>
+            <h4>{i("inFuture")}</h4>
           </div>
         </div>
 
@@ -67,7 +67,7 @@ export function ObjectsSection() {
           <Dynamic componentName="MacBookCanvas" />
           <Dynamic componentName="MacCanvas" />
         </div>
-        <span className="devices__hint-comment">{i("summary")}</span>
+        <span className="block-hint__comment">{i("summary")}</span>
       </div>
     </section>
   );
