@@ -46,8 +46,11 @@ export function FormPortal() {
             >
               <Close />
             </button>
-            <h3 className="form-title">{t("title")}</h3>
+            <div className="form-content">
+               <h3 className="form-title">{t("title")}</h3>
             <Form />
+            </div>
+           
           </div>
         </div>
       </Portal>

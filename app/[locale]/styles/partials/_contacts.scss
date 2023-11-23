@@ -400,16 +400,15 @@
   }
 
   &-background {
-    @include flex(column, center, center);
     z-index: 102;
     position: relative;
     width: 80vw;
     height: max-content;
+    max-height: 80vh;
     padding: 2rem;
     overflow: auto;
     border-radius: var(--border-radius--lg) 0 0 var(--border-radius--lg);
     background: var(--color--bg-light);
-    gap: 2rem;
 
     @include useScreen("tablet-sm") {
       padding: 3rem;
@@ -435,6 +434,11 @@
         #fca26e 100%
       );
     }
+  }
+
+  &-content {
+    @include flex(column, center, center);
+    gap: 2rem;
   }
 
   &-title {
