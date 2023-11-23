@@ -2,14 +2,12 @@ import { ForwardedRef, forwardRef, memo } from "react";
 
 import Image from "next/image";
 
-import { Theme } from "@/constants";
 
 interface Props {
   icon?: JSX.Element;
   imgUrl?: string;
   className?: string;
   onClick?: () => void;
-  theme?: Theme;
   title?: string;
   alt: string;
 }
@@ -22,7 +20,6 @@ export const ButtonSwitcher = memo(
         className,
         onClick,
         icon,
-        theme = "dark",
         title = "",
         alt,
       }: Props,

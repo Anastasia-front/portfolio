@@ -28,7 +28,6 @@
   },
   "include": [
     "next-env.d.ts",
-    "typings.d.ts",
     "app/[locale]/**/*.ts",
     "app/[locale]/**/*.tsx",
     ".next/types/**/*.ts"
