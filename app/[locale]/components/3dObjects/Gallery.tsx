@@ -102,7 +102,7 @@ const Gallery = () => {
   return (
     <Canvas
       dpr={[2, 2]}
-      camera={{ fov: 70, position: [0, 2, 15] }}
+      camera={{ fov: 70, position: [0, 2, -55] }}
       style={{ height: "55vh" }}
     >
       <color attach="background" args={[firstColor]} />
@@ -126,7 +126,7 @@ const Gallery = () => {
           />
         </mesh>
       </group>
-      <Environment preset="city" />
+      <Environment preset="apartment" />
     </Canvas>
   );
 };
@@ -152,10 +152,10 @@ function Frames({
         const parent = clicked.current.parent ?? null;
 
         if (parent) {
-          parent.localToWorld(p.set(0, GOLDEN_RATIO / 2, 4));
+          parent.localToWorld(p.set(0, GOLDEN_RATIO / 2, 3.2));
           parent.getWorldQuaternion(q);
         } else {
-          p.set(0, 0, 0);
+          p.set(0, 0, 5.5);
           q.identity();
         }
       } else {
