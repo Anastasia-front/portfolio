@@ -228,6 +228,12 @@
     }
   }
 
+  &__container {
+    @media screen and (min-width: 1200px) {
+      width: 50% !important;
+    }
+  }
+
   h2 {
     -webkit-text-fill-color: var(--color--light-blue-3);
     -webkit-text-stroke: 1px var(--color--light-blue-4);

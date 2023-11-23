@@ -27,7 +27,7 @@ export function GallerySection() {
 
   return (
     <section className="gallery-section">
-      <div className="section-header container">
+      <div className="section-header container section-header__container">
         <h2>{i("title")}</h2>
         <ButtonLink
           text={b("gallery")}
