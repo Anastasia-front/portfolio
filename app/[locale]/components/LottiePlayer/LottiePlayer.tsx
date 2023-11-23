@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 import lottie from "lottie-web";
 
-interface LottiePlayerProps {
+interface Props {
   src: string;
   background?: string;
   speed?: number;
@@ -20,7 +20,7 @@ export function LottiePlayer({
   className = "",
   loop = true,
   autoplay = true,
-}: LottiePlayerProps) {
+}: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

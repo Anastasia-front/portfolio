@@ -3,13 +3,13 @@
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
-interface ButtonProps {
+interface Props {
   text: string;
   href: string;
   hover?: string;
 }
 
-export function ButtonScroll({ text, href, hover }: ButtonProps) {
+export function ButtonScroll({ text, href, hover }: Props) {
   return (
     <motion.div
       className="button"

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { Theme } from "@/constants";
 
-interface ButtonProps {
+interface Props {
   icon?: JSX.Element;
   imgUrl?: string;
   className?: string;
@@ -25,7 +25,7 @@ export const ButtonSwitcher = memo(
         theme = "dark",
         title = "",
         alt,
-      }: ButtonProps,
+      }: Props,
       ref: ForwardedRef<HTMLDivElement>
     ) => {
       return (

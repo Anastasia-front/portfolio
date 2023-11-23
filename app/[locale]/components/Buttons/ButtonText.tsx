@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 
-interface ButtonProps {
+interface Props {
   text: string;
   onClick?: () => void;
   hover?: string;
 }
 
-export function ButtonText({ text, onClick, hover }: ButtonProps) {
+export function ButtonText({ text, onClick, hover }: Props) {
   return (
     <motion.button
       className="button"

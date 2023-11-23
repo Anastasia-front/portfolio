@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-interface ButtonProps {
+interface Props {
   text: string;
   href: string;
   lang: "en" | "uk";
@@ -11,7 +11,7 @@ interface ButtonProps {
   hover?: string;
 }
 
-export function ButtonLink({ text, href, lang, onClick, hover }: ButtonProps) {
+export function ButtonLink({ text, href, lang, onClick, hover }: Props) {
   return (
     <motion.button
       className="button"

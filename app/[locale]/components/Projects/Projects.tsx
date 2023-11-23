@@ -10,11 +10,11 @@ import { ProjectItem } from "@/components";
 import { Project } from "@/constants";
 import { gridVariants } from "@/utils";
 
-interface ProjectsProps {
+interface Props {
   projects: Project[];
 }
 
-export function Projects({ projects }: ProjectsProps) {
+export function Projects({ projects }: Props) {
   const router = useRouter();
 
   // memoize portfolio item to prevent re-render

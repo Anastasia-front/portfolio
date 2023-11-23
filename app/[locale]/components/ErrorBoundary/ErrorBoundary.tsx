@@ -5,7 +5,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { Loader } from "@/components";
 import { useTranslations } from "next-intl";
 
-type ErrorBoundaryProps = {
+type Props = {
   children: ReactNode;
 };
 
@@ -13,7 +13,7 @@ type ErrorBoundaryState = {
   hasError: boolean;
 };
 
-export function ErrorBoundary({ children }: ErrorBoundaryProps) {
+export function ErrorBoundary({ children }: Props) {
   const t = useTranslations("error");
 
   const [errorState, setErrorState] = useState<ErrorBoundaryState>({

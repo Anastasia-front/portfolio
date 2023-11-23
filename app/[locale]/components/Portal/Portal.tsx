@@ -12,12 +12,12 @@ const createWrapperElement = (wrapperId: string) => {
   return wrapperElement;
 };
 
-interface PortalProps {
+interface Props {
   children: ReactElement;
   wrapperId: string;
 }
 
-export function Portal({ children, wrapperId }: PortalProps) {
+export function Portal({ children, wrapperId }: Props) {
   const [wrapperElement, setWrapperElement] = useState<HTMLElement>();
   useLayoutEffect(() => {
     let el = document.getElementById(wrapperId);

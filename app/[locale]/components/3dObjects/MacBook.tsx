@@ -5,11 +5,11 @@ import { useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
-interface MacBookProps {
+interface Props {
   position?: number[];
 }
 
-export function MacBook(props: MacBookProps) {
+export function MacBook(props: Props) {
   const gltf = useGLTF("./images/3d/macBook/scene.gltf");
   const macBookRef = useRef<THREE.Object3D>(null);
   const [direction, setDirection] = useState<number>(-1);
