@@ -136,9 +136,14 @@
     color: var(--color--white);
     position: relative;
     padding-top: 1rem;
+    text-align: center;
 
     a {
       color: var(--color--light-blue-1);
+    }
+
+    span:last-child {
+      text-transform: uppercase;
     }
 
     &::before {
@@ -207,7 +212,7 @@
     color: var(--color--blue-grey-2);
 
     a {
-      color: var(--color--blue-grey-3);
+      color: var(--color--orange-3);
     }
 
     &::before {

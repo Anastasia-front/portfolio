@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 
 import { Contacts, Logo, Navigation } from "@/components";
 
+const cv = process.env.NEXT_PUBLIC_CV_LINK;
+
 interface Props {
   logo?: string;
   title?: string;
@@ -40,6 +42,13 @@ export function Footer({ title, description }: Props) {
     },
   };
 
+  const currentDate = new Date();
+
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = new Intl.DateTimeFormat("en-US", {
+    month: "long",
+  }).format(currentDate);
+
   return (
     <footer id="footer">
       <motion.div
@@ -57,8 +66,10 @@ export function Footer({ title, description }: Props) {
         <Contacts location="footer" />
 
         <p className="footer__bottom">
-          <span> © {new Date().getFullYear()}</span>
-          <a href="#">
+          <span>
+            {currentMonth}, {currentYear} ©
+          </span>
+          <a href={cv} target="_blank">
             {t("first")} {i("first")} {i("last")}
           </a>
           <span>
