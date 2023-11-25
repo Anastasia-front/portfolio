@@ -1,6 +1,5 @@
 "use client";
 
-import { BsArrowsExpandVertical } from "react-icons/bs";
 
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
@@ -8,7 +7,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -89,10 +87,9 @@ export function Progress() {
   return (
     <Swiper
       scrollbar={{
-        hide: true,
+        hide: false,
       }}
       grabCursor={true}
-      pagination={true}
       modules={[Scrollbar]}
     >
       <SwiperSlide>
@@ -116,15 +113,6 @@ export function Progress() {
           className="about-achievements__image"
         />
       </SwiperSlide>
-      <div className="slider-arrows">
-        <BsArrowsExpandVertical />
-        <BsArrowsExpandVertical />
-        <BsArrowsExpandVertical />
-        <BsArrowsExpandVertical />
-        <BsArrowsExpandVertical />
-        <BsArrowsExpandVertical />
-        <BsArrowsExpandVertical />
-      </div>
     </Swiper>
   );
 }

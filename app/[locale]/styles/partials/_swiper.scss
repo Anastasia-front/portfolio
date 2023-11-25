@@ -65,13 +65,8 @@
 }
 
 .swiper-scrollbar {
-  background: var(--color--light-blue-4);
+  background: var(--color--light-blue-3) !important;
 }
 [data-theme="dark"] .swiper-scrollbar {
-  background: var(--color--orange-2);
-}
-
-.slider-arrows{
-  @include flex (row,center,center);
-  gap: 2rem;
+  background: var(--color--orange-2) !important;
 }
