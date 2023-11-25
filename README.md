@@ -38,11 +38,11 @@ The project was implemented using the following technologies and libraries:
 </p>
 </li>
 <li>
-<p>various sliders
+<p>adaptive layout
 </p>
 </li>
 <li>
-<p>adaptive layout
+<p>various sliders
 </p>
 </li>
 <li>
@@ -54,15 +54,15 @@ The project was implemented using the following technologies and libraries:
 </p>
 </li>
 <li>
+<p>localization and internationalization (L10n and i18n)
+</p>
+</li>
+<li>
 <p>sending information using forms (validation is present)
 </p>
 </li>
 <li>
 <p>easy content management (find all text in the en(uk).json files)
-</p>
-</li>
-<li>
-<p>localization and internationalization (L10n and i18n)
 </p>
 </li>
 </ul>
