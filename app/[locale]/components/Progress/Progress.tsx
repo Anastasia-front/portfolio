@@ -1,15 +1,22 @@
 "use client";
 
+import { BsArrowsExpandVertical } from "react-icons/bs";
+
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import "swiper/css";
-import "swiper/css/effect-flip";
 import "swiper/css/pagination";
-import { EffectFlip, Navigation, Pagination } from "swiper/modules";
+import "swiper/css/scrollbar";
+import { Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 import enDarkA1 from "@/assets/images/achievements/en-dark-a1.png";
 import enDarkA2 from "@/assets/images/achievements/en-dark-a2.png";
@@ -81,10 +88,12 @@ export function Progress() {
 
   return (
     <Swiper
-      effect={"flip"}
+      scrollbar={{
+        hide: true,
+      }}
       grabCursor={true}
       pagination={true}
-      modules={[EffectFlip, Pagination, Navigation]}
+      modules={[Scrollbar]}
     >
       <SwiperSlide>
         <Image
@@ -107,6 +116,15 @@ export function Progress() {
           className="about-achievements__image"
         />
       </SwiperSlide>
+      <div className="slider-arrows">
+        <BsArrowsExpandVertical />
+        <BsArrowsExpandVertical />
+        <BsArrowsExpandVertical />
+        <BsArrowsExpandVertical />
+        <BsArrowsExpandVertical />
+        <BsArrowsExpandVertical />
+        <BsArrowsExpandVertical />
+      </div>
     </Swiper>
   );
 }

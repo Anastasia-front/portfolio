@@ -63,3 +63,15 @@
 [data-theme="dark"] .swiper-cube .swiper-cube-shadow:before {
   background: var(--color--light-brown);
 }
+
+.swiper-scrollbar {
+  background: var(--color--light-blue-4);
+}
+[data-theme="dark"] .swiper-scrollbar {
+  background: var(--color--orange-2);
+}
+
+.slider-arrows{
+  @include flex (row,center,center);
+  gap: 2rem;
+}

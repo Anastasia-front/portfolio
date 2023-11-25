@@ -117,18 +117,16 @@
     &__slider {
       max-width: 272px;
       height: auto;
+      width: 100%;
+    }
 
-      &-certificate {
+    &__slider-progress {
+      height: auto;
+      width: 100%;
+      max-width: 70vw;
+
+      img {
         width: 100%;
-        @include useScreen("mobile-md") {
-          padding-left: 2rem;
-        }
-        @include useScreen("mobile-xl") {
-          padding-left: 4rem;
-        }
-        @include useScreen("tablet-sm") {
-          padding-left: 6rem;
-        }
       }
     }
 
