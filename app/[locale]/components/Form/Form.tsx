@@ -37,7 +37,11 @@ interface FormData {
   message: string;
 }
 
-export function Form() {
+interface Props {
+  onClick: () => void;
+}
+
+export function Form({ onClick }: Props) {
   const t = useTranslations("contacts.form");
 
   const subject = t("subject");
@@ -116,6 +120,12 @@ export function Form() {
     }
   };
 
+  const handleSubmitClick = () => {
+    setTimeout(() => {
+      onClick();
+    }, 4000);
+  };
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -153,6 +163,7 @@ export function Form() {
         type="submit"
         className={`contact__submit ${buttonClasses}`}
         disabled={loading || formStatus === "error" || formStatus === "success"}
+        onClick={handleSubmitClick}
       >
         {buttonContent}
       </button>
