@@ -17,20 +17,14 @@ export function Navigation({ location = "", onClick }: Props) {
   const pathname = usePathname();
   const array = pathname.split("/");
 
-  let lang;
-
-  if (array.length < 3 && array[1] !== "uk") {
-    lang = "";
-  } else {
-    lang = "uk";
-  }
+  const lang = array[1];
 
   const routesAndMenus = [
     { route: `/${lang}`, menuIndex: 0 },
-    { route: `/${lang === "uk" ? lang + "/" : lang}about`, menuIndex: 1 },
-    { route: `/${lang === "uk" ? lang + "/" : lang}skills`, menuIndex: 2 },
-    { route: `/${lang === "uk" ? lang + "/" : lang}projects`, menuIndex: 3 },
-    { route: `/${lang === "uk" ? lang + "/" : lang}contacts`, menuIndex: 4 },
+    { route: `/${lang}/about`, menuIndex: 1 },
+    { route: `/${lang}/skills`, menuIndex: 2 },
+    { route: `/${lang}/projects`, menuIndex: 3 },
+    { route: `/${lang}/contacts`, menuIndex: 4 },
   ];
 
   const activeLink = routesAndMenus.find(

@@ -3,6 +3,5 @@ export * from "./generateText";
 export * from "./getButtonClass";
 export * from "./getButtonContent";
 export * from "./getLocaleStorageItem";
-export * from "./navigation";
 export * from "./sendEmail";
 export * from "./sendMessageToTelegram";

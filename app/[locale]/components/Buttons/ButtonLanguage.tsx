@@ -3,12 +3,11 @@
 import { useEffect, useMemo, useState } from "react";
 
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import UA from "@/assets/svg/ukraine.svg";
 import US from "@/assets/svg/united-states.svg";
-
-import { Link } from "@/utils";
 
 import { ButtonSwitcher } from "./ButtonSwitcher";
 
@@ -21,6 +20,18 @@ export const ButtonLanguage = () => {
   const pathname = usePathname();
 
   const [lang, setLang] = useState<"en" | "uk">("en");
+  const array = pathname.split("/");
+
+  const translatedPage = () => {
+    if (array[1] === "uk") {
+      array.splice(1, 1, "en");
+      return array.join("/");
+    } else {
+      array.splice(1, 1, "uk");
+      return array.join("/");
+    }
+  };
+  const translatedPageString = translatedPage();
 
   const icon = useMemo(() => {
     const IconUA = <UA />;
@@ -49,7 +60,7 @@ export const ButtonLanguage = () => {
   };
 
   return (
-    <Link href="/" locale={lang}>
+    <Link href={translatedPageString}>
       <ButtonSwitcher
         className={isVisible ? "visible" : "invisible"}
         alt={a("svgLang")}

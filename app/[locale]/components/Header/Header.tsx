@@ -19,7 +19,7 @@ export function Header() {
   const { handleFormOpen, isMenuOpen, handleMenuClose } = context;
 
   const pathname = usePathname();
-  const isHeaderFixed = pathname === "/" || pathname === "/uk";
+  const isHeaderFixed = pathname === "/en" || pathname === "/uk";
   const headerClassName = isHeaderFixed ? "fixed-header" : "";
 
   const { lockScroll, unlockScroll } = useScrollLock();
