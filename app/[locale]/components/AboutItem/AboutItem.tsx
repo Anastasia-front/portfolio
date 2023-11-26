@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
-import React from "react";
+import { titleVariants } from "@/utils";
 
 interface Props {
   number: string;
@@ -11,26 +11,13 @@ interface Props {
 }
 
 export function AboutItem({ number, title, description }: Props) {
-  const listItem = React.useRef(null);
-
-  const scrollYProgress: any = useScroll({
-    target: listItem,
-    offset: ["start end", "end start"],
-  }).scrollYProgress;
-
-  const y = useTransform(scrollYProgress, [0, 0.5], [500, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.5, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
-
   return (
     <motion.li
-      ref={listItem}
       className="about-item"
-      style={{
-        y,
-        scale,
-        opacity,
-      }}
+      variants={titleVariants("first")}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="about-item__title">
         <span className="about-item__number">{number}</span>

@@ -27,7 +27,6 @@ export const navVariants: Variants = {
       type: "spring",
       stiffness: 200,
       damping: 14,
-
       delay: 1.2,
     },
   },
