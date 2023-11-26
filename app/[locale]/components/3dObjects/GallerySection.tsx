@@ -5,7 +5,11 @@ import { BsInfoCircle } from "react-icons/bs";
 
 import { useTranslations } from "next-intl";
 
+import { motion } from "framer-motion";
+
 import { ButtonLink } from "@/components";
+import { opacityVariants } from "@/utils";
+
 import { Dynamic } from "./Dynamic";
 
 export function GallerySection() {
@@ -26,7 +30,13 @@ export function GallerySection() {
   }, []);
 
   return (
-    <section className="gallery-section">
+    <motion.section
+      className="gallery-section"
+      variants={opacityVariants("first")}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+    >
       <div className="section-header container section-header__container">
         <h2>{i("title")}</h2>
         <ButtonLink
@@ -40,6 +50,6 @@ export function GallerySection() {
         <BsInfoCircle /> {i("subtitle")}
       </p>
       <Dynamic componentName="Gallery" />
-    </section>
+    </motion.section>
   );
 }

@@ -7,6 +7,10 @@ import useFormPersist from "react-hook-form-persist";
 
 import { useTranslations } from "next-intl";
 
+import { motion } from "framer-motion";
+
+import { opacityVariants } from "@/utils";
+
 import { FormSchema, InputField } from "@/components";
 import {
   getButtonClasses,
@@ -127,11 +131,15 @@ export function Form({ onClick }: Props) {
   };
 
   return (
-    <form
+    <motion.form
       onSubmit={handleSubmit(onSubmit)}
       className="contact__form"
       action={formAction}
       method="post"
+      variants={opacityVariants("first")}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
     >
       <div className="contact__inputs">
         <InputField
@@ -167,6 +175,6 @@ export function Form({ onClick }: Props) {
       >
         {buttonContent}
       </button>
-    </form>
+    </motion.form>
   );
 }

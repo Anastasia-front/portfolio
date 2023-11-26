@@ -22,7 +22,7 @@ export function Footer({ title, description }: Props) {
 
   const { theme } = useTheme();
 
-  const FooterVariants = {
+  const footerVariants = {
     hidden: {
       opacity: 0,
       scaleY: 0.3,
@@ -53,7 +53,7 @@ export function Footer({ title, description }: Props) {
     <footer id="footer">
       <motion.div
         className="footer"
-        variants={FooterVariants}
+        variants={footerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}

@@ -5,7 +5,11 @@ import { BsFillInfoCircleFill, BsFillInfoSquareFill } from "react-icons/bs";
 
 import { useTranslations } from "next-intl";
 
+import { motion } from "framer-motion";
+
 import { ButtonLink } from "@/components";
+import { opacityVariants } from "@/utils";
+
 import { Dynamic } from "./Dynamic";
 
 export function ObjectsSection() {
@@ -26,7 +30,14 @@ export function ObjectsSection() {
   }, []);
 
   return (
-    <section className="container__box-shadow" id="tools">
+    <motion.section
+      className="container__box-shadow"
+      id="tools"
+      variants={opacityVariants("first")}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+    >
       <div className="devices container">
         <div className="section-header section-header__column-reverse">
           <ButtonLink
@@ -69,6 +80,6 @@ export function ObjectsSection() {
         </div>
         <span className="block-hint__comment">{i("summary")}</span>
       </div>
-    </section>
+    </motion.section>
   );
 }

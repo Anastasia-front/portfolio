@@ -4,11 +4,14 @@ import { useTranslations } from "next-intl";
 import { Oswald } from "next/font/google";
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+
 import decoration from "@/assets/images/hero/decoration.png";
 import hero from "@/assets/images/hero/hero.jpg";
 
 import { ButtonScroll } from "@/components";
 import { useScreenQuery } from "@/hooks";
+import { opacityVariants } from "@/utils";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -25,7 +28,12 @@ export function Hero() {
   const { isScreenMobileLg } = useScreenQuery();
 
   return (
-    <>
+    <motion.div
+      variants={opacityVariants("first")}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+    >
       <section className="container__box-shadow">
         <div className="hero-container container">
           <div className="hero-content">
@@ -40,18 +48,8 @@ export function Hero() {
             <p>{i("description")}</p>
 
             <div className="hero-buttons">
-              <ButtonScroll
-                href="features"
-                text={b("hero")}
-                // onClick={() => handleClick("features")}
-                hover="true"
-              />
-              <ButtonScroll
-                href="tools"
-                text={b("tools")}
-                // onClick={() => handleClick("tools")}
-                hover="true"
-              />
+              <ButtonScroll href="features" text={b("hero")} hover="true" />
+              <ButtonScroll href="tools" text={b("tools")} hover="true" />
             </div>
           </div>
           <div className="hero-image">
@@ -67,6 +65,6 @@ export function Hero() {
           </div>
         </div>
       </section>
-    </>
+    </motion.div>
   );
 }

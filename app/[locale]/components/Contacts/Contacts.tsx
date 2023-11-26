@@ -1,8 +1,5 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import Link from "next/link";
-
 import {
   BsChatDotsFill,
   BsDiscord,
@@ -15,7 +12,13 @@ import {
   BsWhatsapp,
 } from "react-icons/bs";
 
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+
+import { motion } from "framer-motion";
+
 import { threeKeys } from "@/constants";
+import { opacityVariants } from "@/utils";
 
 function getIconComponent(iconName: string) {
   switch (iconName) {
@@ -54,7 +57,13 @@ export function Contacts({ location }: Props) {
   const classNameBlock = location === "footer" ? "" : "info";
 
   return (
-    <div className={`${classNameBlock} ${className}-contacts`}>
+    <motion.div
+      className={`${classNameBlock} ${className}-contacts`}
+      variants={opacityVariants("first")}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+    >
       <p className={`${className}-contacts__title`}>{i("title")} </p>
       <ul className={`${className}-icons`}>
         {threeKeys.map((firstBlock) => (
@@ -98,6 +107,6 @@ export function Contacts({ location }: Props) {
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 }

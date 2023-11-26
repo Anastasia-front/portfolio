@@ -6,9 +6,12 @@ import { BsInfoCircle } from "react-icons/bs";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+
 import { ButtonLink } from "@/components";
 import { threeKeys } from "@/constants";
 import { useScreenQuery } from "@/hooks";
+import { opacityVariants } from "@/utils";
 
 export function Features() {
   const i = useTranslations("home.features");
@@ -31,7 +34,14 @@ export function Features() {
   }, []);
 
   return (
-    <section className="container__box-shadow" id="features">
+    <motion.section
+      className="container__box-shadow"
+      id="features"
+      variants={opacityVariants("first")}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+    >
       <div className="features container">
         <div className="section-header">
           <h2>{i("title")}</h2>
@@ -86,6 +96,6 @@ export function Features() {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 
 import { fadeIn, opacityVariants } from "@/utils";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -22,8 +21,6 @@ import contentImg5 from "@/assets/images/skills/content/5.jpg";
 import contentImg6 from "@/assets/images/skills/content/6.jpg";
 import contentImg7 from "@/assets/images/skills/content/7.jpg";
 import Image from "next/image";
-
-// import required modules
 
 const images = [
   contentImg1,
