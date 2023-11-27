@@ -23,9 +23,32 @@ import "./styles/main.scss";
 
 const oxygen = Oxygen({ subsets: ["latin"], weight: ["400"] });
 
+export const BASE_URL =
+  process.env.NEXT_PUBLIC_BASE_URL_VERCEL ||
+  "https://portfolio-anastasia-front.vercel.app/";
+export const TITLE = process.env.NEXT_PUBLIC_TITLE;
+export const DESCRIPTION = process.env.NEXT_PUBLIC_DESCRIPTION;
+
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Information about Prysiazhnaia Anastasiia",
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/",
+    siteName: TITLE,
+    type: "website",
+    images: "/op-image.png",
+  },
+  metadataBase: new URL(BASE_URL),
+  alternates: {
+    canonical: BASE_URL,
+    languages: {
+      en: "/en",
+      uk: "/uk",
+    },
+  },
+  robots: "all",
 };
 
 export default async function RootLayout({

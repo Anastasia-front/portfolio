@@ -36,8 +36,8 @@ export const ButtonLanguage = () => {
   const icon = useMemo(() => {
     const IconUA = <UA />;
     const IconUS = <US />;
-    return pathname === "/uk" ? IconUA : IconUS;
-  }, [pathname]);
+    return array[1] === "uk" ? IconUS : IconUA;
+  }, [array]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -49,12 +49,12 @@ export const ButtonLanguage = () => {
     setIsVisible(false);
     setTimeout(() => {
       setIsVisible(true);
-      if (pathname === "/uk") {
-        setLang("en");
-        window.localStorage.setItem("lang", "en");
-      } else {
+      if (array[1] === "uk") {
         setLang("uk");
         window.localStorage.setItem("lang", "uk");
+      } else {
+        setLang("en");
+        window.localStorage.setItem("lang", "en");
       }
     }, 300);
   };

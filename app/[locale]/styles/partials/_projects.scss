@@ -101,7 +101,7 @@
 
   &__header {
     position: relative;
-    height: 55vh;
+    height: 45vh;
     @include useScreen("tablet-sm") {
       height: 80vh;
       margin-bottom: 3rem;
@@ -142,7 +142,7 @@
   .banner {
     z-index: 9;
     position: absolute;
-    bottom: 0;
+    bottom: 3rem;
     flex-direction: column;
     width: 100%;
     max-height: min-content;
@@ -151,6 +151,9 @@
     overflow-x: hidden;
     @include box-shadow-7(var(--color--bg-grey));
 
+    @include useScreen("tablet-sm") {
+      bottom: 0;
+    }
     @include useScreen("tablet-md") {
       flex-direction: row;
     }
@@ -189,6 +192,9 @@
   }
 
   &__content {
+    @include flex(column, center, center);
+    gap: 1rem;
+
     &__text {
       display: grid;
       padding: 0 2rem;
@@ -215,7 +221,6 @@
       h4 {
         margin-bottom: 1rem;
         color: var(--color--light-blue-3);
-
         font-weight: 500;
       }
 
@@ -261,6 +266,9 @@
     }
 
     &__screenshots {
+      @include flex(column, center, center);
+      gap: 1rem;
+
       img {
         max-height: 90vh;
         border: 1px solid var(--color--light-blue-3);
@@ -272,10 +280,11 @@
       margin-top: 0;
       border-radius: var(--border-radius--sm);
       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-      grid-gap: 3rem;
+      grid-gap: 1rem;
 
       @include useScreen("tablet-md") {
         padding: 2rem 0;
+        grid-gap: 3rem;
       }
 
       > img {
