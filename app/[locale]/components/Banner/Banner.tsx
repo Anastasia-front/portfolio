@@ -29,13 +29,7 @@ export function Banner({ text, button, className = "" }: Props) {
       viewport={{ once: true, amount: 1 }}
     >
       <h4 className="banner__text">{text}</h4>
-      {button && (
-        <ButtonText
-          text={t("contacts")}
-          hover="true"
-          onClick={handleFormOpen}
-        />
-      )}
+      {button && <ButtonText text={t("contacts")} onClick={handleFormOpen} />}
     </motion.div>
   );
 }

@@ -16,14 +16,14 @@
   }
 
   @include useOnHover {
-    background: var(--color--orange-3);
+    background: var(--color--light-blue-3);
 
     a {
       color: var(--color--white);
     }
   }
   @include useOnClick {
-    background: var(--color--orange-2);
+    background: var(--color--light-blue-2);
 
     a {
       color: var(--color--white);
@@ -112,10 +112,6 @@
     }
   }
 
-  &-link {
-    padding: 0.7rem;
-  }
-
   &-img {
     width: 100%;
   }
@@ -139,14 +135,14 @@
   }
 
   @include useOnHover {
-    background: var(--color--light-blue-3);
+    background: var(--color--orange-2);
 
     a {
       color: var(--color--blue-grey-3);
     }
   }
   @include useOnClick {
-    background: var(--color--light-blue-2);
+    background: var(--color--orange-1);
 
     a {
       color: var(--color--blue-grey-3);

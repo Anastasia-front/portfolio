@@ -40,12 +40,7 @@ export function ObjectsSection() {
     >
       <div className="devices container">
         <div className="section-header section-header__column-reverse">
-          <ButtonLink
-            text={b("devices")}
-            hover="true"
-            href="/skills"
-            lang={lang}
-          />
+          <ButtonLink text={b("devices")} href="/skills" lang={lang} />
           <h2>{i("heading")}</h2>
         </div>
         <div className="block-hint block-hint__onHover">

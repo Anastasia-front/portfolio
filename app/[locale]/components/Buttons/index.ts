@@ -4,3 +4,4 @@ export * from "./ButtonScroll";
 export * from "./ButtonSwitcher";
 export * from "./ButtonText";
 export * from "./ButtonTheme";
+export * from "./ButtonWrapper";

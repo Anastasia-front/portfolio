@@ -52,11 +52,7 @@ export function Header() {
       <NavigationAndLogo />
 
       {!contactsPage && isScreenTabletMd && (
-        <ButtonText
-          text={t("contacts")}
-          hover="true"
-          onClick={handleFormOpen}
-        />
+        <ButtonText text={t("contacts")} onClick={handleFormOpen} />
       )}
 
       {!isMenuOpen && <Switchers />}

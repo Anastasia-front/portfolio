@@ -48,8 +48,8 @@ export function Hero() {
             <p>{i("description")}</p>
 
             <div className="hero-buttons">
-              <ButtonScroll href="features" text={b("hero")} hover="true" />
-              <ButtonScroll href="tools" text={b("tools")} hover="true" />
+              <ButtonScroll href="features" text={b("hero")} />
+              <ButtonScroll href="tools" text={b("tools")} />
             </div>
           </div>
           <div className="hero-image">

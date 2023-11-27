@@ -45,12 +45,7 @@ export function Features() {
       <div className="features container">
         <div className="section-header">
           <h2>{i("title")}</h2>
-          <ButtonLink
-            text={b("features")}
-            hover="true"
-            href="/projects"
-            lang={lang}
-          />
+          <ButtonLink text={b("features")} href="/projects" lang={lang} />
         </div>
         <p className="block-hint  block-hint__for-one block-hint__self-start">
           <BsInfoCircle /> {i("subtitle")}
