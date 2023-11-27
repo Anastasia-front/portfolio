@@ -1,8 +1,25 @@
 @use "./mixins" as *;
+@use "../mixins" as *;
 
 .swiper {
-  width: 100%;
   height: auto;
+  width: 225px;
+
+  @include useScreen("mobile-lg") {
+    width: 360px;
+  }
+  @include useScreen("mobile-xl") {
+    width: 400px;
+  }
+  @include useScreen("tablet-sm") {
+    width: 460px;
+  }
+  @include useScreen("tablet-lg") {
+    width: 500px;
+  }
+  @include useScreen("desktop-sm") {
+    width: 560px;
+  }
 }
 
 .swiper-skills {

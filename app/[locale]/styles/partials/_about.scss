@@ -118,15 +118,43 @@
       max-width: 272px;
       height: auto;
       width: 100%;
+
+      @include useScreen("mobile-lg") {
+        max-width: 400px;
+      }
     }
 
     &__slider-progress {
       height: auto;
-      width: 100%;
-      max-width: 70vw;
+
+      @include useScreen("tablet-sm") {
+        margin-left: -60px;
+      }
+      @include useScreen("tablet-lg") {
+        margin-left: -100px;
+      }
+      @include useScreen("desktop-sm") {
+        margin-left: -160px;
+      }
 
       img {
-        width: 100%;
+        width: 225px;
+
+        @include useScreen("mobile-lg") {
+          width: 360px;
+        }
+        @include useScreen("mobile-xl") {
+          width: 400px;
+        }
+        @include useScreen("tablet-sm") {
+          width: 460px;
+        }
+        @include useScreen("tablet-lg") {
+          width: 500px;
+        }
+        @include useScreen("desktop-sm") {
+          width: 560px;
+        }
       }
     }
 
