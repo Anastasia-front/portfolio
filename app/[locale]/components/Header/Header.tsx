@@ -21,6 +21,8 @@ export function Header() {
   const pathname = usePathname();
   const isHeaderFixed = pathname === "/en" || pathname === "/uk";
   const headerClassName = isHeaderFixed ? "fixed-header" : "";
+  const contactsPage =
+    pathname === "/en/contacts" || pathname === "/uk/contacts";
 
   const { lockScroll, unlockScroll } = useScrollLock();
 
@@ -38,7 +40,7 @@ export function Header() {
     }
   });
 
-  const { isScreenMobileLg } = useScreenQuery();
+  const { isScreenTabletMd } = useScreenQuery();
 
   return (
     <motion.header
@@ -49,7 +51,7 @@ export function Header() {
     >
       <NavigationAndLogo />
 
-      {isScreenMobileLg && (
+      {!contactsPage && isScreenTabletMd && (
         <ButtonText
           text={t("contacts")}
           hover="true"
