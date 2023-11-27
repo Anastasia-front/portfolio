@@ -42,7 +42,7 @@ interface FormData {
 }
 
 interface Props {
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export function Form({ onClick }: Props) {
@@ -114,7 +114,7 @@ export function Form({ onClick }: Props) {
 
       reset();
     } catch (error) {
-      console.error(error);
+      alert(error);
       setFormStatus("error");
       setTimeout(() => {
         setFormStatus(null);
@@ -125,9 +125,11 @@ export function Form({ onClick }: Props) {
   };
 
   const handleSubmitClick = () => {
-    setTimeout(() => {
-      onClick();
-    }, 4000);
+    if (onClick) {
+      setTimeout(() => {
+        onClick();
+      }, 4000);
+    }
   };
 
   return (
