@@ -551,9 +551,54 @@
   @include useScreen("desktop-xl") {
     height: 1076px;
   }
+
+  &-tip {
+    position: fixed;
+    top: 160px;
+    left: 20px;
+    color: var(--color--light-brown);
+
+    @include useScreen("mobile-md") {
+      top: 180px;
+    }
+    @include useScreen("mobile-lg") {
+      top: 250px;
+    }
+    @include useScreen("mobile-xl") {
+      top: 280px;
+    }
+    @include useScreen("tablet-sm") {
+      top: 400px;
+    }
+    @include useScreen("tablet-md") {
+      top: 500px;
+    }
+    @include useScreen("tablet-lg") {
+      top: 550px;
+    }
+    @include useScreen("tablet-xl") {
+      top: 700px;
+    }
+    @include useScreen("desktop-sm") {
+      top: 750px;
+    }
+    @include useScreen("desktop-md") {
+      top: 780px;
+    }
+    @include useScreen("desktop-lg") {
+      top: 840px;
+    }
+    @include useScreen("desktop-xl") {
+      top: 1000px;
+    }
+  }
 }
 [data-theme="dark"] .video {
   background: var(--color--blue-dark);
+
+  &-tip {
+    color: var(--color--peach);
+  }
 }
 
 .gallery {
