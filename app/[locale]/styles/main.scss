@@ -645,8 +645,8 @@ main {
   }
 
   svg {
-    min-width: 16px;
-    min-height: 16px;
+    width: 16px !important;
+    height: 16px !important;
   }
 
   &__prompt {

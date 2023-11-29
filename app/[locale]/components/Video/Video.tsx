@@ -1,11 +1,14 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { BsInfoSquare } from "react-icons/bs";
 
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 
 export function Video() {
+  const t = useTranslations("video");
   const { theme } = useTheme();
 
   const pathname = usePathname();
@@ -68,7 +71,12 @@ export function Video() {
   return (
     <>
       <video className="video" autoPlay ref={videoRef} src={video} />
-      <p className="video-tip">some tips</p>
+      <div className="video-tip">
+        <BsInfoSquare />
+        <p className="video-text">
+          {t("primaryText")} <span>{t("secondaryText")}</span>
+        </p>
+      </div>
     </>
   );
 }

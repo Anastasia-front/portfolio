@@ -350,7 +350,6 @@
       position: absolute;
       top: 0;
       right: 0;
-
       bottom: 0;
       left: 0;
     }
@@ -552,41 +551,67 @@
     height: 1076px;
   }
 
+  &-text {
+    @include flex(row, flex-start, flex-start);
+    gap: 1rem;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: clamp(0.4rem, 1vw, 0.5rem);
+  @include useScreen("mobile-md") {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    span {
+      text-transform: lowercase;
+      font-size: clamp(0.4rem, 1vw, 0.5rem);
+    }
+
+  
+  }
+
   &-tip {
+    @include flex(row, center, flex-start);
+    gap: 0.3rem;
     position: fixed;
-    top: 160px;
+    top: 170px;
     left: 20px;
     color: var(--color--light-brown);
 
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+
     @include useScreen("mobile-md") {
-      top: 180px;
+      top: 182px;
     }
     @include useScreen("mobile-lg") {
-      top: 250px;
-    }
-    @include useScreen("mobile-xl") {
       top: 280px;
     }
+    @include useScreen("mobile-xl") {
+      top: 278px;
+    }
     @include useScreen("tablet-sm") {
-      top: 400px;
+      top: 395px;
     }
     @include useScreen("tablet-md") {
       top: 500px;
     }
     @include useScreen("tablet-lg") {
-      top: 550px;
+      top: 530px;
     }
     @include useScreen("tablet-xl") {
-      top: 700px;
+      top: 676px;
     }
     @include useScreen("desktop-sm") {
-      top: 750px;
+      top: 720px;
     }
     @include useScreen("desktop-md") {
-      top: 780px;
+      top: 760px;
     }
     @include useScreen("desktop-lg") {
-      top: 840px;
+      top: 810px;
     }
     @include useScreen("desktop-xl") {
       top: 1000px;

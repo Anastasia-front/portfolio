@@ -41,7 +41,7 @@ export function GallerySection() {
         <h2>{i("title")}</h2>
         <ButtonLink text={b("gallery")} href="/about" lang={lang} />
       </div>
-      <p className="container block-hint  block-hint__for-one block-hint__without-margin">
+      <p className="container block-hint block-hint__for-one block-hint__without-margin">
         <BsInfoCircle /> {i("subtitle")}
       </p>
       <Dynamic componentName="Gallery" />
