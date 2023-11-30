@@ -645,8 +645,8 @@ main {
   }
 
   svg {
-    width: 16px !important;
-    height: 16px !important;
+    width: 16px;
+    height: 16px;
   }
 
   &__prompt {
@@ -690,10 +690,10 @@ main {
       align-items: start;
       gap: 0.5rem;
     }
-  }
-
-  &__without-margin {
-    margin: 0;
+    svg {
+      width: 55px;
+      height: 16px;
+    }
   }
 
   &__self-start {

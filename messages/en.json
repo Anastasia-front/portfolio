@@ -65,7 +65,7 @@
       "uk": "Ukrainian"
     }
   },
-  "video":{"primaryText":"click on this block","secondaryText":"and the video will play for the first time"},
+  "video":{"primaryText":"click on this block","secondaryText":"and the video will play"},
   "dropdown": {
     "title": "Filters",
     "type": { "all": "all", "backend": "backend", "frontend": "frontend" },

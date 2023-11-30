@@ -477,7 +477,6 @@
   &__container {
     @include flex(column, center, center);
     width: 125%;
-
     border-top: 1px dotted var(--color--light-blue-1);
     border-bottom: 1px dotted var(--color--light-blue-1);
 
@@ -488,7 +487,6 @@
 
     @include useScreen("tablet-lg") {
       @include flex(row, space-between, center);
-      padding: 0 4rem;
 
       div {
         border-right: 1px dotted var(--color--light-blue-1);
@@ -557,7 +555,7 @@
     text-align: left;
     text-transform: uppercase;
     font-size: clamp(0.4rem, 1vw, 0.5rem);
-  @include useScreen("mobile-md") {
+    @include useScreen("mobile-md") {
       flex-direction: column;
       gap: 0;
     }
@@ -566,8 +564,6 @@
       text-transform: lowercase;
       font-size: clamp(0.4rem, 1vw, 0.5rem);
     }
-
-  
   }
 
   &-tip {
@@ -627,6 +623,9 @@
 }
 
 .gallery {
+  @include flex(column, center, center);
+  gap: 2.3rem;
+
   &-section {
     position: relative;
 

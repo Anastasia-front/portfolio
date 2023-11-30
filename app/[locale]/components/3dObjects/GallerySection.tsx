@@ -37,13 +37,16 @@ export function GallerySection() {
       whileInView="onscreen"
       viewport={{ once: true, amount: 0 }}
     >
-      <div className="section-header container section-header__container">
-        <h2>{i("title")}</h2>
-        <ButtonLink text={b("gallery")} href="/about" lang={lang} />
+      <div className="gallery container">
+        <div className="section-header section-header__container">
+          <h2>{i("title")}</h2>
+          <ButtonLink text={b("gallery")} href="/about" lang={lang} />
+        </div>
+        <p className="block-hint block-hint__for-one block-hint__self-start">
+          <BsInfoCircle /> {i("subtitle")}
+        </p>
       </div>
-      <p className="container block-hint block-hint__for-one block-hint__without-margin">
-        <BsInfoCircle /> {i("subtitle")}
-      </p>
+
       <Dynamic componentName="Gallery" />
     </motion.section>
   );
