@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
@@ -22,6 +22,12 @@ export const ButtonTheme = () => {
     const IconSun = <Sun />;
     return theme === "dark" ? IconMoon : IconSun;
   }, [theme]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("theme", "light");
+    }
+  }, []);
 
   const clickHandler = () => {
     setIsVisible(false);
