@@ -65,7 +65,16 @@
       "uk": "Ukrainian"
     }
   },
-  "video":{"primaryText":"click on this block","secondaryText":"and the video will play"},
+  "video": {
+    "firstTime": {
+      "primaryText": "Below this text is a video, click here and it will run",
+      "secondaryText": "the next time when you go to the main page or switch the language/theme, the video will start and repeat once automatically, to start it again you will have to click again"
+    },
+    "otherTimes": {
+      "primaryText": "click on this block",
+      "secondaryText": "and the video will play"
+    }
+  },
   "dropdown": {
     "title": "Filters",
     "type": { "all": "all", "backend": "backend", "frontend": "frontend" },

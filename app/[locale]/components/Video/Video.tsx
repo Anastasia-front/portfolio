@@ -7,8 +7,15 @@ import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 
+import { useGlobalContext } from "@/context";
+import { useScreenQuery } from "@/hooks";
+
 export function Video() {
-  const t = useTranslations("video");
+  const { isClicked } = useGlobalContext();
+  const {isScreenTabletMd}= useScreenQuery()
+
+  const f = useTranslations("video.firstTime");
+  const o = useTranslations("video.otherTimes");
   const { theme } = useTheme();
 
   const pathname = usePathname();
@@ -71,12 +78,21 @@ export function Video() {
   return (
     <>
       <video className="video" autoPlay ref={videoRef} src={video} />
-      <div className="video-tip">
-        <BsInfoSquare />
-        <p className="video-text">
-          {t("primaryText")} <span>{t("secondaryText")}</span>
-        </p>
-      </div>
+      {!isClicked ? (
+        <div className="video-tip__first">
+        {isScreenTabletMd && <BsInfoSquare />}  
+          <p className="video-tip__first-text">
+            {f("primaryText")} <span>{f("secondaryText")}</span>
+          </p>
+        </div>
+      ) : (
+        <div className="video-tip__others">
+          <BsInfoSquare />
+          <p className="video-tip__others-text">
+            {o("primaryText")} <span>{o("secondaryText")}</span>
+          </p>
+        </div>
+      )}
     </>
   );
 }

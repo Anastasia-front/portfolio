@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const GlobalContext = React.createContext({
   isMenuOpen: false,
@@ -12,12 +12,26 @@ const GlobalContext = React.createContext({
   isSettingsOpen: false,
   handleSettingsClose: () => {},
   handleSettingsToggle: () => {},
+  isClicked: false
 });
 
 export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+
+  useEffect(() => {
+    const handleClickGlobal = (event: MouseEvent) => {
+      setIsClicked(true);
+    };
+
+    window.addEventListener("click", handleClickGlobal);
+
+    return () => {
+      window.removeEventListener("click", handleClickGlobal);
+    };
+  }, []);
 
   const handleMenuOpen = () => {
     setIsMenuOpen(true);
@@ -54,6 +68,7 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
         isSettingsOpen,
         handleSettingsClose,
         handleSettingsToggle,
+        isClicked,
       }}
     >
       {children}
