@@ -67,7 +67,7 @@
   },
   "video": {
     "firstTime": {
-      "primaryText": "Below this text is a video, click here and it will run",
+      "primaryText": "Below this text is a video, click here and it will play",
       "secondaryText": "the next time when you go to the main page or switch the language/theme, the video will start and repeat once automatically, to start it again you will have to click again"
     },
     "otherTimes": {
@@ -103,24 +103,24 @@
         "position": "fullstack developer"
       },
       "subtitle": "general information",
-      "description": "If you are looking for a hard-working, conscientious and ready for new challenges employee - then I am the person you need. I advanced twice in the courses, because I devoted all my time to studying - I was a scrum master and a team leader on team projects. Even before the completion of the courses, she already participated in commercial projects (one of them social, the other - a start-up), after completion - in another commercial one from the company (you can see all the works on the projects page)"
+      "description": "If you are looking for a hard-working, conscientious and ready for new challenges employee - then I am the person you need. I advanced twice in the courses, because I devoted all my time to studying - I was a Scrum Master and a Team Leader on team projects. Even before the completion of the courses, I already participated in commercial projects (one of them social, the other - a start-up), after completion - in another commercial one from the company (you can see all the works on the projects page)"
     },
     "features": {
       "title": "features",
-      "subtitle": "each component is interactive, so when you click or hover over it, the element will expand - try and see for yourself",
+      "subtitle": "each component is interactive, so when you click or hover over it, the element will react - try and see",
       "first": {
         "alt": "devices",
         "svg": "devices",
         "title": "Responsive Design",
         "subtitle": "See projects on different devices",
-        "text": "Explore a diverse collection of my creative endeavors, including web design, JavaScript / TypeScript and mini projects. Each project showcases my creativity, attention to detail, and passion for delivering visually stunning and engaging experiences"
+        "text": "Explore a diverse collection of my creative endeavors, including web design, JavaScript / TypeScript and mini projects. Each project shows my creativity, attention to detail, and passion for delivering visually stunning and engaging experiences"
       },
       "second": {
         "svg": "code",
         "alt": "code",
         "title": "Code Quality",
         "subtitle": "Explore the code in the repository",
-        "text": "Behind the scenes, I pride myself on writing clean, efficient, and maintainable code. Learn more about my coding standards and practices that contribute to the functionality and performance of the projects I undertake"
+        "text": "I proud of myself on writing clean, efficient, and maintainable code. Learn more about my coding standards and practices that contribute to the functionality and performance of the projects I undertake"
       },
       "third": {
         "alt": "component",
@@ -132,10 +132,10 @@
     },
     "3d": {
       "title": "Below are the «workhorses»",
-      "subtitle": "pay attention to this prompt so that it is clear what and how to do",
+      "subtitle": "pay attention to this prompt for understanding of how to interact with next section",
       "commentToSubtitle": "when mouse hovering over this text block, other hints will appear (on a device without a mouse, you need to click on this text)",
-      "prompt": "* in the block where the cursor with the hand appears, in order to scroll the page, use the scrollbar on the right edge (normal mouse actions will bring objects closer or further away)",
-      "comment": "** below are 3D objects, they are interactive - you can rotate them, enlarge, reduce, view them from all sides and do whatever you want ;)",
+      "prompt": "* in the block where the 3D objects are presented, in order to scroll the page, use the scrollbar on the right edge (zoom actions will bring objects closer or further away)",
+      "comment": "** below are 3D objects, which are interactive - you can rotate them, enlarge, reduce, view them from all sides and do whatever you want ;)",
       "now": "1. first device I'm using now",
       "inFuture": "2. second - I want to use in the future",
       "macBook": "(MacBook Air 13″ М1, 2020)",
@@ -157,37 +157,37 @@
         "first": {
           "number": "01",
           "title": "Responsibility",
-          "description": "I was the head of a children's dance studio, founded my own stretching studio, and worked on team projects as a Scrum Master and team lead. I believe this is enough to define my level of organization, proactivity, and responsibility."
+          "description": "I was the head of a children's dance studio, founded my own stretching studio, and worked on team projects as a Scrum Master and Team Lead. I believe this is enough to define my level of organization, proactivity, and responsibility"
         },
         "second": {
           "number": "02",
           "title": "Hard Work",
-          "description": "I do everything to the fullest extent and take the initiative to do even more. I always conscientiously perform tasks assigned to me."
+          "description": "I do everything to the fullest extent and take the initiative to do even more. I always conscientiously finish tasks assigned to me"
         },
         "third": {
           "number": "03",
           "title": "Perseverance",
-          "description": "When faced with difficulties, I don't give up. On the contrary, challenges push me to develop even further."
+          "description": "When I faced with difficulties, I don't give up. On the contrary, challenges push me to increase my skills and knowledge"
         },
         "forth": {
           "number": "04",
           "title": "Punctuality",
-          "description": "I always plan my time and often arrive early for meetings, events, and other commitments. I value both my own time and that of others."
+          "description": "I always plan my time and often arrive early for meetings, events, and other commitments. I value both my own time and other people"
         },
         "fifth": {
           "number": "05",
           "title": "Communication Skills",
-          "description": "Considering my previous experience of working with a large number of people of different age groups, I have developed strong communication skills, conflict resolution abilities, and the ability to handle various situations."
+          "description": "Considering my previous experience of working with a large amount of people of different age groups, I have acquired strong communication skills, conflict resolution abilities, and the ability to handle various situations"
         },
         "sixth": {
           "number": "06",
           "title": "Stress Resistance",
-          "description": "Since there is a lot of stress in our lives, I have learned to stay focused and work effectively in stressful situations."
+          "description": "Since there is a lot of stress in our lives, I have learned to stay focused and work effectively in stressful situations"
         },
         "seventh": {
           "number": "07",
           "title": "Kindness",
-          "description": "I am a positive person who always seeks the best in every person and situation."
+          "description": "I am a positive person who always seeks the best in every person and situation"
         }
       }
     },
@@ -214,8 +214,8 @@
   },
   "skills": {
     "title": "My skills",
-    "description": "Below are the various technologies, frameworks and libraries I own. For convenience, they are grouped and implemented using the Accordion component. Each card inside is interactive - interesting interaction!)",
-    "slider": "This is how I work and what the workflow looks like from the outside - at least I want it to be like that ;)"
+    "description": "Below are the various technologies, frameworks and libraries I know and can apply. For convenience, they are grouped and implemented using the Accordion component. Each card inside is interactive - interesting interaction!)",
+    "slider": "This is how I work and as the workflow looks like from the outside - at least I want it to be like that ;)"
   },
   "projects": {
     "title": "Projects",
@@ -232,12 +232,12 @@
   },
   "contacts": {
     "title": "Write to me",
-    "description": "Below is the form for sending me a letter to the post office (indicate your e-mail, subject and the actual text of the message), and below it you will find all available ways to contact me (they are also duplicated in the footer)",
+    "description": "Below is the form for sending me an email and below it you will find all available ways to contact me (they are also duplicated in the footer)",
     "form": {
       "title": "Write me a letter",
       "subject": "Subject",
       "subjectPlaceholder": "Enter subject",
-      "subjectInvalid": "Invalid field",
+      "subjectInvalid": "Required field",
       "email": "E-mail",
       "emailPlaceholder": "Enter e-mail",
       "emailInvalid": "Invalid email",
