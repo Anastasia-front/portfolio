@@ -562,8 +562,7 @@ export const projectsEnglishLang: Project[] = [
     image: cover18,
     url: "go-green",
     features: ["Responsive design", "And much more..."],
-    problem:
-      "Companies that create delicious and aesthetically pleasing food need a website",
+    problem: "Companies that create nature protected program need a website",
     solution:
       "I can design and code projects of any complexity based on provided layouts",
     links: {
@@ -1105,16 +1104,15 @@ export const projectsUkrainianLang: Project[] = [
     image: cover18,
     url: "go-green",
     features: ["Адаптивний дизайн", "Та багато іншого..."],
-    problem:
-      "Компанії з виготовлення смачної та естетично гарної їжі потрібен веб-сайт",
-    solution: "Я могу зверстати з макетом проект будь-якої складності",
+    problem: "Компанії з програмами захисту природи потрібен веб-сайт",
+    solution: "Я могу зверстати за макетом сайт будь-якої складності",
     links: {
       website: "https://go-green-website.netlify.app/",
       github: "https://github.com/Anastasia-front/go-green",
     },
     content: {
       description:
-        "Це веб-сайт, який я створила за декілька днів для згадування та повторення верстки після завершення курсів",
+        "Це веб-сайт, який я створила за декілька днів для згадування та повторення знань та навичок після завершення курсів",
       image1: eighteenthProjectSnippet1,
       image2: eighteenthProjectSnippet2,
       image3: eighteenthProjectSnippet3,
