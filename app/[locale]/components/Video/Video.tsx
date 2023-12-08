@@ -8,11 +8,9 @@ import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 
 import { useGlobalContext } from "@/context";
-import { useScreenQuery } from "@/hooks";
 
 export function Video() {
   const { isClicked } = useGlobalContext();
-  const {isScreenTabletMd}= useScreenQuery()
 
   const f = useTranslations("video.firstTime");
   const o = useTranslations("video.otherTimes");
@@ -80,7 +78,7 @@ export function Video() {
       <video className="video" autoPlay ref={videoRef} src={video} />
       {!isClicked ? (
         <div className="video-tip__first">
-        {isScreenTabletMd && <BsInfoSquare />}  
+          <BsInfoSquare />
           <p className="video-tip__first-text">
             {f("primaryText")} <span>{f("secondaryText")}</span>
           </p>
