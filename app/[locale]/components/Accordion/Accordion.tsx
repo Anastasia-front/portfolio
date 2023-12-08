@@ -34,17 +34,18 @@ export function Accordion() {
       viewport={{ once: true, amount: 0 }}
       className="skill-blocks"
     >
-      {skillBlocks.map((block) => (
+      {skillBlocks.map((block,index) => (
         <SkillBlock
           key={block.id}
           {...block}
           active={active}
+          animation={index}
           handleClick={setActive}
         />
       ))}
       <motion.span
         className="license"
-        variants={fadeIn}
+        variants={fadeIn('left')}
         initial="hidden"
         animate="visible"
       >

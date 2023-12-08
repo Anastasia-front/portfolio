@@ -46,7 +46,7 @@ export function SkillSlider() {
     >
       <motion.h4
         className="swiper-title"
-        variants={fadeIn}
+        variants={fadeIn('left')}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: false, amount: 0.2 }}
@@ -82,7 +82,7 @@ export function SkillSlider() {
       </Swiper>
       <motion.span
         className="license"
-        variants={fadeIn}
+        variants={fadeIn('right')}
         initial="hidden"
         animate="visible"
       >

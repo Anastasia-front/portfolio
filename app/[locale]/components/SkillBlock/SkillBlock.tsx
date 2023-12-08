@@ -12,6 +12,7 @@ interface Props {
   title: string;
   className: string;
   active: number;
+  animation: number;
   handleClick: (id: number) => void;
 }
 
@@ -21,6 +22,7 @@ export function SkillBlock({
   type,
   className,
   active,
+  animation,
   handleClick,
 }: Props) {
   const skillBlock = skills.filter((skill) => skill.type === type);
@@ -34,10 +36,11 @@ export function SkillBlock({
   };
 
   const flexStyle = active === id ? "skill-block__active" : "";
+  const animationStyle = animation % 2 !== 0 ? "left" : "right";
 
   return (
     <motion.div
-      variants={fadeIn}
+      variants={fadeIn(animationStyle)}
       className={`skill-block ${className} ${flexStyle}`}
       onClick={() => handleToggle(id)}
     >
@@ -50,7 +53,7 @@ export function SkillBlock({
           <h3 className="skill-block__title">{title}</h3>
           <div className="skills-section__list">
             {skillBlock.map((skill, index) => (
-              <SkillItem key={index} {...skill} />
+              <SkillItem key={index} {...skill} animation={animationStyle} />
             ))}
           </div>
         </div>

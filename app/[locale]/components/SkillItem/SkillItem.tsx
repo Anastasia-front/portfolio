@@ -11,6 +11,7 @@ import { fadeIn } from "@/utils";
 interface Props {
   title: string;
   image: StaticImageData;
+  animation: "left" | "right";
 }
 
 const defaultOptions = {
@@ -25,9 +26,9 @@ const defaultOptions = {
   easing: "cubic-bezier(.03,.98,.52,.99)",
 };
 
-export function SkillItem({ title, image }: Props) {
+export function SkillItem({ title, image, animation }: Props) {
   return (
-    <motion.div variants={fadeIn} initial="hidden" animate="visible">
+    <motion.div variants={fadeIn(animation)} initial="hidden" animate="visible">
       <Tilt
         options={defaultOptions}
         className="skills-item"
