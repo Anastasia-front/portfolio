@@ -27,33 +27,33 @@ ul {
 }
 
 h1 {
-  font-size: clamp(2rem, 1vw, 2.2rem);
+  font-size: clamp(2rem, min(1vw, 50px), 2.2rem);
 }
 h2 {
-  font-size: clamp(1.8rem, 1vw, 1.9rem);
+  font-size: clamp(1.8rem, min(1vw, 45px), 1.9rem);
 }
 h3 {
-  font-size: clamp(1.6rem, 1vw, 1.7rem);
+  font-size: clamp(1.6rem, min(1vw, 40px), 1.7rem);
 }
 h4 {
   font-weight: normal;
-  font-size: clamp(1.2rem, 1vw, 1.5rem);
+  font-size: clamp(1.2rem, min(1vw, 35px), 1.5rem);
 }
 h5 {
   font-weight: normal;
-  font-size: clamp(1rem, 1vw, 1.2rem);
+  font-size: clamp(1rem, min(1vw, 30px), 1.2rem);
 }
 h6 {
   font-weight: normal;
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: clamp(0.8rem, min(1vw, 25px), 1rem);
 }
 
 p,
 li {
-  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  font-size: clamp(0.8rem, min(1vw, 20px), 0.9rem);
 }
 span {
-  font-size: clamp(0.8rem, 1vw, 0.7rem);
+  font-size: clamp(0.8rem, min(1vw, 15px), 0.7rem);
 }
 
 li {
@@ -64,7 +64,7 @@ a {
   margin: 0;
   padding: 0;
   color: var(--color--light-blue-4);
-  font-size: clamp(1rem, 1vw, 1.2rem);
+  font-size: clamp(1rem, min(1vw, 20px), 1.2rem);
   text-decoration: none;
   cursor: pointer;
 
@@ -678,7 +678,7 @@ main {
   &__onHoverVisible {
     display: none;
     position: absolute;
-    top: 5rem;
+    top: 7rem;
     left: -0.1rem;
     padding: 1rem;
     background: var(--color--light-blue-1);
