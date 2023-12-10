@@ -15,8 +15,7 @@ import { navVariants } from "@/utils";
 export function Header() {
   const t = useTranslations("btn");
 
-  const context = useGlobalContext();
-  const { handleFormOpen, isMenuOpen, handleMenuClose } = context;
+  const { handleFormOpen, isMenuOpen, handleMenuClose } = useGlobalContext();
 
   const pathname = usePathname();
   const isHeaderFixed = pathname === "/en" || pathname === "/uk";

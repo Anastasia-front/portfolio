@@ -9,8 +9,7 @@ import { useScreenQuery } from "@/hooks";
 export function NavigationAndLogo() {
   const logo = useTranslations("alt");
 
-  const context = useGlobalContext();
-  const { handleMenuClose } = context;
+  const { handleMenuClose } = useGlobalContext();
 
   const { isScreenTabletSm } = useScreenQuery();
 

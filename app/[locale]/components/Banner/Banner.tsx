@@ -17,8 +17,7 @@ interface Props {
 export function Banner({ text, button, className = "" }: Props) {
   const t = useTranslations("btn");
 
-  const context = useGlobalContext();
-  const { handleFormOpen } = context;
+  const { handleFormOpen } = useGlobalContext();
 
   return (
     <motion.div

@@ -16,8 +16,8 @@ export function Settings() {
   const [showButton, setShowButton] = useState(false);
   const [animationClass, setAnimationClass] = useState("");
 
-  const context = useGlobalContext();
-  const { isSettingsOpen, handleSettingsClose, handleSettingsToggle } = context;
+  const { isSettingsOpen, handleSettingsClose, handleSettingsToggle } =
+    useGlobalContext();
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {

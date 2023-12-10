@@ -16,8 +16,7 @@ export default function ContactsPage() {
   const t = useTranslations("contacts");
   const a = useTranslations("alt.decoration");
 
-  const context = useGlobalContext();
-  const { isSettingsOpen } = context;
+  const { isSettingsOpen } = useGlobalContext();
 
   return (
     <main className="contact-page container">

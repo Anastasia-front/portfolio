@@ -12,8 +12,7 @@ import { Switchers } from "../Switchers";
 export function BurgerMenu() {
   const t = useTranslations("alt");
 
-  const context = useGlobalContext();
-  const { isMenuOpen, handleMenuOpen, handleMenuClose } = context;
+  const { isMenuOpen, handleMenuOpen, handleMenuClose } = useGlobalContext();
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {

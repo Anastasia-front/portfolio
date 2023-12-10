@@ -25,7 +25,9 @@ export const ButtonTheme = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.localStorage.setItem("theme", "light");
+      if (!localStorage.getItem("theme")) {
+        localStorage.setItem("theme", "light");
+      }
     }
   }, []);
 

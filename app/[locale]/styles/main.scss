@@ -153,6 +153,9 @@ footer {
 
 main {
   overflow-x: hidden;
+  &::-webkit-scrollbar {
+    background-color: transparent;
+  }
 }
 
 .container {
@@ -785,8 +788,12 @@ main {
       gap: 0.5rem;
     }
     svg {
-      width: 55px;
+      width: 16px;
       height: 16px;
+
+      @include useScreen("mobile-lg") {
+        width: 55px;
+      }
     }
   }
 
