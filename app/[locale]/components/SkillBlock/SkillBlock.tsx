@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { motion } from "framer-motion";
 
 import { SkillItem } from "@/components";
@@ -25,6 +27,7 @@ export function SkillBlock({
   animation,
   handleClick,
 }: Props) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const skillBlock = skills.filter((skill) => skill.type === type);
 
   const handleToggle = (id: number) => {
@@ -32,6 +35,12 @@ export function SkillBlock({
       handleClick(0);
     } else {
       handleClick(id);
+    }
+  };
+
+  const handleOutsideClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      handleClick(0);
     }
   };
 

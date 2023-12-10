@@ -564,6 +564,100 @@ main {
   }
 }
 
+.modal {
+  &-backdrop {
+    @include flex(row, center, center);
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color--grey-opacity);
+  }
+
+  &-background {
+    z-index: 102;
+    position: relative;
+    width: 80vw;
+    height: max-content;
+    max-height: 80vh;
+    padding: 2rem;
+    overflow: auto;
+    border-radius: var(--border-radius--lg) 0 0 var(--border-radius--lg);
+    background: var(--color--bg-light);
+
+    @include useScreen("tablet-sm") {
+      padding: 3rem;
+    }
+    @include useScreen("desktop-sm") {
+      padding: 5rem;
+    }
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--color--blue-grey-2);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0;
+      background: linear-gradient(
+        to top,
+        #68b8c1 20%,
+        #fcfbfc 50%,
+        #fca26e 100%
+      );
+    }
+  }
+
+  &-content {
+    @include flex(column, center, center);
+    gap: 2rem;
+  }
+
+  &-title {
+    background-image: linear-gradient(
+      to right,
+      var(--color--light-blue-4),
+      var(--color--light-blue-3),
+      var(--color--light-blue-4) 50%,
+      var(--color--light-blue-3),
+      var(--color--light-blue-4)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+[data-theme="dark"] .modal {
+  &-backdrop {
+    background: var(--color--grey-opacity);
+  }
+
+  &-background {
+    background: var(--color--grey);
+
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(to top, #fca26e 30%, #68b8c1 100%);
+    }
+  }
+
+  &-title {
+    background-image: linear-gradient(
+      to right,
+      var(--color--orange-2),
+      var(--color--orange-4),
+      var(--color--orange-2) 50%,
+      var(--color--orange-4),
+      var(--color--orange-2)
+    );
+  }
+}
+
 .loading {
   @include flex(column, center, center);
   gap: 1rem;
