@@ -46,19 +46,20 @@
   --color--white: #fbfcf8;
   --color--white-grey: #fbfcf8b5;
 
-  --pad--sm: 1rem;
-  --pad--sm-2: 1.5rem;
-  --pad--md: 2rem;
-  --pad--md-2: 2.5rem;
-  --pad--lg: 3rem;
-  --pad--lg-2: 3.5rem;
+  --padding--sm: 1rem;
+  --padding--sm-2: 1.5rem;
+  --padding--md: 2rem;
+  --padding--md-2: 2.5rem;
+  --padding--lg: 3rem;
+  --padding--lg-2: 3.5rem;
 
   --scale: 1.07;
 
-  --level-one: translateZ(3rem);
-  --level-two: translateZ(6rem);
-  --level-three: translateZ(9rem);
+  --level--1: translateZ(3rem);
+  --level--2: translateZ(6rem);
+  --level--3: translateZ(9rem);
 
-  --fw-normal: 400;
-  --fw-bold: 700;
+  --font-weight--normal-1: 400;
+  --font-weight--normal-2:500;
+  --font-weight--bold: 700;
 }

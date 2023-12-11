@@ -64,7 +64,7 @@
     top: 1.5rem;
     left: -1rem;
     padding: 1rem 1rem 0.5rem 0.5rem;
-    border-radius: var(--pad--sm);
+    border-radius: var(--padding--sm);
     background-color: var(--color--orange-2);
     button {
       color: var(--color--white);
@@ -84,7 +84,7 @@
 
     &__list {
       padding: 1rem 1rem 0.5rem 0.5rem;
-      border-radius: var(--pad--sm);
+      border-radius: var(--padding--sm);
       background-color: var(--color--light-blue-3);
     }
 

@@ -201,7 +201,7 @@
     border: 0px;
     border-radius: 5px;
     color: var(--color--blue-grey-1);
-    font-weight: 400;
+    font-weight: var(--font-weight--normal-1);
     cursor: pointer;
     background: var(--color--light-blue-2);
     transition: 250ms;
@@ -241,7 +241,7 @@
 
   &__submit {
     color: var(--color--white-grey);
-    font-weight: 400;
+    font-weight: var(--font-weight--normal-1);
     cursor: pointer;
     background: var(--color--orange-2);
     transition: 250ms;
@@ -276,7 +276,7 @@
       position: relative;
       width: 70%;
       padding: 1rem 0;
-      font-weight: 500;
+      font-weight: var(--font-weight--normal-2);
       line-height: 2rem;
       text-align: center;
       letter-spacing: 0.07rem;
@@ -339,7 +339,7 @@
           gap: 1.5rem;
 
           p {
-            font-weight: 500;
+            font-weight: var(--font-weight--normal-2);
             text-align: left;
           }
 

@@ -50,7 +50,7 @@
 
       p {
         color: var(--color--light-blue-1);
-        font-weight: 500;
+        font-weight: var(--font-weight--normal-2);
         filter: drop-shadow(1px 3px 0px rgba(0, 0, 0, 0.05));
       }
     }
@@ -76,7 +76,7 @@
     &__title {
       position: relative;
       padding-bottom: 3rem;
-      font-weight: 500;
+      font-weight: var(--font-weight--normal-2);
 
       &::after {
         position: absolute;
@@ -110,7 +110,7 @@
     &__subtitle {
       flex: 0 0 35%;
       align-self: center;
-      font-weight: 400;
+      font-weight: var(--font-weight--normal-1);
       text-align: center;
     }
 
@@ -185,7 +185,7 @@
       @include flex(column, center, flex-start);
       flex: 0 0 35%;
       align-self: flex-start;
-      font-weight: 500;
+      font-weight: var(--font-weight--normal-2);
       gap: 1rem;
 
       span:first-child {

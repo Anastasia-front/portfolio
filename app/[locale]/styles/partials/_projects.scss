@@ -5,7 +5,7 @@
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-gap: var(--pad--sm-2);
+  grid-gap: var(--padding--sm-2);
   grid-auto-flow: dense;
 
   &__header {
@@ -64,7 +64,7 @@
 .project {
   position: relative;
   border: 1px solid var(--color--dark-opacity);
-  border-radius: var(--pad--sm);
+  border-radius: var(--padding--sm);
   color: var(--color--white);
 
   &-banner {
@@ -79,13 +79,13 @@
   img {
     width: 100%;
     height: 160px;
-    border-radius: var(--pad--sm);
+    border-radius: var(--padding--sm);
     object-fit: cover;
   }
 
   &__title {
-    padding: var(--pad--sm-2);
-    font-weight: 400;
+    padding: var(--padding--sm-2);
+    font-weight: var(--font-weight--normal-1);
     background: linear-gradient(
       to right,
       var(--color--light-blue-2),
@@ -96,7 +96,7 @@
 
   &:first-child {
     display: flex;
-    gap: var(--pad--sm-2);
+    gap: var(--padding--sm-2);
   }
 
   &__header {
@@ -169,11 +169,11 @@
     }
 
     &__title {
-      font-weight: 400;
+      font-weight: var(--font-weight--normal-1);
     }
 
     &__text {
-      font-weight: 500;
+      font-weight: var(--font-weight--normal-2);
     }
 
     &__categories {
@@ -198,7 +198,7 @@
     &__text {
       display: grid;
       padding: 0 2rem;
-      font-weight: 500;
+      font-weight: var(--font-weight--normal-2);
       transition: var(--transition);
       grid-template-columns: repeat(1, 1fr);
       gap: 3rem;
@@ -221,7 +221,7 @@
       h4 {
         margin-bottom: 1rem;
         color: var(--color--light-blue-3);
-        font-weight: 500;
+        font-weight: var(--font-weight--normal-2);
       }
 
       li,
@@ -395,7 +395,7 @@
     align-self: flex-start;
     padding: 0.5rem 0.8rem;
     border-radius: var(--border-radius--lg);
-    font-weight: 500;
+    font-weight: var(--font-weight--normal-2);
     background-color: var(--color--white);
     @include box-shadow-3(var(--color--bg-grey));
   }
