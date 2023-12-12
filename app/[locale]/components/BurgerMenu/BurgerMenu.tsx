@@ -37,7 +37,7 @@ export function BurgerMenu() {
         className={`button-icon animated-icon ${classNameActive}`}
         onClick={() => handleMenuOpen()}
       >
-        <div className="icon"></div>
+        <span className="icon"></span>
       </button>
       <Portal wrapperId="portal">
         <div
@@ -56,7 +56,7 @@ export function BurgerMenu() {
               className={`button-icon button-icon__close animated-icon ${classNameActive}`}
               onClick={hideBurger}
             >
-              <div className="icon"></div>
+              <span className="icon"></span>
             </button>
 
             <div className="burger-column">

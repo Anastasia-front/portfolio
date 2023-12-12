@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider, useLocale } from "next-intl";
 import { Oxygen } from "next/font/google";
-import Head from "next/head";
 import { notFound } from "next/navigation";
 
 import {
@@ -76,10 +75,6 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <Head>
-        <meta property="og:image" content="/" />
-        <meta property="og:url" content="/" />
-      </Head>
       <body className={oxygen.className}>
         <GlobalProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
