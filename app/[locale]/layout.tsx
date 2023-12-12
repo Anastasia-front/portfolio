@@ -14,10 +14,6 @@ import {
 import { GlobalProvider } from "@/context";
 import { Providers } from "@/providers";
 
-import dotenv from "dotenv";
-
-dotenv.config();
-
 import "./styles/main.scss";
 
 const oxygen = Oxygen({ subsets: ["latin"], weight: ["400"] });
