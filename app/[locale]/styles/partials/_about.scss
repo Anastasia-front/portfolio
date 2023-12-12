@@ -29,7 +29,7 @@
       max-height: 50%;
       border-radius: var(--border-radius--sm);
       pointer-events: none;
-      filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+      filter: var(--filter-1);
       transform: translateX(-50%);
     }
 
@@ -45,13 +45,13 @@
 
       h1 {
         color: #fff;
-        filter: drop-shadow(1px 3px 0px rgba(0, 0, 0, 0.2));
+        filter: var(--filter-2);
       }
 
       p {
         color: var(--color--light-blue-1);
         font-weight: var(--font-weight--normal-2);
-        filter: drop-shadow(1px 3px 0px rgba(0, 0, 0, 0.05));
+        filter: var(--filter-3);
       }
     }
   }

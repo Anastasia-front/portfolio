@@ -324,7 +324,7 @@
       &-title {
         color: var(--color--orange-1);
         font-weight: 900;
-        font-size: clamp(1rem, 1vw, 1.2rem);
+        font-size: var(--font-size--5);
         text-align: center;
       }
 
@@ -384,5 +384,3 @@
     }
   }
 }
-
-

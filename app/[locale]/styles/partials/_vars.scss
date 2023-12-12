@@ -59,7 +59,23 @@
   --level--2: translateZ(6rem);
   --level--3: translateZ(9rem);
 
+  --filter-1: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+  --filter-2: drop-shadow(1px 3px 0px rgba(0, 0, 0, 0.2));
+  --filter-3: drop-shadow(1px 3px 0px rgba(0, 0, 0, 0.05));
+  --filter-4: drop-shadow(1px 4px 7px rgba(0, 0, 0, 0.2));
+
+  --font-size--1: clamp(2rem, min(1vw, 50px), 2.2rem);
+  --font-size--2: clamp(1.8rem, min(1vw, 45px), 1.9rem);
+  --font-size--3: clamp(1.6rem, min(1vw, 40px), 1.7rem);
+  --font-size--4: clamp(1.2rem, min(1vw, 35px), 1.5rem);
+  --font-size--5: clamp(1rem, min(1vw, 30px), 1.2rem);
+  --font-size--6: clamp(0.9rem, min(1vw, 25px), 1rem);
+  --font-size--7: clamp(0.8rem, min(1vw, 20px), 0.9rem);
+  --font-size--8: clamp(0.6rem, min(1vw, 15px), 0.7rem);
+  --font-size--9: clamp(0.8rem, min(1vw, 17px), 0.9rem);
+  --font-size--10: clamp(0.4rem, min(1vw, 15px), 0.5rem);
+
   --font-weight--normal-1: 400;
-  --font-weight--normal-2:500;
+  --font-weight--normal-2: 500;
   --font-weight--bold: 700;
 }

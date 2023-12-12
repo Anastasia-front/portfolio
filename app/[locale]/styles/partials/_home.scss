@@ -397,9 +397,8 @@
     }
 
     &__body {
-   
       font-weight: var(--font-weight--normal-1);
-      font-size: clamp(0.8rem, min(1vw, 17px), 0.9rem);
+      font-size: var(--font-size--9);
       line-height: 1.6;
       transform: var(--level--2);
     }
@@ -584,20 +583,20 @@
         gap: 0.5rem;
         width: 100%;
         height: 100%;
-        font-size: clamp(0.4rem, 1vw, 0.5rem);
+        font-size: var(--font-size--10);
         text-align: left;
         text-transform: uppercase;
 
         @include useScreen("tablet-sm") {
           gap: 1rem;
-          font-size: clamp(1rem, 1vw, 1.5rem);
+          font-size: var(--font-size--4);
         }
 
         span {
-          font-size: clamp(0.5rem, 1vw, 0.6rem);
+          font-size: var(--font-size--10);
           text-transform: lowercase;
           @include useScreen("tablet-sm") {
-            font-size: clamp(1rem, 1vw, 1.5rem);
+            font-size: var(--font-size--4);
           }
         }
       }
@@ -624,7 +623,7 @@
       &-text {
         @include flex(row, flex-start, flex-start);
         gap: 1rem;
-        font-size: clamp(0.4rem, 1vw, 0.5rem);
+        font-size: var(--font-size--10);
         text-align: left;
         text-transform: uppercase;
         @include useScreen("mobile-md") {
@@ -633,7 +632,7 @@
         }
 
         span {
-          font-size: clamp(0.4rem, 1vw, 0.5rem);
+          font-size: var(--font-size--10);
           text-transform: lowercase;
         }
       }

@@ -118,7 +118,7 @@
   }
 
   &__logo img {
-    filter: drop-shadow(1px 4px 7px rgba(0, 0, 0, 0.2));
+    filter: var(--filter-4);
   }
 
   &__links {
