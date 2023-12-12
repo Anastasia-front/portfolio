@@ -30,11 +30,6 @@
     }
   }
 
-  &-container {
-    position: relative;
-    padding: 3px;
-  }
-
   &-switcher {
     display: flex;
     justify-content: center;
@@ -44,6 +39,7 @@
     border: none;
     cursor: pointer;
     background: transparent;
+    transition: var(--transition);
 
     @include useOnHover {
       transform: scale(var(--scale));
