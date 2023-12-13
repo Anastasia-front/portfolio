@@ -61,8 +61,12 @@ export function SkillBlock({
         <div className="skill-block__overlay skill-block__overlay-active">
           <h3 className="skill-block__title">{title}</h3>
           <div className="skills-section__list">
-            {skillBlock.map((skill, index) => (
-              <SkillItem key={index} {...skill} animation={animationStyle} />
+            {skillBlock.map((skill) => (
+              <SkillItem
+                key={skill.title}
+                {...skill}
+                animation={animationStyle}
+              />
             ))}
           </div>
         </div>

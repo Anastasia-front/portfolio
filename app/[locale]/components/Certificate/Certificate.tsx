@@ -28,8 +28,8 @@ export function Certificate() {
       modules={[EffectCards]}
       className="swiper"
     >
-      {screens.map((screen, index) => (
-        <SwiperSlide key={index} tag="li" className="swiper-slide">
+      {screens.map((screen) => (
+        <SwiperSlide key={screen.title} tag="li" className="swiper-slide">
           <Image
             src={screen.src}
             alt={screen.title}

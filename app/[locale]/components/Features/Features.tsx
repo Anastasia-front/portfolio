@@ -52,9 +52,9 @@ export function Features() {
         </p>
 
         <div className="features-cards">
-          {threeKeys.map((key, index) => {
+          {threeKeys.map((key,index) => {
             return (
-              <div className="features-card" key={index}>
+              <div className="features-card" key={key}>
                 <div className="features-card__content">
                   <div
                     className={`features-card__front features-card__front-${key}`}

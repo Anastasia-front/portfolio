@@ -84,9 +84,9 @@ export default function Page({ params }: Params) {
           <div className="banner__header">
             <h3 className={`banner__title ${rubik.className}`}>{name}</h3>
             <div className={`banner__categories ${rubik.className}`}>
-              {categories?.map((category: any, index: number) => {
+              {categories?.map((category) => {
                 return (
-                  <span key={index} className="banner__category">
+                  <span key={category} className="banner__category">
                     {category}
                   </span>
                 );
@@ -102,8 +102,8 @@ export default function Page({ params }: Params) {
             <div>
               <h4>{h("features")}</h4>
               <ul className="project__content__text-features">
-                {features?.map((feature: any, i: number) => {
-                  return <li key={i}>{feature}</li>;
+                {features?.map((feature) => {
+                  return <li key={feature}>{feature}</li>;
                 })}
               </ul>
             </div>

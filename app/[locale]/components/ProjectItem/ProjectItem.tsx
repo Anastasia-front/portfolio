@@ -36,9 +36,9 @@ export function ProjectItem({ name, image, categories, onClick }: Project) {
           initial="offscreen"
           whileInView={isHover ? "onscreen" : "offscreen"}
         >
-          {categories.map((category, index) => {
+          {categories.map((category) => {
             if (category !== "") {
-              return <span key={index}>{category}</span>;
+              return <span key={category}>{category}</span>;
             }
           })}
         </motion.div>

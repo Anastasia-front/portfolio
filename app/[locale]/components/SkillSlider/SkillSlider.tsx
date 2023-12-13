@@ -46,7 +46,7 @@ export function SkillSlider() {
     >
       <motion.h4
         className="swiper-title"
-        variants={fadeIn('left')}
+        variants={fadeIn("left")}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: false, amount: 0.2 }}
@@ -70,7 +70,7 @@ export function SkillSlider() {
         className="swiper"
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index} className="swiper-slide-skill">
+          <SwiperSlide key={`${image}`} className="swiper-slide-skill">
             <Image
               src={image}
               alt={`content image number ${index}`}
@@ -82,7 +82,7 @@ export function SkillSlider() {
       </Swiper>
       <motion.span
         className="license"
-        variants={fadeIn('right')}
+        variants={fadeIn("right")}
         initial="hidden"
         animate="visible"
       >
