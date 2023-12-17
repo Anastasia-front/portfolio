@@ -677,6 +677,12 @@
       }
     }
   }
+
+  &-github{
+    width: 50%;
+    height: auto;
+    border-radius: 1rem;
+  }
 }
 [data-theme="dark"] .video {
   background: var(--color--blue-dark);

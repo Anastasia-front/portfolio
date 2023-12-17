@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef, useState } from "react";
+
 import { useTranslations } from "next-intl";
 import { Libre_Franklin, Source_Code_Pro } from "next/font/google";
 
@@ -22,8 +24,30 @@ export function AchievementBlock() {
   const a = useTranslations("about.achievements");
   const t = useTranslations("about");
 
+  const [isClicked, setIsClicked] = useState(false);
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleClick = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused || videoRef.current.ended) {
+        videoRef.current.play();
+        setIsClicked(true);
+      }
+    }
+  };
+
   return (
     <motion.div className="about-achievements">
+      <motion.h2
+        className="about-achievements__title"
+        variants={titleVariants("second")}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {a("title.main")}
+      </motion.h2>
       <motion.h4
         className={`about-achievements__title ${franklin.className}`}
         variants={titleVariants("second")}
@@ -69,6 +93,22 @@ export function AchievementBlock() {
       >
         <Progress />
       </motion.div>
+      <motion.h5
+        className={`about-achievements__subtitle ${source.className}`}
+        variants={titleVariants("second")}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {a("title.third")}
+      </motion.h5>
+      <motion.video
+        className="video-github"
+        src="/video/achievements/github2023.mp4"
+        ref={videoRef}
+        onClick={handleClick}
+        controls={true}
+      />
     </motion.div>
   );
 }

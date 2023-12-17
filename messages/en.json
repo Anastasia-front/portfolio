@@ -195,8 +195,10 @@
     "confirm": "To confirm my studies in the courses and their successful completion, I am attaching a certificate and screens of the progress of my studies from my personal course cabinet",
     "achievements": {
       "title": {
+        "main":"Achievements",
         "first": "Certificate",
-        "second": "Screens of my personal course cabinet"
+        "second": "Screens of my personal course cabinet",
+        "third":"My GitHub coding year in review"
       },
       "alt": {
         "certificate": {

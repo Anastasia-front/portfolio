@@ -8,7 +8,6 @@ import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 
 export function Video() {
-
   const [isClicked, setIsClicked] = useState(false);
 
   const f = useTranslations("video.firstTime");
