@@ -589,8 +589,12 @@ main {
     max-height: 80vh;
     padding: 2rem;
     overflow: auto;
-    border-radius: var(--border-radius--lg) 0 0 var(--border-radius--lg);
+    border-radius: var(--border-radius--lg);
     background: var(--color--bg-light);
+
+    &__with-scrollbar {
+      border-radius: var(--border-radius--lg) 0 0 var(--border-radius--lg);
+    }
 
     @include useScreen("tablet-sm") {
       padding: 3rem;

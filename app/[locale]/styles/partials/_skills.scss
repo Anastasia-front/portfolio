@@ -47,6 +47,7 @@
     border-radius: var(--border-radius--lg);
     background: var(--color--white);
     gap: 2rem;
+    cursor: default;
 
     &::before {
       z-index: -1;
@@ -102,6 +103,7 @@
     width: 100%;
     padding-top: 3rem;
     gap: 1rem;
+    cursor: alias;
 
     @include useScreen("tablet-sm") {
       padding: 0;

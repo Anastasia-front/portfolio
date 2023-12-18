@@ -36,10 +36,11 @@ export function Video() {
  
 
   const videoRef = useRef<HTMLVideoElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
   const handleClick = () => {
-    if (videoRef.current) {
-      if (videoRef.current.paused || videoRef.current.ended) {
+    if (videoRef.current || textRef.current) {
+      if (videoRef.current && (videoRef.current.paused || videoRef.current.ended)) {
         videoRef.current.play();
         setIsClicked(true);
       }
@@ -56,7 +57,7 @@ export function Video() {
         onClick={handleClick}
       />
       {!isClicked ? (
-        <div className="video-tip__first">
+        <div className="video-tip__first"  ref={textRef} onClick={handleClick}>
           <BsInfoSquare />
           <p className="video-tip__first-text">
             {f("primaryText")} <span>{f("secondaryText")}</span>

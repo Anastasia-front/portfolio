@@ -37,6 +37,7 @@ export default function SkillsPage() {
       </div>
 
       <Accordion />
+      
       <motion.div
         variants={opacityVariants("first")}
         className="skills-section__slider"

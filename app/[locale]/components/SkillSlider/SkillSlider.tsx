@@ -70,7 +70,7 @@ export function SkillSlider() {
         className="swiper"
       >
         {images.map((image, index) => (
-          <SwiperSlide key={`${image}`} className="swiper-slide-skill">
+          <SwiperSlide key={index} className="swiper-slide-skill">
             <Image
               src={image}
               alt={`content image number ${index}`}

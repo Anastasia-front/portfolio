@@ -35,12 +35,6 @@ export function SkillBlock({
     }
   };
 
-  const handleOutsideClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      handleClick(0);
-    }
-  };
-
   const flexStyle = active === id ? "skill-block__active" : "";
   const animationStyle = animation % 2 !== 0 ? "left" : "right";
 
