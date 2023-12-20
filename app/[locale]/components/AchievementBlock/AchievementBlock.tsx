@@ -108,6 +108,10 @@ export function AchievementBlock() {
         ref={videoRef}
         onClick={handleClick}
         controls={true}
+        variants={titleVariants("first")}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
       />
     </motion.div>
   );
