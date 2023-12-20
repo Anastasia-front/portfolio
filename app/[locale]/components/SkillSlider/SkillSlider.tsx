@@ -13,13 +13,13 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-import contentImg1 from "@/assets/images/skills/content/1.jpg";
-import contentImg2 from "@/assets/images/skills/content/2.jpg";
-import contentImg3 from "@/assets/images/skills/content/3.jpg";
-import contentImg4 from "@/assets/images/skills/content/4.jpg";
-import contentImg5 from "@/assets/images/skills/content/5.jpg";
-import contentImg6 from "@/assets/images/skills/content/6.jpg";
-import contentImg7 from "@/assets/images/skills/content/7.jpg";
+import contentImg1 from "@/assets/images/skills/content/1.webp";
+import contentImg2 from "@/assets/images/skills/content/2.webp";
+import contentImg3 from "@/assets/images/skills/content/3.webp";
+import contentImg4 from "@/assets/images/skills/content/4.webp";
+import contentImg5 from "@/assets/images/skills/content/5.webp";
+import contentImg6 from "@/assets/images/skills/content/6.webp";
+import contentImg7 from "@/assets/images/skills/content/7.webp";
 import Image from "next/image";
 
 const images = [

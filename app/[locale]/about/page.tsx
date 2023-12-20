@@ -44,15 +44,15 @@ export default function AboutPage() {
   const img = (() => {
     if (lang === "/uk") {
       if (theme === "light") {
-        return `/images/about/${folder}/uk-light.png`;
+        return `/images/about/${folder}/uk-light.webp`;
       } else {
-        return `/images/about/${folder}/uk-dark.png`;
+        return `/images/about/${folder}/uk-dark.webp`;
       }
     } else {
       if (theme === "light") {
-        return `/images/about/${folder}/en-light.png`;
+        return `/images/about/${folder}/en-light.webp`;
       } else {
-        return `/images/about/${folder}/en-dark.png`;
+        return `/images/about/${folder}/en-dark.webp`;
       }
     }
   })();

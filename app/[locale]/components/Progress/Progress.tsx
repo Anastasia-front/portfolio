@@ -1,6 +1,5 @@
 "use client";
 
-
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -16,18 +15,18 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import enDarkA1 from "@/assets/images/achievements/en-dark-a1.png";
-import enDarkA2 from "@/assets/images/achievements/en-dark-a2.png";
-import enDarkA3 from "@/assets/images/achievements/en-dark-a3.png";
-import enLightA1 from "@/assets/images/achievements/en-light-a1.png";
-import enLightA2 from "@/assets/images/achievements/en-light-a2.png";
-import enLightA3 from "@/assets/images/achievements/en-light-a3.png";
-import ukDarkA1 from "@/assets/images/achievements/uk-dark-a1.png";
-import ukDarkA2 from "@/assets/images/achievements/uk-dark-a2.png";
-import ukDarkA3 from "@/assets/images/achievements/uk-dark-a3.png";
-import ukLightA1 from "@/assets/images/achievements/uk-light-a1.png";
-import ukLightA2 from "@/assets/images/achievements/uk-light-a2.png";
-import ukLightA3 from "@/assets/images/achievements/uk-light-a3.png";
+import enDarkA1 from "@/assets/images/achievements/en-dark-a1.webp";
+import enDarkA2 from "@/assets/images/achievements/en-dark-a2.webp";
+import enDarkA3 from "@/assets/images/achievements/en-dark-a3.webp";
+import enLightA1 from "@/assets/images/achievements/en-light-a1.webp";
+import enLightA2 from "@/assets/images/achievements/en-light-a2.webp";
+import enLightA3 from "@/assets/images/achievements/en-light-a3.webp";
+import ukDarkA1 from "@/assets/images/achievements/uk-dark-a1.webp";
+import ukDarkA2 from "@/assets/images/achievements/uk-dark-a2.webp";
+import ukDarkA3 from "@/assets/images/achievements/uk-dark-a3.webp";
+import ukLightA1 from "@/assets/images/achievements/uk-light-a1.webp";
+import ukLightA2 from "@/assets/images/achievements/uk-light-a2.webp";
+import ukLightA3 from "@/assets/images/achievements/uk-light-a3.webp";
 
 export function Progress() {
   const a = useTranslations("about.achievements");

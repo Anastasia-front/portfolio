@@ -6,8 +6,8 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-import decoration from "@/assets/images/hero/decoration.png";
-import hero from "@/assets/images/hero/hero.jpg";
+import decoration from "@/assets/images/hero/decoration.webp";
+import hero from "@/assets/images/hero/hero.webp";
 
 import { ButtonScroll } from "@/components";
 import { useScreenQuery } from "@/hooks";

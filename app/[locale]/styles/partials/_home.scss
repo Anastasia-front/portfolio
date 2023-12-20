@@ -361,13 +361,13 @@
       background-size: cover;
     }
     &__front-first {
-      background-image: url("/images/features/cards-bg/1.jpg");
+      background-image: url("/images/features/cards-bg/1.webp");
     }
     &__front-second {
-      background-image: url("/images/features/cards-bg/2.jpg");
+      background-image: url("/images/features/cards-bg/2.webp");
     }
     &__front-third {
-      background-image: url("/images/features/cards-bg/3.jpg");
+      background-image: url("/images/features/cards-bg/3.webp");
     }
 
     &__front::before {
@@ -678,7 +678,7 @@
     }
   }
 
-  &-github{
+  &-github {
     width: 50%;
     height: auto;
     border-radius: 1rem;

@@ -8,9 +8,9 @@ import "swiper/css/effect-cards";
 import { EffectCards } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import screen1 from "@/assets/images/certificate/screen1.png";
-import screen2 from "@/assets/images/certificate/screen2.png";
-import screen3 from "@/assets/images/certificate/screen3.png";
+import screen1 from "@/assets/images/certificate/screen1.webp";
+import screen2 from "@/assets/images/certificate/screen2.webp";
+import screen3 from "@/assets/images/certificate/screen3.webp";
 
 export function Certificate() {
   const a = useTranslations("about.achievements.alt");

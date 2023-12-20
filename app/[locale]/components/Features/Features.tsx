@@ -80,7 +80,7 @@ export function Features() {
                 {isScreenTabletSm && (
                   <Image
                     className="features-card__decoration"
-                    src={`/images/features/decoration/${index}.webp`}
+                    src={`/images/features/decoration/${index+1}.webp`}
                     width={300}
                     height={300}
                     alt={a("features")}

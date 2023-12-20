@@ -5,8 +5,8 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-import decor1 from "@/assets/images/contacts/decoration/1.png";
-import decor2 from "@/assets/images/contacts/decoration/2.png";
+import decor1 from "@/assets/images/contacts/decoration/1.webp";
+import decor2 from "@/assets/images/contacts/decoration/2.webp";
 
 import { Contacts, Form, LottiePlayer } from "@/components";
 import { useGlobalContext } from "@/context";

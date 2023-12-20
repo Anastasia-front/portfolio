@@ -17,7 +17,7 @@ import { useLocation, useRoute } from "wouter";
 
 const GOLDEN_RATIO = 1.61803398875;
 
-const position = (id) => `/images/hero/${id}.jpg`;
+const position = (id) => `/images/hero/${id}.webp`;
 const images = [
   // Front
   {
