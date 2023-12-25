@@ -10,6 +10,7 @@ import cover15 from "@/assets/images/projects/project15/cover.webp";
 import cover16 from "@/assets/images/projects/project16/cover.webp";
 import cover17 from "@/assets/images/projects/project17/cover.webp";
 import cover18 from "@/assets/images/projects/project18/cover.webp";
+import cover19 from "@/assets/images/projects/project19/cover.webp";
 import cover2 from "@/assets/images/projects/project2/cover.webp";
 import cover3 from "@/assets/images/projects/project3/cover.webp";
 import cover4 from "@/assets/images/projects/project4/cover.webp";
@@ -127,6 +128,12 @@ import eighteenthProjectSnippet3 from "@/assets/images/projects/project18/snippe
 import eighteenthProjectSnippet4 from "@/assets/images/projects/project18/snippet4.webp";
 import eighteenthProjectSnippet5 from "@/assets/images/projects/project18/snippet5.webp";
 
+import nineteenthProjectSnippet1 from "@/assets/images/projects/project19/snippet1.webp";
+import nineteenthProjectSnippet2 from "@/assets/images/projects/project19/snippet2.webp";
+import nineteenthProjectSnippet3 from "@/assets/images/projects/project19/snippet3.webp";
+import nineteenthProjectSnippet4 from "@/assets/images/projects/project19/snippet4.webp";
+import nineteenthProjectSnippet5 from "@/assets/images/projects/project19/snippet5.webp";
+
 export interface Project {
   id?: number;
   development?: "backend" | "frontend";
@@ -211,6 +218,58 @@ export const projectsEnglishLang: Project[] = [
       image3: thirdProjectSnippet3,
       image4: thirdProjectSnippet4,
       image5: thirdProjectSnippet5,
+    },
+  },
+  {
+    id: 19,
+    development: "frontend",
+    type: "individual",
+    name: "Norway",
+    categories: ["ts", "React", "Vite", "scss"],
+    image: cover19,
+    url: "norway",
+    features: ["Responsive design", "GoogleMaps", "And much more..."],
+    problem: "Company that provide travel services need a website",
+    solution:
+      "I can make based on design and implement functionality according to technical requirements for projects of any complexity",
+    links: {
+      website: "https://norway-website.netlify.app/",
+      github: "https://github.com/Anastasia-front/norway",
+    },
+    content: {
+      description:
+        "This website was created for practice and improvement of frontend development after completing the courses",
+      image1: nineteenthProjectSnippet1,
+      image2: nineteenthProjectSnippet2,
+      image3: nineteenthProjectSnippet3,
+      image4: nineteenthProjectSnippet4,
+      image5: nineteenthProjectSnippet5,
+    },
+  },
+  {
+    id: 18,
+    development: "frontend",
+    type: "individual",
+    name: "GoGreen",
+    categories: ["ts", "React", "Vite", "scss"],
+    image: cover18,
+    url: "go-green",
+    features: ["Responsive design", "And much more..."],
+    problem: "Companies that create nature protected program need a website",
+    solution:
+      "I can create projects of any complexity based on provided requirements",
+    links: {
+      website: "https://go-green-website.netlify.app/",
+      github: "https://github.com/Anastasia-front/go-green",
+    },
+    content: {
+      description:
+        "This website was created in a few days for practice and improvement of frontend development after completing the courses",
+      image1: eighteenthProjectSnippet1,
+      image2: eighteenthProjectSnippet2,
+      image3: eighteenthProjectSnippet3,
+      image4: eighteenthProjectSnippet4,
+      image5: eighteenthProjectSnippet5,
     },
   },
   {
@@ -554,32 +613,6 @@ export const projectsEnglishLang: Project[] = [
     },
   },
   {
-    id: 18,
-    development: "frontend",
-    type: "individual",
-    name: "GoGreen",
-    categories: ["ts", "scss", "vite"],
-    image: cover18,
-    url: "go-green",
-    features: ["Responsive design", "And much more..."],
-    problem: "Companies that create nature protected program need a website",
-    solution:
-      "I can design and code projects of any complexity based on provided layouts",
-    links: {
-      website: "https://go-green-website.netlify.app/",
-      github: "https://github.com/Anastasia-front/go-green",
-    },
-    content: {
-      description:
-        "This website was created in a few days for practice and revision of frontend development after completing the courses",
-      image1: eighteenthProjectSnippet1,
-      image2: eighteenthProjectSnippet2,
-      image3: eighteenthProjectSnippet3,
-      image4: eighteenthProjectSnippet4,
-      image5: eighteenthProjectSnippet5,
-    },
-  },
-  {
     id: 12,
     development: "frontend",
     type: "test",
@@ -757,6 +790,57 @@ export const projectsUkrainianLang: Project[] = [
       image3: thirdProjectSnippet3,
       image4: thirdProjectSnippet4,
       image5: thirdProjectSnippet5,
+    },
+  },
+  {
+    id: 19,
+    development: "frontend",
+    type: "individual",
+    name: "Norway",
+    categories: ["ts", "React", "Vite", "scss"],
+    image: cover19,
+    url: "norway",
+    features: ["Адаптивний дизайн", "GoogleMaps", "Та багато іншого..."],
+    problem: "Компанії, що надає туристичні послуги, потрібен сайт",
+    solution:
+      "Я могу зверстати за макетом та впровадити фунціонал за технічними вимогами сайт будь-якої складності",
+    links: {
+      website: "https://norway-website.netlify.app/",
+      github: "https://github.com/Anastasia-front/norway",
+    },
+    content: {
+      description:
+        "Це веб-сайт, який я створила для закріплення та вдосконалення знань та навичок після завершення курсів",
+      image1: nineteenthProjectSnippet1,
+      image2: nineteenthProjectSnippet2,
+      image3: nineteenthProjectSnippet3,
+      image4: nineteenthProjectSnippet4,
+      image5: nineteenthProjectSnippet5,
+    },
+  },
+  {
+    id: 18,
+    development: "frontend",
+    type: "individual",
+    name: "GoGreen",
+    categories: ["ts", "React", "Vite", "scss"],
+    image: cover18,
+    url: "go-green",
+    features: ["Адаптивний дизайн", "Та багато іншого..."],
+    problem: "Компанії з програмами захисту природи потрібен веб-сайт",
+    solution: "Я могу зверстати за макетом сайт будь-якої складності",
+    links: {
+      website: "https://go-green-website.netlify.app/",
+      github: "https://github.com/Anastasia-front/go-green",
+    },
+    content: {
+      description:
+        "Це веб-сайт, який я створила за декілька днів для закріплення та вдосконалення знань та навичок після завершення курсів",
+      image1: eighteenthProjectSnippet1,
+      image2: eighteenthProjectSnippet2,
+      image3: eighteenthProjectSnippet3,
+      image4: eighteenthProjectSnippet4,
+      image5: eighteenthProjectSnippet5,
     },
   },
   {
@@ -1093,31 +1177,6 @@ export const projectsUkrainianLang: Project[] = [
       image3: seventeenthProjectSnippet3,
       image4: seventeenthProjectSnippet4,
       image5: seventeenthProjectSnippet5,
-    },
-  },
-  {
-    id: 18,
-    development: "frontend",
-    type: "individual",
-    name: "GoGreen",
-    categories: ["ts", "scss", "vite"],
-    image: cover18,
-    url: "go-green",
-    features: ["Адаптивний дизайн", "Та багато іншого..."],
-    problem: "Компанії з програмами захисту природи потрібен веб-сайт",
-    solution: "Я могу зверстати за макетом сайт будь-якої складності",
-    links: {
-      website: "https://go-green-website.netlify.app/",
-      github: "https://github.com/Anastasia-front/go-green",
-    },
-    content: {
-      description:
-        "Це веб-сайт, який я створила за декілька днів для згадування та повторення знань та навичок після завершення курсів",
-      image1: eighteenthProjectSnippet1,
-      image2: eighteenthProjectSnippet2,
-      image3: eighteenthProjectSnippet3,
-      image4: eighteenthProjectSnippet4,
-      image5: eighteenthProjectSnippet5,
     },
   },
   {
