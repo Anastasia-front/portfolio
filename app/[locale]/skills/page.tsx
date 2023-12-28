@@ -4,11 +4,12 @@ import { useTranslations } from "next-intl";
 
 import { motion } from "framer-motion";
 
-import { Accordion, LottiePlayer, SkillSlider } from "@/components";
+import { Accordion, Banner, LottiePlayer, SkillSlider } from "@/components";
 import { gridVariants, opacityVariants } from "@/utils";
 
 export default function SkillsPage() {
   const t = useTranslations("skills");
+  const b = useTranslations("banner");
 
   return (
     <main className="skills-page container">
@@ -37,7 +38,7 @@ export default function SkillsPage() {
       </div>
 
       <Accordion />
-      
+      <Banner text={b("contact")} button />
       <motion.div
         variants={opacityVariants("first")}
         className="skills-section__slider"

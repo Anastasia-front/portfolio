@@ -3,16 +3,16 @@
 @use "../mixins/" as *;
 
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-gap: var(--padding--sm-2);
   grid-auto-flow: dense;
+  grid-gap: var(--padding--sm-2);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: grid;
 
   &__header {
     @include flex(row, space-between, flex-start);
+    gap: 3rem;
     z-index: 9;
     position: relative;
-    gap: 3rem;
   }
 
   &__filter {
@@ -77,13 +77,14 @@
   }
 
   img {
+    object-fit: cover;
     width: 100%;
     height: 160px;
     border-radius: var(--padding--sm);
-    object-fit: cover;
   }
 
   &__title {
+    -webkit-text-fill-color: transparent;
     padding: var(--padding--sm-2);
     font-weight: var(--font-weight--normal-1);
     background: linear-gradient(
@@ -91,33 +92,38 @@
       var(--color--light-blue-2),
       var(--color--orange-2)
     );
-    -webkit-text-fill-color: transparent;
   }
 
   &:first-child {
-    display: flex;
     gap: var(--padding--sm-2);
+    display: flex;
   }
 
   &__header {
     position: relative;
-    height: 45vh;
+    height: 410px;
+
     @include useScreen("tablet-sm") {
-      height: 80vh;
+      height: 420px;
       margin-bottom: 3rem;
+    }
+    @include useScreen("tablet-xl") {
+      height: 630px;
     }
 
     .bg-image {
+      object-fit: cover;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      max-height: 20vh;
       border-radius: var(--border-radius--lg);
-      object-fit: cover;
+
       @include useScreen("tablet-sm") {
-        max-height: 80vh;
+        height: 400px;
+      }
+      @include useScreen("tablet-xl") {
+        height: 635px;
       }
     }
 
@@ -133,8 +139,13 @@
         rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.9)
       );
+
       @include useScreen("tablet-sm") {
         height: 80vh;
+        max-height: 400px;
+      }
+      @include useScreen("tablet-xl") {
+        max-height: 635px;
       }
     }
   }
@@ -142,20 +153,24 @@
   .banner {
     z-index: 9;
     position: absolute;
-    bottom: 3rem;
+    top: 8rem;
     flex-direction: column;
     width: 100%;
-    max-height: min-content;
+    max-height: 255px;
     border-radius: var(--border-radius--xl) var(--border-radius--xl)
       var(--border-radius--lg) var(--border-radius--lg);
     overflow-x: hidden;
     @include box-shadow-7(var(--color--bg-grey));
 
     @include useScreen("tablet-sm") {
+      top: auto;
       bottom: 0;
     }
     @include useScreen("tablet-md") {
       flex-direction: row;
+    }
+    @include useScreen("tablet-xl") {
+      bottom: -0.5rem;
     }
 
     &__header {
@@ -163,8 +178,8 @@
       gap: 1rem;
 
       @include useScreen("tablet-sm") {
-        flex-direction: row;
         gap: 3rem;
+        flex-direction: row;
       }
     }
 
@@ -178,8 +193,8 @@
 
     &__categories {
       @include flex(row, center, center);
-      flex-wrap: wrap;
       gap: 1rem;
+      flex-wrap: wrap;
 
       span {
         padding: 0.3rem 0.8rem;
@@ -196,15 +211,14 @@
     gap: 1rem;
 
     &__text {
+      gap: 3rem;
+      grid-template-columns: repeat(1, 1fr);
       display: grid;
       padding: 0 2rem;
       font-weight: var(--font-weight--normal-2);
       transition: var(--transition);
-      grid-template-columns: repeat(1, 1fr);
-      gap: 3rem;
 
       @include useScreen("tablet-sm") {
-        padding: 0 4rem;
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -276,22 +290,22 @@
     }
 
     .horizontal-images {
+      grid-gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
       display: grid;
       margin-top: 0;
       border-radius: var(--border-radius--sm);
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-      grid-gap: 1rem;
 
       @include useScreen("tablet-md") {
-        padding: 2rem 0;
         grid-gap: 3rem;
+        padding: 2rem 0;
       }
 
       > img {
+        object-fit: cover;
         width: 100%;
         height: 100%;
         border-radius: var(--border-radius--sm);
-        object-fit: cover;
       }
 
       &__fullscreen {
@@ -302,10 +316,10 @@
         }
 
         > img {
+          object-fit: cover;
           width: auto;
           max-width: 100%;
           height: auto;
-          object-fit: cover;
 
           &:not(:first-child) {
             margin-top: 1rem;
@@ -379,9 +393,9 @@
 
   &__categories {
     @include flex(row, flex-end, center);
-    flex-wrap: wrap;
-
     gap: 0.5rem;
+
+    flex-wrap: wrap;
 
     span {
       padding: 0.3rem 0.8rem;

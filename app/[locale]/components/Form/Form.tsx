@@ -137,7 +137,7 @@ export function Form({ onClick }: Props) {
       onSubmit={handleSubmit(onSubmit)}
       className="contact__form"
       action={formAction}
-      method="post"
+      method="POST"
       variants={opacityVariants("first")}
       initial="offscreen"
       whileInView="onscreen"

@@ -34,6 +34,7 @@ export function InputField({
           {...register("message")}
           className={`${errors.message ? "text-red" : ""} contact__textfield`}
           placeholder={placeholder}
+          inputMode="text"
         ></textarea>
       ) : type === "email" ? (
         <input
@@ -43,6 +44,7 @@ export function InputField({
           className={`${errors.email ? "text-red" : ""} contact__input`}
           placeholder={placeholder}
           autoComplete="true"
+          inputMode="email"
         />
       ) : (
         <input
@@ -52,6 +54,7 @@ export function InputField({
           className={`${errors.subject ? "text-red" : ""} contact__input`}
           placeholder={placeholder}
           autoComplete="true"
+          inputMode="text"
         />
       )}
       {errors[name] && (
