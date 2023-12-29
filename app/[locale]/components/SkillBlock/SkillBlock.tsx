@@ -14,6 +14,7 @@ interface Props {
   active: number;
   animation: number;
   handleClick: (id: number) => void;
+  handleClose: () => void;
 }
 
 export function SkillBlock({
@@ -24,12 +25,13 @@ export function SkillBlock({
   active,
   animation,
   handleClick,
+  handleClose,
 }: Props) {
   const skillBlock = skills.filter((skill) => skill.type === type);
 
   const handleToggle = (id: number) => {
     if (id === active) {
-      handleClick(0);
+      handleClose();
     } else {
       handleClick(id);
     }
@@ -40,6 +42,7 @@ export function SkillBlock({
 
   return (
     <motion.div
+      id={`${id}`}
       variants={fadeIn(animationStyle)}
       className={`skill-block ${className} ${flexStyle}`}
       onClick={() => handleToggle(id)}

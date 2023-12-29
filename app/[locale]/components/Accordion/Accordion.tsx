@@ -28,6 +28,12 @@ export function Accordion() {
   })();
 
   const handleClose = () => {
+    const activeElement = document.getElementById(String(active));
+
+    if (activeElement) {
+      activeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
     setActive(0);
   };
 
@@ -55,6 +61,7 @@ export function Accordion() {
           active={active}
           animation={index}
           handleClick={setActive}
+          handleClose={handleClose}
         />
       ))}
       <motion.span

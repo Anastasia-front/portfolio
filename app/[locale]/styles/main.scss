@@ -348,7 +348,7 @@ main {
 
 .label {
   font-weight: var(--font-weight--normal-1);
-  font-size: var(--font-size--8);
+  font-size: var(--font-size--7);
   letter-spacing: 0.02rem;
 }
 
@@ -588,8 +588,8 @@ main {
     height: max-content;
     max-height: 80vh;
     padding: 2rem;
-    overflow: auto;
     border-radius: var(--border-radius--lg);
+    overflow: auto;
     background: var(--color--bg-light);
 
     &__with-scrollbar {
@@ -628,6 +628,7 @@ main {
   }
 
   &-title {
+    -webkit-text-fill-color: transparent;
     background-image: linear-gradient(
       to right,
       var(--color--light-blue-4),
@@ -637,7 +638,6 @@ main {
       var(--color--light-blue-4)
     );
     background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 }
 [data-theme="dark"] .modal {
@@ -788,8 +788,8 @@ main {
 
   &__for-one {
     @media screen and (max-width: 479px) {
-      align-items: start;
       gap: 0.5rem;
+      align-items: start;
     }
     svg {
       width: 16px;
