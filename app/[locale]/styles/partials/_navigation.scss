@@ -4,13 +4,13 @@
 
 .navigation {
   @include flex(row, space-between, center);
+  gap: 1.5rem;
   z-index: 10;
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 1.2rem 0;
-  gap: 1.5rem;
 
   @include useScreen("mobile-xl") {
     padding: 1.2rem 1.4rem 0;
@@ -43,9 +43,9 @@
 
 .container-items {
   @include flex(row, space-between, center);
+  gap: 1rem;
   padding: 0.3rem 0.6rem;
   border-radius: var(--border-radius--lg);
-  gap: 1rem;
 
   &__frame {
     background: var(--color--white);
@@ -109,13 +109,13 @@
 }
 
 .navigation-items {
+  gap: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 0.3rem 0.7rem;
   border-radius: var(--border-radius--lg);
-  gap: 1rem;
 
   @include useScreen("mobile-lg") {
     gap: 2rem;
@@ -244,6 +244,7 @@
   }
 
   &-column {
+    gap: 4rem;
     display: flex;
     z-index: 103;
     position: relative;
@@ -253,13 +254,16 @@
     height: 100%;
     padding: 8rem 2rem;
     overflow: auto;
-    gap: 4rem;
 
     @include useScreen("mobile-lg") {
       padding: 8rem 4rem;
     }
     @include useScreen("mobile-xl") {
       padding: 8rem 5rem;
+    }
+
+    .navigation-items {
+      flex-direction: column;
     }
   }
 
