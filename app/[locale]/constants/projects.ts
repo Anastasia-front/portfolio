@@ -437,6 +437,59 @@ export const projectsEnglishLang: Project[] = [
     },
   },
   {
+    id: 10,
+    development: "frontend",
+    type: "individual",
+    name: "My blog",
+    categories: ["js", "css", "scss", "html"],
+    image: cover10,
+    url: "my-blog",
+    features: ["Responsive design", "And more..."],
+    problem: "I always wanted to have my own website",
+    solution:
+      "First, before taking the courses, I created my own website for practice",
+    links: {
+      website: "https://Anastasia-front.github.io/My-blog/",
+      github: "https://github.com/Anastasia-front/My-blog",
+    },
+    content: {
+      description:
+        "This is my own adaptive website where I collected all the information about myself (this project can be considered a portfolio of my starting works)",
+      image1: tenthProjectSnippet1,
+      image2: tenthProjectSnippet2,
+      image3: tenthProjectSnippet3,
+      image4: tenthProjectSnippet4,
+      image5: tenthProjectSnippet5,
+    },
+  },
+  {
+    id: 16,
+    development: "frontend",
+    type: "individual",
+    name: "FoodDX",
+    categories: ["html", "css", "scss", "js"],
+    image: cover16,
+    url: "food-dx",
+    features: ["Responsive design", "And much more..."],
+    problem:
+      "Companies that create delicious and aesthetically pleasing food need a website",
+    solution:
+      "I can design and code projects of any complexity based on provided layouts",
+    links: {
+      website: "https://anastasia-front.github.io/Food-website/",
+      github: "https://github.com/Anastasia-front/Food-website",
+    },
+    content: {
+      description:
+        "This website was created in a few days after completing the first block of my studies to reinforce the material learned (I made several changes after the initial commit to improve the work)",
+      image1: sixteenthProjectSnippet1,
+      image2: sixteenthProjectSnippet2,
+      image3: sixteenthProjectSnippet3,
+      image4: sixteenthProjectSnippet4,
+      image5: sixteenthProjectSnippet5,
+    },
+  },
+  {
     id: 8,
     development: "frontend",
     type: "team",
@@ -475,57 +528,6 @@ export const projectsEnglishLang: Project[] = [
     },
   },
   {
-    id: 9,
-    development: "frontend",
-    type: "individual",
-    name: "Website for Instagram",
-    categories: ["ts", "React", "scss", "parcel"],
-    image: cover9,
-    url: "website-for-instagram",
-    features: ["Responsive design", "Parallax effect", "And more..."],
-    problem:
-      "I needed a site where all my links to social networking pages and the necessary resources for contacting me were collected",
-    solution: "I have created a corresponding website",
-    links: {
-      website: "https://instagram-header-link.netlify.app/",
-      github: "https://github.com/Anastasia-front/instagram-link",
-    },
-    content: {
-      description: "IceCream website",
-      image1: ninthProjectSnippet1,
-      image2: ninthProjectSnippet2,
-      image3: ninthProjectSnippet3,
-      image4: ninthProjectSnippet4,
-      image5: ninthProjectSnippet5,
-    },
-  },
-  {
-    id: 10,
-    development: "frontend",
-    type: "individual",
-    name: "My blog",
-    categories: ["js", "css", "scss", "html"],
-    image: cover10,
-    url: "my-blog",
-    features: ["Responsive design", "And more..."],
-    problem: "I always wanted to have my own website",
-    solution:
-      "First, before taking the courses, I created my own website for practice",
-    links: {
-      website: "https://Anastasia-front.github.io/My-blog/",
-      github: "https://github.com/Anastasia-front/My-blog",
-    },
-    content: {
-      description:
-        "This is my own adaptive website where I collected all the information about myself (this project can be considered a portfolio of my starting works)",
-      image1: tenthProjectSnippet1,
-      image2: tenthProjectSnippet2,
-      image3: tenthProjectSnippet3,
-      image4: tenthProjectSnippet4,
-      image5: tenthProjectSnippet5,
-    },
-  },
-  {
     id: 11,
     development: "frontend",
     type: "individual",
@@ -557,33 +559,6 @@ export const projectsEnglishLang: Project[] = [
       image3: eleventhProjectSnippet3,
       image4: eleventhProjectSnippet4,
       image5: eleventhProjectSnippet5,
-    },
-  },
-  {
-    id: 16,
-    development: "frontend",
-    type: "individual",
-    name: "FoodDX",
-    categories: ["html", "css", "scss", "js"],
-    image: cover16,
-    url: "food-dx",
-    features: ["Responsive design", "And much more..."],
-    problem:
-      "Companies that create delicious and aesthetically pleasing food need a website",
-    solution:
-      "I can design and code projects of any complexity based on provided layouts",
-    links: {
-      website: "https://anastasia-front.github.io/Food-website/",
-      github: "https://github.com/Anastasia-front/Food-website",
-    },
-    content: {
-      description:
-        "This website was created in a few days after completing the first block of my studies to reinforce the material learned (I made several changes after the initial commit to improve the work)",
-      image1: sixteenthProjectSnippet1,
-      image2: sixteenthProjectSnippet2,
-      image3: sixteenthProjectSnippet3,
-      image4: sixteenthProjectSnippet4,
-      image5: sixteenthProjectSnippet5,
     },
   },
   {
@@ -637,6 +612,31 @@ export const projectsEnglishLang: Project[] = [
       image3: twelfthProjectSnippet3,
       image4: twelfthProjectSnippet4,
       image5: twelfthProjectSnippet5,
+    },
+  },
+  {
+    id: 9,
+    development: "frontend",
+    type: "individual",
+    name: "Website for Instagram",
+    categories: ["ts", "React", "scss", "parcel"],
+    image: cover9,
+    url: "website-for-instagram",
+    features: ["Responsive design", "Parallax effect", "And more..."],
+    problem:
+      "I needed a site where all my links to social networking pages and the necessary resources for contacting me were collected",
+    solution: "I have created a corresponding website",
+    links: {
+      website: "https://instagram-header-link.netlify.app/",
+      github: "https://github.com/Anastasia-front/instagram-link",
+    },
+    content: {
+      description: "Website for links and contact me",
+      image1: ninthProjectSnippet1,
+      image2: ninthProjectSnippet2,
+      image3: ninthProjectSnippet3,
+      image4: ninthProjectSnippet4,
+      image5: ninthProjectSnippet5,
     },
   },
   {
@@ -1007,6 +1007,58 @@ export const projectsUkrainianLang: Project[] = [
     },
   },
   {
+    id: 10,
+    development: "frontend",
+    type: "individual",
+    name: "Мій блог",
+    categories: ["js", "css", "scss", "html"],
+    image: cover10,
+    url: "my-blog",
+    features: ["Адаптивний дизайн", "Та багато іншого..."],
+    problem: "Я завжди хотіла мати свій власний веб-сайт",
+    solution:
+      "Спочатку, перш ніж почати курси, я створила власний веб-сайт для практики",
+    links: {
+      website: "https://Anastasia-front.github.io/My-blog/",
+      github: "https://github.com/Anastasia-front/My-blog",
+    },
+    content: {
+      description:
+        "Це мій власний адаптивний веб-сайт, де я зібрала всю інформацію про себе (цей проект можна вважати портфоліо моїх початкових робіт)",
+      image1: tenthProjectSnippet1,
+      image2: tenthProjectSnippet2,
+      image3: tenthProjectSnippet3,
+      image4: tenthProjectSnippet4,
+      image5: tenthProjectSnippet5,
+    },
+  },
+  {
+    id: 16,
+    development: "frontend",
+    type: "individual",
+    name: "FoodDX",
+    categories: ["html", "css", "scss", "js"],
+    image: cover16,
+    url: "food-dx",
+    features: ["Адаптивний дизайн", "Та багато іншого..."],
+    problem:
+      "Компанії з виготовлення смачної та естетично гарної їжі потрібен веб-сайт",
+    solution: "Я могу зверстати з макетом проект будь-якої складності",
+    links: {
+      website: "https://anastasia-front.github.io/Food-website/",
+      github: "https://github.com/Anastasia-front/Food-website",
+    },
+    content: {
+      description:
+        "Це веб-сайт, який я створила через кілька днів після завершення першого блоку навчання, щоб закріпити пройдений матеріал (я багато разів робила усілякі зміни після основного коміту, щоб покращити роботу)",
+      image1: sixteenthProjectSnippet1,
+      image2: sixteenthProjectSnippet2,
+      image3: sixteenthProjectSnippet3,
+      image4: sixteenthProjectSnippet4,
+      image5: sixteenthProjectSnippet5,
+    },
+  },
+  {
     id: 8,
     development: "frontend",
     type: "team",
@@ -1045,57 +1097,6 @@ export const projectsUkrainianLang: Project[] = [
     },
   },
   {
-    id: 9,
-    development: "frontend",
-    type: "individual",
-    name: "Сайт для Instagram",
-    categories: ["ts", "React", "scss", "parcel"],
-    image: cover9,
-    url: "website-for-instagram",
-    features: ["Адаптивний дизайн", "Паралакс ефект", "Та багато іншого..."],
-    problem:
-      "Мені знадобився сайт, де були б зібрані всі мої посилання на сторінки в соціальних мережах та необхідні ресурси для зв'язку зі мною",
-    solution: "Я створила відповідний веб-сайт",
-    links: {
-      website: "https://instagram-header-link.netlify.app/",
-      github: "https://github.com/Anastasia-front/instagram-link",
-    },
-    content: {
-      description: "Веб-сайт для посилань та зв'язку зі мною",
-      image1: ninthProjectSnippet1,
-      image2: ninthProjectSnippet2,
-      image3: ninthProjectSnippet3,
-      image4: ninthProjectSnippet4,
-      image5: ninthProjectSnippet5,
-    },
-  },
-  {
-    id: 10,
-    development: "frontend",
-    type: "individual",
-    name: "Мій блог",
-    categories: ["js", "css", "scss", "html"],
-    image: cover10,
-    url: "my-blog",
-    features: ["Адаптивний дизайн", "Та багато іншого..."],
-    problem: "Я завжди хотіла мати свій власний веб-сайт",
-    solution:
-      "Спочатку, перш ніж почати курси, я створила власний веб-сайт для практики",
-    links: {
-      website: "https://Anastasia-front.github.io/My-blog/",
-      github: "https://github.com/Anastasia-front/My-blog",
-    },
-    content: {
-      description:
-        "Це мій власний адаптивний веб-сайт, де я зібрала всю інформацію про себе (цей проект можна вважати портфоліо моїх початкових робіт)",
-      image1: tenthProjectSnippet1,
-      image2: tenthProjectSnippet2,
-      image3: tenthProjectSnippet3,
-      image4: tenthProjectSnippet4,
-      image5: tenthProjectSnippet5,
-    },
-  },
-  {
     id: 11,
     development: "frontend",
     type: "individual",
@@ -1126,32 +1127,6 @@ export const projectsUkrainianLang: Project[] = [
       image3: eleventhProjectSnippet3,
       image4: eleventhProjectSnippet4,
       image5: eleventhProjectSnippet5,
-    },
-  },
-  {
-    id: 16,
-    development: "frontend",
-    type: "individual",
-    name: "FoodDX",
-    categories: ["html", "css", "scss", "js"],
-    image: cover16,
-    url: "food-dx",
-    features: ["Адаптивний дизайн", "Та багато іншого..."],
-    problem:
-      "Компанії з виготовлення смачної та естетично гарної їжі потрібен веб-сайт",
-    solution: "Я могу зверстати з макетом проект будь-якої складності",
-    links: {
-      website: "https://anastasia-front.github.io/Food-website/",
-      github: "https://github.com/Anastasia-front/Food-website",
-    },
-    content: {
-      description:
-        "Це веб-сайт, який я створила через кілька днів після завершення першого блоку навчання, щоб закріпити пройдений матеріал (я багато разів робила усілякі зміни після основного коміту, щоб покращити роботу)",
-      image1: sixteenthProjectSnippet1,
-      image2: sixteenthProjectSnippet2,
-      image3: sixteenthProjectSnippet3,
-      image4: sixteenthProjectSnippet4,
-      image5: sixteenthProjectSnippet5,
     },
   },
   {
@@ -1204,6 +1179,31 @@ export const projectsUkrainianLang: Project[] = [
       image3: twelfthProjectSnippet3,
       image4: twelfthProjectSnippet4,
       image5: twelfthProjectSnippet5,
+    },
+  },
+  {
+    id: 9,
+    development: "frontend",
+    type: "individual",
+    name: "Сайт для Instagram",
+    categories: ["ts", "React", "scss", "parcel"],
+    image: cover9,
+    url: "website-for-instagram",
+    features: ["Адаптивний дизайн", "Паралакс ефект", "Та багато іншого..."],
+    problem:
+      "Мені знадобився сайт, де були б зібрані всі мої посилання на сторінки в соціальних мережах та необхідні ресурси для зв'язку зі мною",
+    solution: "Я створила відповідний веб-сайт",
+    links: {
+      website: "https://instagram-header-link.netlify.app/",
+      github: "https://github.com/Anastasia-front/instagram-link",
+    },
+    content: {
+      description: "Веб-сайт для посилань та зв'язку зі мною",
+      image1: ninthProjectSnippet1,
+      image2: ninthProjectSnippet2,
+      image3: ninthProjectSnippet3,
+      image4: ninthProjectSnippet4,
+      image5: ninthProjectSnippet5,
     },
   },
   {
