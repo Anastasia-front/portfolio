@@ -36,7 +36,7 @@ export function ProjectItem({ name, image, categories, onClick }: Project) {
           initial="offscreen"
           whileInView={isHover ? "onscreen" : "offscreen"}
         >
-          {categories.map((category) => {
+          {categories?.map((category) => {
             if (category !== "") {
               return <span key={category}>{category}</span>;
             }

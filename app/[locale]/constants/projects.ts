@@ -12,6 +12,7 @@ import cover17 from "@/assets/images/projects/project17/cover.webp";
 import cover18 from "@/assets/images/projects/project18/cover.webp";
 import cover19 from "@/assets/images/projects/project19/cover.webp";
 import cover2 from "@/assets/images/projects/project2/cover.webp";
+import cover20 from "@/assets/images/projects/project20/cover.webp";
 import cover3 from "@/assets/images/projects/project3/cover.webp";
 import cover4 from "@/assets/images/projects/project4/cover.webp";
 import cover5 from "@/assets/images/projects/project5/cover.webp";
@@ -134,13 +135,19 @@ import nineteenthProjectSnippet3 from "@/assets/images/projects/project19/snippe
 import nineteenthProjectSnippet4 from "@/assets/images/projects/project19/snippet4.webp";
 import nineteenthProjectSnippet5 from "@/assets/images/projects/project19/snippet5.webp";
 
+import twentyProjectSnippet1 from "@/assets/images/projects/project20/snippet1.webp";
+import twentyProjectSnippet2 from "@/assets/images/projects/project20/snippet2.webp";
+import twentyProjectSnippet3 from "@/assets/images/projects/project20/snippet3.webp";
+import twentyProjectSnippet4 from "@/assets/images/projects/project20/snippet4.webp";
+import twentyProjectSnippet5 from "@/assets/images/projects/project20/snippet5.webp";
+
 export interface Project {
   id?: number;
-  language?:"js"|"ts"|"python"
+  language?: "js" | "ts" | "python";
   development?: "backend" | "frontend" | "data";
   type?: "test" | "commercial" | "individual" | "team";
   name: string;
-  categories: string[];
+  categories: string[]|null;
   image: StaticImageData;
   url?: string;
   features?: string[];
@@ -148,7 +155,7 @@ export interface Project {
   solution?: string;
   onClick?: () => void;
   links?: {
-    website?: string;
+    website?: string | null;
     github?: string;
   };
   content?: {
@@ -164,7 +171,7 @@ export interface Project {
 export const projectsEnglishLang: Project[] = [
   {
     id: 1,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "commercial",
     name: "IMConsulting",
@@ -195,7 +202,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 2,
-    language:"ts",
+    language: "ts",
     development: "frontend",
     type: "test",
     name: "Carp Travel",
@@ -225,7 +232,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 19,
-    language:"ts",
+    language: "ts",
     development: "frontend",
     type: "individual",
     name: "Norway",
@@ -252,7 +259,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 18,
-    language:"ts",
+    language: "ts",
     development: "frontend",
     type: "individual",
     name: "GoGreen",
@@ -279,7 +286,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 3,
-    language:"ts",
+    language: "ts",
     development: "frontend",
     type: "commercial",
     name: "4.5.0",
@@ -315,7 +322,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 4,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "individual",
     name: "Cinema search",
@@ -347,7 +354,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 5,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "individual",
     name: "Photo app",
@@ -386,7 +393,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 6,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "team",
     name: "IceCream",
@@ -413,7 +420,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 7,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "team",
     name: "News",
@@ -448,7 +455,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 10,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "individual",
     name: "My blog",
@@ -475,7 +482,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 16,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "individual",
     name: "FoodDX",
@@ -503,7 +510,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 8,
-    language:'js',
+    language: "js",
     development: "frontend",
     type: "team",
     name: "Task Pro (frontend)",
@@ -542,7 +549,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 11,
-    language:'js',
+    language: "js",
     development: "frontend",
     type: "individual",
     name: "PhoneBook App",
@@ -577,7 +584,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 17,
-    language:'js',
+    language: "js",
     development: "frontend",
     type: "individual",
     name: "WebStudio",
@@ -604,7 +611,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 12,
-    language:'js',
+    language: "js",
     development: "frontend",
     type: "test",
     name: "First test",
@@ -632,7 +639,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 9,
-    language:'ts',
+    language: "ts",
     development: "frontend",
     type: "individual",
     name: "Website for Instagram",
@@ -658,7 +665,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 13,
-    language:'js',
+    language: "js",
     development: "backend",
     type: "individual",
     name: "CLI",
@@ -684,7 +691,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 14,
-    language:'js',
+    language: "js",
     development: "backend",
     type: "individual",
     name: "REST API",
@@ -710,7 +717,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 15,
-    language:'js',
+    language: "js",
     development: "backend",
     type: "team",
     name: "Task Pro (backend)",
@@ -750,12 +757,39 @@ export const projectsEnglishLang: Project[] = [
       image5: fifteenthProjectSnippet5,
     },
   },
+  {
+    id: 20,
+    language: "python",
+    development: "data",
+    type: "individual",
+    name: "Python Start",
+    categories: ['The beginning of learning a programming language'],
+    image: cover20,
+    url: "python-start",
+    features: ['functions', 'recursion', 'data-structures',' data-types', 'regular-expressions', 'loops-and-iterations', 'conditional-statements'],
+    problem:
+      "There was a need to help my husband with his studies - since he worked a lot and he needed support - and while I was on maternity leave with the baby, I simultaneously, not forgetting web development, began to take various courses in Python in order to also master the knowledge of analyst data and data scientist",
+    solution:
+      "As a result, I took many courses and had a good grasp of the basic concepts to get started",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/python-start",
+    },
+    content: {
+      description: "First steps into Python",
+      image1: twentyProjectSnippet1,
+      image2: twentyProjectSnippet2,
+      image3: twentyProjectSnippet3,
+      image4: twentyProjectSnippet4,
+      image5: twentyProjectSnippet5,
+    },
+  },
 ];
 
 export const projectsUkrainianLang: Project[] = [
   {
     id: 1,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "commercial",
     name: "IMConsulting",
@@ -786,7 +820,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 2,
-    language:"ts",
+    language: "ts",
     development: "frontend",
     type: "test",
     name: "Carp Travel",
@@ -816,7 +850,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 19,
-    language:"ts",
+    language: "ts",
     development: "frontend",
     type: "individual",
     name: "Norway",
@@ -843,7 +877,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 18,
-    language:"ts",
+    language: "ts",
     development: "frontend",
     type: "individual",
     name: "GoGreen",
@@ -869,7 +903,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 3,
-    language:"ts",
+    language: "ts",
     development: "frontend",
     type: "commercial",
     name: "4.5.0",
@@ -905,7 +939,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 4,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "individual",
     name: "Cinema search",
@@ -937,7 +971,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 5,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "individual",
     name: "Photo app",
@@ -976,7 +1010,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 6,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "team",
     name: "IceCream",
@@ -1003,7 +1037,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 7,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "team",
     name: "News",
@@ -1037,7 +1071,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 10,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "individual",
     name: "Мій блог",
@@ -1064,7 +1098,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 16,
-    language:"js",
+    language: "js",
     development: "frontend",
     type: "individual",
     name: "FoodDX",
@@ -1091,7 +1125,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 8,
-    language:'js',
+    language: "js",
     development: "frontend",
     type: "team",
     name: "Task Pro (frontend)",
@@ -1130,7 +1164,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 11,
-    language:'js',
+    language: "js",
     development: "frontend",
     type: "individual",
     name: "Додаток 'Телефонна книга'",
@@ -1164,7 +1198,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 17,
-    language:'js',
+    language: "js",
     development: "frontend",
     type: "individual",
     name: "WebStudio",
@@ -1190,7 +1224,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 12,
-    language:'js',
+    language: "js",
     development: "frontend",
     type: "test",
     name: "Перший тест",
@@ -1218,7 +1252,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 9,
-    language:'ts',
+    language: "ts",
     development: "frontend",
     type: "individual",
     name: "Сайт для Instagram",
@@ -1244,7 +1278,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 13,
-    language:'js',
+    language: "js",
     development: "backend",
     type: "individual",
     name: "CLI",
@@ -1270,7 +1304,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 14,
-    language:'js',
+    language: "js",
     development: "backend",
     type: "individual",
     name: "REST API",
@@ -1295,7 +1329,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 15,
-    language:'js',
+    language: "js",
     development: "backend",
     type: "team",
     name: "Task Pro (backend)",
@@ -1333,6 +1367,33 @@ export const projectsUkrainianLang: Project[] = [
       image3: fifteenthProjectSnippet3,
       image4: fifteenthProjectSnippet4,
       image5: fifteenthProjectSnippet5,
+    },
+  },
+  {
+    id: 20,
+    language: "python",
+    development: "data",
+    type: "individual",
+    name: "Python Start",
+    categories: ["Початок вивчення мови програмування"],
+    image: cover20,
+    url: "python-start",
+    features: ['функції', 'рекурсія', 'структури даних', 'умовні оператори', 'типи даних', 'регулярні вирази', 'цикли та ітерації'],
+    problem:
+      "There was a need to help my husband with his studies - since he worked a lot and he needed support - and while I was on maternity leave with the baby, I simultaneously, not forgetting web development, began to take various courses in Python in order to also master the knowledge of analyst data and data scientistБула потреба допомагати чоловіку з навчання - оскільки він багато працював і йому портібна була підтримка - і поки я була в декреті з немовлям я паралельно не забуваючи веб-розробку ще почала проходити різні курси по Пайтону щоб також оволодіти знаннями дата аналіста та дата вченого",
+    solution:
+      "Як результат я пройшла багато курсів і добре оволоділа базовими поняттями для початку",
+    links: {
+      website: "",
+      github: "https://github.com/Anastasia-front/python-start",
+    },
+    content: {
+      description: "Перші кроки в Python",
+      image1: twentyProjectSnippet1,
+      image2: twentyProjectSnippet2,
+      image3: twentyProjectSnippet3,
+      image4: twentyProjectSnippet4,
+      image5: twentyProjectSnippet5,
     },
   },
 ];
