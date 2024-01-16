@@ -77,7 +77,19 @@
   },
   "dropdown": {
     "title": "Фільтри",
-    "type": { "all": "всі", "backend": "бекенд", "frontend": "фронтенд" },
+    "sortBy": "Сортування за :",
+    "categories": {
+      "type": "типом проєкту",
+      "language": "мовою програмування"
+    },
+    "back": "повернутися",
+    "programmingLanguage": {
+      "all": "всі",
+      "js": "js",
+      "ts": "ts",
+      "python": "python"
+    },
+    "type": { "all": "всі", "backend": "бекенд", "frontend": "фронтенд","data":"дата аналіз" },
     "categoriesFrontend": {
       "commercial": "комерційні",
       "individual": "індивідуальні",
@@ -85,6 +97,12 @@
       "team": "командні"
     },
     "categoriesBackend": {
+      "individual": "індивідуальні",
+      "team": "командні",
+      "commercial": "",
+      "test": ""
+    },
+    "categoriesData": {
       "individual": "індивідуальні",
       "team": "командні",
       "commercial": "",
@@ -222,6 +240,7 @@
   "projects": {
     "title": "Проєкти",
     "description": "Тут зібрані всі мої проєкти. Їх можна відсортувати за типом або категорією для зручності",
+    "emptyList":"Вибачте, але проекта за обраним фільтром немає",
     "headers": {
       "features": "Особливості",
       "problem": "Проблема",

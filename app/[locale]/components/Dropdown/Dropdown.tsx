@@ -1,17 +1,20 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
+import {
+  BsFillCaretDownFill,
+  BsFillCaretRightFill,
+  BsFillCaretUpFill,
+} from "react-icons/bs";
 
 import { useTranslations } from "next-intl";
 import { Rubik } from "next/font/google";
 
 import { motion } from "framer-motion";
 
-import { dropdownAllTypes } from "@/constants";
 import { gridVariants } from "@/utils";
 
-import { NestedDropdown } from "./NestedDropdown";
+import { DropdownCategory } from ".";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -20,14 +23,23 @@ const rubik = Rubik({
 
 interface Props {
   handleTypeChange: (type: string) => void;
+  handleLanguageChange: (lang: string) => void;
   handleCategoryChange: (category: string, type: string) => void;
 }
 
-export function Dropdown({ handleTypeChange, handleCategoryChange }: Props) {
+export function Dropdown({
+  handleTypeChange,
+  handleCategoryChange,
+  handleLanguageChange,
+}: Props) {
   const i = useTranslations("dropdown");
+  const c = useTranslations("dropdown.categories");
   const t = useTranslations("dropdown.type");
+  const l = useTranslations("dropdown.programmingLanguage");
 
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [hideOverflow, setHideOverflow] = useState<string | null>(null);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -61,49 +73,78 @@ export function Dropdown({ handleTypeChange, handleCategoryChange }: Props) {
     handleCategoryChange(category, type);
   };
 
+  useEffect(() => {
+    if (selectedCategory) {
+      const timeout = setTimeout(() => {
+        setHideOverflow(selectedCategory);
+      }, 1000);
+      return () => clearTimeout(timeout);
+    }
+    setHideOverflow(selectedCategory);
+  }, [selectedCategory]);
+
+  const handleSortBy = (category: string | null) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <motion.div
       variants={gridVariants}
       initial="hidden"
       animate="visible"
-      className={`dropdown__container ${rubik.className}`}
+      className={`dropdown-container ${rubik.className}`}
       ref={dropdownRef}
     >
       <button
         type="button"
-        className="dropdown__button"
+        className="dropdown-button"
         onClick={toggleDropdown}
       >
         {i("title")}
         {isOpen ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />}
       </button>
       {isOpen && (
-        <div className="dropdown__content ">
-          <ul className="dropdown__list">
-            {dropdownAllTypes.map((type, index) => {
-              if (t(`${type}`) === "all" || t(`${type}`) === "всі") {
-                return (
-                  <li key={index} className="dropdown__item">
-                    <button
-                      type="button"
-                      onClick={() => handleTypeSelect(t(`${type}`))}
-                    >
-                      {t(`${type}`)}
-                    </button>
-                  </li>
-                );
-              } else {
-                return (
-                  <li key={index} className="dropdown__item">
-                    <NestedDropdown
-                      onSelectType={handleTypeSelect}
-                      onSelectCategory={handleCategorySelect}
-                      type={type}
-                    />
-                  </li>
-                );
-              }
-            })}
+        <div
+          className={` dropdown-content ${
+            !hideOverflow ? "hidden-overflow" : ""
+          }`}
+        >
+          <ul
+            className={`dropdown-categories ${
+              selectedCategory ? "show" : "hide"
+            }`}
+          >
+            <li className={` ${!selectedCategory ? "show-list" : "hide-list"}`}>
+              <ul className="dropdown-list">
+                <li className="dropdown-item">
+                  <p> {i("sortBy")}</p>
+                </li>
+                <li className="dropdown-item">
+                  <button type="button" onClick={() => handleSortBy(c("type"))}>
+                    {c("type")}
+                    <BsFillCaretRightFill />
+                  </button>
+                </li>
+                <li className="dropdown-item">
+                  <button
+                    type="button"
+                    onClick={() => handleSortBy(c("language"))}
+                  >
+                    {c("language")}
+                    <BsFillCaretRightFill />
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <DropdownCategory
+                selectedCategory={selectedCategory}
+                handleTypeSelect={handleTypeSelect}
+                handleCategorySelect={handleCategorySelect}
+                handleLanguageChange={handleLanguageChange}
+                handleSortBy={() => handleSortBy(null)}
+              />
+            </li>
           </ul>
         </div>
       )}

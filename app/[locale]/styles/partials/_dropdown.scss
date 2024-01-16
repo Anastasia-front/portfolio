@@ -2,8 +2,10 @@
 @use "../mixins/" as *;
 
 .dropdown {
-  &__button {
+  &-button {
     @include flex(row, center, center);
+    -webkit-text-fill-color: transparent;
+    gap: 0.3rem;
     color: var(--color--light-blue-3);
     background-image: linear-gradient(
       to right,
@@ -13,8 +15,6 @@
       var(--color--orange-2)
     );
     background-clip: text;
-    gap: 0.3rem;
-    -webkit-text-fill-color: transparent;
 
     @include useOnHover {
       color: var(--color--light-blue-2);
@@ -38,57 +38,103 @@
     }
   }
 
-  &__list {
+  &-list {
+    position: relative;
     @include flex(column, center, center);
     gap: 0.7rem;
+    width: 100%;
+
+    .back {
+      button {
+        color: var(--color--orange-4);
+
+        @include useOnHover {
+          color: var(--color--orange-5);
+        }
+        @include useOnClick {
+          color: var(--color--orange-6);
+        }
+      }
+    }
+
+    .all{
+      button{
+        color: var(--color--light-blue-1);
+
+        @include useOnHover {
+          color: var(--color--light-blue-2);
+        }
+        @include useOnClick {
+          color: var(--color--light-blue-3);
+        }
+      }
+    }
   }
 
-  &__item {
+  &-item {
     button {
       @include useOnHover {
-        color: var(--color--light-blue-1);
+        color: var(--color--light-blue-2);
       }
       @include useOnClick {
         color: var(--color--light-blue-3);
       }
     }
+
+    p {
+      color: var(--color--white);
+    }
+
   }
 
-  &__container {
+  &-container {
     position: relative;
   }
 
-  &__content {
+  &-content {
     z-index: 1;
     position: absolute;
-    top: 1.5rem;
-    left: -1rem;
+    top: 2.5rem;
+    left: -8rem;
     padding: 1rem 1rem 0.5rem 0.5rem;
     border-radius: var(--padding--sm);
     background-color: var(--color--orange-2);
+    width: 216px;
+    height: 176px;
+
     button {
+      @include flex(row, center, center);
+      gap: 0.5rem;
       color: var(--color--white);
       text-transform: uppercase;
+      max-width: 200px;
     }
   }
 
-  &-nested {
-    &__container {
+  &-categories {
+    @include flex(row, space-between, center);
+    width: 216%;
+    transition: transform 0.3s ease;
+  }
+
+  &Nested {
+    &-container {
       position: relative;
       padding: 0.11rem;
+      padding-left: 50px;
       &:hover + div,
-      &:hover + .dropdown-nested__content {
+      &:hover + .dropdown-nested-content {
         display: block;
       }
     }
 
-    &__list {
+    &-list {
       padding: 1rem 1rem 0.5rem 0.5rem;
       border-radius: var(--padding--sm);
       background-color: var(--color--light-blue-3);
     }
 
-    &__item {
+    &-item {
       button {
         @include useOnHover {
           color: var(--color--orange-1);
@@ -99,13 +145,18 @@
       }
     }
 
-    &__content {
+    &-content {
       display: none;
       z-index: 1;
       position: absolute;
-      top: 50px;
-      right: 80%;
-      padding-right: 2rem;
+      top: 0;
+      right: 118px;
+      padding-right: 4rem;
+
+      &__mobile{
+        top: 22px;
+        right: 22%;
+      }
       &:hover {
         display: block;
       }
@@ -113,7 +164,7 @@
   }
 }
 [data-theme="dark"] .dropdown {
-  &__button {
+  &-button {
     color: var(--color--orange-3);
     background-image: linear-gradient(
       to right,
@@ -145,11 +196,11 @@
     }
   }
 
-  &__content {
+  &-content {
     background-color: var(--color--light-blue-3);
   }
 
-  &__item {
+  &-item {
     button {
       @include useOnHover {
         color: var(--color--peach);
@@ -160,12 +211,12 @@
     }
   }
 
-  &-nested {
-    &__list {
+  &Nested {
+    &-list {
       background-color: var(--color--orange-2);
     }
 
-    &__item {
+    &-item {
       button {
         @include useOnHover {
           color: var(--color--light-blue-1);
@@ -183,4 +234,17 @@
 }
 [data-theme="dark"] .active-button {
   color: var(--color--orange-2) !important;
+}
+
+.show {
+  transform: translateX(-60%);
+  &-list {
+    visibility: visible;
+  }
+}
+.hide {
+  transform: translateX(0);
+  &-list {
+    visibility: hidden;
+  }
 }

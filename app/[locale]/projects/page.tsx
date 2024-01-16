@@ -34,6 +34,13 @@ export default function ProjectsPage() {
     setFilteredProjects(filteredProjects);
   };
 
+  const handleLanguageChange = (lang: string) => {
+    const filteredProjects = projectLang.filter((project) => {
+      return lang === "all" || lang === "всі" || project.language === lang;
+    });
+    setFilteredProjects(filteredProjects);
+  };
+
   const handleCategoryChange = (category: string, type: string) => {
     const filteredProjects = projectLang.filter((project) => {
       const typeMatch =
@@ -60,6 +67,7 @@ export default function ProjectsPage() {
           <Dropdown
             handleCategoryChange={handleCategoryChange}
             handleTypeChange={handleTypeChange}
+            handleLanguageChange={handleLanguageChange}
           />
           <LottiePlayer
             src="/animation/filter.json"
@@ -71,8 +79,8 @@ export default function ProjectsPage() {
           />
         </div>
       </div>
-
-      <Projects projects={filteredProjects} />
+{filteredProjects.length===0?<h4 className="center-text">{t("emptyList")} :(</h4>:<Projects projects={filteredProjects} />}
+      
       <Banner text={b("contact")} button />
     </main>
   );

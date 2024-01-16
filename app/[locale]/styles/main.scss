@@ -724,6 +724,19 @@ main {
 
 .hidden {
   display: none;
+
+  &-overflow {
+    overflow: hidden;
+  }
+}
+
+.align {
+  &-left {
+    align-items: start;
+  }
+  &-right {
+    align-items: end;
+  }
 }
 
 .center {
@@ -731,6 +744,9 @@ main {
   gap: 1rem;
   padding: 30vh 25vw;
   text-align: center;
+  &-text{
+    text-align: center;
+  }
 }
 
 .block-hint {

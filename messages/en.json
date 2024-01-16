@@ -77,7 +77,19 @@
   },
   "dropdown": {
     "title": "Filters",
-    "type": { "all": "all", "backend": "backend", "frontend": "frontend" },
+    "sortBy": "Sorting by :",
+    "categories": {
+      "type": "project type",
+      "language": "programming language"
+    },
+    "back": "back",
+    "programmingLanguage": {
+      "all": "all",
+      "js": "js",
+      "ts": "ts",
+      "python": "python"
+    },
+    "type": { "all": "all", "backend": "backend", "frontend": "frontend","data":"data analysis" },
     "categoriesFrontend": {
       "commercial": "commercial",
       "individual": "individual",
@@ -85,6 +97,12 @@
       "team": "team"
     },
     "categoriesBackend": {
+      "individual": "individual",
+      "team": "team",
+      "commercial": "",
+      "test": ""
+    },
+    "categoriesData": {
       "individual": "individual",
       "team": "team",
       "commercial": "",
@@ -195,10 +213,10 @@
     "confirm": "To confirm my studies in the courses and their successful completion, I am attaching a certificate and screens of the progress of my studies from my personal course cabinet",
     "achievements": {
       "title": {
-        "main":"Achievements",
+        "main": "Achievements",
         "first": "Certificate",
         "second": "Screens of my personal course cabinet",
-        "third":"My GitHub coding year in review"
+        "third": "My GitHub coding year in review"
       },
       "alt": {
         "certificate": {
@@ -222,6 +240,7 @@
   "projects": {
     "title": "Projects",
     "description": "All my projects are collected here. They can be sorted by type or category for convenience",
+    "emptyList":"Sorry, but there is no project for the selected filter",
     "headers": {
       "features": "Features",
       "problem": "Problem",

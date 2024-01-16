@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from "react-icons/bs";
 
 import { dropdownCategories } from "@/constants";
+import { useScreenQuery } from "@/hooks";
 
 interface Props {
   type: string;
@@ -21,6 +22,7 @@ export function NestedDropdown({
 }: Props) {
   const iF = useTranslations("dropdown.categoriesFrontend");
   const iB = useTranslations("dropdown.categoriesBackend");
+  const iD = useTranslations("dropdown.categoriesData");
   const t = useTranslations("dropdown.type");
 
   const [isHovered, setIsHovered] = useState(false);
@@ -28,9 +30,7 @@ export function NestedDropdown({
   const [activeType, setActiveType] = useState<string | null>(null);
 
   const checkDropdownContent = () => {
-    const nestedContents = document.querySelectorAll(
-      ".dropdown-nested__content"
-    );
+    const nestedContents = document.querySelectorAll(".dropdownNested-content");
     let foundActive = false;
 
     for (const nestedContent of nestedContents) {
@@ -69,13 +69,15 @@ export function NestedDropdown({
     onSelectCategory(category, type);
   };
 
-  const interConst = type === "frontend" ? iF : iB;
+  const interConst = type === "frontend" ? iF : type === "backend" ? iB : iD;
+
+  const { isScreenMobileLg } = useScreenQuery();
 
   return (
-    <div onMouseLeave={handleMouseLeave}>
+    <div onMouseLeave={handleMouseLeave} className="relative">
       <button
         type="button"
-        className={`dropdown-nested__container ${
+        className={`dropdownNested-container ${
           activeType === type && activeButton ? "active-button" : ""
         }`}
         onClick={() => onSelectType(type)}
@@ -83,15 +85,18 @@ export function NestedDropdown({
         onMouseLeave={handleMouseLeave}
       >
         {isHovered ? <BsFillCaretRightFill /> : <BsFillCaretLeftFill />}
-
         {t(`${type}`)}
       </button>
-      <div className="dropdown-nested__content">
-        <ul className="dropdown__list dropdown-nested__list">
+      <div
+        className={`dropdownNested-content ${
+          isScreenMobileLg ? "" : "dropdownNested-content__mobile"
+        }`}
+      >
+        <ul className="dropdown-list dropdownNested-list">
           {dropdownCategories.map(
             (category, index) =>
               interConst(`${category}`) !== "" && (
-                <li key={index} className="dropdown-nested__item">
+                <li key={index} className="dropdownNested-item">
                   <button
                     type="button"
                     onClick={() => handleCategoryClick(category, type)}

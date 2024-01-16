@@ -136,7 +136,8 @@ import nineteenthProjectSnippet5 from "@/assets/images/projects/project19/snippe
 
 export interface Project {
   id?: number;
-  development?: "backend" | "frontend";
+  language?:"js"|"ts"|"python"
+  development?: "backend" | "frontend" | "data";
   type?: "test" | "commercial" | "individual" | "team";
   name: string;
   categories: string[];
@@ -163,6 +164,7 @@ export interface Project {
 export const projectsEnglishLang: Project[] = [
   {
     id: 1,
+    language:"js",
     development: "frontend",
     type: "commercial",
     name: "IMConsulting",
@@ -193,6 +195,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 2,
+    language:"ts",
     development: "frontend",
     type: "test",
     name: "Carp Travel",
@@ -222,6 +225,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 19,
+    language:"ts",
     development: "frontend",
     type: "individual",
     name: "Norway",
@@ -248,6 +252,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 18,
+    language:"ts",
     development: "frontend",
     type: "individual",
     name: "GoGreen",
@@ -274,6 +279,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 3,
+    language:"ts",
     development: "frontend",
     type: "commercial",
     name: "4.5.0",
@@ -309,6 +315,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 4,
+    language:"js",
     development: "frontend",
     type: "individual",
     name: "Cinema search",
@@ -340,6 +347,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 5,
+    language:"js",
     development: "frontend",
     type: "individual",
     name: "Photo app",
@@ -378,6 +386,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 6,
+    language:"js",
     development: "frontend",
     type: "team",
     name: "IceCream",
@@ -404,6 +413,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 7,
+    language:"js",
     development: "frontend",
     type: "team",
     name: "News",
@@ -438,6 +448,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 10,
+    language:"js",
     development: "frontend",
     type: "individual",
     name: "My blog",
@@ -464,6 +475,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 16,
+    language:"js",
     development: "frontend",
     type: "individual",
     name: "FoodDX",
@@ -491,6 +503,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 8,
+    language:'js',
     development: "frontend",
     type: "team",
     name: "Task Pro (frontend)",
@@ -529,6 +542,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 11,
+    language:'js',
     development: "frontend",
     type: "individual",
     name: "PhoneBook App",
@@ -563,6 +577,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 17,
+    language:'js',
     development: "frontend",
     type: "individual",
     name: "WebStudio",
@@ -589,6 +604,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 12,
+    language:'js',
     development: "frontend",
     type: "test",
     name: "First test",
@@ -616,6 +632,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 9,
+    language:'ts',
     development: "frontend",
     type: "individual",
     name: "Website for Instagram",
@@ -641,6 +658,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 13,
+    language:'js',
     development: "backend",
     type: "individual",
     name: "CLI",
@@ -666,6 +684,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 14,
+    language:'js',
     development: "backend",
     type: "individual",
     name: "REST API",
@@ -691,6 +710,7 @@ export const projectsEnglishLang: Project[] = [
   },
   {
     id: 15,
+    language:'js',
     development: "backend",
     type: "team",
     name: "Task Pro (backend)",
@@ -735,6 +755,7 @@ export const projectsEnglishLang: Project[] = [
 export const projectsUkrainianLang: Project[] = [
   {
     id: 1,
+    language:"js",
     development: "frontend",
     type: "commercial",
     name: "IMConsulting",
@@ -765,6 +786,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 2,
+    language:"ts",
     development: "frontend",
     type: "test",
     name: "Carp Travel",
@@ -794,6 +816,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 19,
+    language:"ts",
     development: "frontend",
     type: "individual",
     name: "Norway",
@@ -820,6 +843,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 18,
+    language:"ts",
     development: "frontend",
     type: "individual",
     name: "GoGreen",
@@ -845,6 +869,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 3,
+    language:"ts",
     development: "frontend",
     type: "commercial",
     name: "4.5.0",
@@ -880,6 +905,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 4,
+    language:"js",
     development: "frontend",
     type: "individual",
     name: "Cinema search",
@@ -911,6 +937,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 5,
+    language:"js",
     development: "frontend",
     type: "individual",
     name: "Photo app",
@@ -949,6 +976,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 6,
+    language:"js",
     development: "frontend",
     type: "team",
     name: "IceCream",
@@ -975,6 +1003,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 7,
+    language:"js",
     development: "frontend",
     type: "team",
     name: "News",
@@ -1008,6 +1037,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 10,
+    language:"js",
     development: "frontend",
     type: "individual",
     name: "Мій блог",
@@ -1034,6 +1064,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 16,
+    language:"js",
     development: "frontend",
     type: "individual",
     name: "FoodDX",
@@ -1060,6 +1091,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 8,
+    language:'js',
     development: "frontend",
     type: "team",
     name: "Task Pro (frontend)",
@@ -1098,6 +1130,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 11,
+    language:'js',
     development: "frontend",
     type: "individual",
     name: "Додаток 'Телефонна книга'",
@@ -1131,6 +1164,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 17,
+    language:'js',
     development: "frontend",
     type: "individual",
     name: "WebStudio",
@@ -1156,6 +1190,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 12,
+    language:'js',
     development: "frontend",
     type: "test",
     name: "Перший тест",
@@ -1183,6 +1218,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 9,
+    language:'ts',
     development: "frontend",
     type: "individual",
     name: "Сайт для Instagram",
@@ -1208,6 +1244,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 13,
+    language:'js',
     development: "backend",
     type: "individual",
     name: "CLI",
@@ -1233,6 +1270,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 14,
+    language:'js',
     development: "backend",
     type: "individual",
     name: "REST API",
@@ -1257,6 +1295,7 @@ export const projectsUkrainianLang: Project[] = [
   },
   {
     id: 15,
+    language:'js',
     development: "backend",
     type: "team",
     name: "Task Pro (backend)",
