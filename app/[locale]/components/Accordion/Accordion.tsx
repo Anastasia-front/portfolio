@@ -28,10 +28,10 @@ export function Accordion() {
   })();
 
   const handleClose = () => {
-    const activeElement = document.getElementById(String(active));
+    const accordion = document.getElementById('accordion');
 
-    if (activeElement) {
-      activeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (accordion) {
+      accordion.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     setActive(0);
@@ -52,6 +52,7 @@ export function Accordion() {
       whileInView="onscreen"
       viewport={{ once: true, amount: 0 }}
       className="skill-blocks"
+      id="accordion"
       onClick={handleClickOutside}
     >
       {skillBlocks.map((block, index) => (
