@@ -237,15 +237,10 @@
   }
 }
 
-.bg1 {
-  background: url("/images/bg/bg-1.webp");
-}
-.bg2 {
-  background: url("/images/bg/bg-2.webp");
-}
-.bg3 {
-  background: url("/images/bg/bg-3.webp");
-}
-.bg4 {
-  background: url("/images/bg/bg-4.webp");
+$bg-count: 7;
+
+@for $i from 1 through $bg-count {
+  .bg#{$i} {
+    background: url("/images/bg/bg-#{$i}.webp");
+  }
 }

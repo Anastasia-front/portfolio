@@ -1,78 +1,109 @@
 import { StaticImageData } from "next/image";
 
-import babel from "@/assets/images/skills/tech/front/babel.webp";
-import crudFrontend from "@/assets/images/skills/tech/front/crud.webp";
-import figma from "@/assets/images/skills/tech/front/figma.webp";
-import framerMotion from "@/assets/images/skills/tech/front/framer-motion.webp";
-import gitHub from "@/assets/images/skills/tech/front/git-hub.webp";
-import git from "@/assets/images/skills/tech/front/git.webp";
-import html from "@/assets/images/skills/tech/front/html.webp";
-import js from "@/assets/images/skills/tech/front/js.webp";
-import next from "@/assets/images/skills/tech/front/next-js-1.webp";
-import parcel from "@/assets/images/skills/tech/front/parcel.webp";
-import reactNative from "@/assets/images/skills/tech/front/react-native.webp";
-import react from "@/assets/images/skills/tech/front/react.webp";
-import redux from "@/assets/images/skills/tech/front/redux.webp";
-import restApiFrontend from "@/assets/images/skills/tech/front/rest-api.webp";
-import threeJs from "@/assets/images/skills/tech/front/three-js.webp";
-import ts from "@/assets/images/skills/tech/front/ts.webp";
-import vite from "@/assets/images/skills/tech/front/vite.webp";
-import webpack from "@/assets/images/skills/tech/front/webpack.webp";
+import js from "@/assets/images/skills/categories/programming-language/js.webp";
+import python from "@/assets/images/skills/categories/programming-language/python.webp";
+import ts from "@/assets/images/skills/categories/programming-language/ts.webp";
 
-import bcrypt from "@/assets/images/skills/tech/back/bcrypt.webp";
-import cloudinary from "@/assets/images/skills/tech/back/cloudinary.webp";
-import cors from "@/assets/images/skills/tech/back/cors.webp";
-// import crudBackend from "@/assets/images/skills/tech/back/crud.webp";
-import dotenv from "@/assets/images/skills/tech/back/dotenv.webp";
-import express from "@/assets/images/skills/tech/back/express-js.webp";
-import firebase from "@/assets/images/skills/tech/back/firebase.webp";
-import joi from "@/assets/images/skills/tech/back/joi.webp";
-import jwt from "@/assets/images/skills/tech/back/jwt.webp";
-import mongo from "@/assets/images/skills/tech/back/mongo-db.webp";
-import mongoose from "@/assets/images/skills/tech/back/mongoose.webp";
-import morgan from "@/assets/images/skills/tech/back/morgan.webp";
-import multer from "@/assets/images/skills/tech/back/multer.webp";
-import node from "@/assets/images/skills/tech/back/node-js.webp";
-import nodemailer from "@/assets/images/skills/tech/back/nodemailer.webp";
-import postman from "@/assets/images/skills/tech/back/postman.webp";
-import restApiBackend from "@/assets/images/skills/tech/back/rest-api.webp";
-import sendGrid from "@/assets/images/skills/tech/back/send-grid.webp";
-import swagger from "@/assets/images/skills/tech/back/swagger.webp";
+import gitHub from "@/assets/images/skills/categories/system-control/git-hub.webp";
+import git from "@/assets/images/skills/categories/system-control/git.webp";
 
-import css from "@/assets/images/skills/tech/styles/css.webp";
-import mui from "@/assets/images/skills/tech/styles/mui.webp";
-import sass from "@/assets/images/skills/tech/styles/sass.webp";
-import tailwind from "@/assets/images/skills/tech/styles/tailwind.webp";
+import androidStudio from "@/assets/images/skills/categories/software/android-studio.webp";
+import canva from "@/assets/images/skills/categories/software/canva.webp";
+import discord from "@/assets/images/skills/categories/software/discord.webp";
+import figma from "@/assets/images/skills/categories/software/figma.webp";
+import photoshop from "@/assets/images/skills/categories/software/photoshop.webp";
+import pyCharm from "@/assets/images/skills/categories/software/py-charm.webp";
+import slack from "@/assets/images/skills/categories/software/slack.webp";
+import vsCode from "@/assets/images/skills/categories/software/vs-code.webp";
 
-import atlassian from "@/assets/images/skills/teamWork/atlassian.webp";
-import jira from "@/assets/images/skills/teamWork/jira.webp";
-import scrum from "@/assets/images/skills/teamWork/scrum.webp";
-import trello from "@/assets/images/skills/teamWork/trello.webp";
+import babel from "@/assets/images/skills/categories/front/babel.webp";
+import crudFrontend from "@/assets/images/skills/categories/front/crud.webp";
+import framerMotion from "@/assets/images/skills/categories/front/framer-motion.webp";
+import html from "@/assets/images/skills/categories/front/html.webp";
+import next from "@/assets/images/skills/categories/front/next-js-1.webp";
+import parcel from "@/assets/images/skills/categories/front/parcel.webp";
+import reactNative from "@/assets/images/skills/categories/front/react-native.webp";
+import react from "@/assets/images/skills/categories/front/react.webp";
+import redux from "@/assets/images/skills/categories/front/redux.webp";
+import restApiFrontend from "@/assets/images/skills/categories/front/rest-api.webp";
+import threeJs from "@/assets/images/skills/categories/front/three-js.webp";
+import vite from "@/assets/images/skills/categories/front/vite.webp";
+import webpack from "@/assets/images/skills/categories/front/webpack.webp";
+
+import bcrypt from "@/assets/images/skills/categories/back/bcrypt.webp";
+import cloudinary from "@/assets/images/skills/categories/back/cloudinary.webp";
+import cors from "@/assets/images/skills/categories/back/cors.webp";
+// import crudBackend from "@/assets/images/skills/categories/back/crud.webp";
+import dotenv from "@/assets/images/skills/categories/back/dotenv.webp";
+import express from "@/assets/images/skills/categories/back/express-js.webp";
+import firebase from "@/assets/images/skills/categories/back/firebase.webp";
+import joi from "@/assets/images/skills/categories/back/joi.webp";
+import jwt from "@/assets/images/skills/categories/back/jwt.webp";
+import mongo from "@/assets/images/skills/categories/back/mongo-db.webp";
+import mongoose from "@/assets/images/skills/categories/back/mongoose.webp";
+import morgan from "@/assets/images/skills/categories/back/morgan.webp";
+import multer from "@/assets/images/skills/categories/back/multer.webp";
+import node from "@/assets/images/skills/categories/back/node-js.webp";
+import nodemailer from "@/assets/images/skills/categories/back/nodemailer.webp";
+import postman from "@/assets/images/skills/categories/back/postman.webp";
+import restApiBackend from "@/assets/images/skills/categories/back/rest-api.webp";
+import sendGrid from "@/assets/images/skills/categories/back/send-grid.webp";
+import swagger from "@/assets/images/skills/categories/back/swagger.webp";
+
+import css from "@/assets/images/skills/categories/styles/css.webp";
+import mui from "@/assets/images/skills/categories/styles/mui.webp";
+import sass from "@/assets/images/skills/categories/styles/sass.webp";
+import tailwind from "@/assets/images/skills/categories/styles/tailwind.webp";
+
+import atlassian from "@/assets/images/skills/categories/team-work/atlassian.webp";
+import jira from "@/assets/images/skills/categories/team-work/jira.webp";
+import scrum from "@/assets/images/skills/categories/team-work/scrum.webp";
+import trello from "@/assets/images/skills/categories/team-work/trello.webp";
+
+export type Category =
+  | "team work"
+  | "backend"
+  | "frontend"
+  | "styles"
+  | "programming language"
+  | "system control"
+  | "software";
 
 interface Skill {
   title: string;
   image: StaticImageData;
-  type: "team work" | "backend" | "frontend" | "styles";
+  type: Category;
 }
 
 export const skills: Skill[] = [
   {
-    type: "frontend",
+    type: "programming language",
     title: "js",
     image: js,
   },
-  { type: "frontend", title: "ts", image: ts },
+  { type: "programming language", title: "ts", image: ts },
+  { type: "programming language", title: "python", image: python },
+
+  { type: "system control", title: "github", image: gitHub },
+  { type: "system control", title: "git", image: git },
+
+  { type: "software", title: "figma", image: figma },
+  { type: "software", title: "visual studio code", image: vsCode },
+  { type: "software", title: "py charm", image: pyCharm },
+  { type: "software", title: "discord", image: discord },
+  { type: "software", title: "slack", image: slack },
+  { type: "software", title: "canva", image: canva },
+  { type: "software", title: "photoshop", image: photoshop },
+  { type: "software", title: "android studio", image: androidStudio },
+
   { type: "frontend", title: "react", image: react },
   { type: "frontend", title: "react native", image: reactNative },
   { type: "frontend", title: "redux", image: redux },
   { type: "frontend", title: "next", image: next },
   { type: "frontend", title: "vite", image: vite },
   { type: "frontend", title: "rest-api frontend", image: restApiFrontend },
-  { type: "frontend", title: "github", image: gitHub },
-  { type: "frontend", title: "git", image: git },
   { type: "frontend", title: "html", image: html },
   { type: "frontend", title: "crud frontend", image: crudFrontend },
-  { type: "frontend", title: "figma", image: figma },
   { type: "frontend", title: "parcel", image: parcel },
   { type: "frontend", title: "babel", image: babel },
   { type: "frontend", title: "webpack", image: webpack },
@@ -112,7 +143,7 @@ export const skills: Skill[] = [
 
 interface SkillBlock {
   id: number;
-  type: "team work" | "backend" | "frontend" | "styles";
+  type: Category;
   title: string;
   className: string;
 }
@@ -120,53 +151,89 @@ interface SkillBlock {
 export const skillBlocksEnglish: SkillBlock[] = [
   {
     id: 1,
-    type: "frontend",
-    title: "frontend",
+    type: "programming language",
+    title: "languages",
     className: "bg1",
   },
   {
     id: 2,
-    type: "backend",
-    title: "backend",
+    type: "frontend",
+    title: "frontend",
     className: "bg2",
   },
   {
     id: 3,
-    type: "styles",
-    title: "styles",
+    type: "backend",
+    title: "backend",
     className: "bg3",
   },
   {
     id: 4,
+    type: "styles",
+    title: "styles",
+    className: "bg4",
+  },
+  {
+    id: 5,
     type: "team work",
     title: "team work",
-    className: "bg4",
+    className: "bg5",
+  },
+  {
+    id: 6,
+    type: "software",
+    title: "softwares",
+    className: "bg6",
+  },
+  {
+    id: 7,
+    type: "system control",
+    title: "system controls",
+    className: "bg7",
   },
 ];
 
 export const skillBlocksUkrainian: SkillBlock[] = [
   {
     id: 1,
-    type: "frontend",
-    title: "фронтенд",
+    type: "programming language",
+    title: "мови програмування",
     className: "bg1",
   },
   {
     id: 2,
-    type: "backend",
-    title: "бекенд",
+    type: "frontend",
+    title: "фронтенд",
     className: "bg2",
   },
   {
     id: 3,
-    type: "styles",
-    title: "стилі",
+    type: "backend",
+    title: "бекенд",
     className: "bg3",
   },
   {
     id: 4,
+    type: "styles",
+    title: "стилі",
+    className: "bg4",
+  },
+  {
+    id: 5,
     type: "team work",
     title: "командна робота",
-    className: "bg4",
+    className: "bg5",
+  },
+  {
+    id: 6,
+    type: "software",
+    title: "програмні забезпечення",
+    className: "bg6",
+  },
+  {
+    id: 7,
+    type: "system control",
+    title: "системи контролю версій",
+    className: "bg7",
   },
 ];
