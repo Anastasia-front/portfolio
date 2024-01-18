@@ -12,6 +12,7 @@ interface Props {
   title: string;
   image: StaticImageData;
   animation: "left" | "right";
+  isBig?: boolean;
 }
 
 const defaultOptions = {
@@ -26,7 +27,7 @@ const defaultOptions = {
   easing: "cubic-bezier(.03,.98,.52,.99)",
 };
 
-export function SkillItem({ title, image, animation }: Props) {
+export function SkillItem({ title, image, animation, isBig }: Props) {
   return (
     <motion.div variants={fadeIn(animation)} initial="hidden" animate="visible">
       <Tilt
@@ -34,7 +35,13 @@ export function SkillItem({ title, image, animation }: Props) {
         className="skills-item"
         style={{ height: 150, width: 150 }}
       >
-        <Image src={image} alt={title} width={200} height={150} />
+        <Image
+          className={`${isBig ? "isBig" : ""}`}
+          src={image}
+          alt={title}
+          width={200}
+          height={150}
+        />
       </Tilt>
     </motion.div>
   );

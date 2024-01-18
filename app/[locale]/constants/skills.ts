@@ -29,6 +29,10 @@ import restApiFrontend from "@/assets/images/skills/categories/front/rest-api.we
 import threeJs from "@/assets/images/skills/categories/front/three-js.webp";
 import vite from "@/assets/images/skills/categories/front/vite.webp";
 import webpack from "@/assets/images/skills/categories/front/webpack.webp";
+import eslint from "@/assets/images/skills/categories/front/eslint.webp";
+import prettier from "@/assets/images/skills/categories/front/prettier.webp";
+import markdown from "@/assets/images/skills/categories/front/markdown.webp";
+
 
 import bcrypt from "@/assets/images/skills/categories/back/bcrypt.webp";
 import cloudinary from "@/assets/images/skills/categories/back/cloudinary.webp";
@@ -73,6 +77,7 @@ interface Skill {
   title: string;
   image: StaticImageData;
   type: Category;
+  isBig?:boolean
 }
 
 export const skills: Skill[] = [
@@ -88,13 +93,13 @@ export const skills: Skill[] = [
   { type: "system control", title: "git", image: git },
 
   { type: "software", title: "figma", image: figma },
-  { type: "software", title: "visual studio code", image: vsCode },
-  { type: "software", title: "py charm", image: pyCharm },
-  { type: "software", title: "discord", image: discord },
-  { type: "software", title: "slack", image: slack },
-  { type: "software", title: "canva", image: canva },
-  { type: "software", title: "photoshop", image: photoshop },
-  { type: "software", title: "android studio", image: androidStudio },
+  { type: "software",isBig:true, title: "visual studio code", image: vsCode },
+  { type: "software",isBig:true, title: "py charm", image: pyCharm },
+  { type: "software",isBig:true, title: "discord", image: discord },
+  { type: "software",isBig:true, title: "slack", image: slack },
+  { type: "software",isBig:true, title: "canva", image: canva },
+  { type: "software",isBig:true, title: "photoshop", image: photoshop },
+  { type: "software",title: "android studio", image: androidStudio },
 
   { type: "frontend", title: "react", image: react },
   { type: "frontend", title: "react native", image: reactNative },
@@ -107,6 +112,9 @@ export const skills: Skill[] = [
   { type: "frontend", title: "parcel", image: parcel },
   { type: "frontend", title: "babel", image: babel },
   { type: "frontend", title: "webpack", image: webpack },
+  { type: "frontend", title: "eslint", image: eslint },  
+  { type: "frontend", title: "markdown", image: markdown },
+  { type: "frontend", title: "prettier", image: prettier,isBig:true },
   { type: "frontend", title: "three js", image: threeJs },
   { type: "frontend", title: "framer motion", image: framerMotion },
 

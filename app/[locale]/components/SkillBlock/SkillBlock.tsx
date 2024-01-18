@@ -33,6 +33,11 @@ export function SkillBlock({
     if (id === active) {
       handleClose();
     } else {
+      const block = document.getElementById(String(active));
+
+      if (block) {
+        block.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
       handleClick(id);
     }
   };
