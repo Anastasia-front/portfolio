@@ -4,7 +4,13 @@ import { motion } from "framer-motion";
 
 import { bannerVariants } from "@/utils";
 
-import { Features, Hero, Video } from "./components";
+import {
+  Features,
+  GallerySection,
+  Hero,
+  ObjectsSection,
+  Video,
+} from "./components";
 
 export default function Home() {
   return (
@@ -24,8 +30,8 @@ export default function Home() {
       >
         <Hero />
         <Features />
-        {/* <ObjectsSection /> */}
-        {/* <GallerySection /> */}
+        <ObjectsSection />
+        <GallerySection />
       </motion.div>
     </motion.main>
   );
