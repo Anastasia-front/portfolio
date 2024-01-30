@@ -251,6 +251,7 @@
       "problem": "Problem",
       "solution": "Solution",
       "links": "Project links",
+      "link": "Project link",
       "screenshots": "Screenshots"
     },
     "links": { "github": "GitHub repository", "website": "WebSite page" },

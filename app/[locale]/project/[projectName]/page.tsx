@@ -126,7 +126,8 @@ export default function Page({ params }: Params) {
 
           {links && (
             <div className="project__content__text-links">
-              <h4>{h("links")}</h4>
+              {!links.website||!links.github ?<h4>{h("link")}</h4>
+              :<h4>{h("links")}</h4> }
               <ul>
                 <li>
                   {links.github && (
