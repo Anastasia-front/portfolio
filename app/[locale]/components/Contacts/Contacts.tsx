@@ -91,11 +91,14 @@ export function Contacts({ location }: Props) {
                       </Link>
                     ) : (
                       <>
-                        <h6>{ic(`${firstBlock}.links.${secondBlock}.info`)}</h6>
                         <Link
+                          className="contacts-item"
                           target="_blank"
                           href={ic(`${firstBlock}.links.${secondBlock}.href`)}
                         >
+                          <h6>
+                            {ic(`${firstBlock}.links.${secondBlock}.info`)}
+                          </h6>
                           {IconComponent}
                         </Link>
                       </>

@@ -28,15 +28,15 @@
 
   &__form {
     @include flex(column, center, center);
+    gap: 1rem;
     position: relative;
     width: 100%;
-    gap: 1rem;
   }
 
   &__inputs {
     @include flex(column, center, center);
-    width: 100%;
     gap: 1rem;
+    width: 100%;
 
     @include useScreen("mobile-xl") {
       flex-direction: row;
@@ -56,9 +56,9 @@
 
     &-block {
       @include flex(column, center, flex-start);
+      gap: 0.3rem;
       position: relative;
       width: 100%;
-      gap: 0.3rem;
     }
 
     &-error {
@@ -196,6 +196,7 @@
 
   &__submit {
     @include flex(row, center, center);
+    gap: 1rem;
     width: 100%;
     padding: 10px;
     border: 0px;
@@ -205,7 +206,6 @@
     cursor: pointer;
     background: var(--color--light-blue-2);
     transition: 250ms;
-    gap: 1rem;
 
     &:hover {
       color: var(--color--blue-grey-2);
@@ -256,9 +256,9 @@
 
 .info {
   @include flex(column, center, center);
+  gap: 3rem;
   padding-bottom: 3rem;
   color: var(--color--blue-grey-2);
-  gap: 3rem;
 
   @include useScreen("mobile-md") {
     gap: 2rem;
@@ -305,42 +305,54 @@
 
   &-icons {
     @include flex(column, center, center);
-    position: relative;
     gap: 2.5rem;
+    position: relative;
 
     &__block {
       @include box-shadow-7(var(--color--blue-grey-1));
       @include flex(column, center, center);
+      gap: 1.2rem;
       max-width: 600px;
       padding: 1rem;
-      background: var(--color--bg-light);
-      gap: 1.2rem;
       border-radius: var(--border-radius--sm);
+      background: var(--color--bg-light);
 
       @include useScreen("mobile-md") {
         padding: 2rem;
       }
 
       &-title {
-        color: var(--color--orange-1);
+        color: var(--color--orange-2);
         font-weight: 900;
         font-size: var(--font-size--5);
         text-align: center;
       }
 
       &-links {
-        @include flex(column, center, center);
+        @include flex(column, center, stretch);
         gap: 1rem;
 
-        li {
+        .contacts-item {
           @include flex(row, space-between, center);
-          width: 100%;
+          padding-bottom: 0.5rem;
           border-bottom: 1px dotted var(--color--light-blue-2);
-          gap: 1.5rem;
 
-          p {
+          @include useOnHover {
+            h6 {
+              color: var(--color--light-blue-2);
+            }
+          }
+          @include useOnClick {
+            h6 {
+              color: var(--color--light-blue-3);
+            }
+          }
+
+          h6 {
+            width: 90%;
             font-weight: var(--font-weight--normal-2);
             text-align: left;
+            color: var(--color--blue-grey-2);
           }
 
           svg {
@@ -377,8 +389,23 @@
       }
 
       &-links {
-        li {
+        .contacts-item {
           border-bottom: 1px dotted var(--color--light-brown);
+
+          @include useOnHover {
+            h6 {
+              color: var(--color--orange-2);
+            }
+          }
+          @include useOnClick {
+            h6 {
+              color: var(--color--orange-3);
+            }
+          }
+
+          h6 {
+            color: var(--color--white-grey);
+          }
         }
       }
     }

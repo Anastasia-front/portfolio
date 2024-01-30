@@ -89,7 +89,12 @@
       "ts": "ts",
       "python": "python"
     },
-    "type": { "all": "всі", "backend": "бекенд", "frontend": "фронтенд","data":"дата аналіз" },
+    "type": {
+      "all": "всі",
+      "backend": "бекенд",
+      "frontend": "фронтенд",
+      "data": "дата аналіз"
+    },
     "categoriesFrontend": {
       "commercial": "комерційні",
       "individual": "індивідуальні",
@@ -240,7 +245,7 @@
   "projects": {
     "title": "Проєкти",
     "description": "Тут зібрані всі мої проєкти. Їх можна відсортувати за типом або категорією для зручності",
-    "emptyList":"Вибачте, але проекта за обраним фільтром немає",
+    "emptyList": "Вибачте, але проекта за обраним фільтром немає",
     "headers": {
       "features": "Особливості",
       "problem": "Проблема",
@@ -311,15 +316,15 @@
             },
             "second": {
               "title": "ЛінкедІн",
-              "href": "https://www.linkedin.com/in/anastasiia-prysiazhnaia/",
-              "info": "ЛінкедІн аккаунт - Anastasiia Prysiazhnaia (@anastasiia-prysiazhnaia)",
+              "href": "https://www.linkedin.com/in/anastasiia-prysiazhna/",
+              "info": "ЛінкедІн аккаунт - Anastasiia Prysiazhna (@anastasiia-prysiazhna)",
               "dataText": "Відстежувати у ЛінкедІн",
               "icon": "BsLinkedin"
             },
             "third": {
               "title": "Інстаграм",
-              "href": "https://www.instagram.com/anastasiia_prysiazhnaia/",
-              "info": "Інстаграм аккаунт - @anastasiia_prysiazhnaia",
+              "href": "https://www.instagram.com/anastasiia_prysiazhna/",
+              "info": "Інстаграм аккаунт - @anastasiia_prysiazhna",
               "dataText": "Відстежувати в Інстаграм",
               "icon": "BsInstagram"
             }
@@ -330,8 +335,8 @@
           "links": {
             "first": {
               "title": "Телеграм",
-              "href": "https://t.me/anastasiia_prysiazhnaia",
-              "info": "Телеграм за номером телефону +380666080702 або за ніком @anastasiia_prysiazhnaia",
+              "href": "https://t.me/anastasiia_prysiazhna",
+              "info": "Телеграм за номером телефону +380666080702 або за ніком @anastasiia_prysiazhna",
               "dataText": "Написати у Телеграм",
               "icon": "BsTelegram"
             },

@@ -1,5 +1,5 @@
 {
-  "name": { "first": "Anastasiia", "last": "Prysiazhnaia" },
+  "name": { "first": "Anastasiia", "last": "Prysiazhna" },
   "alt": {
     "logo": "Logo",
     "svgTheme": "Theme icon",
@@ -89,7 +89,12 @@
       "ts": "ts",
       "python": "python"
     },
-    "type": { "all": "all", "backend": "backend", "frontend": "frontend","data":"data analysis" },
+    "type": {
+      "all": "all",
+      "backend": "backend",
+      "frontend": "frontend",
+      "data": "data analysis"
+    },
     "categoriesFrontend": {
       "commercial": "commercial",
       "individual": "individual",
@@ -167,7 +172,7 @@
     }
   },
   "about": {
-    "title": "Prysiazhnaia Anastasiia",
+    "title": "Prysiazhna Anastasiia",
     "description": "I am a full-stack web developer with a passion for building beautiful and functional websites",
     "features": {
       "title": "My qualities",
@@ -240,7 +245,7 @@
   "projects": {
     "title": "Projects",
     "description": "All my projects are collected here. They can be sorted by type or category for convenience",
-    "emptyList":"Sorry, but there is no project for the selected filter",
+    "emptyList": "Sorry, but there is no project for the selected filter",
     "headers": {
       "features": "Features",
       "problem": "Problem",
@@ -310,15 +315,15 @@
             },
             "second": {
               "title": "LinkedIn",
-              "href": "https://www.linkedin.com/in/anastasiia-prysiazhnaia/",
-              "info": "LinkedIn account - Anastasiia Prysiazhnaia (@anastasiia-prysiazhnaia)",
+              "href": "https://www.linkedin.com/in/anastasiia-prysiazhna/",
+              "info": "LinkedIn account - Anastasiia Prysiazhna (@anastasiia-prysiazhna)",
               "dataText": "Follow in LinkedIn",
               "icon": "BsLinkedin"
             },
             "third": {
               "title": "Instagram",
-              "href": "https://www.instagram.com/anastasiia_prysiazhnaia/",
-              "info": "Instagram account - @anastasiia_prysiazhnaia",
+              "href": "https://www.instagram.com/anastasiia_prysiazhna/",
+              "info": "Instagram account - @anastasiia_prysiazhna",
               "dataText": "Follow in Instagram",
               "icon": "BsInstagram"
             }
@@ -329,8 +334,8 @@
           "links": {
             "first": {
               "title": "Telegram",
-              "href": "https://t.me/anastasiia_prysiazhnaia",
-              "info": "Telegram by number +380666080702 or by username @anastasiia_prysiazhnaia",
+              "href": "https://t.me/anastasiia_prysiazhna",
+              "info": "Telegram by number +380666080702 or by username @anastasiia_prysiazhna",
               "dataText": "Chat in Telegram",
               "icon": "BsTelegram"
             },
