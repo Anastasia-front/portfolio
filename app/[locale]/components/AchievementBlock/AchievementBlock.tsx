@@ -48,7 +48,7 @@ export function AchievementBlock() {
       >
         {a("title.main")}
       </motion.h2>
-      <motion.h4
+      <motion.h5
         className={`about-achievements__title ${franklin.className}`}
         variants={titleVariants("second")}
         initial="offscreen"
@@ -56,8 +56,8 @@ export function AchievementBlock() {
         viewport={{ once: true, amount: 0.2 }}
       >
         {t("confirm")}
-      </motion.h4>
-      <motion.h5
+      </motion.h5>
+      <motion.h4
         className={`about-achievements__subtitle ${source.className}`}
         variants={titleVariants("second")}
         initial="offscreen"
@@ -65,7 +65,7 @@ export function AchievementBlock() {
         viewport={{ once: true, amount: 0.2 }}
       >
         {a("title.first")}
-      </motion.h5>
+      </motion.h4>
       <motion.div
         className="about-achievements__slider"
         variants={titleVariants("first")}
@@ -75,7 +75,7 @@ export function AchievementBlock() {
       >
         <Certificate />
       </motion.div>
-      <motion.h5
+      <motion.h4
         className={`about-achievements__subtitle ${source.className}`}
         variants={titleVariants("second")}
         initial="offscreen"
@@ -83,7 +83,7 @@ export function AchievementBlock() {
         viewport={{ once: true, amount: 0.2 }}
       >
         {a("title.second")}
-      </motion.h5>
+      </motion.h4>
       <motion.div
         className="about-achievements__slider about-achievements__slider-progress"
         variants={titleVariants("first")}
@@ -94,6 +94,15 @@ export function AchievementBlock() {
         <Progress />
       </motion.div>
       <motion.h5
+        className={`about-achievements__title ${franklin.className}`}
+        variants={titleVariants("second")}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {t("github")}
+      </motion.h5>
+      <motion.h4
         className={`about-achievements__subtitle ${source.className}`}
         variants={titleVariants("second")}
         initial="offscreen"
@@ -101,13 +110,40 @@ export function AchievementBlock() {
         viewport={{ once: true, amount: 0.2 }}
       >
         {a("title.third")}
-      </motion.h5>
+      </motion.h4>
+      <motion.h6
+        className={`about-achievements__subtitle ${source.className}`}
+        variants={titleVariants("second")}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        ({a("title.video")})
+      </motion.h6>
       <motion.video
         className="video-github"
         src="/video/achievements/github2023.mp4"
         ref={videoRef}
         onClick={handleClick}
         controls={true}
+        variants={titleVariants("first")}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+      />
+      <motion.h6
+        className={`about-achievements__subtitle ${source.className}`}
+        variants={titleVariants("second")}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        ({a("title.image")})
+      </motion.h6>
+      <motion.img
+        className="video-github"
+        src="/images/about/github-wrapped.webp"
+        onClick={handleClick}
         variants={titleVariants("first")}
         initial="offscreen"
         whileInView="onscreen"

@@ -69,7 +69,7 @@
   }
 
   &-content {
-    @include flex(column, space-between, center);
+    @include flex(column, space-between, flex-start);
     gap: 1.5rem;
     width: 100%;
 

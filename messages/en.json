@@ -216,12 +216,15 @@
     },
     "alt": "About me",
     "confirm": "To confirm my studies in the courses and their successful completion, I am attaching a certificate and screens of the progress of my studies from my personal course cabinet",
+    "github": "Also, to highlight my desire for learning, improving skills and self-improvement, I am adding activity statistics for the year 2023",
     "achievements": {
       "title": {
         "main": "Achievements",
         "first": "Certificate",
         "second": "Screens of my personal course cabinet",
-        "third": "My GitHub coding year in review"
+        "third": "My GitHub coding year in review",
+        "video": "video generated on GitHubUnwrapped.com",
+        "image": "image generated on GitHubWrapped.io"
       },
       "alt": {
         "certificate": {
