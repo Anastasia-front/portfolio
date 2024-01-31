@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import { useTranslations } from "next-intl";
+import Head from "next/head";
 import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
@@ -53,35 +54,53 @@ export default function ProjectsPage() {
   };
 
   return (
-    <main className="container">
-      <div className="projects__header">
-        <div className="page-headings">
-          <motion.h1 variants={gridVariants} initial="hidden" animate="visible">
-            {t("title")}
-          </motion.h1>
-          <motion.h5 variants={gridVariants} initial="hidden" animate="visible">
-            {t("description")}
-          </motion.h5>
+    <>
+      <Head>
+        <meta property="og:image" content={t("ogImage")} />
+      </Head>
+
+      <main className="container">
+        <div className="projects__header">
+          <div className="page-headings">
+            <motion.h1
+              variants={gridVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              {t("title")}
+            </motion.h1>
+            <motion.h5
+              variants={gridVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              {t("description")}
+            </motion.h5>
+          </div>
+          <div className="projects__filter">
+            <Dropdown
+              handleCategoryChange={handleCategoryChange}
+              handleTypeChange={handleTypeChange}
+              handleLanguageChange={handleLanguageChange}
+            />
+            <LottiePlayer
+              src="/animation/filter.json"
+              background="transparent"
+              speed={1}
+              className="projects__filter-animation"
+              loop
+              autoplay
+            />
+          </div>
         </div>
-        <div className="projects__filter">
-          <Dropdown
-            handleCategoryChange={handleCategoryChange}
-            handleTypeChange={handleTypeChange}
-            handleLanguageChange={handleLanguageChange}
-          />
-          <LottiePlayer
-            src="/animation/filter.json"
-            background="transparent"
-            speed={1}
-            className="projects__filter-animation"
-            loop
-            autoplay
-          />
-        </div>
-      </div>
-{filteredProjects.length===0?<h4 className="center-text">{t("emptyList")} :(</h4>:<Projects projects={filteredProjects} />}
-      
-      <Banner text={b("contact")} button />
-    </main>
+        {filteredProjects.length === 0 ? (
+          <h4 className="center-text">{t("emptyList")} :(</h4>
+        ) : (
+          <Projects projects={filteredProjects} />
+        )}
+
+        <Banner text={b("contact")} button />
+      </main>
+    </>
   );
 }

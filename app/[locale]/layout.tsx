@@ -1,3 +1,5 @@
+import React from "react";
+
 import type { Metadata } from "next";
 import { NextIntlClientProvider, useLocale } from "next-intl";
 import { Oxygen } from "next/font/google";
@@ -33,7 +35,6 @@ export const metadata: Metadata = {
     url: "/",
     siteName: TITLE,
     type: "website",
-    images: "/op-image.png",
   },
   metadataBase: new URL(BASE_URL),
   alternates: {
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
       uk: "/uk",
     },
   },
-  robots: "all",
+  robots: "/robots.ts",
 };
 
 export default async function RootLayout({

@@ -5,6 +5,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { Libre_Franklin } from "next/font/google";
+import Head from "next/head";
 import { usePathname } from "next/navigation";
 
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -70,51 +71,60 @@ export default function AboutPage() {
   const opacity = useTransform(scrollYProgress, [0, 0.85, 0.95], [1, 1, 0]);
 
   return (
-    <main className="container">
-      <motion.div ref={header} className="about-header">
-        <motion.img
-          src={img}
-          alt={t("alt")}
-          className="about-header__image"
-          variants={bannerVariants}
-          initial="hidden"
-          animate="visible"
-          viewport={{ once: true, amount: 0 }}
-          style={{
-            scale,
-            translateX: "-50%",
-            x,
-            y,
-            opacity,
-          }}
-        />
-      </motion.div>
-      <div className="about-content">
-        <Banner text={b("contact")} button className="about-content__banner" />
+    <>
+      <Head>
+        <meta property="og:image" content={t("ogImage")} />
+      </Head>
+      <main className="container">
+        <motion.div ref={header} className="about-header">
+          <motion.img
+            src={img}
+            alt={t("alt")}
+            className="about-header__image"
+            variants={bannerVariants}
+            initial="hidden"
+            animate="visible"
+            viewport={{ once: true, amount: 0 }}
+            style={{
+              scale,
+              translateX: "-50%",
+              x,
+              y,
+              opacity,
+            }}
+          />
+        </motion.div>
+        <div className="about-content">
+          <Banner
+            text={b("contact")}
+            button
+            className="about-content__banner"
+          />
 
-        <section className="about-section">
-          <motion.h1
-            className="about-section__title"
-            variants={titleVariants("first")}
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            {t("features.title")}
-          </motion.h1>
-          <ol className="about-section__list">
-            {keys.map((key) => (
-              <AboutItem
-                key={key}
-                number={i(`${key}.number`)}
-                title={i(`${key}.title`)}
-                description={i(`${key}.description`)}
-              />
-            ))}
-          </ol>
-          <AchievementBlock />
-        </section>
-      </div>
-    </main>
+          <section className="about-section">
+            <motion.h1
+              className="about-section__title"
+              variants={titleVariants("first")}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              {t("features.title")}
+            </motion.h1>
+            <ol className="about-section__list">
+              {keys.map((key) => (
+                <AboutItem
+                  key={key}
+                  number={i(`${key}.number`)}
+                  title={i(`${key}.title`)}
+                  description={i(`${key}.description`)}
+                />
+              ))}
+            </ol>
+            <AchievementBlock />
+          </section>
+        </div>
+      </main>{" "}
+    </>
   );
 }

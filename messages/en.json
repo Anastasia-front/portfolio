@@ -120,6 +120,7 @@
   "home": {
     "title": "Greetings!",
     "description": "Welcome to my portfolio site",
+    "ogImage":"/images/opengraph/en/home.webp",
     "hero": {
       "title": {
         "name": "Hi, I'm Anastasiia Prysiazhna",
@@ -174,6 +175,7 @@
   "about": {
     "title": "Prysiazhna Anastasiia",
     "description": "I am a full-stack web developer with a passion for building beautiful and functional websites",
+    "ogImage":"/images/opengraph/en/about.webp",
     "features": {
       "title": "My qualities",
       "items": {
@@ -243,11 +245,13 @@
   "skills": {
     "title": "My skills",
     "description": "Below are the various technologies, frameworks and libraries I know and can apply. For convenience, they are grouped and implemented using the Accordion component. Each card inside is interactive - interesting interaction!)",
-    "slider": "This is how I work and as the workflow looks like from the outside - at least I want it to be like that ;)"
+    "slider": "This is how I work and as the workflow looks like from the outside - at least I want it to be like that ;)",
+    "ogImage":"/images/opengraph/en/skills.webp"
   },
   "projects": {
     "title": "Projects",
     "description": "All my projects are collected here. They can be sorted by type or category for convenience",
+    "ogImage":"/images/opengraph/en/projects.webp",
     "emptyList": "Sorry, but there is no project for the selected filter",
     "headers": {
       "features": "Features",
@@ -263,6 +267,7 @@
   "contacts": {
     "title": "Write to me",
     "description": "Below is the form for sending me an email and below it you will find all available ways to contact me (they are also duplicated in the footer)",
+    "ogImage":"/images/opengraph/en/contacts.webp",
     "form": {
       "title": "Write me a letter",
       "subject": "Subject",
