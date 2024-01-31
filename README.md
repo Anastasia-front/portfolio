@@ -1,3 +1,7 @@
+**Documentation in [Ukrainian 🇺🇦](README.ua.md).**
+
+<hr/><hr/>
+
 # My portfolio
 
 This website is my portfolio that contain a lot of information about me as developer and my projects.
@@ -7,6 +11,7 @@ This website is my portfolio that contain a lot of information about me as devel
 - [Project overview](#project-overview)
 - [Technologies and libraries used](#technologies-and-libraries-used)
 - [Implemented in the project the following functionality](#implemented-in-the-project-the-following-functionality)
+- [Screenshots](#screenshots)
 - [Default documentation of Next.js](#default-documentation-of-nextjs)
   - [Getting Started](#getting-started)
   - [Learn More](#learn-more)
@@ -24,48 +29,24 @@ The project was implemented using the following technologies and libraries:
 
 ## Implemented in the project the following functionality
 
-<ul>
-<li>
-<p>SEO
-</p>
-</li>
-<li>
-<p>site navigation
-</p>
-</li>
-<li>
-<p>theme changing
-</p>
-</li>
-<li>
-<p>adaptive layout
-</p>
-</li>
-<li>
-<p>various sliders
-</p>
-</li>
-<li>
-<p>improved accessibility
-</p>
-</li>
-<li>
-<p> resource loading is optimized
-</p>
-</li>
-<li>
-<p>localization and internationalization (L10n and i18n)
-</p>
-</li>
-<li>
-<p>sending information using forms (validation is present)
-</p>
-</li>
-<li>
-<p>easy content management (find all text in the en(uk).json files)
-</p>
-</li>
-</ul>
+- SEO
+- site navigation
+- theme changing
+- adaptive layout
+- various sliders
+- improved accessibility
+-  resource loading is optimized
+- localization and internationalization (L10n and i18n)
+- sending information using forms (validation is present)
+- easy content management (find all text in the en(uk).json files)
+
+## Screenshots
+
+![home page](/public/images/opengraph/en/home.webp)
+![about page](/public/images/opengraph/en/about.webp)
+![skills page](/public/images/opengraph/en/skills.webp)
+![projects page](/public/images/opengraph/en/projects.webp)
+![contacts page](/public/images/opengraph/en/contacts.webp)
 
 # Default documentation of Next.js
 
