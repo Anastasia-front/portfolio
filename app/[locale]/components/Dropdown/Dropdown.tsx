@@ -22,12 +22,14 @@ const rubik = Rubik({
 });
 
 interface Props {
+  activeFilter: string | null;
   handleTypeChange: (type: string) => void;
   handleLanguageChange: (lang: string) => void;
   handleCategoryChange: (category: string, type: string) => void;
 }
 
 export function Dropdown({
+  activeFilter,
   handleTypeChange,
   handleCategoryChange,
   handleLanguageChange,
@@ -65,7 +67,6 @@ export function Dropdown({
   }, []);
 
   const handleTypeSelect = (type: string) => {
-    setIsOpen(!isOpen);
     handleTypeChange(type);
   };
 
@@ -120,7 +121,13 @@ export function Dropdown({
                   <p> {i("sortBy")}</p>
                 </li>
                 <li className="dropdown-item">
-                  <button type="button" onClick={() => handleSortBy(c("type"))}>
+                  <button
+                    type="button"
+                    onClick={() => handleSortBy(c("type"))}
+                    className={
+                      activeFilter === c("type") ? "active-filter" : ""
+                    }
+                  >
                     {c("type")}
                     <BsFillCaretRightFill />
                   </button>
@@ -129,6 +136,9 @@ export function Dropdown({
                   <button
                     type="button"
                     onClick={() => handleSortBy(c("language"))}
+                    className={
+                      activeFilter === c("language") ? "active-filter" : ""
+                    }
                   >
                     {c("language")}
                     <BsFillCaretRightFill />
@@ -143,6 +153,7 @@ export function Dropdown({
                 handleCategorySelect={handleCategorySelect}
                 handleLanguageChange={handleLanguageChange}
                 handleSortBy={() => handleSortBy(null)}
+                activeFilter={activeFilter}
               />
             </li>
           </ul>

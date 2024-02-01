@@ -1,11 +1,9 @@
 :root {
-  --transition: all 0.3s ease;
-
-  --border-radius--sm: 0.5rem;
-  --border-radius--md: 1rem;
   --border-radius--lg: 1.5rem;
-  --border-radius--xl: 2.5rem;
+  --border-radius--md: 1rem;
   --border-radius--rounded: 50%;
+  --border-radius--sm: 0.5rem;
+  --border-radius--xl: 2.5rem;
 
   --color--bg-dark: #171410;
   --color--bg-grey: #4d4d4d4d;
@@ -44,24 +42,11 @@
   --color--orange-6: #f95c0d;
   --color--orange-7: #ff5500;
   --color--overlay: #14141414;
+  --color--peach: #ffe1c2;
   --color--red-dark: #a4320cfe;
   --color--red-light: #ff5922fe;
-  --color--peach: #ffe1c2;
   --color--white: #fbfcf8;
   --color--white-grey: #fbfcf8b5;
-
-  --padding--sm: 1rem;
-  --padding--sm-2: 1.5rem;
-  --padding--md: 2rem;
-  --padding--md-2: 2.5rem;
-  --padding--lg: 3rem;
-  --padding--lg-2: 3.5rem;
-
-  --scale: 1.07;
-
-  --level--1: translateZ(3rem);
-  --level--2: translateZ(6rem);
-  --level--3: translateZ(9rem);
 
   --filter-1: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
   --filter-2: drop-shadow(1px 3px 0px rgba(0, 0, 0, 0.2));
@@ -69,6 +54,7 @@
   --filter-4: drop-shadow(1px 4px 7px rgba(0, 0, 0, 0.2));
 
   --font-size--1: clamp(2rem, min(1vw, 50px), 2.2rem);
+  --font-size--10: clamp(0.4rem, min(1vw, 16px), 0.5rem);
   --font-size--2: clamp(1.8rem, min(1vw, 45px), 1.9rem);
   --font-size--3: clamp(1.6rem, min(1vw, 40px), 1.7rem);
   --font-size--4: clamp(1.2rem, min(1vw, 35px), 1.5rem);
@@ -77,9 +63,23 @@
   --font-size--7: clamp(0.8rem, min(1vw, 20px), 0.9rem);
   --font-size--8: clamp(0.6rem, min(1vw, 18px), 0.7rem);
   --font-size--9: clamp(0.8rem, min(1vw, 17px), 0.9rem);
-  --font-size--10: clamp(0.4rem, min(1vw, 16px), 0.5rem);
 
+  --font-weight--bold: 700;
   --font-weight--normal-1: 400;
   --font-weight--normal-2: 500;
-  --font-weight--bold: 700;
+
+  --level--1: translateZ(3rem);
+  --level--2: translateZ(6rem);
+  --level--3: translateZ(9rem);
+
+  --padding--lg: 3rem;
+  --padding--lg-2: 3.5rem;
+  --padding--md: 2rem;
+  --padding--md-2: 2.5rem;
+  --padding--sm: 1rem;
+  --padding--sm-2: 1.5rem;
+
+  --scale: 1.07;
+
+  --transition: all 0.3s ease;
 }

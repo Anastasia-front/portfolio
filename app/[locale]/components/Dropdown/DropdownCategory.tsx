@@ -12,6 +12,7 @@ import { dropdownAllTypes } from "@/constants";
 import { NestedDropdown } from "./NestedDropdown";
 
 interface Props {
+  activeFilter: string | null;
   selectedCategory: string | null;
   handleTypeSelect: (type: string) => void;
   handleCategorySelect: (category: string, type: string) => void;
@@ -20,6 +21,7 @@ interface Props {
 }
 
 export function DropdownCategory({
+  activeFilter,
   selectedCategory,
   handleTypeSelect,
   handleCategorySelect,
@@ -45,6 +47,7 @@ export function DropdownCategory({
             return (
               <li key={index} className="dropdown-item all">
                 <button
+                  className={activeFilter === type ? "active-filter" : ""}
                   type="button"
                   onClick={() => handleTypeSelect(t(`${type}`))}
                 >
@@ -57,6 +60,7 @@ export function DropdownCategory({
             return (
               <li key={index} className="dropdown-item">
                 <NestedDropdown
+                  activeFilter={activeFilter}
                   onSelectType={handleTypeSelect}
                   onSelectCategory={handleCategorySelect}
                   type={type}
@@ -69,6 +73,7 @@ export function DropdownCategory({
         <ul className="dropdown-list align-right">
           <li className="dropdown-item all">
             <button
+              className={activeFilter === l("all") ? "active-filter" : ""}
               type="button"
               onClick={() => handleLanguageChange(l("all"))}
             >
@@ -76,19 +81,28 @@ export function DropdownCategory({
             </button>
           </li>
           <li className="dropdown-item">
-            <button type="button" onClick={() => handleLanguageChange(l("js"))}>
+            <button
+              type="button"
+              onClick={() => handleLanguageChange(l("js"))}
+              className={activeFilter === l("js") ? "active-filter" : ""}
+            >
               {l("js")}
               <DiJavascript />
             </button>
           </li>
           <li className="dropdown-item">
-            <button type="button" onClick={() => handleLanguageChange(l("ts"))}>
+            <button
+              type="button"
+              onClick={() => handleLanguageChange(l("ts"))}
+              className={activeFilter === l("ts") ? "active-filter" : ""}
+            >
               {l("ts")}
               <BiLogoTypescript />
             </button>
           </li>
           <li className="dropdown-item">
             <button
+              className={activeFilter === l("python") ? "active-filter" : ""}
               type="button"
               onClick={() => handleLanguageChange(l("python"))}
             >

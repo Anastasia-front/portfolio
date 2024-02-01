@@ -39,9 +39,9 @@
   }
 
   &-list {
-    position: relative;
-    @include flex(column, center, center);
     gap: 0.7rem;
+    @include flex(column, center, center);
+    position: relative;
     width: 100%;
 
     .back {
@@ -96,18 +96,18 @@
     position: absolute;
     top: 2.5rem;
     left: -8rem;
+    width: 216px;
+    height: 176px;
     padding: 1rem 1rem 0.5rem 0.5rem;
     border-radius: var(--padding--sm);
     background-color: var(--color--orange-2);
-    width: 216px;
-    height: 176px;
 
     button {
       @include flex(row, center, center);
       gap: 0.5rem;
+      max-width: 200px;
       color: var(--color--white);
       text-transform: uppercase;
-      max-width: 200px;
     }
   }
 
@@ -209,11 +209,10 @@
         }
       }
     }
-    .all{
-      button{
-         border-bottom: 1px dotted var(--color--dark-opacity);
+    .all {
+      button {
+        border-bottom: 1px dotted var(--color--dark-opacity);
       }
-     
     }
   }
 
@@ -222,8 +221,8 @@
   }
 
   &-item {
-    p{
-     color: var(--color--dark-opacity);
+    p {
+      color: var(--color--dark-opacity);
     }
     button {
       color: var(--color--dark-opacity);
@@ -272,7 +271,6 @@
   @include useOnClick {
     color: var(--color--orange-4);
   }
-
 }
 
 .show {
@@ -286,4 +284,7 @@
   &-list {
     visibility: hidden;
   }
+}
+.active-filter {
+  color: var(--color--light-opacity) !important;
 }

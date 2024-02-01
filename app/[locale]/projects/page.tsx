@@ -26,6 +26,7 @@ export default function ProjectsPage() {
     }
   })();
 
+  const [activeFilter, setActiveFilter] = useState<string | null>(null);
   const [filteredProjects, setFilteredProjects] = useState(projectLang);
 
   const handleTypeChange = (type: string) => {
@@ -33,6 +34,7 @@ export default function ProjectsPage() {
       return type === "all" || type === "всі" || project.development === type;
     });
     setFilteredProjects(filteredProjects);
+    setActiveFilter(type);
   };
 
   const handleLanguageChange = (lang: string) => {
@@ -40,6 +42,7 @@ export default function ProjectsPage() {
       return lang === "all" || lang === "всі" || project.language === lang;
     });
     setFilteredProjects(filteredProjects);
+    setActiveFilter(lang);
   };
 
   const handleCategoryChange = (category: string, type: string) => {
@@ -49,8 +52,8 @@ export default function ProjectsPage() {
       const categoryMatch = project.type === category;
       return typeMatch && categoryMatch;
     });
-
     setFilteredProjects(filteredProjects);
+    setActiveFilter(`${type}.${category}`);
   };
 
   return (
@@ -79,6 +82,7 @@ export default function ProjectsPage() {
           </div>
           <div className="projects__filter">
             <Dropdown
+              activeFilter={activeFilter}
               handleCategoryChange={handleCategoryChange}
               handleTypeChange={handleTypeChange}
               handleLanguageChange={handleLanguageChange}
