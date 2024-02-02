@@ -12,7 +12,8 @@ import { dropdownAllTypes } from "@/constants";
 import { NestedDropdown } from "./NestedDropdown";
 
 interface Props {
-  activeFilter: string | null;
+  activeTypeFilter: string | null;
+  activeCategoryFilter: string | null;
   selectedCategory: string | null;
   handleTypeSelect: (type: string) => void;
   handleCategorySelect: (category: string, type: string) => void;
@@ -21,7 +22,8 @@ interface Props {
 }
 
 export function DropdownCategory({
-  activeFilter,
+  activeTypeFilter,
+  activeCategoryFilter,
   selectedCategory,
   handleTypeSelect,
   handleCategorySelect,
@@ -47,9 +49,11 @@ export function DropdownCategory({
             return (
               <li key={index} className="dropdown-item all">
                 <button
-                  className={activeFilter === type ? "active-filter" : ""}
+                  className={activeTypeFilter === type ? "active-filter" : ""}
                   type="button"
-                  onClick={() => handleTypeSelect(t(`${type}`))}
+                  onClick={() => {
+                    handleTypeSelect(t(`${type}`));
+                  }}
                 >
                   <TfiLayoutListThumbAlt />
                   {t(`${type}`)}
@@ -60,7 +64,8 @@ export function DropdownCategory({
             return (
               <li key={index} className="dropdown-item">
                 <NestedDropdown
-                  activeFilter={activeFilter}
+                  activeTypeFilter={activeTypeFilter}
+                  activeCategoryFilter={activeCategoryFilter}
                   onSelectType={handleTypeSelect}
                   onSelectCategory={handleCategorySelect}
                   type={type}
@@ -73,7 +78,7 @@ export function DropdownCategory({
         <ul className="dropdown-list align-right">
           <li className="dropdown-item all">
             <button
-              className={activeFilter === l("all") ? "active-filter" : ""}
+              className={activeTypeFilter === l("all") ? "active-filter" : ""}
               type="button"
               onClick={() => handleLanguageChange(l("all"))}
             >
@@ -84,7 +89,7 @@ export function DropdownCategory({
             <button
               type="button"
               onClick={() => handleLanguageChange(l("js"))}
-              className={activeFilter === l("js") ? "active-filter" : ""}
+              className={activeTypeFilter === l("js") ? "active-filter" : ""}
             >
               {l("js")}
               <DiJavascript />
@@ -94,7 +99,7 @@ export function DropdownCategory({
             <button
               type="button"
               onClick={() => handleLanguageChange(l("ts"))}
-              className={activeFilter === l("ts") ? "active-filter" : ""}
+              className={activeTypeFilter === l("ts") ? "active-filter" : ""}
             >
               {l("ts")}
               <BiLogoTypescript />
@@ -102,7 +107,9 @@ export function DropdownCategory({
           </li>
           <li className="dropdown-item">
             <button
-              className={activeFilter === l("python") ? "active-filter" : ""}
+              className={
+                activeTypeFilter === l("python") ? "active-filter" : ""
+              }
               type="button"
               onClick={() => handleLanguageChange(l("python"))}
             >

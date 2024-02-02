@@ -288,3 +288,6 @@
 .active-filter {
   color: var(--color--light-opacity) !important;
 }
+[data-theme="dark"] .active-filter {
+  color: var(--color--light-opacity) !important;
+}

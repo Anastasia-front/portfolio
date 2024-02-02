@@ -22,14 +22,16 @@ const rubik = Rubik({
 });
 
 interface Props {
-  activeFilter: string | null;
+  activeTypeFilter: string | null;
+  activeCategoryFilter: string | null;
   handleTypeChange: (type: string) => void;
   handleLanguageChange: (lang: string) => void;
   handleCategoryChange: (category: string, type: string) => void;
 }
 
 export function Dropdown({
-  activeFilter,
+  activeTypeFilter,
+  activeCategoryFilter,
   handleTypeChange,
   handleCategoryChange,
   handleLanguageChange,
@@ -42,7 +44,6 @@ export function Dropdown({
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [hideOverflow, setHideOverflow] = useState<string | null>(null);
-
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
@@ -88,6 +89,18 @@ export function Dropdown({
     setSelectedCategory(category);
   };
 
+  const activeSortTypeFilter: string = ["frontend", "backend", "data"].includes(
+    activeTypeFilter!!
+  )
+    ? "active-filter"
+    : "";
+
+  const activeSortLangFilter: string = ["js", "ts", "python"].includes(
+    activeTypeFilter!!
+  )
+    ? "active-filter"
+    : "";
+
   return (
     <motion.div
       variants={gridVariants}
@@ -124,9 +137,7 @@ export function Dropdown({
                   <button
                     type="button"
                     onClick={() => handleSortBy(c("type"))}
-                    className={
-                      activeFilter === c("type") ? "active-filter" : ""
-                    }
+                    className={activeSortTypeFilter}
                   >
                     {c("type")}
                     <BsFillCaretRightFill />
@@ -136,9 +147,7 @@ export function Dropdown({
                   <button
                     type="button"
                     onClick={() => handleSortBy(c("language"))}
-                    className={
-                      activeFilter === c("language") ? "active-filter" : ""
-                    }
+                    className={activeSortLangFilter}
                   >
                     {c("language")}
                     <BsFillCaretRightFill />
@@ -153,7 +162,8 @@ export function Dropdown({
                 handleCategorySelect={handleCategorySelect}
                 handleLanguageChange={handleLanguageChange}
                 handleSortBy={() => handleSortBy(null)}
-                activeFilter={activeFilter}
+                activeTypeFilter={activeTypeFilter}
+                activeCategoryFilter={activeCategoryFilter}
               />
             </li>
           </ul>

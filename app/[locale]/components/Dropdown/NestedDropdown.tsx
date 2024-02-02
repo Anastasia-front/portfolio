@@ -11,13 +11,15 @@ import { useScreenQuery } from "@/hooks";
 
 interface Props {
   type: string;
-  activeFilter: string | null;
+  activeTypeFilter: string | null;
+  activeCategoryFilter: string | null;
   onSelectType: (type: string) => void;
   onSelectCategory: (category: string, type: string) => void;
 }
 
 export function NestedDropdown({
-  activeFilter,
+  activeTypeFilter,
+  activeCategoryFilter,
   onSelectCategory,
   onSelectType,
   type,
@@ -29,7 +31,7 @@ export function NestedDropdown({
 
   const [isHovered, setIsHovered] = useState(false);
   const [activeButton, setActiveButton] = useState(false);
-  const [activeType, setActiveType] = useState<string | null>(null);
+  const [activeType, setActiveType] = useState<string>("");
 
   const checkDropdownContent = () => {
     const nestedContents = document.querySelectorAll(".dropdownNested-content");
@@ -75,15 +77,13 @@ export function NestedDropdown({
 
   const { isScreenMobileLg } = useScreenQuery();
 
-  const typeClass = activeFilter?.split(".")[0];
-
   return (
     <div onMouseLeave={handleMouseLeave} className="relative">
       <button
         type="button"
         className={`dropdownNested-container ${
           activeType === type && activeButton ? "active-button" : ""
-        } ${typeClass === activeType ? "active-filter" : ""} `}
+        } ${activeTypeFilter === type ? "active-filter" : ""} `}
         onClick={() => onSelectType(type)}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -103,7 +103,7 @@ export function NestedDropdown({
                 <li key={index} className="dropdownNested-item">
                   <button
                     className={
-                      activeFilter === `${activeType}.${category}`
+                      activeCategoryFilter === `${activeType}.${category}`
                         ? "active-filter"
                         : ""
                     }
