@@ -24,6 +24,10 @@ p,
 ul {
   margin: 0;
   padding: 0;
+  border: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 h1 {
@@ -109,6 +113,9 @@ img {
   padding: 0;
   list-style: none;
   text-decoration: none;
+}
+*::-webkit-focus-ring-color {
+  outline-color: transparent;
 }
 
 body {
@@ -744,7 +751,7 @@ main {
   gap: 1rem;
   padding: 30vh 25vw;
   text-align: center;
-  &-text{
+  &-text {
     text-align: center;
   }
 }

@@ -103,7 +103,7 @@ export function NestedDropdown({
                 <li key={index} className="dropdownNested-item">
                   <button
                     className={
-                      activeCategoryFilter === `${activeType}.${category}`
+                      activeCategoryFilter === `${type}.${category}`
                         ? "active-filter"
                         : ""
                     }

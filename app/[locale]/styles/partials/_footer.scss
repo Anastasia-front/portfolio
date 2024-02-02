@@ -4,6 +4,7 @@
 
 .footer {
   @include flex(column, center, center);
+  gap: 3rem;
   z-index: 1;
   position: relative;
   min-height: 15rem;
@@ -13,7 +14,6 @@
     var(--color--orange-4) 0%,
     var(--color--orange-1) 99.23%
   );
-  gap: 3rem;
 
   @include useScreen("mobile-md") {
     gap: 2rem;
@@ -24,8 +24,8 @@
     gap: 1rem;
 
     @include useScreen("tablet-sm") {
-      flex-direction: row;
       gap: 3rem;
+      flex-direction: row;
     }
 
     &__title {
@@ -43,9 +43,9 @@
 
   &-icons {
     @include flex(column, center, center);
+    gap: 1.2rem;
     flex-wrap: wrap;
     padding-top: 1rem;
-    gap: 1.2rem;
 
     @include useScreen("tablet-xl") {
       flex-wrap: nowrap;
@@ -133,9 +133,9 @@
   &__bottom {
     @include flex(column, center, center);
     gap: 1rem;
-    color: var(--color--white);
     position: relative;
     padding-top: 1rem;
+    color: var(--color--white);
     text-align: center;
 
     a {
@@ -147,14 +147,14 @@
     }
 
     &::before {
-      content: "";
       position: absolute;
       top: 0;
       left: 0;
-      height: 1px;
-      background-color: var(--color--white);
-      height: 1px;
       width: 100%;
+      height: 1px;
+      height: 1px;
+      content: "";
+      background-color: var(--color--white);
     }
   }
 }

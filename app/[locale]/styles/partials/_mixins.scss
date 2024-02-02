@@ -13,11 +13,11 @@
   $placeholderColor
 ) {
   border: 0px;
-  background-color: $bgColor;
   border-top: 1px solid $borderColor;
-  box-shadow: 3px 3px 3px $boxShadowColor;
   outline-color: $outlineColor;
   font-family: Oxygen, "Open Sans", sans-serif;
+  background-color: $bgColor;
+  box-shadow: 3px 3px 3px $boxShadowColor;
 
   &::placeholder {
     color: $placeholderColor;

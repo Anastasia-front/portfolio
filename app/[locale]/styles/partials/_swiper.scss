@@ -2,8 +2,8 @@
 @use "../mixins" as *;
 
 .swiper {
-  height: auto;
   width: 225px;
+  height: auto;
 
   @include useScreen("mobile-lg") {
     width: 360px;
@@ -24,9 +24,9 @@
 
 .swiper-skills {
   @include flex(column, center, center);
-  padding-top: 2rem !important;
-
   gap: 2rem;
+
+  padding-top: 2rem !important;
 }
 
 .swiper-title {

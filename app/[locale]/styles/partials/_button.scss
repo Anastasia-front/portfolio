@@ -40,6 +40,12 @@
     background: transparent;
     transition: var(--transition);
 
+    svg,
+    path {
+      width: 30px;
+      height: 30px;
+    }
+
     @include useOnHover {
       transform: scale(var(--scale));
     }

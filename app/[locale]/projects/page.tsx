@@ -37,6 +37,7 @@ export default function ProjectsPage() {
     });
     setFilteredProjects(filteredProjects);
     setActiveTypeFilter(type);
+    setActiveCategoryFilter(null);
   };
 
   const handleLanguageChange = (lang: string) => {
@@ -45,6 +46,7 @@ export default function ProjectsPage() {
     });
     setFilteredProjects(filteredProjects);
     setActiveTypeFilter(lang);
+    setActiveCategoryFilter(null);
   };
 
   const handleCategoryChange = (category: string, type: string) => {
