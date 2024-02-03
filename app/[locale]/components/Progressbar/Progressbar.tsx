@@ -1,20 +1,38 @@
 "use client";
-
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useCallback, useEffect, useState } from "react";
 
 export function ProgressBar() {
-  const scrollYProgress = useScroll().scrollYProgress;
+  const controls = useAnimation();
+  const [scrollPosition, setScrollPosition] = useState(0);
 
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 200,
-    damping: 20,
-    restDelta: 0.001,
-  });
+  const handleScroll = useCallback(() => {
+    const totalHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const currentPosition = window.scrollY / totalHeight;
+    setScrollPosition(currentPosition);
+    controls.start({ scaleX: currentPosition });
+  }, [controls]);
+
+  useEffect(() => {
+    controls.start({ scaleX: 0.5 });
+  }, [controls]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
   return (
     <motion.div
       className="progress-bar"
+      animate={controls}
       style={{
-        scaleX,
+        scaleX: scrollPosition,
+        transformOrigin: "center",
+        transition: "transform 0.2s ease-in-out",
       }}
     ></motion.div>
   );
