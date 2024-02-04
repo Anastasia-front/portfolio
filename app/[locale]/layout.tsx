@@ -79,12 +79,12 @@ export default async function RootLayout({
           <NextIntlClientProvider locale={locale} messages={messages}>
             <ErrorBoundary>
               <Providers>
-                <ProgressBar />
                 <Header />
                 <FormPortal />
                 {children}
                 <Footer />
                 <Settings />
+                <ProgressBar />
               </Providers>
             </ErrorBoundary>
           </NextIntlClientProvider>

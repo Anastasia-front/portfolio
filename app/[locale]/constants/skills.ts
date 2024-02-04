@@ -7,10 +7,9 @@ import ts from "@/assets/images/skills/categories/programming-language/ts.webp";
 import gitHub from "@/assets/images/skills/categories/system-control/git-hub.webp";
 import git from "@/assets/images/skills/categories/system-control/git.webp";
 
-import androidStudio from "@/assets/images/skills/categories/software/android-studio.webp";
 import canva from "@/assets/images/skills/categories/software/canva.webp";
-import expo from "@/assets/images/skills/categories/software/expo.webp";
 import discord from "@/assets/images/skills/categories/software/discord.webp";
+import expo from "@/assets/images/skills/categories/software/expo.webp";
 import figma from "@/assets/images/skills/categories/software/figma.webp";
 import photoshop from "@/assets/images/skills/categories/software/photoshop.webp";
 import pyCharm from "@/assets/images/skills/categories/software/py-charm.webp";
@@ -19,10 +18,13 @@ import vsCode from "@/assets/images/skills/categories/software/vs-code.webp";
 
 import babel from "@/assets/images/skills/categories/front/babel.webp";
 import crudFrontend from "@/assets/images/skills/categories/front/crud.webp";
+import eslint from "@/assets/images/skills/categories/front/eslint.webp";
 import framerMotion from "@/assets/images/skills/categories/front/framer-motion.webp";
 import html from "@/assets/images/skills/categories/front/html.webp";
+import markdown from "@/assets/images/skills/categories/front/markdown.webp";
 import next from "@/assets/images/skills/categories/front/next-js-1.webp";
 import parcel from "@/assets/images/skills/categories/front/parcel.webp";
+import prettier from "@/assets/images/skills/categories/front/prettier.webp";
 import reactNative from "@/assets/images/skills/categories/front/react-native.webp";
 import react from "@/assets/images/skills/categories/front/react.webp";
 import redux from "@/assets/images/skills/categories/front/redux.webp";
@@ -30,10 +32,6 @@ import restApiFrontend from "@/assets/images/skills/categories/front/rest-api.we
 import threeJs from "@/assets/images/skills/categories/front/three-js.webp";
 import vite from "@/assets/images/skills/categories/front/vite.webp";
 import webpack from "@/assets/images/skills/categories/front/webpack.webp";
-import eslint from "@/assets/images/skills/categories/front/eslint.webp";
-import prettier from "@/assets/images/skills/categories/front/prettier.webp";
-import markdown from "@/assets/images/skills/categories/front/markdown.webp";
-
 
 import bcrypt from "@/assets/images/skills/categories/back/bcrypt.webp";
 import cloudinary from "@/assets/images/skills/categories/back/cloudinary.webp";
@@ -78,7 +76,7 @@ interface Skill {
   title: string;
   image: StaticImageData;
   type: Category;
-  isBig?:boolean
+  isBig?: boolean;
 }
 
 export const skills: Skill[] = [
@@ -94,12 +92,12 @@ export const skills: Skill[] = [
   { type: "system control", title: "git", image: git },
 
   { type: "software", title: "figma", image: figma },
-  { type: "software",isBig:true, title: "visual studio code", image: vsCode },
-  { type: "software",isBig:true, title: "py charm", image: pyCharm },
-  { type: "software",isBig:true, title: "discord", image: discord },
-  { type: "software",isBig:true, title: "slack", image: slack },
-  { type: "software",isBig:true, title: "canva", image: canva },
-  { type: "software",isBig:true, title: "photoshop", image: photoshop },
+  { type: "software", isBig: true, title: "visual studio code", image: vsCode },
+  { type: "software", isBig: true, title: "py charm", image: pyCharm },
+  { type: "software", isBig: true, title: "discord", image: discord },
+  { type: "software", isBig: true, title: "slack", image: slack },
+  { type: "software", isBig: true, title: "canva", image: canva },
+  { type: "software", isBig: true, title: "photoshop", image: photoshop },
   { type: "software", title: "expo", image: expo },
   // { type: "software",title: "android studio", image: androidStudio },
 
@@ -114,9 +112,9 @@ export const skills: Skill[] = [
   { type: "frontend", title: "parcel", image: parcel },
   { type: "frontend", title: "babel", image: babel },
   { type: "frontend", title: "webpack", image: webpack },
-  { type: "frontend", title: "eslint", image: eslint },  
+  { type: "frontend", title: "eslint", image: eslint },
   { type: "frontend", title: "markdown", image: markdown },
-  { type: "frontend", title: "prettier", image: prettier,isBig:true },
+  { type: "frontend", title: "prettier", image: prettier, isBig: true },
   { type: "frontend", title: "three js", image: threeJs },
   { type: "frontend", title: "framer motion", image: framerMotion },
 
