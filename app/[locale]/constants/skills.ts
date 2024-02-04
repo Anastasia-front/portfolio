@@ -9,6 +9,7 @@ import git from "@/assets/images/skills/categories/system-control/git.webp";
 
 import androidStudio from "@/assets/images/skills/categories/software/android-studio.webp";
 import canva from "@/assets/images/skills/categories/software/canva.webp";
+import expo from "@/assets/images/skills/categories/software/expo.webp";
 import discord from "@/assets/images/skills/categories/software/discord.webp";
 import figma from "@/assets/images/skills/categories/software/figma.webp";
 import photoshop from "@/assets/images/skills/categories/software/photoshop.webp";
@@ -99,7 +100,8 @@ export const skills: Skill[] = [
   { type: "software",isBig:true, title: "slack", image: slack },
   { type: "software",isBig:true, title: "canva", image: canva },
   { type: "software",isBig:true, title: "photoshop", image: photoshop },
-  { type: "software",title: "android studio", image: androidStudio },
+  { type: "software", title: "expo", image: expo },
+  // { type: "software",title: "android studio", image: androidStudio },
 
   { type: "frontend", title: "react", image: react },
   { type: "frontend", title: "react native", image: reactNative },
