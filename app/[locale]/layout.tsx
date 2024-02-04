@@ -5,16 +5,19 @@ import { NextIntlClientProvider, useLocale } from "next-intl";
 import { Oxygen } from "next/font/google";
 import { notFound } from "next/navigation";
 
+
 import {
   ErrorBoundary,
   Footer,
   FormPortal,
   Header,
-  ProgressBar,
+  // ProgressBar,
   Settings,
 } from "@/components";
 import { GlobalProvider } from "@/context";
 import { Providers } from "@/providers";
+
+import {ProgressBar} from './components/ProgressBar/ProgressBar'
 
 import "./styles/main.scss";
 
