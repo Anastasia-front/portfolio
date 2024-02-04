@@ -5,7 +5,6 @@ import { NextIntlClientProvider, useLocale } from "next-intl";
 import { Oxygen } from "next/font/google";
 import { notFound } from "next/navigation";
 
-
 import {
   ErrorBoundary,
   Footer,
@@ -17,7 +16,7 @@ import {
 import { GlobalProvider } from "@/context";
 import { Providers } from "@/providers";
 
-import {ProgressBar} from './components/ProgressBar/ProgressBar'
+import { ProgressBar } from "./components/ProgressBar/ProgressBar";
 
 import "./styles/main.scss";
 
