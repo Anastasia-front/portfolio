@@ -1,6 +1,8 @@
 "use client";
-import { motion, useAnimation } from "framer-motion";
+
 import { useCallback, useEffect, useState } from "react";
+
+import { motion, useAnimation } from "framer-motion";
 
 export function ProgressBar() {
   const controls = useAnimation();
