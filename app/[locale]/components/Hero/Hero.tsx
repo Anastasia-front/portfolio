@@ -9,7 +9,11 @@ import { motion } from "framer-motion";
 import decoration from "@/assets/images/hero/decoration.webp";
 import hero from "@/assets/images/hero/hero.webp";
 
-import { ButtonScroll } from "@/components";
+import {
+  AnimatedTextCharacter,
+  AnimatedTextWord,
+  ButtonScroll,
+} from "@/components";
 import { useScreenQuery } from "@/hooks";
 import { opacityVariants } from "@/utils";
 
@@ -39,13 +43,16 @@ export function Hero() {
           <div className="hero-content">
             <span className="hero-blur"></span>
             <span className="hero-blur"></span>
-            <h4>{i("subtitle")}</h4>
+            <AnimatedTextCharacter text={i("subtitle")} el="h4" />
             <div className="hero-headings">
-              <h2>{t("name")}</h2>
-              <h1 className={`${oswald.className}`}>{t("position")}</h1>
+              <AnimatedTextCharacter text={t("name")} el="h2" />
+              <AnimatedTextCharacter
+                text={t("position")}
+                el="h1"
+                className={`${oswald.className}`}
+              />
             </div>
-
-            <p>{i("description")}</p>
+            <AnimatedTextWord text={i("description")} el="p" />
 
             <div className="hero-buttons">
               <ButtonScroll href="features" text={b("hero")} />

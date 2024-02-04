@@ -5,9 +5,11 @@ interface Props {
 }
 
 export function Dynamic({ componentName }: Props) {
-  const DynamicImportedComponent = dynamic(() => import(`./${componentName}`), {
-    loading: () => <p>Loading...</p>,
-  });
-
-  return <DynamicImportedComponent />;
+  if (typeof window !== "undefined") {
+    const DynamicImportedComponent = dynamic(
+      () => import(`./${componentName}`),
+      { ssr: false }
+    );
+    return <DynamicImportedComponent />;
+  }
 }

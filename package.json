@@ -16,7 +16,7 @@
     "axios": "^1.6.0",
     "buffer": "^6.0.3",
     "file-loader": "^6.2.0",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^11.0.3",
     "lottie-web": "^5.12.2",
     "next": "^13.4.19",
     "next-intl": "^3.0.0-beta.18",

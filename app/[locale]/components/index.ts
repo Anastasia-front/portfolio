@@ -2,6 +2,7 @@ export * from "./3dObjects";
 export * from "./AboutItem";
 export * from "./Accordion";
 export * from "./AchievementBlock";
+export * from "./AnimatedText";
 export * from "./Banner";
 export * from "./BurgerMenu";
 export * from "./Buttons";
