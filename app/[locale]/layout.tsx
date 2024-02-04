@@ -16,7 +16,7 @@ import {
 import { GlobalProvider } from "@/context";
 import { Providers } from "@/providers";
 
-import { ProgressBar } from "./components/ProgressBar/ProgressBar";
+import { ProgressBar } from "./components/ProgressBar";
 
 import "./styles/main.scss";
 
