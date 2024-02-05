@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 import { useTranslations } from "next-intl";
 
@@ -30,11 +31,11 @@ export function NestedDropdown({
   const t = useTranslations("dropdown.type");
 
   const [isHovered, setIsHovered] = useState(false);
-  const [activeButton, setActiveButton] = useState(false);
-  const [activeType, setActiveType] = useState<string>("");
+  const [activeType, setActiveType] = useState<string | null>(null);
 
-  const checkDropdownContent = () => {
+  const checkDropdownContent = useCallback(() => {
     const nestedContents = document.querySelectorAll(".dropdownNested-content");
+
     let foundActive = false;
 
     for (const nestedContent of nestedContents) {
@@ -42,26 +43,22 @@ export function NestedDropdown({
         nestedContent &&
         window.getComputedStyle(nestedContent).display !== "none"
       ) {
-        setActiveButton(true);
         foundActive = true;
         break;
       }
     }
 
-    if (!foundActive) {
-      setActiveButton(false);
-    }
-  };
+    setActiveType(foundActive ? type : null);
+  }, [type]);
 
   useEffect(() => {
     if (isHovered) {
-      setActiveType(type);
+      checkDropdownContent();
     }
-  }, [isHovered, type]);
+  }, [isHovered, checkDropdownContent, type]);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
-    checkDropdownContent();
   };
 
   const handleMouseLeave = () => {
@@ -76,15 +73,20 @@ export function NestedDropdown({
   const interConst = type === "frontend" ? iF : type === "backend" ? iB : iD;
 
   const { isScreenMobileLg } = useScreenQuery();
+  const isTouchDevice = useMediaQuery({ query: "(hover: none)" });
 
   return (
     <div onMouseLeave={handleMouseLeave} className="relative">
       <button
         type="button"
         className={`dropdownNested-container ${
-          activeType === type && activeButton ? "active-button" : ""
+          isTouchDevice && isHovered && activeType === type
+            ? "active-button"
+            : ""
         } ${activeTypeFilter === type ? "active-filter" : ""} `}
-        onClick={() => onSelectType(type)}
+        onClick={() => {
+          onSelectType(type), setIsHovered(false);
+        }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
