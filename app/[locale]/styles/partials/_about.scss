@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 90vh;
+    min-height: 70vh;
     background: linear-gradient(
       140deg,
       var(--color--light-blue-1),
@@ -17,12 +17,12 @@
     );
 
     @include useScreen("tablet-sm") {
-      min-height: 140vh;
+      min-height: 100vh;
     }
 
     > img {
       z-index: 7;
-      position: fixed;
+      position: absolute;
       top: 30%;
       left: 50%;
       max-width: 80%;
@@ -57,11 +57,11 @@
   }
 
   &-content {
-    margin-top: 100vh;
+    margin-top: 70vh;
     margin-bottom: 3rem;
 
     @include useScreen("tablet-sm") {
-      margin-top: 150vh;
+      margin-top: 90vh;
     }
 
     &__banner {

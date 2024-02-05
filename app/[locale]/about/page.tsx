@@ -65,10 +65,8 @@ export default function AboutPage() {
     offset: ["start end", "end start"],
   }).scrollYProgress;
 
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.3, 1.2]);
-  const x = useTransform(scrollYProgress, [0, 0.6, 1], [0, 0, -2400]);
-  const y = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0, -300]);
-  const opacity = useTransform(scrollYProgress, [0, 0.85, 0.95], [1, 1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.7], [0.3, 1.2]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.5]);
 
   return (
     <>
@@ -88,8 +86,6 @@ export default function AboutPage() {
             style={{
               scale,
               translateX: "-50%",
-              x,
-              y,
               opacity,
             }}
           />
