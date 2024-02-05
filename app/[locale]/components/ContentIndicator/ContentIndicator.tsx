@@ -17,10 +17,6 @@ export function ContentIndicator() {
   }, [controls]);
 
   useEffect(() => {
-    controls.start({ scaleX: 0.5 });
-  }, [controls]);
-
-  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -34,7 +30,6 @@ export function ContentIndicator() {
       style={{
         scaleX: scrollPosition,
         transformOrigin: "center",
-        transition: "transform 0.2s ease-in-out",
       }}
     ></motion.div>
   );
