@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 
 import { motion, useAnimation } from "framer-motion";
 
-export function ProgressBar() {
+export function ContentIndicator() {
   const controls = useAnimation();
   const [scrollPosition, setScrollPosition] = useState(0);
 

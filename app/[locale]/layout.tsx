@@ -6,17 +6,15 @@ import { Oxygen } from "next/font/google";
 import { notFound } from "next/navigation";
 
 import {
+  ContentIndicator,
   ErrorBoundary,
   Footer,
   FormPortal,
   Header,
-  // ProgressBar,
   Settings,
 } from "@/components";
 import { GlobalProvider } from "@/context";
 import { Providers } from "@/providers";
-
-import { ProgressBar } from "./components/ProgressBar";
 
 import "./styles/main.scss";
 
@@ -84,7 +82,7 @@ export default async function RootLayout({
                 {children}
                 <Footer />
                 <Settings />
-                <ProgressBar />
+                <ContentIndicator />
               </Providers>
             </ErrorBoundary>
           </NextIntlClientProvider>
