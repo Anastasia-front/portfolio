@@ -52,7 +52,8 @@ export function ObjectsSection() {
           </p>
           <div className="block-hint__onHoverVisible">
             <span className="block-hint__prompt">{i("prompt")}</span>{" "}
-            <span className="block-hint__comment">{i("comment")}</span>
+            <span className="block-hint__comment">{i("comment")}</span>{" "}
+            <span className="block-hint__comment">{i("hint")}</span>
           </div>
         </div>
 

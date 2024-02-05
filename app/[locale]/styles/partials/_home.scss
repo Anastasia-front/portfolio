@@ -210,9 +210,12 @@
 
   &-buttons {
     @include flex(column, center, center);
+    align-self: center;
     gap: 1rem;
+
     @include useScreen("mobile-xl") {
-      @include flex(row, center, center);
+      flex-direction: row;
+      align-self: start;
       gap: 2rem;
     }
   }

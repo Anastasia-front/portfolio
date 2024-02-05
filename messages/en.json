@@ -120,11 +120,11 @@
   "home": {
     "title": "Greetings!",
     "description": "Welcome to my portfolio site",
-    "ogImage":"/images/opengraph/en/home.webp",
+    "ogImage": "/images/opengraph/en/home.webp",
     "hero": {
       "title": {
         "name": "Hi, I'm Anastasiia Prysiazhna",
-        "position": "fullstack developer"
+        "position": "junior fullstack developer"
       },
       "subtitle": "general information",
       "description": "If you are looking for a hard-working, conscientious and ready for new challenges employee - then I am the person you need. I advanced twice in the courses, because I devoted all my time to studying - I was a Scrum Master and a Team Leader on team projects. Even before the completion of the courses, I already participated in commercial projects ( one of them social, the other - a start-up ), after completion - in another commercial one from the company ( you can see all the works on the projects page )"
@@ -160,6 +160,7 @@
       "commentToSubtitle": "when mouse hovering over this text block, other hints will appear ( on a device without a mouse, you need to click on this text )",
       "prompt": "* in the block where the 3D objects are presented, in order to scroll the page, use the scrollbar on the right edge ( zoom actions will bring objects closer or further away )",
       "comment": "** below are 3D objects, which are interactive - you can rotate them, enlarge, reduce, view them from all sides and do whatever you want ;)",
+      "hint": "*** if you are using mobile, click outside to close this text block",
       "now": "1. first device I'm using now",
       "inFuture": "2. second - I want to use it in the future",
       "macBook": "( MacBook Air 13″ М1, 2020 )",
@@ -175,7 +176,7 @@
   "about": {
     "title": "Prysiazhna Anastasiia",
     "description": "I am a full-stack web developer with a passion for building beautiful and functional websites",
-    "ogImage":"/images/opengraph/en/about.webp",
+    "ogImage": "/images/opengraph/en/about.webp",
     "features": {
       "title": "My qualities",
       "items": {
@@ -246,12 +247,12 @@
     "title": "My skills",
     "description": "Below are the various technologies, frameworks and libraries I know and can apply. For convenience, they are grouped and implemented using the Accordion component. Each card inside is interactive - interesting interaction )",
     "slider": "This is how I work and as the workflow looks like from the outside - at least I want it to be like that ;)",
-    "ogImage":"/images/opengraph/en/skills.webp"
+    "ogImage": "/images/opengraph/en/skills.webp"
   },
   "projects": {
     "title": "Projects",
-    "description": "All my projects are collected here. They can be sorted by type or category for convenience",
-    "ogImage":"/images/opengraph/en/projects.webp",
+    "description": "All my projects are collected here. They can be sorted by type or programming language for convenience",
+    "ogImage": "/images/opengraph/en/projects.webp",
     "emptyList": "Sorry, but there is no project for the selected filter",
     "headers": {
       "features": "Features",
@@ -267,7 +268,7 @@
   "contacts": {
     "title": "Write to me",
     "description": "Below is the form for sending me an email and below it you will find all available ways to contact me ( they are also duplicated in the footer)",
-    "ogImage":"/images/opengraph/en/contacts.webp",
+    "ogImage": "/images/opengraph/en/contacts.webp",
     "form": {
       "title": "Write me a letter",
       "subject": "Subject",

@@ -89,16 +89,15 @@ export function AnimatedTextWord({
         {textArray.map((line, lineIndex) => (
           <span className="block" key={`${line}-${lineIndex}`}>
             {line.split(" ").map((word, wordIndex) => (
-              <>
+              <span key={`${word}-${wordIndex}`}>
                 <motion.span
-                  key={`${word}-${wordIndex}`}
                   className="inline-block"
                   variants={createAnimation()}
                 >
                   {word}
                 </motion.span>
                 <span className="inline-block">&nbsp;</span>
-              </>
+              </span>
             ))}
           </span>
         ))}
