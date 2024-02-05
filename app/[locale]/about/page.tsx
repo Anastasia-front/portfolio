@@ -4,7 +4,6 @@ import React from "react";
 
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-import { Libre_Franklin } from "next/font/google";
 import Head from "next/head";
 import { usePathname } from "next/navigation";
 
@@ -14,11 +13,6 @@ import { bannerVariants, titleVariants } from "@/utils";
 
 import { AboutItem, AchievementBlock, Banner } from "@/components";
 import { useScreenQuery } from "@/hooks";
-
-const franklin = Libre_Franklin({
-  subsets: ["latin"],
-  weight: ["400"],
-});
 
 export default function AboutPage() {
   const t = useTranslations("about");
@@ -120,7 +114,7 @@ export default function AboutPage() {
             <AchievementBlock />
           </section>
         </div>
-      </main>{" "}
+      </main>
     </>
   );
 }
