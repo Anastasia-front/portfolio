@@ -1,9 +1,14 @@
 "use client";
 
+import { useState } from "react";
+
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { usePathname } from "next/navigation";
+
+import { PortalModal } from "@/components";
+import { useGlobalContext } from "@/context";
 
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -30,6 +35,19 @@ import ukLightA3 from "@/assets/images/achievements/uk-light-a3.webp";
 
 export function Progress() {
   const a = useTranslations("about.achievements");
+
+  const { isImgOpen, handleImgOpen, handleImgClose } = useGlobalContext();
+
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | string>(
+    ""
+  );
+  const [selectedTitle, setSelectedTitle] = useState<string>("");
+
+  const openModal = (imageSrc: StaticImageData, alt: string) => {
+    setSelectedImage(imageSrc);
+    setSelectedTitle(alt);
+    handleImgOpen();
+  };
 
   const { theme } = useTheme();
   const pathname = usePathname();
@@ -84,34 +102,52 @@ export function Progress() {
   })();
 
   return (
-    <Swiper
-      scrollbar={{
-        hide: false,
-      }}
-      grabCursor={true}
-      modules={[Scrollbar]}
-    >
-      <SwiperSlide>
-        <Image
-          src={achievement1}
-          alt={a("alt.cabinet.first")}
-          className="about-achievements__image"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src={achievement2}
-          alt={a("alt.cabinet.second")}
-          className="about-achievements__image"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src={achievement3}
-          alt={a("alt.cabinet.third")}
-          className="about-achievements__image"
-        />
-      </SwiperSlide>
-    </Swiper>
+    <>
+      <Swiper
+        scrollbar={{
+          hide: false,
+        }}
+        grabCursor={true}
+        modules={[Scrollbar]}
+      >
+        <SwiperSlide
+          onClick={() => openModal(achievement1, "alt.cabinet.first")}
+        >
+          <Image
+            src={achievement1}
+            alt={a("alt.cabinet.first")}
+            className="about-achievements__image"
+          />
+        </SwiperSlide>
+        <SwiperSlide
+          onClick={() => openModal(achievement2, "alt.cabinet.second")}
+        >
+          <Image
+            src={achievement2}
+            alt={a("alt.cabinet.second")}
+            className="about-achievements__image"
+          />
+        </SwiperSlide>
+        <SwiperSlide
+          onClick={() => openModal(achievement3, "alt.cabinet.third")}
+        >
+          <Image
+            src={achievement3}
+            alt={a("alt.cabinet.third")}
+            className="about-achievements__image"
+          />
+        </SwiperSlide>
+      </Swiper>
+      {isImgOpen && (
+        <PortalModal
+          nameId="img-portal"
+          isOpen={isImgOpen}
+          handleClose={handleImgClose}
+          noDivContent
+        >
+          <Image src={selectedImage} alt={a(selectedTitle)} />
+        </PortalModal>
+      )}
+    </>
   );
 }

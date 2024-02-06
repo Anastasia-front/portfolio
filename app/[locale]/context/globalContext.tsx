@@ -9,6 +9,9 @@ const GlobalContext = React.createContext({
   isFormOpen: false,
   handleFormOpen: () => {},
   handleFormClose: () => {},
+  isImgOpen: false,
+  handleImgOpen: () => {},
+  handleImgClose: () => {},
   isSettingsOpen: false,
   handleSettingsClose: () => {},
   handleSettingsToggle: () => {},
@@ -17,6 +20,7 @@ const GlobalContext = React.createContext({
 export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isImgOpen, setIsImgOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const handleMenuOpen = () => {
@@ -35,6 +39,14 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
     setIsFormOpen(false);
   };
 
+  const handleImgOpen = () => {
+    setIsImgOpen(true);
+  };
+
+  const handleImgClose = () => {
+    setIsImgOpen(false);
+  };
+
   const handleSettingsClose = () => {
     setIsSettingsOpen(false);
   };
@@ -51,6 +63,9 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
         isFormOpen,
         handleFormOpen,
         handleFormClose,
+        isImgOpen,
+        handleImgOpen,
+        handleImgClose,
         isSettingsOpen,
         handleSettingsClose,
         handleSettingsToggle,

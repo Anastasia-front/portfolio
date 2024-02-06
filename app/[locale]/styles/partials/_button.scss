@@ -106,12 +106,21 @@
     &__close {
       z-index: 110;
       position: absolute;
-      top: 20px;
-      right: 20px;
+
       svg,
       path {
         width: 20px;
         height: 20px;
+      }
+
+      &-right {
+        top: 20px;
+        right: 20px;
+      }
+
+      &-left {
+        left: 20px;
+        top: 10px;
       }
     }
   }

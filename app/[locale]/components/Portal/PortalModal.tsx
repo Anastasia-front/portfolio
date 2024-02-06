@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoClose } from "react-icons/io5";
 
 import { motion } from "framer-motion";
@@ -14,6 +14,7 @@ interface Props {
   isOpen?: boolean;
   nameId?: string;
   title?: string;
+  noDivContent?: boolean;
   handleClose: () => void;
 }
 
@@ -23,27 +24,26 @@ export function PortalModal({
   nameId = "modal",
   children,
   title = "",
+  noDivContent = false,
 }: Props) {
+  const contentContainerRef = useRef<HTMLDivElement | null>(null);
   const [hasScrollbar, setHasScrollbar] = useState(false);
 
   useEffect(() => {
     const updateScrollbarStatus = () => {
-      const contentContainer = document.querySelector(".modal-background");
-      if (contentContainer) {
-        setHasScrollbar(
-          contentContainer.scrollHeight > contentContainer.clientHeight
-        );
+      if (contentContainerRef.current) {
+        const hasScrollbar =
+          contentContainerRef.current.scrollHeight >
+          contentContainerRef.current.clientHeight;
+
+        setHasScrollbar(hasScrollbar);
       }
     };
 
-    updateScrollbarStatus();
+    const timeoutId = setTimeout(updateScrollbarStatus, 100);
 
-    window.addEventListener("resize", updateScrollbarStatus);
-
-    return () => {
-      window.removeEventListener("resize", updateScrollbarStatus);
-    };
-  }, []);
+    return () => clearTimeout(timeoutId);
+  }, [isOpen]);
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
@@ -77,21 +77,30 @@ export function PortalModal({
           viewport={{ once: true, amount: 0 }}
         >
           <div
+            ref={contentContainerRef}
             className={`modal-background ${
               hasScrollbar ? "modal-background__with-scrollbar" : ""
             }`}
           >
             <button
               type="button"
-              className="button-icon button-icon__close"
+              className={`button-icon button-icon__close ${
+                noDivContent
+                  ? "button-icon__close-left"
+                  : "button-icon__close-right"
+              }`}
               onClick={handleClose}
             >
               <IoClose />
             </button>
-            <div className="modal-content">
-              <h3 className="modal-title">{title}</h3>
-              {children}
-            </div>
+            {noDivContent ? (
+              children
+            ) : (
+              <div className="modal-content">
+                <h3 className="modal-title">{title}</h3>
+                {children}
+              </div>
+            )}
           </div>
         </motion.div>
       </Portal>
