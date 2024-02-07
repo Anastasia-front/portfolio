@@ -17,7 +17,7 @@ export default function ContactsPage() {
   const t = useTranslations("contacts");
   const a = useTranslations("alt.decoration");
 
-  const { isSettingsOpen } = useGlobalContext();
+  const { settingsModal } = useGlobalContext();
 
   return (
     <>
@@ -58,14 +58,14 @@ export default function ContactsPage() {
 
           <Image
             className={`contact__decoration ${
-              isSettingsOpen ? "contact__decoration-right" : ""
+              settingsModal.isOpen ? "contact__decoration-right" : ""
             } contact__decoration-second`}
             alt={a("contacts")}
             src={decor2}
           />
           <Image
             className={`contact__decoration ${
-              isSettingsOpen ? "contact__decoration-right" : ""
+              settingsModal.isOpen ? "contact__decoration-right" : ""
             } contact__decoration-third`}
             alt={a("contacts")}
             src={decor2}
