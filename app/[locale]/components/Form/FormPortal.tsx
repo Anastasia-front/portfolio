@@ -8,17 +8,17 @@ import { useGlobalContext } from "@/context";
 export function FormPortal() {
   const t = useTranslations("contacts.form");
 
-  const { isFormOpen, handleFormClose } = useGlobalContext();
+  const { formModal } = useGlobalContext();
 
   return (
-    isFormOpen && (
+    formModal.isOpen && (
       <PortalModal
         nameId="form-portal"
-        isOpen={isFormOpen}
-        handleClose={handleFormClose}
+        isOpen={formModal.isOpen}
+        handleClose={formModal.close}
         title={t("title")}
       >
-        <Form onClick={handleFormClose} />
+        <Form onClick={formModal.close} />
       </PortalModal>
     )
   );

@@ -36,7 +36,7 @@ import ukLightA3 from "@/assets/images/achievements/uk-light-a3.webp";
 export function Progress() {
   const a = useTranslations("about.achievements");
 
-  const { isImgOpen, handleImgOpen, handleImgClose } = useGlobalContext();
+  const { progressModal } = useGlobalContext();
 
   const [selectedImage, setSelectedImage] = useState<StaticImageData | string>(
     ""
@@ -46,7 +46,7 @@ export function Progress() {
   const openModal = (imageSrc: StaticImageData, alt: string) => {
     setSelectedImage(imageSrc);
     setSelectedTitle(alt);
-    handleImgOpen();
+    progressModal.open();
   };
 
   const { theme } = useTheme();
@@ -138,14 +138,14 @@ export function Progress() {
           />
         </SwiperSlide>
       </Swiper>
-      {isImgOpen && (
+      {progressModal.isOpen && (
         <PortalModal
-          nameId="img-portal"
-          isOpen={isImgOpen}
-          handleClose={handleImgClose}
+          nameId="progress-portal"
+          isOpen={progressModal.isOpen}
+          handleClose={progressModal.close}
           noDivContent
         >
-          <Image src={selectedImage} alt={a(selectedTitle)} />
+          <Image src={selectedImage} alt={selectedTitle} />
         </PortalModal>
       )}
     </>

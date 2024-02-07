@@ -239,7 +239,13 @@
           "first": "Fixed achievements",
           "second": "General indicators of study time",
           "third": "Growing achievements"
-        }
+        },
+        "github": "Github unwrapped, results of 2023 year"
+      },
+      "hint": {
+        "img": "to take a closer look at the picture, click on it - a modal window with a zoomed-in image will open",
+        "visible": "when you hover or click on this item, you will find a tooltip",
+        "hidden": "* to take a closer look at the pictures in the sliders, click on them - a modal window with a zoomed-in image will open"
       }
     }
   },

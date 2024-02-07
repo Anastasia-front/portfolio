@@ -17,7 +17,7 @@ interface Props {
 export function Banner({ text, button, className = "" }: Props) {
   const t = useTranslations("btn");
 
-  const { handleFormOpen } = useGlobalContext();
+  const { formModal } = useGlobalContext();
 
   return (
     <motion.div
@@ -28,7 +28,7 @@ export function Banner({ text, button, className = "" }: Props) {
       viewport={{ once: true, amount: 1 }}
     >
       <h4 className="banner__text">{text}</h4>
-      {button && <ButtonText text={t("contacts")} onClick={handleFormOpen} />}
+      {button && <ButtonText text={t("contacts")} onClick={formModal.open} />}
     </motion.div>
   );
 }

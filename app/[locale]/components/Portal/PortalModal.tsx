@@ -94,7 +94,7 @@ export function PortalModal({
               <IoClose />
             </button>
             {noDivContent ? (
-              children
+              <div className="cursor-move"> {children}</div>
             ) : (
               <div className="modal-content">
                 <h3 className="modal-title">{title}</h3>

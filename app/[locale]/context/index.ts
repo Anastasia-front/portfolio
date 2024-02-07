@@ -1,1 +1,1 @@
-export * from "./globalContext";
+export * from "./ModalContext";

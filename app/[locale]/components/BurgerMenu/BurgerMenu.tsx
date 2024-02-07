@@ -8,59 +8,56 @@ import { useKeyPress, useScreenQuery } from "@/hooks";
 
 import { Navigation } from "../Navigation";
 import { Switchers } from "../Switchers";
+import { m } from "framer-motion";
 
 export function BurgerMenu() {
   const t = useTranslations("alt");
 
-  const { isMenuOpen, handleMenuOpen, handleMenuClose } = useGlobalContext();
+  const { menuModal } = useGlobalContext();
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      handleMenuClose();
+      menuModal.close();
     }
   };
 
-  const hideBurger = () => {
-    handleMenuClose();
-  };
-
-  useKeyPress("Escape", hideBurger);
+  useKeyPress("Escape", menuModal.close);
 
   const { isScreenTabletSm } = useScreenQuery();
 
-  const classNameActive = isMenuOpen ? "active" : "";
+  const classNameActive = menuModal.isOpen ? "active" : "";
 
   return (
     <>
       <button
         type="button"
         className={`button-icon animated-icon ${classNameActive}`}
-        onClick={() => handleMenuOpen()}
+        onClick={menuModal.open}
       >
         <span className="icon"></span>
       </button>
       <Portal wrapperId="portal">
         <div
           className={`burger-backdrop ${
-            isMenuOpen ? "burger-backdrop__active" : ""
+            menuModal.isOpen ? "burger-backdrop__active" : ""
           } `}
           onClick={handleBackdropClick}
         >
           <div
             className={`burger-background ${
-              isMenuOpen && "burger-background__active"
+              menuModal.isOpen && "burger-background__active"
             } `}
           >
             <button
               type="button"
-              className={`button-icon button-icon__close animated-icon ${classNameActive}`}
-              onClick={hideBurger}
+              className={`button-icon button-icon__close button-icon__close-right animated-icon ${classNameActive}`}
+              onClick={menuModal.close}
             >
               <span className="icon"></span>
             </button>
 
             <div className="burger-column">
-              <Navigation onClick={hideBurger} />
+              <Navigation onClick={menuModal.close} />
               <Switchers className="burger-switchers" />
               <Logo size={isScreenTabletSm ? 30 : 50} />
             </div>

@@ -1,14 +1,23 @@
 "use client";
 
 import { useRef, useState } from "react";
+import {
+  BsFillInfoCircleFill,
+  BsFillInfoSquareFill,
+  BsInfoSquare,
+} from "react-icons/bs";
 
 import { useTranslations } from "next-intl";
 import { Libre_Franklin, Source_Code_Pro } from "next/font/google";
+import Image, { StaticImageData } from "next/image";
 
 import { motion } from "framer-motion";
 
-import { Certificate, Progress } from "@/components";
+import { Certificate, PortalModal, Progress } from "@/components";
+import { useGlobalContext } from "@/context";
 import { titleVariants } from "@/utils";
+
+import github from "@/assets/images/achievements/github-wrapped.webp";
 
 const franklin = Libre_Franklin({
   subsets: ["latin"],
@@ -23,8 +32,15 @@ const source = Source_Code_Pro({
 export function AchievementBlock() {
   const a = useTranslations("about.achievements");
   const t = useTranslations("about");
+  const h = useTranslations("home.3d");
+
+  const { githubModal } = useGlobalContext();
 
   const [isClicked, setIsClicked] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | string>(
+    ""
+  );
+  const [selectedAlt, setSelectedAlt] = useState<string>("");
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -35,6 +51,11 @@ export function AchievementBlock() {
         setIsClicked(true);
       }
     }
+  };
+  const openModal = (imageSrc: StaticImageData | string, alt: string) => {
+    setSelectedImage(imageSrc);
+    setSelectedAlt(alt);
+    githubModal.open();
   };
 
   return (
@@ -75,6 +96,15 @@ export function AchievementBlock() {
       >
         <Certificate />
       </motion.div>
+      <motion.div className="block-hint block-hint__onHover">
+        <p className="block-hint__comment">
+          <BsInfoSquare /> {a("hint.visible")}
+        </p>
+        <div className="block-hint__onHoverVisible slider">
+          <span className="block-hint__prompt"> {a("hint.hidden")}</span>{" "}
+          <span className="block-hint__prompt"> {h("hint")}</span>
+        </div>
+      </motion.div>
       <motion.h4
         className={`about-achievements__subtitle ${source.className}`}
         variants={titleVariants("second")}
@@ -92,6 +122,15 @@ export function AchievementBlock() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <Progress />
+      </motion.div>
+      <motion.div className="block-hint block-hint__onHover">
+        <p className="block-hint__prompt">
+          <BsFillInfoSquareFill /> {a("hint.visible")}
+        </p>
+        <div className="block-hint__onHoverVisible slider">
+          <span className="block-hint__prompt"> {a("hint.hidden")}</span>{" "}
+          <span className="block-hint__prompt"> {h("hint")}</span>
+        </div>
       </motion.div>
       <motion.h5
         className={`about-achievements__title ${franklin.className}`}
@@ -121,7 +160,7 @@ export function AchievementBlock() {
         ({a("title.video")})
       </motion.h6>
       <motion.video
-        className="video-github"
+        className="github-video"
         src="/video/achievements/github2023.mp4"
         ref={videoRef}
         onClick={handleClick}
@@ -141,14 +180,31 @@ export function AchievementBlock() {
         ({a("title.image")})
       </motion.h6>
       <motion.img
-        className="video-github"
+        className="github-img"
         src="/images/about/github-wrapped.webp"
-        onClick={handleClick}
+        alt={a("alt.github")}
+        onClick={() =>
+          openModal("/images/about/github-wrapped.webp", a("alt.github"))
+        }
         variants={titleVariants("first")}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.2 }}
       />
+      <motion.p className="block-hint__prompt">
+        <BsFillInfoCircleFill /> {a("hint.img")}
+      </motion.p>
+
+      {githubModal.isOpen && (
+        <PortalModal
+          nameId="github-portal"
+          isOpen={githubModal.isOpen}
+          handleClose={githubModal.close}
+          noDivContent
+        >
+          <Image src={github} alt={selectedAlt} />
+        </PortalModal>
+      )}
     </motion.div>
   );
 }

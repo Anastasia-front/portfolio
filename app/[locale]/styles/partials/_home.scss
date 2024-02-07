@@ -713,25 +713,6 @@
       }
     }
   }
-
-  &-github {
-    width: 90%;
-    height: auto;
-    border-radius: 1rem;
-
-    @include useScreen("mobile-lg") {
-      width: 80%;
-    }
-    @include useScreen("mobile-xl") {
-      width: 70%;
-    }
-    @include useScreen("tablet-sm") {
-      width: 60%;
-    }
-    @include useScreen("desktop-sm") {
-      width: 50%;
-    }
-  }
 }
 [data-theme="dark"] .video {
   background: var(--color--blue-dark);

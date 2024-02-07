@@ -253,3 +253,38 @@
     }
   }
 }
+
+.github {
+  &-video {
+    width: 90%;
+    height: auto;
+    border-radius: var(--border-radius--md);
+    cursor: pointer;
+
+    @include useScreen("mobile-lg") {
+      width: 80%;
+    }
+    @include useScreen("mobile-xl") {
+      width: 70%;
+    }
+    @include useScreen("tablet-sm") {
+      width: 60%;
+    }
+    @include useScreen("desktop-sm") {
+      width: 50%;
+    }
+  }
+
+  &-img {
+    max-width: 80vw;
+    height: auto;
+    border-radius: var(--border-radius--lg);
+
+    @include useOnHover{
+      cursor: zoom-in;
+    }
+    @include useOnClick{
+      cursor: move;
+    }
+  }
+}

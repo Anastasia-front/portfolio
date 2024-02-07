@@ -7,15 +7,13 @@ import { useGlobalContext } from "@/context";
 import { useScreenQuery } from "@/hooks";
 
 export function NavigationAndLogo() {
-  const logo = useTranslations("alt");
-
-  const { handleMenuClose } = useGlobalContext();
+  const { menuModal } = useGlobalContext();
 
   const { isScreenTabletSm } = useScreenQuery();
 
   return (
     <nav className="container-items container-items__frame">
-      <Logo onClick={() => handleMenuClose()} />
+      <Logo onClick={menuModal.close} />
       {isScreenTabletSm ? <Navigation /> : <BurgerMenu />}
     </nav>
   );

@@ -16,45 +16,42 @@ export function Settings() {
   const [showButton, setShowButton] = useState(false);
   const [animationClass, setAnimationClass] = useState("");
 
-  const { isSettingsOpen, handleSettingsClose, handleSettingsToggle } =
-    useGlobalContext();
+  const { settingsModal } = useGlobalContext();
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      handleSettingsClose();
+      settingsModal.close();
     }
   };
 
-  useKeyPress("Escape", () => {
-    handleSettingsClose();
-  });
+  useKeyPress("Escape", settingsModal.close);
 
   const { lockScroll, unlockScroll } = useScrollLock();
 
   useEffect(() => {
-    if (isSettingsOpen) {
+    if (settingsModal.isOpen) {
       lockScroll();
     } else {
       unlockScroll();
     }
-  }, [isSettingsOpen, lockScroll, unlockScroll]);
+  }, [settingsModal.isOpen, lockScroll, unlockScroll]);
 
   useEffect(() => {
-    if (isSettingsOpen) {
+    if (settingsModal.isOpen) {
       setAnimationClass("loader");
       const timer = setTimeout(() => {
         setAnimationClass("");
       }, 800);
       return () => clearTimeout(timer);
     }
-    if (!isSettingsOpen) {
+    if (!settingsModal.isOpen) {
       setAnimationClass("loader");
       const timer = setTimeout(() => {
         setAnimationClass("");
       }, 800);
       return () => clearTimeout(timer);
     }
-  }, [isSettingsOpen]);
+  }, [settingsModal.isOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,21 +76,21 @@ export function Settings() {
     <div
       className={`button-settings ${animationClass} ${
         !showButton ? "hidden" : ""
-      } ${isSettingsOpen ? "button-settings__right" : ""}`}
+      } ${settingsModal.isOpen ? "button-settings__right" : ""}`}
     >
       <button
         type="button"
         className="button-icon"
-        onClick={handleSettingsToggle}
+        onClick={settingsModal.toggle}
       >
         <Gear />
       </button>
-      {isSettingsOpen && (
+      {settingsModal.isOpen && (
         <Portal wrapperId="settings-portal">
           <div className="settings-backdrop" onClick={handleBackdropClick}>
             <div className="settings-background">
               <h3 className="settings-title">{t("settings")}</h3>
-              <Navigation onClick={() => handleSettingsClose()} />
+              <Navigation onClick={settingsModal.close} />
               <Switchers className="settings-switchers" />
             </div>
           </div>

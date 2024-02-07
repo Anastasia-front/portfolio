@@ -1,1 +1,2 @@
-export * from "./themeProvider";
+export * from "./GlobalProviders";
+export * from './ModalProvider'

@@ -705,12 +705,16 @@ main {
   height: 12px;
 }
 
-.cursor-not-allowed {
-  cursor: not-allowed;
-}
-
-.cursor-pointer {
-  cursor: pointer;
+.cursor {
+  &-move {
+    cursor: move;
+  }
+  &-pointer {
+    cursor: pointer;
+  }
+  &-not-allowed {
+    cursor: not-allowed;
+  }
 }
 
 .bg-green {
@@ -761,7 +765,6 @@ main {
 .block-hint {
   @include flex(column, center, center);
   gap: 1.5rem;
-  position: relative;
   align-self: end;
   width: 60%;
 
@@ -804,11 +807,17 @@ main {
   &__onHoverVisible {
     display: none;
     position: absolute;
+    border-radius: var(--border-radius--sm);
+    z-index: 10;
     top: 7rem;
     left: -0.1rem;
     padding: 1rem;
     background: var(--color--light-blue-1);
     @include box-shadow-2(var(--color--grey-opacity));
+
+    &.slider {
+      top: 4rem;
+    }
   }
 
   &__for-one {

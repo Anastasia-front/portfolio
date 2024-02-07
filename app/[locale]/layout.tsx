@@ -13,8 +13,7 @@ import {
   Header,
   Settings,
 } from "@/components";
-import { GlobalProvider } from "@/context";
-import { Providers } from "@/providers";
+import { GlobalProviders } from "@/providers";
 
 import "./styles/main.scss";
 
@@ -73,20 +72,18 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={oxygen.className}>
-        <GlobalProvider>
+        <GlobalProviders>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <ErrorBoundary>
-              <Providers>
-                <Header />
-                <FormPortal />
-                {children}
-                <Footer />
-                <Settings />
-                <ContentIndicator />
-              </Providers>
+              <Header />
+              <FormPortal />
+              {children}
+              <Footer />
+              <Settings />
+              <ContentIndicator />
             </ErrorBoundary>
           </NextIntlClientProvider>
-        </GlobalProvider>
+        </GlobalProviders>
       </body>
     </html>
   );
