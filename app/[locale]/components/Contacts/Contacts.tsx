@@ -97,6 +97,9 @@ export function Contacts({ location }: Props) {
                           href={ic(`${firstBlock}.links.${secondBlock}.href`)}
                         >
                           <h6>
+                            {ic(`${firstBlock}.links.${secondBlock}.title`)}
+                            {" :"}
+                            <br />
                             {ic(`${firstBlock}.links.${secondBlock}.info`)}
                           </h6>
                           {IconComponent}

@@ -336,6 +336,7 @@
           @include flex(row, space-between, center);
           padding-bottom: 0.5rem;
           border-bottom: 1px dotted var(--color--light-blue-2);
+          gap: 1rem;
 
           @include useOnHover {
             h6 {

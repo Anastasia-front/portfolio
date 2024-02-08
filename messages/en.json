@@ -299,21 +299,21 @@
             "first": {
               "title": "Phone",
               "href": "tel:+380666080702",
-              "info": "Phone number : +38 (066)-608-07-02",
+              "info": "+38 (066)-608-07-02",
               "dataText": "Call me",
               "icon": "BsFillTelephoneInboundFill"
             },
             "second": {
-              "title": "Email",
+              "title": "E-mail",
               "href": "mailto:palitsanastasia3.ap@gmail.com",
-              "info": "E-mail : palitsanastasia3.ap@gmail.com",
+              "info": "palitsanastasia3.ap@gmail.com",
               "dataText": "Send letter",
               "icon": "BsFillEnvelopeAtFill"
             },
             "third": {
               "title": "Discord",
               "href": "https://discordapp.com/users/871679474188574730/",
-              "info": "Discord username : nastia0708",
+              "info": "nastia0708",
               "dataText": "Go to Discord",
               "icon": "BsDiscord"
             }
@@ -325,21 +325,21 @@
             "first": {
               "title": "GitHub",
               "href": "https://github.com/Anastasia-front",
-              "info": "GitHub account - Anastasia-front",
+              "info": "Anastasia-front",
               "dataText": "Follow in GitHub",
               "icon": "BsGithub"
             },
             "second": {
               "title": "LinkedIn",
               "href": "https://www.linkedin.com/in/anastasiia-prysiazhna/",
-              "info": "LinkedIn account - Anastasiia Prysiazhna ( @anastasiia-prysiazhna )",
+              "info": "Anastasiia Prysiazhna ( @anastasiia-prysiazhna )",
               "dataText": "Follow in LinkedIn",
               "icon": "BsLinkedin"
             },
             "third": {
               "title": "Instagram",
               "href": "https://www.instagram.com/anastasiia_prysiazhna/",
-              "info": "Instagram account - @anastasiia_prysiazhna",
+              "info": "@anastasiia_prysiazhna",
               "dataText": "Follow in Instagram",
               "icon": "BsInstagram"
             }
@@ -351,21 +351,21 @@
             "first": {
               "title": "Telegram",
               "href": "https://t.me/anastasiia_prysiazhna",
-              "info": "Telegram by number +380666080702 or by username @anastasiia_prysiazhna",
+              "info": "by number +380666080702 or by username @anastasiia_prysiazhna",
               "dataText": "Chat in Telegram",
               "icon": "BsTelegram"
             },
             "second": {
               "title": "WhatsApp",
               "href": "https://wa.me/380666080702",
-              "info": "WhatsApp by phone number +380666080702",
+              "info": "by phone number +380666080702",
               "dataText": "Chat in WhatsApp",
               "icon": "BsWhatsapp"
             },
             "third": {
               "title": "Viber",
               "href": "viber://chat?number=380666080702",
-              "info": "Viber by phone number +380666080702",
+              "info": "by phone number +380666080702",
               "dataText": "Chat in Viber",
               "icon": "BsChatDotsFill"
             }

@@ -299,21 +299,21 @@
             "first": {
               "title": "Номер телефону",
               "href": "tel:+380666080702",
-              "info": "Номер телефону : +38 (066)-608-07-02",
+              "info": "+38 (066)-608-07-02",
               "dataText": "Зателефонувати",
               "icon": "BsFillTelephoneInboundFill"
             },
             "second": {
               "title": "Електронна пошта",
               "href": "mailto:palitsanastasia3.ap@gmail.com",
-              "info": "Електронна адреса : palitsanastasia3.ap@gmail.com",
+              "info": "palitsanastasia3.ap@gmail.com",
               "dataText": "Надіслати лист",
               "icon": "BsFillEnvelopeAtFill"
             },
             "third": {
               "title": "Діскорд",
               "href": "https://discordapp.com/users/871679474188574730/",
-              "info": "Діскорд нікнейм : nastia0708",
+              "info": "nastia0708",
               "dataText": "Перейти у Діскорд",
               "icon": "BsDiscord"
             }
@@ -324,23 +324,22 @@
           "links": {
             "first": {
               "title": "ГітХаб",
-
               "href": "https://github.com/Anastasia-front",
-              "info": "ГітХаб аккаунт - Anastasia-front",
+              "info": "Anastasia-front",
               "dataText": "Відстежувати у ГітХаб",
               "icon": "BsGithub"
             },
             "second": {
               "title": "ЛінкедІн",
               "href": "https://www.linkedin.com/in/anastasiia-prysiazhna/",
-              "info": "ЛінкедІн аккаунт - Anastasiia Prysiazhna ( @anastasiia-prysiazhna )",
+              "info": "Anastasiia Prysiazhna ( @anastasiia-prysiazhna )",
               "dataText": "Відстежувати у ЛінкедІн",
               "icon": "BsLinkedin"
             },
             "third": {
               "title": "Інстаграм",
               "href": "https://www.instagram.com/anastasiia_prysiazhna/",
-              "info": "Інстаграм аккаунт - @anastasiia_prysiazhna",
+              "info": "@anastasiia_prysiazhna",
               "dataText": "Відстежувати в Інстаграм",
               "icon": "BsInstagram"
             }
@@ -352,21 +351,21 @@
             "first": {
               "title": "Телеграм",
               "href": "https://t.me/anastasiia_prysiazhna",
-              "info": "Телеграм за номером телефону +380666080702 або за ніком @anastasiia_prysiazhna",
+              "info": "за номером телефону +380666080702 або за ніком @anastasiia_prysiazhna",
               "dataText": "Написати у Телеграм",
               "icon": "BsTelegram"
             },
             "second": {
               "title": "ВотсАпп",
               "href": "https://wa.me/380666080702",
-              "info": "ВотсАпп за номером телефону +380666080702",
+              "info": "за номером телефону +380666080702",
               "dataText": "Написати у ВотсАпп",
               "icon": "BsWhatsapp"
             },
             "third": {
               "title": "Вайбер",
               "href": "viber://chat?number=380666080702",
-              "info": "Вайбер за номером телефону +380666080702",
+              "info": "за номером телефону +380666080702",
               "dataText": "Написати у Вайбер",
               "icon": "BsChatDotsFill"
             }
