@@ -67,12 +67,12 @@
   },
   "video": {
     "firstTime": {
-      "primaryText": "Behind this text is a video, click here and it will play",
-      "secondaryText": "the next time when you go to the main page or switch the language/theme, the video will start and repeat once automatically, to start it again you will have to click again"
+      "primaryText": "Behind this text is a video, click here and it will play (it's with sound)",
+      "secondaryText": "the next time when you go to the main page in order to start it again you will have to click here again"
     },
     "otherTimes": {
       "primaryText": "click on this block",
-      "secondaryText": "and the video will play again"
+      "secondaryText": "and the video will play"
     }
   },
   "dropdown": {

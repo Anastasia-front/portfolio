@@ -52,7 +52,6 @@ export function Video() {
     <>
       <video
         className="video"
-        autoPlay
         ref={videoRef}
         src={video}
         onClick={handleClick}
