@@ -5,9 +5,10 @@ import { useTranslations } from "next-intl";
 import * as Yup from "yup";
 
 const form = {
-  emailInvalid: "contacts.form.emailInvalid",
-  subjectInvalid: "contacts.form.subjectInvalid",
-  messageInvalid: "contacts.form.messageInvalid",
+  required: "contacts.form.required",
+  emailFormat: "contacts.form.email.format",
+  subjectFormat: "contacts.form.subject.format",
+  messageFormat: "contacts.form.message.format",
 };
 
 export function FormSchema() {
@@ -16,22 +17,22 @@ export function FormSchema() {
   return Yup.object().shape({
     email: Yup.string()
       .trim()
-      .required(t(form.emailInvalid))
-      .min(6, t(form.emailInvalid))
-      .max(63, t(form.emailInvalid))
+      .required(t(form.required))
+      .min(6, t(form.emailFormat))
+      .max(30, t(form.emailFormat))
       .matches(
         /^[a-zA-Z0-9_][a-zA-Z0-9_.-]*@[a-zA-Z0-9.-]+[a-zA-Z0-9-]*\.[a-zA-Z]{2,4}$/,
-        t(form.emailInvalid)
+        t(form.emailFormat)
       ),
     subject: Yup.string()
       .trim()
-      .required(t(form.subjectInvalid))
-      .min(3, t(form.subjectInvalid))
-      .max(70, t(form.subjectInvalid)),
+      .required(t(form.required))
+      .min(6, t(form.subjectFormat))
+      .max(70, t(form.subjectFormat)),
     message: Yup.string()
       .trim()
-      .required(t(form.messageInvalid))
-      .min(3, t(form.messageInvalid))
-      .max(500, t(form.messageInvalid)),
+      .required(t(form.required))
+      .min(6, t(form.messageFormat))
+      .max(600, t(form.messageFormat)),
   });
 }

@@ -22,6 +22,13 @@ export function InputField({
   errors,
   placeholder,
 }: Props) {
+  const errorMessage =
+    (type === "text" && "contact__input-error contact__input-error-text") ||
+    (type === "email" && "contact__input-error contact__input-error-email") ||
+    (type === "textarea" &&
+      "contact__input-error contact__input-error-textfield") ||
+    "";
+
   return (
     <div className="contact__input-block">
       <label htmlFor={name} className="label">
@@ -57,17 +64,7 @@ export function InputField({
           inputMode="text"
         />
       )}
-      {errors[name] && (
-        <p
-          className={`${
-            type === "textarea"
-              ? "contact__input-error"
-              : "contact__input-error contact__textfield-error"
-          } `}
-        >
-          {errors[name]?.message}
-        </p>
-      )}
+      {errors[name] && <p className={errorMessage}>{errors[name]?.message}</p>}
     </div>
   );
 }

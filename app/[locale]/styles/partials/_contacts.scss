@@ -63,9 +63,70 @@
 
     &-error {
       position: absolute;
-      top: 0.2rem;
-      right: 0;
+      right: 0px;
       color: var(--color--red-light);
+
+      &-email {
+        top: -4rem;
+
+        @include useScreen("mobile-lg") {
+          top: -3rem;
+          width: 106%;
+          right: auto;
+        }
+        @include useScreen("tablet-sm") {
+          top: -2.5rem;
+          width: 220%;
+        }
+        @include useScreen("tablet-lg") {
+          width: 125%;
+        }
+
+      }
+
+      &-text {
+        top: -1rem;
+        width: 70%;
+
+        @include useScreen("mobile-md") {
+          width: auto;
+          top: -0.1rem;
+        }
+        @include useScreen("mobile-xl") {
+          top: -1.5rem;
+          width: 70%;
+        }
+        @include useScreen("tablet-sm") {
+          top: -0.1rem;
+          width: max-content;
+          right: auto;
+          left: 4rem;
+        }
+        @include useScreen("tablet-md") {
+          width: auto;
+          top: -0.1rem;
+          right: -8rem;
+        }
+      }
+
+      &-textfield {
+        top: -1rem;
+        width: 70%;
+
+        @include useScreen("mobile-lg") {
+          top: -0.1rem;
+          width: auto;
+        }
+        @include useScreen("tablet-sm") {
+          width: max-content;
+          right: auto;
+          left: 7rem;
+        }
+        @include useScreen("tablet-md") {
+          right: 0px;
+          left: auto;
+        }
+      }
     }
   }
 

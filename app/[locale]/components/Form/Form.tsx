@@ -48,12 +48,12 @@ interface Props {
 export function Form({ onClick }: Props) {
   const t = useTranslations("contacts.form");
 
-  const subject = t("subject");
-  const subjectPlaceholder = t("subjectPlaceholder");
-  const email = t("email");
-  const emailPlaceholder = t("emailPlaceholder");
-  const message = t("message");
-  const messagePlaceholder = t("messagePlaceholder");
+  const subject = t("subject.title");
+  const subjectPlaceholder = t("subject.placeholder");
+  const email = t("email.title");
+  const emailPlaceholder = t("email.placeholder");
+  const message = t("message.title");
+  const messagePlaceholder = t("message.placeholder");
   const sendBtnError = t("sendBtnError");
   const sendBtnSuccess = t("sendBtnSuccess");
   const sendBtn = t("sendBtn");

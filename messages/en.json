@@ -277,15 +277,22 @@
     "ogImage": "/images/opengraph/en/contacts.webp",
     "form": {
       "title": "Write me a letter",
-      "subject": "Subject",
-      "subjectPlaceholder": "Enter subject",
-      "subjectInvalid": "Required field",
-      "email": "E-mail",
-      "emailPlaceholder": "Enter e-mail",
-      "emailInvalid": "Invalid email",
-      "message": "Message",
-      "messagePlaceholder": "Enter message",
-      "messageInvalid": "Required field",
+      "subject": {
+        "title": "Subject",
+        "placeholder": "Enter subject",
+        "format": "Field must has min 6, max 70 symbols"
+      },
+      "email": {
+        "title": "E-mail",
+        "placeholder": "Enter e-mail",
+        "format": "Field must has min 6, max 30 symbols and match the standard format"
+      },
+      "message": {
+        "title": "Message",
+        "placeholder": "Enter message",
+        "format": "Field must has min 6, max 600 symbols"
+      },
+      "required": "Field required",
       "sendBtn": "Send",
       "sendBtnSuccess": "Sent",
       "sendBtnError": "Error"

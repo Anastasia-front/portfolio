@@ -277,17 +277,24 @@
     "ogImage": "/images/opengraph/uk/contacts.webp",
     "form": {
       "title": "Напишіть мені листа",
-      "subject": "Тема",
-      "subjectPlaceholder": "Введіть тему",
-      "subjectInvalid": "Поле не пройшло валідацію",
-      "email": "E-mail",
-      "emailPlaceholder": "Введіть е-mail",
-      "emailInvalid": "Невірний email",
-      "message": "Повідомлення",
-      "messagePlaceholder": "Введіть повідомлення",
-      "messageInvalid": "Обовʼязкове поле",
+      "subject": {
+        "title": "Тема",
+        "placeholder": "Введіть тему",
+        "format": "Поле повиннo містити від 6 до 70 символів"
+      },
+      "email": {
+        "title": "Електронна пошта",
+        "placeholder": "Введіть електронну пошту",
+        "format": "Поле повиннo містити від 6 до 30 символів та відповідати стандартному формату"
+      },
+      "message": {
+        "title": "Повідомлення",
+        "placeholder": "Введіть повідомлення",
+        "format": "Поле повинно містити від 6 до 600 символів"
+      },
+      "required": "Поле обов'язкове",
       "sendBtn": "Надіслати",
-      "sendBtnSuccess": "Надіслано",
+      "sendBtnSuccess": "Відправлено",
       "sendBtnError": "Помилка"
     },
     "footer": {

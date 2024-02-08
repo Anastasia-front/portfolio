@@ -1,8 +1,11 @@
 "use client";
 
+import { useMediaQuery } from "react-responsive";
+
 import { useTranslations } from "next-intl";
 import Head from "next/head";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
 
@@ -19,6 +22,11 @@ export default function ContactsPage() {
 
   const { settingsModal } = useGlobalContext();
 
+  const pathname = usePathname();
+  const lang = pathname.slice(0, 3);
+
+  const isContainer = useMediaQuery({ query: "(min-width: 1080px)" });
+
   return (
     <>
       <Head>
@@ -32,7 +40,11 @@ export default function ContactsPage() {
         viewport={{ once: true, amount: 0 }}
         className="contact-page container"
       >
-        <div className="page-headings">
+        <div
+          className={`page-headings ${
+            lang === "/en" && isContainer ? "m-l" : ""
+          }`}
+        >
           <motion.h1 variants={gridVariants} initial="hidden" animate="visible">
             {t("title")}
           </motion.h1>
