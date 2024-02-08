@@ -708,6 +708,11 @@ main {
 .cursor {
   &-move {
     cursor: move;
+
+    img {
+      width: 200%;
+      height: auto;
+    }
   }
   &-pointer {
     cursor: pointer;
@@ -717,14 +722,16 @@ main {
   }
 }
 
-.bg-green {
-  background: var(--color--button-green) !important;
-}
-.bg-loading {
-  background: var(--color--button-loading) !important;
-}
-.bg-red {
-  background: var(--color--button-red) !important;
+.bg {
+  &-green {
+    background: var(--color--button-green) !important;
+  }
+  &-loading {
+    background: var(--color--button-loading) !important;
+  }
+  &-red {
+    background: var(--color--button-red) !important;
+  }
 }
 
 .relative {
@@ -864,4 +871,19 @@ main {
 
 .inline-block {
   display: inline-block;
+}
+
+.zoom {
+  &-in {
+    img {
+      height: auto;
+      width: 240%;
+    }
+  }
+  &-out {
+    img {
+      height: auto;
+      width: 160%;
+    }
+  }
 }

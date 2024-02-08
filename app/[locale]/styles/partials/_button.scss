@@ -138,6 +138,41 @@
       margin-top: -0.4rem;
     }
   }
+
+  &-zoom {
+    @include flex(row, center, center);
+    position: fixed;
+    gap: 1rem;
+    bottom: 8rem;
+    right: 8rem;
+    z-index: 10;
+
+    button {
+      padding: 1rem;
+      border-radius: var(--border-radius--sm);
+      border: 1px solid var(--color--grey);
+      background: var(--color--light-opacity);
+
+      @include useOnHover {
+        background: var(--color--light-grey);
+      }
+      @include useOnClick {
+        background: var(--color--grey);
+      }
+
+      &[disabled] {
+        border: 1px solid var(--color--light-grey);
+
+        @include useOnHover {
+          cursor: not-allowed;
+          background: var(--color--light-opacity);
+        }
+        @include useOnClick {
+          background: var(--color--light-opacity);
+        }
+      }
+    }
+  }
 }
 [data-theme="dark"] .button {
   color: var(--color--blue-grey-3);
@@ -176,6 +211,33 @@
       }
       @include useOnClick {
         fill: var(--color--light-blue-2);
+      }
+    }
+  }
+
+  &-zoom {
+
+    button {
+      border: 1px solid var(--color--light-grey);
+      background: var(--color--dark-opacity);
+
+      @include useOnHover {
+        background: var(--color--grey-opacity);
+      }
+      @include useOnClick {
+        background: var(--color--black);
+      }
+
+      &[disabled] {
+        border: 1px solid var(--color--grey);
+
+        @include useOnHover {
+          cursor: not-allowed;
+          background: var(--color--dark-opacity);
+        }
+        @include useOnClick {
+          background: var(--color--dark-opacity);
+        }
       }
     }
   }

@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { IoClose } from "react-icons/io5";
+import React, { useEffect, useRef, useState } from "react";
+import { IoAdd, IoClose, IoRemove } from "react-icons/io5";
 
 import { motion } from "framer-motion";
 
@@ -28,6 +28,9 @@ export function PortalModal({
 }: Props) {
   const contentContainerRef = useRef<HTMLDivElement | null>(null);
   const [hasScrollbar, setHasScrollbar] = useState(false);
+  const [scaleFactor, setScaleFactor] = useState(1);
+  const [zoomInDisabled, setZoomInDisabled] = useState(false);
+  const [zoomOutDisabled, setZoomOutDisabled] = useState(false);
 
   useEffect(() => {
     const updateScrollbarStatus = () => {
@@ -65,6 +68,28 @@ export function PortalModal({
     };
   }, [isOpen, lockScroll, unlockScroll]);
 
+  const handleZoomIn = () => {
+    setScaleFactor((prevFactor) => prevFactor + 0.2);
+  };
+
+  const handleZoomOut = () => {
+    setScaleFactor((prevFactor) => Math.max(prevFactor - 0.2, 0.2));
+  };
+
+  useEffect(() => {
+    if (scaleFactor > 1) {
+      setZoomInDisabled(true);
+    } else if (scaleFactor < 1) {
+      setZoomOutDisabled(true);
+    } else {
+      setZoomInDisabled(false);
+      setZoomOutDisabled(false);
+    }
+  }, [scaleFactor]);
+
+  const zoomedClass =
+    scaleFactor > 1 ? "zoom-in" : scaleFactor < 1 ? "zoom-out" : "";
+
   return (
     isOpen && (
       <Portal wrapperId={nameId}>
@@ -93,8 +118,27 @@ export function PortalModal({
             >
               <IoClose />
             </button>
+
+            {noDivContent && (
+              <div className="button-zoom">
+                <button
+                  type="button"
+                  onClick={handleZoomIn}
+                  disabled={zoomInDisabled}
+                >
+                  <IoAdd />
+                </button>
+                <button
+                  type="button"
+                  onClick={handleZoomOut}
+                  disabled={zoomOutDisabled}
+                >
+                  <IoRemove />
+                </button>
+              </div>
+            )}
             {noDivContent ? (
-              <div className="cursor-move"> {children}</div>
+              <div className={`cursor-move ${zoomedClass}`}>{children}</div>
             ) : (
               <div className="modal-content">
                 <h3 className="modal-title">{title}</h3>
