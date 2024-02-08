@@ -96,7 +96,7 @@ export function AchievementBlock() {
       >
         <Certificate />
       </motion.div>
-      <motion.div className="block-hint block-hint__onHover">
+      <motion.div className="block-hint width-13 block-hint__onHover">
         <p className="block-hint__comment">
           <BsInfoSquare /> {a("hint.visible")}
         </p>
@@ -123,7 +123,7 @@ export function AchievementBlock() {
       >
         <Progress />
       </motion.div>
-      <motion.div className="block-hint block-hint__onHover">
+      <motion.div className="block-hint width-13 block-hint__onHover">
         <p className="block-hint__prompt">
           <BsFillInfoSquareFill /> {a("hint.visible")}
         </p>
@@ -160,7 +160,7 @@ export function AchievementBlock() {
         ({a("title.video")})
       </motion.h6>
       <motion.video
-        className="github-video"
+        className="github-size github-video"
         src="/video/achievements/github2023.mp4"
         ref={videoRef}
         onClick={handleClick}
@@ -180,7 +180,7 @@ export function AchievementBlock() {
         ({a("title.image")})
       </motion.h6>
       <motion.img
-        className="github-img"
+        className="github-size github-img"
         src="/images/about/github-wrapped.webp"
         alt={a("alt.github")}
         onClick={() =>
@@ -191,7 +191,7 @@ export function AchievementBlock() {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.2 }}
       />
-      <motion.p className="block-hint__prompt">
+      <motion.p className="block-hint__prompt width-22">
         <BsFillInfoCircleFill /> {a("hint.img")}
       </motion.p>
 

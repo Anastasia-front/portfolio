@@ -41,7 +41,12 @@ export const ButtonLanguage = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.localStorage.setItem("lang", "en");
+      const storedLang = window.localStorage.getItem("lang") as "en" | "uk";
+      if (storedLang) {
+        setLang(storedLang);
+      } else {
+        setLang("en");
+      }
     }
   }, []);
 

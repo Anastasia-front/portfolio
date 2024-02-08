@@ -17,7 +17,7 @@
     );
 
     @include useScreen("tablet-sm") {
-      min-height: 100vh;
+      max-height: 100vh;
     }
 
     > img {
@@ -61,7 +61,7 @@
     margin-bottom: 3rem;
 
     @include useScreen("tablet-sm") {
-      margin-top: 90vh;
+      margin-top: 66vh;
     }
 
     &__banner {
@@ -255,11 +255,9 @@
 }
 
 .github {
-  &-video {
+  &-size {
     width: 90%;
     height: auto;
-    border-radius: var(--border-radius--md);
-    cursor: pointer;
 
     @include useScreen("mobile-lg") {
       width: 80%;
@@ -275,15 +273,18 @@
     }
   }
 
+  &-video {
+    border-radius: var(--border-radius--md);
+    cursor: pointer;
+  }
+
   &-img {
-    max-width: 80vw;
-    height: auto;
     border-radius: var(--border-radius--lg);
 
-    @include useOnHover{
+    @include useOnHover {
       cursor: zoom-in;
     }
-    @include useOnClick{
+    @include useOnClick {
       cursor: move;
     }
   }

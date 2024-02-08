@@ -59,7 +59,7 @@ export default function AboutPage() {
     offset: ["start end", "end start"],
   }).scrollYProgress;
 
-  const scale = useTransform(scrollYProgress, [0, 0.7], [0.3, 1.2]);
+  const scale = useTransform(scrollYProgress, [0, 0.7], [0.7, 1.2]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.5]);
 
   return (

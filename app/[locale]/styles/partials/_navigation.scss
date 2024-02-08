@@ -182,24 +182,49 @@
 
 .active-menu {
   transform: scale(var(--scale));
+
   > a {
     color: var(--color--light-blue-3);
+    @include useOnHover {
+      color: var(--color--light-blue-3);
+    }
+    @include useOnClick {
+      color: var(--color--light-blue-3);
+    }
   }
 
   &__banner {
     > a {
       color: var(--color--light-blue-1);
+      @include useOnHover {
+        color: var(--color--light-blue-1);
+      }
+      @include useOnClick {
+        color: var(--color--light-blue-1);
+      }
     }
   }
 }
 [data-theme="dark"] .active-menu {
   > a {
     color: var(--color--orange-2);
+    @include useOnHover {
+      color: var(--color--orange-2);
+    }
+    @include useOnClick {
+      color: var(--color--orange-2);
+    }
   }
 
   &__banner {
     > a {
       color: var(--color--orange-2);
+      @include useOnHover {
+        color: var(--color--orange-2);
+      }
+      @include useOnClick {
+        color: var(--color--orange-2);
+      }
     }
   }
 }

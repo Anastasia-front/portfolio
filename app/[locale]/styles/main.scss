@@ -853,6 +853,20 @@ main {
   }
 }
 
+.width{
+&-13 {
+  @include useScreen("mobile-lg") {
+    width: 13rem;
+  }
+}
+
+&-22 {
+  @include useScreen("mobile-lg") {
+    width: 22rem;
+  }
+}
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
