@@ -3,13 +3,16 @@
 import { useState } from "react";
 
 import { useTranslations } from "next-intl";
-import Head from "next/head";
 import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
 
-import { Banner, Dropdown, LottiePlayer, Projects } from "@/components";
-import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
+import { Banner, Dropdown, LottiePlayer, Projects, Robots } from "@/components";
+import {
+  menuItems,
+  projectsEnglishLang,
+  projectsUkrainianLang,
+} from "@/constants";
 import { gridVariants } from "@/utils";
 
 export default function ProjectsPage() {
@@ -64,11 +67,11 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <Head>
-        <meta property="og:image" content={t("ogImage")} />
-        <title>{`${n("page")} ${n("projects")}`} </title>
-      </Head>
-
+      <Robots
+        page={menuItems[3].url}
+        ogImg={t("ogImage")}
+        title={`${n("page")} ${n("projects")}`}
+      />
       <main className="container">
         <div className="projects__header">
           <div className="page-headings">

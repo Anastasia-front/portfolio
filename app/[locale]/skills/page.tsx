@@ -1,11 +1,17 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Head from "next/head";
 
 import { motion } from "framer-motion";
 
-import { Accordion, Banner, LottiePlayer, SkillSlider } from "@/components";
+import {
+  Accordion,
+  Banner,
+  LottiePlayer,
+  Robots,
+  SkillSlider,
+} from "@/components";
+import { menuItems } from "@/constants";
 import { bannerVariants, gridVariants, opacityVariants } from "@/utils";
 
 export default function SkillsPage() {
@@ -15,11 +21,11 @@ export default function SkillsPage() {
 
   return (
     <>
-      <Head>
-        <meta property="og:image" content={t("ogImage")} />
-        <title>{`${n("page")} ${n("skills")}`} </title>
-      </Head>
-
+      <Robots
+        page={menuItems[2].url}
+        ogImg={t("ogImage")}
+        title={`${n("page")} ${n("skills")}`}
+      />
       <motion.main
         variants={bannerVariants}
         initial="hidden"

@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { Rubik } from "next/font/google";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -11,6 +10,7 @@ import { motion } from "framer-motion";
 
 import { headerImgVariants, overlayVariants, titleVariants } from "@/utils";
 
+import { Robots } from "@/components";
 import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
 import { useScreenQuery } from "@/hooks";
 
@@ -62,9 +62,10 @@ export default function Page({ params }: Params) {
 
   return (
     <>
-      <Head>
-        <title>{`${n("page")} ${n("project")}`} </title>
-      </Head>
+      <Robots
+        page={project?.url || ""}
+        title={`${n("page")} ${n("project")}`}
+      />
       <main className="container project project-page">
         <section className="project__header">
           <motion.img

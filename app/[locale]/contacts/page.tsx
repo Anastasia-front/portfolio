@@ -3,7 +3,6 @@
 import { useMediaQuery } from "react-responsive";
 
 import { useTranslations } from "next-intl";
-import Head from "next/head";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
@@ -12,7 +11,8 @@ import { motion } from "framer-motion";
 import decor1 from "@/assets/images/contacts/decoration/1.webp";
 import decor2 from "@/assets/images/contacts/decoration/2.webp";
 
-import { Contacts, Form, LottiePlayer } from "@/components";
+import { Contacts, Form, LottiePlayer, Robots } from "@/components";
+import { menuItems } from "@/constants";
 import { useGlobalContext } from "@/context";
 import { bannerVariants, gridVariants } from "@/utils";
 
@@ -30,11 +30,11 @@ export default function ContactsPage() {
 
   return (
     <>
-      <Head>
-        <meta property="og:image" content={t("ogImage")} />
-        <title>{`${n("page")} ${n("contacts")}`} </title>
-      </Head>
-
+      <Robots
+        title={`${n("page")} ${n("contacts")}`}
+        page={menuItems[4].url}
+        ogImg={t("ogImage")}
+      />
       <motion.main
         variants={bannerVariants}
         initial="hidden"

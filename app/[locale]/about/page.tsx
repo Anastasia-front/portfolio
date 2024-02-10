@@ -4,13 +4,12 @@ import React from "react";
 
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-import Head from "next/head";
 import { usePathname } from "next/navigation";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import { AboutItem, AchievementBlock, Banner } from "@/components";
-import { sevenKeys } from "@/constants";
+import { AboutItem, AchievementBlock, Banner, Robots } from "@/components";
+import { menuItems, sevenKeys } from "@/constants";
 import { useScreenQuery } from "@/hooks";
 import { bannerVariants, titleVariants } from "@/utils";
 
@@ -56,10 +55,11 @@ export default function AboutPage() {
 
   return (
     <>
-      <Head>
-        <meta property="og:image" content={t("ogImage")} />
-        <title>{`${n("page")} ${n("about")}`} </title>
-      </Head>
+      <Robots
+        page={menuItems[1].url}
+        ogImg={t("ogImage")}
+        title={`${n("page")} ${n("about")}`}
+      />
       <main className="container">
         <motion.div ref={header} className="about-header">
           <motion.img

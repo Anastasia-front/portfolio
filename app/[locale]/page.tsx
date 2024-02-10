@@ -1,17 +1,18 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Head from "next/head";
 
 import { motion } from "framer-motion";
 
 import { bannerVariants } from "@/utils";
+import { menuItems } from "./constants";
 
 import {
   Features,
   GallerySection,
   Hero,
   ObjectsSection,
+  Robots,
   Video,
 } from "./components";
 
@@ -21,11 +22,11 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <meta property="og:image" content={t("ogImage")} />
-        <title>{`${n("page")} ${n("home")}`} </title>
-      </Head>
-
+      <Robots
+        page={menuItems[0].url}
+        ogImg={t("ogImage")}
+        title={`${n("page")} ${n("home")}`}
+      />
       <motion.main
         variants={bannerVariants}
         initial="hidden"
