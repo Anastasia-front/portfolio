@@ -19,9 +19,7 @@ import "./styles/main.scss";
 
 const oxygen = Oxygen({ subsets: ["latin"], weight: ["400"] });
 
-export const BASE_URL =
-  process.env.NEXT_PUBLIC_BASE_URL_VERCEL ||
-  "https://portfolio-anastasia-front.vercel.app/";
+export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL_VERCEL;
 export const TITLE = process.env.NEXT_PUBLIC_TITLE;
 export const DESCRIPTION = process.env.NEXT_PUBLIC_DESCRIPTION;
 
@@ -39,8 +37,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
     languages: {
-      en: "/en",
-      uk: "/uk",
+      en: `${BASE_URL}/en`,
+      uk: `${BASE_URL}/uk`,
     },
   },
   robots: "/robots.ts",
