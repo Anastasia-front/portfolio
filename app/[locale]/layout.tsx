@@ -19,7 +19,9 @@ import "./styles/main.scss";
 
 const oxygen = Oxygen({ subsets: ["latin"], weight: ["400"] });
 
-export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL_VERCEL;
+export const BASE_URL =
+  process.env.NEXT_PUBLIC_BASE_URL_VERCEL ||
+  "https://portfolio-anastasia-front.vercel.app";
 export const TITLE = process.env.NEXT_PUBLIC_TITLE;
 export const DESCRIPTION = process.env.NEXT_PUBLIC_DESCRIPTION;
 
