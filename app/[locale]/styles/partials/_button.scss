@@ -120,8 +120,8 @@
       }
 
       &-left {
-        left: 20px;
         top: 10px;
+        left: 20px;
       }
     }
   }
@@ -141,18 +141,18 @@
 
   &-zoom {
     @include flex(row, center, center);
-    position: fixed;
     gap: 1rem;
-    bottom: 8rem;
-    right: 8rem;
     z-index: 10;
+    position: fixed;
+    right: 8rem;
+    bottom: 8rem;
 
     button {
       padding: 1rem;
-      border-radius: var(--border-radius--sm);
       border: 1px solid var(--color--grey);
+      border-radius: var(--border-radius--sm);
+      color: var(--color--black);
       background: var(--color--light-opacity);
-      color: var(--color--white);
 
       @include useOnHover {
         background: var(--color--light-grey);
@@ -163,13 +163,16 @@
 
       &[disabled] {
         border: 1px solid var(--color--light-grey);
+        color: var(--color--light-grey);
+        cursor: not-allowed;
+        background: var(--color--overlay);
 
         @include useOnHover {
           cursor: not-allowed;
-          background: var(--color--light-opacity);
+          background: var(--color--overlay);
         }
         @include useOnClick {
-          background: var(--color--light-opacity);
+          background: var(--color--overlay);
         }
       }
     }
@@ -219,6 +222,7 @@
   &-zoom {
     button {
       border: 1px solid var(--color--light-grey);
+      color: var(--color--white);
       background: var(--color--dark-opacity);
 
       @include useOnHover {
@@ -229,14 +233,16 @@
       }
 
       &[disabled] {
-        border: 1px solid var(--color--grey);
-
+        border: 1px solid var(--color--light-grey);
+        color: var(--color--light-grey);
+        background: var(--color--overlay);
+        
         @include useOnHover {
           cursor: not-allowed;
-          background: var(--color--dark-opacity);
+          background: var(--color--overlay);
         }
         @include useOnClick {
-          background: var(--color--dark-opacity);
+          background: var(--color--overlay);
         }
       }
     }
