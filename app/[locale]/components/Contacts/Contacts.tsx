@@ -18,32 +18,20 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { threeKeys } from "@/constants";
+import { getIconComponent } from "@/helpers";
 import { opacityVariants } from "@/utils";
 
-function getIconComponent(iconName: string) {
-  switch (iconName) {
-    case "BsChatDotsFill":
-      return <BsChatDotsFill />;
-    case "BsFillEnvelopeAtFill":
-      return <BsFillEnvelopeAtFill />;
-    case "BsFillTelephoneInboundFill":
-      return <BsFillTelephoneInboundFill />;
-    case "BsGithub":
-      return <BsGithub />;
-    case "BsInstagram":
-      return <BsInstagram />;
-    case "BsLinkedin":
-      return <BsLinkedin />;
-    case "BsTelegram":
-      return <BsTelegram />;
-    case "BsWhatsapp":
-      return <BsWhatsapp />;
-    case "BsDiscord":
-      return <BsDiscord />;
-    default:
-      return null;
-  }
-}
+const iconComponents = {
+  BsChatDotsFill: <BsChatDotsFill />,
+  BsFillEnvelopeAtFill: <BsFillEnvelopeAtFill />,
+  BsFillTelephoneInboundFill: <BsFillTelephoneInboundFill />,
+  BsGithub: <BsGithub />,
+  BsInstagram: <BsInstagram />,
+  BsLinkedin: <BsLinkedin />,
+  BsTelegram: <BsTelegram />,
+  BsWhatsapp: <BsWhatsapp />,
+  BsDiscord: <BsDiscord />,
+};
 
 interface Props {
   location?: "footer" | "contacts";
@@ -75,7 +63,7 @@ export function Contacts({ location }: Props) {
             <ul className={`${className}-icons__block-links`}>
               {threeKeys.map((secondBlock) => {
                 const iconKey = ic(`${firstBlock}.links.${secondBlock}.icon`);
-                const IconComponent = getIconComponent(iconKey);
+                const IconComponent = getIconComponent(iconComponents, iconKey);
 
                 return (
                   <li key={secondBlock}>

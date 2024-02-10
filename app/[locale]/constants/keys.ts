@@ -31,3 +31,10 @@ export const dropdownCategories = [
   "test",
   "team",
 ] as const;
+
+export const languages = [
+  { title: "all", icon: "FaList" },
+  { title: "js", icon: "DiJavascript" },
+  { title: "ts", icon: "BiLogoTypescript" },
+  { title: "python", icon: "FaPython" },
+];

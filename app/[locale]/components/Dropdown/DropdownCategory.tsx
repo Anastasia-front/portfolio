@@ -7,9 +7,17 @@ import { TfiLayoutListThumbAlt } from "react-icons/tfi";
 
 import { useTranslations } from "next-intl";
 
-import { dropdownAllTypes } from "@/constants";
+import { dropdownAllTypes, languages } from "@/constants";
+import { getIconComponent } from "@/helpers";
 
 import { NestedDropdown } from "./NestedDropdown";
+
+const iconComponents = {
+  FaList: <FaList />,
+  DiJavascript: <DiJavascript />,
+  BiLogoTypescript: <BiLogoTypescript />,
+  FaPython: <FaPython />,
+};
 
 interface Props {
   activeTypeFilter: string | null;
@@ -43,87 +51,56 @@ export function DropdownCategory({
           {i("back")}
         </button>
       </li>
-      {selectedCategory === c("type") ? (
-        dropdownAllTypes.map((type, index) => {
-          if (t(`${type}`) === "all" || t(`${type}`) === "всі") {
-            return (
-              <li key={index} className="dropdown-item all">
-                <button
-                  className={activeTypeFilter === type ? "active-filter" : ""}
-                  type="button"
-                  onClick={() => {
-                    handleTypeSelect(t(`${type}`));
-                  }}
-                  aria-label={t(`${type}`)}
-                >
-                  <TfiLayoutListThumbAlt />
-                  {t(`${type}`)}
-                </button>
-              </li>
-            );
-          } else {
-            return (
-              <li key={index} className="dropdown-item">
-                <NestedDropdown
-                  activeTypeFilter={activeTypeFilter}
-                  activeCategoryFilter={activeCategoryFilter}
-                  onSelectType={handleTypeSelect}
-                  onSelectCategory={handleCategorySelect}
-                  type={type}
-                />
-              </li>
-            );
-          }
-        })
-      ) : (
-        <ul className="dropdown-list align-right">
-          <li className="dropdown-item all">
-            <button
-              className={activeTypeFilter === l("all") ? "active-filter" : ""}
-              type="button"
-              aria-label={l("all")}
-              onClick={() => handleLanguageChange(l("all"))}
+      {selectedCategory === c("type")
+        ? dropdownAllTypes.map((type, index) => {
+            if (t(`${type}`) === "all" || t(`${type}`) === "всі") {
+              return (
+                <li key={index} className="dropdown-item all">
+                  <button
+                    className={activeTypeFilter === type ? "active-filter" : ""}
+                    type="button"
+                    onClick={() => handleTypeSelect(t(`${type}`))}
+                    aria-label={t(`${type}`)}
+                  >
+                    <TfiLayoutListThumbAlt />
+                    {t(`${type}`)}
+                  </button>
+                </li>
+              );
+            } else {
+              return (
+                <li key={index} className="dropdown-item">
+                  <NestedDropdown
+                    activeTypeFilter={activeTypeFilter}
+                    activeCategoryFilter={activeCategoryFilter}
+                    onSelectType={handleTypeSelect}
+                    onSelectCategory={handleCategorySelect}
+                    type={type}
+                  />
+                </li>
+              );
+            }
+          })
+        : languages.map((lang, index) => (
+            <li
+              key={index}
+              className={`dropdown-item ${
+                lang.title === "all" || lang.title === "всі" ? "all" : ""
+              }`}
             >
-              {l("all")} <FaList />
-            </button>
-          </li>
-          <li className="dropdown-item">
-            <button
-              type="button"
-              aria-label={l("js")}
-              onClick={() => handleLanguageChange(l("js"))}
-              className={activeTypeFilter === l("js") ? "active-filter" : ""}
-            >
-              {l("js")}
-              <DiJavascript />
-            </button>
-          </li>
-          <li className="dropdown-item">
-            <button
-              type="button"
-              aria-label={l("ts")}
-              onClick={() => handleLanguageChange(l("ts"))}
-              className={activeTypeFilter === l("ts") ? "active-filter" : ""}
-            >
-              {l("ts")}
-              <BiLogoTypescript />
-            </button>
-          </li>
-          <li className="dropdown-item">
-            <button
-              className={
-                activeTypeFilter === l("python") ? "active-filter" : ""
-              }
-              type="button"
-              aria-label={l("python")}
-              onClick={() => handleLanguageChange(l("python"))}
-            >
-              {l("python")}
-              <FaPython />
-            </button>
-          </li>
-        </ul>
-      )}
+              <button
+                className={
+                  activeTypeFilter === lang.title ? "active-filter" : ""
+                }
+                type="button"
+                onClick={() => handleLanguageChange(`${lang.title}`)}
+                aria-label={l(`${lang.title}`)}
+              >
+                {getIconComponent(iconComponents, lang.icon)}
+                {l(`${lang.title}`)}
+              </button>
+            </li>
+          ))}
     </ul>
   );
 }

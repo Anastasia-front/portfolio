@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { generateText } from "./generateText";
+import { generateText } from "../helpers/generateText";
 
 interface FormData {
   subject: string;

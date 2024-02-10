@@ -12,12 +12,8 @@ import { motion } from "framer-motion";
 import { opacityVariants } from "@/utils";
 
 import { FormSchema, InputField } from "@/components";
-import {
-  getButtonClasses,
-  getButtonContent,
-  sendEmail,
-  sendMessageToTelegram,
-} from "@/utils";
+import { getButtonClasses, getButtonContent } from "@/helpers";
+import { sendEmail, sendMessageToTelegram } from "@/utils";
 
 const publicEmailLocal = process.env.NEXT_PUBLIC_EMAIL_LOCAL;
 const publicEmailVercel = process.env.NEXT_PUBLIC_EMAIL_VERCEL;
@@ -175,7 +171,7 @@ export function Form({ onClick }: Props) {
         className={`contact__submit ${buttonClasses}`}
         disabled={loading || formStatus === "error" || formStatus === "success"}
         onClick={handleSubmitClick}
-        aria-label={b('submit')}
+        aria-label={b("submit")}
       >
         {buttonContent}
       </button>
