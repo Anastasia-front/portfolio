@@ -69,6 +69,9 @@ export function Contacts({ location }: Props) {
                   <li key={secondBlock}>
                     {location === "footer" ? (
                       <Link
+                        aria-label={ic(
+                          `${firstBlock}.links.${secondBlock}.dataText`
+                        )}
                         target="_blank"
                         href={ic(`${firstBlock}.links.${secondBlock}.href`)}
                         data-text={ic(
@@ -83,6 +86,9 @@ export function Contacts({ location }: Props) {
                           className="contacts-item"
                           target="_blank"
                           href={ic(`${firstBlock}.links.${secondBlock}.href`)}
+                          aria-label={ic(
+                            `${firstBlock}.links.${secondBlock}.dataText`
+                          )}
                         >
                           <h6>
                             {ic(`${firstBlock}.links.${secondBlock}.title`)}

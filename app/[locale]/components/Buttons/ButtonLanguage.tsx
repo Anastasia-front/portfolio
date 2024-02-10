@@ -16,6 +16,7 @@ export const ButtonLanguage = () => {
 
   const a = useTranslations("alt");
   const t = useTranslations("switcher");
+  const b = useTranslations("btn");
 
   const pathname = usePathname();
 
@@ -65,7 +66,7 @@ export const ButtonLanguage = () => {
   };
 
   return (
-    <Link href={translatedPageString}>
+    <Link href={translatedPageString} aria-label={b("switcher")}>
       <ButtonSwitcher
         className={isVisible ? "visible" : "invisible"}
         alt={a("svgLang")}

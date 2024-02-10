@@ -14,7 +14,12 @@ export function Logo({ size = 30, onClick, className = "" }: Props) {
   const t = useTranslations("alt");
 
   return (
-    <Link href="/" className={`logo ${className}`} onClick={onClick}>
+    <Link
+      href="/"
+      className={`logo ${className}`}
+      onClick={onClick}
+      aria-label={t("logo")}
+    >
       <Image
         priority={true}
         className="logo__img"

@@ -69,7 +69,7 @@ export function Footer({ title, description }: Props) {
           <span>
             {currentMonth}, {currentYear} ©
           </span>
-          <a href={cv} target="_blank">
+          <a href={cv} target="_blank" aria-label="CV">
             {t("first")} {i("first")} {i("last")}
           </a>
           <span>

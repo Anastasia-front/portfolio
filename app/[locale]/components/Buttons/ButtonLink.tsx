@@ -12,7 +12,7 @@ interface Props {
 export function ButtonLink({ text, href, lang }: Props) {
   return (
     <ButtonWrapper as="div" ariaLabel={text}>
-      <Link href={href} locale={lang}>
+      <Link href={href} locale={lang} aria-label={text}>
         {text}
       </Link>
     </ButtonWrapper>

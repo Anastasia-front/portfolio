@@ -28,7 +28,7 @@ export function Accordion() {
   })();
 
   const handleClose = () => {
-    const accordion = document.getElementById('accordion');
+    const accordion = document.getElementById("accordion");
 
     if (accordion) {
       accordion.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -73,6 +73,7 @@ export function Accordion() {
       >
         {i("accordion")}{" "}
         <a
+          aria-label="Freepik"
           target="_blank"
           href="https://ru.freepik.com/free-vector/background-realistic-abstract-technology-particle_6938839.htm#query=technology%20background&position=0&from_view=search&track=ais"
         >

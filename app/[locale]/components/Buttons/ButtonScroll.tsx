@@ -11,7 +11,7 @@ interface Props {
 export function ButtonScroll({ text, href }: Props) {
   return (
     <ButtonWrapper as="div" ariaLabel={text}>
-      <Link to={href} spy={true} smooth={true} duration={300}>
+      <Link to={href} spy={true} smooth={true} duration={300} aria-label={text}>
         {text}
       </Link>
     </ButtonWrapper>

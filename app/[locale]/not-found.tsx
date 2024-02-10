@@ -11,7 +11,9 @@ export default function NotFound() {
     <div className="page-headings">
       <h1>{t("title")}</h1>
       <h2>{t("description")}</h2>
-      <Link href="/">{t("link")}</Link>
+      <Link aria-label="Home page" href="/">
+        {t("link")}
+      </Link>
     </div>
   );
 }

@@ -47,7 +47,7 @@ export function Navigation({ location = "", onClick }: Props) {
             }
             `}
           >
-            <Link href={item.url} onClick={onClick}>
+            <Link href={item.url} onClick={onClick}  aria-label={t(`${item.translationKey}`)}>
               {t(`${item.translationKey}`)}
             </Link>
           </li>

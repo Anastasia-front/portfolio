@@ -140,14 +140,22 @@ export default function Page({ params }: Params) {
                 <ul>
                   <li>
                     {links.github && (
-                      <Link href={links.github} target="_blank">
+                      <Link
+                        href={links.github}
+                        target="_blank"
+                        aria-label={l("github")}
+                      >
                         {l("github")}
                       </Link>
                     )}
                   </li>
                   <li>
                     {links.website && (
-                      <Link href={links.website} target="_blank">
+                      <Link
+                        href={links.website}
+                        target="_blank"
+                        aria-label={l("website")}
+                      >
                         {l("website")}
                       </Link>
                     )}
