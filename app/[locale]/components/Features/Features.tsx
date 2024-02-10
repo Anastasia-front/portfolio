@@ -65,9 +65,9 @@ export function Features() {
                       width={100}
                       height={100}
                     />
-                    <h4 className="features-card__title">
+                    <p className="features-card__title">
                       {i(`${key}.title`)}
-                    </h4>
+                    </p>
                     <p className="features-card__subtitle">
                       {i(`${key}.subtitle`)}
                     </p>

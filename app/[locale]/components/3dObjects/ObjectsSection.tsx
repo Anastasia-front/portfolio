@@ -61,8 +61,8 @@ export function ObjectsSection() {
 
         <div className="devices__titles">
           <div>
-            <h4>{i("now")} </h4>
             <h3>{i("macBook")}</h3>
+            <h4>{i("now")} </h4>
           </div>
           <div>
             <h3>{i("mac")}</h3>

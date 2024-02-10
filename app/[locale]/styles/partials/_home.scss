@@ -210,13 +210,13 @@
 
   &-buttons {
     @include flex(column, center, center);
-    align-self: center;
     gap: 1rem;
+    align-self: center;
 
     @include useScreen("mobile-xl") {
+      gap: 2rem;
       flex-direction: row;
       align-self: start;
-      gap: 2rem;
     }
   }
 }
@@ -419,6 +419,7 @@
 
     &__title {
       order: 2;
+      font-size: var(--font-size--4);
       text-transform: uppercase;
       transform: var(--level--3);
     }
@@ -487,6 +488,7 @@
     gap: 2rem;
 
     div:first-child {
+      @include flex(column-reverse, center, flex-start);
       text-align: left;
     }
     div:last-child {
