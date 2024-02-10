@@ -51,7 +51,11 @@ export function Header() {
       <NavigationAndLogo />
 
       {!contactsPage && isScreenTabletMd && (
-        <ButtonText text={t("contacts")} onClick={menuModal.open} />
+        <ButtonText
+          text={t("contacts")}
+          onClick={menuModal.open}
+          ariaLabel={t("contacts")}
+        />
       )}
 
       {!menuModal.isOpen && <Switchers />}

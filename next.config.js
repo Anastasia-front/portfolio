@@ -5,6 +5,7 @@ const withNextIntl = require("next-intl/plugin")(
 
 module.exports = withNextIntl({
   reactStrictMode: true,
+  productionBrowserSourceMaps: true,
   // webpack5: true,
   // output: "standalone",
   webpack: (config, { isServer }) => {
