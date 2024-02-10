@@ -17,11 +17,13 @@ import {
 
 export default function Home() {
   const t = useTranslations("home");
+  const n = useTranslations("nav");
 
   return (
     <>
       <Head>
         <meta property="og:image" content={t("ogImage")} />
+        <title>{`${n("page")} ${n("home")}`} </title>
       </Head>
 
       <motion.main

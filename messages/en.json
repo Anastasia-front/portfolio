@@ -44,7 +44,8 @@
     "skills": "Skills",
     "projects": "Projects",
     "project": "Project",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "page": "page"
   },
   "btn": {
     "contacts": "Contact me",
@@ -57,7 +58,7 @@
     "burger": "Burger menu",
     "close": "Close",
     "switcher": "Switcher",
-    "submit":"Sent form data"
+    "submit": "Sent form data"
   },
   "switcher": {
     "theme": {

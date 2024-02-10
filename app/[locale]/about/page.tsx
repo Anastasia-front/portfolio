@@ -9,24 +9,16 @@ import { usePathname } from "next/navigation";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import { bannerVariants, titleVariants } from "@/utils";
-
 import { AboutItem, AchievementBlock, Banner } from "@/components";
+import { sevenKeys } from "@/constants";
 import { useScreenQuery } from "@/hooks";
+import { bannerVariants, titleVariants } from "@/utils";
 
 export default function AboutPage() {
   const t = useTranslations("about");
   const b = useTranslations("banner");
   const i = useTranslations("about.features.items");
-  const keys = [
-    "first",
-    "second",
-    "third",
-    "forth",
-    "fifth",
-    "sixth",
-    "seventh",
-  ] as const;
+  const n = useTranslations("nav");
 
   const { theme } = useTheme();
 
@@ -66,6 +58,7 @@ export default function AboutPage() {
     <>
       <Head>
         <meta property="og:image" content={t("ogImage")} />
+        <title>{`${n("page")} ${n("about")}`} </title>
       </Head>
       <main className="container">
         <motion.div ref={header} className="about-header">
@@ -102,7 +95,7 @@ export default function AboutPage() {
               {t("features.title")}
             </motion.h1>
             <ol className="about-section__list">
-              {keys.map((key) => (
+              {sevenKeys.map((key) => (
                 <AboutItem
                   key={key}
                   number={i(`${key}.number`)}

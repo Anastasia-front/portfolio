@@ -10,7 +10,7 @@ export default function Loading() {
 
   return (
     <div className="loading">
-      <div className="page-headings page-headings__align-center ">
+      <div className="page-headings page-headings__align-center">
         <h1>{t("please")}</h1>
         <h2>{t("wait")},</h2>
         <h3>{t("page")}</h3>

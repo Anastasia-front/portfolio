@@ -15,6 +15,7 @@ import { gridVariants } from "@/utils";
 export default function ProjectsPage() {
   const t = useTranslations("projects");
   const b = useTranslations("banner");
+  const n = useTranslations("nav");
 
   const pathname = usePathname();
   const lang = pathname.slice(0, 3);
@@ -65,6 +66,7 @@ export default function ProjectsPage() {
     <>
       <Head>
         <meta property="og:image" content={t("ogImage")} />
+        <title>{`${n("page")} ${n("projects")}`} </title>
       </Head>
 
       <main className="container">

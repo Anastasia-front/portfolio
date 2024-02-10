@@ -19,6 +19,7 @@ import { bannerVariants, gridVariants } from "@/utils";
 export default function ContactsPage() {
   const t = useTranslations("contacts");
   const a = useTranslations("alt.decoration");
+  const n = useTranslations("nav");
 
   const { settingsModal } = useGlobalContext();
 
@@ -31,6 +32,7 @@ export default function ContactsPage() {
     <>
       <Head>
         <meta property="og:image" content={t("ogImage")} />
+        <title>{`${n("page")} ${n("contacts")}`} </title>
       </Head>
 
       <motion.main

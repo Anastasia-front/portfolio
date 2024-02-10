@@ -11,11 +11,13 @@ import { bannerVariants, gridVariants, opacityVariants } from "@/utils";
 export default function SkillsPage() {
   const t = useTranslations("skills");
   const b = useTranslations("banner");
+  const n = useTranslations("nav");
 
   return (
     <>
       <Head>
         <meta property="og:image" content={t("ogImage")} />
+        <title>{`${n("page")} ${n("skills")}`} </title>
       </Head>
 
       <motion.main
