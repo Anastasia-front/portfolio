@@ -63,7 +63,7 @@ export default function Page({ params }: Params) {
   return (
     <>
       <Robots
-        page={project?.url || ""}
+        page={`/${project?.url || ""}`}
         title={`${n("page")} ${n("project")}`}
       />
       <main className="container project project-page">

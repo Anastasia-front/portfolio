@@ -24,7 +24,7 @@ export function Robots({ title, ogImg, page }: Props) {
       <title>{title} </title>
       <link
         rel="canonical"
-        href={`${BASE_URL}${lang}/${page}"`}
+        href={`${BASE_URL}${lang}${page}"`}
         key="canonical"
       />
     </Head>
