@@ -47,6 +47,7 @@ interface Props {
 
 export function Form({ onClick }: Props) {
   const t = useTranslations("contacts.form");
+  const b = useTranslations("btn");
 
   const subject = t("subject.title");
   const subjectPlaceholder = t("subject.placeholder");
@@ -174,6 +175,7 @@ export function Form({ onClick }: Props) {
         className={`contact__submit ${buttonClasses}`}
         disabled={loading || formStatus === "error" || formStatus === "success"}
         onClick={handleSubmitClick}
+        aria-label={b('submit')}
       >
         {buttonContent}
       </button>

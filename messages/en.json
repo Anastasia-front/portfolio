@@ -53,7 +53,11 @@
     "features": "Go to projects",
     "devices": "Go to skills",
     "gallery": "Go to page about me",
-    "settings": "Settings"
+    "settings": "Settings",
+    "burger": "Burger menu",
+    "close": "Close",
+    "switcher": "Switcher",
+    "submit":"Sent form data"
   },
   "switcher": {
     "theme": {

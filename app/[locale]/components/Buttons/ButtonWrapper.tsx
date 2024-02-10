@@ -9,6 +9,7 @@ interface Props {
   children: React.ReactNode;
   as?: "button" | "div";
   className?: string;
+  ariaLabel:string
 }
 
 export function ButtonWrapper({
@@ -16,6 +17,7 @@ export function ButtonWrapper({
   children,
   as: Component = "button",
   className,
+  ariaLabel
 }: Props) {
   const commonProps = {
     onClick,
@@ -25,6 +27,7 @@ export function ButtonWrapper({
   if (Component === "button") {
     return (
       <motion.button
+      aria-label={ariaLabel}
         className="button"
         onClick={onClick}
         whileHover={{ scale: 1.05 }}

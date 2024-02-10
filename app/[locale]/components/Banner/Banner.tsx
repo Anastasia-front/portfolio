@@ -28,7 +28,13 @@ export function Banner({ text, button, className = "" }: Props) {
       viewport={{ once: true, amount: 1 }}
     >
       <h4 className="banner__text">{text}</h4>
-      {button && <ButtonText text={t("contacts")} onClick={formModal.open} />}
+      {button && (
+        <ButtonText
+          ariaLabel={t("contacts")}
+          text={t("contacts")}
+          onClick={formModal.open}
+        />
+      )}
     </motion.div>
   );
 }

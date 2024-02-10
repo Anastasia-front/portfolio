@@ -54,6 +54,7 @@ export function DropdownCategory({
                   onClick={() => {
                     handleTypeSelect(t(`${type}`));
                   }}
+                  aria-label={t(`${type}`)}
                 >
                   <TfiLayoutListThumbAlt />
                   {t(`${type}`)}
@@ -80,6 +81,7 @@ export function DropdownCategory({
             <button
               className={activeTypeFilter === l("all") ? "active-filter" : ""}
               type="button"
+              aria-label={l("all")}
               onClick={() => handleLanguageChange(l("all"))}
             >
               {l("all")} <FaList />
@@ -88,6 +90,7 @@ export function DropdownCategory({
           <li className="dropdown-item">
             <button
               type="button"
+              aria-label={l("js")}
               onClick={() => handleLanguageChange(l("js"))}
               className={activeTypeFilter === l("js") ? "active-filter" : ""}
             >
@@ -98,6 +101,7 @@ export function DropdownCategory({
           <li className="dropdown-item">
             <button
               type="button"
+              aria-label={l("ts")}
               onClick={() => handleLanguageChange(l("ts"))}
               className={activeTypeFilter === l("ts") ? "active-filter" : ""}
             >
@@ -111,6 +115,7 @@ export function DropdownCategory({
                 activeTypeFilter === l("python") ? "active-filter" : ""
               }
               type="button"
+              aria-label={l("python")}
               onClick={() => handleLanguageChange(l("python"))}
             >
               {l("python")}

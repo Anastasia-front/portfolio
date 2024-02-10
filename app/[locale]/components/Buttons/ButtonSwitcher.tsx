@@ -1,5 +1,6 @@
 import { ForwardedRef, forwardRef, memo } from "react";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 interface Props {
@@ -17,6 +18,8 @@ export const ButtonSwitcher = memo(
       { imgUrl, className, onClick, icon, title = "", alt }: Props,
       ref: ForwardedRef<HTMLButtonElement>
     ) => {
+      const b = useTranslations("btn");
+
       return (
         <button
           ref={ref}
@@ -24,6 +27,7 @@ export const ButtonSwitcher = memo(
           className={`button-switcher  ${className ? className : ""}`}
           type="button"
           onClick={onClick}
+          aria-label={b("switcher")}
         >
           {imgUrl && (
             <Image

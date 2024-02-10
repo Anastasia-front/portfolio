@@ -8,10 +8,9 @@ import { useKeyPress, useScreenQuery } from "@/hooks";
 
 import { Navigation } from "../Navigation";
 import { Switchers } from "../Switchers";
-import { m } from "framer-motion";
 
 export function BurgerMenu() {
-  const t = useTranslations("alt");
+  const b = useTranslations("btn");
 
   const { menuModal } = useGlobalContext();
 
@@ -33,6 +32,7 @@ export function BurgerMenu() {
         type="button"
         className={`button-icon animated-icon ${classNameActive}`}
         onClick={menuModal.open}
+        aria-label={b("burger")}
       >
         <span className="icon"></span>
       </button>
@@ -52,6 +52,7 @@ export function BurgerMenu() {
               type="button"
               className={`button-icon button-icon__close button-icon__close-right animated-icon ${classNameActive}`}
               onClick={menuModal.close}
+              aria-label={b("close")}
             >
               <span className="icon"></span>
             </button>

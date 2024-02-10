@@ -89,6 +89,7 @@ export function NestedDropdown({
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        aria-label={t(`${type}`)}
       >
         {isHovered ? <BsFillCaretRightFill /> : <BsFillCaretLeftFill />}
         {t(`${type}`)}
@@ -111,6 +112,7 @@ export function NestedDropdown({
                     }
                     type="button"
                     onClick={() => handleCategoryClick(category, type)}
+                    aria-label={interConst(`${category}`)}
                   >
                     {interConst(`${category}`)}
                   </button>

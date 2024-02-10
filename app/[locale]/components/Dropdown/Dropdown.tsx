@@ -38,8 +38,6 @@ export function Dropdown({
 }: Props) {
   const i = useTranslations("dropdown");
   const c = useTranslations("dropdown.categories");
-  const t = useTranslations("dropdown.type");
-  const l = useTranslations("dropdown.programmingLanguage");
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -113,6 +111,7 @@ export function Dropdown({
         type="button"
         className="dropdown-button"
         onClick={toggleDropdown}
+        aria-label={i("title")}
       >
         {i("title")}
         {isOpen ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />}
@@ -138,6 +137,7 @@ export function Dropdown({
                     type="button"
                     onClick={() => handleSortBy(c("type"))}
                     className={activeSortTypeFilter}
+                    aria-label={c("type")}
                   >
                     {c("type")}
                     <BsFillCaretRightFill />
@@ -148,6 +148,7 @@ export function Dropdown({
                     type="button"
                     onClick={() => handleSortBy(c("language"))}
                     className={activeSortLangFilter}
+                    aria-label={c("language")}
                   >
                     {c("language")}
                     <BsFillCaretRightFill />

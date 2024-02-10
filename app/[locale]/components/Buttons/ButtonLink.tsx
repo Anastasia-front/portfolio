@@ -11,7 +11,7 @@ interface Props {
 
 export function ButtonLink({ text, href, lang }: Props) {
   return (
-    <ButtonWrapper as="div">
+    <ButtonWrapper as="div" ariaLabel={text}>
       <Link href={href} locale={lang}>
         {text}
       </Link>

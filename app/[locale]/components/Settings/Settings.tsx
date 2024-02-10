@@ -82,6 +82,7 @@ export function Settings() {
         type="button"
         className="button-icon"
         onClick={settingsModal.toggle}
+        aria-label={t("settings")}
       >
         <Gear />
       </button>
