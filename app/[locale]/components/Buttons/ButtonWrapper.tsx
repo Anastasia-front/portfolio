@@ -9,15 +9,29 @@ interface Props {
   children: React.ReactNode;
   as?: "button" | "div";
   className?: string;
-  ariaLabel:string
+  ariaLabel: string;
 }
+
+const commonMotionProps = {
+  whileHover: { scale: 1.05 },
+  transition: {
+    duration: 0.01,
+    ease: [0, 0.71, 0.2, 1.01],
+    scale: {
+      type: "spring",
+      damping: 6,
+      stiffness: 100,
+      restDelta: 0.001,
+    },
+  },
+};
 
 export function ButtonWrapper({
   onClick,
   children,
   as: Component = "button",
-  className,
-  ariaLabel
+  className = "button",
+  ariaLabel,
 }: Props) {
   const commonProps = {
     onClick,
@@ -27,66 +41,22 @@ export function ButtonWrapper({
   if (Component === "button") {
     return (
       <motion.button
-      aria-label={ariaLabel}
-        className="button"
-        onClick={onClick}
-        whileHover={{ scale: 1.05 }}
-        transition={{
-          duration: 0.01,
-          ease: [0, 0.71, 0.2, 1.01],
-          scale: {
-            type: "spring",
-            damping: 6,
-            stiffness: 100,
-            restDelta: 0.001,
-          },
-        }}
+        aria-label={ariaLabel}
+        {...commonProps}
+        {...commonMotionProps}
       >
         {children}
       </motion.button>
     );
-  }
-
-  if (Component === "div") {
+  } else {
     return (
       <motion.div
-        className="button"
-        onClick={onClick}
-        whileHover={{ scale: 1.05 }}
-        transition={{
-          duration: 0.01,
-          ease: [0, 0.71, 0.2, 1.01],
-          scale: {
-            type: "spring",
-            damping: 6,
-            stiffness: 100,
-            restDelta: 0.001,
-          },
-        }}
+        aria-label={ariaLabel}
+        {...commonProps}
+        {...commonMotionProps}
       >
         {children}
       </motion.div>
     );
   }
-
-  // If none of the allowed tags are provided, default to rendering a div
-  return (
-    <motion.div
-      className="button"
-      onClick={onClick}
-      whileHover={{ scale: 1.05 }}
-      transition={{
-        duration: 0.01,
-        ease: [0, 0.71, 0.2, 1.01],
-        scale: {
-          type: "spring",
-          damping: 6,
-          stiffness: 100,
-          restDelta: 0.001,
-        },
-      }}
-    >
-      {children}
-    </motion.div>
-  );
 }

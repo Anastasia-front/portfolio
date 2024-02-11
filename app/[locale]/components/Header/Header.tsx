@@ -15,7 +15,7 @@ import { navVariants } from "@/utils";
 export function Header() {
   const t = useTranslations("btn");
 
-  const { menuModal } = useGlobalContext();
+  const { formModal,menuModal } = useGlobalContext();
 
   const pathname = usePathname();
   const isHeaderFixed = pathname === "/en" || pathname === "/uk";
@@ -26,16 +26,16 @@ export function Header() {
   const { lockScroll, unlockScroll } = useScrollLock();
 
   useEffect(() => {
-    if (menuModal.isOpen) {
+    if (formModal.isOpen) {
       lockScroll();
     } else {
       unlockScroll();
     }
-  }, [menuModal.isOpen, lockScroll, unlockScroll]);
+  }, [formModal.isOpen, lockScroll, unlockScroll]);
 
   useKeyPress("Escape", () => {
-    if (menuModal.isOpen) {
-      menuModal.close;
+    if (formModal.isOpen) {
+      formModal.close;
     }
   });
 
@@ -53,7 +53,7 @@ export function Header() {
       {!contactsPage && isScreenTabletMd && (
         <ButtonText
           text={t("contacts")}
-          onClick={menuModal.open}
+          onClick={formModal.open}
           ariaLabel={t("contacts")}
         />
       )}
