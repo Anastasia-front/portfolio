@@ -1,6 +1,8 @@
 "use client";
 
-import { ButtonWrapper } from ".";
+import { motion } from "framer-motion";
+
+import { buttonMotionProps } from "@/utils";
 
 interface Props {
   text: string;
@@ -10,8 +12,13 @@ interface Props {
 
 export function ButtonText({ ariaLabel, text, onClick }: Props) {
   return (
-    <ButtonWrapper ariaLabel={ariaLabel} onClick={onClick}>
+    <motion.button
+      aria-label={ariaLabel}
+      onClick={onClick}
+      className="button"
+      {...buttonMotionProps}
+    >
       {text}
-    </ButtonWrapper>
+    </motion.button>
   );
 }

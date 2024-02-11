@@ -16,16 +16,15 @@ export const ButtonSwitcher = memo(
   forwardRef(
     (
       { imgUrl, className, onClick, icon, title = "", alt }: Props,
-      ref: ForwardedRef<HTMLButtonElement>
+      ref: ForwardedRef<HTMLDivElement>
     ) => {
       const b = useTranslations("btn");
 
       return (
-        <button
+        <div
           ref={ref}
           title={title}
           className={`button-switcher  ${className ? className : ""}`}
-          type="button"
           onClick={onClick}
           aria-label={b("switcher")}
         >
@@ -40,7 +39,7 @@ export const ButtonSwitcher = memo(
             />
           )}
           {icon && icon}
-        </button>
+        </div>
       );
     }
   )

@@ -78,6 +78,15 @@ a {
   @include useOnClick {
     color: var(--color--light-blue-3);
   }
+
+  &.button {
+    @include useOnHover {
+      color: var(--color--white);
+    }
+    @include useOnClick {
+      color: var(--color--white);
+    }
+  }
 }
 [data-theme="dark"] a {
   color: var(--color--orange-1);
@@ -87,6 +96,15 @@ a {
   }
   @include useOnClick {
     color: var(--color--orange-3);
+  }
+
+  &.button {
+    @include useOnHover {
+      color: var(--color--blue-grey-3);
+    }
+    @include useOnClick {
+      color: var(--color--blue-grey-3);
+    }
   }
 }
 
@@ -297,10 +315,10 @@ main {
   left: 0;
   width: 100%;
   height: 7px;
-  background: linear-gradient(90deg, #fca26e 20%, #fcfbfc 50%, #68b8c1 100%);
-  transform-origin: 0%;
   border-radius: 55px;
+  background: linear-gradient(90deg, #fca26e 20%, #fcfbfc 50%, #68b8c1 100%);
   transition: transform 0.2s ease-in-out;
+  transform-origin: 0%;
 }
 [data-theme="dark"] .progress-bar {
   background: linear-gradient(90deg, #68b8c1 30%, #000 50%, #fca26e 100%);
@@ -813,12 +831,12 @@ main {
 
   &__onHoverVisible {
     display: none;
-    position: absolute;
-    border-radius: var(--border-radius--sm);
     z-index: 10;
+    position: absolute;
     top: 7rem;
     left: -0.1rem;
     padding: 1rem;
+    border-radius: var(--border-radius--sm);
     background: var(--color--light-blue-1);
     @include box-shadow-2(var(--color--grey-opacity));
 
@@ -853,30 +871,30 @@ main {
   }
 }
 
-.width{
-&-13 {
-  @include useScreen("mobile-lg") {
-    width: 13rem;
+.width {
+  &-13 {
+    @include useScreen("mobile-lg") {
+      width: 13rem;
+    }
   }
-}
 
-&-22 {
-  @include useScreen("mobile-lg") {
-    width: 22rem;
+  &-22 {
+    @include useScreen("mobile-lg") {
+      width: 22rem;
+    }
   }
-}
 }
 
 .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
   margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
+  padding: 0;
   border-width: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .block {
@@ -890,14 +908,14 @@ main {
 .zoom {
   &-in {
     img {
-      height: auto;
       width: 240%;
+      height: auto;
     }
   }
   &-out {
     img {
-      height: auto;
       width: 160%;
+      height: auto;
     }
   }
 }

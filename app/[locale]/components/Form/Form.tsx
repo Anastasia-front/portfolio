@@ -15,20 +15,21 @@ import { FormSchema, InputField } from "@/components";
 import { getButtonClasses, getButtonContent } from "@/helpers";
 import { sendEmail, sendMessageToTelegram } from "@/utils";
 
-const publicEmailLocal = process.env.NEXT_PUBLIC_EMAIL_LOCAL;
-const publicEmailVercel = process.env.NEXT_PUBLIC_EMAIL_VERCEL;
-const baseUrlLocal =
-  process.env.NEXT_PUBLIC_BASE_URL_LOCAL || "http://localhost:3000";
+import {
+  BASE_URL_LOCAL,
+  PUBLIC_EMAIL_LOCAL,
+  PUBLIC_EMAIL_VERCEL,
+} from "@/constants";
 
 let isLocalhost: boolean = false;
 
 if (typeof window !== "undefined") {
-  isLocalhost = window.location.href.includes(baseUrlLocal);
+  isLocalhost = window.location.href.includes(BASE_URL_LOCAL);
 }
 
 const formAction = isLocalhost
-  ? `https://formsubmit.co/${publicEmailLocal}`
-  : `https://formsubmit.co/${publicEmailVercel}`;
+  ? `https://formsubmit.co/${PUBLIC_EMAIL_LOCAL}`
+  : `https://formsubmit.co/${PUBLIC_EMAIL_VERCEL}`;
 
 type FormStatus = "success" | "error" | null;
 interface FormData {

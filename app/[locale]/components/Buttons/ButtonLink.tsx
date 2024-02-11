@@ -1,20 +1,28 @@
 "use client";
 
-import Link from "next/link";
-import { ButtonWrapper } from ".";
+import { usePathname } from "next/navigation";
+
+import { motion } from "framer-motion";
+
+import { buttonMotionProps } from "@/utils";
 
 interface Props {
   text: string;
   href: string;
-  lang: "en" | "uk";
 }
 
-export function ButtonLink({ text, href, lang }: Props) {
+export function ButtonLink({ text, href }: Props) {
+  const pathname = usePathname();
+  const lang = pathname.slice(0, 3);
+
   return (
-    <ButtonWrapper as="div" ariaLabel={text}>
-      <Link href={href} locale={lang} aria-label={text}>
-        {text}
-      </Link>
-    </ButtonWrapper>
+    <motion.a
+      aria-label={text}
+      href={`${lang}${href}`}
+      {...buttonMotionProps}
+      className="button"
+    >
+      {text}
+    </motion.a>
   );
 }

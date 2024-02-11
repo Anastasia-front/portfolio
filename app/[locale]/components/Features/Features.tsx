@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { BsInfoCircle } from "react-icons/bs";
 
 import { useTranslations } from "next-intl";
@@ -9,7 +8,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { ButtonLink } from "@/components";
-import { threeKeys } from "@/constants";
+import { menuItems, threeKeys } from "@/constants";
 import { useScreenQuery } from "@/hooks";
 import { opacityVariants } from "@/utils";
 
@@ -19,19 +18,6 @@ export function Features() {
   const a = useTranslations("alt.decoration");
 
   const { isScreenTabletSm } = useScreenQuery();
-
-  const [lang, setLang] = useState<"en" | "uk">("en");
-
-  useEffect(() => {
-    let storedLang: "en" | "uk";
-    if (typeof window !== "undefined") {
-      storedLang = window.localStorage.getItem("lang") as "en" | "uk";
-    } else {
-      storedLang = "en";
-    }
-
-    setLang(storedLang);
-  }, []);
 
   return (
     <motion.section
@@ -45,7 +31,7 @@ export function Features() {
       <div className="features container">
         <div className="section-header">
           <h2>{i("title")}</h2>
-          <ButtonLink text={b("features")} href="/projects" lang={lang} />
+          <ButtonLink text={b("features")} href={menuItems[3].url} />
         </div>
         <p className="block-hint  block-hint__for-one block-hint__self-start">
           <BsInfoCircle /> {i("subtitle")}

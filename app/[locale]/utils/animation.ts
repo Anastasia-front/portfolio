@@ -1,5 +1,19 @@
 import { Variants } from "framer-motion";
 
+export const buttonMotionProps = {
+  whileHover: { scale: 1.05 },
+  transition: {
+    duration: 0.01,
+    ease: [0, 0.71, 0.2, 1.01],
+    scale: {
+      type: "spring",
+      damping: 6,
+      stiffness: 100,
+      restDelta: 0.001,
+    },
+  },
+};
+
 export const gridVariants: Variants = {
   hidden: {
     opacity: 0,
@@ -71,12 +85,12 @@ export const overlayVariants: Variants = {
   },
 };
 
-export const fadeIn = (direction: 'left' | 'right') => {
-  const transitionType = direction === 'right' ? 'right' : 'left';
+export const fadeIn = (direction: "left" | "right") => {
+  const transitionType = direction === "right" ? "right" : "left";
 
   return {
     hidden: {
-      x: direction === 'right' ? -100 : 100,
+      x: direction === "right" ? -100 : 100,
       y: 0,
       opacity: 0,
     },
@@ -88,12 +102,11 @@ export const fadeIn = (direction: 'left' | 'right') => {
         type: transitionType,
         delay: 0.5,
         duration: 0.75,
-        ease: 'easeOut',
+        ease: "easeOut",
       },
     },
   };
 };
-
 
 export const bannerVariants: Variants = {
   hidden: {

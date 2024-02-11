@@ -9,25 +9,13 @@ import { motion } from "framer-motion";
 
 import { ButtonLink } from "@/components";
 import { opacityVariants } from "@/utils";
+import { menuItems } from "@/constants";
 
 import { Dynamic } from "./Dynamic";
 
 export function GallerySection() {
   const i = useTranslations("home.gallery");
   const b = useTranslations("btn");
-
-  const [lang, setLang] = useState<"en" | "uk">("en");
-
-  useEffect(() => {
-    let storedLang: "en" | "uk";
-    if (typeof window !== "undefined") {
-      storedLang = window.localStorage.getItem("lang") as "en" | "uk";
-    } else {
-      storedLang = "en";
-    }
-
-    setLang(storedLang);
-  }, []);
 
   return (
     <motion.section
@@ -40,7 +28,7 @@ export function GallerySection() {
       <div className="gallery container">
         <div className="section-header section-header__container">
           <h2>{i("title")}</h2>
-          <ButtonLink text={b("gallery")} href="/about" lang={lang} />
+          <ButtonLink text={b("gallery")} href={menuItems[1].url}/>
         </div>
         <p className="block-hint block-hint__for-one block-hint__self-start">
           <BsInfoCircle /> {i("subtitle")}

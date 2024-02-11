@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { BsFillInfoCircleFill, BsFillInfoSquareFill } from "react-icons/bs";
 
 import { useTranslations } from "next-intl";
@@ -16,19 +15,6 @@ export function ObjectsSection() {
   const i = useTranslations("home.3d");
   const b = useTranslations("btn");
 
-  const [lang, setLang] = useState<"en" | "uk">("en");
-
-  useEffect(() => {
-    let storedLang: "en" | "uk";
-    if (typeof window !== "undefined") {
-      storedLang = window.localStorage.getItem("lang") as "en" | "uk";
-    } else {
-      storedLang = "en";
-    }
-
-    setLang(storedLang);
-  }, []);
-
   return (
     <motion.section
       className="container__box-shadow"
@@ -40,7 +26,7 @@ export function ObjectsSection() {
     >
       <div className="devices container">
         <div className="section-header section-header__column-reverse">
-          <ButtonLink text={b("devices")} href="/skills" lang={lang} />
+          <ButtonLink text={b("devices")} href="/skills" />
           <h2>{i("heading")}</h2>
         </div>
         <div className="block-hint block-hint__onHover">

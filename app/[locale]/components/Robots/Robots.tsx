@@ -3,15 +3,13 @@
 import Head from "next/head";
 import { usePathname } from "next/navigation";
 
+import { BASE_URL } from "@/constants";
+
 interface Props {
   ogImg?: string;
   title: string;
   page: string;
 }
-
-const BASE_URL =
-  process.env.NEXT_PUBLIC_BASE_URL_VERCEL ||
-  "https://portfolio-anastasia-front.vercel.app";
 
 export function Robots({ title, ogImg, page }: Props) {
   const pathname = usePathname();
@@ -24,7 +22,7 @@ export function Robots({ title, ogImg, page }: Props) {
       <title>{title} </title>
       <link
         rel="canonical"
-        href={`${BASE_URL}${lang}${page}"`}
+        href={`${BASE_URL}${lang}${page}`}
         key="canonical"
       />
     </Head>

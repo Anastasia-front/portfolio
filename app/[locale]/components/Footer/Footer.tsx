@@ -6,8 +6,7 @@ import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
 import { Contacts, Logo, Navigation } from "@/components";
-
-const cv = process.env.NEXT_PUBLIC_CV_LINK;
+import { CV } from "@/constants";
 
 interface Props {
   logo?: string;
@@ -69,7 +68,7 @@ export function Footer({ title, description }: Props) {
           <span>
             {currentMonth}, {currentYear} ©
           </span>
-          <a href={cv} target="_blank" aria-label="CV">
+          <a href={CV} target="_blank" aria-label="CV">
             {t("first")} {i("first")} {i("last")}
           </a>
           <span>

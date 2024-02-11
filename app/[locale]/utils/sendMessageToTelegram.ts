@@ -1,6 +1,7 @@
 import axios from "axios";
 
-import { generateText } from "../helpers/generateText";
+import { CHAT_ID, TELEGRAM_KEY } from "@/constants";
+import { generateText } from "@/helpers";
 
 interface FormData {
   subject: string;
@@ -8,11 +9,8 @@ interface FormData {
   message: string;
 }
 
-const telegramKey = process.env.NEXT_PUBLIC_TELEGRAM_API_KEY;
-const chatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
-
 export async function sendMessageToTelegram(data: FormData) {
-  const url = `https://api.telegram.org/bot${telegramKey}/sendMessage?chat_id=${chatId}`;
+  const url = `https://api.telegram.org/bot${TELEGRAM_KEY}/sendMessage?chat_id=${CHAT_ID}`;
 
   try {
     const response = await axios.post(url, {

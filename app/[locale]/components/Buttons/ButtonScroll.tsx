@@ -1,7 +1,8 @@
 "use client";
 
-import { Link } from "react-scroll";
-import { ButtonWrapper } from ".";
+import { motion } from "framer-motion";
+
+import { buttonMotionProps } from "@/utils";
 
 interface Props {
   text: string;
@@ -9,11 +10,24 @@ interface Props {
 }
 
 export function ButtonScroll({ text, href }: Props) {
+  const handleClick = () => {
+    const targetElement = document.getElementById(href);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <ButtonWrapper as="div" ariaLabel={text}>
-      <Link to={href} spy={true} smooth={true} duration={300} aria-label={text}>
-        {text}
-      </Link>
-    </ButtonWrapper>
+    <motion.button
+      aria-label={text}
+      onClick={handleClick}
+      {...buttonMotionProps}
+      className="button"
+    >
+      {text}
+    </motion.button>
   );
 }

@@ -11,23 +11,11 @@
   text-align: center;
   background: var(--color--orange-4);
 
-  a {
-    color: var(--color--white);
-  }
-
   @include useOnHover {
     background: var(--color--light-blue-3);
-
-    a {
-      color: var(--color--white);
-    }
   }
   @include useOnClick {
     background: var(--color--light-blue-2);
-
-    a {
-      color: var(--color--white);
-    }
   }
 
   &-switcher {
@@ -236,7 +224,7 @@
         border: 1px solid var(--color--light-grey);
         color: var(--color--light-grey);
         background: var(--color--overlay);
-        
+
         @include useOnHover {
           cursor: not-allowed;
           background: var(--color--overlay);

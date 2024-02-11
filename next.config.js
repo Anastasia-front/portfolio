@@ -10,8 +10,37 @@ const withNextIntl = require("next-intl/plugin")(
 module.exports = withNextIntl({
   reactStrictMode: true,
   productionBrowserSourceMaps: true,
-  // webpack5: true,
-  // output: "standalone",
+  // Add headers for caching static assets
+  async headers() {
+    return [
+      {
+        source: "/_next/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/images/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=604800, must-revalidate",
+          },
+        ],
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/robots.ts",
+        destination: "/app/robots.ts",
+      },
+    ];
+  },
   webpack: (config, { isServer }) => {
     // Add a rule to handle video files
     config.module.rules.push({
