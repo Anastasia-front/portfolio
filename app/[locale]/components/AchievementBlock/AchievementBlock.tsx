@@ -186,6 +186,7 @@ export function AchievementBlock() {
         onClick={() =>
           openModal("/images/about/github-wrapped.webp", a("alt.github"))
         }
+        loading="lazy"
         variants={titleVariants("first")}
         initial="offscreen"
         whileInView="onscreen"
@@ -202,7 +203,7 @@ export function AchievementBlock() {
           handleClose={githubModal.close}
           noDivContent
         >
-          <Image src={github} alt={selectedAlt} />
+          <Image src={github} alt={selectedAlt} loading="lazy" />
         </PortalModal>
       )}
     </motion.div>

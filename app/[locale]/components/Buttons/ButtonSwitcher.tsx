@@ -31,6 +31,7 @@ export const ButtonSwitcher = memo(
         >
           {imgUrl && (
             <Image
+              loading="eager"
               className="button-img"
               src={imgUrl}
               width={20}

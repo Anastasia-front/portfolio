@@ -86,6 +86,7 @@ export default function ContactsPage() {
           />
 
           <Image
+            loading="lazy"
             className={`contact__decoration ${
               settingsModal.isOpen ? "contact__decoration-right" : ""
             } contact__decoration-second`}
@@ -93,6 +94,7 @@ export default function ContactsPage() {
             src={decor2}
           />
           <Image
+            loading="lazy"
             className={`contact__decoration ${
               settingsModal.isOpen ? "contact__decoration-right" : ""
             } contact__decoration-third`}
@@ -102,11 +104,13 @@ export default function ContactsPage() {
         </div>
         <div className="relative z-index-1">
           <Image
+            loading="lazy"
             className="contact__decoration contact__decoration-first"
             alt={a("contacts")}
             src={decor1}
           />
           <Image
+            loading="lazy"
             className="contact__decoration contact__decoration-zero"
             alt={a("contacts")}
             src={decor1}

@@ -21,6 +21,7 @@ export function Logo({ size = 30, onClick, className = "" }: Props) {
       aria-label={t("logo")}
     >
       <Image
+        loading="eager"
         priority={true}
         className="logo__img"
         src="/logo.png"

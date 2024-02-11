@@ -114,6 +114,7 @@ export function Progress() {
           onClick={() => openModal(achievement1, "alt.cabinet.first")}
         >
           <Image
+            loading="lazy"
             src={achievement1}
             alt={a("alt.cabinet.first")}
             className="about-achievements__image"
@@ -123,6 +124,7 @@ export function Progress() {
           onClick={() => openModal(achievement2, "alt.cabinet.second")}
         >
           <Image
+            loading="lazy"
             src={achievement2}
             alt={a("alt.cabinet.second")}
             className="about-achievements__image"
@@ -132,6 +134,7 @@ export function Progress() {
           onClick={() => openModal(achievement3, "alt.cabinet.third")}
         >
           <Image
+            loading="lazy"
             src={achievement3}
             alt={a("alt.cabinet.third")}
             className="about-achievements__image"
@@ -145,7 +148,7 @@ export function Progress() {
           handleClose={progressModal.close}
           noDivContent
         >
-          <Image src={selectedImage} alt={selectedTitle} />
+          <Image loading="lazy" src={selectedImage} alt={selectedTitle} />
         </PortalModal>
       )}
     </>

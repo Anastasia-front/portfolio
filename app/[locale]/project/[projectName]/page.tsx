@@ -73,6 +73,7 @@ export default function Page({ params }: Params) {
       <main className="container project project-page">
         <section className="project__header">
           <motion.img
+            loading="eager"
             className="bg-image"
             src={image?.src}
             variants={headerImgVariants}
@@ -178,20 +179,30 @@ export default function Page({ params }: Params) {
           <div className="project__content__screenshots">
             {isScreenMobileLg ? (
               <div className="horizontal-images">
-                {image1 && <Image src={image1} alt={i("first")} />}
-                {image2 && <Image src={image2} alt={i("second")} />}
+                {image1 && (
+                  <Image loading="lazy" src={image1} alt={i("first")} />
+                )}
+                {image2 && (
+                  <Image loading="lazy" src={image2} alt={i("second")} />
+                )}
               </div>
             ) : (
               <div className="horizontal-images__fullscreen horizontal-images__fullscreen-paddings">
-                {image1 && <Image src={image1} alt={i("first")} />}
-                {image2 && <Image src={image2} alt={i("second")} />}
+                {image1 && (
+                  <Image loading="lazy" src={image1} alt={i("first")} />
+                )}
+                {image2 && (
+                  <Image loading="lazy" src={image2} alt={i("second")} />
+                )}
               </div>
             )}
 
             <div className="horizontal-images__fullscreen">
-              {image3 && <Image src={image3} alt={i("third")} />}
-              {image4 && <Image src={image4} alt={i("fourth")} />}
-              {image5 && <Image src={image5} alt={i("fifth")} />}
+              {image3 && <Image loading="lazy" src={image3} alt={i("third")} />}
+              {image4 && (
+                <Image loading="lazy" src={image4} alt={i("fourth")} />
+              )}
+              {image5 && <Image loading="lazy" src={image5} alt={i("fifth")} />}
             </div>
           </div>
         </section>

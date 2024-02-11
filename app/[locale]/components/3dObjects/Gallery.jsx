@@ -218,6 +218,7 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
           />
         </mesh>
         <Image
+          loading="lazy"
           alt={image}
           raycast={() => null}
           ref={image}

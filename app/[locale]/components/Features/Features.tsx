@@ -52,7 +52,7 @@ export function Features() {
         </p>
 
         <div className="features-cards">
-          {threeKeys.map((key,index) => {
+          {threeKeys.map((key, index) => {
             return (
               <div className="features-card" key={key}>
                 <div className="features-card__content">
@@ -60,14 +60,13 @@ export function Features() {
                     className={`features-card__front features-card__front-${key}`}
                   >
                     <Image
+                      loading="lazy"
                       src={`/svg/${i(`${key}.svg`)}.svg`}
                       alt={i(`${key}.alt`)}
                       width={100}
                       height={100}
                     />
-                    <p className="features-card__title">
-                      {i(`${key}.title`)}
-                    </p>
+                    <p className="features-card__title">{i(`${key}.title`)}</p>
                     <p className="features-card__subtitle">
                       {i(`${key}.subtitle`)}
                     </p>
@@ -79,8 +78,9 @@ export function Features() {
                 </div>
                 {isScreenTabletSm && (
                   <Image
+                    loading="lazy"
                     className="features-card__decoration"
-                    src={`/images/features/decoration/${index+1}.webp`}
+                    src={`/images/features/decoration/${index + 1}.webp`}
                     width={300}
                     height={300}
                     alt={a("features")}

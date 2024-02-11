@@ -55,6 +55,7 @@ export function Certificate() {
             onClick={() => openModal(screen.src, screen.title)}
           >
             <Image
+              loading="lazy"
               src={screen.src}
               alt={screen.title}
               className="about-achievements__image"
@@ -69,7 +70,7 @@ export function Certificate() {
           handleClose={certificateModal.close}
           noDivContent
         >
-          <Image src={selectedImage} alt={selectedAlt} />
+          <Image src={selectedImage} alt={selectedAlt} loading="lazy" />
         </PortalModal>
       )}
     </>

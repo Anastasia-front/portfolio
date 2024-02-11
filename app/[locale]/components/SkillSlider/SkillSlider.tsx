@@ -72,6 +72,7 @@ export function SkillSlider() {
         {images.map((image, index) => (
           <SwiperSlide key={index} className="swiper-slide-skill">
             <Image
+              loading="lazy"
               src={image}
               alt={`content image number ${index}`}
               width={300}

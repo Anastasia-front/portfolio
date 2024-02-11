@@ -62,13 +62,18 @@ export function Hero() {
           <div className="hero-image">
             {isScreenMobileLg && (
               <Image
+                loading="eager"
                 src={decoration}
                 alt={a("hero")}
                 className="hero-image__decoration"
               />
             )}
-
-            <Image src={hero} alt={h("hero")} className="hero-image__content" />
+            <Image
+              loading="eager"
+              src={hero}
+              alt={h("hero")}
+              className="hero-image__content"
+            />
           </div>
         </div>
       </section>

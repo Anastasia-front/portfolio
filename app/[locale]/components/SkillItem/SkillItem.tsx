@@ -36,6 +36,7 @@ export function SkillItem({ title, image, animation, isBig }: Props) {
         style={{ height: 150, width: 150 }}
       >
         <Image
+          loading="eager"
           className={`${isBig ? "isBig" : ""}`}
           src={image}
           alt={title}
