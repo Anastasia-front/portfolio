@@ -1,18 +1,30 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 
 import { motion } from "framer-motion";
 
-import {
-  Accordion,
-  Banner,
-  LottiePlayer,
-  Robots,
-  SkillSlider,
-} from "@/components";
 import { menuItems } from "@/constants";
 import { bannerVariants, gridVariants, opacityVariants } from "@/utils";
+
+const Accordion = dynamic(() =>
+  import("../components/Accordion/Accordion").then((mod) => mod.Accordion)
+);
+const Banner = dynamic(() =>
+  import("../components/Banner/Banner").then((mod) => mod.Banner)
+);
+const LottiePlayer = dynamic(() =>
+  import("../components/LottiePlayer/LottiePlayer").then(
+    (mod) => mod.LottiePlayer
+  )
+);
+const SkillSlider = dynamic(() =>
+  import("../components/SkillSlider/SkillSlider").then((mod) => mod.SkillSlider)
+);
+const Robots = dynamic(() =>
+  import("../components/Robots/Robots").then((mod) => mod.Robots)
+);
 
 export default function SkillsPage() {
   const t = useTranslations("skills");

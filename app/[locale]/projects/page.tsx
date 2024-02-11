@@ -3,17 +3,35 @@
 import { useState } from "react";
 
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
 
-import { Banner, Dropdown, LottiePlayer, Projects, Robots } from "@/components";
 import {
   menuItems,
   projectsEnglishLang,
   projectsUkrainianLang,
 } from "@/constants";
 import { gridVariants } from "@/utils";
+
+const Banner = dynamic(() =>
+  import("../components/Banner/Banner").then((mod) => mod.Banner)
+);
+const Dropdown = dynamic(() =>
+  import("../components/Dropdown/Dropdown").then((mod) => mod.Dropdown)
+);
+const LottiePlayer = dynamic(() =>
+  import("../components/LottiePlayer/LottiePlayer").then(
+    (mod) => mod.LottiePlayer
+  )
+);
+const Projects = dynamic(() =>
+  import("../components/Projects/Projects").then((mod) => mod.Projects)
+);
+const Robots = dynamic(() =>
+  import("../components/Robots/Robots").then((mod) => mod.Robots)
+);
 
 export default function ProjectsPage() {
   const t = useTranslations("projects");

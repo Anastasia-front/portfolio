@@ -3,6 +3,7 @@
 import { useMediaQuery } from "react-responsive";
 
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
@@ -11,10 +12,24 @@ import { motion } from "framer-motion";
 import decor1 from "@/assets/images/contacts/decoration/1.webp";
 import decor2 from "@/assets/images/contacts/decoration/2.webp";
 
-import { Contacts, Form, LottiePlayer, Robots } from "@/components";
 import { menuItems } from "@/constants";
 import { useGlobalContext } from "@/context";
 import { bannerVariants, gridVariants } from "@/utils";
+
+const Contacts = dynamic(() =>
+  import("../components/Contacts/Contacts").then((mod) => mod.Contacts)
+);
+const Form = dynamic(() =>
+  import("../components/Form/Form").then((mod) => mod.Form)
+);
+const LottiePlayer = dynamic(() =>
+  import("../components/LottiePlayer/LottiePlayer").then(
+    (mod) => mod.LottiePlayer
+  )
+);
+const Robots = dynamic(() =>
+  import("../components/Robots/Robots").then((mod) => mod.Robots)
+);
 
 export default function ContactsPage() {
   const t = useTranslations("contacts");

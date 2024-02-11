@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 import { Rubik } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,9 +11,12 @@ import { motion } from "framer-motion";
 
 import { headerImgVariants, overlayVariants, titleVariants } from "@/utils";
 
-import { Robots } from "@/components";
 import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
 import { useScreenQuery } from "@/hooks";
+
+const Robots = dynamic(() =>
+  import("../../components/Robots/Robots").then((mod) => mod.Robots)
+);
 
 interface Params {
   params: {

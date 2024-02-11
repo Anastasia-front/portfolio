@@ -1,20 +1,35 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 
 import { motion } from "framer-motion";
 
 import { bannerVariants } from "@/utils";
 import { menuItems } from "./constants";
 
-import {
-  Features,
-  GallerySection,
-  Hero,
-  ObjectsSection,
-  Robots,
-  Video,
-} from "./components";
+const Features = dynamic(() =>
+  import("./components/Features/Features").then((mod) => mod.Features)
+);
+const GallerySection = dynamic(() =>
+  import("./components/3dObjects/GallerySection").then(
+    (mod) => mod.GallerySection
+  )
+);
+const Hero = dynamic(() =>
+  import("./components/Hero/Hero").then((mod) => mod.Hero)
+);
+const ObjectsSection = dynamic(() =>
+  import("./components/3dObjects/ObjectsSection").then(
+    (mod) => mod.ObjectsSection
+  )
+);
+const Robots = dynamic(() =>
+  import("./components/Robots/Robots").then((mod) => mod.Robots)
+);
+const Video = dynamic(() =>
+  import("./components/Video/Video").then((mod) => mod.Video)
+);
 
 export default function Home() {
   const t = useTranslations("home");

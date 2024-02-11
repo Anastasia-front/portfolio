@@ -4,14 +4,29 @@ import React from "react";
 
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
+import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import { AboutItem, AchievementBlock, Banner, Robots } from "@/components";
 import { menuItems, sevenKeys } from "@/constants";
 import { useScreenQuery } from "@/hooks";
 import { bannerVariants, titleVariants } from "@/utils";
+
+const AboutItem = dynamic(() =>
+  import("../components/AboutItem/AboutItem").then((mod) => mod.AboutItem)
+);
+const AchievementBlock = dynamic(() =>
+  import("../components/AchievementBlock/AchievementBlock").then(
+    (mod) => mod.AchievementBlock
+  )
+);
+const Banner = dynamic(() =>
+  import("../components/Banner/Banner").then((mod) => mod.Banner)
+);
+const Robots = dynamic(() =>
+  import("../components/Robots/Robots").then((mod) => mod.Robots)
+);
 
 export default function AboutPage() {
   const t = useTranslations("about");
