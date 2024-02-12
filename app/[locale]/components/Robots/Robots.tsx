@@ -13,7 +13,7 @@ interface Props {
 
 export function Robots({ title, ogImg, page }: Props) {
   const pathname = usePathname();
-  const lang = pathname.slice(0, 3);
+  const lang = pathname.slice(1, 3);
 
   return (
     <Head>
@@ -22,8 +22,9 @@ export function Robots({ title, ogImg, page }: Props) {
       <title>{title} </title>
       <link
         rel="canonical"
-        href={`${BASE_URL}${lang}${page}`}
+        href={`${BASE_URL}/${lang}${page}`}
         key="canonical"
+        hrefLang={lang}
       />
     </Head>
   );
