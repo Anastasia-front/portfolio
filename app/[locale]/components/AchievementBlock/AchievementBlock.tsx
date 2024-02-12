@@ -69,7 +69,7 @@ export function AchievementBlock() {
       >
         {a("title.main")}
       </motion.h2>
-      <motion.h5
+      <motion.h3
         className={`about-achievements__title ${franklin.className}`}
         variants={titleVariants("second")}
         initial="offscreen"
@@ -77,7 +77,7 @@ export function AchievementBlock() {
         viewport={{ once: true, amount: 0.2 }}
       >
         {t("confirm")}
-      </motion.h5>
+      </motion.h3>
       <motion.h4
         className={`about-achievements__subtitle ${source.className}`}
         variants={titleVariants("second")}
@@ -132,7 +132,7 @@ export function AchievementBlock() {
           <span className="block-hint__prompt"> {h("hint")}</span>
         </div>
       </motion.div>
-      <motion.h5
+      <motion.h4
         className={`about-achievements__title ${franklin.className}`}
         variants={titleVariants("second")}
         initial="offscreen"
@@ -140,7 +140,7 @@ export function AchievementBlock() {
         viewport={{ once: true, amount: 0.2 }}
       >
         {t("github")}
-      </motion.h5>
+      </motion.h4>
       <motion.h4
         className={`about-achievements__subtitle ${source.className}`}
         variants={titleVariants("second")}
@@ -150,7 +150,7 @@ export function AchievementBlock() {
       >
         {a("title.third")}
       </motion.h4>
-      <motion.h6
+      <motion.h5
         className={`about-achievements__subtitle ${source.className}`}
         variants={titleVariants("second")}
         initial="offscreen"
@@ -158,7 +158,7 @@ export function AchievementBlock() {
         viewport={{ once: true, amount: 0.2 }}
       >
         ({a("title.video")})
-      </motion.h6>
+      </motion.h5>
       <motion.video
         className="github-size github-video"
         src="/video/achievements/github2023.mp4"

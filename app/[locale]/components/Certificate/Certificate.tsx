@@ -50,7 +50,6 @@ export function Certificate() {
         {screens.map((screen) => (
           <SwiperSlide
             key={screen.title}
-            tag="li"
             className="swiper-slide"
             onClick={() => openModal(screen.src, screen.title)}
           >
