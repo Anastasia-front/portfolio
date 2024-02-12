@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from "react";
 
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import UA from "@/assets/svg/ukraine.svg";
@@ -16,7 +15,6 @@ export const ButtonLanguage = () => {
 
   const a = useTranslations("alt");
   const t = useTranslations("switcher");
-  const b = useTranslations("btn");
 
   const pathname = usePathname();
 
@@ -66,14 +64,15 @@ export const ButtonLanguage = () => {
   };
 
   return (
-    <Link href={translatedPageString} aria-label={b("switcher")}>
-      <ButtonSwitcher
-        className={isVisible ? "visible" : "invisible"}
-        alt={a("svgLang")}
-        icon={icon}
-        onClick={clickHandler}
-        title={lang === "en" ? t("lang.en") : t("lang.uk")}
-      />
-    </Link>
+    <ButtonSwitcher
+      type="link"
+      href={translatedPageString}
+      ariaLabel={t("lang.title")}
+      className={isVisible ? "visible" : "invisible"}
+      alt={a("svgLang")}
+      icon={icon}
+      onClick={clickHandler}
+      title={lang === "en" ? t("lang.en") : t("lang.uk")}
+    />
   );
 };

@@ -62,10 +62,12 @@
   },
   "switcher": {
     "theme": {
+      "title": "Theme",
       "light": "Light",
       "dark": "Dark"
     },
     "lang": {
+      "title": "Language",
       "en": "English",
       "uk": "Ukrainian"
     }

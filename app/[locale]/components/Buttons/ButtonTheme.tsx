@@ -50,6 +50,7 @@ export const ButtonTheme = () => {
       alt={a("svgTheme")}
       icon={icon}
       onClick={clickHandler}
+      ariaLabel={t("theme.title")}
       title={theme === "dark" ? t("theme.dark") : t("theme.light")}
     />
   );
