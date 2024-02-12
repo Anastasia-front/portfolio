@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 import { BASE_URL, DESCRIPTION, TITLE } from "././[locale]/constants";
 
-export const metadata: Metadata & { robots: string } = {
+export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   openGraph: {
@@ -20,5 +20,4 @@ export const metadata: Metadata & { robots: string } = {
       uk: `${BASE_URL}/uk`,
     },
   },
-  robots: 'noindex', 
 };
