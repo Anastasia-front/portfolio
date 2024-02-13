@@ -27,7 +27,7 @@ export function Banner({ text, button, className = "" }: Props) {
       animate="visible"
       viewport={{ once: true, amount: 1 }}
     >
-      <h4 className="banner__text">{text}</h4>
+      <p className="banner__text">{text}</p>
       {button && (
         <ButtonText
           ariaLabel={t("contacts")}
