@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 
 import { Contacts, Logo, Navigation } from "@/components";
 import { CV } from "@/constants";
+import { currentMonth, currentYear } from "@/helpers";
+import { footerVariants } from "@/utils";
 
 interface Props {
   logo?: string;
@@ -20,33 +22,6 @@ export function Footer({ title, description }: Props) {
   const t = useTranslations("text");
 
   const { theme } = useTheme();
-
-  const footerVariants = {
-    hidden: {
-      opacity: 0,
-      scaleY: 0.3,
-      y: -300,
-    },
-    visible: {
-      opacity: 1,
-      scaleY: 1,
-      y: 0,
-
-      transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 20,
-        delay: 0.5,
-      },
-    },
-  };
-
-  const currentDate = new Date();
-
-  const currentYear = currentDate.getFullYear();
-  const currentMonth = new Intl.DateTimeFormat("en-US", {
-    month: "long",
-  }).format(currentDate);
 
   return (
     <footer id="footer">

@@ -14,6 +14,26 @@ export const buttonMotionProps = {
   },
 };
 
+export const footerVariants = {
+  hidden: {
+    opacity: 0,
+    scaleY: 0.3,
+    y: -300,
+  },
+  visible: {
+    opacity: 1,
+    scaleY: 1,
+    y: 0,
+
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 20,
+      delay: 0.5,
+    },
+  },
+};
+
 export const gridVariants: Variants = {
   hidden: {
     opacity: 0,
