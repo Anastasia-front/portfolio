@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
-    url: "/",
+    url: BASE_URL,
     siteName: TITLE,
     type: "website",
   },
@@ -34,11 +34,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
     languages: {
-      en: `${BASE_URL}/en`,
-      uk: `${BASE_URL}/uk`,
+      "en-US": `${BASE_URL}/en`,
+      "uk-UK": `${BASE_URL}/uk`,
     },
   },
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+  },
 };
 
 export default async function RootLayout({

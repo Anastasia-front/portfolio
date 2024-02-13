@@ -100,13 +100,13 @@ export default function ProjectsPage() {
             >
               {t("title")}
             </motion.h1>
-            <motion.h5
+            <motion.p
               variants={gridVariants}
               initial="hidden"
               animate="visible"
             >
               {t("description")}
-            </motion.h5>
+            </motion.p>
           </div>
           <div className="projects__filter">
             <Dropdown

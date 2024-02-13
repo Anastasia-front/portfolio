@@ -17,7 +17,6 @@ export function Robots({ title, ogImg, page }: Props) {
 
   return (
     <Head>
-      <meta name="robots" content="all" />
       {ogImg && <meta property="og:image" content={ogImg} />}
       <title>{title} </title>
       <link

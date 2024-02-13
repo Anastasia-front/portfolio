@@ -266,7 +266,8 @@ main {
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  p {
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(
       to right,
@@ -277,6 +278,9 @@ main {
       var(--color--orange-2)
     );
     background-clip: text;
+  }
+  p {
+    font-size: var(--font-size--4);
   }
 }
 [data-theme="dark"] .page-headings {
@@ -295,7 +299,8 @@ main {
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  p {
     background-image: linear-gradient(
       to right,
       var(--color--light-blue-4),

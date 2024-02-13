@@ -54,14 +54,14 @@ export default function SkillsPage() {
             >
               {t("title")}
             </motion.h1>
-            <motion.h5
+            <motion.p
               variants={gridVariants}
               initial="hidden"
               animate="visible"
               className="page-headings__medium-width"
             >
               {t("description")}
-            </motion.h5>
+            </motion.p>
           </div>
           <LottiePlayer
             src="/animation/skills.json"
