@@ -704,17 +704,9 @@ main {
 .main-layout {
   @include flex(column, center, center);
   gap: 1rem;
-  padding: 3rem 0;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-align: center;
-    text-transform: uppercase;
-  }
+  padding: 3rem;
+  text-align: center;
+  text-transform: uppercase;
 
   svg {
     fill: var(--color--light-blue-3);
@@ -793,6 +785,11 @@ main {
   text-align: center;
   &-text {
     text-align: center;
+  }
+}
+[data-theme="dark"] .center {
+  svg {
+    fill: var(--color--white);
   }
 }
 
