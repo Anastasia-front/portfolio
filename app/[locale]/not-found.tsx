@@ -9,7 +9,7 @@ export default function NotFound() {
   const h = useTranslations("home");
 
   return (
-    <main className="loading">
+    <main className="main-layout">
       <div className="page-headings page-headings__align-center page-headings__reverse">
         <h1>{t("title")}</h1>
         <h3>{t("description")}</h3>

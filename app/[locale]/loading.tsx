@@ -9,7 +9,7 @@ export default function Loading() {
   const n = useTranslations("nav");
 
   return (
-    <div className="loading">
+    <main className="main-layout">
       <div className="page-headings page-headings__align-center ">
         <h1>{t("please")}</h1>
         <h2>{t("wait")},</h2>
@@ -19,6 +19,6 @@ export default function Loading() {
         <h6>{t("load")}</h6>
       </div>
       <Loader />
-    </div>
+    </main>
   );
 }

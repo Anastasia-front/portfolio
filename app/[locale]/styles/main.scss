@@ -701,7 +701,7 @@ main {
   }
 }
 
-.loading {
+.main-layout {
   @include flex(column, center, center);
   gap: 1rem;
   padding: 3rem 0;
@@ -720,7 +720,7 @@ main {
     fill: var(--color--light-blue-3);
   }
 }
-[data-theme="dark"] .loading {
+[data-theme="dark"] .main-layout {
   svg {
     fill: var(--color--orange-3);
   }

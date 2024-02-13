@@ -34,10 +34,10 @@ export function ErrorBoundary({ children }: Props) {
 
   if (errorState.hasError) {
     return (
-      <div className="center">
+      <main className="center">
         <h1>{t("boundary")}</h1>
         <Loader />
-      </div>
+      </main>
     );
   }
 
