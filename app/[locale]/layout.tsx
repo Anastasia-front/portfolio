@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       uk: `${BASE_URL}/uk`,
     },
   },
-  robots: "/robots.ts",
+  robots: "index, follow",
 };
 
 export default async function RootLayout({

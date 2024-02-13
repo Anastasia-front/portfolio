@@ -1,12 +1,14 @@
-import { MetadataRoute } from 'next'
- 
+import { MetadataRoute } from "next";
+
+import { BASE_URL } from "./[locale]/constants";
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: '/private/',
+      userAgent: "*",
+      allow: "/",
+      disallow: "/private/",
     },
-    sitemap: 'https://portfolio-anastasia-front.vercel.app/sitemap.xml',
-  }
+    sitemap: `${BASE_URL}/sitemap.xml`,
+  };
 }
