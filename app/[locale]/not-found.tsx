@@ -2,18 +2,19 @@
 
 import { useTranslations } from "next-intl";
 
-import Link from "next/link";
+import { ButtonLink } from "./components";
 
 export default function NotFound() {
   const t = useTranslations("notFound");
+  const h = useTranslations("home");
 
   return (
-    <div className="page-headings">
-      <h1>{t("title")}</h1>
-      <h2>{t("description")}</h2>
-      <Link aria-label="Home page" href="/">
-        {t("link")}
-      </Link>
-    </div>
+    <main className="loading">
+      <div className="page-headings page-headings__align-center page-headings__reverse">
+        <h1>{t("title")}</h1>
+        <h3>{t("description")}</h3>
+      </div>
+      <ButtonLink text={t("link")} href="/" />
+    </main>
   );
 }

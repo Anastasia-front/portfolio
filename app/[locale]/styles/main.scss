@@ -224,6 +224,10 @@ main {
     align-items: center;
   }
 
+  &__reverse {
+    flex-direction: column-reverse;
+  }
+
   &__small-width {
     width: 90%;
 

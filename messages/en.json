@@ -27,9 +27,9 @@
     "load": "is loading..."
   },
   "notFound": {
-    "title": "Not Found",
-    "description": "Could not find requested resource",
-    "link": "Return Home"
+    "title": "Unfortunately, nothing found",
+    "description": "The requested resource could not be displayed at the given address in the search bar",
+    "link": "Return to Home Page"
   },
   "error": {
     "boundary": "Something went wrong. You can write me a letter about the reason for the error - and I will fix this bug when I learn about it ( unfortunately, there are no bugs )) Now please reload the page ;)"
@@ -125,7 +125,7 @@
     "contact": "If you are interested in working with me, please send me an email or contact me in any other way convenient for you"
   },
   "home": {
-    "title": "Greetings!",
+    "title": "Home page",
     "description": "Welcome to my portfolio site",
     "ogImage": "/images/opengraph/en/home.webp",
     "hero": {
