@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   metadataBase: new URL(BASE_URL),
+  manifest: `${BASE_URL}/manifest.json`,
   alternates: {
     canonical: BASE_URL,
     languages: {
