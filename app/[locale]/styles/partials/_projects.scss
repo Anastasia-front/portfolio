@@ -9,10 +9,14 @@
   display: grid;
 
   &__header {
-    @include flex(row, space-between, flex-start);
-    gap: 3rem;
+    @include flex(column-reverse, space-between, flex-end);
     z-index: 9;
     position: relative;
+
+    @media screen and (min-width: 440px) {
+      @include flex(row, space-between, flex-start);
+      gap: 3rem;
+    }
   }
 
   &__filter {
@@ -24,6 +28,13 @@
     }
 
     &-animation {
+      display: none;
+
+      @media screen and (min-width: 440px) {
+        display: block;
+        height: auto;
+      }
+
       svg {
         width: 100px !important;
         height: auto;
@@ -68,8 +79,8 @@
   color: var(--color--white);
 
   &-banner {
-    cursor: pointer;
     overflow: hidden;
+    cursor: pointer;
   }
 
   &-page {
