@@ -32,7 +32,7 @@
     "link": "Return to Home Page"
   },
   "error": {
-    "boundary": "Something went wrong. You can write me a letter about the reason for the error - and I will fix this bug when I learn about it ( unfortunately, there are no bugs )) Now please reload the page ;)"
+    "boundary": "Something went wrong. You can write me a letter about the reason for the error - and I will fix this bug when I learn about it ( unfortunately, there are no bugs )) Now please reload the page :)"
   },
   "license": {
     "accordion": "Background images are taken from the site",
@@ -166,7 +166,7 @@
       "subtitle": "pay attention to this prompt for understanding of how to interact with next section",
       "commentToSubtitle": "when mouse hovering over this text block, other hints will appear ( on a device without a mouse, you need to click on this text )",
       "prompt": "* in the block where the 3D objects are presented, in order to scroll the page, use the scrollbar on the right edge ( zoom actions will bring objects closer or further away )",
-      "comment": "** below are 3D objects, which are interactive - you can rotate them, enlarge, reduce, view them from all sides and do whatever you want ;)",
+      "comment": "** below are 3D objects, which are interactive - you can rotate them, enlarge, reduce, view them from all sides and do whatever you want :)",
       "hint": "*** if you are using mobile, click outside to close this text block",
       "now": "1. first device I'm using now",
       "inFuture": "2. second - I want to use it in the future",
@@ -259,7 +259,7 @@
   "skills": {
     "title": "My skills",
     "description": "Below are the various technologies, frameworks and libraries I know and can apply. For convenience, they are grouped and implemented using the Accordion component. Each card inside is interactive - interesting interaction )",
-    "slider": "This is how I work and as the workflow looks like from the outside - at least I want it to be like that ;)",
+    "slider": "This is how I work and as the workflow looks like from the outside - at least I want it to be like that :)",
     "ogImage": "/images/opengraph/en/skills.webp"
   },
   "projects": {

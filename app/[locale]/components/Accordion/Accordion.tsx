@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 import { useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
 
@@ -12,13 +11,15 @@ import { skillBlocksEnglish, skillBlocksUkrainian } from "@/constants";
 import { useKeyPress } from "@/hooks";
 import { fadeIn, opacityVariants } from "@/utils";
 
-export function Accordion() {
+interface Props {
+  lang: string;
+}
+
+export function Accordion({ lang }: Props) {
   const i = useTranslations("license");
 
   const [active, setActive] = useState(0);
 
-  const pathname = usePathname();
-  const lang = pathname.slice(0, 3);
   const skillBlocks = (() => {
     if (lang === "/uk") {
       return skillBlocksUkrainian;

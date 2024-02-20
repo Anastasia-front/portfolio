@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
+import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
 
@@ -31,6 +32,9 @@ export default function SkillsPage() {
   const b = useTranslations("banner");
   const n = useTranslations("nav");
 
+  const pathname = usePathname();
+  const lang = pathname.slice(0, 3);
+
   return (
     <>
       <Robots
@@ -46,7 +50,7 @@ export default function SkillsPage() {
         className="skills-page container"
       >
         <div className="skills-header">
-          <div className="page-headings">
+          <div className="page-headings page-headings__skills">
             <motion.h1
               variants={gridVariants}
               initial="hidden"
@@ -73,7 +77,7 @@ export default function SkillsPage() {
           />
         </div>
 
-        <Accordion />
+        <Accordion lang={lang} />
         <Banner text={b("contact")} button />
         <motion.div
           variants={opacityVariants("first")}
