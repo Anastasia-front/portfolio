@@ -76,7 +76,6 @@
   position: relative;
   border: 1px solid var(--color--dark-opacity);
   border-radius: var(--padding--sm);
-  color: var(--color--white);
 
   &-banner {
     overflow: hidden;
@@ -305,6 +304,10 @@
         border: 1px solid var(--color--light-blue-3);
         border-radius: var(--padding--sm);
       }
+
+      &:hover{
+        cursor: zoom-in;
+      }
     }
 
     .horizontal-images {
@@ -349,7 +352,6 @@
 }
 [data-theme="dark"] .project {
   border: 1px solid var(--color--light-opacity);
-  color: var(--color--black);
 
   &-page {
     border: none;

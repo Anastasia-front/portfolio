@@ -1,18 +1,27 @@
 "use client";
 
+import { useState } from "react";
+import { BsFillInfoCircleFill } from "react-icons/bs";
+
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import { Rubik } from "next/font/google";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
 
-import { headerImgVariants, overlayVariants, titleVariants } from "@/utils";
-
+import { PortalModal } from "@/components";
 import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
+import { useGlobalContext } from "@/context";
 import { useScreenQuery } from "@/hooks";
+import {
+  bannerVariants,
+  headerImgVariants,
+  overlayVariants,
+  titleVariants,
+} from "@/utils";
 
 const Robots = dynamic(() =>
   import("../../components/Robots/Robots").then((mod) => mod.Robots)
@@ -34,6 +43,20 @@ export default function Page({ params }: Params) {
   const l = useTranslations("projects.links");
   const p = useTranslations("projects");
   const n = useTranslations("nav");
+  const a = useTranslations("about.achievements");
+
+  const { projectModal } = useGlobalContext();
+
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | string>(
+    ""
+  );
+  const [selectedAlt, setSelectedAlt] = useState<string>("");
+
+  const openModal = (imageSrc: StaticImageData, alt: string) => {
+    setSelectedImage(imageSrc);
+    setSelectedAlt(alt);
+    projectModal.open();
+  };
 
   const { isScreenMobileLg } = useScreenQuery();
 
@@ -70,7 +93,13 @@ export default function Page({ params }: Params) {
         page={`/${project?.url || ""}`}
         title={`${n("page")} ${n("project")}`}
       />
-      <main className="container project project-page">
+      <motion.main
+        variants={bannerVariants}
+        initial="hidden"
+        animate="visible"
+        viewport={{ once: true, amount: 0 }}
+        className="container project project-page"
+      >
         <section className="project__header">
           <motion.img
             loading="eager"
@@ -176,37 +205,90 @@ export default function Page({ params }: Params) {
             </div>
           </div>
 
+          <motion.p className="block-hint__prompt width-22">
+            <BsFillInfoCircleFill /> {a("hint.img")}
+          </motion.p>
+
           <div className="project__content__screenshots">
             {isScreenMobileLg ? (
               <div className="horizontal-images">
                 {image1 && (
-                  <Image loading="lazy" src={image1} alt={i("first")} />
+                  <Image
+                    loading="lazy"
+                    src={image1}
+                    alt={i("first")}
+                    onClick={() => openModal(image1, i("first"))}
+                  />
                 )}
                 {image2 && (
-                  <Image loading="lazy" src={image2} alt={i("second")} />
+                  <Image
+                    loading="lazy"
+                    src={image2}
+                    alt={i("second")}
+                    onClick={() => openModal(image2, i("second"))}
+                  />
                 )}
               </div>
             ) : (
               <div className="horizontal-images__fullscreen horizontal-images__fullscreen-paddings">
                 {image1 && (
-                  <Image loading="lazy" src={image1} alt={i("first")} />
+                  <Image
+                    loading="lazy"
+                    src={image1}
+                    alt={i("first")}
+                    onClick={() => openModal(image1, i("first"))}
+                  />
                 )}
                 {image2 && (
-                  <Image loading="lazy" src={image2} alt={i("second")} />
+                  <Image
+                    loading="lazy"
+                    src={image2}
+                    alt={i("second")}
+                    onClick={() => openModal(image2, i("second"))}
+                  />
                 )}
               </div>
             )}
 
             <div className="horizontal-images__fullscreen">
-              {image3 && <Image loading="lazy" src={image3} alt={i("third")} />}
-              {image4 && (
-                <Image loading="lazy" src={image4} alt={i("fourth")} />
+              {image3 && (
+                <Image
+                  loading="lazy"
+                  src={image3}
+                  alt={i("third")}
+                  onClick={() => openModal(image3, i("third"))}
+                />
               )}
-              {image5 && <Image loading="lazy" src={image5} alt={i("fifth")} />}
+              {image4 && (
+                <Image
+                  loading="lazy"
+                  src={image4}
+                  alt={i("fourth")}
+                  onClick={() => openModal(image4, i("fourth"))}
+                />
+              )}
+              {image5 && (
+                <Image
+                  loading="lazy"
+                  src={image5}
+                  alt={i("fifth")}
+                  onClick={() => openModal(image5, i("fifth"))}
+                />
+              )}
             </div>
           </div>
+          {projectModal.isOpen && (
+            <PortalModal
+              nameId="project-portal"
+              isOpen={projectModal.isOpen}
+              handleClose={projectModal.close}
+              noDivContent
+            >
+              <Image src={selectedImage} alt={selectedAlt} loading="lazy" />
+            </PortalModal>
+          )}
         </section>
-      </main>
+      </motion.main>
     </>
   );
 }

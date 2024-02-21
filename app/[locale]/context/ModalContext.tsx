@@ -7,6 +7,7 @@ export function useGlobalContext() {
   const certificateModal = useModal("certificate");
   const settingsModal = useModal("settings");
   const githubModal = useModal("github");
+  const projectModal = useModal("projectImg");
 
   return {
     menuModal,
@@ -15,5 +16,6 @@ export function useGlobalContext() {
     certificateModal,
     settingsModal,
     githubModal,
+    projectModal,
   };
 }
