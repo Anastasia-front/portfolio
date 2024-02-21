@@ -21,7 +21,7 @@ const LottiePlayer = dynamic(() =>
   )
 );
 const SkillSlider = dynamic(() =>
-  import("../components/SkillSlider/SkillSlider").then((mod) => mod.SkillSlider)
+  import("../components/Skill/SkillSlider").then((mod) => mod.SkillSlider)
 );
 const Robots = dynamic(() =>
   import("../components/Robots/Robots").then((mod) => mod.Robots)
