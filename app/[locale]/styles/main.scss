@@ -668,7 +668,7 @@ main {
 
   &-content {
     @include flex(column, center, center);
-    gap: 2rem;
+    gap: 3rem;
   }
 
   &-title {

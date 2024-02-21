@@ -65,66 +65,84 @@
       position: absolute;
       right: 0px;
       color: var(--color--red-light);
+      font-size: var(--font-size--9);
+      line-height: 1.2;
 
       &-email {
-        top: -4rem;
+        bottom: 3.8rem;
 
         @include useScreen("mobile-lg") {
-          top: -3rem;
-          width: 106%;
           right: auto;
+          width: 135%;
         }
         @include useScreen("tablet-sm") {
-          top: -2.5rem;
-          width: 220%;
+          line-height: 0.8;
         }
-        @include useScreen("tablet-lg") {
-          width: 125%;
-        }
-
-      }
-
-      &-text {
-        top: -1rem;
-        width: 70%;
-
-        @include useScreen("mobile-md") {
-          width: auto;
-          top: -0.1rem;
-        }
-        @include useScreen("mobile-xl") {
-          top: -1.5rem;
-          width: 70%;
-        }
-        @include useScreen("tablet-sm") {
-          top: -0.1rem;
-          width: max-content;
-          right: auto;
-          left: 4rem;
+        @media screen and (min-width: 830px) {
+          line-height: 1;
         }
         @include useScreen("tablet-md") {
           width: auto;
-          top: -0.1rem;
-          right: -8rem;
+        }
+
+        &-modal {
+          width: auto;
+
+          @include useScreen("tablet-lg") {
+            width: 65%;
+            right: 0;
+            bottom: 2.8rem;
+          }
+          @media screen and (min-width: 2000px) {
+            width: auto;
+          }
+        }
+      }
+
+      &-text {
+        bottom: 2.7rem;
+        width: 70%;
+
+        @include useScreen("tablet-md") {
+          width: 80%;
+        }
+
+        &-modal {
+          width: 80%;
+          line-height: 1;
+
+          @media screen and (min-width: 420px) {
+            width: 50%;
+          }
+          @media screen and (min-width: 540px) {
+            width: 80%;
+          }
+          @include useScreen("tablet-md") {
+            width: auto;
+          }
         }
       }
 
       &-textfield {
-        top: -1rem;
-        width: 70%;
+        bottom: 13rem;
+        width: 60%;
 
-        @include useScreen("mobile-lg") {
-          top: -0.1rem;
-          width: auto;
-        }
-        @include useScreen("tablet-sm") {
-          width: max-content;
-          right: auto;
-          left: 7rem;
-        }
         @include useScreen("tablet-md") {
           right: 0px;
           left: auto;
+          width: auto;
+        }
+
+        &-modal {
+          width: 51%;
+          line-height: 0.8;
+
+          @media screen and (min-width: 420px) {
+            width: 50%;
+          }
+          @include useScreen("mobile-lg") {
+            width: auto;
+          }
         }
       }
     }
@@ -275,6 +293,7 @@
     }
   }
 }
+
 [data-theme="dark"] .contact {
   &__input {
     @include area(
@@ -395,9 +414,9 @@
 
         .contacts-item {
           @include flex(row, space-between, center);
+          gap: 1rem;
           padding-bottom: 0.5rem;
           border-bottom: 1px dotted var(--color--light-blue-2);
-          gap: 1rem;
 
           @include useOnHover {
             h6 {

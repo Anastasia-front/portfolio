@@ -1,4 +1,8 @@
+"use client";
+
 import { FieldErrors, UseFormRegister } from "react-hook-form";
+
+import { useGlobalContext } from "@/context";
 
 interface FormData {
   subject: string;
@@ -22,11 +26,21 @@ export function InputField({
   errors,
   placeholder,
 }: Props) {
+  const { formModal } = useGlobalContext();
+
   const errorMessage =
-    (type === "text" && "contact__input-error contact__input-error-text") ||
-    (type === "email" && "contact__input-error contact__input-error-email") ||
+    (type === "text" &&
+      (formModal.isOpen
+        ? "contact__input-error contact__input-error-text contact__input-error-text-modal"
+        : "contact__input-error contact__input-error-text")) ||
+    (type === "email" &&
+      (formModal.isOpen
+        ? "contact__input-error contact__input-error-email contact__input-error-email-modal"
+        : "contact__input-error contact__input-error-email")) ||
     (type === "textarea" &&
-      "contact__input-error contact__input-error-textfield") ||
+      (formModal.isOpen
+        ? "contact__input-error contact__input-error-textfield contact__input-error-textfield-modal"
+        : "contact__input-error contact__input-error-textfield")) ||
     "";
 
   return (
