@@ -74,7 +74,6 @@ export function useModal(modalName: string): {
 } {
   const context = useContext(ModalContext);
   if (!context) {
-    console.log(context)
     throw new Error("useModal must be used within a ModalProvider");
   }
 

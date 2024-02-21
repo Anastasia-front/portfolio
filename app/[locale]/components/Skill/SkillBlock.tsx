@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 import { SkillItem } from "@/components";
-import { skills,Category } from "@/constants";
+import { Category, skills } from "@/constants";
 import { fadeIn } from "@/utils";
 
 interface Props {
   id: number;
-  type:Category;
+  type: Category;
   title: string;
   className: string;
   active: number;
