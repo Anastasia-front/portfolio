@@ -15,7 +15,7 @@ import { navVariants } from "@/utils";
 export function Header() {
   const t = useTranslations("btn");
 
-  const { formModal,menuModal } = useGlobalContext();
+  const { formModal, menuModal } = useGlobalContext();
 
   const pathname = usePathname();
   const isHeaderFixed = pathname === "/en" || pathname === "/uk";
@@ -26,16 +26,19 @@ export function Header() {
   const { lockScroll, unlockScroll } = useScrollLock();
 
   useEffect(() => {
-    if (formModal.isOpen) {
+    if (formModal.isOpen || menuModal.isOpen) {
       lockScroll();
     } else {
       unlockScroll();
     }
-  }, [formModal.isOpen, lockScroll, unlockScroll]);
+  }, [formModal.isOpen, menuModal.isOpen, lockScroll, unlockScroll]);
 
   useKeyPress("Escape", () => {
-    if (formModal.isOpen) {
-      formModal.close;
+    if (formModal.isOpen && menuModal.isOpen) {
+      // formModal.close();
+      menuModal.close;
+    } else {
+      menuModal.close;
     }
   });
 

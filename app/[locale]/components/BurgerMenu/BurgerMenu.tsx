@@ -1,18 +1,18 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
-import { Logo, Portal } from "@/components";
+import { ButtonText, Logo, Portal } from "@/components";
 import { useGlobalContext } from "@/context";
-import { useKeyPress, useScreenQuery } from "@/hooks";
 
 import { Navigation } from "../Navigation";
 import { Switchers } from "../Switchers";
 
 export function BurgerMenu() {
-  const b = useTranslations("btn");
+  const t = useTranslations("btn");
 
-  const { menuModal } = useGlobalContext();
+  const { menuModal, formModal } = useGlobalContext();
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
@@ -20,9 +20,16 @@ export function BurgerMenu() {
     }
   };
 
-  useKeyPress("Escape", menuModal.close);
+  const handleButtonClick = () => {
+    if (menuModal.isOpen) {
+      menuModal.close();
+      formModal.open();
+    }
+  };
 
-  const { isScreenTabletSm } = useScreenQuery();
+  const pathname = usePathname();
+  const contactsPage =
+    pathname === "/en/contacts" || pathname === "/uk/contacts";
 
   const classNameActive = menuModal.isOpen ? "active" : "";
 
@@ -32,11 +39,11 @@ export function BurgerMenu() {
         type="button"
         className={`button-icon animated-icon ${classNameActive}`}
         onClick={menuModal.open}
-        aria-label={b("burger")}
+        aria-label={t("burger")}
       >
         <span className="icon"></span>
       </button>
-      <Portal wrapperId="portal">
+      <Portal wrapperId="burger-portal">
         <div
           className={`burger-backdrop ${
             menuModal.isOpen ? "burger-backdrop__active" : ""
@@ -52,7 +59,7 @@ export function BurgerMenu() {
               type="button"
               className={`button-icon button-icon__close button-icon__close-right animated-icon ${classNameActive}`}
               onClick={menuModal.close}
-              aria-label={b("close")}
+              aria-label={t("close")}
             >
               <span className="icon"></span>
             </button>
@@ -60,7 +67,14 @@ export function BurgerMenu() {
             <div className="burger-column">
               <Navigation onClick={menuModal.close} />
               <Switchers className="burger-switchers" />
-              <Logo size={isScreenTabletSm ? 30 : 50} />
+              {!contactsPage && (
+                <ButtonText
+                  text={t("contacts")}
+                  onClick={handleButtonClick}
+                  ariaLabel={t("contacts")}
+                />
+              )}
+              <Logo size={40} />
             </div>
           </div>
         </div>
