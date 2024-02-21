@@ -22,7 +22,7 @@ export * from "./LottiePlayer";
 export * from "./Navigation";
 export * from "./Portal";
 export * from "./Progress";
-export * from "./ProjectItem";
+export * from "./Project";
 export * from "./Projects";
 export * from "./Robots";
 export * from "./Settings";
