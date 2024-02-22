@@ -22,12 +22,12 @@ export const contacts = [
       },
       {
         title: "title",
-        href: "https://www.linkedin.com/in/anastasiia-prysiazhna/",
+        href: "https://www.linkedin.com/in/anastasia-prysiazhna/",
         dataText: "dataText",
       },
       {
         title: "title",
-        href: "https://www.instagram.com/anastasiia_prysiazhna/",
+        href: "https://www.instagram.com/anastasia_prysiazhna/",
         dataText: "dataText",
       },
     ],
@@ -38,7 +38,7 @@ export const contacts = [
     links: [
       {
         title: "title",
-        href: "https://t.me/anastasiia_prysiazhna",
+        href: "https://t.me/anastasia_prysiazhna",
         dataText: "dataText",
       },
       {

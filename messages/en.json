@@ -1,5 +1,5 @@
 {
-  "name": { "first": "Anastasiia", "last": "Prysiazhna" },
+  "name": { "first": "Anastasia", "last": "Prysiazhna" },
   "alt": {
     "logo": "Logo",
     "svgTheme": "Theme icon",
@@ -130,7 +130,7 @@
     "ogImage": "/images/opengraph/en/home.webp",
     "hero": {
       "title": {
-        "name": "Hi, I'm Anastasiia Prysiazhna",
+        "name": "Hi, I'm Anastasia Prysiazhna",
         "position": "junior fullstack developer"
       },
       "subtitle": "general information",
@@ -181,7 +181,7 @@
     }
   },
   "about": {
-    "title": "Prysiazhna Anastasiia",
+    "title": "Prysiazhna Anastasia",
     "description": "I am a full-stack web developer with a passion for building beautiful and functional websites",
     "ogImage": "/images/opengraph/en/about.webp",
     "features": {
@@ -345,15 +345,15 @@
             },
             "second": {
               "title": "LinkedIn",
-              "href": "https://www.linkedin.com/in/anastasiia-prysiazhna/",
-              "info": "Anastasiia Prysiazhna ( @anastasiia-prysiazhna )",
+              "href": "https://www.linkedin.com/in/anastasia-prysiazhna/",
+              "info": "Anastasia Prysiazhna ( @anastasia-prysiazhna )",
               "dataText": "Follow in LinkedIn",
               "icon": "BsLinkedin"
             },
             "third": {
               "title": "Instagram",
-              "href": "https://www.instagram.com/anastasiia_prysiazhna/",
-              "info": "@anastasiia_prysiazhna",
+              "href": "https://www.instagram.com/anastasia_prysiazhna/",
+              "info": "@anastasia_prysiazhna",
               "dataText": "Follow in Instagram",
               "icon": "BsInstagram"
             }
@@ -364,8 +364,8 @@
           "links": {
             "first": {
               "title": "Telegram",
-              "href": "https://t.me/anastasiia_prysiazhna",
-              "info": "by number +380666080702 or by username @anastasiia_prysiazhna",
+              "href": "https://t.me/anastasia_prysiazhna",
+              "info": "by number +380666080702 or by username @anastasia_prysiazhna",
               "dataText": "Chat in Telegram",
               "icon": "BsTelegram"
             },

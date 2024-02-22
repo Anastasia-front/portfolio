@@ -345,15 +345,15 @@
             },
             "second": {
               "title": "ЛінкедІн",
-              "href": "https://www.linkedin.com/in/anastasiia-prysiazhna/",
-              "info": "Anastasiia Prysiazhna ( @anastasiia-prysiazhna )",
+              "href": "https://www.linkedin.com/in/anastasia-prysiazhna/",
+              "info": "Anastasia Prysiazhna ( @anastasia-prysiazhna )",
               "dataText": "Відстежувати у ЛінкедІн",
               "icon": "BsLinkedin"
             },
             "third": {
               "title": "Інстаграм",
-              "href": "https://www.instagram.com/anastasiia_prysiazhna/",
-              "info": "@anastasiia_prysiazhna",
+              "href": "https://www.instagram.com/anastasia_prysiazhna/",
+              "info": "@anastasia_prysiazhna",
               "dataText": "Відстежувати в Інстаграм",
               "icon": "BsInstagram"
             }
@@ -364,8 +364,8 @@
           "links": {
             "first": {
               "title": "Телеграм",
-              "href": "https://t.me/anastasiia_prysiazhna",
-              "info": "за номером телефону +380666080702 або за ніком @anastasiia_prysiazhna",
+              "href": "https://t.me/anastasia_prysiazhna",
+              "info": "за номером телефону +380666080702 або за ніком @anastasia_prysiazhna",
               "dataText": "Написати у Телеграм",
               "icon": "BsTelegram"
             },
