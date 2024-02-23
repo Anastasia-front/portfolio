@@ -18,19 +18,11 @@ export function Video() {
   const lang = pathname.slice(0, 3);
 
   const video = (() => {
-    if (lang === "/uk") {
-      if (theme === "light") {
-        return "/video/hero/uk-light.mp4";
-      } else {
-        return "/video/hero/uk-dark.mp4";
-      }
-    } else {
-      if (theme === "light") {
-        return "/video/hero/en-light.mp4";
-      } else {
-        return "/video/hero/en-dark.mp4";
-      }
-    }
+    return `/video/hero/${lang}-${theme}.mp4`;
+  })();
+
+  const poster = (() => {
+    return `/images/poster/${lang}-${theme}.webp`;
   })();
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -58,6 +50,7 @@ export function Video() {
         onPlay={() => {
           setIsClicked(true);
         }}
+        poster={poster}
       />
       {!isClicked ? (
         <div className="video-tip__first" ref={textRef} onClick={handleClick}>

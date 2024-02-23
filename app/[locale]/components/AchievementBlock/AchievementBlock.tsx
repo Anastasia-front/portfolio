@@ -165,6 +165,7 @@ export function AchievementBlock() {
         ref={videoRef}
         onClick={handleClick}
         controls={true}
+        poster="/images/poster/github2023.webp"
         variants={titleVariants("first")}
         initial="offscreen"
         whileInView="onscreen"
