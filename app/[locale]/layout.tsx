@@ -5,14 +5,13 @@ import { NextIntlClientProvider, useLocale } from "next-intl";
 import { Oxygen } from "next/font/google";
 import { notFound } from "next/navigation";
 
-import {
-  ContentIndicator,
-  ErrorBoundary,
-  Footer,
-  FormPortal,
-  Header,
-  Settings,
-} from "@/components";
+const { Settings } = await import("./components/Settings");
+const { ContentIndicator } = await import("./components/ContentIndicator");
+const { ErrorBoundary } = await import("./components/ErrorBoundary");
+const { FormPortal } = await import("./components/Form/FormPortal");
+const { Header } = await import("./components/Header");
+const { Footer } = await import("./components/Footer");
+
 import { GlobalProviders } from "@/providers";
 import { BASE_URL, DESCRIPTION, TITLE } from "./constants";
 

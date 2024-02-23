@@ -16,10 +16,8 @@ import { bannerVariants, titleVariants } from "@/utils";
 const AboutItem = dynamic(() =>
   import("../components/AboutItem/AboutItem").then((mod) => mod.AboutItem)
 );
-const AchievementBlock = dynamic(() =>
-  import("../components/AchievementBlock/AchievementBlock").then(
-    (mod) => mod.AchievementBlock
-  )
+const { AchievementBlock } = await import(
+  "../components/AchievementBlock/AchievementBlock"
 );
 const Banner = dynamic(() =>
   import("../components/Banner/Banner").then((mod) => mod.Banner)

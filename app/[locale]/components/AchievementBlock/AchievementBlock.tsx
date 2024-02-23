@@ -13,9 +13,12 @@ import Image, { StaticImageData } from "next/image";
 
 import { motion } from "framer-motion";
 
-import { Certificate, PortalModal, Progress } from "@/components";
+import { PortalModal } from "@/components";
 import { useGlobalContext } from "@/context";
 import { titleVariants } from "@/utils";
+
+const { Certificate } = await import("../Certificate/Certificate");
+const { Progress } = await import("../Progress/Progress");
 
 import github from "@/assets/images/achievements/github-wrapped.webp";
 
