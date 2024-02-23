@@ -46,31 +46,6 @@
     }
   }
 }
-[data-theme="dark"] .projects {
-  &__headings {
-    h1 {
-      background-image: linear-gradient(
-        to right,
-        var(--color--orange-2),
-        var(--color--orange-4),
-        var(--color--orange-2) 50%,
-        var(--color--orange-4),
-        var(--color--orange-2)
-      );
-    }
-
-    h6 {
-      background-image: linear-gradient(
-        to right,
-        var(--color--light-blue-4),
-        var(--color--light-blue-3),
-        var(--color--light-blue-4) 50%,
-        var(--color--light-blue-3),
-        var(--color--light-blue-4)
-      );
-    }
-  }
-}
 
 .project {
   position: relative;
@@ -96,17 +71,6 @@
     @include useScreen("tablet-sm") {
       border-radius: var(--padding--sm);
     }
-  }
-
-  &__title {
-    -webkit-text-fill-color: transparent;
-    padding: var(--padding--sm-2);
-    font-weight: var(--font-weight--normal-1);
-    background-image: linear-gradient(
-      to right,
-      var(--color--light-blue-2),
-      var(--color--orange-2)
-    );
   }
 
   &:first-child {

@@ -7,32 +7,22 @@
     -webkit-text-fill-color: transparent;
     gap: 0.3rem;
     color: var(--color--light-blue-3);
-    background-image: linear-gradient(
-      to right,
-      var(--color--orange-4) 10%,
-      var(--color--orange-2) 40%,
-      var(--color--orange-4) 10%,
+    @include text-linearGradient-2(
+      var(--color--orange-4),
       var(--color--orange-2)
     );
-    background-clip: text;
 
     @include useOnHover {
       color: var(--color--light-blue-2);
-      background-image: linear-gradient(
-        to right,
-        var(--color--orange-2) 10%,
-        var(--color--orange-4) 40%,
-        var(--color--orange-2) 10%,
+      @include text-linearGradient-2(
+        var(--color--orange-2),
         var(--color--orange-4)
       );
     }
     @include useOnClick {
       color: var(--color--light-blue-3);
-      background-image: linear-gradient(
-        to right,
-        var(--color--orange-1) 10%,
-        var(--color--orange-2) 40%,
-        var(--color--orange-1) 10%,
+      @include text-linearGradient-2(
+        var(--color--orange-1),
         var(--color--orange-2)
       );
     }
@@ -166,31 +156,21 @@
 [data-theme="dark"] .dropdown {
   &-button {
     color: var(--color--orange-3);
-    background-image: linear-gradient(
-      to right,
-      var(--color--light-blue-4) 10%,
-      var(--color--light-blue-2) 40%,
-      var(--color--light-blue-4) 10%,
+    @include text-linearGradient-2(
+      var(--color--light-blue-4),
       var(--color--light-blue-2)
     );
 
     @include useOnHover {
       color: var(--color--orange-2);
-      background-image: linear-gradient(
-        to right,
-        var(--color--light-blue-2) 10%,
-        var(--color--light-blue-4) 40%,
-        var(--color--light-blue-2) 10%,
+      @include text-linearGradient-2(
+        var(--color--light-blue-2),
         var(--color--light-blue-4)
       );
     }
     @include useOnClick {
-      color: var(--color--orange-3);
-      background-image: linear-gradient(
-        to right,
-        var(--color--light-blue-4) 10%,
-        var(--color--light-blue-2) 40%,
-        var(--color--light-blue-4) 10%,
+      @include text-linearGradient-2(
+        var(--color--light-blue-1),
         var(--color--light-blue-2)
       );
     }

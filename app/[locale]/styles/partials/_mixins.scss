@@ -55,3 +55,28 @@
 @mixin box-shadow-7($color) {
   box-shadow: 0 10px 15px $color;
 }
+
+@mixin text-linearGradient-1($color-1, $color-2) {
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    $color-1,
+    $color-2,
+    $color-1 50%,
+    $color-2,
+    $color-1
+  );
+  background-clip: text;
+}
+
+@mixin text-linearGradient-2($color-1, $color-2) {
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    $color-1 10%,
+    $color-2 40%,
+    $color-1 10%,
+    $color-2
+  );
+  background-clip: text;
+}

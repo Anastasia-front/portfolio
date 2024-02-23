@@ -263,16 +263,10 @@ main {
 
   h1,
   h2 {
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-      to right,
+    @include text-linearGradient-1(
       var(--color--light-blue-4),
-      var(--color--light-blue-3),
-      var(--color--light-blue-4) 50%,
-      var(--color--light-blue-3),
-      var(--color--light-blue-4)
+      var(--color--light-blue-3)
     );
-    background-clip: text;
   }
 
   h3,
@@ -280,16 +274,10 @@ main {
   h5,
   h6,
   p {
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-      to right,
+    @include text-linearGradient-1(
       var(--color--orange-2),
-      var(--color--orange-4),
-      var(--color--orange-2) 50%,
-      var(--color--orange-4),
-      var(--color--orange-2)
+      var(--color--orange-4)
     );
-    background-clip: text;
   }
   p {
     font-size: var(--font-size--4);
@@ -298,13 +286,9 @@ main {
 [data-theme="dark"] .page-headings {
   h1,
   h2 {
-    background-image: linear-gradient(
-      to right,
+    @include text-linearGradient-1(
       var(--color--orange-2),
-      var(--color--orange-4),
-      var(--color--orange-2) 50%,
-      var(--color--orange-4),
-      var(--color--orange-2)
+      var(--color--orange-4)
     );
   }
 
@@ -313,13 +297,9 @@ main {
   h5,
   h6,
   p {
-    background-image: linear-gradient(
-      to right,
+    @include text-linearGradient-1(
       var(--color--light-blue-4),
-      var(--color--light-blue-3),
-      var(--color--light-blue-4) 50%,
-      var(--color--light-blue-3),
-      var(--color--light-blue-4)
+      var(--color--light-blue-3)
     );
   }
 }
@@ -672,16 +652,11 @@ main {
   }
 
   &-title {
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-      to right,
+    text-align: center;
+    @include text-linearGradient-1(
       var(--color--light-blue-4),
-      var(--color--light-blue-3),
-      var(--color--light-blue-4) 50%,
-      var(--color--light-blue-3),
-      var(--color--light-blue-4)
+      var(--color--light-blue-3)
     );
-    background-clip: text;
   }
 }
 [data-theme="dark"] .modal {
@@ -698,13 +673,9 @@ main {
   }
 
   &-title {
-    background-image: linear-gradient(
-      to right,
+    @include text-linearGradient-1(
       var(--color--orange-2),
-      var(--color--orange-4),
-      var(--color--orange-2) 50%,
-      var(--color--orange-4),
-      var(--color--orange-2)
+      var(--color--orange-4)
     );
   }
 }
