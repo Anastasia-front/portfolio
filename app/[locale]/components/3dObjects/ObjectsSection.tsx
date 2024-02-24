@@ -11,7 +11,7 @@ import { opacityVariants } from "@/utils";
 
 import { Dynamic } from "./Dynamic";
 
-export function ObjectsSection() {
+export default function ObjectsSection() {
   const i = useTranslations("home.3d");
   const b = useTranslations("btn");
 

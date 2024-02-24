@@ -12,7 +12,7 @@ import { menuItems, threeKeys } from "@/constants";
 import { useScreenQuery } from "@/hooks";
 import { opacityVariants } from "@/utils";
 
-export function Features() {
+export default function Features() {
   const i = useTranslations("home.features");
   const b = useTranslations("btn");
   const a = useTranslations("alt.decoration");

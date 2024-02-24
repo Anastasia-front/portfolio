@@ -22,7 +22,7 @@ const oswald = Oswald({
   weight: ["600"],
 });
 
-export function Hero() {
+export default function Hero() {
   const i = useTranslations("home.hero");
   const t = useTranslations("home.hero.title");
   const b = useTranslations("btn");

@@ -13,7 +13,7 @@ import { menuItems } from "@/constants";
 
 import { Dynamic } from "./Dynamic";
 
-export function GallerySection() {
+export default function GallerySection() {
   const i = useTranslations("home.gallery");
   const b = useTranslations("btn");
 
