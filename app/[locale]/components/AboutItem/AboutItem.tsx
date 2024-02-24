@@ -10,7 +10,7 @@ interface Props {
   description: string;
 }
 
-export function AboutItem({ number, title, description }: Props) {
+export default function AboutItem({ number, title, description }: Props) {
   return (
     <motion.li
       className="about-item"

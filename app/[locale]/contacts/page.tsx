@@ -1,5 +1,7 @@
 "use client";
 
+import { lazy } from "react";
+
 import { useMediaQuery } from "react-responsive";
 
 import { useTranslations } from "next-intl";
@@ -16,9 +18,8 @@ import { menuItems } from "@/constants";
 import { useGlobalContext } from "@/context";
 import { bannerVariants, gridVariants } from "@/utils";
 
-const Contacts = dynamic(() =>
-  import("../components/Contacts/Contacts").then((mod) => mod.Contacts)
-);
+const Contacts = lazy(() => import("../components/Contacts/Contacts"));
+
 const Form = dynamic(() =>
   import("../components/Form/Form").then((mod) => mod.Form)
 );

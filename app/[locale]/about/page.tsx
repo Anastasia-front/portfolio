@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { lazy, useRef } from "react";
 
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
@@ -13,12 +13,11 @@ import { menuItems, sevenKeys } from "@/constants";
 import { useScreenQuery } from "@/hooks";
 import { bannerVariants, titleVariants } from "@/utils";
 
-const AboutItem = dynamic(() =>
-  import("../components/AboutItem/AboutItem").then((mod) => mod.AboutItem)
+const AboutItem = lazy(() => import("../components/AboutItem/AboutItem"));
+const AchievementBlock = lazy(
+  () => import("../components/AchievementBlock/AchievementBlock")
 );
-const { AchievementBlock } = await import(
-  "../components/AchievementBlock/AchievementBlock"
-);
+
 const Banner = dynamic(() =>
   import("../components/Banner/Banner").then((mod) => mod.Banner)
 );
@@ -41,23 +40,11 @@ export default function AboutPage() {
   const pathname = usePathname();
   const lang = pathname.slice(0, 3);
   const img = (() => {
-    if (lang === "/uk") {
-      if (theme === "light") {
-        return `/images/about/${folder}/uk-light.webp`;
-      } else {
-        return `/images/about/${folder}/uk-dark.webp`;
-      }
-    } else {
-      if (theme === "light") {
-        return `/images/about/${folder}/en-light.webp`;
-      } else {
-        return `/images/about/${folder}/en-dark.webp`;
-      }
-    }
+    return `/images/about/${folder}/${lang}-${theme}.webp`;
   })();
 
   //scroll animations
-  const header = React.useRef(null);
+  const header = useRef(null);
   const scrollYProgress = useScroll({
     target: header,
     offset: ["start end", "end start"],

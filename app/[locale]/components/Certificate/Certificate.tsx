@@ -17,7 +17,7 @@ import screen1 from "@/assets/images/certificate/screen1.webp";
 import screen2 from "@/assets/images/certificate/screen2.webp";
 import screen3 from "@/assets/images/certificate/screen3.webp";
 
-export function Certificate() {
+export default function Certificate() {
   const a = useTranslations("about.achievements.alt.certificate");
 
   const { certificateModal } = useGlobalContext();

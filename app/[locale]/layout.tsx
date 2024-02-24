@@ -1,16 +1,20 @@
-import React from "react";
+import React, { lazy } from "react";
 
 import type { Metadata } from "next";
 import { NextIntlClientProvider, useLocale } from "next-intl";
 import { Oxygen } from "next/font/google";
 import { notFound } from "next/navigation";
 
-const { Settings } = await import("./components/Settings");
-const { ContentIndicator } = await import("./components/ContentIndicator");
-const { ErrorBoundary } = await import("./components/ErrorBoundary");
-const { FormPortal } = await import("./components/Form/FormPortal");
-const { Header } = await import("./components/Header");
-const { Footer } = await import("./components/Footer");
+const Settings = lazy(() => import("./components/Settings/Settings"));
+const ContentIndicator = lazy(
+  () => import("./components/ContentIndicator/ContentIndicator")
+);
+const ErrorBoundary = lazy(
+  () => import("./components/ErrorBoundary/ErrorBoundary")
+);
+const FormPortal = lazy(() => import("./components/Form/FormPortal"));
+const Header = lazy(() => import("./components/Header/Header"));
+const Footer = lazy(() => import("./components/Footer/Footer"));
 
 import { GlobalProviders } from "@/providers";
 import { BASE_URL, DESCRIPTION, TITLE } from "./constants";

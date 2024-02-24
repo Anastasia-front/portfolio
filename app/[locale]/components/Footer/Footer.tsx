@@ -5,7 +5,8 @@ import { useTheme } from "next-themes";
 
 import { motion } from "framer-motion";
 
-import { Contacts, Logo, Navigation } from "@/components";
+import { Logo, Navigation } from "@/components";
+import Contacts from "@/components/Contacts/Contacts";
 import { CV } from "@/constants";
 import { currentMonth, currentYear } from "@/helpers";
 import { footerVariants } from "@/utils";
@@ -17,7 +18,7 @@ interface Props {
   links?: string[];
 }
 
-export function Footer({ title, description }: Props) {
+export default function Footer({ title, description }: Props) {
   const i = useTranslations("name");
   const t = useTranslations("text");
 

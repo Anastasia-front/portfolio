@@ -13,7 +13,7 @@ type ErrorBoundaryState = {
   hasError: boolean;
 };
 
-export function ErrorBoundary({ children }: Props) {
+export default function ErrorBoundary({ children }: Props) {
   const t = useTranslations("error");
 
   const [errorState, setErrorState] = useState<ErrorBoundaryState>({
@@ -43,5 +43,3 @@ export function ErrorBoundary({ children }: Props) {
 
   return <>{children}</>;
 }
-
-export default ErrorBoundary;

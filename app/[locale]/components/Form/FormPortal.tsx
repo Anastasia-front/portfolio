@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { Form, PortalModal } from "@/components";
 import { useGlobalContext } from "@/context";
 
-export function FormPortal() {
+export default function FormPortal() {
   const t = useTranslations("contacts.form");
 
   const { formModal } = useGlobalContext();

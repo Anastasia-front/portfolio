@@ -33,7 +33,7 @@ import ukLightA1 from "@/assets/images/achievements/uk-light-a1.webp";
 import ukLightA2 from "@/assets/images/achievements/uk-light-a2.webp";
 import ukLightA3 from "@/assets/images/achievements/uk-light-a3.webp";
 
-export function Progress() {
+export default function Progress() {
   const a = useTranslations("about.achievements");
 
   const { progressModal } = useGlobalContext();

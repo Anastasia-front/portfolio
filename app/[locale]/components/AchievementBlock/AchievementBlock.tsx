@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { lazy, useRef, useState } from "react";
 import {
   BsFillInfoCircleFill,
   BsFillInfoSquareFill,
@@ -17,8 +17,8 @@ import { PortalModal } from "@/components";
 import { useGlobalContext } from "@/context";
 import { titleVariants } from "@/utils";
 
-const { Certificate } = await import("../Certificate/Certificate");
-const { Progress } = await import("../Progress/Progress");
+const Certificate = lazy(() => import("../Certificate/Certificate"));
+const Progress = lazy(() => import("../Progress/Progress"));
 
 import github from "@/assets/images/achievements/github-wrapped.webp";
 
@@ -32,7 +32,7 @@ const source = Source_Code_Pro({
   weight: ["600"],
 });
 
-export function AchievementBlock() {
+export default function AchievementBlock() {
   const a = useTranslations("about.achievements");
   const t = useTranslations("about");
   const h = useTranslations("home.3d");
