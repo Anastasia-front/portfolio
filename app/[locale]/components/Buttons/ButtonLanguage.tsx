@@ -19,15 +19,15 @@ export const ButtonLanguage = () => {
   const pathname = usePathname();
 
   const [lang, setLang] = useState<"en" | "uk">("en");
-  const array = pathname.split("/");
+  const arrayPath = pathname.split("/");
 
   const translatedPage = () => {
-    if (array[1] === "uk") {
-      array.splice(1, 1, "en");
-      return array.join("/");
+    if (arrayPath[1] === "uk") {
+      arrayPath.splice(1, 1, "en");
+      return arrayPath.join("/");
     } else {
-      array.splice(1, 1, "uk");
-      return array.join("/");
+      arrayPath.splice(1, 1, "uk");
+      return arrayPath.join("/");
     }
   };
   const translatedPageString = translatedPage();
@@ -35,8 +35,8 @@ export const ButtonLanguage = () => {
   const icon = useMemo(() => {
     const IconUA = <UA />;
     const IconUS = <US />;
-    return array[1] === "uk" ? IconUS : IconUA;
-  }, [array]);
+    return arrayPath[1] === "uk" ? IconUS : IconUA;
+  }, [arrayPath]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -53,12 +53,12 @@ export const ButtonLanguage = () => {
     setIsVisible(false);
     setTimeout(() => {
       setIsVisible(true);
-      if (array[1] === "uk") {
-        setLang("en");
-        window.localStorage.setItem("lang", "en");
-      } else {
+      if (arrayPath[1] === "uk") {
         setLang("uk");
         window.localStorage.setItem("lang", "uk");
+      } else {
+        setLang("en");
+        window.localStorage.setItem("lang", "en");
       }
     }, 300);
   };
