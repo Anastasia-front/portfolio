@@ -54,11 +54,11 @@ export const ButtonLanguage = () => {
     setTimeout(() => {
       setIsVisible(true);
       if (arrayPath[1] === "uk") {
-        setLang("uk");
-        window.localStorage.setItem("lang", "uk");
-      } else {
         setLang("en");
         window.localStorage.setItem("lang", "en");
+      } else {
+        setLang("uk");
+        window.localStorage.setItem("lang", "uk");
       }
     }, 300);
   };
