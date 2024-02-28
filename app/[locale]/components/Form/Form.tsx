@@ -38,11 +38,7 @@ interface FormData {
   message: string;
 }
 
-interface Props {
-  onClick?: () => void;
-}
-
-export function Form({ onClick }: Props) {
+export function Form() {
   const t = useTranslations("contacts.form");
   const b = useTranslations("btn");
 
@@ -122,14 +118,6 @@ export function Form({ onClick }: Props) {
     }
   };
 
-  const handleSubmitClick = () => {
-    if (onClick) {
-      setTimeout(() => {
-        onClick();
-      }, 4000);
-    }
-  };
-
   return (
     <motion.form
       onSubmit={handleSubmit(onSubmit)}
@@ -171,7 +159,6 @@ export function Form({ onClick }: Props) {
         type="submit"
         className={`contact__submit ${buttonClasses}`}
         disabled={loading || formStatus === "error" || formStatus === "success"}
-        onClick={handleSubmitClick}
         aria-label={b("submit")}
       >
         {buttonContent}

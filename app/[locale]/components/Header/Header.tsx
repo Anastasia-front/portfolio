@@ -35,7 +35,6 @@ export default function Header() {
 
   useKeyPress("Escape", () => {
     if (formModal.isOpen && menuModal.isOpen) {
-      // formModal.close();
       menuModal.close;
     } else {
       menuModal.close;

@@ -18,7 +18,7 @@ export default function FormPortal() {
         handleClose={formModal.close}
         title={t("title")}
       >
-        <Form onClick={formModal.close} />
+        <Form />
       </PortalModal>
     )
   );
