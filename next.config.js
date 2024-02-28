@@ -4,7 +4,7 @@
 
 const withNextIntl = require("next-intl/plugin")(
   // This is the default (also the `src` folder is supported out of the box)
-  "./i18n.ts"
+  "./src/i18n.ts"
 );
 
 module.exports = withNextIntl({
@@ -37,7 +37,7 @@ module.exports = withNextIntl({
     return [
       {
         source: "/robots.ts",
-        destination: "/app/robots.ts",
+        destination: "/src/app/robots.ts",
       },
     ];
   },
@@ -65,6 +65,11 @@ module.exports = withNextIntl({
   },
 
   eslint: {
-    dirs: ["app"], // Only run ESLint on the 'src' directory during production builds (next build)
+    dirs: ["src"], // Only run ESLint on the 'src' directory during production builds (next build)
   },
+
+  // babel: {
+  //   presets: ["next/babel"],
+  //   plugins: [["@babel/plugin-transform-react-jsx", { runtime: "automatic" }]],
+  // },
 });

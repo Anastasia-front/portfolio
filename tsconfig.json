@@ -21,18 +21,18 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./app/[locale]/*"]
+      "@/*": ["./src/app/[locale]/*"]
     },
     "allowImportingTsExtensions": true,
     "forceConsistentCasingInFileNames": true
   },
   "include": [
     "next-env.d.ts",
-    "app/[locale]/**/*.ts",
-    "app/[locale]/**/*.tsx",
+    "src/app/[locale]/**/*.ts",
+    "src/app/[locale]/**/*.tsx",
     ".next/types/**/*.ts",
-    "app/[locale]/components/3dObjects/Gallery.jsx",
-    "app/[locale]/not-found.tsx"
+    "src/app/[locale]/components/3dObjects/Gallery.jsx",
+    "src/app/[locale]/not-found.tsx"
   ],
   "exclude": ["node_modules"]
 }
