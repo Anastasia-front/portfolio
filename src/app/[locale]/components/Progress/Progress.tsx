@@ -35,7 +35,7 @@ export default function Progress() {
   const locale = useLocale() as Locale;
 
   const getAchievement = (index: number): string => {
-    return `/images/achievements/${locale}-${theme}-a${index}`;
+    return `/images/achievements/${locale}-${theme}-a${index}.webp`;
   };
 
   return (
@@ -60,7 +60,7 @@ export default function Progress() {
             <Image
               loading="lazy"
               src={getAchievement(index)}
-              alt={a(`alt.cabinet.${getWordFromNumber(index + 1)}`)}
+              alt={a(`alt.cabinet.${getWordFromNumber(index)}`)}
               className="about-achievements__image"
             />
           </SwiperSlide>
