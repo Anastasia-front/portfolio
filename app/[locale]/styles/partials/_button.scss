@@ -133,7 +133,17 @@
     z-index: 10;
     position: fixed;
     right: 15vw;
-    bottom: 15vh;
+    bottom: 30vh;
+
+    @media screen and (min-height:480px){
+      bottom: 25vh;
+    }
+    @media screen and (min-height:520px){
+      bottom: 20vh;
+    }
+    @media screen and (min-height:600px){
+      bottom: 15vh;
+    }
 
     button {
       padding: 1rem;
