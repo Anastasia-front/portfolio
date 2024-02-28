@@ -20,8 +20,6 @@ import { titleVariants } from "@/utils";
 const Certificate = lazy(() => import("../Certificate/Certificate"));
 const Progress = lazy(() => import("../Progress/Progress"));
 
-import github from "@/assets/images/achievements/github-wrapped.webp";
-
 const franklin = Libre_Franklin({
   subsets: ["latin"],
   weight: ["500"],
@@ -207,7 +205,7 @@ export default function AchievementBlock() {
           handleClose={githubModal.close}
           noDivContent
         >
-          <Image src={github} alt={selectedAlt} loading="lazy" />
+          <Image src='/images/about/github-wrapped.webp' alt={selectedAlt} loading="lazy" />
         </PortalModal>
       )}
     </motion.div>
