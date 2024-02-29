@@ -59,6 +59,7 @@ export default function AboutPage() {
         page={menuItems[1].url}
         ogImg={t("ogImage")}
         title={`${n("page")} ${n("about")}`}
+        description={t('description')}
       />
       <main className="container">
         <motion.div ref={header} className="about-header">

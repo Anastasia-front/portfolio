@@ -41,6 +41,7 @@ export default function SkillsPage() {
         page={menuItems[2].url}
         ogImg={t("ogImage")}
         title={`${n("page")} ${n("skills")}`}
+        description={t("description")}
       />
       <motion.main
         variants={bannerVariants}

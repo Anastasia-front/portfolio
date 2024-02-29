@@ -1,8 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
-import { useLocale } from "next-intl";
 
 import { motion } from "framer-motion";
 
@@ -61,7 +60,8 @@ export default function ProjectPage({ params }: Params) {
     <>
       <Robots
         page={`/${project?.url || ""}`}
-        title={`${n("page")} ${n("project")}`}
+        title={`${n("page")} ${n("project")}, name ${name}`}
+        description={description || ""}
       />
       <motion.main
         variants={bannerVariants}

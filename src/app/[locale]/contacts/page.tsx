@@ -42,6 +42,7 @@ export default function ContactsPage() {
         title={`${n("page")} ${n("contacts")}`}
         page={menuItems[4].url}
         ogImg={t("ogImage")}
+        description={t("description")}
       />
       <motion.main
         variants={bannerVariants}

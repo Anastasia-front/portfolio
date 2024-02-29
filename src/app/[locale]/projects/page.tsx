@@ -89,6 +89,7 @@ export default function ProjectsPage() {
         page={menuItems[3].url}
         ogImg={t("ogImage")}
         title={`${n("page")} ${n("projects")}`}
+        description={t("description")}
       />
       <main className="container">
         <div className="projects__header">

@@ -34,6 +34,7 @@ export default function Home() {
         page={menuItems[0].url}
         ogImg={t("ogImage")}
         title={`${n("page")} ${n("home")}`}
+        description={t("description")}
       />
       <motion.main
         variants={bannerVariants}

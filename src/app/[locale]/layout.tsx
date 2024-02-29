@@ -26,12 +26,7 @@ import "./styles/main.scss";
 const oxygen = Oxygen({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
   openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
-    url: BASE_URL,
     siteName: TITLE,
     type: "website",
   },
@@ -40,8 +35,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
     languages: {
-      "en-US": `${BASE_URL}/en`,
-      "uk-UK": `${BASE_URL}/uk`,
+      "en-US": `${BASE_URL}/en-US`,
+      "uk-UK": `${BASE_URL}/uk-UK`,
     },
   },
   robots: {

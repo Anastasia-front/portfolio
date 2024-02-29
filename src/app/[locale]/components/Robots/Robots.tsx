@@ -1,7 +1,10 @@
 "use client";
 
 import Head from "next/head";
-import { usePathname } from "next/navigation";
+
+import { useLocale } from "next-intl";
+
+import { type Locale } from "src/locales";
 
 import { BASE_URL } from "@/constants";
 
@@ -9,21 +12,29 @@ interface Props {
   ogImg?: string;
   title: string;
   page: string;
+  description: string;
 }
 
-export function Robots({ title, ogImg, page }: Props) {
-  const pathname = usePathname();
-  const lang = pathname.slice(1, 3);
+export function Robots({ title, ogImg, page, description }: Props) {
+  const locale = useLocale() as Locale;
 
   return (
     <Head>
-      {ogImg && <meta property="og:image" content={ogImg} />}
+      {ogImg && (
+        <>
+          <meta property="og:image" content={ogImg} />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+          <meta property="og:url" content={`${BASE_URL}${page}`} />
+        </>
+      )}
       <title>{title} </title>
+      <meta name="description" content={description} />
       <link
         rel="canonical"
-        href={`${BASE_URL}/${lang}${page}`}
+        href={`${BASE_URL}${page}`}
         key="canonical"
-        hrefLang={lang}
+        hrefLang={locale}
       />
     </Head>
   );
