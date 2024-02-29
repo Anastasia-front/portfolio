@@ -131,19 +131,9 @@
     @include flex(row, center, center);
     gap: 1rem;
     z-index: 10;
-    position: fixed;
-    right: 15vw;
-    bottom: 30vh;
-
-    @media screen and (min-height:1000px){
-      bottom: 25vh;
-    }
-    @media screen and (min-height:1500px){
-      bottom: 20vh;
-    }
-    @media screen and (min-height:2000px){
-      bottom: 15vh;
-    }
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
 
     button {
       padding: 1rem;
