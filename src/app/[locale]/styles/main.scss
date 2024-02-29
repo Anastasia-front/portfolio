@@ -610,6 +610,7 @@ main {
     position: relative;
     width: 80vw;
     height: max-content;
+    min-height: 50vh;
     max-height: 80vh;
     padding: 2rem;
     border-radius: var(--border-radius--lg);
