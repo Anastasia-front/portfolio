@@ -15,7 +15,7 @@ export function Navigation({ location = "", onClick }: Props) {
   const t = useTranslations("nav");
 
   const routesAndMenus = [
-    { route: "", menuIndex: 0 },
+    { route: "/", menuIndex: 0 },
     { route: "/about", menuIndex: 1 },
     { route: "/skills", menuIndex: 2 },
     { route: "/projects", menuIndex: 3 },
