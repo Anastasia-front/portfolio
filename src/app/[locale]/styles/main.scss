@@ -645,6 +645,12 @@ main {
         #fca26e 100%
       );
     }
+    /* Additional styling for Firefox */
+    /* Note: Firefox doesn't support linear gradients on scrollbar-thumb */
+    /* You can customize this separately for Firefox */
+    & {
+      scrollbar-color: #68b8c1 #fcfbfc #fca26e;
+    }
   }
 
   &-content {
@@ -905,4 +911,3 @@ main {
     }
   }
 }
-
