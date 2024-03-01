@@ -1,35 +1,18 @@
 "use client";
 
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 
-import { useTranslations } from "next-intl";
-
 import { motion } from "framer-motion";
 
-import { opacityVariants } from "@/utils";
+import { opacityVariants, sendEmail } from "@/utils";
 
 import { FormSchema, InputField } from "@/components";
 import { getButtonClasses, getButtonContent } from "@/helpers";
-import { sendEmail, sendMessageToTelegram } from "@/utils";
-
-import {
-  BASE_URL_LOCAL,
-  PUBLIC_EMAIL_LOCAL,
-  PUBLIC_EMAIL_VERCEL,
-} from "@/constants";
-
-let isLocalhost: boolean = false;
-
-if (typeof window !== "undefined") {
-  isLocalhost = window.location.href.includes(BASE_URL_LOCAL);
-}
-
-const formAction = isLocalhost
-  ? `https://formsubmit.co/${PUBLIC_EMAIL_LOCAL}`
-  : `https://formsubmit.co/${PUBLIC_EMAIL_VERCEL}`;
+import { sendMessageToTelegram } from "@/utils";
 
 type FormStatus = "success" | "error" | null;
 interface FormData {
@@ -113,6 +96,8 @@ export function Form() {
       setTimeout(() => {
         setFormStatus(null);
       }, 3000);
+      console.error(error);
+      alert("Error, please try resubmitting the form");
     } finally {
       setLoading(false);
     }
@@ -122,7 +107,6 @@ export function Form() {
     <motion.form
       onSubmit={handleSubmit(onSubmit)}
       className="contact__form"
-      action={formAction}
       method="POST"
       variants={opacityVariants("first")}
       initial="offscreen"
