@@ -14,6 +14,54 @@
 @use "./partials/swiper" as *;
 @use "./partials/vars" as *;
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--color--black);
+  font-size: 16px;
+  line-height: 1.5;
+  user-select: text;
+  background-color: var(--color--bg-light);
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--color--blue-grey-2);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: var(--border-radius--md);
+    background: linear-gradient(to top, #fca26e 20%, #fcfbfc 50%, #68b8c1 100%);
+  }
+}
+[data-theme="dark"] body {
+  color: var(--color--light-blue-1);
+  background-color: var(--color--bg-dark);
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, #68b8c1 30%, #fca26e 100%);
+  }
+}
+
+#root {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+
+main {
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    background-color: transparent;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -21,12 +69,33 @@ h4,
 h5,
 h6,
 p,
-ul {
+ul,
+li {
   margin: 0;
   padding: 0;
   border: none;
+
   &:focus {
     outline: none;
+  }
+
+  &::selection {
+    color: var(--color--light-opacity);
+    background-color: var(--color--dark-opacity);
+  }
+}
+[data-theme="dark"] h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  &::selection {
+    color: var(--color--dark-opacity);
+    background-color: var(--color--light-opacity);
   }
 }
 
@@ -134,53 +203,6 @@ img {
 }
 *::-webkit-focus-ring-color {
   outline-color: transparent;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow-x: hidden;
-  color: var(--color--black);
-  font-size: 16px;
-  line-height: 1.5;
-  user-select: none;
-  background-color: var(--color--bg-light);
-
-  &::-webkit-scrollbar {
-    width: 7px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: var(--color--blue-grey-2);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: var(--border-radius--md);
-    background: linear-gradient(to top, #fca26e 20%, #fcfbfc 50%, #68b8c1 100%);
-  }
-}
-[data-theme="dark"] body {
-  color: var(--color--light-blue-1);
-  background-color: var(--color--bg-dark);
-  &::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top, #68b8c1 30%, #fca26e 100%);
-  }
-}
-
-#root {
-  flex: 1;
-}
-
-footer {
-  margin-top: auto;
-}
-
-main {
-  overflow-x: hidden;
-  &::-webkit-scrollbar {
-    background-color: transparent;
-  }
 }
 
 .container {
