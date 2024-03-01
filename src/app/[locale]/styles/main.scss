@@ -62,6 +62,15 @@ main {
   }
 }
 
+*::selection {
+  color: var(--color--dark-opacity);
+  background-color: var(--color--grey-opacity);
+}
+
+[data-theme="dark"] *::selection {
+  background-color: var(--color--light-opacity);
+}
+
 h1,
 h2,
 h3,
@@ -77,25 +86,6 @@ li {
 
   &:focus {
     outline: none;
-  }
-
-  &::selection {
-    color: var(--color--light-opacity);
-    background-color: var(--color--dark-opacity);
-  }
-}
-[data-theme="dark"] h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-li {
-  &::selection {
-    color: var(--color--dark-opacity);
-    background-color: var(--color--light-opacity);
   }
 }
 
