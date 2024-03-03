@@ -1,18 +1,19 @@
 "use client";
 
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 
+import { useTranslations } from "next-intl";
+
 import { motion } from "framer-motion";
 
-import { opacityVariants, sendEmail } from "@/utils";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 import { FormSchema, InputField } from "@/components";
 import { getButtonClasses, getButtonContent } from "@/helpers";
-import { sendMessageToTelegram } from "@/utils";
+import { sendEmail } from "@/lib";
+import { opacityVariants, sendMessageToTelegram } from "@/utils";
 
 type FormStatus = "success" | "error" | null;
 interface FormData {
@@ -88,7 +89,6 @@ export function Form() {
       setTimeout(() => {
         setFormStatus(null);
       }, 3000);
-
       reset();
     } catch (error) {
       alert(error);
@@ -97,7 +97,6 @@ export function Form() {
         setFormStatus(null);
       }, 3000);
       console.error(error);
-      alert("Error, please try resubmitting the form");
     } finally {
       setLoading(false);
     }
@@ -150,3 +149,7 @@ export function Form() {
     </motion.form>
   );
 }
+
+// export async function getStaticProps(formData: FormData) {
+//   await sendEmail(formData);
+// }
