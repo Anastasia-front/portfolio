@@ -241,6 +241,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    cursor: pointer;
     background: var(--color--dark-opacity);
 
     &__active {
@@ -279,6 +280,7 @@
     height: 100%;
     padding: 8rem 2rem;
     overflow: auto;
+    cursor: default;
 
     @include useScreen("mobile-lg") {
       padding: 8rem 4rem;

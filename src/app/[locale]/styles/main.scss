@@ -515,6 +515,7 @@ img {
     left: 0;
     width: 100vw;
     height: 100vh;
+    cursor: pointer;
     background: var(--color--grey-opacity);
   }
 
@@ -531,6 +532,7 @@ img {
     border-radius: var(--border-radius--md) var(--border-radius--md) 0%
       var(--border-radius--md);
     overflow: auto;
+    cursor: default;
     background: var(--color--peach);
 
     @include useScreen("mobile-lg") {
@@ -614,6 +616,7 @@ img {
     left: 0;
     width: 100vw;
     height: 100vh;
+    cursor: pointer;
     background: var(--color--grey-opacity);
   }
 
@@ -626,6 +629,7 @@ img {
     padding: 2rem;
     border-radius: var(--border-radius--lg);
     overflow: auto;
+    cursor: default;
     background: var(--color--bg-light);
 
     &__with-scrollbar {
