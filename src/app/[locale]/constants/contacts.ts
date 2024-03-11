@@ -6,7 +6,7 @@ export const contacts = [
       { title: "title", href: "tel:+380666080702", dataText: "dataText" },
       {
         title: "title",
-        href: "mailto:palitsanastasia3.ap@gmail.com",
+        href: "mailto:prysiazhnastasia@gmail.com",
         dataText: "dataText",
       },
     ],
