@@ -14,6 +14,7 @@ import cover19 from "@/assets/images/projects/project19/cover.webp";
 import cover2 from "@/assets/images/projects/project2/cover.webp";
 import cover20 from "@/assets/images/projects/project20/cover.webp";
 import cover21 from "@/assets/images/projects/project21/cover.webp";
+import cover22 from "@/assets/images/projects/project22/cover.webp";
 import cover3 from "@/assets/images/projects/project3/cover.webp";
 import cover4 from "@/assets/images/projects/project4/cover.webp";
 import cover5 from "@/assets/images/projects/project5/cover.webp";
@@ -142,11 +143,17 @@ import twentyProjectSnippet3 from "@/assets/images/projects/project20/snippet3.w
 import twentyProjectSnippet4 from "@/assets/images/projects/project20/snippet4.webp";
 import twentyProjectSnippet5 from "@/assets/images/projects/project20/snippet5.webp";
 
-import twentyoneProjectSnippet1 from "@/assets/images/projects/project21/snippet1.webp";
-import twentyoneProjectSnippet2 from "@/assets/images/projects/project21/snippet2.webp";
-import twentyoneProjectSnippet3 from "@/assets/images/projects/project21/snippet3.webp";
-import twentyoneProjectSnippet4 from "@/assets/images/projects/project21/snippet4.webp";
-import twentyoneProjectSnippet5 from "@/assets/images/projects/project21/snippet5.webp";
+import twentyOneProjectSnippet1 from "@/assets/images/projects/project21/snippet1.webp";
+import twentyOneProjectSnippet2 from "@/assets/images/projects/project21/snippet2.webp";
+import twentyOneProjectSnippet3 from "@/assets/images/projects/project21/snippet3.webp";
+import twentyOneProjectSnippet4 from "@/assets/images/projects/project21/snippet4.webp";
+import twentyOneProjectSnippet5 from "@/assets/images/projects/project21/snippet5.webp";
+
+import twentyTwoProjectSnippet1 from "@/assets/images/projects/project22/snippet1.webp";
+import twentyTwoProjectSnippet2 from "@/assets/images/projects/project22/snippet2.webp";
+import twentyTwoProjectSnippet3 from "@/assets/images/projects/project22/snippet3.webp";
+import twentyTwoProjectSnippet4 from "@/assets/images/projects/project22/snippet4.webp";
+import twentyTwoProjectSnippet5 from "@/assets/images/projects/project22/snippet5.webp";
 
 export interface Project {
   id?: number;
@@ -804,8 +811,8 @@ export const projectsEnglishLang: Project[] = [
     language: "python",
     development: "data",
     type: "individual",
-    name: "Python Staff",
-    categories: ["The beginning of learning a programming language"],
+    name: "Staff",
+    categories: ["Python", "CLI", "serializing", "OOP"],
     image: cover21,
     url: "python-staff",
     features: ["serializing", "OOP"],
@@ -819,11 +826,42 @@ export const projectsEnglishLang: Project[] = [
     },
     content: {
       description: "CLI for managing staff information",
-      image1: twentyoneProjectSnippet1,
-      image2: twentyoneProjectSnippet2,
-      image3: twentyoneProjectSnippet3,
-      image4: twentyoneProjectSnippet4,
-      image5: twentyoneProjectSnippet5,
+      image1: twentyOneProjectSnippet1,
+      image2: twentyOneProjectSnippet2,
+      image3: twentyOneProjectSnippet3,
+      image4: twentyOneProjectSnippet4,
+      image5: twentyOneProjectSnippet5,
+    },
+  },
+  {
+    id: 22,
+    language: "python",
+    development: "data",
+    type: "individual",
+    name: "Bot",
+    categories: ["Python", "recursion", "CLI"],
+    image: cover22,
+    url: "python-bot",
+    features: [
+      "Countries (info, comparison)",
+      "Directory structure",
+      "Phone book (add, change, get, delete)",
+    ],
+    problem:
+      "The absence of a Command-Line Interface (CLI) limits the convenience and speed of user interaction with three main areas of information: 'Countries (info, comparison),' 'Directory structure,' and 'Phone book (add, change, get, delete).' Tasks related to obtaining information about countries, working with directory structures, and managing the phone book could become more convenient and efficient with a command-line interface.",
+    solution:
+      "Implementing a command-line interface for each of the specified areas. This will provide users with the ability to perform operations quickly and conveniently, sending commands to retrieve information about countries, interact with directory structures, and perform operations related to managing the phone book, such as adding, changing, getting, and deleting contacts. A command-line interface can simplify and expedite the interaction with these functions, providing a convenient and efficient tool for users.",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/python-bot",
+    },
+    content: {
+      description: "CLI for getting and managing information",
+      image1: twentyTwoProjectSnippet1,
+      image2: twentyTwoProjectSnippet2,
+      image3: twentyTwoProjectSnippet3,
+      image4: twentyTwoProjectSnippet4,
+      image5: twentyTwoProjectSnippet5,
     },
   },
 ];
@@ -1434,7 +1472,7 @@ export const projectsUkrainianLang: Project[] = [
     solution:
       "Як результат я пройшла багато курсів і добре оволоділа базовими поняттями для початку",
     links: {
-      website: "",
+      website: null,
       github: "https://github.com/Anastasia-front/python-start",
     },
     content: {
@@ -1451,8 +1489,8 @@ export const projectsUkrainianLang: Project[] = [
     language: "python",
     development: "data",
     type: "individual",
-    name: "Python Staff",
-    categories: ["Початок вивчення мови програмування"],
+    name: "Staff",
+    categories: ["Python", "CLI", "серіалізація", "ООП"],
     image: cover21,
     url: "python-staff",
     features: ["серіалізація", "ООП"],
@@ -1466,11 +1504,42 @@ export const projectsUkrainianLang: Project[] = [
     },
     content: {
       description: "CLI для управління інформацією про персонал",
-      image1: twentyoneProjectSnippet1,
-      image2: twentyoneProjectSnippet2,
-      image3: twentyoneProjectSnippet3,
-      image4: twentyoneProjectSnippet4,
-      image5: twentyoneProjectSnippet5,
+      image1: twentyOneProjectSnippet1,
+      image2: twentyOneProjectSnippet2,
+      image3: twentyOneProjectSnippet3,
+      image4: twentyOneProjectSnippet4,
+      image5: twentyOneProjectSnippet5,
+    },
+  },
+  {
+    id: 22,
+    language: "python",
+    development: "data",
+    type: "individual",
+    name: "Bot",
+    categories: ["Python", "рекурсія", "CLI"],
+    image: cover22,
+    url: "python-bot",
+    features: [
+      "Країни (інформація, порівняння)",
+      "Структура директорій",
+      "Телефонна книга (додавання, зміна, отримання, видалення)",
+    ],
+    problem:
+      "Відсутність інтерфейсу командного рядка (CLI) обмежує зручність та швидкість взаємодії користувача з трьома основними областями інформації: 'Країни (інформація, порівняння)', 'Структура директорій' та 'Телефонна книга (додавання, зміна, отримання, видалення)'. Завдання, пов'язані з отриманням інформації про країни, роботою зі структурою каталогів та управлінням телефонною книгою, можуть стати більш зручними та ефективними за допомогою інтерфейсу командного рядка.",
+    solution:
+      "Впровадження інтерфейсу командного рядка для кожної з зазначених областей. Це надасть можливість користувачам виконувати операції швидко та зручно, надсилати команди для отримання інформації про країни, взаємодіяти зі структурою каталогів та виконувати операції з управління телефонною книгою, такі як додавання, зміна, отримання та видалення контактів. Інтерфейс командного рядка може спростити та прискорити взаємодію з цими функціями, забезпечуючи зручний та ефективний інструмент для користувачів.",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/python-bot",
+    },
+    content: {
+      description: "CLI для отримання та управління інформацією",
+      image1: twentyTwoProjectSnippet1,
+      image2: twentyTwoProjectSnippet2,
+      image3: twentyTwoProjectSnippet3,
+      image4: twentyTwoProjectSnippet4,
+      image5: twentyTwoProjectSnippet5,
     },
   },
 ];
