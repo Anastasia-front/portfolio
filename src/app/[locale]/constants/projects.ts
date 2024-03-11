@@ -13,6 +13,7 @@ import cover18 from "@/assets/images/projects/project18/cover.webp";
 import cover19 from "@/assets/images/projects/project19/cover.webp";
 import cover2 from "@/assets/images/projects/project2/cover.webp";
 import cover20 from "@/assets/images/projects/project20/cover.webp";
+import cover21 from "@/assets/images/projects/project21/cover.webp";
 import cover3 from "@/assets/images/projects/project3/cover.webp";
 import cover4 from "@/assets/images/projects/project4/cover.webp";
 import cover5 from "@/assets/images/projects/project5/cover.webp";
@@ -141,13 +142,19 @@ import twentyProjectSnippet3 from "@/assets/images/projects/project20/snippet3.w
 import twentyProjectSnippet4 from "@/assets/images/projects/project20/snippet4.webp";
 import twentyProjectSnippet5 from "@/assets/images/projects/project20/snippet5.webp";
 
+import twentyoneProjectSnippet1 from "@/assets/images/projects/project21/snippet1.webp";
+import twentyoneProjectSnippet2 from "@/assets/images/projects/project21/snippet2.webp";
+import twentyoneProjectSnippet3 from "@/assets/images/projects/project21/snippet3.webp";
+import twentyoneProjectSnippet4 from "@/assets/images/projects/project21/snippet4.webp";
+import twentyoneProjectSnippet5 from "@/assets/images/projects/project21/snippet5.webp";
+
 export interface Project {
   id?: number;
   language?: "js" | "ts" | "python";
   development?: "backend" | "frontend" | "data";
   type?: "test" | "commercial" | "individual" | "team";
   name: string;
-  categories: string[]|null;
+  categories: string[] | null;
   image: StaticImageData;
   url?: string;
   features?: string[];
@@ -763,10 +770,18 @@ export const projectsEnglishLang: Project[] = [
     development: "data",
     type: "individual",
     name: "Python Start",
-    categories: ['The beginning of learning a programming language'],
+    categories: ["The beginning of learning a programming language"],
     image: cover20,
     url: "python-start",
-    features: ['functions', 'recursion', 'data-structures',' data-types', 'regular-expressions', 'loops-and-iterations', 'conditional-statements'],
+    features: [
+      "functions",
+      "recursion",
+      "data-structures",
+      " data-types",
+      "regular-expressions",
+      "loops-and-iterations",
+      "conditional-statements",
+    ],
     problem:
       "There was a need to help my husband with his studies - since he worked a lot and he needed support - and while I was on maternity leave with the baby, I simultaneously, not forgetting web development, began to take various courses in Python in order to also master the knowledge of analyst data and data scientist",
     solution:
@@ -782,6 +797,33 @@ export const projectsEnglishLang: Project[] = [
       image3: twentyProjectSnippet3,
       image4: twentyProjectSnippet4,
       image5: twentyProjectSnippet5,
+    },
+  },
+  {
+    id: 21,
+    language: "python",
+    development: "data",
+    type: "individual",
+    name: "Python Staff",
+    categories: ["The beginning of learning a programming language"],
+    image: cover21,
+    url: "python-staff",
+    features: ["serializing", "OOP"],
+    problem:
+      "The existing system lacks a Command-Line Interface (CLI) for managing staff information efficiently. This absence limits the user's ability to interact with the staff database and perform various operations seamlessly through a command-line interface. To address this issue, implementing a CLI will enhance user experience and provide a more user-friendly way to execute commands related to staff management, such as adding positions, editing information, finding details, and more",
+    solution:
+      "Integrate a CLI into the staff management system that allows users to interact with the application through a command-line interface. The CLI should support a set of commands corresponding to various staff management operations, making it easier for users to input instructions and receive relevant information. This will enhance the accessibility and usability of the staff management system, providing a convenient and efficient means for users to handle staff-related tasks.",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/python-staff",
+    },
+    content: {
+      description: "CLI for managing staff information",
+      image1: twentyoneProjectSnippet1,
+      image2: twentyoneProjectSnippet2,
+      image3: twentyoneProjectSnippet3,
+      image4: twentyoneProjectSnippet4,
+      image5: twentyoneProjectSnippet5,
     },
   },
 ];
@@ -1378,7 +1420,15 @@ export const projectsUkrainianLang: Project[] = [
     categories: ["Початок вивчення мови програмування"],
     image: cover20,
     url: "python-start",
-    features: ['функції', 'рекурсія', 'структури даних', 'умовні оператори', 'типи даних', 'регулярні вирази', 'цикли та ітерації'],
+    features: [
+      "функції",
+      "рекурсія",
+      "структури даних",
+      "умовні оператори",
+      "типи даних",
+      "регулярні вирази",
+      "цикли та ітерації",
+    ],
     problem:
       "There was a need to help my husband with his studies - since he worked a lot and he needed support - and while I was on maternity leave with the baby, I simultaneously, not forgetting web development, began to take various courses in Python in order to also master the knowledge of analyst data and data scientistБула потреба допомагати чоловіку з навчання - оскільки він багато працював і йому портібна була підтримка - і поки я була в декреті з немовлям я паралельно не забуваючи веб-розробку ще почала проходити різні курси по Пайтону щоб також оволодіти знаннями дата аналіста та дата вченого",
     solution:
@@ -1394,6 +1444,33 @@ export const projectsUkrainianLang: Project[] = [
       image3: twentyProjectSnippet3,
       image4: twentyProjectSnippet4,
       image5: twentyProjectSnippet5,
+    },
+  },
+  {
+    id: 21,
+    language: "python",
+    development: "data",
+    type: "individual",
+    name: "Python Staff",
+    categories: ["Початок вивчення мови програмування"],
+    image: cover21,
+    url: "python-staff",
+    features: ["серіалізація", "ООП"],
+    problem:
+      "Існуюча система не має інтерфейсу командного рядка (CLI) для ефективного управління інформацією про персонал. Відсутність цього інтерфейсу обмежує можливості користувача взаємодіяти з базою даних персоналу та виконувати різноманітні операції зручним способом через інтерфейс командного рядка. Для вирішення цього питання імплементація інтерфейсу командного рядка дозволить покращити взаємодію користувача з системою та забезпечить більш зручний спосіб виконання команд щодо управління персоналом, таких як додавання посад, редагування інформації, пошук деталей та інше.    ",
+    solution:
+      "Інтегруйте інтерфейс командного рядка в систему управління персоналом, який дозволить користувачам взаємодіяти з додатком через інтерфейс командного рядка. Цей інтерфейс повинен підтримувати набір команд, що відповідають різним операціям управління персоналом, щоб користувачам було легше вводити інструкції та отримувати відповідну інформацію. Це покращить доступність та зручність системи управління персоналом, надаючи зручний та ефективний спосіб користувачам виконувати завдання, пов'язані з персоналом.",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/python-staff",
+    },
+    content: {
+      description: "CLI для управління інформацією про персонал",
+      image1: twentyoneProjectSnippet1,
+      image2: twentyoneProjectSnippet2,
+      image3: twentyoneProjectSnippet3,
+      image4: twentyoneProjectSnippet4,
+      image5: twentyoneProjectSnippet5,
     },
   },
 ];
