@@ -162,7 +162,7 @@
       }
     },
     "3d": {
-      "title": "Below are the «workhorses»",
+      "title": "Below are tools for development",
       "subtitle": "pay attention to this prompt for understanding of how to interact with next section",
       "commentToSubtitle": "when mouse hovering over this text block, other hints will appear ( on a device without a mouse, you need to click on this text )",
       "prompt": "* in the block where the 3D objects are presented, in order to scroll the page, use the scrollbar on the right edge ( zoom actions will bring objects closer or further away )",
