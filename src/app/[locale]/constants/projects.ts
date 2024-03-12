@@ -16,6 +16,7 @@ import cover20 from "@/assets/images/projects/project20/cover.webp";
 import cover21 from "@/assets/images/projects/project21/cover.webp";
 import cover22 from "@/assets/images/projects/project22/cover.webp";
 import cover23 from "@/assets/images/projects/project23/cover.webp";
+import cover24 from "@/assets/images/projects/project24/cover.webp";
 import cover3 from "@/assets/images/projects/project3/cover.webp";
 import cover4 from "@/assets/images/projects/project4/cover.webp";
 import cover5 from "@/assets/images/projects/project5/cover.webp";
@@ -161,6 +162,12 @@ import twentyThreeProjectSnippet2 from "@/assets/images/projects/project22/snipp
 import twentyThreeProjectSnippet3 from "@/assets/images/projects/project22/snippet3.webp";
 import twentyThreeProjectSnippet4 from "@/assets/images/projects/project22/snippet4.webp";
 import twentyThreeProjectSnippet5 from "@/assets/images/projects/project22/snippet5.webp";
+
+import twentyFourProjectSnippet1 from "@/assets/images/projects/project22/snippet1.webp";
+import twentyFourProjectSnippet2 from "@/assets/images/projects/project22/snippet2.webp";
+import twentyFourProjectSnippet3 from "@/assets/images/projects/project22/snippet3.webp";
+import twentyFourProjectSnippet4 from "@/assets/images/projects/project22/snippet4.webp";
+import twentyFourProjectSnippet5 from "@/assets/images/projects/project22/snippet5.webp";
 
 export interface Project {
   id?: number;
@@ -898,6 +905,33 @@ export const projectsEnglishLang: Project[] = [
       image5: twentyThreeProjectSnippet5,
     },
   },
+  {
+    id: 24,
+    language: "python",
+    development: "data",
+    type: "individual",
+    name: "LeetCode",
+    categories: ["Python", "Tasks", "Solutions"],
+    image: cover24,
+    url: "python-leetcode",
+    features: ["Tasks", "Solutions"],
+    problem:
+      "Solving tasks is crucial for proving logical and technical skills, especially when preparing for interviews. It can be challenging, requiring a deep understanding of coding concepts and problem-solving techniques.",
+    solution:
+      "Regularly solving coding tasks not only enhances logical thinking and technical proficiency but also provides valuable preparation for interviews.",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/python-leetcode",
+    },
+    content: {
+      description: "Solving tasks",
+      image1: twentyFourProjectSnippet1,
+      image2: twentyFourProjectSnippet2,
+      image3: twentyFourProjectSnippet3,
+      image4: twentyFourProjectSnippet4,
+      image5: twentyFourProjectSnippet5,
+    },
+  },
 ];
 
 export const projectsUkrainianLang: Project[] = [
@@ -1601,6 +1635,33 @@ export const projectsUkrainianLang: Project[] = [
       image3: twentyThreeProjectSnippet3,
       image4: twentyThreeProjectSnippet4,
       image5: twentyThreeProjectSnippet5,
+    },
+  },
+  {
+    id: 24,
+    language: "python",
+    development: "data",
+    type: "individual",
+    name: "LeetCode",
+    categories: ["Python", "Задачі", "Рішення"],
+    image: cover24,
+    url: "python-leetcode",
+    features: ["Задачі", "Рішення"],
+    problem:
+      "Вирішення задач є важливим для демонстрації логічних та технічних навичок, особливо при підготовці до співбесід. Це може бути викликом і вимагати глибокого розуміння концепцій програмування та технік вирішення задач.",
+    solution:
+      "Регулярне вирішення задач не лише покращує логічне мислення та технічну вправність, але й надає цінну підготовку до співбесід.",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/python-leetcode",
+    },
+    content: {
+      description: "Вирішення задач",
+      image1: twentyFourProjectSnippet1,
+      image2: twentyFourProjectSnippet2,
+      image3: twentyFourProjectSnippet3,
+      image4: twentyFourProjectSnippet4,
+      image5: twentyFourProjectSnippet5,
     },
   },
 ];
