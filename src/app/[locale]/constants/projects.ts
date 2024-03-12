@@ -15,6 +15,7 @@ import cover2 from "@/assets/images/projects/project2/cover.webp";
 import cover20 from "@/assets/images/projects/project20/cover.webp";
 import cover21 from "@/assets/images/projects/project21/cover.webp";
 import cover22 from "@/assets/images/projects/project22/cover.webp";
+import cover23 from "@/assets/images/projects/project23/cover.webp";
 import cover3 from "@/assets/images/projects/project3/cover.webp";
 import cover4 from "@/assets/images/projects/project4/cover.webp";
 import cover5 from "@/assets/images/projects/project5/cover.webp";
@@ -154,6 +155,12 @@ import twentyTwoProjectSnippet2 from "@/assets/images/projects/project22/snippet
 import twentyTwoProjectSnippet3 from "@/assets/images/projects/project22/snippet3.webp";
 import twentyTwoProjectSnippet4 from "@/assets/images/projects/project22/snippet4.webp";
 import twentyTwoProjectSnippet5 from "@/assets/images/projects/project22/snippet5.webp";
+
+import twentyThreeProjectSnippet1 from "@/assets/images/projects/project22/snippet1.webp";
+import twentyThreeProjectSnippet2 from "@/assets/images/projects/project22/snippet2.webp";
+import twentyThreeProjectSnippet3 from "@/assets/images/projects/project22/snippet3.webp";
+import twentyThreeProjectSnippet4 from "@/assets/images/projects/project22/snippet4.webp";
+import twentyThreeProjectSnippet5 from "@/assets/images/projects/project22/snippet5.webp";
 
 export interface Project {
   id?: number;
@@ -864,6 +871,33 @@ export const projectsEnglishLang: Project[] = [
       image5: twentyTwoProjectSnippet5,
     },
   },
+  {
+    id: 23,
+    language: "python",
+    development: "data",
+    type: "individual",
+    name: "Workbook",
+    categories: ["Python", "Conspectus", "Examples"],
+    image: cover23,
+    url: "python-workbook",
+    features: ["Conspectus", "Examples"],
+    problem:
+      "The absence of necessary information compiled in one place always slows down the coding process because one has to constantly search for method names or rules for working with specific data structures.",
+    solution:
+      "Creating a conspectus solves this problem, and it also revisits and reinforces the material.",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/python-workbook",
+    },
+    content: {
+      description: "Conspectus with Python",
+      image1: twentyThreeProjectSnippet1,
+      image2: twentyThreeProjectSnippet2,
+      image3: twentyThreeProjectSnippet3,
+      image4: twentyThreeProjectSnippet4,
+      image5: twentyThreeProjectSnippet5,
+    },
+  },
 ];
 
 export const projectsUkrainianLang: Project[] = [
@@ -1540,6 +1574,33 @@ export const projectsUkrainianLang: Project[] = [
       image3: twentyTwoProjectSnippet3,
       image4: twentyTwoProjectSnippet4,
       image5: twentyTwoProjectSnippet5,
+    },
+  },
+  {
+    id: 23,
+    language: "python",
+    development: "data",
+    type: "individual",
+    name: "Конспект",
+    categories: ["Python", "Конспект", "Приклади"],
+    image: cover23,
+    url: "python-workbook",
+    features: ["Конспект", "Приклади"],
+    problem:
+      "Відсутність зібраної в одному місці потрібної інформації завжди сповільнює час написання коду, бо потрібно весь час шукати назви методів чи правила роботи з певними структурами данних.",
+    solution:
+      "Створення конспекту вирішує цю проблему, плюс ще раз розбирається і закріплюється матеріал.",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/python-workbook",
+    },
+    content: {
+      description: "Конспект з Python",
+      image1: twentyThreeProjectSnippet1,
+      image2: twentyThreeProjectSnippet2,
+      image3: twentyThreeProjectSnippet3,
+      image4: twentyThreeProjectSnippet4,
+      image5: twentyThreeProjectSnippet5,
     },
   },
 ];
