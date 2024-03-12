@@ -21,7 +21,7 @@ export function Accordion({ lang }: Props) {
   const [active, setActive] = useState(0);
 
   const skillBlocks = (() => {
-    if (lang === "/uk") {
+    if (lang === "uk") {
       return skillBlocksUkrainian;
     } else {
       return skillBlocksEnglish;
