@@ -11,6 +11,7 @@
 - [Огляд проекту](#огляд-проекту)
 - [Використані технології та бібліотеки](#використані-технології-та-бібліотеки)
 - [Реалізовано в проекті наступну функціональність](#реалізовано-в-проекті-наступну-функціональність)
+- [Макети](#макети)
 - [Знімки екрану](#знімки-екрану)
 - [Офіційна документація Next.js](#офіційна-документація-nextjs)
   - [Початок роботи](#початок-роботи)
@@ -40,13 +41,21 @@
 - відправка інформації за допомогою форм (присутня валідація)
 - просте управління контентом (знайдіть весь текст у файлах en(uk).json)
 
+## Макети
+
+![головна сторінка](/public/mockups/home.webp)
+![сторінка "про мене"](/public/mockups/about.webp)
+![сторінка з навичками](/public/mockups/skills.webp)
+![сторінка з проєктами](/public/mockups/projects.webp)
+![сторінка з контактами](/public/mockups/contacts.webp)
+
 ## Знімки екрану
 
-![home page](/public/images/opengraph/uk/home.webp)
-![about page](/public/images/opengraph/uk/about.webp)
-![skills page](/public/images/opengraph/uk/skills.webp)
-![projects page](/public/images/opengraph/uk/projects.webp)
-![contacts page](/public/images/opengraph/uk/contacts.webp)
+![головна сторінка](/public/images/opengraph/uk/home.webp)
+![сторінка "про мене"](/public/images/opengraph/uk/about.webp)
+![сторінка з навичками](/public/images/opengraph/uk/skills.webp)
+![сторінка з проєктами](/public/images/opengraph/uk/projects.webp)
+![сторінка з контактами](/public/images/opengraph/uk/contacts.webp)
 
 # Офіційна документація Next.js
 

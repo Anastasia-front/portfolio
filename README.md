@@ -11,6 +11,7 @@ This website is my portfolio that contain a lot of information about me as devel
 - [Project overview](#project-overview)
 - [Technologies and libraries used](#technologies-and-libraries-used)
 - [Implemented in the project the following functionality](#implemented-in-the-project-the-following-functionality)
+- [Mockups](#mockups)
 - [Screenshots](#screenshots)
 - [Default documentation of Next.js](#default-documentation-of-nextjs)
   - [Getting Started](#getting-started)
@@ -39,6 +40,14 @@ The project was implemented using the following technologies and libraries:
 - localization and internationalization (L10n and i18n)
 - sending information using forms (validation is present)
 - easy content management (find all text in the en(uk).json files)
+
+## Mockups
+
+![home page](/public/mockups/home.webp)
+![about page](/public/mockups/about.webp)
+![skills page](/public/mockups/skills.webp)
+![projects page](/public/mockups/projects.webp)
+![contacts page](/public/mockups/contacts.webp)
 
 ## Screenshots
 
