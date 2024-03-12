@@ -279,11 +279,11 @@
     "below": "Below you can see what the project looks like so as not to click on the link"
   },
   "contacts": {
-    "title": "Write to me",
+    "title": "Get in touch with me",
     "description": "Below is the form for sending me an email and below it you will find all available ways to contact me ( they are also duplicated in the footer)",
     "ogImage": "/images/opengraph/en/contacts.webp",
     "form": {
-      "title": "Write me a letter",
+      "title": "Send me a letter",
       "subject": {
         "title": "Subject",
         "placeholder": "Enter subject",
