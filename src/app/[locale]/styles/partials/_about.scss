@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 70vh;
+    min-height: 77vh;
     background: linear-gradient(
       140deg,
       var(--color--light-blue-1),
@@ -31,6 +31,11 @@
       pointer-events: none;
       filter: var(--filter-1);
       transform: translateX(-50%);
+
+      @include useScreen("tablet-sm") {
+        top: 22%;
+        max-height: 66%;
+      }
     }
 
     &__content {
@@ -59,10 +64,6 @@
   &-content {
     margin-top: 70vh;
     margin-bottom: 3rem;
-
-    @include useScreen("tablet-sm") {
-      margin-top: 66vh;
-    }
 
     &__banner {
       margin-left: 15%;
