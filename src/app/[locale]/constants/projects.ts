@@ -157,17 +157,17 @@ import twentyTwoProjectSnippet3 from "@/assets/images/projects/project22/snippet
 import twentyTwoProjectSnippet4 from "@/assets/images/projects/project22/snippet4.webp";
 import twentyTwoProjectSnippet5 from "@/assets/images/projects/project22/snippet5.webp";
 
-import twentyThreeProjectSnippet1 from "@/assets/images/projects/project22/snippet1.webp";
-import twentyThreeProjectSnippet2 from "@/assets/images/projects/project22/snippet2.webp";
-import twentyThreeProjectSnippet3 from "@/assets/images/projects/project22/snippet3.webp";
-import twentyThreeProjectSnippet4 from "@/assets/images/projects/project22/snippet4.webp";
-import twentyThreeProjectSnippet5 from "@/assets/images/projects/project22/snippet5.webp";
+import twentyThreeProjectSnippet1 from "@/assets/images/projects/project23/snippet1.webp";
+import twentyThreeProjectSnippet2 from "@/assets/images/projects/project23/snippet2.webp";
+import twentyThreeProjectSnippet3 from "@/assets/images/projects/project23/snippet3.webp";
+import twentyThreeProjectSnippet4 from "@/assets/images/projects/project23/snippet4.webp";
+import twentyThreeProjectSnippet5 from "@/assets/images/projects/project23/snippet5.webp";
 
-import twentyFourProjectSnippet1 from "@/assets/images/projects/project22/snippet1.webp";
-import twentyFourProjectSnippet2 from "@/assets/images/projects/project22/snippet2.webp";
-import twentyFourProjectSnippet3 from "@/assets/images/projects/project22/snippet3.webp";
-import twentyFourProjectSnippet4 from "@/assets/images/projects/project22/snippet4.webp";
-import twentyFourProjectSnippet5 from "@/assets/images/projects/project22/snippet5.webp";
+import twentyFourProjectSnippet1 from "@/assets/images/projects/project24/snippet1.webp";
+import twentyFourProjectSnippet2 from "@/assets/images/projects/project24/snippet2.webp";
+import twentyFourProjectSnippet3 from "@/assets/images/projects/project24/snippet3.webp";
+import twentyFourProjectSnippet4 from "@/assets/images/projects/project24/snippet4.webp";
+import twentyFourProjectSnippet5 from "@/assets/images/projects/project24/snippet5.webp";
 
 export interface Project {
   id?: number;
