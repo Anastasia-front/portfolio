@@ -63,6 +63,7 @@ export default function Hero() {
             {isScreenMobileLg && (
               <Image
                 loading="eager"
+                priority={true}
                 src={decoration}
                 alt={a("hero")}
                 className="hero-image__decoration"
@@ -70,6 +71,7 @@ export default function Hero() {
             )}
             <Image
               loading="eager"
+              priority={true}
               src={hero}
               alt={h("hero")}
               className="hero-image__content"

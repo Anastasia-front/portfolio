@@ -41,6 +41,7 @@ export function ButtonSwitcher({
         {imgUrl && (
           <Image
             loading="eager"
+            priority={true}
             className="button-img"
             src={imgUrl}
             width={20}
@@ -62,6 +63,7 @@ export function ButtonSwitcher({
         {imgUrl && (
           <Image
             loading="eager"
+            priority={true}
             className="button-img"
             src={imgUrl}
             width={20}
