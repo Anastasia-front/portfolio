@@ -26,7 +26,7 @@ export function AnimatedTextWord({
   const controls = useAnimation();
   const textArray = Array.isArray(text) ? text : [text];
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: once });
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;

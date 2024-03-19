@@ -12,7 +12,7 @@ import { useGlobalContext } from "@/context";
 import { useKeyPress, useScreenQuery, useScrollLock } from "@/hooks";
 import { navVariants } from "@/utils";
 
-export default function Header() {
+export function Header() {
   const t = useTranslations("btn");
 
   const { formModal, menuModal } = useGlobalContext();

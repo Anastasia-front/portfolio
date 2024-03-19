@@ -18,7 +18,7 @@ interface Props {
   links?: string[];
 }
 
-export default function Footer({ title, description }: Props) {
+export function Footer({ title, description }: Props) {
   const i = useTranslations("name");
   const t = useTranslations("text");
 
