@@ -16,14 +16,14 @@ import { bannerVariants, titleVariants } from "@/utils";
 
 const AboutItem = lazy(() => import("../components/AboutItem/AboutItem"));
 const AchievementBlock = lazy(
-  () => import("../components/AchievementBlock/AchievementBlock")
+  () => import("../sections/AchievementBlock/AchievementBlock")
 );
 
 const Banner = dynamic(() =>
   import("../components/Banner/Banner").then((mod) => mod.Banner)
 );
 const Robots = dynamic(() =>
-  import("../components/Robots/Robots").then((mod) => mod.Robots)
+  import("../common/Robots/Robots").then((mod) => mod.Robots)
 );
 
 export default function AboutPage() {

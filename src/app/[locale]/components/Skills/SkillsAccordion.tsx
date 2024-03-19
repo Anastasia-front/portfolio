@@ -15,7 +15,7 @@ interface Props {
   lang: string;
 }
 
-export function Accordion({ lang }: Props) {
+export function SkillsAccordion({ lang }: Props) {
   const i = useTranslations("license");
 
   const [active, setActive] = useState(0);

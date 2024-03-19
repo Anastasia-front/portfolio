@@ -31,7 +31,7 @@ const Projects = dynamic(() =>
   import("../components/Projects/Projects").then((mod) => mod.Projects)
 );
 const Robots = dynamic(() =>
-  import("../components/Robots/Robots").then((mod) => mod.Robots)
+  import("../common/Robots/Robots").then((mod) => mod.Robots)
 );
 
 export default function ProjectsPage() {
@@ -47,7 +47,7 @@ export default function ProjectsPage() {
       return projectsEnglishLang;
     }
   })();
-  
+
   const [activeTypeFilter, setActiveTypeFilter] = useState<string | null>(null);
   const [activeCategoryFilter, setActiveCategoryFilter] = useState<
     string | null

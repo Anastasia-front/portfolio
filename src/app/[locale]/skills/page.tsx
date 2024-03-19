@@ -11,7 +11,9 @@ import { menuItems } from "@/constants";
 import { bannerVariants, gridVariants, opacityVariants } from "@/utils";
 
 const Accordion = dynamic(() =>
-  import("../components/Accordion/Accordion").then((mod) => mod.Accordion)
+  import("../components/Skills/SkillsAccordion").then(
+    (mod) => mod.SkillsAccordion
+  )
 );
 const Banner = dynamic(() =>
   import("../components/Banner/Banner").then((mod) => mod.Banner)
@@ -21,11 +23,11 @@ const LottiePlayer = dynamic(() =>
     (mod) => mod.LottiePlayer
   )
 );
-const SkillSlider = dynamic(() =>
-  import("../components/Skill/SkillSlider").then((mod) => mod.SkillSlider)
+const Slider = dynamic(() =>
+  import("../components/Skills/SkillsSlider").then((mod) => mod.SkillSlider)
 );
 const Robots = dynamic(() =>
-  import("../components/Robots/Robots").then((mod) => mod.Robots)
+  import("../common/Robots/Robots").then((mod) => mod.Robots)
 );
 
 export default function SkillsPage() {
@@ -84,7 +86,7 @@ export default function SkillsPage() {
           variants={opacityVariants("first")}
           className="skills-section__slider"
         >
-          <SkillSlider />
+          <Slider />
         </motion.div>
       </motion.main>
     </>

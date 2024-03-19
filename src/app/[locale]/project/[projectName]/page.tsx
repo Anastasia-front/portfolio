@@ -12,7 +12,7 @@ import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
 import { bannerVariants } from "@/utils";
 
 const Robots = dynamic(() =>
-  import("../../components/Robots/Robots").then((mod) => mod.Robots)
+  import("../../common/Robots/Robots").then((mod) => mod.Robots)
 );
 
 interface Params {

@@ -2,14 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-import {
-  ContentIndicator,
-  Footer,
-  FormPortal,
-  Header,
-  PreLoader,
-  Settings,
-} from "@/components";
+import { ContentIndicator, Footer, Header, Settings } from "@/common";
+import { FormPortal, PreLoader } from "@/components";
 
 export function Layout(props: any) {
   const [loaded, setLoaded] = useState(false);

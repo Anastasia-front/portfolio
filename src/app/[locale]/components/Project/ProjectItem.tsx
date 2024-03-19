@@ -15,7 +15,6 @@ export function ProjectItem({ name, image, categories, onClick }: Project) {
   const handleHoverStart = () => {
     setIsHover(true);
   };
-
   const handleHoverEnd = () => {
     setIsHover(false);
   };

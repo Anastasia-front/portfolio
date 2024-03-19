@@ -5,8 +5,8 @@ import { useTheme } from "next-themes";
 
 import { motion } from "framer-motion";
 
-import { Logo, Navigation } from "@/components";
-import Contacts from "@/components/Contacts/Contacts";
+import { Navigation } from "@/common";
+import { Contacts, Logo } from "@/components";
 import { CV } from "@/constants";
 import { currentMonth, currentYear } from "@/helpers";
 import { footerVariants } from "@/utils";

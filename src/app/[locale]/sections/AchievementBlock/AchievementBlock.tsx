@@ -17,8 +17,10 @@ import { PortalModal } from "@/components";
 import { useGlobalContext } from "@/context";
 import { titleVariants } from "@/utils";
 
-const Certificate = lazy(() => import("../Certificate/Certificate"));
-const Progress = lazy(() => import("../Progress/Progress"));
+const Certificate = lazy(
+  () => import("../../components/Certificate/Certificate")
+);
+const Progress = lazy(() => import("../../components/Progress/Progress"));
 
 const franklin = Libre_Franklin({
   subsets: ["latin"],
@@ -205,7 +207,11 @@ export default function AchievementBlock() {
           handleClose={githubModal.close}
           noDivContent
         >
-          <Image src='/images/about/github-wrapped.webp' alt={selectedAlt} loading="lazy" />
+          <Image
+            src="/images/about/github-wrapped.webp"
+            alt={selectedAlt}
+            loading="lazy"
+          />
         </PortalModal>
       )}
     </motion.div>
