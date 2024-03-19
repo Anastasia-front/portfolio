@@ -10,18 +10,18 @@ import { motion } from "framer-motion";
 import { bannerVariants } from "@/utils";
 import { menuItems } from "./constants";
 
-const Features = lazy(() => import("./components/Features/Features"));
+const Features = lazy(() => import("./sections/Features/Features"));
 const GallerySection = lazy(
-  () => import("./components/3dObjects/GallerySection")
+  () => import("./sections/3dObjects/GallerySection")
 );
-const Hero = lazy(() => import("./components/Hero/Hero"));
+const Hero = lazy(() => import("./sections/Hero/Hero"));
 const ObjectsSection = lazy(
-  () => import("./components/3dObjects/ObjectsSection")
+  () => import("./sections/3dObjects/ObjectsSection")
 );
-const Video = lazy(() => import("./components/Video/Video"));
+const Video = lazy(() => import("./sections/Video/Video"));
 
 const Robots = dynamic(() =>
-  import("./components/Robots/Robots").then((mod) => mod.Robots)
+  import("./common/Robots/Robots").then((mod) => mod.Robots)
 );
 
 export default function Home() {

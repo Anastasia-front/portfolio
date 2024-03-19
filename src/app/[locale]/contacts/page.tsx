@@ -1,7 +1,5 @@
 "use client";
 
-import { lazy } from "react";
-
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -11,11 +9,10 @@ import { motion } from "framer-motion";
 import decor1 from "@/assets/images/contacts/decoration/1.webp";
 import decor2 from "@/assets/images/contacts/decoration/2.webp";
 
+import { Contacts } from "@/components";
 import { menuItems } from "@/constants";
 import { useGlobalContext } from "@/context";
 import { bannerVariants, gridVariants } from "@/utils";
-
-const Contacts = lazy(() => import("../components/Contacts/Contacts"));
 
 const Form = dynamic(() =>
   import("../components/Form/Form").then((mod) => mod.Form)
@@ -26,7 +23,7 @@ const LottiePlayer = dynamic(() =>
   )
 );
 const Robots = dynamic(() =>
-  import("../components/Robots/Robots").then((mod) => mod.Robots)
+  import("../common/Robots/Robots").then((mod) => mod.Robots)
 );
 
 export default function ContactsPage() {

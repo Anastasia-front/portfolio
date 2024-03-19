@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 
 import { useTranslations } from "next-intl";
 
-import { Navigation, Portal, Switchers } from "@/components";
+import { Navigation } from "@/common";
+import { Portal, Switchers } from "@/components";
 import { useGlobalContext } from "@/context";
 import { useKeyPress, useScrollLock } from "@/hooks";
 

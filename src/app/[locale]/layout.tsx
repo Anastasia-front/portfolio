@@ -10,7 +10,7 @@ const ErrorBoundary = lazy(
   () => import("./components/ErrorBoundary/ErrorBoundary")
 );
 
-import { Layout } from "./components";
+import { Layout } from "./common";
 import { BASE_URL, TITLE } from "./constants";
 import { GlobalProviders } from "./providers";
 

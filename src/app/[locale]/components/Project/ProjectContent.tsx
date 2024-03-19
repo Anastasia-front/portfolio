@@ -48,6 +48,7 @@ export function ProjectContent({
     setSelectedAlt(alt);
     projectModal.open();
   };
+
   return (
     <section className="project__content">
       <div className="project__content__text">

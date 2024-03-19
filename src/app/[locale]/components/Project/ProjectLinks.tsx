@@ -15,6 +15,7 @@ export interface ProjectLinksProps {
 export function ProjectLinks({ links }: ProjectLinksProps) {
   const h = useTranslations("projects.headers");
   const l = useTranslations("projects.links");
+  
   return (
     links && (
       <div className="project__content__text-links">

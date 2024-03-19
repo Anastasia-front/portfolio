@@ -22,11 +22,6 @@ interface Props {
 
 export function ProjectHeader({ name, categories, description, image }: Props) {
   const i = useTranslations("alt.projects");
-  const h = useTranslations("projects.headers");
-  const l = useTranslations("projects.links");
-  const p = useTranslations("projects");
-  const n = useTranslations("nav");
-  const a = useTranslations("about.achievements");
 
   return (
     <section className="project__header">

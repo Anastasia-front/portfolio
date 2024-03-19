@@ -3,11 +3,9 @@
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
-import { ButtonText, Logo, Portal } from "@/components";
+import { Navigation } from "@/common";
+import { ButtonText, Logo, Portal, Switchers } from "@/components";
 import { useGlobalContext } from "@/context";
-
-import { Navigation } from "../Navigation";
-import { Switchers } from "../Switchers";
 
 export function BurgerMenu() {
   const t = useTranslations("btn");

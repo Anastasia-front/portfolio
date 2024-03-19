@@ -37,7 +37,7 @@ interface Props {
   location?: "footer" | "contacts";
 }
 
-export default function Contacts({ location }: Props) {
+export function Contacts({ location }: Props) {
   const i = useTranslations("contacts.footer");
   const ic = useTranslations("contacts.footer.icons");
 

@@ -7,7 +7,8 @@ import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
 
-import { ButtonText, NavigationAndLogo, Switchers } from "@/components";
+import { NavigationAndLogo } from "@/common";
+import { ButtonText, Switchers } from "@/components";
 import { useGlobalContext } from "@/context";
 import { useKeyPress, useScreenQuery, useScrollLock } from "@/hooks";
 import { navVariants } from "@/utils";
