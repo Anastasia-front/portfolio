@@ -4,22 +4,15 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Oxygen } from "next/font/google";
+import { Locale } from "src/locales";
 
-const Settings = lazy(() => import("./components/Settings/Settings"));
-const ContentIndicator = lazy(
-  () => import("./components/ContentIndicator/ContentIndicator")
-);
 const ErrorBoundary = lazy(
   () => import("./components/ErrorBoundary/ErrorBoundary")
 );
-const FormPortal = lazy(() => import("./components/Form/FormPortal"));
-const Header = lazy(() => import("./components/Header/Header"));
-const Footer = lazy(() => import("./components/Footer/Footer"));
 
-import { Locale } from "src/locales";
-
-import { GlobalProviders } from "@/providers";
-import { BASE_URL, DESCRIPTION, TITLE } from "./constants";
+import { Layout } from "./components";
+import { BASE_URL, TITLE } from "./constants";
+import { GlobalProviders } from "./providers";
 
 import "./styles/main.scss";
 
@@ -65,12 +58,7 @@ export default async function RootLayout(props: Props) {
             messages={messages}
           >
             <ErrorBoundary>
-              <Header />
-              <FormPortal />
-              {props.children}
-              <Footer />
-              <Settings />
-              <ContentIndicator />
+              <Layout>{props.children} </Layout>
             </ErrorBoundary>
           </NextIntlClientProvider>
         </GlobalProviders>

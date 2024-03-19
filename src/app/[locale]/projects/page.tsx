@@ -47,6 +47,7 @@ export default function ProjectsPage() {
       return projectsEnglishLang;
     }
   })();
+  
   const [activeTypeFilter, setActiveTypeFilter] = useState<string | null>(null);
   const [activeCategoryFilter, setActiveCategoryFilter] = useState<
     string | null

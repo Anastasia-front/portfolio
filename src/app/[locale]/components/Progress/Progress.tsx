@@ -59,6 +59,8 @@ export default function Progress() {
           >
             <Image
               loading="lazy"
+              width={200}
+              height={100}
               src={getAchievement(index)}
               alt={a(`alt.cabinet.${getWordFromNumber(index)}`)}
               className="about-achievements__image"

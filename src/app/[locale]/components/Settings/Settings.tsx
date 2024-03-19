@@ -10,7 +10,7 @@ import { useKeyPress, useScrollLock } from "@/hooks";
 
 import Gear from "@/assets/svg/gear.svg";
 
-export default function Settings() {
+export function Settings() {
   const t = useTranslations("btn");
 
   const [showButton, setShowButton] = useState(false);

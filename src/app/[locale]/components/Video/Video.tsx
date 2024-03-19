@@ -17,13 +17,8 @@ export default function Video() {
 
   const locale = useLocale() as Locale;
 
-  const video = (() => {
-    return `/video/hero/${locale}-${theme}.mp4`;
-  })();
-
-  const poster = (() => {
-    return `/images/poster/${locale}-${theme}.webp`;
-  })();
+  const video = `/video/hero/${locale}-${theme}.mp4`;
+  const poster = `/images/poster/${locale}-${theme}.webp`;
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const textRef = useRef<HTMLDivElement>(null);

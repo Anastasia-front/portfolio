@@ -20,6 +20,7 @@
     "hero": "Content image of hero section"
   },
   "loading": {
+    "title": "Loading",
     "please": "Please",
     "wait": "wait",
     "page": "page",
