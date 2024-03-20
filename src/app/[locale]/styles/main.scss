@@ -825,6 +825,11 @@ img {
   }
 }
 
+.row {
+  @include flex(row, center, center);
+  gap: 1rem;
+}
+
 .align {
   &-left {
     align-items: start;

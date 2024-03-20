@@ -395,8 +395,8 @@ export const projectsEnglishLang: Project[] = [
       "Sign out",
       "Responsive design",
       "Infinite scroll",
-      "Create post/comment",
-      "Add/monitor/delete likes",
+      "Create post / comment",
+      "Add / monitor / delete likes",
       "Edit user information",
       "And more...",
     ],
@@ -425,7 +425,7 @@ export const projectsEnglishLang: Project[] = [
     development: "frontend",
     type: "team",
     name: "IceCream",
-    categories: ["js", "scss", "html", "parcel"],
+    categories: ["js", "scss", "html", "Parcel"],
     image: cover8,
     url: "ice-cream",
     features: ["Responsive design", "And more..."],
@@ -458,10 +458,9 @@ export const projectsEnglishLang: Project[] = [
     features: [
       "Advanced search",
       "Responsive design",
-      "Light/Dark mode",
+      "Light / Dark mode",
       "Pagination",
-      "New York Times Api",
-
+      "New York Times API",
       "And more...",
     ],
     problem:
@@ -552,9 +551,9 @@ export const projectsEnglishLang: Project[] = [
       "Sign in",
       "Sign out",
       "Responsive design",
-      "Create boards/columns/tasks",
-      "Edit user/board/column/task information",
-      "Delete user/board/column/task information",
+      "Create boards / columns / tasks",
+      "Edit user / board / column / task information",
+      "Delete user / board / column / task information",
       "Drag & drop",
       "Email support ",
       "And more...",
@@ -589,7 +588,7 @@ export const projectsEnglishLang: Project[] = [
       "Sign in",
       "Sign out",
       "Responsive design",
-      "Add/delete/edit contacts",
+      "Add / delete / edit contacts",
       "And more...",
     ],
     problem:
@@ -671,7 +670,7 @@ export const projectsEnglishLang: Project[] = [
     development: "frontend",
     type: "individual",
     name: "Website for Instagram",
-    categories: ["ts", "React", "scss", "parcel"],
+    categories: ["ts", "React", "scss", "Parcel"],
     image: cover9,
     url: "website-for-instagram",
     features: ["Responsive design", "Parallax effect", "And more..."],
@@ -798,7 +797,7 @@ export const projectsEnglishLang: Project[] = [
       "functions",
       "recursion",
       "data-structures",
-      " data-types",
+      "data-types",
       "regular-expressions",
       "loops-and-iterations",
       "conditional-statements",
@@ -833,7 +832,7 @@ export const projectsEnglishLang: Project[] = [
     problem:
       "The existing system lacks a Command-Line Interface ( CLI ) for managing staff information efficiently. This absence limits the user's ability to interact with the staff database and perform various operations seamlessly through a command-line interface. To address this issue, implementing a CLI will enhance user experience and provide a more user-friendly way to execute commands related to staff management, such as adding positions, editing information, finding details, and more",
     solution:
-      "Integrate a CLI into the staff management system that allows users to interact with the application through a command-line interface. The CLI should support a set of commands corresponding to various staff management operations, making it easier for users to input instructions and receive relevant information. This will enhance the accessibility and usability of the staff management system, providing a convenient and efficient means for users to handle staff-related tasks.",
+      "Integrate a CLI into the staff management system that allows users to interact with the application through a command-line interface. The CLI should support a set of commands corresponding to various staff management operations, making it easier for users to input instructions and receive relevant information. This will enhance the accessibility and usability of the staff management system, providing a convenient and efficient means for users to handle staff-related tasks",
     links: {
       website: null,
       github: "https://github.com/Anastasia-front/python-staff",
@@ -862,9 +861,9 @@ export const projectsEnglishLang: Project[] = [
       "Phone book ( add, change, get, delete )",
     ],
     problem:
-      "The absence of a Command-Line Interface ( CLI ) limits the convenience and speed of user interaction with three main areas of information: 'Countries ( info, comparison ),' 'Directory structure,' and 'Phone book ( add, change, get, delete ).' Tasks related to obtaining information about countries, working with directory structures, and managing the phone book could become more convenient and efficient with a command-line interface.",
+      "The absence of a Command-Line Interface ( CLI ) limits the convenience and speed of user interaction with three main areas of information: 'Countries ( info, comparison ),' 'Directory structure,' and 'Phone book ( add, change, get, delete ).' Tasks related to obtaining information about countries, working with directory structures, and managing the phone book could become more convenient and efficient with a command-line interface",
     solution:
-      "Implementing a command-line interface for each of the specified areas. This will provide users with the ability to perform operations quickly and conveniently, sending commands to retrieve information about countries, interact with directory structures, and perform operations related to managing the phone book, such as adding, changing, getting, and deleting contacts. A command-line interface can simplify and expedite the interaction with these functions, providing a convenient and efficient tool for users.",
+      "Implementing a command-line interface for each of the specified areas. This will provide users with the ability to perform operations quickly and conveniently, sending commands to retrieve information about countries, interact with directory structures, and perform operations related to managing the phone book, such as adding, changing, getting, and deleting contacts. A command-line interface can simplify and expedite the interaction with these functions, providing a convenient and efficient tool for users",
     links: {
       website: null,
       github: "https://github.com/Anastasia-front/python-bot",
@@ -884,20 +883,20 @@ export const projectsEnglishLang: Project[] = [
     development: "data",
     type: "individual",
     name: "Workbook",
-    categories: ["Python", "Conspectus", "Examples"],
+    categories: ["Python", "Examples"],
     image: cover23,
     url: "python-workbook",
-    features: ["Conspectus", "Examples"],
+    features: ["The code is executing", "Formatted output in the console"],
     problem:
-      "The absence of necessary information compiled in one place always slows down the coding process because one has to constantly search for method names or rules for working with specific data structures.",
+      "The absence of necessary information compiled in one place always slows down the coding process because one has to constantly search for method names or rules for working with specific data structures",
     solution:
-      "Creating a conspectus solves this problem, and it also revisits and reinforces the material.",
+      "Creating a conspectus solves this problem, and it also revisits and reinforces the material",
     links: {
       website: null,
       github: "https://github.com/Anastasia-front/python-workbook",
     },
     content: {
-      description: "Conspectus with Python",
+      description: "A lot of information is recorded",
       image1: twentyThreeProjectSnippet1,
       image2: twentyThreeProjectSnippet2,
       image3: twentyThreeProjectSnippet3,
@@ -916,9 +915,9 @@ export const projectsEnglishLang: Project[] = [
     url: "python-leetcode",
     features: ["Tasks", "Solutions"],
     problem:
-      "Solving tasks is crucial for proving logical and technical skills, especially when preparing for interviews. It can be challenging, requiring a deep understanding of coding concepts and problem-solving techniques.",
+      "Solving tasks is crucial for proving logical and technical skills, especially when preparing for interviews. It can be challenging, requiring a deep understanding of coding concepts and problem-solving techniques",
     solution:
-      "Regularly solving coding tasks not only enhances logical thinking and technical proficiency but also provides valuable preparation for interviews.",
+      "Regularly solving coding tasks not only enhances logical thinking and technical proficiency but also provides valuable preparation for interviews",
     links: {
       website: null,
       github: "https://github.com/Anastasia-front/python-leetcode",
@@ -1065,7 +1064,7 @@ export const projectsUkrainianLang: Project[] = [
       "Лендінг",
       "Адаптивний дизайн",
       "Різні слайдери",
-      "І багато іншого...",
+      "Та багато іншого...",
     ],
     problem:
       "Під час війни в Україні існує багато організацій, які допомагають людям - одна з них - 4.5.0, яка потребує веб-сайту для більш ефективної роботи",
@@ -1132,8 +1131,8 @@ export const projectsUkrainianLang: Project[] = [
       "Вихід",
       "Адаптивний дизайн",
       "Нескінченна прокрутка",
-      "Створення повідомлення/коментаря",
-      "Додавання/видалення лайків",
+      "Створення повідомлення / коментаря",
+      "Додавання / видалення лайків",
       "Редагування інформації користувача",
       "Та багато іншого...",
     ],
@@ -1162,7 +1161,7 @@ export const projectsUkrainianLang: Project[] = [
     development: "frontend",
     type: "team",
     name: "IceCream",
-    categories: ["js", "scss", "html", "parcel"],
+    categories: ["js", "scss", "html", "Parcel"],
     image: cover8,
     url: "ice-cream",
     features: ["Адаптивний дизайн", "Та багато іншого..."],
@@ -1195,9 +1194,9 @@ export const projectsUkrainianLang: Project[] = [
     features: [
       "Розширений пошук",
       "Адаптивний дизайн",
-      "Світлий/темний режим",
+      "Світла / темна тема",
       "Пагінація",
-      "API New York Times",
+      "New York Times API",
       "Та багато іншого...",
     ],
     problem:
@@ -1287,9 +1286,9 @@ export const projectsUkrainianLang: Project[] = [
       "Вхід",
       "Вихід",
       "Адаптивний дизайн",
-      "Створення дошок/стовпців/завдань",
-      "Редагування інформації користувача/дошки/стовпця/завдання",
-      "Видалення інформації користувача/дошки/стовпця/завдання",
+      "Створення дошок / стовпців / завдань",
+      "Редагування інформації користувача / дошки / стовпця / завдання",
+      "Видалення інформації користувача / дошки / стовпця / завдання",
       "Drag & drop",
       "Підтримка електронної пошти",
       "Та багато іншого...",
@@ -1324,7 +1323,7 @@ export const projectsUkrainianLang: Project[] = [
       "Вхід",
       "Вихід",
       "Адаптивний дизайн",
-      "Додати/видалити/змінити контакти",
+      "Додати / видалити / змінити контакти",
       "Та багато іншого...",
     ],
     problem:
@@ -1404,7 +1403,7 @@ export const projectsUkrainianLang: Project[] = [
     development: "frontend",
     type: "individual",
     name: "Сайт для Instagram",
-    categories: ["ts", "React", "scss", "parcel"],
+    categories: ["ts", "React", "scss", "Parcel"],
     image: cover9,
     url: "website-for-instagram",
     features: ["Адаптивний дизайн", "Паралакс ефект", "Та багато іншого..."],
@@ -1563,9 +1562,9 @@ export const projectsUkrainianLang: Project[] = [
     url: "python-staff",
     features: ["серіалізація", "ООП"],
     problem:
-      "Існуюча система не має інтерфейсу командного рядка ( CLI ) для ефективного управління інформацією про персонал. Відсутність цього інтерфейсу обмежує можливості користувача взаємодіяти з базою даних персоналу та виконувати різноманітні операції зручним способом через інтерфейс командного рядка. Для вирішення цього питання імплементація інтерфейсу командного рядка дозволить покращити взаємодію користувача з системою та забезпечить більш зручний спосіб виконання команд щодо управління персоналом, таких як додавання посад, редагування інформації, пошук деталей та інше.    ",
+      "Існуюча система не має інтерфейсу командного рядка ( CLI ) для ефективного управління інформацією про персонал. Відсутність цього інтерфейсу обмежує можливості користувача взаємодіяти з базою даних персоналу та виконувати різноманітні операції зручним способом через інтерфейс командного рядка. Для вирішення цього питання імплементація інтерфейсу командного рядка дозволить покращити взаємодію користувача з системою та забезпечить більш зручний спосіб виконання команд щодо управління персоналом, таких як додавання посад, редагування інформації, пошук деталей та інше",
     solution:
-      "Інтегруйте інтерфейс командного рядка в систему управління персоналом, який дозволить користувачам взаємодіяти з додатком через інтерфейс командного рядка. Цей інтерфейс повинен підтримувати набір команд, що відповідають різним операціям управління персоналом, щоб користувачам було легше вводити інструкції та отримувати відповідну інформацію. Це покращить доступність та зручність системи управління персоналом, надаючи зручний та ефективний спосіб користувачам виконувати завдання, пов'язані з персоналом.",
+      "Інтегруйте інтерфейс командного рядка в систему управління персоналом, який дозволить користувачам взаємодіяти з додатком через інтерфейс командного рядка. Цей інтерфейс повинен підтримувати набір команд, що відповідають різним операціям управління персоналом, щоб користувачам було легше вводити інструкції та отримувати відповідну інформацію. Це покращить доступність та зручність системи управління персоналом, надаючи зручний та ефективний спосіб користувачам виконувати завдання, пов'язані з персоналом",
     links: {
       website: null,
       github: "https://github.com/Anastasia-front/python-staff",
@@ -1594,9 +1593,9 @@ export const projectsUkrainianLang: Project[] = [
       "Телефонна книга ( додавання, зміна, отримання, видалення )",
     ],
     problem:
-      "Відсутність інтерфейсу командного рядка ( CLI ) обмежує зручність та швидкість взаємодії користувача з трьома основними областями інформації: 'Країни ( інформація, порівняння )', 'Структура директорій' та 'Телефонна книга (  додавання, зміна, отримання, видалення )'. Завдання, пов'язані з отриманням інформації про країни, роботою зі структурою каталогів та управлінням телефонною книгою, можуть стати більш зручними та ефективними за допомогою інтерфейсу командного рядка.",
+      "Відсутність інтерфейсу командного рядка ( CLI ) обмежує зручність та швидкість взаємодії користувача з трьома основними областями інформації: 'Країни ( інформація, порівняння )', 'Структура директорій' та 'Телефонна книга (  додавання, зміна, отримання, видалення )'. Завдання, пов'язані з отриманням інформації про країни, роботою зі структурою каталогів та управлінням телефонною книгою, можуть стати більш зручними та ефективними за допомогою інтерфейсу командного рядка",
     solution:
-      "Впровадження інтерфейсу командного рядка для кожної з зазначених областей. Це надасть можливість користувачам виконувати операції швидко та зручно, надсилати команди для отримання інформації про країни, взаємодіяти зі структурою каталогів та виконувати операції з управління телефонною книгою, такі як додавання, зміна, отримання та видалення контактів. Інтерфейс командного рядка може спростити та прискорити взаємодію з цими функціями, забезпечуючи зручний та ефективний інструмент для користувачів.",
+      "Впровадження інтерфейсу командного рядка для кожної з зазначених областей. Це надасть можливість користувачам виконувати операції швидко та зручно, надсилати команди для отримання інформації про країни, взаємодіяти зі структурою каталогів та виконувати операції з управління телефонною книгою, такі як додавання, зміна, отримання та видалення контактів. Інтерфейс командного рядка може спростити та прискорити взаємодію з цими функціями, забезпечуючи зручний та ефективний інструмент для користувачів",
     links: {
       website: null,
       github: "https://github.com/Anastasia-front/python-bot",
@@ -1616,20 +1615,20 @@ export const projectsUkrainianLang: Project[] = [
     development: "data",
     type: "individual",
     name: "Конспект",
-    categories: ["Python", "Конспект", "Приклади"],
+    categories: ["Python", "Приклади"],
     image: cover23,
     url: "python-workbook",
-    features: ["Конспект", "Приклади"],
+    features: ["Код виконується", "Відформатований вивід у консолі"],
     problem:
-      "Відсутність зібраної в одному місці потрібної інформації завжди сповільнює час написання коду, бо потрібно весь час шукати назви методів чи правила роботи з певними структурами данних.",
+      "Відсутність зібраної в одному місці потрібної інформації завжди сповільнює час написання коду, бо потрібно весь час шукати назви методів чи правила роботи з певними структурами данних",
     solution:
-      "Створення конспекту вирішує цю проблему, плюс ще раз розбирається і закріплюється матеріал.",
+      "Створення конспекту вирішує цю проблему, плюс ще раз розбирається і закріплюється матеріал",
     links: {
       website: null,
       github: "https://github.com/Anastasia-front/python-workbook",
     },
     content: {
-      description: "Конспект з Python",
+      description: "Занотовано багато інформації",
       image1: twentyThreeProjectSnippet1,
       image2: twentyThreeProjectSnippet2,
       image3: twentyThreeProjectSnippet3,
@@ -1648,9 +1647,9 @@ export const projectsUkrainianLang: Project[] = [
     url: "python-leetcode",
     features: ["Задачі", "Рішення"],
     problem:
-      "Вирішення задач є важливим для демонстрації логічних та технічних навичок, особливо при підготовці до співбесід. Це може бути викликом і вимагати глибокого розуміння концепцій програмування та технік вирішення задач.",
+      "Вирішення задач є важливим для демонстрації логічних та технічних навичок, особливо при підготовці до співбесід. Це може бути викликом і вимагати глибокого розуміння концепцій програмування та технік вирішення задач",
     solution:
-      "Регулярне вирішення задач не лише покращує логічне мислення та технічну вправність, але й надає цінну підготовку до співбесід.",
+      "Регулярне вирішення задач не лише покращує логічне мислення та технічну вправність, але й надає цінну підготовку до співбесід",
     links: {
       website: null,
       github: "https://github.com/Anastasia-front/python-leetcode",

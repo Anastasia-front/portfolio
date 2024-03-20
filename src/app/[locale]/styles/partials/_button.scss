@@ -58,7 +58,10 @@
 
     &__right {
       z-index: 100;
-      right: calc(2% + 7px);
+
+      @include useScreen("mobile-xl") {
+        right: calc(2% + 7px);
+      }
     }
 
     @media screen and (max-height: 450px) {

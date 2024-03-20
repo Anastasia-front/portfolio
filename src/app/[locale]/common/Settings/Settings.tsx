@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
 import { Navigation } from "@/common";
-import { Portal, Switchers } from "@/components";
+import { ButtonText, Portal, Switchers } from "@/components";
 import { useGlobalContext } from "@/context";
 import { useKeyPress, useScrollLock } from "@/hooks";
 
@@ -17,7 +17,7 @@ export function Settings() {
   const [showButton, setShowButton] = useState(false);
   const [animationClass, setAnimationClass] = useState("");
 
-  const { settingsModal } = useGlobalContext();
+  const { settingsModal, formModal } = useGlobalContext();
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
@@ -73,6 +73,13 @@ export function Settings() {
     };
   }, []);
 
+  const handleButtonClick = () => {
+    if (settingsModal.isOpen) {
+      settingsModal.close();
+      formModal.open();
+    }
+  };
+
   return (
     <div
       className={`button-settings ${animationClass} ${
@@ -93,7 +100,13 @@ export function Settings() {
             <div className="settings-background">
               <h3 className="settings-title">{t("settings")}</h3>
               <Navigation onClick={settingsModal.close} />
-              <Switchers className="settings-switchers" />
+              <div className="row"> <Switchers className="settings-switchers" />
+              <ButtonText
+                text={t("contacts")}
+                onClick={handleButtonClick}
+                ariaLabel={t("contacts")}
+              /></div>
+             
             </div>
           </div>
         </Portal>
