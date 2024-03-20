@@ -33,7 +33,7 @@
     "link": "Return to Home Page"
   },
   "error": {
-    "boundary": "Something went wrong. You can write me a letter about the reason for the error - and I will fix this bug when I learn about it ( unfortunately, there are no bugs )) Now please reload the page :)"
+    "boundary": "Something went wrong. You can send me a message about the reason for the error - and I will fix this bug when I learn about it ( unfortunately, there are no bugs )) Now please reload the page :)"
   },
   "license": {
     "accordion": "Background images are taken from the site",
@@ -59,7 +59,7 @@
     "burger": "Burger menu",
     "close": "Close",
     "switcher": "Switcher",
-    "submit": "Sent form data"
+    "submit": "Send form data"
   },
   "switcher": {
     "theme": {
@@ -135,7 +135,7 @@
         "position": "junior fullstack developer"
       },
       "subtitle": "general information",
-      "description": "If you are looking for a hard-working, conscientious and ready for new challenges employee - then I am the person you need. I advanced twice in the courses, because I devoted all my time to studying - I was a Scrum Master and a Team Leader on team projects. Even before the completion of the courses, I already participated in commercial projects ( one of them social, the other - a start-up ), after completion - in another commercial one from the company ( you can see all the works on the projects page )"
+      "description": "If you are looking for a hard-working, conscientious and ready for new challenges employee - then I am exactly the person you need. During the courses, I upgraded my qualifications twice, because I devoted all my time to studying. I was a Scrum Master and a Team Lead on team projects. Even before graduation, I had already participated in commercial projects ( one of them was social, the other was a startup ), and after graduation - in another commercial project from the company SoftRyzen ( all the works can be found on the projects page )"
     },
     "features": {
       "title": "features",
@@ -195,7 +195,7 @@
         },
         "second": {
           "number": "02",
-          "title": "Hard Work",
+          "title": "Hard work",
           "description": "I do everything to the fullest extent and take the initiative to do even more. I always conscientiously finish tasks assigned to me"
         },
         "third": {
@@ -210,12 +210,12 @@
         },
         "fifth": {
           "number": "05",
-          "title": "Communication Skills",
-          "description": "Considering my previous experience of working with a large amount of people of different age groups, I have acquired strong communication skills, conflict resolution abilities, and the ability to handle various situations"
+          "title": "Communication skills",
+          "description": "Considering my previous experience of working with a large number of people of different age groups, I have acquired strong communication skills, conflict resolution abilities, and the ability to handle various situations"
         },
         "sixth": {
           "number": "06",
-          "title": "Stress Resistance",
+          "title": "Stress resistance",
           "description": "Since there is a lot of stress in our lives, I have learned to stay focused and work effectively in stressful situations"
         },
         "seventh": {
@@ -227,7 +227,7 @@
     },
     "alt": "About me",
     "confirm": "To confirm my studies in the courses and their successful completion, I am attaching a certificate and screens of the progress of my studies from my personal course cabinet",
-    "github": "Also, to highlight my desire for learning, improving skills and self-improvement, I am adding activity statistics for the year 2023",
+    "github": "Also, to highlight my desire for learning, improving skills and self-improvement, I am adding activity statistics for the 2023 year",
     "achievements": {
       "title": {
         "main": "Achievements",
@@ -280,11 +280,11 @@
     "below": "Below you can see what the project looks like so as not to click on the link"
   },
   "contacts": {
-    "title": "Text to me",
+    "title": "Text me",
     "description": "Below is the form for sending me an email and below it you will find all available ways to contact me ( they are also duplicated in the footer)",
     "ogImage": "/images/opengraph/en/contacts.webp",
     "form": {
-      "title": "Send me a letter",
+      "title": "Let's get in touch",
       "subject": {
         "title": "Subject",
         "placeholder": "Enter subject",
@@ -322,7 +322,7 @@
               "title": "E-mail",
               "href": "mailto:prysiazhnastasia@gmail.com",
               "info": "prysiazhnastasia@gmail.com",
-              "dataText": "Send letter",
+              "dataText": "Send email",
               "icon": "BsFillEnvelopeAtFill"
             },
             "third": {
