@@ -1,12 +1,12 @@
 "use client";
 
-import { lazy } from "react";
+import { lazy, useRef } from "react";
 
 import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import dynamic from "next/dynamic";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import { type Locale } from "src/locales";
 
@@ -41,14 +41,14 @@ export default function AboutPage() {
   const img = `/images/about/${folder}/${locale}-${theme}.webp`;
 
   // scroll animations
-  // const header = useRef(null);
-  // const scrollYProgress = useScroll({
-  //   target: header,
-  //   offset: ["start end", "end start"],
-  // }).scrollYProgress;
+  const header = useRef(null);
+  const scrollYProgress = useScroll({
+    target: header,
+    offset: ["start end", "end start"],
+  }).scrollYProgress;
 
-  // const scale = useTransform(scrollYProgress, [0, 0.7], [0.7, 1.2]);
-  // const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.5]);
+  const scale = useTransform(scrollYProgress, [0, 0.7], [0.7, 1.2]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.5]);
 
   return (
     <>
@@ -59,10 +59,7 @@ export default function AboutPage() {
         description={t("description")}
       />
       <main className="container">
-        <motion.div
-          // ref={header}
-          className="about-header"
-        >
+        <motion.div ref={header} className="about-header">
           <motion.img
             src={img}
             alt={t("alt")}
@@ -72,9 +69,9 @@ export default function AboutPage() {
             animate="visible"
             viewport={{ once: true, amount: 0 }}
             style={{
-              // scale,
+              scale,
               translateX: "-50%",
-              // opacity,
+              opacity,
             }}
           />
         </motion.div>
