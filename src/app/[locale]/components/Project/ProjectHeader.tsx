@@ -35,7 +35,7 @@ export function ProjectHeader({ name, categories, description, image }: Props) {
         alt={i("cover")}
       />
       <motion.div
-        className="overlay"
+        className="overlay border-for-media"
         variants={overlayVariants}
         initial="hidden"
         animate="visible"

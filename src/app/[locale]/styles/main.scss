@@ -23,13 +23,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   user-select: text;
-
-  @media (prefers-color-scheme: light) {
-    background-color: var(--color--bg-light);
-  }
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--color--bg-dark);
-  }
+  background-color: var(--color--bg-light);
 
   &::-webkit-scrollbar {
     width: 7px;
@@ -62,8 +56,8 @@ footer {
 }
 
 main {
-  overflow-x: hidden;
   contain-intrinsic-size: 1000px;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     background-color: transparent;
@@ -242,22 +236,22 @@ img {
   overflow: hidden;
 
   @media (prefers-color-scheme: light) {
-    background: var(--color--bg-light);
     color: var(--color--light-blue-7);
+    background: var(--color--bg-light);
   }
   @media (prefers-color-scheme: dark) {
-    background: var(--color--bg-dark);
     color: var(--color--orange-7);
+    background: var(--color--bg-dark);
   }
 
   p {
+    padding: 0 10.5rem 0 7rem;
+    color: transparent;
+    font-size: 10rem;
     font-family: "Merriweather", serif;
     letter-spacing: -12px;
-    padding: 0 10.5rem 0 7rem;
-    user-select: none;
-    color: transparent;
     white-space: nowrap;
-    font-size: 10rem;
+    user-select: none;
 
     @media (prefers-color-scheme: light) {
       -webkit-text-stroke: 1px var(--color--light-blue-7);
@@ -986,4 +980,12 @@ img {
       height: auto;
     }
   }
+}
+
+.border-for-media {
+  border: 1px solid var(--color--light-blue-3);
+  border-radius: var(--padding--sm);
+}
+[data-theme="dark"] .border-for-media {
+  border: 1px solid var(--color--orange-3);
 }

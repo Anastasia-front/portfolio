@@ -75,7 +75,11 @@ export default function Progress() {
           handleClose={progressModal.close}
           noDivContent
         >
-          <Image loading="lazy" src={selectedImage} alt={selectedTitle} />
+          <Image
+            loading="lazy"
+            src={selectedImage}
+            alt={selectedTitle}
+          />
         </PortalModal>
       )}
     </>

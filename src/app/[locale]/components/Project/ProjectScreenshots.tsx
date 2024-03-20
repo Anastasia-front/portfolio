@@ -32,6 +32,7 @@ export function ProjectScreenshots({ images, openModal }: Props) {
           {image1 && (
             <Image
               loading="lazy"
+              className="border-for-media"
               src={image1}
               alt={i("first")}
               onClick={() => openModal(image1, i("first"))}
@@ -40,6 +41,7 @@ export function ProjectScreenshots({ images, openModal }: Props) {
           {image2 && (
             <Image
               loading="lazy"
+              className="border-for-media"
               src={image2}
               alt={i("second")}
               onClick={() => openModal(image2, i("second"))}
@@ -51,6 +53,7 @@ export function ProjectScreenshots({ images, openModal }: Props) {
           {image1 && (
             <Image
               loading="lazy"
+              className="border-for-media"
               src={image1}
               alt={i("first")}
               onClick={() => openModal(image1, i("first"))}
@@ -59,6 +62,7 @@ export function ProjectScreenshots({ images, openModal }: Props) {
           {image2 && (
             <Image
               loading="lazy"
+              className="border-for-media"
               src={image2}
               alt={i("second")}
               onClick={() => openModal(image2, i("second"))}
@@ -71,6 +75,7 @@ export function ProjectScreenshots({ images, openModal }: Props) {
         {image3 && (
           <Image
             loading="lazy"
+            className="border-for-media"
             src={image3}
             alt={i("third")}
             onClick={() => openModal(image3, i("third"))}
@@ -79,6 +84,7 @@ export function ProjectScreenshots({ images, openModal }: Props) {
         {image4 && (
           <Image
             loading="lazy"
+            className="border-for-media"
             src={image4}
             alt={i("fourth")}
             onClick={() => openModal(image4, i("fourth"))}
@@ -87,6 +93,7 @@ export function ProjectScreenshots({ images, openModal }: Props) {
         {image5 && (
           <Image
             loading="lazy"
+            className="border-for-media"
             src={image5}
             alt={i("fifth")}
             onClick={() => openModal(image5, i("fifth"))}

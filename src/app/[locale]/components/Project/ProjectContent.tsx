@@ -98,7 +98,7 @@ export function ProjectContent({
           handleClose={projectModal.close}
           noDivContent
         >
-          <Image src={selectedImage} alt={selectedAlt} loading="lazy" />
+          <Image src={selectedImage} alt={selectedAlt} loading="lazy" className="border-for-media"/>
         </PortalModal>
       )}
     </section>

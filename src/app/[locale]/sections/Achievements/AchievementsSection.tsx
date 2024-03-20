@@ -161,7 +161,7 @@ export default function AchievementsSection() {
         ({a("title.video")})
       </motion.h5>
       <motion.video
-        className="github-size github-video"
+        className="github-size github-video border-for-media"
         src="/video/achievements/github2023.mp4"
         ref={videoRef}
         onClick={handleClick}
@@ -182,7 +182,7 @@ export default function AchievementsSection() {
         ({a("title.image")})
       </motion.h6>
       <motion.img
-        className="github-size github-img"
+        className="github-size github-img border-for-media"
         src="/images/about/github-wrapped.webp"
         alt={a("alt.github")}
         onClick={() =>
@@ -209,6 +209,7 @@ export default function AchievementsSection() {
             src="/images/about/github-wrapped.webp"
             alt={selectedAlt}
             loading="lazy"
+            className="border-for-media"
           />
         </PortalModal>
       )}
