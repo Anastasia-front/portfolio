@@ -309,7 +309,7 @@
       "title": "To contact me, click on the link-icon convenient for you",
       "icons": {
         "first": {
-          "title": "Basic methods of connection",
+          "title": "Basic types of connection",
           "links": {
             "first": {
               "title": "Phone",
@@ -322,7 +322,7 @@
               "title": "E-mail",
               "href": "mailto:prysiazhnastasia@gmail.com",
               "info": "prysiazhnastasia@gmail.com",
-              "dataText": "Send email",
+              "dataText": "Send e-mail",
               "icon": "BsFillEnvelopeAtFill"
             },
             "third": {
