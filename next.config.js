@@ -7,6 +7,10 @@ const withNextIntl = require("next-intl/plugin")(
   "./src/i18n.ts"
 );
 
+const {
+  withHydrationOverlayWebpack,
+} = require("@builder.io/react-hydration-overlay/webpack");
+
 module.exports = withNextIntl({
   reactStrictMode: true,
   productionBrowserSourceMaps: true,
@@ -42,6 +46,14 @@ module.exports = withNextIntl({
     ];
   },
   webpack: (config, { isServer }) => {
+    // Apply withHydrationOverlayWebpack configuration
+    config = withHydrationOverlayWebpack({
+      appRootSelector: "#__next",
+      isMainAppEntryPoint: (entryPointName) =>
+        !isServer &&
+        (entryPointName === "pages/_app" || entryPointName === "main-app"),
+    })(config);
+
     // Add a rule to handle video files
     config.module.rules.push({
       test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
@@ -54,11 +66,14 @@ module.exports = withNextIntl({
         },
       },
     });
+
+    // Add a rule to handle SVG files
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
     });
-    // config.resolve.alias["@/"] = path.join(__dirname, "./app/[locale]/");
+
+    // Adjust resolve fallbacks
     config.resolve.fallback = { fs: false, path: false };
 
     return config;

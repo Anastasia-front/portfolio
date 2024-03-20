@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@builder.io/react-hydration-overlay": "^0.0.8",
     "@hookform/resolvers": "^3.3.2",
     "@react-three/drei": "^9.88.0",
     "@react-three/fiber": "^8.14.5",
@@ -58,11 +59,11 @@
   },
   "browser": {
     "fs": false,
-    "path": false, 
-    "os": false, 
-    "net": false, 
+    "path": false,
+    "os": false,
+    "net": false,
     "tls": false,
     "dns": false,
-    "child_process":false
+    "child_process": false
   }
 }

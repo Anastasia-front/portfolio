@@ -4,10 +4,13 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Oxygen } from "next/font/google";
+
+import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
+
 import { Locale } from "src/locales";
 
 const ErrorBoundary = lazy(
-  () => import("./components/ErrorBoundary/ErrorBoundary")
+  () => import("./common/ErrorBoundary/ErrorBoundary")
 );
 
 import { Layout } from "./common";
@@ -50,18 +53,20 @@ export default async function RootLayout(props: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={props.params.locale}>
+    <html lang={props.params.locale} suppressHydrationWarning={true}>
       <body className={oxygen.className}>
-        <GlobalProviders>
-          <NextIntlClientProvider
-            locale={props.params.locale}
-            messages={messages}
-          >
-            <ErrorBoundary>
-              <Layout>{props.children} </Layout>
-            </ErrorBoundary>
-          </NextIntlClientProvider>
-        </GlobalProviders>
+        <HydrationOverlay>
+          <GlobalProviders>
+            <NextIntlClientProvider
+              locale={props.params.locale}
+              messages={messages}
+            >
+              <ErrorBoundary>
+                <Layout>{props.children} </Layout>
+              </ErrorBoundary>
+            </NextIntlClientProvider>
+          </GlobalProviders>
+        </HydrationOverlay>
       </body>
     </html>
   );

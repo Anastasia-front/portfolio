@@ -9,18 +9,9 @@ export function Layout(props: any) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    let isMounted = false;
-    if (!loaded) {
-      setTimeout(() => {
-        if (isMounted) {
-          setLoaded(true);
-        }
-      }, 2000);
-    }
-
-    return () => {
-      isMounted = true;
-    };
+    setTimeout(() => {
+      setLoaded(true);
+    }, 2000);
   }, [loaded]);
 
   return loaded ? (

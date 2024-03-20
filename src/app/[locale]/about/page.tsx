@@ -15,8 +15,8 @@ import { useScreenQuery } from "@/hooks";
 import { bannerVariants, titleVariants } from "@/utils";
 
 const AboutItem = lazy(() => import("../components/AboutItem/AboutItem"));
-const AchievementBlock = lazy(
-  () => import("../sections/AchievementBlock/AchievementBlock")
+const Achievements = lazy(
+  () => import("../sections/Achievements/AchievementsSection")
 );
 
 const Banner = dynamic(() =>
@@ -105,7 +105,7 @@ export default function AboutPage() {
                 />
               ))}
             </ol>
-            <AchievementBlock />
+            <Achievements />
           </section>
         </div>
       </main>
