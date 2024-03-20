@@ -411,7 +411,7 @@ export const projectsEnglishLang: Project[] = [
     },
     content: {
       description:
-        "An application where you can: - register, enter and exit the application; - change your avatar and nickname; - download and delete your posts or comments on them; - see other users' posts, add comments and likes to them; - open the location where the post was made; - share your cool photos!)",
+        "An application where you can: - register, enter and exit the application; - change your avatar and nickname; - download and delete your posts or comments on them; - see other users' posts, add comments and likes to them; - open the location where the post was made; - share your cool photos! )",
       image1: fifthProjectSnippet1,
       image2: fifthProjectSnippet2,
       image3: fifthProjectSnippet3,
@@ -500,7 +500,7 @@ export const projectsEnglishLang: Project[] = [
     },
     content: {
       description:
-        "This is my own adaptive website where I collected all the information about myself (this project can be considered a portfolio of my starting works)",
+        "This is my own adaptive website where I collected all the information about myself ( this project can be considered a portfolio of my starting works )",
       image1: tenthProjectSnippet1,
       image2: tenthProjectSnippet2,
       image3: tenthProjectSnippet3,
@@ -528,7 +528,7 @@ export const projectsEnglishLang: Project[] = [
     },
     content: {
       description:
-        "This website was created in a few days after completing the first block of my studies to reinforce the material learned (I made several changes after the initial commit to improve the work)",
+        "This website was created in a few days after completing the first block of my studies to reinforce the material learned ( I made several changes after the initial commit to improve the work )",
       image1: sixteenthProjectSnippet1,
       image2: sixteenthProjectSnippet2,
       image3: sixteenthProjectSnippet3,
@@ -541,7 +541,7 @@ export const projectsEnglishLang: Project[] = [
     language: "js",
     development: "frontend",
     type: "team",
-    name: "Task Pro (frontend)",
+    name: "Task Pro ( frontend )",
     categories: ["js", "React", "Redux", "css"],
     image: cover4,
     url: "task-pro-frontend",
@@ -629,7 +629,7 @@ export const projectsEnglishLang: Project[] = [
     },
     content: {
       description:
-        "I created this website during the first block of my studies (managed it quite well from the beginning)",
+        "I created this website during the first block of my studies ( managed it quite well from the beginning )",
       image1: seventeenthProjectSnippet1,
       image2: seventeenthProjectSnippet2,
       image3: seventeenthProjectSnippet3,
@@ -650,7 +650,7 @@ export const projectsEnglishLang: Project[] = [
     problem:
       "There was an assignment to do a test from the course in 5 days, but I found out about it late and completed it in 10 hours",
     solution:
-      "All points from the technical specifications were implemented (including additional ones)",
+      "All points from the technical specifications were implemented ( including additional ones )",
     links: {
       website: "https://anastasia-front.github.io/first-tech-test/",
       github: "https://github.com/Anastasia-front/first-tech-test",
@@ -709,7 +709,7 @@ export const projectsEnglishLang: Project[] = [
         "https://github.com/Anastasia-front/first-acquaintance-with-node.js",
     },
     content: {
-      description: "CLI (Command line interface) application",
+      description: "CLI ( Command line interface ) application",
       image1: thirteenthProjectSnippet1,
       image2: thirteenthProjectSnippet2,
       image3: thirteenthProjectSnippet3,
@@ -748,7 +748,7 @@ export const projectsEnglishLang: Project[] = [
     language: "js",
     development: "backend",
     type: "team",
-    name: "Task Pro (backend)",
+    name: "Task Pro ( backend )",
     categories: ["js", "Node", "Mongoose", "Express"],
     image: cover15,
     url: "task-pro-backend",
@@ -831,7 +831,7 @@ export const projectsEnglishLang: Project[] = [
     url: "python-staff",
     features: ["serializing", "OOP"],
     problem:
-      "The existing system lacks a Command-Line Interface (CLI) for managing staff information efficiently. This absence limits the user's ability to interact with the staff database and perform various operations seamlessly through a command-line interface. To address this issue, implementing a CLI will enhance user experience and provide a more user-friendly way to execute commands related to staff management, such as adding positions, editing information, finding details, and more",
+      "The existing system lacks a Command-Line Interface ( CLI ) for managing staff information efficiently. This absence limits the user's ability to interact with the staff database and perform various operations seamlessly through a command-line interface. To address this issue, implementing a CLI will enhance user experience and provide a more user-friendly way to execute commands related to staff management, such as adding positions, editing information, finding details, and more",
     solution:
       "Integrate a CLI into the staff management system that allows users to interact with the application through a command-line interface. The CLI should support a set of commands corresponding to various staff management operations, making it easier for users to input instructions and receive relevant information. This will enhance the accessibility and usability of the staff management system, providing a convenient and efficient means for users to handle staff-related tasks.",
     links: {
@@ -857,12 +857,12 @@ export const projectsEnglishLang: Project[] = [
     image: cover22,
     url: "python-bot",
     features: [
-      "Countries (info, comparison)",
+      "Countries ( info, comparison )",
       "Directory structure",
-      "Phone book (add, change, get, delete)",
+      "Phone book ( add, change, get, delete )",
     ],
     problem:
-      "The absence of a Command-Line Interface (CLI) limits the convenience and speed of user interaction with three main areas of information: 'Countries (info, comparison),' 'Directory structure,' and 'Phone book (add, change, get, delete).' Tasks related to obtaining information about countries, working with directory structures, and managing the phone book could become more convenient and efficient with a command-line interface.",
+      "The absence of a Command-Line Interface ( CLI ) limits the convenience and speed of user interaction with three main areas of information: 'Countries ( info, comparison ),' 'Directory structure,' and 'Phone book ( add, change, get, delete ).' Tasks related to obtaining information about countries, working with directory structures, and managing the phone book could become more convenient and efficient with a command-line interface.",
     solution:
       "Implementing a command-line interface for each of the specified areas. This will provide users with the ability to perform operations quickly and conveniently, sending commands to retrieve information about countries, interact with directory structures, and perform operations related to managing the phone book, such as adding, changing, getting, and deleting contacts. A command-line interface can simplify and expedite the interaction with these functions, providing a convenient and efficient tool for users.",
     links: {
@@ -941,7 +941,7 @@ export const projectsUkrainianLang: Project[] = [
     development: "frontend",
     type: "commercial",
     name: "IMConsulting",
-    categories: ["Бізнес-проект", "js", "Next", "Tailwind css"],
+    categories: ["Бізнес-проєкт", "js", "Next", "Tailwind css"],
     image: cover1,
     url: "i-m-consulting",
     features: [
@@ -1055,7 +1055,7 @@ export const projectsUkrainianLang: Project[] = [
     development: "frontend",
     type: "commercial",
     name: "4.5.0",
-    categories: ["Соціальний проект", "ts", "Next", "scss"],
+    categories: ["Соціальний проєкт", "ts", "Next", "scss"],
     image: cover2,
     url: "4-5-0",
     features: [
@@ -1148,7 +1148,7 @@ export const projectsUkrainianLang: Project[] = [
     },
     content: {
       description:
-        "Додаток, де можна: - зареєструватися, увійти та вийти з додатку; - змінити свій аватар та нікнейм; - завантажити та видалити свої дописи чи коментарі до них; - переглянути дописи інших користувачів, додавати коментарі та лайки до них; - відкрити місце, де був зроблений пост; - поділитися своїми класними фотографіями :)",
+        "Додаток, де можна: - зареєструватися, увійти та вийти з додатку; - змінити свій аватар та нікнейм; - завантажити та видалити свої дописи чи коментарі до них; - переглянути дописи інших користувачів, додавати коментарі та лайки до них; - відкрити місце, де був зроблений пост; - поділитися своїми класними фотографіями : )",
       image1: fifthProjectSnippet1,
       image2: fifthProjectSnippet2,
       image3: fifthProjectSnippet3,
@@ -1236,7 +1236,7 @@ export const projectsUkrainianLang: Project[] = [
     },
     content: {
       description:
-        "Це мій власний адаптивний веб-сайт, де я зібрала всю інформацію про себе (цей проект можна вважати портфоліо моїх початкових робіт)",
+        "Це мій власний адаптивний веб-сайт, де я зібрала всю інформацію про себе ( цей проєкт можна вважати портфоліо моїх початкових робіт )",
       image1: tenthProjectSnippet1,
       image2: tenthProjectSnippet2,
       image3: tenthProjectSnippet3,
@@ -1256,14 +1256,14 @@ export const projectsUkrainianLang: Project[] = [
     features: ["Адаптивний дизайн", "Та багато іншого..."],
     problem:
       "Компанії з виготовлення смачної та естетично гарної їжі потрібен веб-сайт",
-    solution: "Я могу зверстати з макетом проект будь-якої складності",
+    solution: "Я могу зверстати з макетом проєкт будь-якої складності",
     links: {
       website: "https://anastasia-front.github.io/Food-website/",
       github: "https://github.com/Anastasia-front/Food-website",
     },
     content: {
       description:
-        "Це веб-сайт, який я створила через кілька днів після завершення першого блоку навчання, щоб закріпити пройдений матеріал (я багато разів робила усілякі зміни після основного коміту, щоб покращити роботу)",
+        "Це веб-сайт, який я створила через кілька днів після завершення першого блоку навчання, щоб закріпити пройдений матеріал ( я багато разів робила усілякі зміни після основного коміту, щоб покращити роботу )",
       image1: sixteenthProjectSnippet1,
       image2: sixteenthProjectSnippet2,
       image3: sixteenthProjectSnippet3,
@@ -1276,7 +1276,7 @@ export const projectsUkrainianLang: Project[] = [
     language: "js",
     development: "frontend",
     type: "team",
-    name: "Task Pro (frontend)",
+    name: "Task Pro ( frontend )",
     categories: ["js", "React", "Redux", "css"],
     image: cover4,
     url: "task-pro-frontend",
@@ -1362,7 +1362,7 @@ export const projectsUkrainianLang: Project[] = [
     },
     content: {
       description:
-        "Це веб-сайт, я створила на першому блоці навчання (для початку впоралася добре)",
+        "Це веб-сайт, я створила на першому блоці навчання ( для початку впоралася добре )",
       image1: seventeenthProjectSnippet1,
       image2: seventeenthProjectSnippet2,
       image3: seventeenthProjectSnippet3,
@@ -1383,7 +1383,7 @@ export const projectsUkrainianLang: Project[] = [
     problem:
       "Було завдання зробити тест на курсах протягом 5 днів, але я дізналася про нього пізно і виконала його за 10 годин",
     solution:
-      "Всі пункти технічних завдань були реалізовані (включаючи додаткові)",
+      "Всі пункти технічних завдань були реалізовані ( включаючи додаткові )",
     links: {
       website: "https://anastasia-front.github.io/first-tech-test/",
       github: "https://github.com/Anastasia-front/first-tech-test",
@@ -1442,7 +1442,7 @@ export const projectsUkrainianLang: Project[] = [
         "https://github.com/Anastasia-front/first-acquaintance-with-node.js",
     },
     content: {
-      description: "Додаток інтерфейсу командного рядка (CLI)",
+      description: "Додаток інтерфейсу командного рядка ( CLI )",
       image1: thirteenthProjectSnippet1,
       image2: thirteenthProjectSnippet2,
       image3: thirteenthProjectSnippet3,
@@ -1461,7 +1461,7 @@ export const projectsUkrainianLang: Project[] = [
     url: "rest-api",
     features: ["Backend для телефонної книги"],
     problem: "Є потреба створити додаток телефонної книги - потрібно REST API",
-    solution: "Цей проект ідеально підходить для цієї потреби",
+    solution: "Цей проєкт ідеально підходить для цієї потреби",
     links: {
       website: "https://contacts-backend-eikd.onrender.com",
       github: "https://github.com/Anastasia-front/nodejs-first-rest-api",
@@ -1480,7 +1480,7 @@ export const projectsUkrainianLang: Project[] = [
     language: "js",
     development: "backend",
     type: "team",
-    name: "Task Pro (backend)",
+    name: "Task Pro ( backend )",
     categories: ["js", "Node", "Mongoose", "Express"],
     image: cover15,
     url: "task-pro-backend",
@@ -1502,7 +1502,7 @@ export const projectsUkrainianLang: Project[] = [
       "swagger-ui-express",
     ],
     problem:
-      "На фінальному командному проекті при завершенні курсів було дві підкоманди - по фронтенду й бекенду. Я була тім-лідом команди розробників з бекенду й вела загальну презентацію на захисті",
+      "На фінальному командному проєкті при завершенні курсів було дві підкоманди - по фронтенду й бекенду. Я була тім-лідом команди розробників з бекенду й вела загальну презентацію на захисті",
     solution: "Наша підкоманда чудово впоралася із поставленими завданнями",
     links: {
       website: "https://project-react-node-back.onrender.com",
@@ -1563,7 +1563,7 @@ export const projectsUkrainianLang: Project[] = [
     url: "python-staff",
     features: ["серіалізація", "ООП"],
     problem:
-      "Існуюча система не має інтерфейсу командного рядка (CLI) для ефективного управління інформацією про персонал. Відсутність цього інтерфейсу обмежує можливості користувача взаємодіяти з базою даних персоналу та виконувати різноманітні операції зручним способом через інтерфейс командного рядка. Для вирішення цього питання імплементація інтерфейсу командного рядка дозволить покращити взаємодію користувача з системою та забезпечить більш зручний спосіб виконання команд щодо управління персоналом, таких як додавання посад, редагування інформації, пошук деталей та інше.    ",
+      "Існуюча система не має інтерфейсу командного рядка ( CLI ) для ефективного управління інформацією про персонал. Відсутність цього інтерфейсу обмежує можливості користувача взаємодіяти з базою даних персоналу та виконувати різноманітні операції зручним способом через інтерфейс командного рядка. Для вирішення цього питання імплементація інтерфейсу командного рядка дозволить покращити взаємодію користувача з системою та забезпечить більш зручний спосіб виконання команд щодо управління персоналом, таких як додавання посад, редагування інформації, пошук деталей та інше.    ",
     solution:
       "Інтегруйте інтерфейс командного рядка в систему управління персоналом, який дозволить користувачам взаємодіяти з додатком через інтерфейс командного рядка. Цей інтерфейс повинен підтримувати набір команд, що відповідають різним операціям управління персоналом, щоб користувачам було легше вводити інструкції та отримувати відповідну інформацію. Це покращить доступність та зручність системи управління персоналом, надаючи зручний та ефективний спосіб користувачам виконувати завдання, пов'язані з персоналом.",
     links: {
@@ -1589,12 +1589,12 @@ export const projectsUkrainianLang: Project[] = [
     image: cover22,
     url: "python-bot",
     features: [
-      "Країни (інформація, порівняння)",
+      "Країни ( інформація, порівняння )",
       "Структура директорій",
-      "Телефонна книга (додавання, зміна, отримання, видалення)",
+      "Телефонна книга ( додавання, зміна, отримання, видалення )",
     ],
     problem:
-      "Відсутність інтерфейсу командного рядка (CLI) обмежує зручність та швидкість взаємодії користувача з трьома основними областями інформації: 'Країни (інформація, порівняння)', 'Структура директорій' та 'Телефонна книга (додавання, зміна, отримання, видалення)'. Завдання, пов'язані з отриманням інформації про країни, роботою зі структурою каталогів та управлінням телефонною книгою, можуть стати більш зручними та ефективними за допомогою інтерфейсу командного рядка.",
+      "Відсутність інтерфейсу командного рядка ( CLI ) обмежує зручність та швидкість взаємодії користувача з трьома основними областями інформації: 'Країни ( інформація, порівняння )', 'Структура директорій' та 'Телефонна книга (  додавання, зміна, отримання, видалення )'. Завдання, пов'язані з отриманням інформації про країни, роботою зі структурою каталогів та управлінням телефонною книгою, можуть стати більш зручними та ефективними за допомогою інтерфейсу командного рядка.",
     solution:
       "Впровадження інтерфейсу командного рядка для кожної з зазначених областей. Це надасть можливість користувачам виконувати операції швидко та зручно, надсилати команди для отримання інформації про країни, взаємодіяти зі структурою каталогів та виконувати операції з управління телефонною книгою, такі як додавання, зміна, отримання та видалення контактів. Інтерфейс командного рядка може спростити та прискорити взаємодію з цими функціями, забезпечуючи зручний та ефективний інструмент для користувачів.",
     links: {
