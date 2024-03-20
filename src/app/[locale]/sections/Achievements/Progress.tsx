@@ -77,6 +77,7 @@ export default function Progress() {
         >
           <Image
             loading="lazy"
+            className="border-for-media"
             src={selectedImage}
             alt={selectedTitle}
           />
