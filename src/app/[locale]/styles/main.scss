@@ -14,61 +14,6 @@
 @use "./partials/swiper" as *;
 @use "./partials/vars" as *;
 
-.preloader {
-  @include flex(column, center, center);
-  gap: 3rem;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-
-  @media (prefers-color-scheme: light) {
-    background: var(--color--bg-light);
-    color: var(--color--light-blue-7);
-  }
-  @media (prefers-color-scheme: dark) {
-    background: var(--color--bg-dark);
-    color: var(--color--orange-7);
-  }
-
-  p {
-    font-family: "Merriweather", serif;
-    letter-spacing: -12px;
-    padding: 0 10.5rem 0 7rem;
-    user-select: none;
-    color: transparent;
-    white-space: nowrap;
-    font-size: 10rem;
-
-    @media (prefers-color-scheme: light) {
-      -webkit-text-stroke: 1px var(--color--light-blue-7);
-    }
-    @media (prefers-color-scheme: dark) {
-      -webkit-text-stroke: 1px var(--color--orange-5);
-    }
-  }
-
-  &-text {
-    font-size: 5rem;
-
-    @include useScreen("mobile-lg") {
-      font-size: 6rem;
-    }
-    @include useScreen("mobile-xl") {
-      font-size: 7rem;
-    }
-    @include useScreen("tablet-sm") {
-      font-size: 8rem;
-    }
-    @include useScreen("tablet-lg") {
-      font-size: 9rem;
-    }
-    @include useScreen("tablet-xl") {
-      font-size: 10rem;
-    }
-  }
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -286,6 +231,59 @@ img {
 [data-theme="dark"] .container {
   &__box-shadow {
     @include box-shadow-1(var(--color--grey-opacity));
+  }
+}
+
+.preloader {
+  @include flex(column, center, center);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  @media (prefers-color-scheme: light) {
+    background: var(--color--bg-light);
+    color: var(--color--light-blue-7);
+  }
+  @media (prefers-color-scheme: dark) {
+    background: var(--color--bg-dark);
+    color: var(--color--orange-7);
+  }
+
+  p {
+    font-family: "Merriweather", serif;
+    letter-spacing: -12px;
+    padding: 0 10.5rem 0 7rem;
+    user-select: none;
+    color: transparent;
+    white-space: nowrap;
+    font-size: 10rem;
+
+    @media (prefers-color-scheme: light) {
+      -webkit-text-stroke: 1px var(--color--light-blue-7);
+    }
+    @media (prefers-color-scheme: dark) {
+      -webkit-text-stroke: 1px var(--color--orange-5);
+    }
+  }
+}
+.preloader .preloader-text {
+  font-size: 5rem;
+
+  @include useScreen("mobile-lg") {
+    font-size: 6rem;
+  }
+  @include useScreen("mobile-xl") {
+    font-size: 7rem;
+  }
+  @include useScreen("tablet-sm") {
+    font-size: 8rem;
+  }
+  @include useScreen("tablet-lg") {
+    font-size: 9rem;
+  }
+  @include useScreen("tablet-xl") {
+    font-size: 10rem;
   }
 }
 

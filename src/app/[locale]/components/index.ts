@@ -5,7 +5,6 @@ export * from "./Buttons";
 export * from "./Certificate";
 export * from "./Contacts";
 export * from "./Dropdown";
-export * from "./ErrorBoundary";
 export * from "./Form";
 export * from "./Loader";
 export * from "./Logo";
