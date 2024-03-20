@@ -53,9 +53,9 @@ export default async function RootLayout(props: Props) {
   const messages = await getMessages();
 
   return (
-    <HydrationOverlay>
-      <html lang={props.params.locale} suppressHydrationWarning={true}>
-        <body className={oxygen.className}>
+    <html lang={props.params.locale} suppressHydrationWarning={true}>
+      <body className={oxygen.className}>
+        <HydrationOverlay>
           <GlobalProviders>
             <NextIntlClientProvider
               locale={props.params.locale}
@@ -66,8 +66,8 @@ export default async function RootLayout(props: Props) {
               </ErrorBoundary>
             </NextIntlClientProvider>
           </GlobalProviders>
-        </body>
-      </html>
-    </HydrationOverlay>
+        </HydrationOverlay>
+      </body>
+    </html>
   );
 }

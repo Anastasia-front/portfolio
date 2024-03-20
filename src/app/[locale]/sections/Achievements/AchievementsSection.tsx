@@ -17,10 +17,8 @@ import { PortalModal } from "@/components";
 import { useGlobalContext } from "@/context";
 import { titleVariants } from "@/utils";
 
-const Certificate = lazy(
-  () => import("../../components/Certificate/Certificate")
-);
-const Progress = lazy(() => import("../../components/Progress/Progress"));
+const Certificate = lazy(() => import("./Certificate"));
+const Progress = lazy(() => import("./Progress"));
 
 const franklin = Libre_Franklin({
   subsets: ["latin"],
@@ -32,7 +30,7 @@ const source = Source_Code_Pro({
   weight: ["600"],
 });
 
-export default function AchievementBlock() {
+export default function AchievementsSection() {
   const a = useTranslations("about.achievements");
   const t = useTranslations("about");
   const h = useTranslations("home.3d");
@@ -62,7 +60,7 @@ export default function AchievementBlock() {
   };
 
   return (
-    <motion.div className="about-achievements">
+    <motion.section className="about-achievements">
       <motion.h2
         className="about-achievements__title"
         variants={titleVariants("second")}
@@ -214,6 +212,6 @@ export default function AchievementBlock() {
           />
         </PortalModal>
       )}
-    </motion.div>
+    </motion.section>
   );
 }
