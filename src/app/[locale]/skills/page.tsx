@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 
 import { type Locale } from "src/locales";
 
-import { menuItems } from "@/constants";
 import { bannerVariants, gridVariants, opacityVariants } from "@/utils";
 
 const Accordion = dynamic(() =>
@@ -26,69 +25,53 @@ const LottiePlayer = dynamic(() =>
 const Slider = dynamic(() =>
   import("../components/Skills/SkillsSlider").then((mod) => mod.SkillSlider)
 );
-const Robots = dynamic(() =>
-  import("../common/Robots/Robots").then((mod) => mod.Robots)
-);
 
 export default function SkillsPage() {
   const t = useTranslations("skills");
   const b = useTranslations("banner");
-  const n = useTranslations("nav");
 
   const locale = useLocale() as Locale;
 
   return (
-    <>
-      <Robots
-        page={menuItems[2].url}
-        ogImg={t("ogImage")}
-        title={`${n("page")} ${n("skills")}`}
-        description={t("description")}
-      />
-      <motion.main
-        variants={bannerVariants}
-        initial="hidden"
-        animate="visible"
-        viewport={{ once: true, amount: 0 }}
-        className="skills-page container"
-      >
-        <div className="skills-header">
-          <div className="page-headings page-headings__skills">
-            <motion.h1
-              variants={gridVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              {t("title")}
-            </motion.h1>
-            <motion.p
-              variants={gridVariants}
-              initial="hidden"
-              animate="visible"
-              className="page-headings__medium-width"
-            >
-              {t("description")}
-            </motion.p>
-          </div>
-          <LottiePlayer
-            src="/animation/skills.json"
-            background="transparent"
-            speed={1}
-            className="skills-animation"
-            loop
-            autoplay
-          />
+    <motion.main
+      variants={bannerVariants}
+      initial="hidden"
+      animate="visible"
+      viewport={{ once: true, amount: 0 }}
+      className="skills-page container"
+    >
+      <div className="skills-header">
+        <div className="page-headings page-headings__skills">
+          <motion.h1 variants={gridVariants} initial="hidden" animate="visible">
+            {t("title")}
+          </motion.h1>
+          <motion.p
+            variants={gridVariants}
+            initial="hidden"
+            animate="visible"
+            className="page-headings__medium-width"
+          >
+            {t("description")}
+          </motion.p>
         </div>
+        <LottiePlayer
+          src="/animation/skills.json"
+          background="transparent"
+          speed={1}
+          className="skills-animation"
+          loop
+          autoplay
+        />
+      </div>
 
-        <Accordion lang={locale} />
-        <Banner text={b("contact")} button />
-        <motion.div
-          variants={opacityVariants("first")}
-          className="skills-section__slider"
-        >
-          <Slider />
-        </motion.div>
-      </motion.main>
-    </>
+      <Accordion lang={locale} />
+      <Banner text={b("contact")} button />
+      <motion.div
+        variants={opacityVariants("first")}
+        className="skills-section__slider"
+      >
+        <Slider />
+      </motion.div>
+    </motion.main>
   );
 }

@@ -10,7 +10,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import { type Locale } from "src/locales";
 
-import { menuItems, sevenKeys } from "@/constants";
+import { sevenKeys } from "@/constants";
 import { useScreenQuery } from "@/hooks";
 import { bannerVariants, titleVariants } from "@/utils";
 
@@ -22,15 +22,11 @@ const Achievements = lazy(
 const Banner = dynamic(() =>
   import("../components/Banner/Banner").then((mod) => mod.Banner)
 );
-const Robots = dynamic(() =>
-  import("../common/Robots/Robots").then((mod) => mod.Robots)
-);
 
 export default function AboutPage() {
   const t = useTranslations("about");
   const b = useTranslations("banner");
   const i = useTranslations("about.features.items");
-  const n = useTranslations("nav");
 
   const { theme } = useTheme();
   const locale = useLocale() as Locale;
@@ -51,61 +47,49 @@ export default function AboutPage() {
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.5]);
 
   return (
-    <>
-      <Robots
-        page={menuItems[1].url}
-        ogImg={t("ogImage")}
-        title={`${n("page")} ${n("about")}`}
-        description={t("description")}
-      />
-      <main className="container">
-        <motion.div ref={header} className="about-header">
-          <motion.img
-            src={img}
-            alt={t("alt")}
-            className="about-header__image"
-            variants={bannerVariants}
-            initial="hidden"
-            animate="visible"
-            viewport={{ once: true, amount: 0 }}
-            style={{
-              scale,
-              translateX: "-50%",
-              opacity,
-            }}
-          />
-        </motion.div>
-        <div className="about-content">
-          <Banner
-            text={b("contact")}
-            button
-            className="about-content__banner"
-          />
+    <main className="container">
+      <motion.div ref={header} className="about-header">
+        <motion.img
+          src={img}
+          alt={t("alt")}
+          className="about-header__image"
+          variants={bannerVariants}
+          initial="hidden"
+          animate="visible"
+          viewport={{ once: true, amount: 0 }}
+          style={{
+            scale,
+            translateX: "-50%",
+            opacity,
+          }}
+        />
+      </motion.div>
+      <div className="about-content">
+        <Banner text={b("contact")} button className="about-content__banner" />
 
-          <section className="about-section">
-            <motion.h1
-              className="about-section__title"
-              variants={titleVariants("first")}
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              {t("features.title")}
-            </motion.h1>
-            <ol className="about-section__list">
-              {sevenKeys.map((key) => (
-                <AboutItem
-                  key={key}
-                  number={i(`${key}.number`)}
-                  title={i(`${key}.title`)}
-                  description={i(`${key}.description`)}
-                />
-              ))}
-            </ol>
-            <Achievements />
-          </section>
-        </div>
-      </main>
-    </>
+        <section className="about-section">
+          <motion.h1
+            className="about-section__title"
+            variants={titleVariants("first")}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {t("features.title")}
+          </motion.h1>
+          <ol className="about-section__list">
+            {sevenKeys.map((key) => (
+              <AboutItem
+                key={key}
+                number={i(`${key}.number`)}
+                title={i(`${key}.title`)}
+                description={i(`${key}.description`)}
+              />
+            ))}
+          </ol>
+          <Achievements />
+        </section>
+      </div>
+    </main>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
-import dynamic from "next/dynamic";
+import { useLocale } from "next-intl";
 
 import { motion } from "framer-motion";
 
@@ -10,11 +9,6 @@ import { type Locale } from "src/locales";
 import { ProjectContent, ProjectHeader } from "@/components";
 import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
 import { bannerVariants } from "@/utils";
-
-const Robots = dynamic(() =>
-  import("../../common/Robots/Robots").then((mod) => mod.Robots)
-);
-
 interface Params {
   params: {
     projectName: string;
@@ -22,8 +16,6 @@ interface Params {
 }
 
 export default function ProjectPage({ params }: Params) {
-  const n = useTranslations("nav");
-
   const locale = useLocale() as Locale;
   const projectLang = (() => {
     if (locale === "uk") {
@@ -57,33 +49,26 @@ export default function ProjectPage({ params }: Params) {
   };
 
   return (
-    <>
-      <Robots
-        page={`/${project?.url || ""}`}
-        title={`${n("page")} ${n("project")}, name ${name}`}
-        description={description || ""}
+    <motion.main
+      variants={bannerVariants}
+      initial="hidden"
+      animate="visible"
+      viewport={{ once: true, amount: 0 }}
+      className="container project project-page"
+    >
+      <ProjectHeader
+        name={name}
+        categories={categories}
+        description={description}
+        image={image}
       />
-      <motion.main
-        variants={bannerVariants}
-        initial="hidden"
-        animate="visible"
-        viewport={{ once: true, amount: 0 }}
-        className="container project project-page"
-      >
-        <ProjectHeader
-          name={name}
-          categories={categories}
-          description={description}
-          image={image}
-        />
-        <ProjectContent
-          links={linksObject}
-          problem={problem}
-          features={features}
-          solution={solution}
-          images={imageArray}
-        />
-      </motion.main>
-    </>
+      <ProjectContent
+        links={linksObject}
+        problem={problem}
+        features={features}
+        solution={solution}
+        images={imageArray}
+      />
+    </motion.main>
   );
 }
