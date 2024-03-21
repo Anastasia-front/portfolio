@@ -1,6 +1,5 @@
 export * from "./BurgerMenu";
 export * from "./ContentIndicator";
-export * from "./CustomHead";
 export * from "./ErrorBoundary";
 export * from "./Footer";
 export * from "./Header";
