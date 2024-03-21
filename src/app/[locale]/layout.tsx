@@ -4,43 +4,26 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Oxygen } from "next/font/google";
+import { headers } from "next/headers";
 
 import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
 
-import { Locale } from "src/locales";
+import { EN, Locale } from "src/locales";
 
 const ErrorBoundary = lazy(
   () => import("./common/ErrorBoundary/ErrorBoundary")
 );
 
+import { routes } from "routes";
+
 import { Layout } from "./common";
-import { BASE_URL, TITLE } from "./constants";
+import { BASE_URL, DESCRIPTION, TITLE } from "./constants";
 import { GlobalProviders } from "./providers";
+import { getLang, getSeoData } from "./utils";
 
 import "./styles/main.scss";
 
 const oxygen = Oxygen({ subsets: ["latin"], weight: ["400"] });
-
-export const metadata: Metadata = {
-  openGraph: {
-    siteName: TITLE,
-    type: "website",
-  },
-  metadataBase: new URL(BASE_URL),
-  manifest: `${BASE_URL}/manifest.json`,
-  alternates: {
-    canonical: BASE_URL,
-    languages: {
-      "en-US": `${BASE_URL}/en-US`,
-      "uk-UK": `${BASE_URL}/uk-UK`,
-    },
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: true,
-  },
-};
 
 type Props = {
   children: React.ReactNode;
@@ -70,4 +53,57 @@ export default async function RootLayout(props: Props) {
       </body>
     </html>
   );
+}
+
+export async function generateMetadata({
+  params: { page },
+}: {
+  params: { page: string };
+}): Promise<Metadata> {
+  // const pathname = new URL(headers().get("x-url")!);
+  const locale = headers().get("cookie") || EN;
+  const lang = (await getLang(locale)) || EN;
+
+  const pageSeoData = await getSeoData({ lang, page });
+
+  return {
+    title: pageSeoData?.title || TITLE,
+    description: pageSeoData?.description || DESCRIPTION,
+    metadataBase: new URL(BASE_URL),
+    manifest: `${BASE_URL}/manifest.json`,
+    alternates: {
+      canonical: BASE_URL,
+      languages: {
+        "en-US": `${BASE_URL}/en-US`,
+        "uk-UK": `${BASE_URL}/uk-UK`,
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: true,
+    },
+    openGraph: {
+      title: TITLE,
+      description: DESCRIPTION,
+      url: '/',
+      siteName: TITLE,
+      locale: EN,
+      type: 'website',
+    },
+  };
+}
+
+export async function generateStaticParams() {
+  const staticParams = Object.values(routes).reduce(
+    (accumulator: { page: string }[], path: string) => {
+      if (path !== "/") {
+        accumulator.push({ page: path.substring(1) });
+      }
+      return accumulator;
+    },
+    []
+  );
+
+  return staticParams;
 }

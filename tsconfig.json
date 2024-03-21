@@ -33,6 +33,6 @@
     ".next/types/**/*.ts",
     "src/app/[locale]/sections/3dObjects/Gallery.jsx",
     "src/app/[locale]/not-found.tsx"
-  ],
+, "_backup/opengraph-image.tsx", "routes.ts", "_backup/useSeoData.ts"  ],
   "exclude": ["node_modules"]
 }
