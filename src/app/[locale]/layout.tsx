@@ -83,6 +83,14 @@ export async function generateMetadata({
       follow: true,
       nocache: true,
     },
+    openGraph: {
+      title: TITLE,
+      description: DESCRIPTION,
+      url: '/',
+      siteName: TITLE,
+      locale: EN,
+      type: 'website',
+    },
   };
 }
 
