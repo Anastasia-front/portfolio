@@ -1,5 +1,4 @@
 export * from "./animation";
-export * from "./getPageInfo";
+export * from "./getLang";
 export * from "./getSeoData";
 export * from "./sendMessageToTelegram";
-export * from './getLang'
