@@ -57,11 +57,10 @@ export default async function RootLayout(props: Props) {
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
-  const pathname = new URL(headers().get("referer")!);
-  console.log(props.params.pages);
+  const pathname = (headers().get("referer")!);
   const locale = headers().get("cookie") || EN;
   const lang = (await getLang(locale)) || EN;
-  const page = pathname.pathname;
+  const page = new URL(pathname).pathname;
 
   const pageSeoData = await getSeoData({ lang, page });
 
