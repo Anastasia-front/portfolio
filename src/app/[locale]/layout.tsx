@@ -29,7 +29,6 @@ type Props = {
   children: React.ReactNode;
   params: {
     locale: Locale;
-    pages: typeof routes;
   };
 };
 
