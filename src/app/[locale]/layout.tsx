@@ -29,6 +29,7 @@ type Props = {
   children: React.ReactNode;
   params: {
     locale: Locale;
+    pages: typeof routes;
   };
 };
 
@@ -55,14 +56,12 @@ export default async function RootLayout(props: Props) {
   );
 }
 
-export async function generateMetadata({
-  params: { page },
-}: {
-  params: { page: string };
-}): Promise<Metadata> {
-  // const pathname = new URL(headers().get("x-url")!);
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const pathname = new URL(headers().get("referer")!);
+  console.log(props.params.pages);
   const locale = headers().get("cookie") || EN;
   const lang = (await getLang(locale)) || EN;
+  const page = pathname.pathname;
 
   const pageSeoData = await getSeoData({ lang, page });
 
@@ -86,24 +85,10 @@ export async function generateMetadata({
     openGraph: {
       title: TITLE,
       description: DESCRIPTION,
-      url: '/',
+      url: "/",
       siteName: TITLE,
       locale: EN,
-      type: 'website',
+      type: "website",
     },
   };
-}
-
-export async function generateStaticParams() {
-  const staticParams = Object.values(routes).reduce(
-    (accumulator: { page: string }[], path: string) => {
-      if (path !== "/") {
-        accumulator.push({ page: path.substring(1) });
-      }
-      return accumulator;
-    },
-    []
-  );
-
-  return staticParams;
 }
