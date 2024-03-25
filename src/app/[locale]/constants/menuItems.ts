@@ -1,29 +1,46 @@
-import { pages, routes } from "@/constants";
+const page = {
+  name: {
+    HOME: "home",
+    ABOUT: "about",
+    SKILLS: "skills",
+    PROJECTS: "projects",
+    PROJECT: "project",
+    CONTACTS: "contacts",
+  },
+  route: {
+    HOME: "/",
+    ABOUT: "/about",
+    SKILLS: "/skills",
+    PROJECTS: "/projects",
+    PROJECT: "/project",
+    CONTACTS: "/contacts",
+  },
+};
 
 export const menuItems = [
   {
     id: 1,
-    translationKey: pages.HOME,
-    url: routes.HOME,
+    translationKey: page.name.HOME,
+    url: page.route.HOME,
   },
   {
     id: 2,
-    translationKey: pages.ABOUT,
-    url: routes.ABOUT,
+    translationKey: page.name.ABOUT,
+    url: page.route.ABOUT,
   },
   {
     id: 3,
-    translationKey: pages.PROJECTS,
-    url: routes.SKILLS,
+    translationKey: page.name.SKILLS,
+    url: page.route.SKILLS,
   },
   {
     id: 4,
-    translationKey: pages.PROJECTS,
-    url: routes.PROJECTS,
+    translationKey: page.name.PROJECTS,
+    url: page.route.PROJECTS,
   },
   {
     id: 5,
-    translationKey: pages.CONTACTS,
-    url: routes.CONTACTS,
+    translationKey: page.name.CONTACTS,
+    url: page.route.CONTACTS,
   },
 ];
