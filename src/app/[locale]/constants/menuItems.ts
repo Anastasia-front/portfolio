@@ -1,5 +1,5 @@
 import { routes } from "routes";
-import { pages } from ".";
+import { pages } from "./pages";
 
 export const menuItems = [
   {
