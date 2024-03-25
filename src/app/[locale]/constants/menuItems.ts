@@ -1,27 +1,30 @@
+import { routes } from "routes";
+import { pages } from "./pages";
+
 export const menuItems = [
   {
     id: 1,
-    translationKey: "home",
-    url: "/",
+    translationKey: pages.HOME,
+    url: routes.HOME,
   },
   {
     id: 2,
-    translationKey: "about",
-    url: "/about",
+    translationKey: pages.ABOUT,
+    url: routes.ABOUT,
   },
   {
     id: 3,
-    translationKey: "skills",
-    url: "/skills",
+    translationKey: pages.PROJECTS,
+    url: routes.SKILLS,
   },
   {
     id: 4,
-    translationKey: "projects",
-    url: "/projects",
+    translationKey: pages.PROJECTS,
+    url: routes.PROJECTS,
   },
   {
     id: 5,
-    translationKey: "contacts",
-    url: "/contacts",
+    translationKey: pages.CONTACTS,
+    url: routes.CONTACTS,
   },
 ];

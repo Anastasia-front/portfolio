@@ -4,6 +4,8 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { routes } from "routes";
+
 import { menuItems } from "@/constants";
 
 interface Props {
@@ -15,11 +17,11 @@ export function Navigation({ location = "", onClick }: Props) {
   const t = useTranslations("nav");
 
   const routesAndMenus = [
-    { route: "/", menuIndex: 0 },
-    { route: "/about", menuIndex: 1 },
-    { route: "/skills", menuIndex: 2 },
-    { route: "/projects", menuIndex: 3 },
-    { route: "/contacts", menuIndex: 4 },
+    { route: routes.HOME, menuIndex: 0 },
+    { route: routes.ABOUT, menuIndex: 1 },
+    { route: routes.SKILLS, menuIndex: 2 },
+    { route: routes.PROJECTS, menuIndex: 3 },
+    { route: routes.CONTACTS, menuIndex: 4 },
   ];
 
   const pathname = usePathname();
