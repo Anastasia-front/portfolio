@@ -4,9 +4,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { routes } from "routes";
-
-import { menuItems } from "@/constants";
+import { menuItems, routes } from "@/constants";
 
 interface Props {
   location?: string;

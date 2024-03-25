@@ -33,7 +33,7 @@
     ".next/types/**/*.ts",
     "src/app/[locale]/sections/3dObjects/Gallery.jsx",
     "src/app/[locale]/not-found.tsx",
-    "routes.ts"
+    "src/app/[locale]/constants/routes.ts"
   ],
   "exclude": ["node_modules"]
 }

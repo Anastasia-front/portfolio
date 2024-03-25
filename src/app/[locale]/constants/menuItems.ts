@@ -1,5 +1,4 @@
-import { routes } from "routes";
-import { pages } from "./pages";
+import { pages, routes } from "@/constants";
 
 export const menuItems = [
   {

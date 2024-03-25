@@ -4,5 +4,6 @@ export * from "./menuItems";
 export * from "./pages";
 export * from "./processEnv";
 export * from "./projects";
+export * from "./routes";
 export * from "./screens";
 export * from "./skills";
