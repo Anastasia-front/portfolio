@@ -71,17 +71,16 @@ import jira from "@/assets/images/skills/logos/team-work/jira.webp";
 import scrum from "@/assets/images/skills/logos/team-work/scrum.webp";
 import trello from "@/assets/images/skills/logos/team-work/trello.webp";
 
-import githubPages from "@/assets/images/skills/logos/hosting/github-pages.webp";
-import netlify from "@/assets/images/skills/logos/hosting/netlify.webp";
-import onrender from "@/assets/images/skills/logos/hosting/onrender.webp";
-import vercel from "@/assets/images/skills/logos/hosting/vercel.webp";
-
 import dbeaver from "@/assets/images/skills/logos/devops/dbeaver.webp";
 import docker from "@/assets/images/skills/logos/devops/docker.webp";
+import githubPages from "@/assets/images/skills/logos/devops/github-pages.webp";
 import mongo from "@/assets/images/skills/logos/devops/mongo-db.webp";
 import mySql from "@/assets/images/skills/logos/devops/my-sql.webp";
+import netlify from "@/assets/images/skills/logos/devops/netlify.webp";
+import onrender from "@/assets/images/skills/logos/devops/onrender.webp";
 import postgreSql from "@/assets/images/skills/logos/devops/postgre-sql.webp";
 import sqlite from "@/assets/images/skills/logos/devops/sqlite.webp";
+import vercel from "@/assets/images/skills/logos/devops/vercel.webp";
 
 export type Category =
   | "team work"
@@ -99,6 +98,7 @@ interface Skill {
   image: StaticImageData;
   type: Category;
   isBig?: boolean;
+  isSmall?: boolean;
 }
 
 export const skills: Skill[] = [
@@ -140,10 +140,10 @@ export const skills: Skill[] = [
   { type: "frontend", title: "prettier", image: prettier, isBig: true },
   { type: "frontend", title: "react native", image: reactNative },
   { type: "frontend", title: "react", image: react },
-  { type: "frontend", title: "reactAdmin", image: reactAdmin },
+  { type: "frontend", isBig: true, title: "react admin", image: reactAdmin },
   { type: "frontend", title: "redux", image: redux },
   { type: "frontend", title: "rest-api frontend", image: restApiFrontend },
-  { type: "frontend", title: "three js", image: threeJs },
+  { type: "frontend", isSmall: true, title: "three js", image: threeJs },
   { type: "frontend", title: "vite", image: vite },
   { type: "frontend", title: "webpack", image: webpack },
 
@@ -158,33 +158,32 @@ export const skills: Skill[] = [
   { type: "backend", title: "jwt", image: jwt },
   { type: "backend", title: "mongoose", image: mongoose },
   { type: "backend", title: "morgan", image: morgan },
-  { type: "backend", title: "multer", image: multer },
+  { type: "backend", isSmall: true, title: "multer", image: multer },
   { type: "backend", title: "node js", image: node },
   { type: "backend", title: "nodemailer", image: nodemailer },
-  { type: "backend", title: "rest-api backendend", image: restApiBackend },
+  { type: "backend", title: "rest-api backend", image: restApiBackend },
   { type: "backend", title: "send-grid", image: sendGrid },
-  { type: "backend", title: "strapi", image: strapi },
-  { type: "backend", title: "stripe", image: stripe },
+  { type: "backend", isSmall: true, title: "strapi", image: strapi },
+  { type: "backend", isSmall: true, title: "stripe", image: stripe },
   { type: "backend", title: "swagger", image: swagger },
-  
+
   { type: "styles", title: "css", image: css },
   { type: "styles", title: "sass", image: sass },
-  { type: "styles", title: "styledComponents", image: styledComponents },
+  { type: "styles", title: "styled-components", image: styledComponents },
   { type: "styles", title: "tailwind", image: tailwind },
   // { type: "styles", title: "mui", image: mui },
-  
+
   { type: "devops", title: "postman", image: postman },
   { type: "devops", title: "mongo db", image: mongo },
-  { type: "devops", title: "dbeaver", image: dbeaver },
+  { type: "devops", isSmall: true, title: "dbeaver", image: dbeaver },
   { type: "devops", title: "docker", image: docker },
   { type: "devops", title: "mySql", image: mySql },
-  { type: "devops", title: "postgreSql", image: postgreSql },
+  { type: "devops", isSmall: true, title: "postgreSql", image: postgreSql },
   { type: "devops", title: "sqlite", image: sqlite },
-
-  { type: "hosting", title: "githubPages", image: githubPages },
-  { type: "hosting", title: "netlify", image: netlify },
-  // { type: "hosting", title: "onrender", image: onrender },
-  { type: "hosting", title: "vercel", image: vercel },
+  { type: "devops", isSmall: true, title: "github-pages", image: githubPages },
+  { type: "devops", isSmall: true, title: "netlify", image: netlify },
+  { type: "devops", isSmall: true, title: "onrender", image: onrender },
+  { type: "devops", isSmall: true, title: "vercel", image: vercel },
 
   { type: "team work", title: "scrum", image: scrum },
   { type: "team work", title: "trello", image: trello },
@@ -248,12 +247,6 @@ export const skillBlocksEnglish: SkillBlock[] = [
     title: "development & operations",
     className: "bg2",
   },
-  {
-    id: 9,
-    type: "hosting",
-    title: "hosting",
-    className: "bg3",
-  },
 ];
 
 export const skillBlocksUkrainian: SkillBlock[] = [
@@ -304,11 +297,5 @@ export const skillBlocksUkrainian: SkillBlock[] = [
     type: "devops",
     title: "розробка та експлуатація",
     className: "bg2",
-  },
-  {
-    id: 9,
-    type: "hosting",
-    title: "хостинг",
-    className: "bg3",
   },
 ];

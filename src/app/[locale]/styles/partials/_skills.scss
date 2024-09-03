@@ -81,6 +81,10 @@
       max-width: 90px;
       max-height: 80px;
     }
+    .isSmall {
+      max-width: 150px;
+      max-height: 130px;
+    }
   }
 }
 [data-theme="dark"] .skills {
