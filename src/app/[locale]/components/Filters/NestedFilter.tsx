@@ -34,7 +34,7 @@ export function NestedFilter({
   const [activeType, setActiveType] = useState<string | null>(null);
 
   const checkFilterContent = useCallback(() => {
-    const nestedContents = document.querySelectorAll(".filtersNested-content");
+    const nestedContents = document.querySelectorAll(".dropdownNested-content");
 
     let foundActive = false;
 
@@ -79,7 +79,7 @@ export function NestedFilter({
     <div onMouseLeave={handleMouseLeave} className="relative">
       <button
         type="button"
-        className={`filtersNested-container ${
+        className={`dropdownNested-container ${
           isTouchDevice && isHovered && activeType === type
             ? "active-button"
             : ""
@@ -95,15 +95,15 @@ export function NestedFilter({
         {t(`${type}`)}
       </button>
       <div
-        className={`filtersNested-content ${
-          isScreenMobileLg ? "" : "filtersNested-content__mobile"
+        className={`dropdownNested-content ${
+          isScreenMobileLg ? "" : "dropdownNested-content__mobile"
         }`}
       >
-        <ul className="filters-list filtersNested-list">
+        <ul className="dropdown-list dropdownNested-list">
           {filtersCategories.map(
             (category, index) =>
               interConst(`${category}`) !== "" && (
-                <li key={index} className="filtersNested-item">
+                <li key={index} className="dropdownNested-item">
                   <button
                     className={
                       activeCategoryFilter === `${type}.${category}`

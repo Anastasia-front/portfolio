@@ -31,7 +31,14 @@ export const sevenKeys = [
   "seventh",
 ] as const;
 
-export const filtersAllTypes = ["all", "backend", "frontend", "data"] as const;
+export const filtersAllTypes = [
+  "all",
+  "cli",
+  "backend",
+  "frontend",
+  "data",
+  "other",
+] as const;
 
 export const filtersTwoTypes = ["backend", "frontend"] as const;
 

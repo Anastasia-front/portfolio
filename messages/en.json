@@ -258,7 +258,7 @@
     "type": {
       "all": "all",
       "backend": "backend",
-      "cli": "CLI",
+      "cli": "cli",
       "data": "data science",
       "frontend": "frontend",
       "other": "other"

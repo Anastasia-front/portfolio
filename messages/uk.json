@@ -254,7 +254,7 @@
     "title": "Фільтри",
     "type": {
       "all": "всі",
-      "cli": "CLI",
+      "cli": "cli",
       "backend": "бекенд",
       "data": "дата саєнс",
       "frontend": "фронтенд",

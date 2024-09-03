@@ -2,8 +2,11 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { DiJavascript } from "react-icons/di";
 import { FaPython } from "react-icons/fa";
 import { FaList } from "react-icons/fa6";
+import { GrCli } from "react-icons/gr";
 import { IoChevronBackOutline } from "react-icons/io5";
+import { MdOutlineDataThresholding } from "react-icons/md";
 import { TfiLayoutListThumbAlt } from "react-icons/tfi";
+import { VscChromeRestore } from "react-icons/vsc";
 
 import { useTranslations } from "next-intl";
 
@@ -38,14 +41,14 @@ export function FilterCategory({
   handleLanguageChange,
   handleSortBy,
 }: Props) {
-  const i = useTranslations("Filter");
-  const c = useTranslations("Filter.categories");
-  const t = useTranslations("Filter.type");
-  const l = useTranslations("Filter.programmingLanguage");
+  const i = useTranslations("filters");
+  const c = useTranslations("filters.categories");
+  const t = useTranslations("filters.type");
+  const l = useTranslations("filters.programmingLanguage");
 
   return (
-    <ul className="Filter-list align-right">
-      <li className="Filter-item back">
+    <ul className="dropdown-list align-right">
+      <li className="dropdown-item back" key={111}>
         <button type="button" onClick={() => handleSortBy(null)}>
           <IoChevronBackOutline />
           {i("back")}
@@ -55,7 +58,7 @@ export function FilterCategory({
         ? filtersAllTypes.map((type, index) => {
             if (t(`${type}`) === "all" || t(`${type}`) === "всі") {
               return (
-                <li key={index} className="Filter-item all">
+                <li key={index} className="dropdown-item all">
                   <button
                     className={activeTypeFilter === type ? "active-filter" : ""}
                     type="button"
@@ -67,9 +70,54 @@ export function FilterCategory({
                   </button>
                 </li>
               );
+            } else if (type === "cli") {
+              return (
+                <li key={index} className="dropdown-item">
+                  <button
+                    className={activeTypeFilter === type ? "active-filter" : ""}
+                    type="button"
+                    onClick={() => handleTypeSelect(type)}
+                    aria-label={t(`${type}`)}
+                  >
+                    <GrCli />
+                    {t(`${type}`)}
+                  </button>
+                </li>
+              );
+            } else if (
+              t(`${type}`) === "data science" ||
+              t(`${type}`) === "дата саєнс"
+            ) {
+              return (
+                <li key={index} className="dropdown-item">
+                  <button
+                    className={activeTypeFilter === type ? "active-filter" : ""}
+                    type="button"
+                    onClick={() => handleTypeSelect(t(`${type}`))}
+                    aria-label={t(`${type}`)}
+                  >
+                    <MdOutlineDataThresholding />
+                    {t(`${type}`)}
+                  </button>
+                </li>
+              );
+            } else if (t(`${type}`) === "other" || t(`${type}`) === "інші") {
+              return (
+                <li key={index} className="dropdown-item">
+                  <button
+                    className={activeTypeFilter === type ? "active-filter" : ""}
+                    type="button"
+                    onClick={() => handleTypeSelect(t(`${type}`))}
+                    aria-label={t(`${type}`)}
+                  >
+                    <VscChromeRestore />
+                    {t(`${type}`)}
+                  </button>
+                </li>
+              );
             } else {
               return (
-                <li key={index} className="Filter-item">
+                <li key={index} className="dropdown-item">
                   <NestedFilter
                     activeTypeFilter={activeTypeFilter}
                     activeCategoryFilter={activeCategoryFilter}
@@ -84,7 +132,7 @@ export function FilterCategory({
         : languages.map((lang, index) => (
             <li
               key={index}
-              className={`Filter-item ${
+              className={`dropdown-item ${
                 lang.title === "all" || lang.title === "всі" ? "all" : ""
               }`}
             >
