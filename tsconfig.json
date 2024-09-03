@@ -1,31 +1,32 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "downlevelIteration": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowImportingTsExtensions": true,
     "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
+    "baseUrl": ".",
+    "downlevelIteration": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "paths": {
+      "@/*": ["./src/app/[locale]/*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/app/[locale]/*"]
-    },
-    "allowImportingTsExtensions": true,
-    "forceConsistentCasingInFileNames": true
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2017"
   },
+  "exclude": ["node_modules"],
   "include": [
     "next-env.d.ts",
     "src/app/[locale]/**/*.ts",
@@ -34,6 +35,5 @@
     "src/app/[locale]/sections/3dObjects/Gallery.jsx",
     "src/app/[locale]/not-found.tsx",
     "src/app/[locale]/constants/routes.ts"
-  ],
-  "exclude": ["node_modules"]
+  ]
 }
