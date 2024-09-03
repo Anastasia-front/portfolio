@@ -7,10 +7,10 @@ import { TfiLayoutListThumbAlt } from "react-icons/tfi";
 
 import { useTranslations } from "next-intl";
 
-import { dropdownAllTypes, languages } from "@/constants";
+import { filtersAllTypes, languages } from "@/constants";
 import { getIconComponent } from "@/helpers";
 
-import { NestedDropdown } from "./NestedDropdown";
+import { NestedFilter } from "./NestedFilter";
 
 const iconComponents = {
   FaList: <FaList />,
@@ -29,7 +29,7 @@ interface Props {
   handleSortBy: (category: string | null) => void;
 }
 
-export function DropdownCategory({
+export function FilterCategory({
   activeTypeFilter,
   activeCategoryFilter,
   selectedCategory,
@@ -38,24 +38,24 @@ export function DropdownCategory({
   handleLanguageChange,
   handleSortBy,
 }: Props) {
-  const i = useTranslations("dropdown");
-  const c = useTranslations("dropdown.categories");
-  const t = useTranslations("dropdown.type");
-  const l = useTranslations("dropdown.programmingLanguage");
+  const i = useTranslations("Filter");
+  const c = useTranslations("Filter.categories");
+  const t = useTranslations("Filter.type");
+  const l = useTranslations("Filter.programmingLanguage");
 
   return (
-    <ul className="dropdown-list align-right">
-      <li className="dropdown-item back">
+    <ul className="Filter-list align-right">
+      <li className="Filter-item back">
         <button type="button" onClick={() => handleSortBy(null)}>
           <IoChevronBackOutline />
           {i("back")}
         </button>
       </li>
       {selectedCategory === c("type")
-        ? dropdownAllTypes.map((type, index) => {
+        ? filtersAllTypes.map((type, index) => {
             if (t(`${type}`) === "all" || t(`${type}`) === "всі") {
               return (
-                <li key={index} className="dropdown-item all">
+                <li key={index} className="Filter-item all">
                   <button
                     className={activeTypeFilter === type ? "active-filter" : ""}
                     type="button"
@@ -69,8 +69,8 @@ export function DropdownCategory({
               );
             } else {
               return (
-                <li key={index} className="dropdown-item">
-                  <NestedDropdown
+                <li key={index} className="Filter-item">
+                  <NestedFilter
                     activeTypeFilter={activeTypeFilter}
                     activeCategoryFilter={activeCategoryFilter}
                     onSelectType={handleTypeSelect}
@@ -84,7 +84,7 @@ export function DropdownCategory({
         : languages.map((lang, index) => (
             <li
               key={index}
-              className={`dropdown-item ${
+              className={`Filter-item ${
                 lang.title === "all" || lang.title === "всі" ? "all" : ""
               }`}
             >

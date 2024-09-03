@@ -16,7 +16,7 @@ const Banner = dynamic(() =>
   import("../components/Banner/Banner").then((mod) => mod.Banner)
 );
 const Dropdown = dynamic(() =>
-  import("../components/Dropdown/Dropdown").then((mod) => mod.Dropdown)
+  import("../components/Filters/Filters").then((mod) => mod.Dropdown)
 );
 const LottiePlayer = dynamic(() =>
   import("../components/LottiePlayer/LottiePlayer").then(

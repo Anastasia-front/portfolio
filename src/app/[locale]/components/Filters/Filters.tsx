@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 
 import { gridVariants } from "@/utils";
 
-import { DropdownCategory } from ".";
+import { FilterCategory } from ".";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -29,30 +29,30 @@ interface Props {
   handleCategoryChange: (category: string, type: string) => void;
 }
 
-export function Dropdown({
+export function Filters({
   activeTypeFilter,
   activeCategoryFilter,
   handleTypeChange,
   handleCategoryChange,
   handleLanguageChange,
 }: Props) {
-  const i = useTranslations("dropdown");
-  const c = useTranslations("dropdown.categories");
+  const i = useTranslations("filters");
+  const c = useTranslations("filters.categories");
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [hideOverflow, setHideOverflow] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const filtersRef = useRef<HTMLDivElement>(null);
 
-  const toggleDropdown = () => {
+  const toggleFilters = () => {
     setIsOpen(!isOpen);
   };
 
   const handleClickOutside = (event: MouseEvent) => {
     if (
-      dropdownRef.current &&
-      "contains" in dropdownRef.current &&
-      !dropdownRef.current.contains(event.target as Node)
+      filtersRef.current &&
+      "contains" in filtersRef.current &&
+      !filtersRef.current.contains(event.target as Node)
     ) {
       setIsOpen(false);
     }
@@ -105,12 +105,12 @@ export function Dropdown({
       initial="hidden"
       animate="visible"
       className={`dropdown-container ${rubik.className}`}
-      ref={dropdownRef}
+      ref={filtersRef}
     >
       <button
         type="button"
         className="dropdown-button"
-        onClick={toggleDropdown}
+        onClick={toggleFilters}
         aria-label={i("title")}
       >
         {i("title")}
@@ -118,7 +118,7 @@ export function Dropdown({
       </button>
       {isOpen && (
         <div
-          className={` dropdown-content ${
+          className={`dropdown-content ${
             !hideOverflow ? "hidden-overflow" : ""
           }`}
         >
@@ -157,7 +157,7 @@ export function Dropdown({
               </ul>
             </li>
             <li>
-              <DropdownCategory
+              <FilterCategory
                 selectedCategory={selectedCategory}
                 handleTypeSelect={handleTypeSelect}
                 handleCategorySelect={handleCategorySelect}

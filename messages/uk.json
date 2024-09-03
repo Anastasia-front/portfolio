@@ -220,7 +220,7 @@
     "ogImage": "/images/opengraph/uk/contacts.webp",
     "title": "Напишіть мені"
   },
-  "dropdown": {
+  "filters": {
     "back": "повернутися",
     "categories": {
       "language": "мовою програмування",
@@ -254,9 +254,11 @@
     "title": "Фільтри",
     "type": {
       "all": "всі",
+      "cli": "CLI",
       "backend": "бекенд",
-      "data": "дата аналіз",
-      "frontend": "фронтенд"
+      "data": "дата саєнс",
+      "frontend": "фронтенд",
+      "other": "інші"
     }
   },
   "error": {

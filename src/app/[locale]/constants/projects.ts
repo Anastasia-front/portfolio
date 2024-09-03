@@ -172,7 +172,7 @@ import twentyFourProjectSnippet5 from "@/assets/images/projects/project24/snippe
 export interface Project {
   id?: number;
   language?: "js" | "ts" | "python";
-  development?: "backend" | "frontend" | "data";
+  development?: "backend" | "frontend" | "data" | 'cli' |'other';
   type?: "test" | "commercial" | "individual" | "team";
   name: string;
   categories: string[] | null;
@@ -693,7 +693,7 @@ export const projectsEnglishLang: Project[] = [
   {
     id: 13,
     language: "js",
-    development: "backend",
+    development: "cli",
     type: "individual",
     name: "CLI",
     categories: ["js", "Node", "Nodemon", "Yargs"],
@@ -787,7 +787,7 @@ export const projectsEnglishLang: Project[] = [
   {
     id: 20,
     language: "python",
-    development: "data",
+    development: "other",
     type: "individual",
     name: "Python Start",
     categories: ["The beginning of learning a programming language"],
@@ -822,7 +822,7 @@ export const projectsEnglishLang: Project[] = [
   {
     id: 21,
     language: "python",
-    development: "data",
+    development: "cli",
     type: "individual",
     name: "Staff",
     categories: ["Python", "CLI", "serializing", "OOP"],
@@ -849,7 +849,7 @@ export const projectsEnglishLang: Project[] = [
   {
     id: 22,
     language: "python",
-    development: "data",
+    development: "cli",
     type: "individual",
     name: "Bot",
     categories: ["Python", "recursion", "CLI"],
@@ -880,7 +880,7 @@ export const projectsEnglishLang: Project[] = [
   {
     id: 23,
     language: "python",
-    development: "data",
+    development: "other",
     type: "individual",
     name: "Workbook",
     categories: ["Python", "Examples"],
@@ -907,7 +907,7 @@ export const projectsEnglishLang: Project[] = [
   {
     id: 24,
     language: "python",
-    development: "data",
+    development: "other",
     type: "individual",
     name: "LeetCode",
     categories: ["Python", "Tasks", "Solutions"],
@@ -1426,7 +1426,7 @@ export const projectsUkrainianLang: Project[] = [
   {
     id: 13,
     language: "js",
-    development: "backend",
+    development: "cli",
     type: "individual",
     name: "CLI",
     categories: ["js", "Node", "Nodemon", "Yargs"],
@@ -1519,7 +1519,7 @@ export const projectsUkrainianLang: Project[] = [
   {
     id: 20,
     language: "python",
-    development: "data",
+    development: "other",
     type: "individual",
     name: "Python Start",
     categories: ["Початок вивчення мови програмування"],
@@ -1554,7 +1554,7 @@ export const projectsUkrainianLang: Project[] = [
   {
     id: 21,
     language: "python",
-    development: "data",
+    development: "cli",
     type: "individual",
     name: "Staff",
     categories: ["Python", "CLI", "серіалізація", "ООП"],
@@ -1581,7 +1581,7 @@ export const projectsUkrainianLang: Project[] = [
   {
     id: 22,
     language: "python",
-    development: "data",
+    development: "cli",
     type: "individual",
     name: "Bot",
     categories: ["Python", "рекурсія", "CLI"],
@@ -1612,7 +1612,7 @@ export const projectsUkrainianLang: Project[] = [
   {
     id: 23,
     language: "python",
-    development: "data",
+    development: "other",
     type: "individual",
     name: "Конспект",
     categories: ["Python", "Приклади"],
@@ -1639,7 +1639,7 @@ export const projectsUkrainianLang: Project[] = [
   {
     id: 24,
     language: "python",
-    development: "data",
+    development: "other",
     type: "individual",
     name: "LeetCode",
     categories: ["Python", "Задачі", "Рішення"],

@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from "react-icons/bs";
 
-import { dropdownCategories } from "@/constants";
+import { filtersCategories } from "@/constants";
 import { useScreenQuery } from "@/hooks";
 
 interface Props {
@@ -18,23 +18,23 @@ interface Props {
   onSelectCategory: (category: string, type: string) => void;
 }
 
-export function NestedDropdown({
+export function NestedFilter({
   activeTypeFilter,
   activeCategoryFilter,
   onSelectCategory,
   onSelectType,
   type,
 }: Props) {
-  const iF = useTranslations("dropdown.categoriesFrontend");
-  const iB = useTranslations("dropdown.categoriesBackend");
-  const iD = useTranslations("dropdown.categoriesData");
-  const t = useTranslations("dropdown.type");
+  const iF = useTranslations("filters.categoriesFrontend");
+  const iB = useTranslations("filters.categoriesBackend");
+  const iD = useTranslations("filters.categoriesData");
+  const t = useTranslations("filters.type");
 
   const [isHovered, setIsHovered] = useState(false);
   const [activeType, setActiveType] = useState<string | null>(null);
 
-  const checkDropdownContent = useCallback(() => {
-    const nestedContents = document.querySelectorAll(".dropdownNested-content");
+  const checkFilterContent = useCallback(() => {
+    const nestedContents = document.querySelectorAll(".filtersNested-content");
 
     let foundActive = false;
 
@@ -53,9 +53,9 @@ export function NestedDropdown({
 
   useEffect(() => {
     if (isHovered) {
-      checkDropdownContent();
+      checkFilterContent();
     }
-  }, [isHovered, checkDropdownContent, type]);
+  }, [isHovered, checkFilterContent, type]);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -63,7 +63,7 @@ export function NestedDropdown({
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    checkDropdownContent();
+    checkFilterContent();
   };
 
   const handleCategoryClick = (category: string, type: string) => {
@@ -79,7 +79,7 @@ export function NestedDropdown({
     <div onMouseLeave={handleMouseLeave} className="relative">
       <button
         type="button"
-        className={`dropdownNested-container ${
+        className={`filtersNested-container ${
           isTouchDevice && isHovered && activeType === type
             ? "active-button"
             : ""
@@ -95,15 +95,15 @@ export function NestedDropdown({
         {t(`${type}`)}
       </button>
       <div
-        className={`dropdownNested-content ${
-          isScreenMobileLg ? "" : "dropdownNested-content__mobile"
+        className={`filtersNested-content ${
+          isScreenMobileLg ? "" : "filtersNested-content__mobile"
         }`}
       >
-        <ul className="dropdown-list dropdownNested-list">
-          {dropdownCategories.map(
+        <ul className="filters-list filtersNested-list">
+          {filtersCategories.map(
             (category, index) =>
               interConst(`${category}`) !== "" && (
-                <li key={index} className="dropdownNested-item">
+                <li key={index} className="filtersNested-item">
                   <button
                     className={
                       activeCategoryFilter === `${type}.${category}`

@@ -3,7 +3,7 @@ export * from "./AnimatedText";
 export * from "./Banner";
 export * from "./Buttons";
 export * from "./Contacts";
-export * from "./Dropdown";
+export * from "./Filters";
 export * from "./Form";
 export * from "./Loader";
 export * from "./Logo";

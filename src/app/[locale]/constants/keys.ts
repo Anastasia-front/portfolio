@@ -31,11 +31,11 @@ export const sevenKeys = [
   "seventh",
 ] as const;
 
-export const dropdownAllTypes = ["all", "backend", "frontend", "data"] as const;
+export const filtersAllTypes = ["all", "backend", "frontend", "data"] as const;
 
-export const dropdownTwoTypes = ["backend", "frontend"] as const;
+export const filtersTwoTypes = ["backend", "frontend"] as const;
 
-export const dropdownCategories = [
+export const filtersCategories = [
   "commercial",
   "individual",
   "test",
