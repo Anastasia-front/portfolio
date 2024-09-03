@@ -161,19 +161,19 @@ export const skills: Skill[] = [
   { type: "backend", title: "multer", image: multer },
   { type: "backend", title: "node js", image: node },
   { type: "backend", title: "nodemailer", image: nodemailer },
-  { type: "backend", title: "postman", image: postman },
   { type: "backend", title: "rest-api backendend", image: restApiBackend },
   { type: "backend", title: "send-grid", image: sendGrid },
   { type: "backend", title: "strapi", image: strapi },
   { type: "backend", title: "stripe", image: stripe },
   { type: "backend", title: "swagger", image: swagger },
-
+  
   { type: "styles", title: "css", image: css },
   { type: "styles", title: "sass", image: sass },
   { type: "styles", title: "styledComponents", image: styledComponents },
   { type: "styles", title: "tailwind", image: tailwind },
   // { type: "styles", title: "mui", image: mui },
-
+  
+  { type: "devops", title: "postman", image: postman },
   { type: "devops", title: "mongo db", image: mongo },
   { type: "devops", title: "dbeaver", image: dbeaver },
   { type: "devops", title: "docker", image: docker },
@@ -183,13 +183,13 @@ export const skills: Skill[] = [
 
   { type: "hosting", title: "githubPages", image: githubPages },
   { type: "hosting", title: "netlify", image: netlify },
-  { type: "hosting", title: "onrender", image: onrender },
+  // { type: "hosting", title: "onrender", image: onrender },
   { type: "hosting", title: "vercel", image: vercel },
 
-  { type: "team work", title: "atlassian", image: atlassian },
-  { type: "team work", title: "jira", image: jira },
   { type: "team work", title: "scrum", image: scrum },
   { type: "team work", title: "trello", image: trello },
+  { type: "team work", title: "jira", image: jira },
+  { type: "team work", title: "atlassian", image: atlassian },
 ];
 
 interface SkillBlock {
