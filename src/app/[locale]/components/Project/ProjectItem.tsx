@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Image from "next/image";
 
@@ -11,6 +11,13 @@ import { gridItemVariants, hoverVariants } from "@/utils";
 
 export function ProjectItem({ name, image, categories, onClick }: Project) {
   const [isHover, setIsHover] = useState(false);
+
+  useEffect(() => {
+    const isTouchDevice = window.matchMedia("(hover: none)").matches;
+    if (isTouchDevice) {
+      setIsHover(true);
+    }
+  }, []);
 
   const handleHoverStart = () => {
     setIsHover(true);
