@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { memo, useEffect, useRef } from "react";
 
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -12,7 +12,7 @@ interface Props {
   repeatDelay?: number;
 }
 
-export function AnimatedTextCharacter({
+export const AnimatedTextCharacter = memo(function AnimatedTextCharacter({
   text,
   el: Wrapper = "p",
   className,
@@ -22,27 +22,35 @@ export function AnimatedTextCharacter({
   const controls = useAnimation();
   const textArray = Array.isArray(text) ? text : [text];
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
-    const show = () => {
+    let animationFrameId: number;
+
+    const startAnimation = () => {
       controls.start("visible");
       if (repeatDelay) {
-        timeout = setTimeout(async () => {
-          await controls.start("hidden");
-          controls.start("visible");
+        timeout = setTimeout(() => {
+          controls.start("hidden").then(() => {
+            animationFrameId = requestAnimationFrame(() => {
+              controls.start("visible");
+            });
+          });
         }, repeatDelay);
       }
     };
 
     if (isInView) {
-      show();
+      animationFrameId = requestAnimationFrame(startAnimation);
     } else {
       controls.start("hidden");
     }
 
-    return () => clearTimeout(timeout);
+    return () => {
+      clearTimeout(timeout);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, [isInView, controls, repeatDelay]);
 
   const createAnimation = () => ({
@@ -105,4 +113,4 @@ export function AnimatedTextCharacter({
       </motion.span>
     </Wrapper>
   );
-}
+});
