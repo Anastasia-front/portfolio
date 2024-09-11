@@ -14,6 +14,21 @@ const {
 module.exports = withNextIntl({
   reactStrictMode: true,
   productionBrowserSourceMaps: true,
+
+  webpack: (config, { isServer }) => {
+    // Custom Terser settings
+    if (!isServer) {
+      config.optimization.minimizer.push(
+        new TerserPlugin({
+          terserOptions: {
+            compress: {
+              drop_console: true, // Optionally remove console logs in production
+            },
+          },
+        })
+      );
+    }
+  },
   // Add headers for caching static assets
   async headers() {
     return [
@@ -82,6 +97,15 @@ module.exports = withNextIntl({
   eslint: {
     dirs: ["src"], // Only run ESLint on the 'src' directory during production builds (next build)
   },
+
+  // Custom PostCSS Configuration
+  // postcssLoaderOptions: {
+  //   plugins: {
+  //     "postcss-preset-env": {
+  //       autoprefixer: { grid: true }, // Enables autoprefixer
+  //     },
+  //   },
+  // },
 
   // babel: {
   //   presets: ["next/babel"],
