@@ -56,7 +56,6 @@ import morgan from "@/assets/images/skills/logos/back/morgan.webp";
 import multer from "@/assets/images/skills/logos/back/multer.webp";
 import node from "@/assets/images/skills/logos/back/node-js.webp";
 import nodemailer from "@/assets/images/skills/logos/back/nodemailer.webp";
-import postman from "@/assets/images/skills/logos/back/postman.webp";
 import restApiBackend from "@/assets/images/skills/logos/back/rest-api.webp";
 import sendGrid from "@/assets/images/skills/logos/back/send-grid.webp";
 import swagger from "@/assets/images/skills/logos/back/swagger.webp";
@@ -71,6 +70,7 @@ import jira from "@/assets/images/skills/logos/team-work/jira.webp";
 import scrum from "@/assets/images/skills/logos/team-work/scrum.webp";
 import trello from "@/assets/images/skills/logos/team-work/trello.webp";
 
+import aws from "@/assets/images/skills/logos/devops/aws.webp";
 import dbeaver from "@/assets/images/skills/logos/devops/dbeaver.webp";
 import docker from "@/assets/images/skills/logos/devops/docker.webp";
 import githubPages from "@/assets/images/skills/logos/devops/github-pages.webp";
@@ -79,6 +79,7 @@ import mySql from "@/assets/images/skills/logos/devops/my-sql.webp";
 import netlify from "@/assets/images/skills/logos/devops/netlify.webp";
 import onrender from "@/assets/images/skills/logos/devops/onrender.webp";
 import postgreSql from "@/assets/images/skills/logos/devops/postgre-sql.webp";
+import postman from "@/assets/images/skills/logos/devops/postman.webp";
 import sqlite from "@/assets/images/skills/logos/devops/sqlite.webp";
 import vercel from "@/assets/images/skills/logos/devops/vercel.webp";
 
@@ -173,17 +174,18 @@ export const skills: Skill[] = [
   { type: "styles", title: "tailwind", image: tailwind },
   // { type: "styles", title: "mui", image: mui },
 
-  { type: "devops", title: "postman", image: postman },
+  { type: "devops", title: "postgreSql", image: postgreSql },
+  { type: "devops", isBig: true, title: "mySql", image: mySql },
+  { type: "devops", title: "sqlite", image: sqlite },
   { type: "devops", title: "mongo db", image: mongo },
   { type: "devops", isSmall: true, title: "dbeaver", image: dbeaver },
-  { type: "devops", title: "docker", image: docker },
-  { type: "devops", title: "mySql", image: mySql },
-  { type: "devops", isSmall: true, title: "postgreSql", image: postgreSql },
-  { type: "devops", title: "sqlite", image: sqlite },
+  { type: "devops", isBig: true, title: "docker", image: docker },
+  { type: "devops", isBig: true, title: "aws", image: aws },
   { type: "devops", isSmall: true, title: "github-pages", image: githubPages },
   { type: "devops", isSmall: true, title: "netlify", image: netlify },
   { type: "devops", isSmall: true, title: "onrender", image: onrender },
   { type: "devops", isSmall: true, title: "vercel", image: vercel },
+  { type: "devops", isBig: true, title: "postman", image: postman },
 
   { type: "team work", title: "scrum", image: scrum },
   { type: "team work", title: "trello", image: trello },
