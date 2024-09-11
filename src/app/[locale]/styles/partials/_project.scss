@@ -1,0 +1,315 @@
+@use "vars" as *;
+@use "./mixins" as *;
+@use "../mixins/" as *;
+
+.project {
+  position: relative;
+  border: 1px solid var(--color--dark-opacity);
+  border-radius: var(--padding--sm);
+
+  &-banner {
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &-page {
+    margin-top: 1rem;
+    border: none;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 160px;
+    border-radius: var(--padding--sm) var(--padding--sm) 0 0;
+
+
+    @include useScreen("tablet-sm") {
+      border-radius: var(--padding--sm);
+    }
+  }
+
+  &:first-child {
+    gap: var(--padding--sm-2);
+    display: flex;
+  }
+
+  &__header {
+    position: relative;
+    height: 410px;
+
+    @include useScreen("tablet-sm") {
+      height: 420px;
+      margin-bottom: 3rem;
+    }
+    @include useScreen("tablet-xl") {
+      height: 630px;
+    }
+
+    .bg-image {
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      @include useScreen("tablet-sm") {
+        height: 400px;
+        border-radius: var(--border-radius--lg);
+      }
+      @include useScreen("tablet-xl") {
+        height: 635px;
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 34vh;
+      border-radius: var(--border-radius--md) var(--border-radius--md) 0 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.9)
+      );
+
+      @include useScreen("tablet-sm") {
+        height: 80vh;
+        max-height: 400px;
+        border-radius: var(--border-radius--lg);
+      }
+      @include useScreen("tablet-xl") {
+        max-height: 635px;
+      }
+    }
+  }
+
+  .banner {
+    z-index: 9;
+    position: absolute;
+    top: 8rem;
+    flex-direction: column;
+    width: 100%;
+    max-height: 255px;
+    border-radius: var(--border-radius--xl) var(--border-radius--xl)
+      var(--border-radius--lg) var(--border-radius--lg);
+    overflow-x: hidden;
+    @include box-shadow-7(var(--color--bg-grey));
+
+    @include useScreen("tablet-sm") {
+      top: auto;
+      bottom: 0;
+    }
+    @include useScreen("tablet-md") {
+      flex-direction: row;
+    }
+    @include useScreen("tablet-xl") {
+      bottom: -0.5rem;
+    }
+
+    &__header {
+      @include flex(column, space-between, center);
+      gap: 1rem;
+
+      @include useScreen("tablet-sm") {
+        gap: 3rem;
+        flex-direction: row;
+      }
+    }
+
+    &__title {
+      font-weight: var(--font-weight--normal-1);
+    }
+
+    &__text {
+      font-weight: var(--font-weight--normal-2);
+    }
+
+    &__categories {
+      @include flex(row, center, center);
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      span {
+        padding: 0.3rem 0.8rem;
+        border-radius: var(--border-radius--lg);
+        color: var(--color--white);
+        background-color: var(--color--grey-opacity);
+        @include box-shadow-5(var(--color--bg-grey));
+      }
+    }
+  }
+
+  &__content {
+    @include flex(column, center, center);
+    gap: 1rem;
+
+    &__text {
+      gap: 3rem;
+      grid-template-columns: repeat(1, 1fr);
+      display: grid;
+      padding: 0 2rem;
+      font-weight: var(--font-weight--normal-2);
+      transition: var(--transition);
+
+      @include useScreen("tablet-sm") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      &-features {
+        @include flex(column, flex-start, flex-start);
+        gap: 0.3rem;
+
+        li {
+          margin-left: 1rem;
+          list-style: square;
+        }
+      }
+
+      h4 {
+        margin-bottom: 1rem;
+        color: var(--color--light-blue-3);
+        font-weight: var(--font-weight--normal-2);
+      }
+
+      li,
+      p,
+      a {
+        color: var(--color--orange-2);
+      }
+
+      &-links {
+        li {
+          padding-bottom: 1rem;
+        }
+
+        a {
+          position: relative;
+          padding-bottom: 0.4rem;
+          transition: var(--transition);
+
+          @include useOnHover {
+            color: var(--color--orange-3);
+          }
+          @include useOnClick {
+            color: var(--color--orange-4);
+          }
+
+          &::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            content: "";
+            background-color: var(--color--orange-2);
+          }
+        }
+      }
+
+      &-solution {
+        @include flex(column, flex-start, flex-start);
+        gap: 1rem;
+      }
+    }
+
+    &__screenshots {
+      @include flex(column, center, center);
+      gap: 1rem;
+
+      img {
+        max-height: 90vh;
+      }
+
+      &:hover {
+        cursor: zoom-in;
+      }
+    }
+
+    .horizontal-images {
+      grid-gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      display: grid;
+      margin-top: 0;
+      border-radius: var(--border-radius--sm);
+
+      @include useScreen("tablet-md") {
+        grid-gap: 3rem;
+        padding: 2rem 0;
+      }
+
+      & img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: var(--border-radius--sm);
+      }
+
+      &__fullscreen {
+        @include flex(column, center, center);
+
+        &-paddings {
+          padding: 2rem 0;
+        }
+
+        & img {
+          object-fit: cover;
+          width: auto;
+          max-width: 100%;
+          height: auto;
+          border-radius: var(--border-radius--sm);
+
+          &:not(:first-child) {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+[data-theme="dark"] .project {
+  border: 1px solid var(--color--light-opacity);
+
+  &-page {
+    border: none;
+  }
+
+  .banner {
+    &__categories {
+      span {
+        color: var(--color--black);
+      }
+    }
+  }
+
+  &__content {
+    &__text {
+      h4 {
+        color: var(--color--orange-3);
+      }
+
+      li,
+      p,
+      a {
+        color: var(--color--light-blue-3);
+      }
+
+      .links {
+        a {
+          &::after {
+            background-color: var(--color--light-blue-2);
+          }
+
+          @include useOnHover {
+            color: var(--color--light-blue-4);
+          }
+          @include useOnClick {
+            color: var(--color--light-blue-1);
+          }
+        }
+      }
+    }
+  }
+}

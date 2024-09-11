@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 
 import { bannerVariants } from "@/utils";
 
+import '@/styles/partials/_home.scss'
+
+
 const Features = lazy(() => import("./sections/Features/Features"));
 const GallerySection = lazy(
   () => import("./sections/3dObjects/GallerySection")

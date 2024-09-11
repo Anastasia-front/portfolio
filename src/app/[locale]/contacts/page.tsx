@@ -13,6 +13,8 @@ import { Contacts } from "@/components";
 import { useGlobalContext } from "@/context";
 import { bannerVariants, gridVariants } from "@/utils";
 
+import "@/styles/partials/_contacts.scss";
+
 const Form = dynamic(() =>
   import("../components/Form/Form").then((mod) => mod.Form)
 );

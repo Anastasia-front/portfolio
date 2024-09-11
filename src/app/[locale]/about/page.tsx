@@ -14,6 +14,8 @@ import { sevenKeys } from "@/constants";
 import { useScreenQuery } from "@/hooks";
 import { bannerVariants, titleVariants } from "@/utils";
 
+import "@/styles/partials/_about.scss";
+
 const AboutItem = lazy(() => import("../components/AboutItem/AboutItem"));
 const Achievements = lazy(
   () => import("../sections/Achievements/AchievementsSection")

@@ -9,6 +9,8 @@ import { type Locale } from "src/locales";
 
 import { bannerVariants, gridVariants, opacityVariants } from "@/utils";
 
+import "@/styles/partials/_skills.scss";
+
 const Accordion = dynamic(() =>
   import("../components/Skills/SkillsAccordion").then(
     (mod) => mod.SkillsAccordion
