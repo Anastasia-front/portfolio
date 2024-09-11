@@ -13,6 +13,7 @@ import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
 import { gridVariants } from "@/utils";
 
 import "@/styles/partials/_projects.scss";
+import "@/styles/partials/_project.scss";
 
 const Banner = dynamic(() =>
   import("../components/Banner/Banner").then((mod) => mod.Banner)
