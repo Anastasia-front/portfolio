@@ -16,10 +16,10 @@ export function PreLoader(props: Props) {
           clearInterval(timerID);
           return prevLoad;
         } else {
-          return prevLoad + 1;
+          return prevLoad + 5;
         }
       });
-    }, 20);
+    }, 90);
 
     return () => clearInterval(timerID);
   }, []);
