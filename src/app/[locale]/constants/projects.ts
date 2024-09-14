@@ -250,7 +250,7 @@ export const projectsEnglishLang: Project[] = [
       github: "https://github.com/Anastasia-front/test-soft-ryzen",
     },
     content: {
-      description: "'Carp Travel' adaptive website",
+      description: "A modern and nice adaptive website",
       image1: thirdProjectSnippet1,
       image2: thirdProjectSnippet2,
       image3: thirdProjectSnippet3,
@@ -975,7 +975,7 @@ export const projectsUkrainianLang: Project[] = [
     image: cover3,
     url: "carp-travel",
     features: [
-      "Модлива підтримка багатьох мов",
+      "Можлива підтримка багатьох мов",
       "Адаптивний дизайн",
       "Різні слайдери",
       "Та багато іншого...",
@@ -987,7 +987,7 @@ export const projectsUkrainianLang: Project[] = [
       github: "https://github.com/Anastasia-front/test-soft-ryzen",
     },
     content: {
-      description: "Адаптивний веб-сайт 'Carp Travel'",
+      description: "Гарний та сучасний фдаптивний веб-сайт",
       image1: thirdProjectSnippet1,
       image2: thirdProjectSnippet2,
       image3: thirdProjectSnippet3,

@@ -10,7 +10,7 @@ import { ProjectContent, ProjectHeader } from "@/components";
 import { projectsEnglishLang, projectsUkrainianLang } from "@/constants";
 import { bannerVariants } from "@/utils";
 
-import "@/styles/partials/_projects.scss";
+import "@/styles/partials/_project.scss";
 
 interface Params {
   params: {
