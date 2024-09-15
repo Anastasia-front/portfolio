@@ -16,16 +16,19 @@
     margin-top: 1rem;
     border: none;
   }
-  
-  img {
-    max-width: 300px;
-    border-radius: var(--padding--sm) var(--padding--sm) 0 0;
-    height: 160px;
-    object-fit: cover;
-    
-    @include useScreen("tablet-sm") {
-      max-width: 100%;
-      border-radius: var(--padding--sm);
+
+  &-preview{
+    img {
+      max-width: 300px;
+      border-radius: var(--padding--sm) var(--padding--sm) 0 0;
+      height: 160px;
+      object-fit: cover;
+      width: 100%;
+      
+      @include useScreen("tablet-sm") {
+        border-radius: var(--padding--sm);
+        max-width: 100%;
+      }
     }
   }
 

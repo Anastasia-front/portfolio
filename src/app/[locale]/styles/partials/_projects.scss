@@ -10,7 +10,7 @@
   justify-content: center;
 
   @include useScreen("tablet-md") {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 330px));
   }
 
   &__header {

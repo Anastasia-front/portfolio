@@ -87,9 +87,14 @@ export function Filters({
     setSelectedCategory(category);
   };
 
-  const activeSortTypeFilter: string = ["frontend", "backend", "data"].includes(
-    activeTypeFilter!!
-  )
+  const activeSortTypeFilter: string = [
+    "all",
+    "cli",
+    "backend",
+    "frontend",
+    "data",
+    "other",
+  ].includes(activeTypeFilter!!)
     ? "active-filter"
     : "";
 
