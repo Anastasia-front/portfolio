@@ -12,11 +12,11 @@ import cover17 from "@/assets/images/projects/project17/cover.webp";
 import cover18 from "@/assets/images/projects/project18/cover.webp";
 import cover19 from "@/assets/images/projects/project19/cover.webp";
 import cover2 from "@/assets/images/projects/project2/cover.webp";
-import cover20 from "@/assets/images/projects/project20/cover.webp";
 import cover21 from "@/assets/images/projects/project21/cover.webp";
 import cover22 from "@/assets/images/projects/project22/cover.webp";
 import cover23 from "@/assets/images/projects/project23/cover.webp";
 import cover24 from "@/assets/images/projects/project24/cover.webp";
+import cover25 from "@/assets/images/projects/project25/cover.webp";
 import cover3 from "@/assets/images/projects/project3/cover.webp";
 import cover4 from "@/assets/images/projects/project4/cover.webp";
 import cover5 from "@/assets/images/projects/project5/cover.webp";
@@ -139,12 +139,6 @@ import nineteenthProjectSnippet3 from "@/assets/images/projects/project19/snippe
 import nineteenthProjectSnippet4 from "@/assets/images/projects/project19/snippet4.webp";
 import nineteenthProjectSnippet5 from "@/assets/images/projects/project19/snippet5.webp";
 
-import twentyProjectSnippet1 from "@/assets/images/projects/project20/snippet1.webp";
-import twentyProjectSnippet2 from "@/assets/images/projects/project20/snippet2.webp";
-import twentyProjectSnippet3 from "@/assets/images/projects/project20/snippet3.webp";
-import twentyProjectSnippet4 from "@/assets/images/projects/project20/snippet4.webp";
-import twentyProjectSnippet5 from "@/assets/images/projects/project20/snippet5.webp";
-
 import twentyOneProjectSnippet1 from "@/assets/images/projects/project21/snippet1.webp";
 import twentyOneProjectSnippet2 from "@/assets/images/projects/project21/snippet2.webp";
 import twentyOneProjectSnippet3 from "@/assets/images/projects/project21/snippet3.webp";
@@ -169,10 +163,16 @@ import twentyFourProjectSnippet3 from "@/assets/images/projects/project24/snippe
 import twentyFourProjectSnippet4 from "@/assets/images/projects/project24/snippet4.webp";
 import twentyFourProjectSnippet5 from "@/assets/images/projects/project24/snippet5.webp";
 
+import twentyFiveProjectSnippet1 from "@/assets/images/projects/project25/snippet1.webp";
+import twentyFiveProjectSnippet2 from "@/assets/images/projects/project25/snippet2.webp";
+import twentyFiveProjectSnippet3 from "@/assets/images/projects/project25/snippet3.webp";
+import twentyFiveProjectSnippet4 from "@/assets/images/projects/project25/snippet4.webp";
+import twentyFiveProjectSnippet5 from "@/assets/images/projects/project25/snippet5.webp";
+
 export interface Project {
   id?: number;
   language?: "js" | "ts" | "python";
-  development?: "backend" | "frontend" | "data" | 'cli' |'other';
+  development?: "backend" | "frontend" | "data" | "cli" | "other";
   type?: "test" | "commercial" | "individual" | "team";
   name: string;
   categories: string[] | null;
@@ -784,41 +784,41 @@ export const projectsEnglishLang: Project[] = [
       image5: fifteenthProjectSnippet5,
     },
   },
-  {
-    id: 20,
-    language: "python",
-    development: "other",
-    type: "individual",
-    name: "Python Start",
-    categories: ["The beginning of learning a programming language"],
-    image: cover20,
-    url: "python-start",
-    features: [
-      "functions",
-      "recursion",
-      "data-structures",
-      "data-types",
-      "regular-expressions",
-      "loops-and-iterations",
-      "conditional-statements",
-    ],
-    problem:
-      "There was a need to help my husband with his studies - since he worked a lot and he needed support - and while I was on maternity leave with the baby, I simultaneously, not forgetting web development, began to take various courses in Python in order to also master the knowledge of analyst data and data scientist",
-    solution:
-      "As a result, I took many courses and had a good grasp of the basic concepts to get started",
-    links: {
-      website: null,
-      github: "https://github.com/Anastasia-front/python-start",
-    },
-    content: {
-      description: "First steps into Python",
-      image1: twentyProjectSnippet1,
-      image2: twentyProjectSnippet2,
-      image3: twentyProjectSnippet3,
-      image4: twentyProjectSnippet4,
-      image5: twentyProjectSnippet5,
-    },
-  },
+  // {
+  //   id: 20,
+  //   language: "python",
+  //   development: "other",
+  //   type: "individual",
+  //   name: "Python Start",
+  //   categories: ["The beginning of learning a programming language"],
+  //   image: cover20,
+  //   url: "python-start",
+  //   features: [
+  //     "functions",
+  //     "recursion",
+  //     "data-structures",
+  //     "data-types",
+  //     "regular-expressions",
+  //     "loops-and-iterations",
+  //     "conditional-statements",
+  //   ],
+  //   problem:
+  //     "There was a need to help my husband with his studies - since he worked a lot and he needed support - and while I was on maternity leave with the baby, I simultaneously, not forgetting web development, began to take various courses in Python in order to also master the knowledge of analyst data and data scientist",
+  //   solution:
+  //     "As a result, I took many courses and had a good grasp of the basic concepts to get started",
+  //   links: {
+  //     website: null,
+  //     github: "https://github.com/Anastasia-front/python-start",
+  //   },
+  //   content: {
+  //     description: "First steps into Python",
+  //     image1: twentyProjectSnippet1,
+  //     image2: twentyProjectSnippet2,
+  //     image3: twentyProjectSnippet3,
+  //     image4: twentyProjectSnippet4,
+  //     image5: twentyProjectSnippet5,
+  //   },
+  // },
   {
     id: 21,
     language: "python",
@@ -929,6 +929,33 @@ export const projectsEnglishLang: Project[] = [
       image3: twentyFourProjectSnippet3,
       image4: twentyFourProjectSnippet4,
       image5: twentyFourProjectSnippet5,
+    },
+  },
+  {
+    id: 25,
+    language: "python",
+    development: "data",
+    type: "individual",
+    name: "Data Science",
+    categories: ["Python", "Data Science"],
+    image: cover25,
+    url: "data-science",
+    features: ["Tasks", "Solutions"],
+    problem:
+      "Solving tasks is crucial for proving logical and technical skills, especially when preparing for interviews. It can be challenging, requiring a deep understanding of coding concepts and problem-solving techniques",
+    solution:
+      "Regularly solving different tasks not only enhances logical thinking and technical proficiency but also provides valuable preparation for interviews",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/data-science",
+    },
+    content: {
+      description: "Solving tasks",
+      image1: twentyFiveProjectSnippet1,
+      image2: twentyFiveProjectSnippet2,
+      image3: twentyFiveProjectSnippet3,
+      image4: twentyFiveProjectSnippet4,
+      image5: twentyFiveProjectSnippet5,
     },
   },
 ];
@@ -1516,41 +1543,41 @@ export const projectsUkrainianLang: Project[] = [
       image5: fifteenthProjectSnippet5,
     },
   },
-  {
-    id: 20,
-    language: "python",
-    development: "other",
-    type: "individual",
-    name: "Python Start",
-    categories: ["Початок вивчення мови програмування"],
-    image: cover20,
-    url: "python-start",
-    features: [
-      "функції",
-      "рекурсія",
-      "структури даних",
-      "умовні оператори",
-      "типи даних",
-      "регулярні вирази",
-      "цикли та ітерації",
-    ],
-    problem:
-      "There was a need to help my husband with his studies - since he worked a lot and he needed support - and while I was on maternity leave with the baby, I simultaneously, not forgetting web development, began to take various courses in Python in order to also master the knowledge of analyst data and data scientistБула потреба допомагати чоловіку з навчання - оскільки він багато працював і йому портібна була підтримка - і поки я була в декреті з немовлям я паралельно не забуваючи веб-розробку ще почала проходити різні курси по Пайтону щоб також оволодіти знаннями дата аналіста та дата вченого",
-    solution:
-      "Як результат я пройшла багато курсів і добре оволоділа базовими поняттями для початку",
-    links: {
-      website: null,
-      github: "https://github.com/Anastasia-front/python-start",
-    },
-    content: {
-      description: "Перші кроки в Python",
-      image1: twentyProjectSnippet1,
-      image2: twentyProjectSnippet2,
-      image3: twentyProjectSnippet3,
-      image4: twentyProjectSnippet4,
-      image5: twentyProjectSnippet5,
-    },
-  },
+  // {
+  //   id: 20,
+  //   language: "python",
+  //   development: "other",
+  //   type: "individual",
+  //   name: "Python Start",
+  //   categories: ["Початок вивчення мови програмування"],
+  //   image: cover20,
+  //   url: "python-start",
+  //   features: [
+  //     "функції",
+  //     "рекурсія",
+  //     "структури даних",
+  //     "умовні оператори",
+  //     "типи даних",
+  //     "регулярні вирази",
+  //     "цикли та ітерації",
+  //   ],
+  //   problem:
+  //     "There was a need to help my husband with his studies - since he worked a lot and he needed support - and while I was on maternity leave with the baby, I simultaneously, not forgetting web development, began to take various courses in Python in order to also master the knowledge of analyst data and data scientistБула потреба допомагати чоловіку з навчання - оскільки він багато працював і йому портібна була підтримка - і поки я була в декреті з немовлям я паралельно не забуваючи веб-розробку ще почала проходити різні курси по Пайтону щоб також оволодіти знаннями дата аналіста та дата вченого",
+  //   solution:
+  //     "Як результат я пройшла багато курсів і добре оволоділа базовими поняттями для початку",
+  //   links: {
+  //     website: null,
+  //     github: "https://github.com/Anastasia-front/python-start",
+  //   },
+  //   content: {
+  //     description: "Перші кроки в Python",
+  //     image1: twentyProjectSnippet1,
+  //     image2: twentyProjectSnippet2,
+  //     image3: twentyProjectSnippet3,
+  //     image4: twentyProjectSnippet4,
+  //     image5: twentyProjectSnippet5,
+  //   },
+  // },
   {
     id: 21,
     language: "python",
@@ -1661,6 +1688,33 @@ export const projectsUkrainianLang: Project[] = [
       image3: twentyFourProjectSnippet3,
       image4: twentyFourProjectSnippet4,
       image5: twentyFourProjectSnippet5,
+    },
+  },
+  {
+    id: 25,
+    language: "python",
+    development: "data",
+    type: "individual",
+    name: "Наука про дані",
+    categories: ["Python", "Задачі", "Рішення"],
+    image: cover25,
+    url: "data-science",
+    features: ["Задачі", "Рішення"],
+    problem:
+      "Вирішення задач є важливим для демонстрації логічних та технічних навичок, особливо при підготовці до співбесід. Це може бути викликом і вимагати глибокого розуміння концепцій програмування та технік вирішення задач",
+    solution:
+      "Регулярне вирішення задач не лише покращує логічне мислення та технічну вправність, але й надає цінну підготовку до співбесід",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/data-science",
+    },
+    content: {
+      description: "Вирішення задач",
+      image1: twentyFiveProjectSnippet1,
+      image2: twentyFiveProjectSnippet2,
+      image3: twentyFiveProjectSnippet3,
+      image4: twentyFiveProjectSnippet4,
+      image5: twentyFiveProjectSnippet5,
     },
   },
 ];
