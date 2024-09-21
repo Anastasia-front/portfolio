@@ -118,9 +118,9 @@
           "links": {
             "first": {
               "dataText": "Call me",
-              "href": "tel:+380666080702",
+              "href": "tel:+4793995244",
               "icon": "BsFillTelephoneInboundFill",
-              "info": "+38 (066)-608-07-02",
+              "info": "+47 93-99-52-44",
               "title": "Phone"
             },
             "second": {
@@ -172,21 +172,21 @@
               "dataText": "Chat in Telegram",
               "href": "https://t.me/anastasia_prysiazhna",
               "icon": "BsTelegram",
-              "info": "by number +380666080702 or by username @anastasia_prysiazhna",
+              "info": "by number +4793995244 or by username @anastasia_prysiazhna",
               "title": "Telegram"
             },
             "second": {
               "dataText": "Chat in WhatsApp",
-              "href": "https://wa.me/380666080702",
+              "href": "https://wa.me/4793995244",
               "icon": "BsWhatsapp",
-              "info": "by phone number +380666080702",
+              "info": "by phone number +4793995244",
               "title": "WhatsApp"
             },
             "third": {
               "dataText": "Chat in Viber",
-              "href": "viber://chat?number=380666080702",
+              "href": "viber://chat?number=4793995244",
               "icon": "BsChatDotsFill",
-              "info": "by phone number +380666080702",
+              "info": "by phone number +4793995244",
               "title": "Viber"
             }
           },

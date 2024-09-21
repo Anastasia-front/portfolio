@@ -3,7 +3,7 @@ export const contacts = [
     id: 1,
     title: "title",
     links: [
-      { title: "title", href: "tel:+380666080702", dataText: "dataText" },
+      { title: "title", href: "tel:+4793995244", dataText: "dataText" },
       {
         title: "title",
         href: "mailto:prysiazhnastasia@gmail.com",
@@ -43,12 +43,12 @@ export const contacts = [
       },
       {
         title: "title",
-        href: "https://wa.me/380666080702",
+        href: "https://wa.me/4793995244",
         dataText: "dataText",
       },
       {
         title: "title",
-        href: "viber://chat?number=380666080702",
+        href: "viber://chat?number=4793995244",
         dataText: "dataText",
       },
     ],

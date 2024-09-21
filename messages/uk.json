@@ -118,9 +118,9 @@
           "links": {
             "first": {
               "dataText": "Зателефонувати",
-              "href": "tel:+380666080702",
+              "href": "tel:+4793995244",
               "icon": "BsFillTelephoneInboundFill",
-              "info": "+38 (066)-608-07-02",
+              "info": "+47 93-99-52-44",
               "title": "Номер телефону"
             },
             "second": {
@@ -172,21 +172,21 @@
               "dataText": "Написати у Телеграм",
               "href": "https://t.me/anastasia_prysiazhna",
               "icon": "BsTelegram",
-              "info": "за номером телефону +380666080702 або за ніком @anastasia_prysiazhna",
+              "info": "за номером телефону +4793995244 або за ніком @anastasia_prysiazhna",
               "title": "Телеграм"
             },
             "second": {
               "dataText": "Написати у ВотсАпп",
-              "href": "https://wa.me/380666080702",
+              "href": "https://wa.me/4793995244",
               "icon": "BsWhatsapp",
-              "info": "за номером телефону +380666080702",
+              "info": "за номером телефону +4793995244",
               "title": "ВотсАпп"
             },
             "third": {
               "dataText": "Написати у Вайбер",
-              "href": "viber://chat?number=380666080702",
+              "href": "viber://chat?number=4793995244",
               "icon": "BsChatDotsFill",
-              "info": "за номером телефону +380666080702",
+              "info": "за номером телефону +4793995244",
               "title": "Вайбер"
             }
           },
