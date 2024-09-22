@@ -24,6 +24,9 @@ import cover6 from "@/assets/images/projects/project6/cover.webp";
 import cover7 from "@/assets/images/projects/project7/cover.webp";
 import cover8 from "@/assets/images/projects/project8/cover.webp";
 import cover9 from "@/assets/images/projects/project9/cover.webp";
+import cover20 from "@/assets/images/projects/project20/cover.webp";
+import cover26 from "@/assets/images/projects/project26/cover.webp";
+import cover27 from "../../../../public/mockups/home.webp";
 
 import firstProjectSnippet1 from "@/assets/images/projects/project1/snippet1.webp";
 import firstProjectSnippet2 from "@/assets/images/projects/project1/snippet2.webp";
@@ -139,6 +142,12 @@ import nineteenthProjectSnippet3 from "@/assets/images/projects/project19/snippe
 import nineteenthProjectSnippet4 from "@/assets/images/projects/project19/snippet4.webp";
 import nineteenthProjectSnippet5 from "@/assets/images/projects/project19/snippet5.webp";
 
+import twentyProjectSnippet1 from "@/assets/images/projects/project20/snippet1.webp";
+import twentyProjectSnippet2 from "@/assets/images/projects/project20/snippet2.webp";
+import twentyProjectSnippet3 from "@/assets/images/projects/project20/snippet3.webp";
+import twentyProjectSnippet4 from "@/assets/images/projects/project20/snippet4.webp";
+import twentyProjectSnippet5 from "@/assets/images/projects/project20/snippet5.webp";
+
 import twentyOneProjectSnippet1 from "@/assets/images/projects/project21/snippet1.webp";
 import twentyOneProjectSnippet2 from "@/assets/images/projects/project21/snippet2.webp";
 import twentyOneProjectSnippet3 from "@/assets/images/projects/project21/snippet3.webp";
@@ -168,6 +177,18 @@ import twentyFiveProjectSnippet2 from "@/assets/images/projects/project25/snippe
 import twentyFiveProjectSnippet3 from "@/assets/images/projects/project25/snippet3.webp";
 import twentyFiveProjectSnippet4 from "@/assets/images/projects/project25/snippet4.webp";
 import twentyFiveProjectSnippet5 from "@/assets/images/projects/project25/snippet5.webp";
+
+import twentySixProjectSnippet1 from "@/assets/images/projects/project26/snippet1.webp";
+import twentySixProjectSnippet2 from "@/assets/images/projects/project26/snippet2.webp";
+import twentySixProjectSnippet3 from "@/assets/images/projects/project26/snippet3.webp";
+import twentySixProjectSnippet4 from "@/assets/images/projects/project26/snippet4.webp";
+import twentySixProjectSnippet5 from "@/assets/images/projects/project26/snippet5.webp";
+
+import twentySevenProjectSnippet1 from "../../../../public/mockups/home.webp";
+import twentySevenProjectSnippet2 from "../../../../public/mockups/about.webp";
+import twentySevenProjectSnippet3 from "../../../../public/mockups/skills.webp";
+import twentySevenProjectSnippet4 from "../../../../public/mockups/contacts.webp";
+import twentySevenProjectSnippet5 from "../../../../public/mockups/projects.webp";
 
 export interface Project {
   id?: number;
@@ -689,6 +710,31 @@ export const projectsEnglishLang: Project[] = [
       image4: ninthProjectSnippet4,
       image5: ninthProjectSnippet5,
     },
+  },{
+    id: 27,
+    language: "ts",
+    development: "frontend",
+    type: "individual",
+    name: "Portfolio",
+    categories: ["ts", "Next.js", "scss", "next-intl","next-themes"],
+    image: cover27,
+    url: "portfolio",
+    features: ["Responsive design", "Parallax effect", "And much more..."],
+    problem:
+      "I needed a site where all my projects, skills and information about me were collected in one place",
+    solution: "I have created a corresponding website",
+    links: {
+      website: "https://portfolio-anastasia-front.vercel.app/",
+      github: "https://github.com/Anastasia-front/portfolio",
+    },
+    content: {
+      description: "My own website",
+      image1: twentySevenProjectSnippet1,
+      image2: twentySevenProjectSnippet2,
+      image3: twentySevenProjectSnippet3,
+      image4: twentySevenProjectSnippet4,
+      image5: twentySevenProjectSnippet5,
+    },
   },
   {
     id: 13,
@@ -784,41 +830,41 @@ export const projectsEnglishLang: Project[] = [
       image5: fifteenthProjectSnippet5,
     },
   },
-  // {
-  //   id: 20,
-  //   language: "python",
-  //   development: "other",
-  //   type: "individual",
-  //   name: "Python Start",
-  //   categories: ["The beginning of learning a programming language"],
-  //   image: cover20,
-  //   url: "python-start",
-  //   features: [
-  //     "functions",
-  //     "recursion",
-  //     "data-structures",
-  //     "data-types",
-  //     "regular-expressions",
-  //     "loops-and-iterations",
-  //     "conditional-statements",
-  //   ],
-  //   problem:
-  //     "There was a need to help my husband with his studies - since he worked a lot and he needed support - and while I was on maternity leave with the baby, I simultaneously, not forgetting web development, began to take various courses in Python in order to also master the knowledge of analyst data and data scientist",
-  //   solution:
-  //     "As a result, I took many courses and had a good grasp of the basic concepts to get started",
-  //   links: {
-  //     website: null,
-  //     github: "https://github.com/Anastasia-front/python-start",
-  //   },
-  //   content: {
-  //     description: "First steps into Python",
-  //     image1: twentyProjectSnippet1,
-  //     image2: twentyProjectSnippet2,
-  //     image3: twentyProjectSnippet3,
-  //     image4: twentyProjectSnippet4,
-  //     image5: twentyProjectSnippet5,
-  //   },
-  // },
+  {
+    id: 20,
+    language: "python",
+    development: "other",
+    type: "individual",
+    name: "Python Start",
+    categories: ["The beginning of learning a programming language"],
+    image: cover20,
+    url: "python-start",
+    features: [
+      "functions",
+      "recursion",
+      "data-structures",
+      "data-types",
+      "regular-expressions",
+      "loops-and-iterations",
+      "conditional-statements",
+    ],
+    problem:
+      "There was a need to help my husband with his studies - since he worked a lot and he needed support - and while I was on maternity leave with the baby, I simultaneously, not forgetting web development, began to take various courses in Python in order to also master the knowledge of analyst data and data scientist",
+    solution:
+      "As a result, I took many courses and had a good grasp of the basic concepts to get started",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/python-start",
+    },
+    content: {
+      description: "First steps into Python",
+      image1: twentyProjectSnippet1,
+      image2: twentyProjectSnippet2,
+      image3: twentyProjectSnippet3,
+      image4: twentyProjectSnippet4,
+      image5: twentyProjectSnippet5,
+    },
+  },
   {
     id: 21,
     language: "python",
@@ -956,6 +1002,33 @@ export const projectsEnglishLang: Project[] = [
       image3: twentyFiveProjectSnippet3,
       image4: twentyFiveProjectSnippet4,
       image5: twentyFiveProjectSnippet5,
+    },
+  },
+  {
+    id: 26,
+    language: "js",
+    development: "other",
+    type: "individual",
+    name: "LeetCode",
+    categories: ["JS", "Tasks", "Solutions"],
+    image: cover26,
+    url: "js-leetcode",
+    features: ["Tasks", "Solutions"],
+    problem:
+      "Solving tasks is crucial for proving logical and technical skills, especially when preparing for interviews. It can be challenging, requiring a deep understanding of coding concepts and problem-solving techniques",
+    solution:
+      "Regularly solving different tasks not only enhances logical thinking and technical proficiency but also provides valuable preparation for interviews",
+     links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/javaScript-leetcode",
+    },
+    content: {
+      description: "Solving tasks",
+      image1: twentySixProjectSnippet1,
+      image2: twentySixProjectSnippet2,
+      image3: twentySixProjectSnippet3,
+      image4: twentySixProjectSnippet4,
+      image5: twentySixProjectSnippet5,
     },
   },
 ];
@@ -1451,6 +1524,32 @@ export const projectsUkrainianLang: Project[] = [
     },
   },
   {
+    id: 27,
+    language: "ts",
+    development: "frontend",
+    type: "individual",
+    name: "Portfolio",
+    categories: ["ts", "Next.js", "scss", "next-intl","next-themes"],
+    image: cover27,
+    url: "portfolio",
+    features: ["Адаптивний дизайн", "Паралакс ефект", "Та багато іншого..."],
+    problem:
+      "Мені потрібен був сайт, де всі мої проекти, навички та інформація про мене були б зібрані в одному місці",
+    solution: "Я створила відповідний веб-сайт",
+    links: {
+      website: "https://portfolio-anastasia-front.vercel.app/",
+      github: "https://github.com/Anastasia-front/portfolio",
+    },
+    content: {
+      description: "Мій власний веб-сайт",
+      image1: twentySevenProjectSnippet1,
+      image2: twentySevenProjectSnippet2,
+      image3: twentySevenProjectSnippet3,
+      image4: twentySevenProjectSnippet4,
+      image5: twentySevenProjectSnippet5,
+    },
+  },
+  {
     id: 13,
     language: "js",
     development: "cli",
@@ -1543,41 +1642,41 @@ export const projectsUkrainianLang: Project[] = [
       image5: fifteenthProjectSnippet5,
     },
   },
-  // {
-  //   id: 20,
-  //   language: "python",
-  //   development: "other",
-  //   type: "individual",
-  //   name: "Python Start",
-  //   categories: ["Початок вивчення мови програмування"],
-  //   image: cover20,
-  //   url: "python-start",
-  //   features: [
-  //     "функції",
-  //     "рекурсія",
-  //     "структури даних",
-  //     "умовні оператори",
-  //     "типи даних",
-  //     "регулярні вирази",
-  //     "цикли та ітерації",
-  //   ],
-  //   problem:
-  //     "There was a need to help my husband with his studies - since he worked a lot and he needed support - and while I was on maternity leave with the baby, I simultaneously, not forgetting web development, began to take various courses in Python in order to also master the knowledge of analyst data and data scientistБула потреба допомагати чоловіку з навчання - оскільки він багато працював і йому портібна була підтримка - і поки я була в декреті з немовлям я паралельно не забуваючи веб-розробку ще почала проходити різні курси по Пайтону щоб також оволодіти знаннями дата аналіста та дата вченого",
-  //   solution:
-  //     "Як результат я пройшла багато курсів і добре оволоділа базовими поняттями для початку",
-  //   links: {
-  //     website: null,
-  //     github: "https://github.com/Anastasia-front/python-start",
-  //   },
-  //   content: {
-  //     description: "Перші кроки в Python",
-  //     image1: twentyProjectSnippet1,
-  //     image2: twentyProjectSnippet2,
-  //     image3: twentyProjectSnippet3,
-  //     image4: twentyProjectSnippet4,
-  //     image5: twentyProjectSnippet5,
-  //   },
-  // },
+  {
+    id: 20,
+    language: "python",
+    development: "other",
+    type: "individual",
+    name: "Python Start",
+    categories: ["Початок вивчення мови програмування"],
+    image: cover20,
+    url: "python-start",
+    features: [
+      "функції",
+      "рекурсія",
+      "структури даних",
+      "умовні оператори",
+      "типи даних",
+      "регулярні вирази",
+      "цикли та ітерації",
+    ],
+    problem:
+      "There was a need to help my husband with his studies - since he worked a lot and he needed support - and while I was on maternity leave with the baby, I simultaneously, not forgetting web development, began to take various courses in Python in order to also master the knowledge of analyst data and data scientistБула потреба допомагати чоловіку з навчання - оскільки він багато працював і йому портібна була підтримка - і поки я була в декреті з немовлям я паралельно не забуваючи веб-розробку ще почала проходити різні курси по Пайтону щоб також оволодіти знаннями дата аналіста та дата вченого",
+    solution:
+      "Як результат я пройшла багато курсів і добре оволоділа базовими поняттями для початку",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/python-start",
+    },
+    content: {
+      description: "Перші кроки в Python",
+      image1: twentyProjectSnippet1,
+      image2: twentyProjectSnippet2,
+      image3: twentyProjectSnippet3,
+      image4: twentyProjectSnippet4,
+      image5: twentyProjectSnippet5,
+    },
+  },
   {
     id: 21,
     language: "python",
@@ -1715,6 +1814,33 @@ export const projectsUkrainianLang: Project[] = [
       image3: twentyFiveProjectSnippet3,
       image4: twentyFiveProjectSnippet4,
       image5: twentyFiveProjectSnippet5,
+    },
+  },
+  {
+    id: 26,
+    language: "js",
+    development: "other",
+    type: "individual",
+    name: "LeetCode",
+    categories: ["JS", "Задачі", "Рішення"],
+    image: cover26,
+    url: "js-leetcode",
+    features: ["Задачі", "Рішення"],
+    problem:
+      "Вирішення задач є важливим для демонстрації логічних та технічних навичок, особливо при підготовці до співбесід. Це може бути викликом і вимагати глибокого розуміння концепцій програмування та технік вирішення задач",
+    solution:
+      "Регулярне вирішення задач не лише покращує логічне мислення та технічну вправність, але й надає цінну підготовку до співбесід",
+    links: {
+      website: null,
+      github: "https://github.com/Anastasia-front/javaScript-leetcode",
+    },
+    content: {
+      description: "Вирішення задач",
+      image1: twentySixProjectSnippet1,
+      image2: twentySixProjectSnippet2,
+      image3: twentySixProjectSnippet3,
+      image4: twentySixProjectSnippet4,
+      image5: twentySixProjectSnippet5,
     },
   },
 ];
