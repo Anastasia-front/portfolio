@@ -70,7 +70,8 @@ export function NestedFilter({
     onSelectCategory(category, type);
   };
 
-  const interConst = type === "frontend" ? iF : type === "backend" ? iB : iD;
+  const interConst =
+    type === "frontend" ? iF : type === "backend" || type === "other" ? iB : iD;
 
   const { isScreenMobileLg } = useScreenQuery();
   const isTouchDevice = useMediaQuery({ query: "(hover: none)" });

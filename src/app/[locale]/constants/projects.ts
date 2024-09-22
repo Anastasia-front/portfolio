@@ -12,11 +12,13 @@ import cover17 from "@/assets/images/projects/project17/cover.webp";
 import cover18 from "@/assets/images/projects/project18/cover.webp";
 import cover19 from "@/assets/images/projects/project19/cover.webp";
 import cover2 from "@/assets/images/projects/project2/cover.webp";
+import cover20 from "@/assets/images/projects/project20/cover.webp";
 import cover21 from "@/assets/images/projects/project21/cover.webp";
 import cover22 from "@/assets/images/projects/project22/cover.webp";
 import cover23 from "@/assets/images/projects/project23/cover.webp";
 import cover24 from "@/assets/images/projects/project24/cover.webp";
 import cover25 from "@/assets/images/projects/project25/cover.webp";
+import cover26 from "@/assets/images/projects/project26/cover.webp";
 import cover3 from "@/assets/images/projects/project3/cover.webp";
 import cover4 from "@/assets/images/projects/project4/cover.webp";
 import cover5 from "@/assets/images/projects/project5/cover.webp";
@@ -24,8 +26,6 @@ import cover6 from "@/assets/images/projects/project6/cover.webp";
 import cover7 from "@/assets/images/projects/project7/cover.webp";
 import cover8 from "@/assets/images/projects/project8/cover.webp";
 import cover9 from "@/assets/images/projects/project9/cover.webp";
-import cover20 from "@/assets/images/projects/project20/cover.webp";
-import cover26 from "@/assets/images/projects/project26/cover.webp";
 import cover27 from "../../../../public/mockups/home.webp";
 
 import firstProjectSnippet1 from "@/assets/images/projects/project1/snippet1.webp";
@@ -184,11 +184,11 @@ import twentySixProjectSnippet3 from "@/assets/images/projects/project26/snippet
 import twentySixProjectSnippet4 from "@/assets/images/projects/project26/snippet4.webp";
 import twentySixProjectSnippet5 from "@/assets/images/projects/project26/snippet5.webp";
 
-import twentySevenProjectSnippet1 from "../../../../public/mockups/home.webp";
 import twentySevenProjectSnippet2 from "../../../../public/mockups/about.webp";
-import twentySevenProjectSnippet3 from "../../../../public/mockups/skills.webp";
 import twentySevenProjectSnippet4 from "../../../../public/mockups/contacts.webp";
+import twentySevenProjectSnippet1 from "../../../../public/mockups/home.webp";
 import twentySevenProjectSnippet5 from "../../../../public/mockups/projects.webp";
+import twentySevenProjectSnippet3 from "../../../../public/mockups/skills.webp";
 
 export interface Project {
   id?: number;
@@ -710,13 +710,14 @@ export const projectsEnglishLang: Project[] = [
       image4: ninthProjectSnippet4,
       image5: ninthProjectSnippet5,
     },
-  },{
+  },
+  {
     id: 27,
     language: "ts",
     development: "frontend",
     type: "individual",
     name: "Portfolio",
-    categories: ["ts", "Next.js", "scss", "next-intl","next-themes"],
+    categories: ["ts", "Next.js", "scss", "next-intl", "next-themes"],
     image: cover27,
     url: "portfolio",
     features: ["Responsive design", "Parallax effect", "And much more..."],
@@ -983,7 +984,7 @@ export const projectsEnglishLang: Project[] = [
     development: "data",
     type: "individual",
     name: "Data Science",
-    categories: ["Python", "Data Science"],
+    categories: ["Python", "AI", "ML"],
     image: cover25,
     url: "data-science",
     features: ["Tasks", "Solutions"],
@@ -1018,7 +1019,7 @@ export const projectsEnglishLang: Project[] = [
       "Solving tasks is crucial for proving logical and technical skills, especially when preparing for interviews. It can be challenging, requiring a deep understanding of coding concepts and problem-solving techniques",
     solution:
       "Regularly solving different tasks not only enhances logical thinking and technical proficiency but also provides valuable preparation for interviews",
-     links: {
+    links: {
       website: null,
       github: "https://github.com/Anastasia-front/javaScript-leetcode",
     },
@@ -1529,7 +1530,7 @@ export const projectsUkrainianLang: Project[] = [
     development: "frontend",
     type: "individual",
     name: "Portfolio",
-    categories: ["ts", "Next.js", "scss", "next-intl","next-themes"],
+    categories: ["ts", "Next.js", "scss", "next-intl", "next-themes"],
     image: cover27,
     url: "portfolio",
     features: ["Адаптивний дизайн", "Паралакс ефект", "Та багато іншого..."],
@@ -1795,7 +1796,7 @@ export const projectsUkrainianLang: Project[] = [
     development: "data",
     type: "individual",
     name: "Наука про дані",
-    categories: ["Python", "Задачі", "Рішення"],
+    categories: ["Python", "AI", "ML"],
     image: cover25,
     url: "data-science",
     features: ["Задачі", "Рішення"],

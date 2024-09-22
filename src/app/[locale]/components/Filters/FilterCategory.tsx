@@ -6,7 +6,7 @@ import { GrCli } from "react-icons/gr";
 import { IoChevronBackOutline } from "react-icons/io5";
 import { MdOutlineDataThresholding } from "react-icons/md";
 import { TfiLayoutListThumbAlt } from "react-icons/tfi";
-import { VscChromeRestore } from "react-icons/vsc";
+// import { VscChromeRestore } from "react-icons/vsc";
 
 import { useTranslations } from "next-intl";
 
@@ -84,13 +84,13 @@ export function FilterCategory({
                   </button>
                 </li>
               );
-            } else if (type === "data" ) {
+            } else if (type === "data") {
               return (
                 <li key={index} className="dropdown-item">
                   <button
                     className={activeTypeFilter === type ? "active-filter" : ""}
                     type="button"
-                    onClick={() => handleTypeSelect(t(`${type}`))}
+                    onClick={() => handleTypeSelect(type)}
                     aria-label={t(`${type}`)}
                   >
                     <MdOutlineDataThresholding />
@@ -98,31 +98,39 @@ export function FilterCategory({
                   </button>
                 </li>
               );
-            } else if (t(`${type}`) === "other" || t(`${type}`) === "інші") {
+            }
+            // need comments for future modification of filters
+            // else if (t(`${type}`) === "other" || t(`${type}`) === "інші") {
+            //   return (
+            //     <li key={index} className="dropdown-item">
+            //       <button
+            //         className={activeTypeFilter === type ? "active-filter" : ""}
+            //         type="button"
+            //         onClick={() => handleTypeSelect(t(`${type}`))}
+            //         aria-label={t(`${type}`)}
+            //       >
+            //         <VscChromeRestore />
+            //         {t(`${type}`)}
+            //       </button>
+            //     </li>
+            //   );
+            // }
+            else {
               return (
-                <li key={index} className="dropdown-item">
-                  <button
-                    className={activeTypeFilter === type ? "active-filter" : ""}
-                    type="button"
-                    onClick={() => handleTypeSelect(t(`${type}`))}
-                    aria-label={t(`${type}`)}
-                  >
-                    <VscChromeRestore />
-                    {t(`${type}`)}
-                  </button>
-                </li>
-              );
-            } else {
-              return (
-                <li key={index} className="dropdown-item">
-                  <NestedFilter
-                    activeTypeFilter={activeTypeFilter}
-                    activeCategoryFilter={activeCategoryFilter}
-                    onSelectType={handleTypeSelect}
-                    onSelectCategory={handleCategorySelect}
-                    type={type}
-                  />
-                </li>
+                <>
+                  <li key={index} className="dropdown-item">
+                    <NestedFilter
+                      activeTypeFilter={activeTypeFilter}
+                      activeCategoryFilter={activeCategoryFilter}
+                      onSelectType={handleTypeSelect}
+                      onSelectCategory={handleCategorySelect}
+                      type={type}
+                    />
+                  </li>
+                  {/* <li key={index} className="block-hint__comment">
+                    <p> {t("comment")}</p>
+                  </li> */}
+                </>
               );
             }
           })

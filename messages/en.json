@@ -261,7 +261,8 @@
       "cli": "cli",
       "data": "data science",
       "frontend": "frontend",
-      "other": "other"
+      "other": "other",
+      "comment":"* there are only individual projects if there is no nested menu"
     }
   },
   "home": {
