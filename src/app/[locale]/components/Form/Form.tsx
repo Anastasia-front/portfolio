@@ -15,6 +15,8 @@ import { getButtonClasses, getButtonContent } from "@/helpers";
 import { sendEmail } from "@/lib";
 import { opacityVariants, sendMessageToTelegram } from "@/utils";
 
+import "@/styles/partials/_contacts.scss";
+
 type FormStatus = "success" | "error" | null;
 interface FormData {
   subject: string;
