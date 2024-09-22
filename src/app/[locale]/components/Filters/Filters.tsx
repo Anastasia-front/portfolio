@@ -92,7 +92,7 @@ export function Filters({
     "cli",
     "backend",
     "frontend",
-    "data",
+    "data science",
     "other",
   ].includes(activeTypeFilter!!)
     ? "active-filter"

@@ -84,10 +84,7 @@ export function FilterCategory({
                   </button>
                 </li>
               );
-            } else if (
-              t(`${type}`) === "data science" ||
-              t(`${type}`) === "дата саєнс"
-            ) {
+            } else if (type === "data" ) {
               return (
                 <li key={index} className="dropdown-item">
                   <button
