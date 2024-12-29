@@ -79,52 +79,41 @@
     }
 
     h2 {
-      .block,
-      .inline-block {
+      &.block, &.inline-block, &.accent-text, span {
+        display: flex;
+        flex-direction: row;
         font-size: var(--font-size--2);
-      }
-      span {
-        -webkit-text-fill-color: var(--color--light-blue-2);
-        -webkit-text-stroke: 1px var(--color--light-blue-3);
-        font-weight: var(--font-weight--normal-2);
-        line-height: 3rem;
+        @include hero-content(var(--color--light-blue-2), var(--color--light-blue-3), var(--font-weight--normal-2));
       }
     }
 
     h1 {
-      .block,
-      .inline-block {
+      &.block, &.inline-block, &.accent-text, span {
+        display: flex;
+        flex-direction: row;
         font-size: var(--font-size--1);
-      }
-      span {
-        -webkit-text-fill-color: var(--color--light-blue-3);
-        -webkit-text-stroke: 1px var(--color--light-blue-4);
-        font-weight: var(--font-weight--bold);
-        line-height: 3rem;
-        text-transform: uppercase;
+        @include hero-content(var(--color--light-blue-3), var(--color--light-blue-4), var(--font-weight--bold), 3rem, uppercase);
       }
     }
 
     h4 {
-      .block,
-      .inline-block {
-        font-size: var(--font-size--4);
-      }
-      span {
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 1px var(--color--blue-grey-2);
+      &.block, &.inline-block, &.accent-text, span {
+        display: flex;
+        flex-direction: row;
         align-self: flex-start;
+        font-size: var(--font-size--4);
+        @include hero-content(transparent, var(--color--blue-grey-2), normal);
       }
+      
     }
 
     p {
       margin-bottom: 2rem;
-      .block,
-      .inline-block {
-        font-size: var(--font-size--6);
-      }
-      span {
+      &.block, &.inline-block, &.accent-text, span {
+        display: flex;
+        flex-direction: row;
         color: var(--color--orange-2);
+        font-size: var(--font-size--6);
         @include useScreen("tablet-sm") {
           max-width: 60%;
         }

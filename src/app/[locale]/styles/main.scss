@@ -36,7 +36,10 @@ body {
 
   &::-webkit-scrollbar-thumb {
     border-radius: var(--border-radius--md);
-    background: linear-gradient(to top, #fca26e 20%, #fcfbfc 50%, #68b8c1 100%);
+    background: linear-gradient(to top, 
+    var(--color--orange-2) 20%, 
+    var(--color--white) 50%, 
+    var(--color--light-blue-3) 100%);
   }
 }
 [data-theme="dark"] body {
@@ -44,7 +47,9 @@ body {
   background-color: var(--color--bg-dark);
 
   &::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top, #68b8c1 30%, #fca26e 100%);
+    background: linear-gradient(to top, 
+    var(--color--light-blue-3) 30%, 
+    var(--color--orange-2) 100%);
   }
 }
 
@@ -381,12 +386,18 @@ img {
   width: 100%;
   height: 7px;
   border-radius: 55px;
-  background: linear-gradient(90deg, #fca26e 20%, #fcfbfc 50%, #68b8c1 100%);
+  background: linear-gradient(90deg, 
+  var(--color--orange-2) 20%, 
+  var(--color--white) 50%, 
+  var(--color--light-blue-3) 100%);
   transition: transform 0.2s ease-in-out;
   transform-origin: 0%;
 }
 [data-theme="dark"] .progress-bar {
-  background: linear-gradient(90deg, #68b8c1 30%, #000 50%, #fca26e 100%);
+  background: linear-gradient(90deg, 
+  var(--color--light-blue-3) 30%,
+  var(--color--bg-dark) 50%, 
+  var(--color--orange-2) 100%);
 }
 
 .logo {
@@ -585,8 +596,9 @@ img {
     width: 80%;
     height: 50vh;
     padding: 0.5rem;
-    border-radius: var(--border-radius--md) var(--border-radius--md) 0%
-      var(--border-radius--md);
+    border-radius: var(--border-radius--md) 
+                  var(--border-radius--md) 0%
+                  var(--border-radius--md);
     overflow: auto;
     cursor: default;
     background: var(--color--peach);
@@ -711,16 +723,18 @@ img {
       border-radius: 0;
       background: linear-gradient(
         to top,
-        #68b8c1 20%,
-        #fcfbfc 50%,
-        #fca26e 100%
+        var(--color--light-blue-3) 20%,
+        var(--color--white) 50%,
+        var(--color--orange-2) 100%
       );
     }
     /* Additional styling for Firefox */
     /* Note: Firefox doesn't support linear gradients on scrollbar-thumb */
     /* You can customize this separately for Firefox */
     & {
-      scrollbar-color: #68b8c1 #fcfbfc #fca26e;
+      scrollbar-color: var(--color--light-blue-3) 
+                      var(--color--white) 
+                      var(--color--orange-2);
     }
   }
 
@@ -746,7 +760,9 @@ img {
     background: var(--color--grey);
 
     &::-webkit-scrollbar-thumb {
-      background: linear-gradient(to top, #fca26e 30%, #68b8c1 100%);
+      background: linear-gradient(to top, 
+      var(--color--orange-2) 30%, 
+      var(--color--light-blue-3) 100%);
     }
   }
 
@@ -985,6 +1001,128 @@ img {
       width: 160%;
       height: auto;
     }
+  }
+}
+
+// text animation
+
+.letter-wrapper{
+  font-size: 12vw;
+  letter-spacing: 2vw;
+  position: relative;
+  pointer-events: none;
+}
+
+.letter{
+  line-height: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.letter:last-child{
+  position: relative;
+  visibility: hidden;
+}
+
+.animation-top-to-bottom{
+  animation: ans-top-to-bottom 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+.animation-top-to-bottom-rotateY{
+  animation: ans-top-to-bottom-rotateY 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+.animation-top-to-bottom-rotateX{
+  animation: ans-top-to-bottom-rotateX 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+.animation-top-to-bottom-rotate{
+  animation: ans-top-to-bottom-rotate 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+.animation-5{
+  transform-style: preserve-3d;
+  animation: ans-5 4.5s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+.animation-6{
+  transform-style: preserve-3d;
+  animation: ans-6 4.5s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+
+@keyframes ans-top-to-bottom{
+  0%,20%{
+        transform: translateY(0);
+  }
+  40%,60%{
+        transform: translateY(-12vw);
+
+  }
+}
+
+@keyframes ans-top-to-bottom-rotateY{
+  0%,20%{
+        transform: translateY(0);
+  }
+  40%,60%{
+        transform: translateY(-12vw) rotateY(360deg);
+
+  }
+}
+
+@keyframes ans-top-to-bottom-rotateX{
+  0%,20%{
+        transform: translateY(0);
+  }
+  40%,60%{
+        transform: translateY(-12vw) rotateX(360deg);
+  }
+}
+
+@keyframes ans-top-to-bottom-rotate{
+  0%,20%{
+        transform: translateY(0);
+  }
+  40%,60%{
+        transform: translateY(-12vw) rotate(360deg);
+  }
+}
+
+@keyframes ans-5{
+  0%,20%{
+        transform: translateY(0);
+  }
+
+  35%{
+        transform:skewX(100deg)
+  }
+
+  50%,70%{
+        transform: translateY(-12vw) rotate(360deg);
+  }
+
+  80%{
+        transform:skewX(100deg)
+  }
+}
+
+@keyframes ans-6{
+  0%,20%{
+        transform: translateY(0);
+  }
+
+  35%{
+        transform: translateY(-12vw) scale(1.4);
+  }
+
+  50%,70%{
+        transform: translateY(-12vw); 
+  }
+
+  85%{
+        transform: scale(1.4);
   }
 }
 

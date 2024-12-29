@@ -80,3 +80,16 @@
   );
   background-clip: text;
 }
+
+@mixin hero-content(
+  $text-color, 
+  $stroke-color, 
+  $font-weight, 
+  $line-height: 3rem, 
+  $text-transform: none) {
+  -webkit-text-fill-color: $text-color;
+  -webkit-text-stroke: 1px $stroke-color;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  text-transform: $text-transform;
+}
