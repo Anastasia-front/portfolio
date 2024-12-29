@@ -3,11 +3,16 @@
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
-interface Props {}
+import scramble from "@/utils/scramble";
 
-export function PreLoader(props: Props) {
+export function PreLoader() {
   const [load, setLoad] = useState<number>(0);
   const i = useTranslations("loading");
+
+  const loaderText = document.getElementById("#scramble");
+
+  const scrambled = scramble(loaderText);
+    scrambled?.run?.()
 
   useEffect(() => {
     const timerID = setInterval(() => {
@@ -26,7 +31,9 @@ export function PreLoader(props: Props) {
 
   return (
     <div className="preloader">
-      <p className="preloader-text">{i("title")}</p>
+      <p id={"scramble"} className="preloader-text">
+        {i("title")}
+      </p>
       <p className="preloader-percentages">{load}%</p>
     </div>
   );
