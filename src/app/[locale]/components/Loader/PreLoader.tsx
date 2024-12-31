@@ -9,9 +9,9 @@ export function PreLoader() {
   const [load, setLoad] = useState<number>(0);
   const i = useTranslations("loading");
 
-  const loaderText = document.getElementById("#scramble");
+  const loader = document.getElementById("scramble");
 
-  const scrambled = scramble(loaderText);
+  const scrambled = scramble(loader);
     scrambled?.run?.()
 
   useEffect(() => {

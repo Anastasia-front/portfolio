@@ -37,8 +37,8 @@ export default function AchievementsSection() {
 
   const { githubModal } = useGlobalContext();
 
-  const [isClicked, setIsClicked] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<StaticImageData | string>(
+  const [_, setIsClicked] = useState(false);
+  const [__, setSelectedImage] = useState<StaticImageData | string>(
     ""
   );
   const [selectedAlt, setSelectedAlt] = useState<string>("");
