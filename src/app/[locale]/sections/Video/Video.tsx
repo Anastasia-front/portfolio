@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BsInfoSquare } from "react-icons/bs";
 
 import { useLocale, useTranslations } from "next-intl";
@@ -10,55 +10,75 @@ import { type Locale } from "src/locales";
 
 export default function Video() {
   const [isClicked, setIsClicked] = useState(false);
+  const [isVideoFinished, setIsVideoFinished] = useState(false);
 
   const f = useTranslations("video.firstTime");
   const o = useTranslations("video.otherTimes");
   const { theme } = useTheme();
 
   const locale = useLocale() as Locale;
-
   const video = `/video/hero/${locale}-${theme}.mp4`;
   const poster = `/images/poster/${locale}-${theme}.webp`;
 
   const videoRef = useRef<HTMLVideoElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      const videoEl = videoRef.current;
+      videoEl.muted = true; // Ensure video is muted for autoplay
+      videoEl.play().catch(() => {
+        console.warn("Autoplay failed on first load.");
+      });
+    }
+  }, []);
 
   const handleClick = () => {
-    if (videoRef.current || textRef.current) {
-      if (
-        videoRef.current &&
-        (videoRef.current.paused || videoRef.current.ended)
-      ) {
+    if (videoRef.current) {
+      if (videoRef.current.paused || videoRef.current.ended) {
         videoRef.current.play();
-        setIsClicked(true);
       }
+      videoRef.current.muted = !videoRef.current.muted; // Toggle sound
+      setIsClicked(!videoRef.current.muted);
     }
+  };
+
+  const handleVideoEnd = () => {
+    // Set state when the video finishes playing for the first time
+    setIsVideoFinished(true);
   };
 
   return (
     <>
       <video
+        autoPlay
         className="video"
+        muted={!isClicked}
+        playsInline
+        poster={poster}
         ref={videoRef}
         src={video}
-        onClick={handleClick}
-        onPlay={() => {
-          setIsClicked(true);
-        }}
-        poster={poster}
+        onEnded={handleVideoEnd} // Detect when video finishes playing
       />
-      {!isClicked ? (
-        <div className="video-tip__first" ref={textRef} onClick={handleClick}>
+      {isVideoFinished && (
+        <div
+          className={`${isClicked ? "video-tip__others" : "video-tip__first"}`}
+          onClick={handleClick}
+        >
           <BsInfoSquare />
-          <p className="video-tip__first-text">
-            {f("primaryText")} <span>{f("secondaryText")}</span>
-          </p>
-        </div>
-      ) : (
-        <div className="video-tip__others">
-          <BsInfoSquare />
-          <p className="video-tip__others-text">
-            {o("primaryText")} <span>{o("secondaryText")}</span>
+          <p
+            className={`${
+              isClicked ? "video-tip__others-text" : "video-tip__first-text"
+            }`}
+          >
+            {!isClicked ? (
+              <>
+                {f("primaryText")} <span>{f("secondaryText")}</span>
+              </>
+            ) : (
+              <>
+                {o("primaryText")} <span>{o("secondaryText")}</span>
+              </>
+            )}
           </p>
         </div>
       )}

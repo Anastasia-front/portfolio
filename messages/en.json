@@ -397,8 +397,8 @@
   },
   "video": {
     "firstTime": {
-      "primaryText": "Behind this text is a video, click here and it will play ( it's with sound )",
-      "secondaryText": "the next time when you go to the main page in order to start it again you will have to click here again"
+      "primaryText": "Click here and video will play again",
+      "secondaryText": "it has sound, so you can turn it on on your device"
     },
     "otherTimes": {
       "primaryText": "click on this block",
