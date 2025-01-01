@@ -35,12 +35,10 @@ export default function AchievementsSection() {
   const t = useTranslations("about");
   const h = useTranslations("home.3d");
 
-  const { githubModal } = useGlobalContext();
+  const { githubModal, linkedInModal } = useGlobalContext();
 
   const [_, setIsClicked] = useState(false);
-  const [__, setSelectedImage] = useState<StaticImageData | string>(
-    ""
-  );
+  const [__, setSelectedImage] = useState<StaticImageData | string>("");
   const [selectedAlt, setSelectedAlt] = useState<string>("");
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -197,7 +195,35 @@ export default function AchievementsSection() {
       <motion.p className="block-hint__prompt width-22">
         <BsFillInfoCircleFill /> {a("hint.img")}
       </motion.p>
-
+      <motion.h4
+        className={`about-achievements__subtitle ${source.className}`}
+        variants={titleVariants("second")}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {a("title.fourth")}
+      </motion.h4>
+      <motion.h5
+        className={`about-achievements__subtitle ${source.className}`}
+        variants={titleVariants("second")}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        ({a("title.pdf")})
+      </motion.h5>
+      <motion.img
+        className="github-size github-img border-for-media"
+        src="/images/about/linkedIn-unwrapped.webp"
+        alt={a("alt.linkedIn")}
+        onClick={linkedInModal.open}
+        loading="lazy"
+        variants={titleVariants("first")}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+      />
       {githubModal.isOpen && (
         <PortalModal
           nameId="github-portal"
@@ -210,6 +236,20 @@ export default function AchievementsSection() {
             alt={selectedAlt}
             loading="lazy"
             className="border-for-media"
+          />
+        </PortalModal>
+      )}
+      {linkedInModal.isOpen && (
+        <PortalModal
+          nameId="linkedIn-portal"
+          isOpen={linkedInModal.isOpen}
+          handleClose={linkedInModal.close}
+          noDivContent
+        >
+          <embed
+            src="/pdf/linkedIn-unwrapped.pdf"
+            type="application/pdf"
+            className="border-for-media pdf-view"
           />
         </PortalModal>
       )}

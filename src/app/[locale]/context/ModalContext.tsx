@@ -1,21 +1,23 @@
 import { useModal } from "@/providers";
 
 export function useGlobalContext() {
-  const menuModal = useModal("menu");
-  const formModal = useModal("form");
-  const progressModal = useModal("progress");
   const certificateModal = useModal("certificate");
-  const settingsModal = useModal("settings");
+  const formModal = useModal("form");
   const githubModal = useModal("github");
+  const linkedInModal = useModal("linkedIn");
+  const menuModal = useModal("menu");
+  const progressModal = useModal("progress");
   const projectModal = useModal("projectImg");
+  const settingsModal = useModal("settings");
 
   return {
-    menuModal,
-    formModal,
-    progressModal,
     certificateModal,
-    settingsModal,
+    formModal,
     githubModal,
+    linkedInModal,
+    menuModal,
+    progressModal,
     projectModal,
+    settingsModal,
   };
 }
