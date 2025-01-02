@@ -115,6 +115,10 @@
   },
   "contacts": {
     "description": "Below is the form for sending me an email and below it you will find all available ways to contact me ( they are also duplicated in the footer)",
+    "farewell": {
+      "firstPart": "I hope you like the website, you need a developer like me, so I'm waiting for your",
+      "secondPart": "message"
+    },
     "footer": {
       "icons": {
         "first": {

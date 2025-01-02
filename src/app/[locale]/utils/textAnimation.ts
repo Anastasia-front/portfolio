@@ -9,32 +9,38 @@ export type TextAnimationType =
 export const textAnimation = (
   element: HTMLElement | null,
   text: string,
-  variant: TextAnimationType = "animation-top-to-bottom"
+  variant: TextAnimationType = "animation-top-to-bottom",
+  theme?: string
 ): void => {
-  if (!element) return; 
+  if (!element) return;
 
-  const colors = [
-    "#24656a",
+  const colorsForLightTheme = [
     "#2a8a92",
-    "#4491ba",
-    "#00b8d0",
     "#68b8c1",
     "#aad0d4",
     "#c3e1e5",
-    "#efbd9d",
     "#fca26e",
-    "#f5751d",
     "#f77532",
-    "#ff671b",
-    "#f95c0d",
     "#ff5500",
   ];
+
+  const colorsForDarkTheme = [
+    "#ff5500",
+    "#f77532",
+    "#fca26e",
+    "#c3e1e5",
+    "#aad0d4",
+    "#68b8c1",
+    "#2a8a92",
+  ];
+
+  const colors = theme === "dark" ? colorsForDarkTheme : colorsForLightTheme;
 
   const createLetterElements = (char: string, diff: number) => {
     const elementsLength = 8;
     const fragment = document.createDocumentFragment();
     for (let i = 0; i < elementsLength; i++) {
-      const delay = ((elementsLength - i + 1) / 10) + diff;
+      const delay = (elementsLength - i + 1) / 10 + diff;
       const span = document.createElement("span");
       span.className = `letter ${variant}`;
       span.textContent = char;
@@ -65,7 +71,6 @@ export const textAnimation = (
 
   applyAnimation();
 };
-
 
 // usage
 // const descriptionRef = useRef<HTMLDivElement | null>(null);

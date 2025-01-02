@@ -1,7 +1,7 @@
 @use "./mixins" as *;
 @use "../mixins" as *;
 
-.contact {
+.contacts {
   &-page {
     @include flex(column, center, center);
     gap: 2rem;
@@ -300,9 +300,14 @@
       transform: scale(1.03);
     }
   }
+
+  &__farewell{
+    @include flex(column, center, center);
+    gap: 12px;
+  }
 }
 
-[data-theme="dark"] .contact {
+[data-theme="dark"] .contacts {
   &__input {
     @include area(
       var(--color--blue-grey-opacity),

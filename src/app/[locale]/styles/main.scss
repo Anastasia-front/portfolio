@@ -856,6 +856,15 @@ img {
   }
 }
 
+.text-align{
+  &__center{
+    text-align: center;
+  }
+  &__left{
+    text-align: left;
+  }
+}  
+
 .center {
   @include flex(column, center, center);
   gap: 1rem;
@@ -870,6 +879,15 @@ img {
     fill: var(--color--white);
   }
 }
+
+.line-height{
+  &__small{
+    line-height: 24px !important;
+  }
+  &__big{
+    line-height: 48px !important;
+  }
+}  
 
 .block-hint {
   @include flex(column, center, center);
@@ -1004,11 +1022,56 @@ img {
   }
 }
 
-// text animation
+.accent-text{
+  @include flex(row, center, center);
+  height: fit-content;
+}
 
+h2 {
+  &.accent-text {
+    display: flex;
+    flex-direction: row;
+    font-size: var(--font-size--2);
+    @include hero-content(var(--color--light-blue-2), var(--color--light-blue-3), var(--font-weight--normal-2));
+  }
+}
+
+h1 {
+  &.accent-text {
+    display: flex;
+    flex-direction: row;
+    font-size: var(--font-size--1);
+    @include hero-content(var(--color--light-blue-3), var(--color--light-blue-4), var(--font-weight--bold), 3rem, uppercase);
+  }
+}
+
+h4 {
+  &.accent-text {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    font-size: var(--font-size--4);
+    @include hero-content(transparent, var(--color--blue-grey-2), normal);
+  }
+  
+}
+
+p {
+  &.accent-text {
+    display: flex;
+    flex-direction: row;
+    color: var(--color--orange-2);
+    font-size: var(--font-size--6);
+    @include useScreen("tablet-sm") {
+      max-width: 60%;
+    }
+  }
+}
+
+// text animation
 .letter-wrapper{
-  font-size: 12vw;
-  letter-spacing: 2vw;
+  font-size: 30px;
+  letter-spacing:20px;
   position: relative;
   pointer-events: none;
 }
@@ -1026,71 +1089,71 @@ img {
 }
 
 .animation-top-to-bottom{
-  animation: ans-top-to-bottom 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+  animation: animation-top-to-bottom 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
 }
 
 .animation-top-to-bottom-rotateY{
-  animation: ans-top-to-bottom-rotateY 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+  animation: animation-top-to-bottom-rotateY 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
 }
 
 .animation-top-to-bottom-rotateX{
-  animation: ans-top-to-bottom-rotateX 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+  animation: animation-top-to-bottom-rotateX 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
 }
 
 .animation-top-to-bottom-rotate{
-  animation: ans-top-to-bottom-rotate 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+  animation: animation-top-to-bottom-rotate 4s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
 }
 
 .animation-5{
   transform-style: preserve-3d;
-  animation: ans-5 4.5s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+  animation: animation-5 4.5s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
 }
 
 .animation-6{
   transform-style: preserve-3d;
-  animation: ans-6 4.5s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
+  animation: animation-6 4.5s var(--delay) infinite cubic-bezier(0.165, 0.84, 0.44, 1);    
 }
 
 
-@keyframes ans-top-to-bottom{
+@keyframes animation-top-to-bottom{
   0%,20%{
         transform: translateY(0);
   }
   40%,60%{
-        transform: translateY(-12vw);
+        transform: translateY(-30px);
 
   }
 }
 
-@keyframes ans-top-to-bottom-rotateY{
+@keyframes animation-top-to-bottom-rotateY{
   0%,20%{
         transform: translateY(0);
   }
   40%,60%{
-        transform: translateY(-12vw) rotateY(360deg);
+        transform: translateY(-30px) rotateY(360deg);
 
   }
 }
 
-@keyframes ans-top-to-bottom-rotateX{
+@keyframes animation-top-to-bottom-rotateX{
   0%,20%{
         transform: translateY(0);
   }
   40%,60%{
-        transform: translateY(-12vw) rotateX(360deg);
+        transform: translateY(-30px) rotateX(360deg);
   }
 }
 
-@keyframes ans-top-to-bottom-rotate{
+@keyframes animation-top-to-bottom-rotate{
   0%,20%{
         transform: translateY(0);
   }
   40%,60%{
-        transform: translateY(-12vw) rotate(360deg);
+        transform: translateY(-30px) rotate(360deg);
   }
 }
 
-@keyframes ans-5{
+@keyframes animation-5{
   0%,20%{
         transform: translateY(0);
   }
@@ -1100,7 +1163,7 @@ img {
   }
 
   50%,70%{
-        transform: translateY(-12vw) rotate(360deg);
+        transform: translateY(-30px) rotate(360deg);
   }
 
   80%{
@@ -1108,17 +1171,31 @@ img {
   }
 }
 
-@keyframes ans-6{
+@keyframes animation-6{
   0%,20%{
         transform: translateY(0);
   }
 
   35%{
-        transform: translateY(-12vw) scale(1.4);
-  }
+    transform: translateY(-120px) scale(1.4);
+
+    @include useScreen("mobile-xl") {
+        transform: translateY(-80px) scale(1.4);
+      }
+      @include useScreen("tablet-sm") {
+        transform: translateY(-50px) scale(1.4);
+      }   
+    }
 
   50%,70%{
-        transform: translateY(-12vw); 
+        transform: translateY(-120px); 
+
+        @include useScreen("mobile-xl") {
+          transform: translateY(-80px) scale(1.4);
+        }
+        @include useScreen("tablet-sm") {
+          transform: translateY(-50px) scale(1.4);
+        }   
   }
 
   85%{
@@ -1137,4 +1214,8 @@ img {
 .pdf-view{
   width: 70vw;
   height: 80vh;
+}
+
+.width-70vw{
+  width: 70vw;
 }

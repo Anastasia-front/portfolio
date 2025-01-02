@@ -77,48 +77,6 @@
     @include useScreen("mobile-xl") {
       align-items: flex-start;
     }
-
-    h2 {
-      &.block, &.inline-block, &.accent-text, span {
-        display: flex;
-        flex-direction: row;
-        font-size: var(--font-size--2);
-        @include hero-content(var(--color--light-blue-2), var(--color--light-blue-3), var(--font-weight--normal-2));
-      }
-    }
-
-    h1 {
-      &.block, &.inline-block, &.accent-text, span {
-        display: flex;
-        flex-direction: row;
-        font-size: var(--font-size--1);
-        @include hero-content(var(--color--light-blue-3), var(--color--light-blue-4), var(--font-weight--bold), 3rem, uppercase);
-      }
-    }
-
-    h4 {
-      &.block, &.inline-block, &.accent-text, span {
-        display: flex;
-        flex-direction: row;
-        align-self: flex-start;
-        font-size: var(--font-size--4);
-        @include hero-content(transparent, var(--color--blue-grey-2), normal);
-      }
-      
-    }
-
-    p {
-      margin-bottom: 2rem;
-      &.block, &.inline-block, &.accent-text, span {
-        display: flex;
-        flex-direction: row;
-        color: var(--color--orange-2);
-        font-size: var(--font-size--6);
-        @include useScreen("tablet-sm") {
-          max-width: 60%;
-        }
-      }
-    }
   }
 
   &-image {
@@ -200,6 +158,7 @@
 
   &-buttons {
     @include flex(column, center, center);
+    margin-top: 2rem;
     gap: 1rem;
     align-self: center;
 

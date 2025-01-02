@@ -107,14 +107,14 @@ export function Form() {
   return (
     <motion.form
       onSubmit={handleSubmit(onSubmit)}
-      className="contact__form"
+      className="contacts__form"
       method="POST"
       variants={opacityVariants("first")}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0 }}
     >
-      <div className="contact__inputs">
+      <div className="contacts__inputs">
         <InputField
           label={email}
           type="email"
@@ -142,7 +142,7 @@ export function Form() {
       />
       <button
         type="submit"
-        className={`contact__submit ${buttonClasses}`}
+        className={`contacts__submit ${buttonClasses}`}
         disabled={loading || formStatus === "error" || formStatus === "success"}
         aria-label={b("submit")}
       >

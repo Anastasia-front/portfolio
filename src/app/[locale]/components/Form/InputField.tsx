@@ -31,20 +31,20 @@ export function InputField({
   const errorMessage =
     (type === "text" &&
       (formModal.isOpen
-        ? "contact__input-error contact__input-error-text contact__input-error-text-modal"
-        : "contact__input-error contact__input-error-text")) ||
+        ? "contacts__input-error contacts__input-error-text contacts__input-error-text-modal"
+        : "contacts__input-error contacts__input-error-text")) ||
     (type === "email" &&
       (formModal.isOpen
-        ? "contact__input-error contact__input-error-email contact__input-error-email-modal"
-        : "contact__input-error contact__input-error-email")) ||
+        ? "contacts__input-error contacts__input-error-email contacts__input-error-email-modal"
+        : "contacts__input-error contacts__input-error-email")) ||
     (type === "textarea" &&
       (formModal.isOpen
-        ? "contact__input-error contact__input-error-textfield contact__input-error-textfield-modal"
-        : "contact__input-error contact__input-error-textfield")) ||
+        ? "contacts__input-error contacts__input-error-textfield contacts__input-error-textfield-modal"
+        : "contacts__input-error contacts__input-error-textfield")) ||
     "";
 
   return (
-    <div className="contact__input-block">
+    <div className="contacts__input-block">
       <label htmlFor={name} className="label">
         {label}
       </label>
@@ -53,7 +53,7 @@ export function InputField({
         <textarea
           id={name}
           {...register("message")}
-          className={`${errors.message ? "text-red" : ""} contact__textfield`}
+          className={`${errors.message ? "text-red" : ""} contacts__textfield`}
           placeholder={placeholder}
           inputMode="text"
         ></textarea>
@@ -62,7 +62,7 @@ export function InputField({
           id={name}
           {...register("email")}
           type={type}
-          className={`${errors.email ? "text-red" : ""} contact__input`}
+          className={`${errors.email ? "text-red" : ""} contacts__input`}
           placeholder={placeholder}
           autoComplete="true"
           inputMode="email"
@@ -72,7 +72,7 @@ export function InputField({
           id={name}
           {...register("subject")}
           type={type}
-          className={`${errors.subject ? "text-red" : ""} contact__input`}
+          className={`${errors.subject ? "text-red" : ""} contacts__input`}
           placeholder={placeholder}
           autoComplete="true"
           inputMode="text"
