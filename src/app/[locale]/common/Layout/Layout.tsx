@@ -1,19 +1,20 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import { ContentIndicator, Footer, Header, Settings } from "@/common";
-import { FormPortal } from "@/components";
+import { FormPortal, PreLoader } from "@/components";
 
 export function Layout(props: any) {
-  // const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoaded(true);
-  //   }, 2000);
-  // }, [loaded]);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 2000);
+  }, [loaded]);
 
-  // return loaded ? (
-  return (
+  return loaded ? (
     <>
       <Header />
       <FormPortal />
@@ -22,8 +23,7 @@ export function Layout(props: any) {
       <Settings />
       <ContentIndicator />
     </>
+  ) : (
+    <PreLoader />
   );
-  // ) : (
-  //   <PreLoader />
-  // );
 }

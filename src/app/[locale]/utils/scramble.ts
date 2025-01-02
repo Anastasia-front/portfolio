@@ -1,5 +1,4 @@
 // Check if an element is visible in viewport
-
 function inViewport(element: Node | Element | null) {
   if (element instanceof Element) {
     const rect = element.getBoundingClientRect();
@@ -12,11 +11,11 @@ function inViewport(element: Node | Element | null) {
   }
 }
 
-//  Generates a random word
-function jumble(textLen: number) {
+// Generates a random word
+function jumble(textLength: number) {
   let generated = "";
   const randomChar = () => String.fromCharCode(scramble.random(33, 126));
-  for (let i = 0; i < textLen; i++) generated += randomChar();
+  for (let i = 0; i < textLength; i++) generated += randomChar();
   return generated;
 }
 
@@ -26,7 +25,7 @@ function decode(original: string, decodeLen: number) {
   return newText + jumble(original.length - decodeLen);
 }
 
-// Returns decoded letters corresponding to the length given
+// Handles text scrambling for an element
 function disorder(element: Node | Element | null) {
   const original = element && element.textContent;
   const totalChars = original ? original.length : 0;
@@ -35,13 +34,13 @@ function disorder(element: Node | Element | null) {
 
   let jumbler = setInterval(execute, scramble.interval);
   let running = true;
+
   return {
     original,
     start: () => {
-      if (!running) {
-        running = true;
-        jumbler = setInterval(execute, scramble.interval);
-      } else throw new Error("Instance is already running!");
+      if (running) return;
+      running = true;
+      jumbler = setInterval(execute, scramble.interval);
     },
     stop: () => {
       if (!running) return;
@@ -51,86 +50,59 @@ function disorder(element: Node | Element | null) {
   };
 }
 
-// Scrambles and decode a list of elements in succession
-function successive(elements: Node[] | Element[]) {
-  const next = Array.from(elements).map((el) => scramble(el));
-  const execute = (index: number) => {
-    if (index >= next.length) return;
-    function check() {
-      if (index && next) {
-        if (next[index]?.finished?.()) execute(index + 1);
-      } else setTimeout(check, 1000);
-    }
-    next[index]?.run?.();
-    setTimeout(check, 1000);
-  };
-  return {
-    run: () => execute(0),
-  };
-}
-
-// Scrambles an element content and rewrite it one by one
+// Scrambles an element content and rewrites it all at once
 function scramble(element: Node | Element | null, args?: any) {
   if (element == null) return;
-  if (element instanceof NodeList) {
-    const disarray = Array.from(element).map(
-      (x) => scramble(x) || { run: () => {} }
-    );
-    const executed = Array(element.length).fill(false);
 
-    const events = ["load", "scroll"];
-    for (let i = 0; i < element.length; i++) {
-      for (const ev of events) {
-        window.addEventListener(ev, function check() {
-          if (executed[i]) window.removeEventListener(ev, check);
-          if (!executed[i] && inViewport(element[i])) {
-            executed[i] = true;
-            if (disarray[i]?.run) {
-              disarray[i].run?.();
-            }
-          }
-        });
-      }
-    }
-    return {
-      status: () => executed.every((x) => x),
-    };
-  } else if (element instanceof HTMLElement) {
+  if (element instanceof HTMLElement) {
     let executed = false;
-    let letterIdx = 0;
-    let original;
-
-    if (args === undefined) original = element.textContent;
-    else original = args.original;
-
+    const original = args?.original || element.textContent || "";
     const totalChars = original.length;
+
     const runner = disorder(element);
 
-    let timer: ReturnType<typeof setInterval> | undefined;
-    const iterateLetters = () => {
-      clearInterval(timer);
-      timer = setInterval(() => {
-        if (letterIdx >= totalChars) clearInterval(timer);
-        element.textContent = decode(original, letterIdx);
-      }, scramble.interval);
-      if (letterIdx++ >= totalChars)
-        clearTimeout(iterateLetters as unknown as number);
-      else setTimeout(iterateLetters, 432);
+    const revealAfterDelay = () => {
+      runner.stop();
+      setTimeout(() => {
+        element.textContent = decode(original, totalChars);
+      }, 2000);
     };
+
     return {
-      finished: () => letterIdx >= totalChars,
+      finished: () => executed,
       run: () => {
         if (executed) return;
         executed = true;
-        runner.stop();
-        iterateLetters();
+        revealAfterDelay();
       },
       worker: runner,
     };
   }
 }
 
-scramble.interval = 42;
+// Runs scrambles successively on multiple elements
+function successive(elements: Node[] | Element[]) {
+  const next = Array.from(elements).map((el) => scramble(el));
+  const execute = (index: number) => {
+    if (index >= next.length) return;
+    function check() {
+      if (index < next.length && next[index]?.finished?.()) {
+        execute(index + 1);
+      } else {
+        setTimeout(check, 100);
+      }
+    }
+    if (next[index]) {
+      next[index].run();
+      setTimeout(check, 100);
+    }
+  };
+  return {
+    run: () => execute(0),
+  };
+}
+
+scramble.interval = 100;
 scramble.disorder = disorder;
 scramble.successive = successive;
 
