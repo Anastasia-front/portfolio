@@ -1,2 +1,2 @@
 export * from "./GlobalProviders";
-export * from './ModalProvider'
+export * from "./ModalProvider";
