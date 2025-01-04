@@ -6,6 +6,7 @@ export type TextAnimationType =
   | "animation-5"
   | "animation-6";
 
+
 export const textAnimation = (
   element: HTMLElement | null,
   text: string,
@@ -36,9 +37,21 @@ export const textAnimation = (
 
   const colors = theme === "dark" ? colorsForDarkTheme : colorsForLightTheme;
 
+  const calculateResponsiveTransform = (): number => {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1110) return -60;
+    if (screenWidth >= 600) return -80;
+    if (screenWidth >= 410) return -110;
+    if (screenWidth >= 380) return -130;
+    return -130; 
+  };
+
   const createLetterElements = (char: string, diff: number) => {
     const elementsLength = 8;
     const fragment = document.createDocumentFragment();
+    const transformValue = calculateResponsiveTransform();
+
     for (let i = 0; i < elementsLength; i++) {
       const delay = (elementsLength - i + 1) / 10 + diff;
       const span = document.createElement("span");
@@ -46,6 +59,7 @@ export const textAnimation = (
       span.textContent = char;
       span.style.setProperty("--delay", `${delay}s`);
       span.style.setProperty("color", colors[i] || "#000");
+      span.style.setProperty("--translate-y", `${transformValue}px`);
       fragment.appendChild(span);
     }
     return fragment;
@@ -59,7 +73,7 @@ export const textAnimation = (
 
     for (const char of text) {
       const wrapper = document.createElement("div");
-      wrapper.className = "letter-wrapper";
+      wrapper.className = "letter-wrapper letter-wrapper__fancy";
 
       const letterElements = createLetterElements(char, diff);
       wrapper.appendChild(letterElements);
@@ -70,13 +84,6 @@ export const textAnimation = (
   };
 
   applyAnimation();
+
+  window.addEventListener("resize", applyAnimation);
 };
-
-// usage
-// const descriptionRef = useRef<HTMLDivElement | null>(null);
-
-// useEffect(() => {
-//   textAnimation(descriptionRef.current, i("description"), "animation-5");
-// }, []);
-
-// <p className="accent-text" ref={descriptionRef}>

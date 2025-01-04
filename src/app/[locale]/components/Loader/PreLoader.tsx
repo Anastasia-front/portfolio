@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
-import scramble from "@/utils/scramble";
+import { scramble } from "@/utils";
 
 export function PreLoader() {
   const [load, setLoad] = useState<number>(0);
@@ -12,7 +12,7 @@ export function PreLoader() {
   const loader = document.getElementById("scramble");
 
   const scrambled = scramble(loader);
-    scrambled?.run?.()
+  scrambled?.run?.();
 
   useEffect(() => {
     const timerID = setInterval(() => {

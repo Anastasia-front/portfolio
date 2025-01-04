@@ -50,8 +50,30 @@ function disorder(element: Node | Element | null) {
   };
 }
 
+// Runs scrambles successively on multiple elements
+function successive(elements: Node[] | Element[]) {
+  const next = Array.from(elements).map((el) => scramble(el));
+  const execute = (index: number) => {
+    if (index >= next.length) return;
+    function check() {
+      if (index < next.length && next[index]?.finished?.()) {
+        execute(index + 1);
+      } else {
+        setTimeout(check, 100);
+      }
+    }
+    if (next && next[index]) {
+      next[index].run();
+      setTimeout(check, 100);
+    }
+  };
+  return {
+    run: () => execute(0),
+  };
+}
+
 // Scrambles an element content and rewrites it all at once
-function scramble(element: Node | Element | null, args?: any) {
+export function scramble(element: Node | Element | null, args?: any) {
   if (element == null) return;
 
   if (element instanceof HTMLElement) {
@@ -80,33 +102,9 @@ function scramble(element: Node | Element | null, args?: any) {
   }
 }
 
-// Runs scrambles successively on multiple elements
-function successive(elements: Node[] | Element[]) {
-  const next = Array.from(elements).map((el) => scramble(el));
-  const execute = (index: number) => {
-    if (index >= next.length) return;
-    function check() {
-      if (index < next.length && next[index]?.finished?.()) {
-        execute(index + 1);
-      } else {
-        setTimeout(check, 100);
-      }
-    }
-    if (next[index]) {
-      next[index].run();
-      setTimeout(check, 100);
-    }
-  };
-  return {
-    run: () => execute(0),
-  };
-}
-
-scramble.interval = 100;
+scramble.interval = 10;
 scramble.disorder = disorder;
 scramble.successive = successive;
 
 scramble.random = (min: number, max: number) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
-
-export default scramble;
