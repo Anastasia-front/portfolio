@@ -527,11 +527,11 @@ img {
       }
       &::after {
         top: 0;
-        transform: rotate(45deg);
+    transform: rotate(45deg);
       }
       &::before {
         top: 0%;
-        transform: rotate(-45deg);
+    transform: rotate(-45deg);
       }
     }
   }
@@ -1070,10 +1070,15 @@ p {
 
 // text animation
 .letter-wrapper{
-  font-size: 30px;
-  letter-spacing:20px;
   position: relative;
   pointer-events: none;
+  
+  &__fancy{
+    letter-spacing: 10px;
+    @include useScreen('mobile-lg'){
+      letter-spacing: 20px;
+    }
+  }
 }
 
 .letter{
@@ -1081,6 +1086,14 @@ p {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.scale{
+  transform: scaleY(1.3);
+}
+
+.visibility{
+  visibility: visible !important;
 }
 
 .letter:last-child{
@@ -1117,89 +1130,75 @@ p {
 
 @keyframes animation-top-to-bottom{
   0%,20%{
-        transform: translateY(0);
+    transform: translateY(0);
   }
   40%,60%{
-        transform: translateY(-30px);
+    transform: translateY(-30px);
 
   }
 }
 
 @keyframes animation-top-to-bottom-rotateY{
   0%,20%{
-        transform: translateY(0);
+    transform: translateY(0);
   }
   40%,60%{
-        transform: translateY(-30px) rotateY(360deg);
+    transform: translateY(-30px) rotateY(360deg);
 
   }
 }
 
 @keyframes animation-top-to-bottom-rotateX{
   0%,20%{
-        transform: translateY(0);
+    transform: translateY(0);
   }
   40%,60%{
-        transform: translateY(-30px) rotateX(360deg);
+    transform: translateY(-30px) rotateX(360deg);
   }
 }
 
 @keyframes animation-top-to-bottom-rotate{
   0%,20%{
-        transform: translateY(0);
+    transform: translateY(0);
   }
   40%,60%{
-        transform: translateY(-30px) rotate(360deg);
+    transform: translateY(-30px) rotate(360deg);
   }
 }
 
 @keyframes animation-5{
   0%,20%{
-        transform: translateY(0);
+    transform: translateY(0);
   }
 
   35%{
-        transform:skewX(100deg)
+    transform:skewX(100deg)
   }
 
   50%,70%{
-        transform: translateY(-30px) rotate(360deg);
+    transform: translateY(-30px) rotate(360deg);
   }
 
   80%{
-        transform:skewX(100deg)
+    transform:skewX(100deg)
   }
 }
 
-@keyframes animation-6{
-  0%,20%{
-        transform: translateY(0);
+@keyframes animation-6 {
+  0%, 20% {
+    transform: translateY(0);
   }
 
-  35%{
-    transform: translateY(-120px) scale(1.4);
-
-    @include useScreen("mobile-xl") {
-        transform: translateY(-80px) scale(1.4);
-      }
-      @include useScreen("tablet-sm") {
-        transform: translateY(-50px) scale(1.4);
-      }   
-    }
-
-  50%,70%{
-        transform: translateY(-120px); 
-
-        @include useScreen("mobile-xl") {
-          transform: translateY(-80px) scale(1.4);
-        }
-        @include useScreen("tablet-sm") {
-          transform: translateY(-50px) scale(1.4);
-        }   
+  35% {
+    transform: translateY(var(--translate-y)) scale(1.4);
   }
 
-  85%{
-        transform: scale(1.4);
+  50%, 70% {
+    transform: translateY(var(--translate-y)) scale(1.4);
+  }
+
+  85% {
+    transform: scale(1.4);
   }
 }
 
