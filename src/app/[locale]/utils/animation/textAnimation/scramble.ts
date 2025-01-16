@@ -63,7 +63,7 @@ function successive(elements: Node[] | Element[]) {
       }
     }
     if (next && next[index]) {
-      next[index].run();
+      next[index].run?.();
       setTimeout(check, 100);
     }
   };
