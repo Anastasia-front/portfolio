@@ -699,7 +699,7 @@ export const projectsEnglishLang: Project[] = [
       "I needed a site where all my links to social networking pages and the necessary resources for contacting me were collected",
     solution: "I have created a corresponding website",
     links: {
-      website: "https://instagram-header-link.netlify.app/",
+      website: "https://cloud-sky-with-links.netlify.app/",
       github: "https://github.com/Anastasia-front/instagram-link",
     },
     content: {
@@ -1512,7 +1512,7 @@ export const projectsUkrainianLang: Project[] = [
       "Мені знадобився сайт, де були б зібрані всі мої посилання на сторінки в соціальних мережах та необхідні ресурси для зв'язку зі мною",
     solution: "Я створила відповідний веб-сайт",
     links: {
-      website: "https://instagram-header-link.netlify.app/",
+      website: "https://cloud-sky-with-links.netlify.app/",
       github: "https://github.com/Anastasia-front/instagram-link",
     },
     content: {
