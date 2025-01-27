@@ -304,6 +304,10 @@
   &__farewell{
     @include flex(column, center, center);
     gap: 12px;
+
+    p{
+      justify-content: center
+    }
   }
 }
 

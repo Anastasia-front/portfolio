@@ -1027,17 +1027,8 @@ img {
   height: fit-content;
 }
 
-h2 {
-  &.accent-text {
-    display: flex;
-    flex-direction: row;
-    font-size: var(--font-size--2);
-    @include hero-content(var(--color--light-blue-2), var(--color--light-blue-3), var(--font-weight--normal-2));
-  }
-}
-
 h1 {
-  &.accent-text {
+  &.accent-text, &.block, &.inline-block, span {
     display: flex;
     flex-direction: row;
     font-size: var(--font-size--1);
@@ -1045,8 +1036,17 @@ h1 {
   }
 }
 
-h4 {
-  &.accent-text {
+h2 {
+  &.accent-text, &.block, &.inline-block, span {
+    display: flex;
+    flex-direction: row;
+    font-size: var(--font-size--2);
+    @include hero-content(var(--color--light-blue-2), var(--color--light-blue-3), var(--font-weight--normal-2));
+  }
+}
+
+h5 {
+  &.accent-text, &.block, &.inline-block, span {
     display: flex;
     flex-direction: row;
     align-self: flex-start;
@@ -1057,12 +1057,14 @@ h4 {
 }
 
 p {
-  &.accent-text {
-    display: flex;
-    flex-direction: row;
+  &.accent-text, &.block, &.inline-block, span {
+    @include flex(row, flex-start, flex-start);
     color: var(--color--orange-2);
     font-size: var(--font-size--6);
+    flex-wrap: wrap;
+
     @include useScreen("tablet-sm") {
+      width: 71%;
       max-width: 60%;
     }
   }

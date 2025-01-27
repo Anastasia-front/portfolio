@@ -103,10 +103,15 @@
     &__title {
       width: 70%;
       padding: 2rem 1rem 0 1rem;
-      line-height: 2rem;
       text-align: justify;
       text-align: center;
-      letter-spacing: 0.07rem;
+
+      span{
+        line-height: 2rem;
+        letter-spacing: 0.07rem;
+        font-size: inherit;
+        font-weight: inherit;
+      }
     }
 
     &__subtitle {
