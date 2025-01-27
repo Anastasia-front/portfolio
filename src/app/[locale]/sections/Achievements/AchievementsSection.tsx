@@ -13,7 +13,7 @@ import Image, { StaticImageData } from "next/image";
 
 import { motion } from "framer-motion";
 
-import { PortalModal } from "@/components";
+import { AnimatedText, PortalModal } from "@/components";
 import { useGlobalContext } from "@/context";
 import { titleVariants } from "@/utils";
 
@@ -68,15 +68,12 @@ export default function AchievementsSection() {
       >
         {a("title.main")}
       </motion.h2>
-      <motion.h3
+      <AnimatedText
+        variant="character"
+        text={t("confirm")}
         className={`about-achievements__title ${franklin.className}`}
-        variants={titleVariants("second")}
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        {t("confirm")}
-      </motion.h3>
+        el="h3"
+      />
       <motion.h4
         className={`about-achievements__subtitle ${source.className}`}
         variants={titleVariants("second")}
@@ -131,15 +128,12 @@ export default function AchievementsSection() {
           <span className="block-hint__prompt"> {h("hint")}</span>
         </div>
       </motion.div>
-      <motion.h4
+      <AnimatedText
+        variant="character"
+        text={t("github")}
         className={`about-achievements__title ${franklin.className}`}
-        variants={titleVariants("second")}
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        {t("github")}
-      </motion.h4>
+        el="h4"
+      />
       <motion.h4
         className={`about-achievements__subtitle ${source.className}`}
         variants={titleVariants("second")}

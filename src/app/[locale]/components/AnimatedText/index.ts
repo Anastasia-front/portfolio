@@ -1,2 +1,1 @@
-export * from './AnimatedTextCharacter'
-export * from './AnimatedTextWord'
+export * from './AnimatedText'

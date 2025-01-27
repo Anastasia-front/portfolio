@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import decoration from "@/assets/images/hero/decoration.webp";
 import hero from "@/assets/images/hero/hero.webp";
 
-import { ButtonScroll } from "@/components";
+import { AnimatedText, ButtonScroll } from "@/components";
 import { useScreenQuery } from "@/hooks";
 import { opacityVariants } from "@/utils";
 
@@ -40,13 +40,29 @@ export default function Hero() {
             <span className="hero-blur"></span>
             <span className="hero-blur"></span>
             <div className="hero-headings">
-              <h4 className="accent-text">{i("subtitle")}</h4>
-              <h2 className="accent-text">{t("name")}</h2>
-              <h1 className={`${oswald.className} accent-text`}>
-                {t("position")}
-              </h1>
+              <AnimatedText
+                variant="word"
+                once={false}
+                text={i("subtitle")}
+                className="accent-text"
+                el="h5"
+              />
+              <AnimatedText
+                variant="word"
+                once={false}
+                text={t("name")}
+                className="accent-text"
+                el="h2"
+              />
+              <AnimatedText
+                variant="word"
+                once={false}
+                text={t("position")}
+                el="h1"
+                className={`${oswald.className} accent-text`}
+              />
             </div>
-            <p className="accent-text">{i("description")}</p>
+            <p className="accent-text skeleton-text">{i("description")}</p>
             <div className="hero-buttons">
               <ButtonScroll href="features" text={b("hero")} />
               <ButtonScroll href="tools" text={b("tools")} />

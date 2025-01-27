@@ -2,7 +2,7 @@
 
 import { memo, useEffect, useRef } from "react";
 
-import { Variant, motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 interface Props {
   text: string | string[];
@@ -10,23 +10,21 @@ interface Props {
   className?: string;
   once?: boolean;
   repeatDelay?: number;
-  animation?: {
-    hidden: Variant;
-    visible: Variant;
-  };
+  variant: "word" | "character";
 }
 
-export const AnimatedTextWord = memo(function AnimatedTextWord({
+export const AnimatedText = memo(function AnimatedText({
   text,
   el: Wrapper = "p",
   className,
-  once = false,
+  once = true,
   repeatDelay,
+  variant,
 }: Props) {
   const controls = useAnimation();
   const textArray = Array.isArray(text) ? text : [text];
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: once, amount: 0.5 });
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
@@ -61,6 +59,7 @@ export const AnimatedTextWord = memo(function AnimatedTextWord({
     visible: {
       opacity: 1,
       x: 0,
+      y: 0,
       transition: {
         type: "spring",
         damping: 12,
@@ -69,7 +68,8 @@ export const AnimatedTextWord = memo(function AnimatedTextWord({
     },
     hidden: {
       opacity: 0,
-      x: 20,
+      x: -20,
+      y: 10,
       transition: {
         type: "spring",
         damping: 12,
@@ -89,7 +89,7 @@ export const AnimatedTextWord = memo(function AnimatedTextWord({
           hidden: { opacity: 0 },
           visible: (i = 1) => ({
             opacity: 1,
-            transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
+            transition: { staggerChildren: 0.1, delayChildren: 0.04 * i },
           }),
         }}
         aria-hidden
@@ -97,13 +97,25 @@ export const AnimatedTextWord = memo(function AnimatedTextWord({
         {textArray.map((line, lineIndex) => (
           <span className="block" key={`${line}-${lineIndex}`}>
             {line.split(" ").map((word, wordIndex) => (
-              <span key={`${word}-${wordIndex}`}>
-                <motion.span
-                  className="inline-block"
-                  variants={createAnimation()}
-                >
-                  {word}
-                </motion.span>
+              <span className="inline-block" key={`${word}-${wordIndex}`}>
+                {variant === "word" ? (
+                  <motion.span
+                    className="inline-block"
+                    variants={createAnimation()}
+                  >
+                    {word}
+                  </motion.span>
+                ) : (
+                  word.split("").map((char, charIndex) => (
+                    <motion.span
+                      key={`${char}-${charIndex}`}
+                      className="inline-block"
+                      variants={createAnimation()}
+                    >
+                      {char}
+                    </motion.span>
+                  ))
+                )}
                 <span className="inline-block">&nbsp;</span>
               </span>
             ))}
