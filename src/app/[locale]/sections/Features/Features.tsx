@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
 import { BsInfoCircle } from "react-icons/bs";
 
 import { useTranslations } from "next-intl";
@@ -10,7 +12,7 @@ import { motion } from "framer-motion";
 import { ButtonLink } from "@/components";
 import { menuItems, threeKeys } from "@/constants";
 import { useScreenQuery } from "@/hooks";
-import { opacityVariants } from "@/utils";
+import { opacityVariants, wave } from "@/utils";
 
 export default function Features() {
   const i = useTranslations("home.features");
@@ -18,6 +20,11 @@ export default function Features() {
   const a = useTranslations("alt.decoration");
 
   const { isScreenTabletSm } = useScreenQuery();
+
+  const waveRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    wave(waveRef.current, i("title"));
+  }, [i]);
 
   return (
     <motion.section
@@ -30,7 +37,7 @@ export default function Features() {
     >
       <div className="features container">
         <div className="section-header">
-          <h2>{i("title")}</h2>
+          <h2 ref={waveRef}>{i("title")}</h2>
           <ButtonLink text={b("features")} href={menuItems[3].url} />
         </div>
         <p className="block-hint  block-hint__for-one block-hint__self-start">

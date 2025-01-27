@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
 import { BsFillInfoCircleFill, BsFillInfoSquareFill } from "react-icons/bs";
 
 import { useTranslations } from "next-intl";
@@ -7,13 +9,18 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 import { ButtonLink } from "@/components";
-import { opacityVariants } from "@/utils";
+import { opacityVariants, wave } from "@/utils";
 
 import { Dynamic } from "./Dynamic";
 
 export default function ObjectsSection() {
   const i = useTranslations("home.3d");
   const b = useTranslations("btn");
+
+  const waveRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    wave(waveRef.current, i("heading"));
+  }, [i]);
 
   return (
     <motion.section
@@ -27,7 +34,7 @@ export default function ObjectsSection() {
       <div className="devices container">
         <div className="section-header section-header__column-reverse">
           <ButtonLink text={b("devices")} href="/skills" />
-          <h2>{i("heading")}</h2>
+          <h2 ref={waveRef}>{i("heading")}</h2>
         </div>
         <div className="block-hint block-hint__onHover">
           <p className="block-hint__prompt">
