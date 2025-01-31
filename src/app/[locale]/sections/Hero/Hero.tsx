@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import decoration from "@/assets/images/hero/decoration.webp";
 import hero from "@/assets/images/hero/hero.webp";
 
-import { AnimatedText, ButtonScroll } from "@/components";
+import { AppearedText, ButtonScroll } from "@/components";
 import { useScreenQuery } from "@/hooks";
 import { opacityVariants } from "@/utils";
 
@@ -40,25 +40,25 @@ export default function Hero() {
             <span className="hero-blur"></span>
             <span className="hero-blur"></span>
             <div className="hero-headings">
-              <AnimatedText
+              <AppearedText
                 variant="word"
                 once={false}
                 text={i("subtitle")}
                 className="accent-text"
-                el="h5"
+                tag="h5"
               />
-              <AnimatedText
+              <AppearedText
                 variant="word"
                 once={false}
                 text={t("name")}
                 className="accent-text"
-                el="h2"
+                tag="h2"
               />
-              <AnimatedText
+              <AppearedText
                 variant="word"
                 once={false}
                 text={t("position")}
-                el="h1"
+                tag="h1"
                 className={`${oswald.className} accent-text`}
               />
             </div>
