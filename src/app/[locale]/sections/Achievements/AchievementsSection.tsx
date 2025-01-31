@@ -13,7 +13,7 @@ import Image, { StaticImageData } from "next/image";
 
 import { motion } from "framer-motion";
 
-import { AnimatedText, PortalModal } from "@/components";
+import { AppearedText, PortalModal } from "@/components";
 import { useGlobalContext } from "@/context";
 import { titleVariants } from "@/utils";
 
@@ -68,11 +68,11 @@ export default function AchievementsSection() {
       >
         {a("title.main")}
       </motion.h2>
-      <AnimatedText
+      <AppearedText
         variant="character"
         text={t("confirm")}
         className={`about-achievements__title ${franklin.className}`}
-        el="h3"
+        tag="h3"
       />
       <motion.h4
         className={`about-achievements__subtitle ${source.className}`}
@@ -128,11 +128,11 @@ export default function AchievementsSection() {
           <span className="block-hint__prompt"> {h("hint")}</span>
         </div>
       </motion.div>
-      <AnimatedText
+      <AppearedText
         variant="character"
         text={t("github")}
         className={`about-achievements__title ${franklin.className}`}
-        el="h4"
+        tag="h4"
       />
       <motion.h4
         className={`about-achievements__subtitle ${source.className}`}
