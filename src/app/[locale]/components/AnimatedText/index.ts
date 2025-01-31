@@ -1,1 +1,2 @@
-export * from './AnimatedText'
+export * from "./AppearedText";
+export * from "./ScrambledText";

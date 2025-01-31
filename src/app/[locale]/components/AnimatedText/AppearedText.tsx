@@ -6,16 +6,16 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 interface Props {
   text: string | string[];
-  el?: React.ElementType;
+  tag?: React.ElementType;
   className?: string;
   once?: boolean;
   repeatDelay?: number;
   variant: "word" | "character";
 }
 
-export const AnimatedText = memo(function AnimatedText({
+export const AppearedText = memo(function AppearedText({
   text,
-  el: Wrapper = "p",
+  tag: Wrapper = "p",
   className,
   once = true,
   repeatDelay,
