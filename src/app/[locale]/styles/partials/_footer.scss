@@ -135,8 +135,11 @@
     gap: 1rem;
     position: relative;
     padding-top: 1rem;
-    color: var(--color--white);
     text-align: center;
+
+    &-text{
+      color: var(--color--orange-4);
+    }
 
     a {
       color: var(--color--light-blue-1);
@@ -209,7 +212,9 @@
   }
 
   &__bottom {
-    color: var(--color--blue-grey-2);
+    &-text{
+      color: var(--color--light-blue-4);
+    }
 
     a {
       color: var(--color--orange-3);

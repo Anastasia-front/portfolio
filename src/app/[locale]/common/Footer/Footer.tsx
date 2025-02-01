@@ -41,13 +41,13 @@ export function Footer({ title, description }: Props) {
         <Contacts location="footer" />
 
         <p className="footer__bottom">
-          <span>
+          <span className="footer__bottom-text">
             {currentMonth}, {currentYear} ©
           </span>
           <a href={CV} target="_blank" aria-label="CV">
             {t("first")} {i("first")} {i("last")}
           </a>
-          <span>
+          <span className="footer__bottom-text">
             {t("last")} {theme === "dark" ? "🧡" : "🩵"}
           </span>
         </p>
