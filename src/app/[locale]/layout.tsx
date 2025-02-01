@@ -3,7 +3,7 @@ import React, { lazy } from "react";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { Oxygen } from "next/font/google";
+import { Geologica } from "next/font/google";
 
 import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
 
@@ -19,7 +19,7 @@ import { GlobalProviders } from "./providers";
 
 import "./styles/main.scss";
 
-const oxygen = Oxygen({ subsets: ["latin"], weight: ["400"] });
+const geologica = Geologica({ subsets: ["latin"], weight: ["400"] });
 
 type Props = {
   children: React.ReactNode;
@@ -33,7 +33,7 @@ export default async function RootLayout(props: Props) {
 
   return (
     <html lang={props.params.locale} suppressHydrationWarning={true}>
-      <body className={oxygen.className}>
+      <body className={geologica.className}>
         <HydrationOverlay>
           <GlobalProviders>
             <NextIntlClientProvider

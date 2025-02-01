@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Oswald } from "next/font/google";
+import { Comfortaa } from "next/font/google";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
@@ -13,7 +13,7 @@ import { AppearedText, ButtonScroll } from "@/components";
 import { useScreenQuery } from "@/hooks";
 import { opacityVariants } from "@/utils";
 
-const oswald = Oswald({
+const comfortaa = Comfortaa({
   subsets: ["latin"],
   weight: ["600"],
 });
@@ -51,7 +51,7 @@ export default function Hero() {
                 variant="word"
                 once={false}
                 text={t("name")}
-                className="accent-text"
+                className={`${comfortaa.className} accent-text`}
                 tag="h2"
               />
               <AppearedText
@@ -59,7 +59,7 @@ export default function Hero() {
                 once={false}
                 text={t("position")}
                 tag="h1"
-                className={`${oswald.className} accent-text`}
+                className={`${comfortaa.className} accent-text`}
               />
             </div>
             <p className="accent-text skeleton-text">{i("description")}</p>
