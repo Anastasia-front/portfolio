@@ -32,11 +32,13 @@ export default function AboutPage() {
 
   const { theme } = useTheme();
   const locale = useLocale() as Locale;
+  const defaultLanguage = locale === "uk" ? locale : "en";
+
   const { isScreenTabletSm } = useScreenQuery();
 
   const folder = isScreenTabletSm ? "tablet-and-desktop" : "mobile";
 
-  const img = `/images/about/${folder}/${locale}-${theme}.webp`;
+  const img = `/images/about/${folder}/${defaultLanguage}-${theme}.webp`;
 
   // scroll animations
   const header = useRef(null);

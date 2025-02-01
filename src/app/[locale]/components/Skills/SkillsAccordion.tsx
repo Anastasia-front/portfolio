@@ -7,7 +7,11 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 import { SkillBlock } from "@/components";
-import { skillBlocksEnglish, skillBlocksUkrainian } from "@/constants";
+import {
+  skillBlocksEnglish,
+  skillBlocksNorwegian,
+  skillBlocksUkrainian,
+} from "@/constants";
 import { useKeyPress } from "@/hooks";
 import { fadeIn, opacityVariants } from "@/utils";
 
@@ -23,6 +27,8 @@ export function SkillsAccordion({ lang }: Props) {
   const skillBlocks = (() => {
     if (lang === "uk") {
       return skillBlocksUkrainian;
+    } else if (lang === "no") {
+      return skillBlocksNorwegian;
     } else {
       return skillBlocksEnglish;
     }

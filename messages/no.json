@@ -1,0 +1,383 @@
+{
+  "about": {
+    "achievements": {
+      "alt": {
+        "cabinet": {
+          "first": "Faste prestasjoner",
+          "second": "Generelle indikatorer for studietid",
+          "third": "Voksende prestasjoner"
+        },
+        "certificate": {
+          "first": "Første side av sertifikatet",
+          "second": "Andre side av sertifikatet",
+          "third": "Tredje side av sertifikatet"
+        },
+        "github": "Github oppsummert, resultater fra 2023",
+        "linkedIn": "LinkedIn oppsummert, resultater fra 2024"
+      },
+      "hint": {
+        "hidden": "* for å se nærmere på bildene i glidebryterne, klikk på dem - et modalt vindu med et forstørret bilde åpnes",
+        "img": "for å se nærmere på bildet, klikk på det - et modalt vindu med et forstørret bilde åpnes",
+        "visible": "når du holder musepekeren over eller klikker på dette elementet, vil du finne et verktøytips"
+      },
+      "title": {
+        "first": "Sertifikat",
+        "fourth": "Mine LinkedIn-statistikker for 2024",
+        "image": "bilde generert av GitHubWrapped.io",
+        "main": "Prestasjoner",
+        "pdf": "PDF generert av Cleve.ai",
+        "second": "Skjermbilder av min personlige kurskonto",
+        "third": "Min GitHub-kodeaktivitet for 2023",
+        "video": "video generert av GitHubUnwrapped.com"
+      }
+    },
+    "alt": "Om meg",
+    "confirm": "For å bekrefte mine studier på kursene og deres vellykkede gjennomføring, legger jeg ved et sertifikat og skjermbilder av fremgangen min fra min personlige kurskonto",
+    "description": "Jeg er en fullstack webutvikler med en lidenskap for å bygge vakre og funksjonelle nettsteder",
+    "features": {
+      "items": {
+        "fifth": {
+          "description": "Med min erfaring med å jobbe med mange mennesker i ulike aldersgrupper, har jeg tilegnet meg sterke kommunikasjonsevner, evnen til å løse konflikter og håndtere ulike situasjoner",
+          "number": "05",
+          "title": "Kommunikasjonsevner"
+        },
+        "first": {
+          "description": "Jeg var leder av et dansestudio for barn, grunnla mitt eget stretch-studio og jobbet på teamprosjekter som Scrum Master og Team Lead. Jeg mener dette er nok til å definere mitt nivå av organisasjon, proaktivitet og ansvarlighet",
+          "number": "01",
+          "title": "Ansvarlighet"
+        },
+        "forth": {
+          "description": "Jeg planlegger alltid tiden min og ankommer ofte tidlig til møter, arrangementer og andre forpliktelser. Jeg verdsetter både min egen og andres tid",
+          "number": "04",
+          "title": "Punktlighet"
+        },
+        "second": {
+          "description": "Jeg gjør alt så grundig som mulig og tar initiativ til å gjøre enda mer. Jeg fullfører alltid samvittighetsfullt oppgavene mine",
+          "number": "02",
+          "title": "Hardtarbeidende"
+        },
+        "seventh": {
+          "description": "Jeg er en positiv person som alltid søker det beste i hver person og situasjon",
+          "number": "07",
+          "title": "Vennlighet"
+        },
+        "sixth": {
+          "description": "Siden det er mye stress i livet, har jeg lært meg å holde fokus og jobbe effektivt i stressende situasjoner",
+          "number": "06",
+          "title": "Stressmestring"
+        },
+        "third": {
+          "description": "Når jeg møter vanskeligheter, gir jeg ikke opp. Tvert imot, utfordringer motiverer meg til å øke ferdighetene og kunnskapen min",
+          "number": "03",
+          "title": "Utholdenhet"
+        }
+      },
+      "title": "Mine egenskaper"
+    },
+    "github": "For å understreke mitt ønske om læring, forbedring av ferdigheter og selvutvikling, legger jeg til aktivitetsstatistikk for årene 2023-2024",
+    "ogImage": "/images/opengraph/en/about.webp",
+    "title": "Prysiazhna Anastasia"
+  },
+  "alt": {
+    "decoration": {
+      "contacts": "Dekorasjonsbilde av kontaktsiden",
+      "features": "Dekorasjonsbilde av kort i funksjonsseksjonen",
+      "hero": "Dekorasjonsbilde i helteseksjonen på hjemmesiden"
+    },
+    "hero": "Innholdsbilde av helteseksjonen",
+    "logo": "Logo",
+    "projects": {
+      "cover": "Bakgrunnsbilde av prosjekt",
+      "fifth": "Femte skjermbilde av prosjekt",
+      "first": "Første skjermbilde av prosjekt",
+      "fourth": "Fjerde skjermbilde av prosjekt",
+      "second": "Andre skjermbilde av prosjekt",
+      "third": "Tredje skjermbilde av prosjekt"
+    },
+    "svgLang": "Språkikon",
+    "svgTheme": "Temaikon"
+  },
+  "banner": {
+    "contact": "Hvis du er interessert i å jobbe med meg, vennligst send meg en e-post eller kontakt meg på en annen måte som passer deg"
+  },
+  "btn": {
+    "burger": "Burger-meny",
+    "close": "Lukk",
+    "contacts": "Kontakt meg",
+    "devices": "Gå til ferdigheter",
+    "features": "Gå til prosjekter",
+    "gallery": "Gå til siden om meg",
+    "hero": "Mer informasjon",
+    "settings": "Innstillinger",
+    "submit": "Send skjemadata",
+    "switcher": "Bytteknapp",
+    "tools": "Mine verktøy"
+  },
+  "contacts": {
+    "description": "Nedenfor finner du skjemaet for å sende meg en e-post, og under det finner du alle tilgjengelige måter å kontakte meg på (de er også gjentatt i bunnteksten)",
+    "farewell": {
+      "firstPart": "Jeg håper du liker nettsiden, at du trenger en utvikler som meg, så jeg venter på din",
+      "secondPart": "melding"
+    },
+    "footer": {
+      "icons": {
+        "first": {
+          "links": {
+            "first": {
+              "dataText": "Ring meg",
+              "href": "tel:+4793995244",
+              "icon": "BsFillTelephoneInboundFill",
+              "info": "+47 93-99-52-44",
+              "title": "Telefon"
+            },
+            "second": {
+              "dataText": "Send e-post",
+              "href": "mailto:prysiazhnastasia@gmail.com",
+              "icon": "BsFillEnvelopeAtFill",
+              "info": "prysiazhnastasia@gmail.com",
+              "title": "E-post"
+            },
+            "third": {
+              "dataText": "Gå til Discord",
+              "href": "https://discordapp.com/users/871679474188574730/",
+              "icon": "BsDiscord",
+              "info": "nastia0708",
+              "title": "Discord"
+            }
+          },
+          "title": "Grunnleggende måter å kontakte meg på"
+        },
+        "second": {
+          "links": {
+            "first": {
+              "dataText": "Følg på GitHub",
+              "href": "https://github.com/Anastasia-front",
+              "icon": "BsGithub",
+              "info": "Anastasia-front",
+              "title": "GitHub"
+            },
+            "second": {
+              "dataText": "Følg på LinkedIn",
+              "href": "https://www.linkedin.com/in/anastasia-prysiazhna/",
+              "icon": "BsLinkedin",
+              "info": "Anastasia Prysiazhna ( @anastasia-prysiazhna )",
+              "title": "LinkedIn"
+            },
+            "third": {
+              "dataText": "Følg på Instagram",
+              "href": "https://www.instagram.com/anastasia_prysiazhna/",
+              "icon": "BsInstagram",
+              "info": "@anastasia_prysiazhna",
+              "title": "Instagram"
+            }
+          },
+          "title": "Sosiale nettverk"
+        },
+        "third": {
+          "links": {
+            "first": {
+              "dataText": "Chat i Telegram",
+              "href": "https://t.me/anastasia_prysiazhna",
+              "icon": "BsTelegram",
+              "info": "via nummer +47 93-99-52-44 eller brukernavn @anastasia_prysiazhna",
+              "title": "Telegram"
+            },
+            "second": {
+              "dataText": "Chat i WhatsApp",
+              "href": "https://wa.me/4793995244",
+              "icon": "BsWhatsapp",
+              "info": "via telefonnummer +47 93-99-52-44",
+              "title": "WhatsApp"
+            },
+            "third": {
+              "dataText": "Chat i Viber",
+              "href": "viber://chat?number=4793995244",
+              "icon": "BsChatDotsFill",
+              "info": "via telefonnummer +47 93-99-52-44",
+              "title": "Viber"
+            }
+          },
+          "title": "Meldingsapper"
+        }
+      },
+      "title": "For å kontakte meg, klikk på lenkeikonet som passer best for deg"
+    },
+    "form": {
+      "email": {
+        "format": "Feltet må ha minst 6, maks 30 tegn og følge standardformatet",
+        "placeholder": "Skriv inn e-post",
+        "title": "E-post"
+      },
+      "message": {
+        "format": "Feltet må ha minst 6, maks 600 tegn",
+        "placeholder": "Skriv inn melding",
+        "title": "Melding"
+      },
+      "subject": {
+        "format": "Feltet må ha minst 6, maks 70 tegn",
+        "placeholder": "Skriv inn emne",
+        "title": "Emne"
+      },
+      "title": "La oss komme i kontakt"
+    },
+    "title": "Skriv til meg"
+  },
+  "error": {
+    "boundary": "Noe gikk galt. Du kan sende meg en melding om feilen - så fikser jeg den når jeg får vite om den. Prøv å laste siden på nytt :)"
+  },
+  "filters": {
+    "back": "tilbake",
+    "categories": {
+      "language": "programmeringsspråk",
+      "type": "prosjekttype"
+    },
+    "sortBy": "Sorter etter:",
+    "type": {
+      "all": "alle",
+      "backend": "backend",
+      "cli": "cli",
+      "comment": "* det er bare individuelle prosjekter hvis det ikke er en nestet meny",
+      "data": "datavitenskap",
+      "frontend": "frontend",
+      "other": "andre"
+    }
+  },
+  "home": {
+    "3d": {
+      "comment": "** nedenfor er 3D-objekter som er interaktive - du kan rotere dem, forstørre, redusere, se dem fra alle sider og gjøre hva du vil :)",
+      "commentToSubtitle": "når du holder musen over denne tekstblokken, vil andre hint vises (på en enhet uten mus må du klikke på denne teksten)",
+      "heading": "Mine enheter",
+      "hint": "*** hvis du bruker mobil, trykk utenfor for å lukke denne tekstblokken",
+      "inFuture": "2. andre - jeg vil bruke det i fremtiden",
+      "mac": "( iMac 24” )",
+      "macBook": "( MacBook Air 13″ M1, 2020 )",
+      "now": "1. første enhet jeg bruker nå",
+      "prompt": "* i blokken der 3D-objektene presenteres, bruk rullefeltet på høyre kant for å bla på siden (zoom-handlinger vil bringe objekter nærmere eller lenger unna)",
+      "subtitle": "vær oppmerksom på denne meldingen for å forstå hvordan du interagerer med neste seksjon",
+      "summary": "*** jeg håper du likte denne interaktive delen",
+      "title": "Nedenfor er verktøy for utvikling"
+    },
+    "description": "Velkommen til min porteføljeside",
+    "features": {
+      "first": {
+        "alt": "enheter",
+        "subtitle": "Se prosjekter på forskjellige enheter",
+        "svg": "enheter",
+        "text": "Utforsk en variert samling av mine kreative prosjekter, inkludert webdesign, JavaScript/TypeScript og miniprosjekter. Hvert prosjekt viser min kreativitet, sans for detaljer og lidenskap for å levere visuelt imponerende og engasjerende opplevelser",
+        "title": "Responsivt design"
+      },
+      "second": {
+        "alt": "kode",
+        "subtitle": "Utforsk koden i depotet",
+        "svg": "kode",
+        "text": "Jeg er stolt av å skrive ren, effektiv og vedlikeholdbar kode. Lær mer om mine kodestandarder og praksiser som bidrar til funksjonaliteten og ytelsen til prosjektene jeg jobber med",
+        "title": "Kodekvalitet"
+      },
+      "subtitle": "hver komponent er interaktiv, så når du klikker eller holder musen over den, vil elementet reagere - prøv og se",
+      "third": {
+        "alt": "komponent",
+        "subtitle": "Vurder den originale tilnærmingen",
+        "svg": "komponent",
+        "text": "Utforsk mine problemløsningsferdigheter og logiske tenkning. Se hvordan jeg nærmer meg utfordringer, finner innovative løsninger og tilpasser meg nye teknologier. Oppdag mitt engasjement for kontinuerlig læring og forbedring, slik at hvert prosjekt oppfyller høye kvalitetsstandarder og overgår forventningene",
+        "title": "Kreative prosjekter"
+      },
+      "title": "funksjoner"
+    },
+    "gallery": {
+      "subtitle": "dette er den siste, men ikke minst viktige delen av hjemmesiden når det gjelder interaktivitet, så jeg er sikker på at du vil like den ^_^",
+      "title": "3D-galleri"
+    },
+    "hero": {
+      "description": "Jeg elsker å lage moderne, funksjonelle og brukervennlige nettsteder. De siste 2 årene har jeg jobbet med utvikling av responsive grensesnitt og støtte for dynamiske nettsystemer. Jeg utforsker alltid nye teknologier og ser etter måter å forbedre ferdighetene mine på. Fra brukeropplevelsesdesign til arbeidsflytoptimalisering liker jeg å ta på meg utfordringer og finne de beste måtene å løse oppgaver på. Sjekk ut min 'Prosjekter'-side for å se mange av mine favorittcaser og ideer som jeg har brakt til live.",
+      "subtitle": "generell informasjon",
+      "title": {
+        "name": "Anastasia Prysiazhna",
+        "position": "Fullstack-utvikler"
+      }
+    },
+    "ogImage": "/images/opengraph/no/home.webp",
+    "title": "Hjemmeside"
+  },
+  "license": {
+    "accordion": "Bakgrunnsbilder er hentet fra nettstedet",
+    "slider": "Bilder for bildefremviseren er lastet ned fra nettstedet"
+  },
+  "loading": {
+    "load": "laster inn...",
+    "page": "side",
+    "please": "Vennligst",
+    "title": "Laster",
+    "titled": "titulert",
+    "wait": "vent"
+  },
+  "name": {
+    "first": "Anastasia",
+    "last": "Prysiazhna"
+  },
+  "nav": {
+    "about": "Om",
+    "contacts": "Kontakter",
+    "home": "Hjem",
+    "page": "side",
+    "project": "Prosjekt",
+    "projects": "Prosjekter",
+    "skills": "Ferdigheter"
+  },
+  "notFound": {
+    "description": "Den forespurte ressursen kunne ikke vises på den angitte adressen i søkefeltet",
+    "link": "Gå tilbake til hjemmesiden",
+    "title": "Dessverre, ingenting funnet"
+  },
+  "projects": {
+    "below": "Nedenfor kan du se hvordan prosjektet ser ut, slik at du ikke trenger å klikke på lenken",
+    "description": "Alle mine prosjekter er samlet her. De kan sorteres etter type eller programmeringsspråk for enkelhets skyld",
+    "emptyList": "Beklager, men det er ingen prosjekter for det valgte filteret",
+    "headers": {
+      "features": "Funksjoner",
+      "link": "Prosjektlenke",
+      "links": "Prosjektlenker",
+      "problem": "Problem",
+      "screenshots": "Skjermbilder",
+      "solution": "Løsning"
+    },
+    "links": {
+      "github": "GitHub-repository",
+      "website": "Nettside"
+    },
+    "ogImage": "/images/opengraph/no/projects.webp",
+    "title": "Prosjekter"
+  },
+  "skills": {
+    "description": "Nedenfor er de ulike teknologiene, rammeverkene og bibliotekene jeg kjenner og kan anvende. For enkelhets skyld er de gruppert og implementert ved hjelp av Akkordeon-komponenten. Hvert kort inne er interaktivt - interessant interaksjon )",
+    "ogImage": "/images/opengraph/no/skills.webp",
+    "slider": "Slik jobber jeg, og slik ser arbeidsflyten ut fra utsiden - i det minste vil jeg at det skal se slik ut :)",
+    "title": "Mine ferdigheter"
+  },
+  "switcher": {
+    "lang": {
+      "en": "Engelsk",
+      "no": "Norsk",
+      "title": "Språk",
+      "uk": "Ukrainsk"
+    },
+    "theme": {
+      "dark": "Mørk",
+      "light": "Lys",
+      "title": "Tema"
+    }
+  },
+  "text": {
+    "first": "utvikler er",
+    "last": "laget med kjærlighet"
+  },
+  "video": {
+    "firstTime": {
+      "primaryText": "Klikk her, og videoen vil spille igjen",
+      "secondaryText": "den har lyd, så du kan skru den på på enheten din"
+    },
+    "otherTimes": {
+      "primaryText": "klikk på denne blokken",
+      "secondaryText": "og videoen vil spille"
+    }
+  }
+}

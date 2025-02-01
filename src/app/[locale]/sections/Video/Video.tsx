@@ -17,8 +17,9 @@ export default function Video() {
   const { theme } = useTheme();
 
   const locale = useLocale() as Locale;
-  const video = `/video/hero/${locale}-${theme}.mp4`;
-  const poster = `/images/poster/${locale}-${theme}.webp`;
+  const defaultLanguage = locale === "uk" ? locale : "en";
+  const video = `/video/hero/${defaultLanguage}-${theme}.mp4`;
+  const poster = `/images/poster/${defaultLanguage}-${theme}.webp`;
 
   const videoRef = useRef<HTMLVideoElement>(null);
 

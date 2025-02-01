@@ -301,3 +301,54 @@ export const skillBlocksUkrainian: SkillBlock[] = [
     className: "bg2",
   },
 ];
+
+export const skillBlocksNorwegian: SkillBlock[] = [
+  {
+    id: 1,
+    type: "programming language",
+    title: "programmeringsspråk",
+    className: "bg1",
+  },
+  {
+    id: 2,
+    type: "frontend",
+    title: "frontend",
+    className: "bg2",
+  },
+  {
+    id: 3,
+    type: "backend",
+    title: "backend",
+    className: "bg3",
+  },
+  {
+    id: 4,
+    type: "styles",
+    title: "stiler",
+    className: "bg4",
+  },
+  {
+    id: 5,
+    type: "team work",
+    title: "teamarbeid",
+    className: "bg5",
+  },
+  {
+    id: 6,
+    type: "software",
+    title: "programvarer",
+    className: "bg6",
+  },
+  {
+    id: 7,
+    type: "devops",
+    title: "utvikling & drift",
+    className: "bg2",
+  },
+  {
+    id: 8,
+    type: "version control",
+    title: "versjonskontroller",
+    className: "bg7",
+  },
+];

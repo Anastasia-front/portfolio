@@ -272,3 +272,20 @@
 [data-theme="dark"] .active-filter {
   color: var(--color--light-opacity) !important;
 }
+
+.languages{
+  &-container{
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    @include flex(row, center, center);
+    gap: 1rem;
+    z-index: 110;
+    background: var(--color--white-grey);
+  }
+}
+[data-theme="dark"] .languages {
+&-container {
+  background: var(--color--blue-grey-3);
+}
+}
