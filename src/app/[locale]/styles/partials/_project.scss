@@ -56,10 +56,10 @@
       left: 0;
       width: 100%;
       max-width: 100%;
+      border-radius: var(--border-radius--lg);
 
       @include useScreen("tablet-sm") {
         height: 400px;
-        border-radius: var(--border-radius--lg);
       }
       @include useScreen("tablet-xl") {
         height: 635px;

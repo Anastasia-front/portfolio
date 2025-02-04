@@ -44,7 +44,7 @@ export function Footer({ title, description }: Props) {
           <span className="footer__bottom-text">
             {currentMonth}, {currentYear} ©
           </span>
-          <a href={CV} target="_blank" aria-label="CV">
+          <a href={CV} target="_blank" aria-label="CV" className="accent-text">
             {t("first")} {i("first")} {i("last")}
           </a>
           <span className="footer__bottom-text">

@@ -64,6 +64,9 @@
 
   &-item {
     button {
+      word-break: break-word;
+      max-width: 185px;
+
       @include useOnHover {
         color: var(--color--light-blue-2);
       }
@@ -276,16 +279,19 @@
 .languages{
   &-container{
     position: absolute;
-    right: 20px;
-    bottom: 0px;
-    @include flex(row, center, center);
-    gap: 1rem;
-    z-index: 110;
-    background: var(--color--white-grey);
+    right: 60px;
+    bottom: 0;
+
+    @include useScreen('mobile-xl'){
+      right: 65px;
+    }
   }
 }
-[data-theme="dark"] .languages {
-&-container {
-  background: var(--color--blue-grey-3);
-}
+
+.themes{
+  &-container{
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+  }
 }

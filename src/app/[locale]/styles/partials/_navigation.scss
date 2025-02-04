@@ -46,9 +46,9 @@
   gap: 1rem;
   padding: 0.3rem 0.6rem;
   border-radius: var(--border-radius--lg);
+  background: var(--color--white);
 
   &__frame {
-    background: var(--color--white);
     @include box-shadow-5(var(--color--grey-dark));
   }
 
@@ -296,7 +296,20 @@
 
   &-switchers {
     z-index: 110;
+    position: relative;
     background: var(--color--white-grey);
+
+    .languages-container{
+      position: absolute;
+      bottom: 0;      
+      right: 50px;
+    }
+
+    .themes-container{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
   }
 }
 [data-theme="dark"] .burger {
@@ -306,6 +319,10 @@
 
   &-switchers {
     background: var(--color--blue-grey-3);
+
+    .languages-container, .themes-container{
+      background: var(--color--blue-grey-3);
+    }
   }
 }
 

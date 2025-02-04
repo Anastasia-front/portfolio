@@ -35,7 +35,7 @@ export default function ErrorBoundary({ children }: Props) {
   if (errorState.hasError) {
     return (
       <main className="center">
-        <h1>{t("boundary")}</h1>
+        <h3>{t("boundary")}</h3>
         <Loader />
       </main>
     );

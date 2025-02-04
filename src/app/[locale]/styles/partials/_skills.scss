@@ -153,6 +153,7 @@
 
     &__title {
       padding: 1rem 0;
+      word-break: break-word;
       color: var(--color--white);
       font-weight: var(--font-weight--bold);
       text-align: center;
@@ -185,7 +186,7 @@
     &__overlay {
       @include flex(column, center, center);
       gap: 1rem;
-      padding: 1rem 0;
+      padding: 1rem;
       border-radius: var(--padding--sm);
 
       &-notActive {

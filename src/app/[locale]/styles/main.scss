@@ -634,6 +634,19 @@ img {
 
   &-switchers {
     background: var(--color--light-opacity);
+    position: relative;
+
+    .languages-container{
+      position: absolute;
+      bottom: 0;      
+      right: 50px;
+    }
+
+    .themes-container{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
   }
 
   &-title {
@@ -834,6 +847,14 @@ img {
   z-index: 1;
 }
 
+.margin-right-50{
+  margin-right: 50px;
+}
+
+.margin-left-50{
+  margin-left: 50px;
+}
+
 .hidden {
   display: none;
 
@@ -1029,31 +1050,28 @@ img {
 
 h1 {
   &.accent-text, &.block, &.inline-block, span {
-    display: flex;
-    flex-direction: row;
+    @include flex(row, flex-start, flex-start);
     font-size: var(--font-size--1);
-    @include hero-content(var(--color--light-blue-3), var(--color--light-blue-4), var(--font-weight--bold), 3rem, uppercase);
+    @include hero-content(var(--color--light-blue-3), 
+    var(--color--light-blue-4), var(--font-weight--bold), 3rem, uppercase);
   }
 }
 
 h2 {
   &.accent-text, &.block, &.inline-block, span {
-    display: flex;
-    flex-direction: row;
+    @include flex(row, flex-start, flex-start);
     font-size: var(--font-size--2);
-    @include hero-content(var(--color--light-blue-2), var(--color--light-blue-3), var(--font-weight--normal-2));
+    @include hero-content(var(--color--light-blue-2), 
+    var(--color--light-blue-3), var(--font-weight--normal-2));
   }
 }
 
 h5 {
   &.accent-text, &.block, &.inline-block, span {
-    display: flex;
-    flex-direction: row;
-    align-self: flex-start;
+    @include flex(row, flex-start, flex-start);
     font-size: var(--font-size--4);
-    @include hero-content(transparent, var(--color--blue-grey-2), normal);
+    @include hero-content(transparent, var(--color--blue-grey-2));
   }
-  
 }
 
 p {
@@ -1067,6 +1085,14 @@ p {
       width: 71%;
       max-width: 60%;
     }
+  }
+}
+
+a {
+  &.accent-text, &.block, &.inline-block, span {
+    @include flex(row, center, center);
+    font-size: var(--font-size--4);
+    @include hero-content( var(--color--light-blue-3), var(--color--light-blue-3));
   }
 }
 
