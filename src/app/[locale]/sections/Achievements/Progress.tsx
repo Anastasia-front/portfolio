@@ -33,9 +33,11 @@ export default function Progress() {
 
   const { theme } = useTheme();
   const locale = useLocale() as Locale;
+  const defaultLanguage = locale === "uk" ? locale : "en";
+
 
   const getAchievement = (index: number): string => {
-    return `/images/achievements/${locale}-${theme}-a${index}.webp`;
+    return `/images/achievements/${defaultLanguage}-${theme}-a${index}.webp`;
   };
 
   return (

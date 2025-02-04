@@ -231,15 +231,40 @@
       "language": "programmeringsspråk",
       "type": "prosjekttype"
     },
-    "sortBy": "Sorter etter:",
+    "categoriesBackend": {
+      "commercial": "",
+      "individual": "individuell",
+      "team": "team",
+      "test": ""
+    },
+    "categoriesData": {
+      "commercial": "",
+      "individual": "individuell",
+      "team": "team",
+      "test": ""
+    },
+    "categoriesFrontend": {
+      "commercial": "kommersiell",
+      "individual": "individuell",
+      "team": "team",
+      "test": "test"
+    },
+    "programmingLanguage": {
+      "all": "alle",
+      "js": "js",
+      "python": "python",
+      "ts": "ts"
+    },
+    "sortBy": "Sortering etter :",
+    "title": "Filtre",
     "type": {
       "all": "alle",
       "backend": "backend",
       "cli": "cli",
-      "comment": "* det er bare individuelle prosjekter hvis det ikke er en nestet meny",
-      "data": "datavitenskap",
+      "comment": "* det er kun individuelle prosjekter hvis det ikke er en underordnet meny",
+      "data": "data science",
       "frontend": "frontend",
-      "other": "andre"
+      "other": "annet"
     }
   },
   "home": {
@@ -262,14 +287,14 @@
       "first": {
         "alt": "enheter",
         "subtitle": "Se prosjekter på forskjellige enheter",
-        "svg": "enheter",
+        "svg": "devices",
         "text": "Utforsk en variert samling av mine kreative prosjekter, inkludert webdesign, JavaScript/TypeScript og miniprosjekter. Hvert prosjekt viser min kreativitet, sans for detaljer og lidenskap for å levere visuelt imponerende og engasjerende opplevelser",
         "title": "Responsivt design"
       },
       "second": {
         "alt": "kode",
         "subtitle": "Utforsk koden i depotet",
-        "svg": "kode",
+        "svg": "code",
         "text": "Jeg er stolt av å skrive ren, effektiv og vedlikeholdbar kode. Lær mer om mine kodestandarder og praksiser som bidrar til funksjonaliteten og ytelsen til prosjektene jeg jobber med",
         "title": "Kodekvalitet"
       },
@@ -277,7 +302,7 @@
       "third": {
         "alt": "komponent",
         "subtitle": "Vurder den originale tilnærmingen",
-        "svg": "komponent",
+        "svg": "component",
         "text": "Utforsk mine problemløsningsferdigheter og logiske tenkning. Se hvordan jeg nærmer meg utfordringer, finner innovative løsninger og tilpasser meg nye teknologier. Oppdag mitt engasjement for kontinuerlig læring og forbedring, slik at hvert prosjekt oppfyller høye kvalitetsstandarder og overgår forventningene",
         "title": "Kreative prosjekter"
       },
