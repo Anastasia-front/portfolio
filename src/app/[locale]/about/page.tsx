@@ -30,7 +30,7 @@ export default function AboutPage() {
   const b = useTranslations("banner");
   const i = useTranslations("about.features.items");
 
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const locale = useLocale() as Locale;
   const defaultLanguage = locale === "uk" ? locale : "en";
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
 
   const folder = isScreenTabletSm ? "tablet-and-desktop" : "mobile";
 
-  const img = `/images/about/${folder}/${defaultLanguage}-${theme}.webp`;
+  const img = `/images/about/${folder}/${defaultLanguage}-${resolvedTheme}.webp`;
 
   // scroll animations
   const header = useRef(null);

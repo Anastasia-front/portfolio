@@ -62,8 +62,8 @@ export const AppearedText = memo(function AppearedText({
       y: 0,
       transition: {
         type: "spring",
-        damping: 12,
-        stiffness: 100,
+        damping: variant === "word" ? 12 : 20,
+        stiffness: variant === "word" ? 100 : 150,
       },
     },
     hidden: {
@@ -89,7 +89,10 @@ export const AppearedText = memo(function AppearedText({
           hidden: { opacity: 0 },
           visible: (i = 1) => ({
             opacity: 1,
-            transition: { staggerChildren: 0.1, delayChildren: 0.04 * i },
+            transition: {
+              staggerChildren: variant === "word" ? 0.1 : 0.03,
+              delayChildren: variant === "word" ? 0.04 * i : 0.01 * i,
+            },
           }),
         }}
         aria-hidden
