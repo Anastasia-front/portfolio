@@ -8,10 +8,14 @@ import { usePathname, useRouter } from "next/navigation";
 import { LANGUAGES, LOCALES, type Locale } from "src/locales";
 
 import { ButtonSwitcher } from "@/components";
+import { useClickOutside } from "@/hooks";
 
 export const ButtonLanguage = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isDropdownVisible, setDropdownIsVisible] = useState(false);
+
+  const containerRef = useRef<HTMLUListElement>(null);
+  useClickOutside(containerRef, () => setDropdownIsVisible(false));
 
   const a = useTranslations("alt");
   const t = useTranslations("switcher");
@@ -40,7 +44,7 @@ export const ButtonLanguage = () => {
       setIsVisible(true);
     }, 300);
   };
-  
+
   const { flag, label } = LANGUAGES[locale];
 
   return (
@@ -51,9 +55,16 @@ export const ButtonLanguage = () => {
         icon={flag}
         onClick={toggleDisplayLanguageOptions}
         title={label}
+        className={
+          isDropdownVisible
+            ? "margin-left-50"
+            : isVisible
+            ? "visible"
+            : "invisible"
+        }
       />
       {isDropdownVisible && (
-        <ul className="languages-container container-items container-items__frame">
+        <ul className="languages-container container-items" ref={containerRef}>
           {Object.values(LANGUAGES).map(
             ({ flag, label, key }, index) =>
               key !== locale && (

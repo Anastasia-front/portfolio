@@ -14,12 +14,12 @@ export default function Video() {
 
   const f = useTranslations("video.firstTime");
   const o = useTranslations("video.otherTimes");
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   const locale = useLocale() as Locale;
   const defaultLanguage = locale === "uk" ? locale : "en";
-  const video = `/video/hero/${defaultLanguage}-${theme}.mp4`;
-  const poster = `/images/poster/${defaultLanguage}-${theme}.webp`;
+  const video = `/video/hero/${defaultLanguage}-${resolvedTheme}.mp4`;
+  const poster = `/images/poster/${defaultLanguage}-${resolvedTheme}.webp`;
 
   const videoRef = useRef<HTMLVideoElement>(null);
 

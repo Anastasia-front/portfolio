@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { ReactNode, useEffect, useState } from "react";
 
@@ -18,7 +18,7 @@ export function GlobalProviders({ children }: Props): JSX.Element {
   }, []);
 
   return mounted ? (
-    <ThemeProvider>
+    <ThemeProvider defaultTheme="system" enableSystem={true}>
       <ModalProvider>{children}</ModalProvider>
     </ThemeProvider>
   ) : (

@@ -1,27 +1,25 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 
-import Moon from "@/assets/svg/moon.svg";
-import Sun from "@/assets/svg/sun.svg";
+import { LANGUAGE_KEYS, THEMES } from "@/constants";
 
+import { useClickOutside } from "@/hooks";
 import { ButtonSwitcher } from "./ButtonSwitcher";
 
 export const ButtonTheme = () => {
-  const { theme, setTheme } = useTheme();
   const [isVisible, setIsVisible] = useState(true);
+  const [isDropdownVisible, setDropdownIsVisible] = useState(false);
+
+  const { theme, setTheme } = useTheme();
+  const containerRef = useRef<HTMLUListElement>(null);
+  useClickOutside(containerRef, () => setDropdownIsVisible(false));
 
   const a = useTranslations("alt");
   const t = useTranslations("switcher");
-
-  const icon = useMemo(() => {
-    const IconMoon = <Moon />;
-    const IconSun = <Sun />;
-    return theme === "dark" ? IconMoon : IconSun;
-  }, [theme]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -31,27 +29,64 @@ export const ButtonTheme = () => {
     }
   }, []);
 
-  const clickHandler = () => {
+  const toggleDisplayThemeOptions = () => {
+    setDropdownIsVisible(!isDropdownVisible);
+  };
+
+  const handleThemeChange = (key: LANGUAGE_KEYS) => {
     setIsVisible(false);
 
     setTimeout(() => {
       setIsVisible(true);
-      if (theme === "light") {
-        setTheme("dark");
-      } else {
-        setTheme("light");
-      }
+      setTheme(key);
     }, 300);
   };
 
+  const activeThemeAriaLabel =
+    theme === "dark"
+      ? t("theme.dark")
+      : theme === "light"
+      ? t("theme.light")
+      : t("theme.system");
+
+  const { icon, label } = theme
+    ? THEMES[theme as LANGUAGE_KEYS]
+    : THEMES["system"];
+
   return (
-    <ButtonSwitcher
-      className={isVisible ? "visible" : "invisible"}
-      alt={a("svgTheme")}
-      icon={icon}
-      onClick={clickHandler}
-      ariaLabel={t("theme.title")}
-      title={theme === "dark" ? t("theme.dark") : t("theme.light")}
-    />
+    <>
+      <ButtonSwitcher
+        alt={a("svgTheme")}
+        ariaLabel={activeThemeAriaLabel}
+        icon={icon}
+        onClick={toggleDisplayThemeOptions}
+        title={label}
+        className={
+          isDropdownVisible
+            ? "margin-right-50"
+            : isVisible
+            ? "visible"
+            : "invisible"
+        }
+      />
+      {isDropdownVisible && (
+        <ul className="themes-container container-items" ref={containerRef}>
+          {Object.values(THEMES).map(
+            ({ icon, label, key }, index) =>
+              key !== theme && (
+                <li key={index} className="theme-item">
+                  <ButtonSwitcher
+                    alt={a("svgTheme")}
+                    icon={icon}
+                    onClick={() => handleThemeChange(key)}
+                    ariaLabel={t("theme.title")}
+                    title={label}
+                  />
+                </li>
+              )
+          )}
+        </ul>
+      )}
+    </>
   );
 };

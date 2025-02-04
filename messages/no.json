@@ -388,6 +388,7 @@
     "theme": {
       "dark": "Mørk",
       "light": "Lys",
+      "system": "System",
       "title": "Tema"
     }
   },

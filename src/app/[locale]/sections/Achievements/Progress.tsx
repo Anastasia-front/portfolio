@@ -31,13 +31,13 @@ export default function Progress() {
     progressModal.open();
   };
 
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const locale = useLocale() as Locale;
   const defaultLanguage = locale === "uk" ? locale : "en";
 
 
   const getAchievement = (index: number): string => {
-    return `/images/achievements/${defaultLanguage}-${theme}-a${index}.webp`;
+    return `/images/achievements/${defaultLanguage}-${resolvedTheme}-a${index}.webp`;
   };
 
   return (

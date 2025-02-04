@@ -7,3 +7,4 @@ export * from "./projects";
 export * from "./routes";
 export * from "./screens";
 export * from "./skills";
+export * from "./themes";
