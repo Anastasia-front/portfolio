@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 
 import { gridVariants } from "@/utils";
 
+import { useClickOutside } from "@/hooks";
 import { FilterCategory } from ".";
 
 const rubik = Rubik({
@@ -42,28 +43,13 @@ export function Filters({
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [hideOverflow, setHideOverflow] = useState<string | null>(null);
-  const filtersRef = useRef<HTMLDivElement>(null);
 
   const toggleFilters = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      filtersRef.current &&
-      "contains" in filtersRef.current &&
-      !filtersRef.current.contains(event.target as Node)
-    ) {
-      setIsOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  const containerRef = useRef<HTMLDivElement>(null);
+  useClickOutside(containerRef, () => setIsOpen(false));
 
   const handleTypeSelect = (type: string) => {
     handleTypeChange(type);
@@ -110,7 +96,7 @@ export function Filters({
       initial="hidden"
       animate="visible"
       className={`dropdown-container ${rubik.className}`}
-      ref={filtersRef}
+      ref={containerRef}
     >
       <button
         type="button"
