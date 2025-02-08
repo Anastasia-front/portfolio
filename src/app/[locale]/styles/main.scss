@@ -1080,11 +1080,6 @@ p {
     color: var(--color--orange-2);
     font-size: var(--font-size--6);
     flex-wrap: wrap;
-
-    @include useScreen("tablet-sm") {
-      width: 71%;
-      max-width: 60%;
-    }
   }
 }
 
@@ -1092,7 +1087,12 @@ a {
   &.accent-text, &.block, &.inline-block, span {
     @include flex(row, center, center);
     font-size: var(--font-size--4);
-    @include hero-content( var(--color--light-blue-3), var(--color--light-blue-3));
+    @include hero-content( var(--color--light-blue-1), var(--color--light-blue-3));
+  }
+}
+[data-theme="dark"] a {
+  &.accent-text, &.block, &.inline-block, span {
+    @include hero-content( var(--color--orange-1), var(--color--orange-3));
   }
 }
 
