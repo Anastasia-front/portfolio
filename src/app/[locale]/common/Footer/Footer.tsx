@@ -22,7 +22,7 @@ export function Footer({ title, description }: Props) {
   const i = useTranslations("name");
   const t = useTranslations("text");
 
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   return (
     <footer id="footer">
@@ -48,7 +48,7 @@ export function Footer({ title, description }: Props) {
             {t("first")} {i("first")} {i("last")}
           </a>
           <span className="footer__bottom-text">
-            {t("last")} {theme === "dark" ? "🧡" : "🩵"}
+            {t("last")} {resolvedTheme === "dark" ? "🧡" : "🩵"}
           </span>
         </p>
       </motion.div>
