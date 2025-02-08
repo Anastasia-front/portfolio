@@ -285,6 +285,9 @@
     @include useScreen('mobile-xl'){
       right: 65px;
     }
+    @include useScreen('tablet-lg'){
+      right: 70px;
+    }
   }
 }
 
