@@ -543,13 +543,13 @@
 
   &-tip {
     &__first {
-      @include flex(row, center, flex-start);
+      @include flex(column, flex-start, flex-start);
       gap: 1rem;
       position: fixed;
       top: 0;
-      left: 0%;
-      width: 80%;
-      max-width: 400px;
+      right: 0;
+      width: 30%;
+      max-width: 200px;
       margin: 135px 50% 0;
       padding: 20px;
       border-radius: 7px;
@@ -573,9 +573,14 @@
         gap: 0.5rem;
         width: 100%;
         height: 100%;
-        font-size: var(--font-size--8);
+        font-size: var(--font-size--10);
         text-align: left;
         text-transform: uppercase;
+
+
+        @include useScreen("mobile-lg") {
+          font-size: var(--font-size--8);
+        }
 
         @include useScreen("tablet-sm") {
           gap: 1rem;
@@ -583,8 +588,12 @@
         }
 
         span {
-          font-size: var(--font-size--8);
+          font-size: var(--font-size--10);
           text-transform: lowercase;
+
+          @include useScreen("mobile-lg") {
+            font-size: var(--font-size--8);
+          }
 
           @include useScreen("tablet-sm") {
             font-size: var(--font-size--4);
@@ -593,8 +602,13 @@
       }
 
       svg {
-        width: 20px;
-        height: 20px;
+        width: 10px;
+        height: 10px;
+
+        @include useScreen("mobile-lg") {
+          width: 15px;
+          height: 15px;
+        }
 
         @include useScreen("tablet-sm") {
           width: 50px;
@@ -734,6 +748,11 @@
 .skeleton-text {
   opacity: 1; 
   animation: shimmer-opacity 5.5s infinite;
+
+  @include useScreen("tablet-sm") {
+    width: 71%;
+    max-width: 60%;
+  }
   }
 
   @keyframes shimmer-opacity {
