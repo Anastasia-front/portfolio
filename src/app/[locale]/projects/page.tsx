@@ -22,6 +22,11 @@ import "@/styles/partials/_projects.scss";
 const Banner = dynamic(() =>
   import("../components/Banner/Banner").then((mod) => mod.Banner)
 );
+const BeforeAfterSlider = dynamic(() =>
+  import("../components/Sliders/BeforeAfterSlider").then(
+    (mod) => mod.BeforeAfterSlider
+  )
+);
 const Dropdown = dynamic(() =>
   import("../components/Filters/Filters").then((mod) => mod.Filters)
 );
@@ -120,6 +125,7 @@ export default function ProjectsPage() {
         <Projects projects={filteredProjects} />
       )}
       <Banner text={b("contact")} button />
+      <BeforeAfterSlider />
     </main>
   );
 }

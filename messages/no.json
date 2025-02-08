@@ -370,6 +370,18 @@
       "website": "Nettside"
     },
     "ogImage": "/images/opengraph/no/projects.webp",
+    "slider": {
+      "after": {
+        "alt": "Kode fungerer",
+        "title": "Etter å ha refaktorert hele funksjonen"
+      },
+      "before": {
+        "alt": "Meme om dårlig kodepraksis",
+        "title": "Før koding starter"
+      },
+      "posterAlt": "Før/etter forhåndsvisning",
+      "title": "Min måte å lære programmering på og få lærdom fra hver feil vei \n (på en humoristisk måte)"
+    },
     "title": "Prosjekter"
   },
   "skills": {

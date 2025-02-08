@@ -375,6 +375,18 @@
       "website": "WebSite page"
     },
     "ogImage": "/images/opengraph/en/projects.webp",
+    "slider": {
+      "after": {
+        "alt": "Code works",
+        "title": "After refactoring the entire feature"
+      },
+      "before": {
+        "alt": "Mem about bad code practice",
+        "title": "Before coding starts"
+      },
+      "posterAlt": "Before/After Preview",
+      "title": "My way of learning programming and getting lessons from every wrong path \n (in a humorous way)"
+    },
     "title": "Projects"
   },
   "skills": {

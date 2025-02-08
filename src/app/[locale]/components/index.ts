@@ -12,4 +12,5 @@ export * from "./Portal";
 export * from "./Project";
 export * from "./Projects";
 export * from "./Skills";
+export * from "./Sliders";
 export * from "./Switchers";
