@@ -169,26 +169,26 @@
   }
 }
 [data-theme="dark"] .button {
-  color: var(--color--blue-grey-3);
+  color: var(--color--blue-grey-4);
   font-weight: var(--font-weight--normal-2);
   background: var(--color--light-blue-4);
 
   a {
-    color: var(--color--blue-grey-3);
+    color: var(--color--blue-grey-4);
   }
 
   @include useOnHover {
     background: var(--color--orange-2);
 
     a {
-      color: var(--color--blue-grey-3);
+      color: var(--color--blue-grey-4);
     }
   }
   @include useOnClick {
     background: var(--color--orange-1);
 
     a {
-      color: var(--color--blue-grey-3);
+      color: var(--color--blue-grey-4);
     }
   }
 

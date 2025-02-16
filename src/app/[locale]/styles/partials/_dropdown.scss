@@ -141,11 +141,12 @@
 
     &-content {
       display: none;
-      z-index: 1;
-      position: absolute;
-      top: 0;
-      right: 118px;
       padding-right: 4rem;
+      position: absolute;
+      right: 118px;
+      top: 0;
+      width: max-content;
+      z-index: 1;
 
       &__mobile {
         top: 22px;

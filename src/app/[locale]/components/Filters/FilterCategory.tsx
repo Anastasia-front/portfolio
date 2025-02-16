@@ -48,7 +48,7 @@ export function FilterCategory({
 
   return (
     <ul className="dropdown-list align-right">
-      <li className="dropdown-item back" key={111}>
+      <li className="dropdown-item back" key={"back"}>
         <button type="button" onClick={() => handleSortBy(null)}>
           <IoChevronBackOutline />
           {i("back")}
@@ -56,7 +56,11 @@ export function FilterCategory({
       </li>
       {selectedCategory === c("type")
         ? filtersAllTypes.map((type, index) => {
-            if (t(`${type}`) === "all" || t(`${type}`) === "всі") {
+            if (
+              t(`${type}`) === "all" ||
+              t(`${type}`) === "всі" ||
+              t(`${type}`) === "alle"
+            ) {
               return (
                 <li key={index} className="dropdown-item all">
                   <button
@@ -117,20 +121,18 @@ export function FilterCategory({
             // }
             else {
               return (
-                <>
-                  <li key={index} className="dropdown-item">
-                    <NestedFilter
-                      activeTypeFilter={activeTypeFilter}
-                      activeCategoryFilter={activeCategoryFilter}
-                      onSelectType={handleTypeSelect}
-                      onSelectCategory={handleCategorySelect}
-                      type={type}
-                    />
-                  </li>
+                <li key={index} className="dropdown-item">
+                  <NestedFilter
+                    activeTypeFilter={activeTypeFilter}
+                    activeCategoryFilter={activeCategoryFilter}
+                    onSelectType={handleTypeSelect}
+                    onSelectCategory={handleCategorySelect}
+                    type={type}
+                  />
                   {/* <li key={index} className="block-hint__comment">
                     <p> {t("comment")}</p>
                   </li> */}
-                </>
+                </li>
               );
             }
           })

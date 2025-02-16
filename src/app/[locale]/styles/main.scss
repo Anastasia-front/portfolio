@@ -889,8 +889,12 @@ img {
 .center {
   @include flex(column, center, center);
   gap: 1rem;
-  padding: 30vh 25vw;
+  padding: 0 25vw;
+  margin: auto 0;
   text-align: center;
+  max-height: 100vh;
+  overflow-y: hidden;
+
   &-text {
     text-align: center;
   }
