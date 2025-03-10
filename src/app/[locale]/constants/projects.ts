@@ -778,7 +778,7 @@ export const projectsEnglishLang: Project[] = [
     solution: "This project fits this need perfectly",
     links: {
       website: "https://contacts-backend-eikd.onrender.com",
-      github: "https://github.com/Anastasia-front/nodejs-first-rest-api",
+      github: "https://github.com/Anastasia-front/nodejs-phonebook-rest-api",
     },
     content: {
       description: "Backend for a phone book application",
@@ -1590,7 +1590,7 @@ export const projectsUkrainianLang: Project[] = [
     solution: "Цей проєкт ідеально підходить для цієї потреби",
     links: {
       website: "https://contacts-backend-eikd.onrender.com",
-      github: "https://github.com/Anastasia-front/nodejs-first-rest-api",
+      github: "https://github.com/Anastasia-front/nodejs-phonebook-rest-api",
     },
     content: {
       description: "Backend для додатка телефонної книги",
@@ -2407,7 +2407,7 @@ export const projectsNorwegianLang: Project[] = [
     solution: "Dette prosjektet passer perfekt for dette behovet",
     links: {
       website: "https://contacts-backend-eikd.onrender.com",
-      github: "https://github.com/Anastasia-front/nodejs-first-rest-api",
+      github: "https://github.com/Anastasia-front/nodejs-phonebook-rest-api",
     },
     content: {
       description: "Backend for en telefonbokapplikasjon",
