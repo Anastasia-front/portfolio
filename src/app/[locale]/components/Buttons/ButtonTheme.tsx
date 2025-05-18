@@ -77,9 +77,9 @@ export const ButtonTheme = () => {
                 <li key={index} className="theme-item">
                   <ButtonSwitcher
                     alt={a("svgTheme")}
+                    ariaLabel={t("theme.title")}
                     icon={icon}
                     onClick={() => handleThemeChange(key)}
-                    ariaLabel={t("theme.title")}
                     title={label}
                   />
                 </li>

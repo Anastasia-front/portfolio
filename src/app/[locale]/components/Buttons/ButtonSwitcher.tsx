@@ -5,15 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
+  alt: string;
+  ariaLabel?: string;
+  className?: string;
+  href?: string | Url;
   icon?: JSX.Element;
   imgUrl?: string;
-  className?: string;
   onClick?: () => void;
   title?: string;
   type?: "link" | "button";
-  href?: string | Url;
-  ariaLabel?: string;
-  alt: string;
 }
 
 export function ButtonSwitcher({
@@ -32,21 +32,21 @@ export function ButtonSwitcher({
   if (type === "link" && href) {
     return (
       <Link
-        href={href}
         aria-label={`${b("switcher")} ${ariaLabel}`}
-        title={title}
         className={`button-switcher ${className ? className : ""}`}
+        href={href}
         onClick={onClick}
+        title={title}
       >
         {imgUrl && (
           <Image
+            alt={alt}
+            className="button-img"
+            height={20}
             loading="eager"
             priority={true}
-            className="button-img"
             src={imgUrl}
             width={20}
-            height={20}
-            alt={alt}
           />
         )}
         {icon && icon}
@@ -55,20 +55,20 @@ export function ButtonSwitcher({
   } else {
     return (
       <button
-        title={title}
+        aria-label={`${b("switcher")} ${ariaLabel}`}
         className={`button-switcher  ${className ? className : ""}`}
         onClick={onClick}
-        aria-label={`${b("switcher")} ${ariaLabel}`}
+        title={title}
       >
         {imgUrl && (
           <Image
+            alt={alt}
+            className="button-img"
+            height={20}
             loading="eager"
             priority={true}
-            className="button-img"
             src={imgUrl}
             width={20}
-            height={20}
-            alt={alt}
           />
         )}
         {icon && icon}

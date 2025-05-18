@@ -11,7 +11,6 @@ import { ButtonSwitcher } from "@/components";
 import { useClickOutside } from "@/hooks";
 
 export const ButtonLanguage = () => {
-  const [isVisible, setIsVisible] = useState(true);
   const [isDropdownVisible, setDropdownIsVisible] = useState(false);
 
   const containerRef = useRef<HTMLUListElement>(null);
@@ -32,17 +31,17 @@ export const ButtonLanguage = () => {
   }, [locale]);
 
   const toggleDisplayLanguageOptions = () => {
-    setDropdownIsVisible(!isDropdownVisible);
+    if (!isDropdownVisible) {
+      setDropdownIsVisible(true);
+      return;
+    }
+    return;
   };
 
   const handleLocaleChange = (): void => {
-    setIsVisible(false);
     setDropdownIsVisible(false);
     document.cookie = `NEXT_LOCALE=${newLocaleRef.current}; max-age=31536000; SameSite=Lax`;
     router.refresh();
-    setTimeout(() => {
-      setIsVisible(true);
-    }, 300);
   };
 
   const { flag, label } = LANGUAGES[locale];
@@ -52,16 +51,10 @@ export const ButtonLanguage = () => {
       <ButtonSwitcher
         alt={a("svgLang")}
         ariaLabel={t("lang.title")}
+        className={isDropdownVisible ? "margin-left-50" : ""}
         icon={flag}
         onClick={toggleDisplayLanguageOptions}
         title={label}
-        className={
-          isDropdownVisible
-            ? "margin-left-50"
-            : isVisible
-            ? "visible"
-            : "invisible"
-        }
       />
       {isDropdownVisible && (
         <ul className="languages-container container-items" ref={containerRef}>
@@ -72,7 +65,6 @@ export const ButtonLanguage = () => {
                   <ButtonSwitcher
                     alt={a("svgLang")}
                     ariaLabel={t("lang.title")}
-                    className={isVisible ? "visible" : "invisible"}
                     href={pathname}
                     icon={flag}
                     onClick={handleLocaleChange}
