@@ -1,4 +1,4 @@
-**Documentation in [Ukrainian 🇺🇦](README.ua.md).**
+**Documentation in [Ukrainian 🇺🇦](README.ua.md)** and [Norwegian 🇳🇴](README.no.md)
 
 <hr/><hr/>
 
@@ -39,7 +39,7 @@ The project was implemented using the following technologies and libraries:
 -  resource loading is optimized
 - localization and internationalization (L10n and i18n)
 - sending information using forms (validation is present)
-- easy content management (find all text in the en(uk).json files)
+- easy content management (all text is in lang.json files)
 
 ## Mockups
 
