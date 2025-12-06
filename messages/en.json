@@ -125,9 +125,9 @@
           "links": {
             "first": {
               "dataText": "Call me",
-              "href": "tel:+4793995244",
+              "href": "tel:+33785011434",
               "icon": "BsFillTelephoneInboundFill",
-              "info": "+47 93-99-52-44",
+              "info": "+33 7-85-01-14-34",
               "title": "Phone"
             },
             "second": {
@@ -179,21 +179,21 @@
               "dataText": "Chat in Telegram",
               "href": "https://t.me/anastasia_prysiazhna",
               "icon": "BsTelegram",
-              "info": "by number +4793995244 or by username @anastasia_prysiazhna",
+              "info": "by number +33785011434 or by username @anastasia_prysiazhna",
               "title": "Telegram"
             },
             "second": {
               "dataText": "Chat in WhatsApp",
-              "href": "https://wa.me/4793995244",
+              "href": "https://wa.me/33785011434",
               "icon": "BsWhatsapp",
-              "info": "by phone number +4793995244",
+              "info": "by phone number +33785011434",
               "title": "WhatsApp"
             },
             "third": {
               "dataText": "Chat in Viber",
-              "href": "viber://chat?number=4793995244",
+              "href": "viber://chat?number=33785011434",
               "icon": "BsChatDotsFill",
-              "info": "by phone number +4793995244",
+              "info": "by phone number +33785011434",
               "title": "Viber"
             }
           },
