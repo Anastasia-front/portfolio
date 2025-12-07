@@ -60,6 +60,7 @@ export const ButtonTheme = () => {
         ariaLabel={activeThemeAriaLabel}
         icon={icon}
         onClick={toggleDisplayThemeOptions}
+        ignoreOutside
         title={label}
         className={
           isDropdownVisible

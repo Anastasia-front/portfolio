@@ -1,3 +1,5 @@
+import type { MouseEvent } from "react";
+
 import { Url } from "url";
 
 import { useTranslations } from "next-intl";
@@ -12,6 +14,8 @@ interface Props {
   icon?: JSX.Element;
   imgUrl?: string;
   onClick?: () => void;
+  onMouseDown?: (e: MouseEvent) => void;
+  ignoreOutside?: boolean;
   title?: string;
   type?: "link" | "button";
 }
@@ -20,6 +24,8 @@ export function ButtonSwitcher({
   imgUrl,
   className,
   onClick,
+  onMouseDown,
+  ignoreOutside,
   icon,
   title = "",
   alt,
@@ -36,6 +42,8 @@ export function ButtonSwitcher({
         className={`button-switcher ${className ? className : ""}`}
         href={href}
         onClick={onClick}
+        onMouseDown={onMouseDown}
+        data-ignore-outside={ignoreOutside ? "true" : undefined}
         title={title}
       >
         {imgUrl && (
@@ -58,6 +66,8 @@ export function ButtonSwitcher({
         aria-label={`${b("switcher")} ${ariaLabel}`}
         className={`button-switcher  ${className ? className : ""}`}
         onClick={onClick}
+        onMouseDown={onMouseDown}
+        data-ignore-outside={ignoreOutside ? "true" : undefined}
         title={title}
       >
         {imgUrl && (

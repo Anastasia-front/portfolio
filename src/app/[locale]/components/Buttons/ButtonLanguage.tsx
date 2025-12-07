@@ -31,11 +31,7 @@ export const ButtonLanguage = () => {
   }, [locale]);
 
   const toggleDisplayLanguageOptions = () => {
-    if (!isDropdownVisible) {
-      setDropdownIsVisible(true);
-      return;
-    }
-    return;
+    setDropdownIsVisible((prev) => !prev);
   };
 
   const handleLocaleChange = (): void => {
@@ -51,9 +47,9 @@ export const ButtonLanguage = () => {
       <ButtonSwitcher
         alt={a("svgLang")}
         ariaLabel={t("lang.title")}
-        className={isDropdownVisible ? "margin-left-50" : ""}
         icon={flag}
         onClick={toggleDisplayLanguageOptions}
+        ignoreOutside
         title={label}
       />
       {isDropdownVisible && (
