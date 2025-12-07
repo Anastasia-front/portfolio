@@ -279,23 +279,51 @@
 
 .languages{
   &-container{
+    flex-direction: column !important;
     position: absolute;
-    right: 60px;
-    bottom: 0;
+    right: 24px;
+    top: 60px;
 
     @include useScreen('mobile-xl'){
-      right: 65px;
+      top: 65px;
     }
     @include useScreen('tablet-lg'){
-      right: 70px;
+      top: 70px;
     }
   }
 }
 
 .themes{
   &-container{
+    flex-direction: column  !important;
     position: absolute;
-    right: 20px;
-    bottom: 0;
+    right: 72px;
+    top: 60px;
+
+    @include useScreen('mobile-xl'){
+      top: 65px;
+    }
+    @include useScreen('tablet-lg'){
+      top: 70px;
+    }
   }
+}
+
+.settings-switchers .languages-container {
+  flex-direction: column !important;
+  background: var(--color--bg-light) !important; 
+  position: absolute;
+  top: -86px !important;
+  bottom: 40px !important;
+  right: 0px !important;
+}
+
+.settings-switchers .themes-container {
+  flex-direction: column !important;
+  background: var(--color--bg-light) !important; 
+  position: absolute;
+  top: -180px !important;
+  bottom: 40px !important;
+  left: 0 !important;
+  right: 45px !important;
 }
