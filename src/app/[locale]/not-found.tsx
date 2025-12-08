@@ -6,7 +6,6 @@ import { ButtonLink } from "./components";
 
 export default function NotFound() {
   const t = useTranslations("notFound");
-  const h = useTranslations("home");
 
   return (
     <main className="main-layout">
