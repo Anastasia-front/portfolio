@@ -1,4 +1,4 @@
-**Dokumentasjon på [engelsk 🇺🇸](README.md)** og [ukrainsk 🇺🇦](README.ua.md)
+**Dokumentasjon på norsk 🇳🇴** og [engelsk 🇺🇸](README.md), [ukrainsk 🇺🇦](README.ua.md), [fransk 🇫🇷](README.fr.md), [slovensk 🇸🇮](README.si.md)
 
 <hr/><hr/>
 
