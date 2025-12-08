@@ -59,8 +59,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
     languages: {
-      "en-US": `${BASE_URL}/en-US`,
-      "uk-UK": `${BASE_URL}/uk-UK`,
+      fr: `${BASE_URL}/fr`,
+      en: `${BASE_URL}/en`,
+      uk: `${BASE_URL}/uk`,
+      no: `${BASE_URL}/no`,
+      si: `${BASE_URL}/si`,
     },
   },
   robots: {

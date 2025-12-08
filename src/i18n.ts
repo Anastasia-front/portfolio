@@ -3,12 +3,15 @@
 import { notFound } from "next/navigation";
 import { getRequestConfig } from "next-intl/server";
 import { type AbstractIntlMessages } from "next-intl";
+
 import { locales, type Locale } from "./locales";
 
 const messageImports = {
+  fr: () => import("../messages/fr.json"),
   en: () => import("../messages/en.json"),
   uk: () => import("../messages/uk.json"),
   no: () => import("../messages/no.json"),
+  si: () => import("../messages/si.json"),
 } as const satisfies Record<Locale, () => Promise<{ default: AbstractIntlMessages }>>;
 
 export function isValidLocale(locale: unknown): locale is Locale {

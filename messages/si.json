@@ -1,0 +1,425 @@
+{
+  "about": {
+    "achievements": {
+      "alt": {
+        "cabinet": {
+          "first": "Popravljene dosežke",
+          "second": "Splošni kazalniki časa učenja",
+          "third": "Rastoči dosežki"
+        },
+        "certificate": {
+          "first": "Prva stran potrdila",
+          "second": "Druga stran potrdila",
+          "third": "Tretja stran potrdila"
+        },
+        "github": "Github unwrapped, rezultati za leto 2023",
+        "linkedIn": "LinkedIn unwrapped, rezultati za leto 2024"
+      },
+      "hint": {
+        "hidden": "* za boljši pogled na slike v drsnikih kliknite nanje — odprlo se bo modalno okno z povečano sliko",
+        "img": "za boljši pogled na sliko kliknite nanjo — odprlo se bo modalno okno z povečano sliko",
+        "visible": "ko se z miško pomaknete ali kliknete ta element, se prikaže namig"
+      },
+      "title": {
+        "first": "Potrdilo",
+        "fourth": "Moje LinkedIn statistike za leto 2024",
+        "image": "slika, ustvarjena z GitHubWrapped.io",
+        "main": "Dosežki",
+        "pdf": "pdf, ustvarjen z Cleve.ai",
+        "second": "Posnetki zaslona mojega osebnega učnega portala",
+        "third": "Moja GitHub aktivnost za leto 2023",
+        "video": "video, ustvarjen z GitHubUnwrapped.com"
+      }
+    },
+    "alt": "O meni",
+    "confirm": "Za potrditev mojega izobraževanja in uspešnega zaključka tečajev prilagam potrdilo in posnetke napredka iz mojega osebnega učnega portala",
+    "description": "Sem full-stack spletna razvijalka, navdušena nad ustvarjanjem lepih in funkcionalnih spletnih strani",
+    "features": {
+      "items": {
+        "fifth": {
+          "description": "Zaradi prejšnjih izkušenj z delom z veliko ljudmi različnih starosti sem pridobila močne komunikacijske veščine, sposobnost reševanja konfliktov in obvladovanja različnih situacij",
+          "number": "05",
+          "title": "Komunikacijske veščine"
+        },
+        "first": {
+          "description": "Vodno sem vodila otroško plesno šolo, ustanovila svoj stretching studio in delala v timih kot Scrum Master in Team Lead. Verjamem, da to dovolj opisuje mojo organiziranost, proaktivnost in odgovornost",
+          "number": "01",
+          "title": "Odgovornost"
+        },
+        "forth": {
+          "description": "Vedno načrtujem svoj čas in pogosto pridem zgodaj na sestanke, dogodke in druge obveznosti. Cenim svoj čas in čas drugih",
+          "number": "04",
+          "title": "Točnost"
+        },
+        "second": {
+          "description": "Dela opravljam v polni meri in prevzemam pobude za dodatno delo. Naloge, ki mi jih zaupajo, vedno vestno dokončam",
+          "number": "02",
+          "title": "Marljivost"
+        },
+        "seventh": {
+          "description": "Sem pozitivna oseba, ki vedno išče najboljše v vsakem človeku in situaciji",
+          "number": "07",
+          "title": "Prijaznost"
+        },
+        "sixth": {
+          "description": "Ker je v življenju veliko stresa, sem se naučila ostati osredotočena in učinkovito delovati v stresnih situacijah",
+          "number": "06",
+          "title": "Odpornost na stres"
+        },
+        "third": {
+          "description": "Ko naletim na težave, ne obupam. Nasprotno — izzivi me spodbudijo k izboljšanju znanja in spretnosti",
+          "number": "03",
+          "title": "Vztrajnost"
+        }
+      },
+      "title": "Moje kvalitete"
+    },
+    "github": "Da pokažem željo po učenju, izboljševanju spretnosti in samoizpopolnjevanju, prilagam statistiko aktivnosti za leti 2023 - 2024",
+    "ogImage": "/images/opengraph/slo/about.webp",
+    "title": "Prysiazhna Anastasia"
+  },
+  "alt": {
+    "decoration": {
+      "contacts": "Dekorativna slika strani kontaktov",
+      "features": "Dekorativna slika kartice v razdelku značilnosti",
+      "hero": "Dekorativna slika v hero razdelku domače strani"
+    },
+    "hero": "Slika vsebine hero razdelka",
+    "logo": "Logotip",
+    "projects": {
+      "cover": "Ozadje projekta",
+      "fifth": "Peti posnetek zaslona projekta",
+      "first": "Prvi posnetek zaslona projekta",
+      "fourth": "Četrti posnetek zaslona projekta",
+      "second": "Drugi posnetek zaslona projekta",
+      "third": "Tretji posnetek zaslona projekta"
+    },
+    "svgLang": "Ikona jezika",
+    "svgTheme": "Ikona teme"
+  },
+  "banner": {
+    "contact": "Če vas zanima sodelovanje z mano, mi pošljite e-pošto ali me kontaktirajte na drug način, ki vam ustreza"
+  },
+  "btn": {
+    "burger": "Burger meni",
+    "close": "Zapri",
+    "contacts": "Kontaktirajte me",
+    "devices": "Pojdi na spretnosti",
+    "features": "Pojdi na projekte",
+    "gallery": "Pojdi na stran O meni",
+    "hero": "Več informacij",
+    "settings": "Nastavitve",
+    "submit": "Pošlji podatke obrazca",
+    "switcher": "Preklopnik",
+    "tools": "Moja orodja"
+  },
+  "contacts": {
+    "description": "Spodaj je obrazec za pošiljanje e-pošte in spodaj boste našli vse razpoložljive načine, kako me kontaktirati (tudi v nogi strani)",
+    "farewell": {
+      "firstPart": "Upam, da vam je spletna stran všeč, če potrebujete razvijalko kot sem jaz, pričakujem vaše",
+      "secondPart": "sporočilo"
+    },
+    "footer": {
+      "icons": {
+        "first": {
+          "links": {
+            "first": {
+              "dataText": "Pokličite me",
+              "href": "tel:+33785011434",
+              "icon": "BsFillTelephoneInboundFill",
+              "info": "+33 7-85-01-14-34",
+              "title": "Telefon"
+            },
+            "second": {
+              "dataText": "Pošljite e-pošto",
+              "href": "mailto:prysiazhnastasia@gmail.com",
+              "icon": "BsFillEnvelopeAtFill",
+              "info": "prysiazhnastasia@gmail.com",
+              "title": "E-pošta"
+            },
+            "third": {
+              "dataText": "Pojdi na Discord",
+              "href": "https://discordapp.com/users/871679474188574730/",
+              "icon": "BsDiscord",
+              "info": "nastia0708",
+              "title": "Discord"
+            }
+          },
+          "title": "Osnovni načini stika"
+        },
+        "second": {
+          "links": {
+            "first": {
+              "dataText": "Sledi na GitHub",
+              "href": "https://github.com/Anastasia-front",
+              "icon": "BsGithub",
+              "info": "Anastasia-front",
+              "title": "GitHub"
+            },
+            "second": {
+              "dataText": "Sledi na LinkedIn",
+              "href": "https://www.linkedin.com/in/anastasia-prysiazhna/",
+              "icon": "BsLinkedin",
+              "info": "Anastasia Prysiazhna ( @anastasia-prysiazhna )",
+              "title": "LinkedIn"
+            },
+            "third": {
+              "dataText": "Sledi na Instagram",
+              "href": "https://www.instagram.com/anastasia_prysiazhna/",
+              "icon": "BsInstagram",
+              "info": "@anastasia_prysiazhna",
+              "title": "Instagram"
+            }
+          },
+          "title": "Družbena omrežja"
+        },
+        "third": {
+          "links": {
+            "first": {
+              "dataText": "Klepet v Telegramu",
+              "href": "https://t.me/anastasia_prysiazhna",
+              "icon": "BsTelegram",
+              "info": "po številki +33785011434 ali z uporabniškim imenom @anastasia_prysiazhna",
+              "title": "Telegram"
+            },
+            "second": {
+              "dataText": "Klepet v WhatsApp",
+              "href": "https://wa.me/33785011434",
+              "icon": "BsWhatsapp",
+              "info": "po številki +33785011434",
+              "title": "WhatsApp"
+            },
+            "third": {
+              "dataText": "Klepet v Viber",
+              "href": "viber://chat?number=33785011434",
+              "icon": "BsChatDotsFill",
+              "info": "po številki +33785011434",
+              "title": "Viber"
+            }
+          },
+          "title": "Sporočila"
+        }
+      },
+      "title": "Za stik z mano kliknite ikono povezave, ki vam ustreza"
+    },
+    "form": {
+      "email": {
+        "format": "Polje mora imeti najmanj 6, največ 30 znakov in ustrezati standardnemu formatu",
+        "placeholder": "Vnesite e-pošto",
+        "title": "E-pošta"
+      },
+      "message": {
+        "format": "Polje mora imeti najmanj 6, največ 600 znakov",
+        "placeholder": "Vnesite sporočilo",
+        "title": "Sporočilo"
+      },
+      "required": "Polje je obvezno",
+      "sendBtn": "Pošlji",
+      "sendBtnError": "Napaka",
+      "sendBtnSuccess": "Poslano",
+      "subject": {
+        "format": "Polje mora imeti najmanj 6, največ 70 znakov",
+        "placeholder": "Vnesite zadevo",
+        "title": "Zadeva"
+      },
+      "title": "Povežimo se"
+    },
+    "ogImage": "/images/opengraph/slo/contacts.webp",
+    "title": "Napišite mi"
+  },
+  "error": {
+    "boundary": "Nekaj je šlo narobe. Lahko mi pošljete sporočilo o razlogu napake — popravila bom napako, ko bom za to izvedela (na žalost, ni resničnih hroščev)). Prosimo, osvežite stran :)"
+  },
+  "filters": {
+    "back": "nazaj",
+    "categories": {
+      "language": "programski jezik",
+      "type": "vrsta projekta"
+    },
+    "categoriesBackend": {
+      "commercial": "",
+      "individual": "posamezno",
+      "team": "ekipa",
+      "test": ""
+    },
+    "categoriesData": {
+      "commercial": "",
+      "individual": "posamezno",
+      "team": "ekipa",
+      "test": ""
+    },
+    "categoriesFrontend": {
+      "commercial": "komercialno",
+      "individual": "posamezno",
+      "team": "ekipa",
+      "test": "test"
+    },
+    "programmingLanguage": {
+      "all": "vsi",
+      "js": "js",
+      "python": "python",
+      "ts": "ts"
+    },
+    "sortBy": "Razvrsti po :",
+    "title": "Filtri",
+    "type": {
+      "all": "vsi",
+      "backend": "backend",
+      "cli": "cli",
+      "comment": "* obstajajo samo posamezni projekti, če ni vgrajenega menija",
+      "data": "podatkovna znanost",
+      "frontend": "frontend",
+      "other": "drugo"
+    }
+  },
+  "home": {
+    "3d": {
+      "comment": "** spodaj so 3D objekti, ki so interaktivni - lahko jih zavrtite, povečate, pomanjšate, gledate od vseh strani in počnete, kar želite :)",
+      "commentToSubtitle": "ko premaknete miškin kazalec nad ta besedilni blok, se pojavijo dodatni namigi (na napravi brez miške kliknite na to besedilo)",
+      "heading": "Moje naprave",
+      "hint": "*** če uporabljate mobilno napravo, kliknite zunaj, da zaprete ta besedilni blok",
+      "inFuture": "2. drugo - želim to uporabljati v prihodnosti",
+      "mac": "( iMac 24” )",
+      "macBook": "( MacBook Air 13″ M1, 2020 )",
+      "now": "1. prva naprava, ki jo trenutno uporabljam",
+      "prompt": "* v bloku, kjer so predstavljeni 3D objekti, za pomikanje strani uporabite drsnik na desnem robu (dejanja povečave približajo ali oddaljijo objekte)",
+      "subtitle": "posvetite pozornost temu namigu, da razumete, kako sodelovati v naslednjem razdelku",
+      "summary": "*** Upam, da ste uživali v tej interaktivni predstavitvi",
+      "title": "Tu so orodja za razvoj"
+    },
+    "description": "Dobrodošli na moji portfeljni spletni strani",
+    "features": {
+      "first": {
+        "alt": "naprave",
+        "subtitle": "Oglejte si projekte na različnih napravah",
+        "svg": "devices",
+        "text": "Raziščite raznoliko zbirko mojih ustvarjalnih del, vključno s spletnim oblikovanjem, JavaScript / TypeScript in mini projekti. Vsak projekt prikazuje mojo ustvarjalnost, pozornost do podrobnosti in strast do privlačnih vizualnih izkušenj",
+        "title": "Prilagodljiv dizajn"
+      },
+      "second": {
+        "alt": "koda",
+        "subtitle": "Raziščite kodo v repozitoriju",
+        "svg": "code",
+        "text": "Ponosna sem na pisanje čiste, učinkovite in vzdržne kode. Spoznajte moje standarde in prakse kodiranja, ki prispevajo k funkcionalnosti in zmogljivosti projektov",
+        "title": "Kakovost kode"
+      },
+      "subtitle": "vsak element je interaktiven, zato ob kliku ali premiku kazalca element reagira - poskusite in preverite",
+      "third": {
+        "alt": "komponenta",
+        "subtitle": "Ocenite izviren pristop",
+        "svg": "component",
+        "text": "Poglobite se v moje sposobnosti reševanja problemov in logično mišljenje. Raziščite, kako se lotevam izzivov, iščem inovativne rešitve in se prilagajam novim tehnologijam. Zavzemam se za nenehno učenje in izboljševanje, da vsak projekt doseže visoko kakovost",
+        "title": "Kreativni projekti"
+      },
+      "title": "značilnosti"
+    },
+    "gallery": {
+      "subtitle": "to je zadnji, a nič manj pomemben razdelek domače strani glede interaktivnosti, zato sem prepričana, da vam bo všeč ^_^",
+      "title": "3-d galerija"
+    },
+    "hero": {
+      "description": "Rada ustvarjam sodobne, funkcionalne in uporabniku prijazne spletne strani. V zadnjih 2 letih sem delala na razvoju odzivnih vmesnikov in podpiranju dinamičnih spletnih sistemov. Vedno raziskujem nove tehnologije in iščem načine za izboljšanje svojih spretnosti. Od oblikovanja uporabniške izkušnje do optimizacije delovnih tokov, rada sprejemam izzive in iščem najboljše rešitve. Oglejte si mojo stran 'Projekti' za veliko mojih najljubših primerov in idej, ki sem jih uresničila.",
+      "subtitle": "splošne informacije",
+      "title": {
+        "name": "Anastasia Prysiazhna",
+        "position": "Full Stack razvijalka"
+      }
+    },
+    "ogImage": "/images/opengraph/slo/home.webp",
+    "title": "Domača stran"
+  },
+  "license": {
+    "accordion": "Ozadne slike so vzete s spletne strani",
+    "slider": "Slike za drsnike so naložene s spletne strani"
+  },
+  "loading": {
+    "load": "se nalaga...",
+    "page": "stran",
+    "please": "Prosim",
+    "title": "Nalaganje",
+    "titled": "z naslovom",
+    "wait": "počakajte"
+  },
+  "name": {
+    "first": "Anastasia",
+    "last": "Prysiazhna"
+  },
+  "nav": {
+    "about": "O meni",
+    "contacts": "Stiki",
+    "home": "Domov",
+    "page": "stran",
+    "project": "Projekt",
+    "projects": "Projekti",
+    "skills": "Spretnosti"
+  },
+  "notFound": {
+    "description": "Zahtevani vir ni bil mogoče prikazati na podanem naslovu v iskalni vrstici",
+    "link": "Vrni se na domačo stran",
+    "title": "Na žalost, nič ni najdeno"
+  },
+  "projects": {
+    "below": "Spodaj lahko vidite, kako projekt izgleda, da vam ni treba klikati na povezavo",
+    "description": "Vsi moji projekti so zbrani tukaj. Za priročnost se lahko filtrirajo po tipu ali programskem jeziku",
+    "emptyList": "Žal ni projektov za izbran filter",
+    "headers": {
+      "features": "Značilnosti",
+      "link": "Povezava do projekta",
+      "links": "Povezave projekta",
+      "problem": "Problem",
+      "screenshots": "Posnetki zaslona",
+      "solution": "Rešitev"
+    },
+    "links": {
+      "github": "GitHub repozitorij",
+      "website": "Spletna stran"
+    },
+    "ogImage": "/images/opengraph/slo/projects.webp",
+    "slider": {
+      "after": {
+        "alt": "Koda deluje",
+        "title": "Po refaktoriranju celotne funkcionalnosti"
+      },
+      "before": {
+        "alt": "Meme o slabih praksah kodiranja",
+        "title": "Pred začetkom kodiranja"
+      },
+      "posterAlt": "Pred/Po predogled",
+      "title": "Moj način učenja programiranja in učenja iz vsake napake \n (na humoren način)"
+    },
+    "title": "Projekti"
+  },
+  "skills": {
+    "description": "Spodaj so različne tehnologije, ogrodja in knjižnice, ki jih poznam in jih znam uporabiti. Za priročnost so združene in predstavljene z Accordion komponento. Vsaka karta znotraj je interaktivna - zanimiva interakcija )",
+    "ogImage": "/images/opengraph/slo/skills.webp",
+    "slider": "Tako delam in tako izgleda delovni tok od zunaj - vsaj tako si želim :)",
+    "title": "Moje spretnosti"
+  },
+  "switcher": {
+    "lang": {
+      "en": "Angleščina",
+      "title": "Jezik",
+      "uk": "Ukrajinščina"
+    },
+    "theme": {
+      "dark": "Temno",
+      "light": "Svetlo",
+      "system": "Sistem",
+      "title": "Tema"
+    }
+  },
+  "text": {
+    "first": "razvijalka je",
+    "last": "narejeno z ljubeznijo"
+  },
+  "video": {
+    "firstTime": {
+      "primaryText": "Kliknite tukaj in video se bo ponovno predvajal",
+      "secondaryText": "ima zvok, zato ga lahko vklopite na svoji napravi"
+    },
+    "otherTimes": {
+      "primaryText": "kliknite na ta blok",
+      "secondaryText": "in video se bo predvajal"
+    }
+  }
+}

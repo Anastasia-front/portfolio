@@ -1,0 +1,425 @@
+{
+  "about": {
+    "achievements": {
+      "alt": {
+        "cabinet": {
+          "first": "Réalisations corrigées",
+          "second": "Indicateurs généraux du temps d'étude",
+          "third": "Progrès croissants"
+        },
+        "certificate": {
+          "first": "Première page du certificat",
+          "second": "Deuxième page du certificat",
+          "third": "Troisième page du certificat"
+        },
+        "github": "GitHub déballé, résultats de l'année 2023",
+        "linkedIn": "LinkedIn déballé, résultats de l'année 2024"
+      },
+      "hint": {
+        "hidden": "* pour voir les images des sliders de plus près, cliquez dessus — une fenêtre modale affichera l'image agrandie",
+        "img": "pour voir l'image de plus près, cliquez dessus — une fenêtre modale affichera l'image agrandie",
+        "visible": "au survol ou au clic sur cet élément, vous trouverez une infobulle"
+      },
+      "title": {
+        "first": "Certificat",
+        "fourth": "Mes statistiques LinkedIn pour 2024",
+        "image": "image générée par GitHubWrapped.io",
+        "main": "Réalisations",
+        "pdf": "pdf généré par Cleve.ai",
+        "second": "Captures d'écran de mon espace de cours personnel",
+        "third": "Mon activité sur GitHub en 2023",
+        "video": "vidéo générée par GitHubUnwrapped.com"
+      }
+    },
+    "alt": "À propos de moi",
+    "confirm": "Pour confirmer mes études et la réussite des cours, j'ajoute un certificat et des captures d'écran de la progression depuis mon espace de cours personnel",
+    "description": "Je suis développeuse web full-stack passionnée par la création de sites beaux et fonctionnels",
+    "features": {
+      "items": {
+        "fifth": {
+          "description": "Grâce à mon expérience de travail avec des personnes de différents âges, j'ai acquis de solides compétences en communication, en résolution de conflits et en gestion de situations diverses",
+          "number": "05",
+          "title": "Compétences en communication"
+        },
+        "first": {
+          "description": "J'ai dirigé une école de danse pour enfants, fondé mon propre studio de stretching et travaillé sur des projets d'équipe en tant que Scrum Master et Team Lead. Je pense que cela reflète mon niveau d'organisation, de proactivité et de responsabilité",
+          "number": "01",
+          "title": "Responsabilité"
+        },
+        "forth": {
+          "description": "Je planifie toujours mon temps et j'arrive souvent en avance aux réunions, événements et autres engagements. J'accorde de l'importance à mon temps et à celui des autres",
+          "number": "04",
+          "title": "Ponctualité"
+        },
+        "second": {
+          "description": "Je fais toujours les choses pleinement et prends l'initiative d'en faire davantage. Je termine consciencieusement les tâches qui me sont confiées",
+          "number": "02",
+          "title": "Travail acharné"
+        },
+        "seventh": {
+          "description": "Je suis une personne positive qui cherche toujours le meilleur chez chaque personne et dans chaque situation",
+          "number": "07",
+          "title": "Bonté"
+        },
+        "sixth": {
+          "description": "Comme la vie comporte beaucoup de stress, j'ai appris à rester concentrée et à travailler efficacement en situation de stress",
+          "number": "06",
+          "title": "Résistance au stress"
+        },
+        "third": {
+          "description": "Lorsque je fais face à des difficultés, je n'abandonne pas. Au contraire, les défis me poussent à améliorer mes compétences et mes connaissances",
+          "number": "03",
+          "title": "Persévérance"
+        }
+      },
+      "title": "Mes qualités"
+    },
+    "github": "Pour mettre en valeur mon envie d'apprendre, d'améliorer mes compétences et de me perfectionner, j'ajoute les statistiques d'activité pour 2023 - 2024",
+    "ogImage": "/images/opengraph/fr/about.webp",
+    "title": "Prysiazhna Anastasia"
+  },
+  "alt": {
+    "decoration": {
+      "contacts": "Image décorative de la page contacts",
+      "features": "Image décorative de la carte dans la section caractéristiques",
+      "hero": "Image décorative dans la section héros de la page d'accueil"
+    },
+    "hero": "Image du contenu de la section héros",
+    "logo": "Logo",
+    "projects": {
+      "cover": "Image de fond du projet",
+      "fifth": "Cinquième capture d'écran du projet",
+      "first": "Première capture d'écran du projet",
+      "fourth": "Quatrième capture d'écran du projet",
+      "second": "Deuxième capture d'écran du projet",
+      "third": "Troisième capture d'écran du projet"
+    },
+    "svgLang": "Icône de langue",
+    "svgTheme": "Icône de thème"
+  },
+  "banner": {
+    "contact": "Si vous êtes intéressé par une collaboration, envoyez-moi un e-mail ou contactez-moi par le moyen qui vous convient"
+  },
+  "btn": {
+    "burger": "Menu burger",
+    "close": "Fermer",
+    "contacts": "Contactez-moi",
+    "devices": "Aller aux compétences",
+    "features": "Aller aux projets",
+    "gallery": "Aller à la page À propos",
+    "hero": "Plus d'informations",
+    "settings": "Paramètres",
+    "submit": "Envoyer les données du formulaire",
+    "switcher": "Commutateur",
+    "tools": "Mes outils"
+  },
+  "contacts": {
+    "description": "Vous trouverez ci-dessous le formulaire pour m'envoyer un e-mail et toutes les façons de me contacter (elles sont également reprises dans le pied de page)",
+    "farewell": {
+      "firstPart": "J'espère que le site vous plaît, si vous avez besoin d'une développeuse comme moi, j'attends votre",
+      "secondPart": "message"
+    },
+    "footer": {
+      "icons": {
+        "first": {
+          "links": {
+            "first": {
+              "dataText": "Appelez-moi",
+              "href": "tel:+33785011434",
+              "icon": "BsFillTelephoneInboundFill",
+              "info": "+33 7-85-01-14-34",
+              "title": "Téléphone"
+            },
+            "second": {
+              "dataText": "Envoyer un e-mail",
+              "href": "mailto:prysiazhnastasia@gmail.com",
+              "icon": "BsFillEnvelopeAtFill",
+              "info": "prysiazhnastasia@gmail.com",
+              "title": "E-mail"
+            },
+            "third": {
+              "dataText": "Aller sur Discord",
+              "href": "https://discordapp.com/users/871679474188574730/",
+              "icon": "BsDiscord",
+              "info": "nastia0708",
+              "title": "Discord"
+            }
+          },
+          "title": "Moyens de contact de base"
+        },
+        "second": {
+          "links": {
+            "first": {
+              "dataText": "Suivre sur GitHub",
+              "href": "https://github.com/Anastasia-front",
+              "icon": "BsGithub",
+              "info": "Anastasia-front",
+              "title": "GitHub"
+            },
+            "second": {
+              "dataText": "Suivre sur LinkedIn",
+              "href": "https://www.linkedin.com/in/anastasia-prysiazhna/",
+              "icon": "BsLinkedin",
+              "info": "Anastasia Prysiazhna ( @anastasia-prysiazhna )",
+              "title": "LinkedIn"
+            },
+            "third": {
+              "dataText": "Suivre sur Instagram",
+              "href": "https://www.instagram.com/anastasia_prysiazhna/",
+              "icon": "BsInstagram",
+              "info": "@anastasia_prysiazhna",
+              "title": "Instagram"
+            }
+          },
+          "title": "Réseaux sociaux"
+        },
+        "third": {
+          "links": {
+            "first": {
+              "dataText": "Discuter sur Telegram",
+              "href": "https://t.me/anastasia_prysiazhna",
+              "icon": "BsTelegram",
+              "info": "par le numéro +33785011434 ou par le pseudo @anastasia_prysiazhna",
+              "title": "Telegram"
+            },
+            "second": {
+              "dataText": "Discuter sur WhatsApp",
+              "href": "https://wa.me/33785011434",
+              "icon": "BsWhatsapp",
+              "info": "par le numéro +33785011434",
+              "title": "WhatsApp"
+            },
+            "third": {
+              "dataText": "Discuter sur Viber",
+              "href": "viber://chat?number=33785011434",
+              "icon": "BsChatDotsFill",
+              "info": "par le numéro +33785011434",
+              "title": "Viber"
+            }
+          },
+          "title": "Messageries"
+        }
+      },
+      "title": "Pour me contacter, cliquez sur l'icône de lien qui vous convient"
+    },
+    "form": {
+      "email": {
+        "format": "Le champ doit contenir entre 6 et 30 caractères et correspondre au format standard",
+        "placeholder": "Entrez l'e-mail",
+        "title": "E-mail"
+      },
+      "message": {
+        "format": "Le champ doit contenir entre 6 et 600 caractères",
+        "placeholder": "Entrez le message",
+        "title": "Message"
+      },
+      "required": "Champ requis",
+      "sendBtn": "Envoyer",
+      "sendBtnError": "Erreur",
+      "sendBtnSuccess": "Envoyé",
+      "subject": {
+        "format": "Le champ doit contenir entre 6 et 70 caractères",
+        "placeholder": "Entrez le sujet",
+        "title": "Sujet"
+      },
+      "title": "Entrons en contact"
+    },
+    "ogImage": "/images/opengraph/fr/contacts.webp",
+    "title": "Écrivez-moi"
+  },
+  "error": {
+    "boundary": "Quelque chose s'est mal passé. Vous pouvez m'envoyer un message sur la raison de l'erreur — je corrigerai ce bug dès que j'en serai informée (malheureusement, il n'y a pas de bugs)). Veuillez recharger la page :)"
+  },
+  "filters": {
+    "back": "retour",
+    "categories": {
+      "language": "langage de programmation",
+      "type": "type de projet"
+    },
+    "categoriesBackend": {
+      "commercial": "",
+      "individual": "individuel",
+      "team": "équipe",
+      "test": ""
+    },
+    "categoriesData": {
+      "commercial": "",
+      "individual": "individuel",
+      "team": "équipe",
+      "test": ""
+    },
+    "categoriesFrontend": {
+      "commercial": "commercial",
+      "individual": "individuel",
+      "team": "équipe",
+      "test": "test"
+    },
+    "programmingLanguage": {
+      "all": "tous",
+      "js": "js",
+      "python": "python",
+      "ts": "ts"
+    },
+    "sortBy": "Tri par :",
+    "title": "Filtres",
+    "type": {
+      "all": "tous",
+      "backend": "backend",
+      "cli": "cli",
+      "comment": "* il n'y a que des projets individuels s'il n'y a pas de menu imbriqué",
+      "data": "data science",
+      "frontend": "frontend",
+      "other": "autre"
+    }
+  },
+  "home": {
+    "3d": {
+      "comment": "** ci-dessous se trouvent des objets 3D interactifs - vous pouvez les faire tourner, agrandir, réduire, les regarder sous tous les angles et faire ce que vous voulez :)",
+      "commentToSubtitle": "au survol de ce bloc de texte, d'autres indices apparaîtront (sur un appareil sans souris, cliquez sur ce texte)",
+      "heading": "Mes appareils",
+      "hint": "*** si vous utilisez un mobile, cliquez à l'extérieur pour fermer ce bloc de texte",
+      "inFuture": "2. Deuxième - je veux l'utiliser à l'avenir",
+      "mac": "( iMac 24” )",
+      "macBook": "( MacBook Air 13″ M1, 2020 )",
+      "now": "1. premier appareil que j'utilise actuellement",
+      "prompt": "* dans le bloc présentant les objets 3D, pour faire défiler la page, utilisez la barre de défilement à droite (les actions de zoom rapprochent ou éloignent les objets)",
+      "subtitle": "faites attention à cette indication pour comprendre comment interagir avec la section suivante",
+      "summary": "*** J'espère que vous avez apprécié cette partie interactive",
+      "title": "Voici des outils pour le développement"
+    },
+    "description": "Bienvenue sur mon site portfolio",
+    "features": {
+      "first": {
+        "alt": "appareils",
+        "subtitle": "Voir les projets sur différents appareils",
+        "svg": "devices",
+        "text": "Découvrez une collection variée de mes créations, y compris du design web, des projets JavaScript / TypeScript et des mini-projets. Chaque projet montre ma créativité, mon souci du détail et ma passion pour des expériences visuelles attrayantes",
+        "title": "Design responsive"
+      },
+      "second": {
+        "alt": "code",
+        "subtitle": "Explorez le code dans le dépôt",
+        "svg": "code",
+        "text": "Je suis fière d'écrire du code propre, efficace et maintenable. Découvrez mes standards et pratiques de codage qui contribuent à la fonctionnalité et à la performance des projets",
+        "title": "Qualité du code"
+      },
+      "subtitle": "chaque composant est interactif, donc lorsque vous cliquez ou survolez, l'élément réagit - essayez et voyez",
+      "third": {
+        "alt": "composant",
+        "subtitle": "Évaluez l'approche originale",
+        "svg": "component",
+        "text": "Plongez dans mes compétences de résolution de problèmes et de pensée logique. Découvrez comment j'aborde les défis, trouve des solutions innovantes et m'adapte aux technologies émergentes. Je m'engage à apprendre en continu et à améliorer la qualité de chaque projet",
+        "title": "Projets créatifs"
+      },
+      "title": "caractéristiques"
+    },
+    "gallery": {
+      "subtitle": "c'est la dernière mais non la moindre section de la page d'accueil en termes d'interactivité, donc je suis sûre que vous apprécierez ^_^",
+      "title": "Galerie 3D"
+    },
+    "hero": {
+      "description": "J'aime créer des sites modernes, fonctionnels et conviviaux. Au cours des 2 dernières années, j'ai travaillé sur le développement d'interfaces responsives et le support de systèmes web dynamiques. J'explore constamment de nouvelles technologies et je cherche à améliorer mes compétences. De la conception UX à l'optimisation des flux de travail, j'aime relever des défis et trouver les meilleures solutions. Consultez ma page 'Projets' pour voir nombre de mes cas préférés et idées que j'ai réalisées.",
+      "subtitle": "informations générales",
+      "title": {
+        "name": "Anastasia Prysiazhna",
+        "position": "Développeuse Full Stack"
+      }
+    },
+    "ogImage": "/images/opengraph/fr/home.webp",
+    "title": "Page d'accueil"
+  },
+  "license": {
+    "accordion": "Les images de fond proviennent du site",
+    "slider": "Les images du slider sont téléchargées depuis le site"
+  },
+  "loading": {
+    "load": "chargement...",
+    "page": "page",
+    "please": "S'il vous plaît",
+    "title": "Chargement",
+    "titled": "intitulé",
+    "wait": "attendez"
+  },
+  "name": {
+    "first": "Anastasia",
+    "last": "Prysiazhna"
+  },
+  "nav": {
+    "about": "À propos",
+    "contacts": "Contacts",
+    "home": "Accueil",
+    "page": "page",
+    "project": "Projet",
+    "projects": "Projets",
+    "skills": "Compétences"
+  },
+  "notFound": {
+    "description": "La ressource demandée n'a pas pu être affichée à l'adresse indiquée",
+    "link": "Retour à la page d'accueil",
+    "title": "Malheureusement, rien trouvé"
+  },
+  "projects": {
+    "below": "Ci-dessous vous pouvez voir à quoi ressemble le projet pour éviter de cliquer sur le lien",
+    "description": "Tous mes projets sont rassemblés ici. Ils peuvent être triés par type ou par langage de programmation pour plus de commodité",
+    "emptyList": "Désolé, il n'y a pas de projet pour le filtre sélectionné",
+    "headers": {
+      "features": "Caractéristiques",
+      "link": "Lien du projet",
+      "links": "Liens du projet",
+      "problem": "Problème",
+      "screenshots": "Captures d'écran",
+      "solution": "Solution"
+    },
+    "links": {
+      "github": "Dépôt GitHub",
+      "website": "Page Web"
+    },
+    "ogImage": "/images/opengraph/fr/projects.webp",
+    "slider": {
+      "after": {
+        "alt": "Le code fonctionne",
+        "title": "Après refactorisation complète de la fonctionnalité"
+      },
+      "before": {
+        "alt": "Mème sur les mauvaises pratiques de code",
+        "title": "Avant le début du codage"
+      },
+      "posterAlt": "Aperçu Avant/Après",
+      "title": "Ma façon d'apprendre la programmation et de tirer des leçons de chaque erreur \n (avec humour)"
+    },
+    "title": "Projets"
+  },
+  "skills": {
+    "description": "Voici les différentes technologies, frameworks et bibliothèques que je connais et peux appliquer. Pour plus de commodité, elles sont regroupées et présentées avec le composant Accordion. Chaque carte à l'intérieur est interactive - interactions intéressantes )",
+    "ogImage": "/images/opengraph/fr/skills.webp",
+    "slider": "Voici comment je travaille et à quoi ressemble le flux de travail de l'extérieur - du moins c'est ce que je souhaite :)",
+    "title": "Mes compétences"
+  },
+  "switcher": {
+    "lang": {
+      "en": "Anglais",
+      "title": "Langue",
+      "uk": "Ukrainien"
+    },
+    "theme": {
+      "dark": "Sombre",
+      "light": "Clair",
+      "system": "Système",
+      "title": "Thème"
+    }
+  },
+  "text": {
+    "first": "développeuse est",
+    "last": "fait avec amour"
+  },
+  "video": {
+    "firstTime": {
+      "primaryText": "Cliquez ici et la vidéo sera rejouée",
+      "secondaryText": "elle a du son, vous pouvez l'activer sur votre appareil"
+    },
+    "otherTimes": {
+      "primaryText": "cliquez sur ce bloc",
+      "secondaryText": "et la vidéo jouera"
+    }
+  }
+}
