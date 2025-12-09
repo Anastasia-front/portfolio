@@ -280,6 +280,7 @@
 .languages{
   &-container{
     flex-direction: column !important;
+    z-index: 100;
     position: absolute;
     right: 24px;
     top: 60px;
@@ -296,6 +297,7 @@
 .themes{
   &-container{
     flex-direction: column  !important;
+    z-index: 100;
     position: absolute;
     right: 72px;
     top: 60px;
@@ -313,7 +315,7 @@
   flex-direction: column !important;
   background: var(--color--bg-light) !important; 
   position: absolute;
-  top: -86px !important;
+  top: -180px !important;
   bottom: 40px !important;
   right: 0px !important;
 }
@@ -322,7 +324,7 @@
   flex-direction: column !important;
   background: var(--color--bg-light) !important; 
   position: absolute;
-  top: -180px !important;
+  top: -86px !important;
   bottom: 40px !important;
   left: 0 !important;
   right: 45px !important;
